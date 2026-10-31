@@ -228,25 +228,24 @@ export default function HomeClient() {
   const [studyFormat, setStudyFormat] =
     useState<StudyFormat>("Мини-группа");
   const reviewsRef = useRef<HTMLDivElement>(null);
-  const bookingFrameRef = useRef<HTMLIFrameElement>(null);
-  const bookingViewportRef = useRef<HTMLDivElement>(null);
-  const [bookingScale, setBookingScale] = useState(1);
+  const bookingDialogRef = useRef<HTMLDialogElement>(null);
+  const [bookingOpen, setBookingOpen] = useState(false);
   const [activeReview, setActiveReview] = useState(0);
   const [selectedReview, setSelectedReview] = useState<number | null>(null);
 
   useEffect(() => {
-    const viewport = bookingViewportRef.current;
-    if (!viewport) return;
-    const resize = () => {
-      const style = getComputedStyle(viewport);
-      const width = viewport.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
-      setBookingScale(Math.min(1, width / 520));
+    if (!bookingOpen) return;
+    const dialog = bookingDialogRef.current;
+    dialog?.showModal();
+    const script = document.createElement("script");
+    script.src = "https://planerka.app/meet/assets/external/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      script.remove();
+      dialog?.close();
     };
-    resize();
-    const observer = new ResizeObserver(resize);
-    observer.observe(viewport);
-    return () => observer.disconnect();
-  }, []);
+  }, [bookingOpen]);
 
   function moveReviews(direction: number) {
     const track = reviewsRef.current;
@@ -930,25 +929,23 @@ export default function HomeClient() {
         </div>
 
         <div className="trial-booking">
-          <div className="planerka-inline-calendar" ref={bookingViewportRef}>
-            <div className="planerka-calendar-viewport" style={{ width: 520 * bookingScale, height: 520 * bookingScale }}>
-              <div className="planerka-calendar-surface" style={{ transform: `scale(${bookingScale})` }}>
-                <iframe
-                  ref={bookingFrameRef}
-                  id="trial-calendar"
-                  title="Календарь записи на пробное занятие в Планёрке"
-                  src="https://planerka.app/meet/ilandroxy/first-lesson?embed=1&embed_bg=transparent&embed_border_width=0&embed_shadow=none"
-                  loading="lazy"
-                  onLoad={() => bookingFrameRef.current?.contentWindow?.postMessage({ type: "planerka:init", frameId: "trial-calendar" }, "https://planerka.app")}
-                />
-              </div>
-            </div>
-          </div>
+          <button className="trial-calendar-preview" type="button" onClick={() => setBookingOpen(true)} aria-haspopup="dialog">
+            <span className="trial-preview-copy"><span className="section-kicker">Запись на занятие</span><strong>Выбери время для знакомства</strong><span>60 минут · бесплатно</span></span>
+            <span className="trial-preview-calendar" aria-hidden="true"><span className="trial-preview-month">Выберите дату <span>‹ &nbsp; ›</span></span><span className="trial-preview-days">{["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].map(day => <span key={day}>{day}</span>)}{Array.from({ length: 21 }, (_, index) => <span key={index}>{index + 1}</span>)}</span></span>
+            <span className="trial-preview-action">Открыть календарь <span aria-hidden="true">↗</span></span>
+          </button>
           <div className="planerka-calendar-actions">
             <a className="planerka-open-separately" href="https://planerka.app/ilandroxy/first-lesson" target="_blank" rel="noopener noreferrer">
-              Открыть отдельно <span aria-hidden="true">↗</span>
+              Или открыть на сайте Планёрки <span aria-hidden="true">↗</span>
             </a>
           </div>
+          <dialog className="trial-booking-dialog" ref={bookingDialogRef} onClose={() => setBookingOpen(false)} onClick={(event) => { if (event.target === event.currentTarget) event.currentTarget.close(); }} aria-label="Запись на пробное занятие">
+            <div className="trial-booking-dialog-inner">
+              <div className="trial-booking-dialog-header"><div><span className="section-kicker">Пробное занятие</span><h3>Выбери дату и запишись</h3></div><button className="trial-booking-close" type="button" onClick={() => bookingDialogRef.current?.close()} aria-label="Закрыть календарь">×</button></div>
+              {bookingOpen && <div className="planerka-inline-calendar"><div className="app-planerka-embed" data-planerka-embed="default" data-planerka-url="https://planerka.app/meet" data-planerka-user="ilandroxy" data-planerka-event="first-lesson" data-planerka-bg="transparent" data-planerka-border-width="0" data-planerka-shadow="none" style={{ width: "100%", minHeight: 600 }} /></div>}
+              <div className="planerka-calendar-actions"><a className="planerka-open-separately" href="https://planerka.app/ilandroxy/first-lesson" target="_blank" rel="noopener noreferrer">Открыть на сайте Планёрки <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </dialog>
         </div>
       </section>
       <section className="faq-section section" id="faq">

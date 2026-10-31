@@ -4049,6 +4049,7 @@ summary:focus-visible {
 }
 .trial-section { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; column-gap: clamp(28px, 4vw, 48px); row-gap: 28px; background: radial-gradient(ellipse at 0 0, #f0eedb, transparent 60%), #f7f5ed; font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif; }
 .trial-heading { grid-column: 1 / -1; max-width: 800px; }
+.trial-intro { grid-column: 1; min-width: 0; }
 .trial-heading h2 { margin: 0; }
 .trial-heading > p:not(.section-kicker) { max-width: 700px; margin: 16px 0 0; color: #65615b; font-size: 16px; line-height: 1.55; }
 .trial-agenda { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
@@ -4061,7 +4062,20 @@ summary:focus-visible {
 .trial-agenda li:nth-child(3) .trial-step-icon { margin-bottom: 0; }
 .trial-agenda h3 { margin: 0 0 8px; color: #33392f; font-size: 18px; font-weight: 650; line-height: 1.2; letter-spacing: -.025em; }
 .trial-agenda p { margin: 0; color: #5c5d56; font-size: 14px; line-height: 1.5; }
-.trial-booking { min-width: 0; width: 100%; max-width: 568px; justify-self: start; }
+.trial-booking { grid-column: 2; min-width: 0; width: 100%; max-width: 390px; justify-self: start; }
+.trial-calendar-preview { display: flex; flex-direction: column; align-items: stretch; gap: 15px; width: 100%; aspect-ratio: 1; padding: 24px; overflow: hidden; border: 1px solid #d9d7e8; border-radius: 24px; background: linear-gradient(145deg, #f0efff, #f9f9fd 65%, #e9ebff); color: #292a43; text-align: left; cursor: pointer; box-shadow: 0 16px 36px rgba(55, 48, 105, .1); }
+.trial-calendar-preview:hover { border-color: #a9a5df; box-shadow: 0 20px 44px rgba(55, 48, 105, .16); }
+.trial-calendar-preview:focus-visible { outline: 3px solid #6660e8; outline-offset: 4px; }
+.trial-preview-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; }
+.trial-preview-copy strong { max-width: 310px; font-size: clamp(23px, 2.2vw, 28px); line-height: 1.12; letter-spacing: -.03em; }
+.trial-preview-copy > span:last-child { color: #64667d; font-size: 13px; line-height: 1.4; }
+.trial-preview-calendar { display: block; flex: 1; min-height: 0; width: 100%; padding: 15px 17px; overflow: hidden; border: 1px solid #e3e3ed; border-radius: 16px; background: #fff; box-shadow: 0 8px 22px rgba(61, 61, 110, .09); }
+.trial-preview-month { display: flex; justify-content: space-between; margin-bottom: 9px; color: #384164; font-size: 14px; font-weight: 700; }
+.trial-preview-month span { color: #767de4; }
+.trial-preview-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; text-align: center; color: #64698d; font-size: 11px; }
+.trial-preview-days span { padding: 2px 0; border-radius: 7px; }
+.trial-preview-days span:nth-child(-n+7) { color: #9295a9; font-size: 11px; }
+.trial-preview-action { display: inline-flex; align-self: flex-start; align-items: center; gap: 12px; padding: 11px 15px; border-radius: 11px; background: #5f5ce2; color: #fff; font-size: 13px; font-weight: 700; box-shadow: 0 6px 18px rgba(65, 60, 170, .22); }
 .trial-outcome { margin-top: 26px; }
 .trial-outcome h3 { margin: 0 0 16px; font-size: 21px; font-weight: 600; letter-spacing: -.025em; line-height: 1.2; }
 .trial-outcome ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
@@ -4071,19 +4085,29 @@ summary:focus-visible {
 .trial-outcome strong::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #b79c64; }
 .trial-outcome li:nth-child(2) strong { color: #546b43; }
 .trial-outcome li:nth-child(2) strong::before { background: #839b67; }
-.planerka-calendar-actions { display: flex; justify-content: flex-end; margin-top: 16px; }
+.planerka-calendar-actions { display: flex; justify-content: flex-start; margin-top: 14px; }
 .planerka-open-separately { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 12px; border: 1px solid #dbdfd0; border-radius: 10px; color: #606e48; background: #f4f6ed; font-size: 12px; font-weight: 600; white-space: nowrap; }
 .planerka-open-separately:hover { background: #e9efda; }
 .planerka-open-separately:focus-visible { outline: 3px solid #78894e; outline-offset: 3px; }
-.planerka-inline-calendar { overflow: hidden; padding: 24px; border-radius: 20px; background: #fff; box-shadow: 0 14px 38px rgba(70, 78, 48, .1); }
-/* Keep Planerka's desktop booking column; the full description stays on its own page. */
-.planerka-calendar-viewport { margin: 0 auto; overflow: hidden; }
-.planerka-calendar-surface { width: 520px; height: 520px; overflow: hidden; transform-origin: top left; }
-.planerka-inline-calendar iframe { display: block; width: 1140px; margin-left: -480px; margin-top: -100px; height: 620px; border: 0; background: #fff; }
+.planerka-inline-calendar { min-width: 0; padding: 16px; border-radius: 20px; background: #fff; box-shadow: 0 14px 38px rgba(70, 78, 48, .1); }
+.planerka-inline-calendar iframe { display: block; max-width: 100%; border: 0; }
+.trial-booking-dialog { position: fixed; inset: 0; width: min(1180px, calc(100% - 40px)); height: min(760px, calc(100dvh - 40px)); max-width: none; max-height: none; margin: auto; padding: 0; overflow: auto; border: 0; border-radius: 22px; background: #f7f5ed; box-shadow: 0 24px 80px rgba(25, 25, 50, .25); }
+.trial-booking-dialog::backdrop { background: rgba(22, 23, 45, .68); backdrop-filter: blur(5px); }
+.trial-booking-dialog-inner { padding: clamp(16px, 3vw, 32px); }
+.trial-booking-dialog-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 20px; }
+.trial-booking-dialog-header h3 { margin: 8px 0 0; color: #292a43; font-size: clamp(23px, 3vw, 34px); letter-spacing: -.035em; }
+.trial-booking-close { display: grid; place-items: center; flex: 0 0 42px; width: 42px; height: 42px; border: 1px solid #dedce7; border-radius: 50%; background: #fff; color: #3c3d58; font-size: 28px; cursor: pointer; }
+.trial-booking-close:hover { background: #eeecff; }
+.trial-booking-close:focus-visible { outline: 3px solid #6660e8; outline-offset: 3px; }
 @media (max-width: 980px) {
   .trial-section { grid-template-columns: 1fr; gap: 28px; }
+  .trial-booking { grid-column: 1; justify-self: start; }
 }
 @media (max-width: 620px) {
+  .trial-calendar-preview { padding: 20px; gap: 12px; }
+  .trial-preview-copy strong { font-size: clamp(21px, 6vw, 27px); }
+  .trial-booking-dialog { width: calc(100% - 16px); height: calc(100dvh - 24px); border-radius: 16px; }
+  .trial-booking-dialog-inner { padding: 12px; }
   .planerka-inline-calendar { padding: 16px; }
   .trial-agenda { grid-template-columns: 1fr; }
   .trial-agenda li, .trial-agenda li:nth-child(3) { display: flex; align-items: flex-start; gap: 14px; padding: 18px 34px 18px 16px; }
