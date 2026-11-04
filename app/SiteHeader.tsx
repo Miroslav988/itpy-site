@@ -1,41 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef } from "react";
+import { BookingButton } from "./booking/Booking";
+import { links, teacher } from "./content";
+import { categories } from "./courses/catalog";
 
-type SiteHeaderProps = { active: "home" | "courses" };
+type Page = "home" | "courses" | "blog";
+type SiteHeaderProps = { active: Page };
 
-const sectionLinks = {
+const pages: Array<{ id: Page; href: string; label: string }> = [
+  { id: "home", href: "/", label: "Занятия со мной" },
+  { id: "courses", href: "/courses", label: "Курсы" },
+  { id: "blog", href: "/blog", label: "Блог" },
+];
+
+const sectionLinks: Record<Page, Array<{ href: string; label: string }>> = {
   home: [
-    { href: "#courses", label: "ЕГЭ, ОГЭ и Python" },
-    { href: "#learning", label: "Как проходят занятия" },
-    { href: "#results", label: "Отзывы учеников" },
+    { href: "#formats", label: "Форматы и цены" },
+    { href: "#route", label: "Как устроена подготовка" },
+    { href: "#reviews", label: "Отзывы учеников" },
     { href: "#about", label: "Обо мне" },
+    { href: "#posts", label: "Разборы заданий" },
     { href: "#faq", label: "Частые вопросы" },
-    { href: "#contacts", label: "Соцсети и контакты" },
+    { href: "#trial", label: "Пробное занятие" },
   ],
   courses: [
-    { href: "#python", label: "Курс по Python" },
-    { href: "#ege", label: "Курс по ЕГЭ" },
-    { href: "#collections", label: "Сборники вариантов" },
-    { href: "#help", label: "Помощь с выбором" },
-    { href: "#contacts", label: "Соцсети и контакты" },
+    ...categories.map((category) => ({ href: `#${category.id}`, label: category.title })),
+    { href: "#help", label: "Занятия со мной" },
   ],
+  blog: [],
 };
 
 export default function SiteHeader({ active }: SiteHeaderProps) {
   const menuRef = useRef<HTMLDetailsElement>(null);
   const avatarDialogRef = useRef<HTMLDialogElement>(null);
   const avatarDialogId = useId();
-  const [avatarOpen, setAvatarOpen] = useState(false);
   const closeMenu = () => { if (menuRef.current) menuRef.current.open = false; };
-
-  useEffect(() => {
-    if (!avatarOpen) return;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = previousOverflow; };
-  }, [avatarOpen]);
 
   useEffect(() => {
     function dismissMenu(event: PointerEvent) {
@@ -55,74 +56,93 @@ export default function SiteHeader({ active }: SiteHeaderProps) {
     };
   }, []);
 
+  const menuLabel = { home: "Разделы главной страницы", courses: "Разделы каталога курсов", blog: "Меню сайта" }[active];
+
   return (
     <>
-    <header className="site-header site-header-new site-header-personal">
-      <div className="header-profile">
-        <button
-          className="header-avatar"
-          type="button"
-          aria-label="Открыть фото Ильи Андрианова"
-          aria-haspopup="dialog"
-          aria-controls={avatarDialogId}
-          onClick={() => {
-            closeMenu();
-            avatarDialogRef.current?.showModal();
-            setAvatarOpen(true);
-          }}
-        >
-          <img src="/media/teacher-avatar.png" alt="" width={1254} height={1254} />
-        </button>
-        <div className="header-profile-copy">
-          <Link className="header-name" href="/">Илья Андрианов</Link>
-          <span className="header-tagline">Репетитор на 90+ по информатике</span>
-          <a className="header-reviews" href="/#results" aria-label="Посмотреть 18 отзывов учеников">
-            <span className="header-review-stars" aria-hidden="true">★★★★★</span>
-            <span>18 отзывов <span aria-hidden="true">↗</span></span>
-          </a>
-        </div>
-      </div>
-      <div className="site-header-actions">
-        <Link className="header-secondary header-courses" href="/courses" aria-current={active === "courses" ? "page" : undefined}>Курсы</Link>
-        <a className="header-secondary header-telegram" href="https://t.me/ilandroxxy" target="_blank" rel="noopener noreferrer">Telegram <span aria-hidden="true">↗</span></a>
-        <a className="header-trial" href="/#trial">Записаться на пробное <span aria-hidden="true">↗</span></a>
-        <details className="header-links" ref={menuRef}>
-          <summary aria-label={active === "home" ? "Разделы главной страницы" : "Разделы страницы курсов"}>
-            <span className="header-menu-icon" aria-hidden="true"><span /><span /><span /></span>
-          </summary>
-          <div className="header-links-menu">
-            <nav className="header-links-list" aria-label={active === "home" ? "Разделы главной страницы" : "Разделы страницы курсов"}>
-              {sectionLinks[active].map((section, index) => (
-                <a href={section.href} key={section.href} onClick={closeMenu}>
-                  <span className="header-link-number">{String(index + 1).padStart(2, "0")}</span>
-                  <span>{section.label}</span>
-                  <span aria-hidden="true">↓</span>
-                </a>
-              ))}
-              {active === "home" && <a className="header-menu-trial" href="#trial" onClick={closeMenu}><span className="header-link-number">→</span><span>Записаться на пробное</span><span aria-hidden="true">↓</span></a>}
-            </nav>
+      <header className="site-header">
+        <div className="container header-row">
+          <div className="header-profile">
+            <button
+              className="header-avatar"
+              type="button"
+              aria-label={`Открыть фото: ${teacher.name}`}
+              aria-haspopup="dialog"
+              aria-controls={avatarDialogId}
+              onClick={() => {
+                closeMenu();
+                avatarDialogRef.current?.showModal();
+              }}
+            >
+              <img src={teacher.photo.src} alt="" width={teacher.photo.width} height={teacher.photo.height} />
+            </button>
+            <div className="header-profile-copy">
+              <Link className="header-name" href="/">{teacher.name}</Link>
+              <span className="header-role">{teacher.role}</span>
+            </div>
           </div>
-        </details>
-      </div>
-    </header>
-    <dialog
-      className="avatar-viewer"
-      id={avatarDialogId}
-      ref={avatarDialogRef}
-      aria-label="Фото Ильи Андрианова"
-      onClose={() => setAvatarOpen(false)}
-      onClick={(event) => {
-        if (event.target === event.currentTarget) avatarDialogRef.current?.close();
-      }}
-    >
-      <div className="avatar-viewer-panel">
-        <div className="avatar-viewer-toolbar">
-          <span>Илья Андрианов <small>ITPY</small></span>
-          <button type="button" aria-label="Закрыть фото" onClick={() => avatarDialogRef.current?.close()}>×</button>
+
+          <nav className="header-nav" aria-label="Основная навигация">
+            {pages.map((page) => (
+              <Link href={page.href} key={page.id} aria-current={active === page.id ? "page" : undefined}>
+                <span className="nav-label">{page.label}</span>
+              </Link>
+            ))}
+            <a href={links.telegramPersonal} target="_blank" rel="noopener noreferrer">
+              <span className="nav-label">Telegram</span> <span aria-hidden="true">↗</span>
+            </a>
+          </nav>
+
+          <div className="header-actions">
+            <BookingButton className="btn btn-lime header-cta">
+              <span className="label-long">Записаться на пробное</span>
+              <span className="label-short">Пробное</span>
+            </BookingButton>
+            <details className="header-menu" ref={menuRef}>
+              <summary aria-label={menuLabel}>
+                <span className="menu-icon" aria-hidden="true"><span /><span /><span /></span>
+              </summary>
+              <nav className="header-menu-panel" aria-label={menuLabel}>
+                <div className="header-menu-main">
+                  {pages.map((page) => (
+                    <Link href={page.href} key={page.id} onClick={closeMenu} aria-current={active === page.id ? "page" : undefined}>
+                      <span className="nav-label">{page.label}</span>
+                    </Link>
+                  ))}
+                  <a href={links.telegramPersonal} target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+                </div>
+                {sectionLinks[active].length > 0 && (
+                  <ol className="header-menu-sections">
+                    {sectionLinks[active].map((section) => (
+                      <li key={section.href}>
+                        <a href={section.href} onClick={closeMenu}>{section.label}</a>
+                      </li>
+                    ))}
+                  </ol>
+                )}
+              </nav>
+            </details>
+          </div>
         </div>
-        <img src="/media/teacher-avatar.png" alt="Илья Андрианов за рабочим столом" width={1254} height={1254} />
-      </div>
-    </dialog>
+      </header>
+
+      {/* Backdrop click is a mouse shortcut; <dialog> already closes on Escape. */}
+      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
+      <dialog
+        className="photo-dialog"
+        id={avatarDialogId}
+        ref={avatarDialogRef}
+        aria-label={`Фото: ${teacher.name}`}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) avatarDialogRef.current?.close();
+        }}
+      >
+        <div className="photo-dialog-bar">
+          <span>{teacher.name}</span>
+          <button className="icon-button" type="button" aria-label="Закрыть фото" onClick={() => avatarDialogRef.current?.close()}>×</button>
+        </div>
+        <img src={teacher.photo.src} alt={`${teacher.name} за рабочим столом`} width={teacher.photo.width} height={teacher.photo.height} />
+      </dialog>
     </>
   );
 }

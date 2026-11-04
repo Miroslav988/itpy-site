@@ -50,18 +50,18 @@ export default function CourseReviews({ courseId, title }: Props) {
 
   return (
     <>
-      <button className="course-reviews-trigger" type="button" onClick={openReviews}>
+      <button className="btn btn-outline" type="button" onClick={openReviews}>
         Отзывы о курсе <span aria-hidden="true">↗</span>
       </button>
       <dialog className="course-reviews-dialog" ref={dialogRef} aria-label={`Отзывы: ${title}`}>
         <div className="course-reviews-dialog-inner">
           <div className="course-reviews-heading">
             <div>
-              <p className="section-kicker">Оригинальные отзывы на Stepik</p>
+              <p className="part-label">Оригинальные отзывы на Stepik</p>
               <h2>{title}</h2>
               {status === "ready" && <p className="course-reviews-count">{reviewCount(reviews.length)}</p>}
             </div>
-            <form method="dialog"><button className="course-reviews-close" type="submit" aria-label="Закрыть отзывы">×</button></form>
+            <form method="dialog"><button className="icon-button" type="submit" aria-label="Закрыть отзывы">×</button></form>
           </div>
 
           {status === "loading" && <p className="course-reviews-state" role="status">Загружаю отзывы со Stepik…</p>}
@@ -74,8 +74,8 @@ export default function CourseReviews({ courseId, title }: Props) {
           {status === "ready" && reviews.length > 0 && (
             <>
               <div className="course-review-controls">
-                <button type="button" onClick={() => move(-1)} aria-label="Предыдущий отзыв">←</button>
-                <button type="button" onClick={() => move(1)} aria-label="Следующий отзыв">→</button>
+                <button className="icon-button" type="button" onClick={() => move(-1)} aria-label="Предыдущий отзыв">←</button>
+                <button className="icon-button icon-button-ink" type="button" onClick={() => move(1)} aria-label="Следующий отзыв">→</button>
               </div>
               <div className="course-review-track" ref={trackRef} aria-label={`Отзывы: ${title}`}>
                 {reviews.map((review) => (

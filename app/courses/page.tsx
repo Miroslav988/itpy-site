@@ -1,77 +1,104 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../SiteHeader";
-import LinkHub from "../LinkHub";
+import SiteFooter from "../SiteFooter";
+import { BookingButton } from "../booking/Booking";
+import { PenUnderline } from "../ui";
 import CourseReviews from "./CourseReviews";
+import { categories, courses, stepikUrl } from "./catalog";
 
 export const metadata: Metadata = {
-  title: "Мои курсы — ITPY",
-  description: "Курсы ITPY по Python, подготовке к ЕГЭ по информатике и сборники вариантов.",
+  title: "Курсы по Python и ЕГЭ на Stepik — ITPY",
+  description: "Записанные курсы ITPY на Stepik: Python с нуля, задания ЕГЭ по информатике и сборники вариантов. Оплата и обучение — на Stepik.",
 };
 
-const courses = [
-  {
-    id: "python", number: "01", label: "Начать с основ", title: "Курс по Python", tone: "violet",
-    description: "Короткая теория и много практики для тех, кто начинает программировать. Задания постепенно становятся сложнее, а к трудной теме можно вернуться в любой момент.",
-    materials: ["Видео и теория", "Тесты и задачи", "Обсуждения и помощь"],
-    url: "https://stepik.org/course/203477/info",
-  },
-  {
-    id: "ege", number: "02", label: "Готовиться к экзамену", title: "Курс по ЕГЭ", tone: "blue",
-    description: "Подборка заданий по информатике: сначала база ФИПИ, затем более сложная практика. Подходит для последовательной подготовки и разбора решений.",
-    materials: ["Задания по темам", "Домашняя и практическая части", "Форум решений"],
-    url: "https://stepik.org/course/122969/info",
-  },
-  {
-    id: "collections", number: "03", label: "Проверить готовность", title: "Сборники", tone: "peach",
-    description: "Официальные варианты ЕГЭ по информатике — материал для пробников и самостоятельной проверки перед экзаменом.",
-    materials: ["Полные варианты", "Задания в формате экзамена", "Практика перед пробником"],
-    url: "https://stepik.org/course/282248/info",
-  },
-] as const;
-
 export default function CoursesPage() {
-  return (
-    <main className="course-page" id="top">
-      <SiteHeader active="courses" />
-      <section className="courses-hero">
-        <p className="section-kicker">ITPY / материалы</p>
-        <h1>Мои курсы<span>.</span></h1>
-        <p>Три способа заниматься самостоятельно: освоить Python, решать задания ЕГЭ и тренироваться на полных вариантах.</p>
-        <nav className="course-jump" aria-label="Курсы на странице">
-          {courses.map((course) => <a href={`#${course.id}`} key={course.id}>{course.number} {course.title} ↘</a>)}
-        </nav>
-      </section>
+  const filled = categories.filter((category) => courses.some((course) => course.category === category.id));
 
-      <section className="course-list" aria-label="Список курсов">
-        {courses.map((course) => (
-          <article id={course.id} className={`course-detail course-detail-${course.tone}`} key={course.id}>
-            <div className="course-detail-art">
-              <img src="/course-cover-stepik.jpg" alt={`Обложка курса «${course.title}» на Stepik`} width="230" height="230" />
-              <small>ITPY / {course.number}</small>
+  return (
+    <>
+      <SiteHeader active="courses" />
+      <main id="top" className="catalog">
+        <section className="catalog-hero" aria-labelledby="catalog-title">
+          <div className="container">
+            <p className="part-label">ITPY · Каталог на Stepik</p>
+            <h1 id="catalog-title">Мои <span className="pen-word">курсы<PenUnderline /></span></h1>
+            <p className="catalog-lead">Записанные курсы и сборники для самостоятельной подготовки. Оплата и обучение проходят на Stepik — регистрироваться на ITPY не нужно.</p>
+            <nav className="catalog-jump" aria-label="Категории курсов">
+              {filled.map((category) => (
+                <a href={`#${category.id}`} key={category.id}>{category.title} <span aria-hidden="true">↓</span></a>
+              ))}
+            </nav>
+          </div>
+        </section>
+
+        <section className="catalog-how" aria-label="Как купить курс">
+          <ol className="container catalog-steps">
+            <li><span aria-hidden="true">1</span>Выберите курс и откройте его на Stepik</li>
+            <li><span aria-hidden="true">2</span>Оплата и доступ — на стороне Stepik</li>
+            <li><span aria-hidden="true">3</span>Учитесь в своём темпе, к темам можно вернуться</li>
+          </ol>
+        </section>
+
+        {filled.map((category) => (
+          <section className="catalog-group" id={category.id} key={category.id} aria-labelledby={`${category.id}-title`}>
+            <div className="container">
+              <div className="section-head">
+                <div>
+                  <p className="part-label">Категория</p>
+                  <h2 id={`${category.id}-title`}>{category.title}</h2>
+                </div>
+                <p className="section-lead">{category.lead}</p>
+              </div>
+              <ul className="course-grid">
+                {courses.filter((course) => course.category === category.id).map((course) => (
+                  <li key={course.id}>
+                    <article className="course-card" aria-labelledby={`${course.id}-title`}>
+                      <div className="course-card-head">
+                        <img src={course.cover.src} alt="" width={course.cover.width} height={course.cover.height} loading="lazy" />
+                        <div>
+                          <span className="badge">{course.subject}</span>
+                          <h3 id={`${course.id}-title`}>{course.title}</h3>
+                        </div>
+                      </div>
+                      <p>{course.description}</p>
+                      <dl className="course-facts">
+                        <div><dt>Для кого</dt><dd>{course.audience}</dd></div>
+                        <div><dt>Чему научитесь</dt><dd><ul>{course.outcomes.map((item) => <li key={item}>{item}</li>)}</ul></dd></div>
+                        <div><dt>Внутри</dt><dd>{course.format.join(" · ")}</dd></div>
+                      </dl>
+                      <div className="course-card-foot">
+                        <p className="course-price">{course.price ?? "Цена — на странице курса"}</p>
+                        <div className="course-actions">
+                          <a className="btn btn-ink" href={stepikUrl(course)} target="_blank" rel="noopener noreferrer">Открыть на Stepik <span aria-hidden="true">↗</span></a>
+                          {course.showReviews && <CourseReviews courseId={course.stepikId} title={course.title} />}
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="course-detail-copy">
-              <span className="course-detail-label">{course.number} / {course.label}</span>
-              <h2>{course.title}</h2>
-              <p>{course.description}</p>
-              <div className="course-materials"><strong>Внутри курса</strong><ul>{course.materials.map((item) => <li key={item}>{item}</li>)}</ul></div>
-              <div className="course-detail-actions">
-                <a className="course-detail-link" href={course.url} target="_blank" rel="noopener noreferrer">Смотреть на Stepik <span aria-hidden="true">↗</span></a>
-                {course.id === "python" && <CourseReviews courseId={203477} title="Курс по Python" />}
+          </section>
+        ))}
+
+        <section className="catalog-help" id="help" aria-labelledby="help-title">
+          <div className="container">
+            <div className="catalog-help-box">
+              <div>
+                <p className="part-label">Если нужна помощь</p>
+                <h2 id="help-title">Хочешь заниматься со мной?</h2>
+                <p>Парные занятия и вебинары по ЕГЭ — начнём с бесплатного пробного урока.</p>
+              </div>
+              <div className="actions">
+                <BookingButton className="btn btn-lime btn-lg">Записаться на пробное <span aria-hidden="true">→</span></BookingButton>
+                <Link className="btn btn-ghost btn-lg" href="/#formats">Форматы и цены</Link>
               </div>
             </div>
-          </article>
-        ))}
-      </section>
-
-      <section className="courses-contact" id="help">
-        <div><p className="section-kicker">Если нужна помощь</p><h2>Хочешь заниматься вместе?</h2><p>Разберём твою цель и подберём формат занятий.</p></div>
-        <Link href="/#trial">Заниматься со мной ↗</Link>
-      </section>
-      <footer className="site-footer" id="contacts">
-        <LinkHub />
-        <div className="footer-bottom"><span>© {new Date().getFullYear()} ITPY</span><a href="#top">Наверх ↑</a></div>
-      </footer>
-    </main>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
   );
 }

@@ -1,53 +1,46 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { headers } from "next/headers";
+import type { Metadata, Viewport } from "next";
+import { Caveat, Onest } from "next/font/google";
+import { BookingProvider } from "./booking/Booking";
+import { siteOrigin } from "./site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const onest = Onest({
+  variable: "--font-onest",
+  subsets: ["latin", "cyrillic"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin", "cyrillic"],
 });
 
-const title = "ITPY — информатика, которую ты понимаешь";
+const title = "ITPY — информатика, которую понимаешь";
 const description =
-  "Личный сайт преподавателя информатики: подготовка к ЕГЭ и ОГЭ, Python и понятные разборы сложных тем.";
+  "Подготовка к ЕГЭ по информатике с Ильёй Андриановым: парные занятия и вебинары, понятные объяснения и бесплатное пробное занятие.";
+
+export const viewport: Viewport = {
+  themeColor: "#12141a",
+};
 
 export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const forwardedHost = requestHeaders.get("x-forwarded-host")?.split(",")[0];
-  const rawHost = forwardedHost ?? requestHeaders.get("host") ?? "localhost:3000";
-  const host = /^[a-z0-9.:-]+$/i.test(rawHost) ? rawHost : "localhost:3000";
-  const rawProtocol =
-    requestHeaders.get("x-forwarded-proto")?.split(",")[0] ??
-    (host.startsWith("localhost") ? "http" : "https");
-  const protocol = rawProtocol === "http" ? "http" : "https";
-  const socialImage = `${protocol}://${host}/og.png`;
+  const origin = await siteOrigin();
+  const socialImage = `${origin}/og.png`;
 
   return {
+    metadataBase: new URL(origin),
     title,
     description,
     icons: {
-      icon: "/itpy-logo.png",
-      shortcut: "/itpy-logo.png",
+      icon: "/favicon.svg",
+      apple: "/apple-touch-icon.png",
     },
     openGraph: {
       type: "website",
+      locale: "ru_RU",
       siteName: "ITPY",
       title,
       description,
-      images: [
-        {
-          url: socialImage,
-          width: 1680,
-          height: 945,
-          alt: "ITPY — информатика, которую ты понимаешь",
-        },
-      ],
+      images: [{ url: socialImage, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
@@ -65,10 +58,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${onest.variable} ${caveat.variable}`}>
+        <BookingProvider>{children}</BookingProvider>
       </body>
     </html>
   );
