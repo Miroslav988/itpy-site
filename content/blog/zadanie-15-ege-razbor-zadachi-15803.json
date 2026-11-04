@@ -1,0 +1,404 @@
+{
+  "slug": "zadanie-15-ege-razbor-zadachi-15803",
+  "title": "Задание 15 ЕГЭ: разбор задачи 15803",
+  "description": "На числовой прямой задан отрезок A. Известно, что формула",
+  "date": "2023-08-13",
+  "cover": {
+    "src": "/blog/zadanie-15-ege-razbor-zadachi-15803/01.webp",
+    "width": 450,
+    "height": 270
+  },
+  "source": "https://dzen.ru/a/ZNIrQ6Ri_QxYfOCu",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-15803/01.webp",
+      "width": 450,
+      "height": 270,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 15803"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "На числовой прямой задан отрезок "
+        },
+        {
+          "text": "A",
+          "italic": true
+        },
+        {
+          "text": ". Известно, что формула"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "((x ∈  A) → (x**2 ≤ 100)) ∧ ((x**2 ≤ 64) → (x ∈ A))"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "тождественно истинна при любом вещественном "
+        },
+        {
+          "text": "x",
+          "italic": true
+        },
+        {
+          "text": ". Какую наибольшую длину может иметь отрезок "
+        },
+        {
+          "text": "A",
+          "italic": true
+        },
+        {
+          "text": "?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-15803/02.webp",
+      "width": 750,
+      "height": 476,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def F(x, a1, a2):\n    A = a1 <= x <= a2\n    return (A <= (x**2 <= 100)) and ((x**2 <= 64) <= A)\n\nM = [i/2 for i in range(-100*2, 100*2)]\nR = []\nfor a1 in M:\n    for a2 in M:\n        if all(F(x, a1, a2) for x in M):\n            R.append(a2-a1)\nprint(max(R))"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(x, a1, a2):",
+            "italic": true
+          },
+          {
+            "text": " - Объявляем функцию "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": ", которая принимает три аргумента: "
+          },
+          {
+            "text": "x, a1 и a2",
+            "bold": true
+          },
+          {
+            "text": ". Где"
+          },
+          {
+            "text": " a1 ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "a2",
+            "bold": true
+          },
+          {
+            "text": " - начало и конец отрезка "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "A = a1 <= x <= a2",
+            "italic": true
+          },
+          {
+            "text": " - Создаем переменную "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": ", которая принимает значение "
+          },
+          {
+            "text": "True",
+            "bold": true
+          },
+          {
+            "text": ", если "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " находится в интервале от "
+          },
+          {
+            "text": "a1 до a2",
+            "bold": true
+          },
+          {
+            "text": ", и "
+          },
+          {
+            "text": "False",
+            "bold": true
+          },
+          {
+            "text": " в противном случае."
+          }
+        ],
+        [
+          {
+            "text": "return (A <= (x****2 <=** 100)) and ((x**2 <= 64) <= A)",
+            "italic": true
+          },
+          {
+            "text": " - Возвращаем "
+          },
+          {
+            "text": "True",
+            "bold": true
+          },
+          {
+            "text": ", если логическое уравнение возвращает значение "
+          },
+          {
+            "text": "True",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M = [i/2 for i in range(-100**2, 100**2)] ",
+            "italic": true
+          },
+          {
+            "text": "- Создаем список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", содержащий все вещественные числа о"
+          },
+          {
+            "text": "т -100 до 100",
+            "bold": true
+          },
+          {
+            "text": " с шагом"
+          },
+          {
+            "text": " 0,5",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "italic": true
+          },
+          {
+            "text": " - Создаем пустой список "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": ", куда будем складывать длины подходящих нам отрезков."
+          }
+        ],
+        [
+          {
+            "text": "for a1 in M: ",
+            "italic": true
+          },
+          {
+            "text": "- Используем цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": ", чтобы перебрать все значения из списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " для "
+          },
+          {
+            "text": "a1",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for a2 in M: ",
+            "italic": true
+          },
+          {
+            "text": "- Аналогично для "
+          },
+          {
+            "text": "a2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if all(F(x, a1, a2) for x in M): ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, выполняется ли условие"
+          },
+          {
+            "text": " F(x, a1, a2) ",
+            "bold": true
+          },
+          {
+            "text": "для всех значений "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " в списке "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "R.append(a2-a1) ",
+            "italic": true
+          },
+          {
+            "text": "- Если условие выполнено для всех значений"
+          },
+          {
+            "text": " x",
+            "bold": true
+          },
+          {
+            "text": ", добавляем разность "
+          },
+          {
+            "text": "a2-a1",
+            "bold": true
+          },
+          {
+            "text": " в список "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": ", то есть сохраняем длину отрезков."
+          }
+        ],
+        [
+          {
+            "text": "print(max(R)) ",
+            "italic": true
+          },
+          {
+            "text": "- Выводим на экран максимальное значение из списка "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 20"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-15803/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 15803 ЕГЭ по информатике #15",
+  "task": 15
+}

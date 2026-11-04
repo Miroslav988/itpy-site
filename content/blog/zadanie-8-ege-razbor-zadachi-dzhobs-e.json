@@ -1,0 +1,402 @@
+{
+  "slug": "zadanie-8-ege-razbor-zadachi-dzhobs-e",
+  "title": "Задание 8 ЕГЭ: разбор задачи — Джобс Е.",
+  "description": "Уровень: Средний",
+  "date": "2024-11-28",
+  "meta": {
+    "source": "Джобс Е.",
+    "level": "Средний"
+  },
+  "cover": {
+    "src": "/blog/zadanie-8-ege-razbor-zadachi-dzhobs-e/01.webp",
+    "width": 750,
+    "height": 595
+  },
+  "source": "https://dzen.ru/a/Z0MksoqqNWBz5x3T",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие задачи:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Катя составляет 5-буквенные слова из букв слова АПРЕЛЬ и упорядочивает их в обратном алфавитном порядке."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вот начало списка:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. ЬЬЬЬЬ"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. ЬЬЬЬР"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. ЬЬЬЬП"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. ЬЬЬЬЛ"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. ЬЬЬЬЕ"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6. ЬЬЬЬА"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. ЬЬЬРЬ"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сколько слов, оканчивающихся на Ь, запишет Катя, если заполнит список до 387 позиции?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Код решения",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-dzhobs-e/01.webp",
+      "width": 750,
+      "height": 595,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 65"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "from itertools import *",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Импортируются все функции и классы из модуля "
+        },
+        {
+          "text": "itertools",
+          "italic": true
+        },
+        {
+          "text": ", который предоставляет инструменты для создания итераторов."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": "n = 0",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Инициализируется переменная "
+        },
+        {
+          "text": "n",
+          "italic": true
+        },
+        {
+          "text": " для подсчета количества сгенерированных комбинаций."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "cnt = 0",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Инициализируется переменная "
+        },
+        {
+          "text": "cnt ",
+          "italic": true
+        },
+        {
+          "text": "для подсчета слов, заканчивающихся на букву 'Ь'."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. "
+        },
+        {
+          "text": "for p in product(sorted('АПРЕЛЬ', reverse=True), repeat=5):",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Запускается цикл for, который создает все возможные кортежи длиной 5 из букв слова 'АПРЕЛЬ', отсортированных в обратном порядке."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. "
+        },
+        {
+          "text": "word = ''.join(p)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Кортеж p преобразуется в строку word."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6."
+        },
+        {
+          "text": " n += 1",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Увеличивается счетчик n на 1, чтобы отслеживать количество проверенных слов."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. "
+        },
+        {
+          "text": "if word[-1] == 'Ь':",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Проверяется, заканчивается ли слово word на букву 'Ь'."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8. "
+        },
+        {
+          "text": "cnt += 1",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Увеличивается счетчик cnt, если слово заканчивается на 'Ь'."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "9. "
+        },
+        {
+          "text": "print(word)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Выводится слово, если оно заканчивается на 'Ь'."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "10. if n >= 387:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Проверяется, достигло ли количество проверенных слов значения 387."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "11. "
+        },
+        {
+          "text": "break",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Завершается цикл, если количество проверенных слов достигает 387."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "12. "
+        },
+        {
+          "text": "print(cnt)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Выводится общее число слов, заканчивающихся на 'Ь'."
+        }
+      ]
+    }
+  ],
+  "originalTitle": "Разбор 8 номера ЕГЭ по информатике",
+  "task": 8
+}

@@ -1,0 +1,521 @@
+{
+  "slug": "zadanie-25-ege-razbor-zadachi-5140",
+  "title": "Задание 25 ЕГЭ: разбор задачи 5140",
+  "description": "(Уровень: Базовый)",
+  "date": "2023-08-14",
+  "cover": {
+    "src": "/blog/zadanie-25-ege-razbor-zadachi-5140/01.webp",
+    "width": 530,
+    "height": 400
+  },
+  "source": "https://dzen.ru/a/ZNHXQisn2wMYbfY7",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-5140/01.webp",
+      "width": 530,
+      "height": 400,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие КЕГЭ: Тип 25 № 5140 /dev/inf 11.22"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(Уровень: Базовый)",
+          "italic": true,
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Назовём маской числа последовательность цифр, в которой также могут встречаться следующие символы:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "– символ"
+        },
+        {
+          "text": " «?»",
+          "bold": true
+        },
+        {
+          "text": " означает ровно одну произвольную цифру;\n– символ "
+        },
+        {
+          "text": "«*»",
+          "bold": true
+        },
+        {
+          "text": " означает любую последовательность цифр произвольной длины; в том числе "
+        },
+        {
+          "text": "«*»",
+          "bold": true
+        },
+        {
+          "text": " может задавать и пустую последовательность."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Например, маске "
+        },
+        {
+          "text": "123*4?5",
+          "bold": true
+        },
+        {
+          "text": " соответствуют числа 123405 и 12300405."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Среди натуральных чисел, не превышающих"
+        },
+        {
+          "text": " 10**10",
+          "bold": true
+        },
+        {
+          "text": ", найдите все числа, соответствующие маске "
+        },
+        {
+          "text": "32?056*6",
+          "bold": true
+        },
+        {
+          "text": ", делящиеся на 2023 без oстатка."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе запишите в первом столбце таблицы все найденные числа в порядке возрастания, а во втором столбце – соответствующие им результаты деления этих чисел на 2023."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-5140/02.webp",
+      "width": 662,
+      "height": 558,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import itertools\nM = []\nfor l in range(0, 3+1):\n    for s in itertools.product('0123456789', repeat=l):\n        s = ''.join(s)\n        M.append(s)\n\nR = []\nfor x in M:\n    for y in '0123456789':\n        A = int(f'32{y}056{x}6')\n        if A % 2023 == 0:\n            R.append([A, A//2023])\n\nfor x in sorted(R):\n    print(*x)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы для решения задачи:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import itertools",
+            "italic": true
+          },
+          {
+            "text": " Импортируем модуль "
+          },
+          {
+            "text": "itertools",
+            "href": "https://teletype.in/@ilandroxy/ZLQKlwNEOcg"
+          },
+          {
+            "text": ", который содержит функции для создания итераторов."
+          }
+        ],
+        [
+          {
+            "text": "M = []",
+            "italic": true
+          },
+          {
+            "text": " Создаем пустой список под названием "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", он будет использоваться для хранения всех возможных комбинаций чисел от 0 до 9 (десятичная система счисления), которые мы называем масками исходя из условия задачи ,"
+          }
+        ],
+        [
+          {
+            "text": "for l in range(0, 3+1):",
+            "italic": true
+          },
+          {
+            "text": " В цикле "
+          },
+          {
+            "text": "for ",
+            "bold": true
+          },
+          {
+            "text": "перебираем значения от 0 до 3. Эти значения будут использоваться в качестве длины маски "
+          },
+          {
+            "text": "«*»",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for s in itertools.product('0123456789', repeat=l):",
+            "italic": true
+          },
+          {
+            "text": " Вложенный цикл "
+          },
+          {
+            "text": "for ",
+            "bold": true
+          },
+          {
+            "text": "использует функцию "
+          },
+          {
+            "text": "itertools.product() ",
+            "bold": true
+          },
+          {
+            "text": "для создания кортежей всех возможных комбинаций из чисел от 0 до 9, длиной, равной текущему значению "
+          },
+          {
+            "text": "l",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = ''.join(s)",
+            "italic": true
+          },
+          {
+            "text": " Мы преобразуем каждый кортеж "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", сформированный во вложенном цикле, в строку, используя метод "
+          },
+          {
+            "text": "join()",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M.append(s) ",
+            "italic": true
+          },
+          {
+            "text": "И добавляем эту строку в список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " для хранений всех таких масок."
+          }
+        ],
+        [
+          {
+            "text": "-"
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "italic": true
+          },
+          {
+            "text": " Создаем пустой список под названием "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": ". "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": " будет использоваться для хранения пар значений удовлетворяющих условию задачи."
+          }
+        ],
+        [
+          {
+            "text": "for x in M:",
+            "italic": true
+          },
+          {
+            "text": " В цикле for мы перебираем все значения из списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for y in '0123456789':",
+            "italic": true
+          },
+          {
+            "text": " Во вложенном цикле "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": " мы перебираем все значения от 0 до 9. Значение для маски "
+          },
+          {
+            "text": "«?»",
+            "bold": true
+          },
+          {
+            "text": " ."
+          }
+        ],
+        [
+          {
+            "text": "A = int(f'32{y}056{x}6')",
+            "italic": true
+          },
+          {
+            "text": " Мы используем значение "
+          },
+          {
+            "text": "x ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "y",
+            "bold": true
+          },
+          {
+            "text": " для вычисления значения выражения "
+          },
+          {
+            "text": "A = int(f'32{y}056{x}6')",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if A % 2023 == 0: ",
+            "italic": true
+          },
+          {
+            "text": "Оно будет добавлено в список "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": ", если "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": " делится без остатка на 2023, что удовлетворяет условию задачи."
+          }
+        ],
+        [
+          {
+            "text": "R.append([A, A//2023]) ",
+            "italic": true
+          },
+          {
+            "text": "Добавление подходящего выражения в общий список "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "-"
+          }
+        ],
+        [
+          {
+            "text": "for x in sorted(R):",
+            "italic": true
+          },
+          {
+            "text": " В цикле for мы перебираем все значения из списка "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": ", отсортированного в порядке возрастания."
+          }
+        ],
+        [
+          {
+            "text": "print(*x) ",
+            "italic": true
+          },
+          {
+            "text": "Мы используем оператор "
+          },
+          {
+            "text": "*",
+            "bold": true
+          },
+          {
+            "text": " для распаковки каждой пары значений, и выводим каждый результат на отдельной строке с помощью функции "
+          },
+          {
+            "text": "print()",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "323056916 159692",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3210565736 1587032",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3240566826 1601862",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3250560446 1606802",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3270567916 1616692",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3280561536 1621632",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-5140/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6 \n",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 5140 ЕГЭ по информатике #25",
+  "task": 25
+}

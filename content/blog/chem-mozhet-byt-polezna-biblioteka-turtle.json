@@ -1,0 +1,631 @@
+{
+  "slug": "chem-mozhet-byt-polezna-biblioteka-turtle",
+  "title": "Чем может быть полезна библиотека Turtle",
+  "description": "Библиотека Turtle в Python предоставляет простой и интуитивно понятный способ рисования графики и создания простых анимаций с помощью черепашьей графики (turtle graphics). Она…",
+  "date": "2023-09-30",
+  "cover": {
+    "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/01.webp",
+    "width": 750,
+    "height": 266
+  },
+  "source": "https://dzen.ru/a/ZRfm1T27qgj0Vj8W",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/01.webp",
+      "width": 750,
+      "height": 266,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вступительная теория"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Библиотека "
+        },
+        {
+          "text": "Turtle",
+          "bold": true
+        },
+        {
+          "text": " в "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": " предоставляет простой и интуитивно понятный способ рисования графики и создания простых анимаций с помощью черепашьей графики ("
+        },
+        {
+          "text": "turtle graphics",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "). Она включает различные функции для управления черепашкой и рисования различных графических фигур."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/02.webp",
+      "width": 203,
+      "height": 197,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Принцип работы библиотеки Turtle можно представить следующим образом:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/03.webp",
+      "width": 687,
+      "height": 380,
+      "alt": "-3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/04.webp",
+      "width": 300,
+      "height": 205,
+      "alt": "-4"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import turtle"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# Создаем черепашку\nt = turtle.Turtle()"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# Рисуем квадрат \n    for _ in range(4):     \n    t.forward(100)  # Перемещение вперед на 100 пикселей     \n    t.left(90)  # Поворот налево на 90 градусов"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# Ожидаем завершения рисования \nturtle.done()"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этом примере мы создали черепашку "
+        },
+        {
+          "text": "t",
+          "bold": true
+        },
+        {
+          "text": ", которая рисует квадрат с помощью цикла.  Она перемещается вперед на 100 пикселей, а затем поворачивает налево на 90 градусов.  Цикл повторяется 4 раза, чтобы нарисовать четыре стороны квадрата.  После завершения рисования, программа ожидает закрытия окна пользователем с помощью "
+        },
+        {
+          "text": "turtle.done()",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Цвета и как их менять"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В библиотеке "
+        },
+        {
+          "text": "turtle",
+          "bold": true
+        },
+        {
+          "text": " есть возможность изменять цвет линий и заливки для черепашьего рисунка с помощью методов "
+        },
+        {
+          "text": "color()",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "fillcolor()",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/05.webp",
+      "width": 189,
+      "height": 187,
+      "alt": "-5"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Изменение цвета линий с помощью color()",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": "color()",
+          "bold": true
+        },
+        {
+          "text": " используется для изменения цвета линий, которые рисует черепашка. Этот метод принимает один или два аргумента. Если указан только один аргумент, то он задает цвет линий, а если указаны два аргумента, то первый аргумент задает цвет пера, а второй аргумент - цвет заливки ("
+        },
+        {
+          "text": "если черепашка рисует закрытую фигуру",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Синтаксис: \nturtle.color(\"цвет_линий\") \nturtle.color(\"цвет_линий\", \"цвет_заливки\")"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример использования "
+        },
+        {
+          "text": "color()",
+          "bold": true
+        },
+        {
+          "text": " для изменения цвета линий:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/06.webp",
+      "width": 303,
+      "height": 156,
+      "alt": "-6"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import turtle"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "t = turtle.Turtle() \n\nt.color(\"red\")  # Устанавливаем цвет линий на \"красный\" \nt.forward(100)"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# Устанавливаем цвет линий на \"синий\" и цвет заливки на \"желтый\"\n"
+        },
+        {
+          "text": "t.color(\"blue\", \"yellow\")",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "t.begin_fill() \nt.circle(50) \nt.end_fill() \n\nturtle.done()"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Изменение цвета заливки с помощью fillcolor()",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": "fillcolor()",
+          "bold": true
+        },
+        {
+          "text": " используется только для изменения цвета заливки, когда черепашка рисует закрытую фигуру с помощью методов "
+        },
+        {
+          "text": "begin_fill()",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "end_fill()",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Синтаксис: \nturtle.fillcolor(\"цвет_заливки\")"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример использования "
+        },
+        {
+          "text": "fillcolor()",
+          "bold": true
+        },
+        {
+          "text": " для изменения цвета заливки:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/07.webp",
+      "width": 300,
+      "height": 182,
+      "alt": "-7"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import turtle"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "t = turtle.Turtle()  \n\nt.fillcolor(\"yellow\")  # Устанавливаем цвет заливки на \"желтый\" \nt.begin_fill() \nfor _ in range(4):     \n    t.forward(100)     \n    t.right(90) \nt.end_fill()  \n\nturtle.done()"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этих примерах мы использовали различные комбинации методов "
+        },
+        {
+          "text": "color()",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "fillcolor()",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "begin_fill()",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "end_fill()",
+          "bold": true
+        },
+        {
+          "text": " для изменения цвета линий и заливки.  Вы можете экспериментировать с разными цветами и комбинациями для создания красочных и интересных черепашьих рисунков!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Предлагаю рассмотреть пример уже на реальной задаче с экзамена ЕГЭ"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Тип 6 № ",
+            "bold": true
+          },
+          {
+            "text": "47246",
+            "href": "https://inf-ege.sdamgia.ru/problem?id=47246",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Исполнитель Черепаха действует на плоскости с декартовой системой координат. В начальный момент Черепаха находится в начале координат, её голова направлена вдоль положительного направления оси ординат, хвост опущен."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Черепахе был дан для исполнения следующий алгоритм:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Повтори 4 [Вперёд 14 Направо 120]",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите, "
+        },
+        {
+          "text": "сколько точек",
+          "bold": true
+        },
+        {
+          "text": " с целочисленными координатами будут находиться внутри области, ограниченной линией, заданной данным алгоритмом. Точки на линии учитывать "
+        },
+        {
+          "text": "не следует",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/08.webp",
+      "width": 303,
+      "height": 214,
+      "alt": "-8"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "from turtle import *"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "left(90) \nspeed(10) \nl = 20 \nfor _ in range(4):     \nforward(14*l)     \nright(120)"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "done()"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/09.webp",
+      "width": 690,
+      "height": 271,
+      "alt": "-9"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Рисунок который должен получиться:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/10.webp",
+      "width": 270,
+      "height": 264,
+      "alt": "-10"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Продолжим описание первого варианта решения задачи через библиотеку "
+        },
+        {
+          "text": "turtle",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/11.webp",
+      "width": 300,
+      "height": 322,
+      "alt": "-11"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "from turtle import *"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "left(90) \nspeed(10) \nl = 20 \nfor _ in range(4):  \n    forward(14*l)     \n    right(120)  \n\ncolor('red') \nup()\nfor x in range(0, 15):    \n    for y in range(0, 15):        \n        goto(x * l, y * l)         \n        dot('blue') \ndone()"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/12.webp",
+      "width": 685,
+      "height": 206,
+      "alt": "-12"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Рисунок, который должен получиться:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/13.webp",
+      "width": 291,
+      "height": 281,
+      "alt": "-13"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 78",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/14.webp",
+      "width": 187,
+      "height": 125,
+      "alt": "-14"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/chem-mozhet-byt-polezna-biblioteka-turtle/15.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy \n",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "💡Чем может быть полезна библиотека Turtle #tpy",
+  "hidden": true
+}

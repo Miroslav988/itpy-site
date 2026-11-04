@@ -1,0 +1,245 @@
+{
+  "slug": "zadanie-8-ege-razbor-zadachi-yandeks-uchebnik",
+  "title": "Задание 8 ЕГЭ: разбор задачи — Яндекс учебник",
+  "description": "Уровень: Простая",
+  "date": "2024-11-26",
+  "meta": {
+    "source": "Яндекс учебник",
+    "level": "Простая"
+  },
+  "cover": {
+    "src": "/blog/zadanie-8-ege-razbor-zadachi-yandeks-uchebnik/01.webp",
+    "width": 750,
+    "height": 386
+  },
+  "source": "https://dzen.ru/a/Z0Md9bmkTQ8FkT8y",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие задачи:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Артём составляет пятибуквенные слова из букв своего имени. Он ввёл два правила: не повторять буквы в одном слове и не ставить гласные первыми и последними одновременно."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сколько таких слов может составить Артём?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Теоретическая справка:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Обратите внимание на этот if, интересная штука и не самая очевидная."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Код решения",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-yandeks-uchebnik/01.webp",
+      "width": 750,
+      "height": 386,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 108"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "from itertools import *",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Импортируются все функции и классы из модуля itertools, который предоставляет инструменты для создания итераторов."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": "cnt = 0",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Инициализируется переменная "
+        },
+        {
+          "text": "cnt",
+          "italic": true
+        },
+        {
+          "text": ", которая будет использоваться для подсчета количества подходящих перестановок."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "for p in permutations('Артём'.upper()):",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Запускается цикл for, который проходит по всем возможным перестановкам заглавных букв слова \"Артём\"."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. "
+        },
+        {
+          "text": "word = ''.join(p)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Перестановка p преобразуется в строку и сохраняется в переменной word."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. "
+        },
+        {
+          "text": "if not(word[0] in 'АЁ' and word[-1] in 'АЁ'):",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Проверяется, начинается ли слово с буквы из множества 'АЁ' и заканчивается ли также на букву из того же множества; если это не так, выполняется следующий шаг."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6. "
+        },
+        {
+          "text": "cnt += 1",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Увеличивается счетчик cnt на 1, если условие в предыдущей строке истинно."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. "
+        },
+        {
+          "text": "print(cnt)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Выводится общее количество перестановок, удовлетворяющих заданному условию."
+        }
+      ]
+    }
+  ],
+  "originalTitle": "Разбор номера ЕГЭ по информатике заджача №8",
+  "task": 8
+}

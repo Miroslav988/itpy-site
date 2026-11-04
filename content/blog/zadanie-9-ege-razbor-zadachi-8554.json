@@ -1,0 +1,400 @@
+{
+  "slug": "zadanie-9-ege-razbor-zadachi-8554",
+  "title": "Задание 9 ЕГЭ: разбор задачи 8554",
+  "description": "Условие: № 8554 (Уровень: Средний) • Статья подготовлена командой itpy • Полный разбор задачи в Telegram",
+  "date": "2024-05-07",
+  "cover": {
+    "src": "/blog/zadanie-9-ege-razbor-zadachi-8554/01.webp",
+    "width": 530,
+    "height": 340
+  },
+  "source": "https://dzen.ru/a/ZjOZSEfELlYz3UzZ",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-8554/01.webp",
+      "width": 530,
+      "height": 340,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие: № 8554 (Уровень: Средний)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Telegram",
+          "href": "https://t.me/informatika_kege_itpy/406"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(В. Рыбальченко)",
+          "href": "https://discord.gg/7Ayj3uNKxU",
+          "bold": true
+        },
+        {
+          "text": " В файле "
+        },
+        {
+          "text": "9.xlsx",
+          "bold": true
+        },
+        {
+          "text": " в каждой строке содержится 5 целых чисел. Необходимо посчитать количество строк, в которых выполняется оба условия:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "– Ровно три числа заканчиваются цифрой 3;",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– Квадрат суммы положительных чисел меньше квадрата суммы отрицательных чисел.",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответ запишите только число."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Файлы к заданию: "
+        },
+        {
+          "text": "9.xlsx",
+          "href": "https://kompege.ru/files/pjfBkV-tR.xlsx"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-8554/02.webp",
+      "width": 750,
+      "height": 474,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "cnt = 0",
+            "bold": true
+          },
+          {
+            "text": " - инициализирует переменную "
+          },
+          {
+            "text": "cnt ",
+            "bold": true
+          },
+          {
+            "text": "значением "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": ". Эта переменная будет использоваться для подсчета"
+          },
+          {
+            "text": " количества",
+            "bold": true
+          },
+          {
+            "text": " подходящих строк."
+          }
+        ],
+        [
+          {
+            "text": "Цикл for s in open('9.txt'): ",
+            "bold": true
+          },
+          {
+            "text": "проходит по каждой "
+          },
+          {
+            "text": "строке",
+            "bold": true
+          },
+          {
+            "text": " в файле "
+          },
+          {
+            "text": "'9.txt'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(x) for x in s.split()] ",
+            "bold": true
+          },
+          {
+            "text": "- разбивает строку "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "отдельные элементы",
+            "bold": true
+          },
+          {
+            "text": ", преобразует их в "
+          },
+          {
+            "text": "целые",
+            "bold": true
+          },
+          {
+            "text": " числа и сохраняет в виде "
+          },
+          {
+            "text": "списка M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if len([x for x in M if abs(x) % 10 == 3]) == 3: ",
+            "bold": true
+          },
+          {
+            "text": "- проверяет, содержит ли список "
+          },
+          {
+            "text": "M ровно 3 элемента",
+            "bold": true
+          },
+          {
+            "text": ", у которых "
+          },
+          {
+            "text": "модуль деления на 10 равен 3",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "A = [x for x in M if x > 0]",
+            "bold": true
+          },
+          {
+            "text": " - создает список "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": ", содержащий только "
+          },
+          {
+            "text": "положительные",
+            "bold": true
+          },
+          {
+            "text": " числа из списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "B = [x for x in M if x < 0]",
+            "bold": true
+          },
+          {
+            "text": " - создает список "
+          },
+          {
+            "text": "B",
+            "bold": true
+          },
+          {
+            "text": ", содержащий только "
+          },
+          {
+            "text": "отрицательные",
+            "bold": true
+          },
+          {
+            "text": " числа из списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if sum(A) ** 2 < sum(B) ** 2:",
+            "bold": true
+          },
+          {
+            "text": " - сравнивает "
+          },
+          {
+            "text": "квадрат суммы ",
+            "bold": true
+          },
+          {
+            "text": "положительных чисел с "
+          },
+          {
+            "text": "квадратом суммы отрицательных чисел",
+            "bold": true
+          },
+          {
+            "text": ". Если квадрат суммы положительных чисел "
+          },
+          {
+            "text": "меньше",
+            "bold": true
+          },
+          {
+            "text": " квадрата суммы отрицательных чисел, то "
+          },
+          {
+            "text": "увеличивает счетчик",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "cnt на 1",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt) ",
+            "bold": true
+          },
+          {
+            "text": "- выводит на экран "
+          },
+          {
+            "text": "количество строк",
+            "bold": true
+          },
+          {
+            "text": ", которые удовлетворяют всем условиям в цикле."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Итак, данный код считывает строки из файла '9.txt', проверяет условия наличия трех элементов с модулем деления на 10 равным 3, суммы положительных и отрицательных чисел, и выводит количество строк, удовлетворяющих этим условиям."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 23"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-8554/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 8554 ЕГЭ по информатике #9",
+  "task": 9
+}

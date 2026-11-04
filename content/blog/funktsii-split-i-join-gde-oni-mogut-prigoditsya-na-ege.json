@@ -1,0 +1,508 @@
+{
+  "slug": "funktsii-split-i-join-gde-oni-mogut-prigoditsya-na-ege",
+  "title": "Функции split() и join(), где они могут пригодиться на ЕГЭ",
+  "description": "Функции split() и join() являются одними из наиболее часто используемых функций для работы со строками в Python.",
+  "date": "2023-08-08",
+  "cover": {
+    "src": "/blog/funktsii-split-i-join-gde-oni-mogut-prigoditsya-na-ege/01.webp",
+    "width": 530,
+    "height": 220
+  },
+  "source": "https://dzen.ru/a/ZNB4e4QuDUov4b8J",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/funktsii-split-i-join-gde-oni-mogut-prigoditsya-na-ege/01.webp",
+      "width": 530,
+      "height": 220,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вступительная теория"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функции"
+        },
+        {
+          "text": " split()",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "join()",
+          "bold": true
+        },
+        {
+          "text": " являются одними из наиболее часто используемых функций для работы со строками в Python."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "split()",
+          "bold": true
+        },
+        {
+          "text": " позволяет разделить строку на подстроки, используя заданный разделитель. Это может быть очень полезно при работе с данными, которые хранятся в формате "
+        },
+        {
+          "text": "CSV, JSON, XML",
+          "italic": true
+        },
+        {
+          "text": " и т.д. Мы можем использовать функцию "
+        },
+        {
+          "text": "split()",
+          "bold": true
+        },
+        {
+          "text": " для разделения данных на столбцы и дальнейшей обработки их в Python."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "join()",
+          "bold": true
+        },
+        {
+          "text": " позволяет объединить список строк в одну строку, используя заданный разделитель. Это может быть очень полезно для создания текстовых файлов, формирования запросов к базам данных, экспорта данных в другие приложения и т.д."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В целом, функции "
+        },
+        {
+          "text": "split()",
+          "bold": true
+        },
+        {
+          "text": " и"
+        },
+        {
+          "text": " join()",
+          "bold": true
+        },
+        {
+          "text": " позволяют значительно упростить работу с текстовыми и списочными данными, а также ускорить ряд повседневных задач, связанных с приложениями на языке Python."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Функция split() на примерах"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример 1: ",
+          "bold": true
+        },
+        {
+          "text": "Разбиение строки на список"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция split() позволяет разбить строку на список значений, используя заданный разделитель. Рассмотрим пример:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "string = \"apples,bananas,oranges\"\nfruits = string.split(\",\")\nprint(fruits)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этом примере мы создали строку, содержащую фрукты, разделенные запятыми. Затем мы использовали функцию "
+        },
+        {
+          "text": "split()",
+          "bold": true
+        },
+        {
+          "text": ", чтобы разбить строку на список, используя символ "
+        },
+        {
+          "text": "\",\"",
+          "bold": true
+        },
+        {
+          "text": " в качестве разделителя. Результатом является список"
+        },
+        {
+          "text": " [\"apples\", \"bananas\", \"oranges\"]",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример 2:",
+          "bold": true
+        },
+        {
+          "text": " Разбиение многострочного текста на список строк"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "split()",
+          "bold": true
+        },
+        {
+          "text": " также может использоваться для разбиения многострочного текста на список строк. Рассмотрим пример:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "text = \"The quick brown fox\\\\njumps over the lazy dog\"\nlines = text.split(\"\\\\n\")\nprint(lines)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Здесь мы использовали функцию "
+        },
+        {
+          "text": "split()",
+          "bold": true
+        },
+        {
+          "text": ", чтобы разбить многострочный текст на список строк, используя символ переноса строки "
+        },
+        {
+          "text": "(\"\\\\n\")",
+          "bold": true
+        },
+        {
+          "text": " в качестве разделителя. Результатом является список:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "[\"The quick brown fox\", \"jumps over the lazy dog\"].",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Функция join() на примерах"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример 1:",
+          "bold": true
+        },
+        {
+          "text": " Склеивание списка строк в одну строку"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "join()",
+          "bold": true
+        },
+        {
+          "text": " позволяет объединить множество строк в одну строку, используя заданный разделитель. Рассмотрим пример:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "fruits = [\"apples\", \"bananas\", \"oranges\"]\nstring = \",\".join(fruits)\nprint(string)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Здесь мы создали список фруктов и затем использовали функцию "
+        },
+        {
+          "text": "join()",
+          "bold": true
+        },
+        {
+          "text": ", чтобы склеить их в одну строку, используя "
+        },
+        {
+          "text": "\",\"",
+          "bold": true
+        },
+        {
+          "text": " в качестве разделителя. Результатом является строка "
+        },
+        {
+          "text": "\"apples,bananas,oranges\"",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример 2:",
+          "bold": true
+        },
+        {
+          "text": " Склеивание списка чисел в строку"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "join()",
+          "bold": true
+        },
+        {
+          "text": " также может использоваться для объединения списка чисел в строку. Рассмотрим пример:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "numbers = [1, 2, 3, 4, 5]\nstring = \"\".join(str(number) for number in numbers)\nprint(string)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Здесь мы создали список чисел и затем преобразовали каждое число в строку с помощью функции "
+        },
+        {
+          "text": "str()",
+          "bold": true
+        },
+        {
+          "text": ". Затем мы использовали функцию "
+        },
+        {
+          "text": "join()",
+          "bold": true
+        },
+        {
+          "text": ", чтобы склеить все числа в одну строку без разделителей. Результатом является строка"
+        },
+        {
+          "text": " \"12345\"",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Это лишь некоторые из множества примеров использования функций "
+        },
+        {
+          "text": "split() ",
+          "bold": true
+        },
+        {
+          "text": "и"
+        },
+        {
+          "text": " join()",
+          "bold": true
+        },
+        {
+          "text": ". Надеюсь, эта статья поможет вам лучше понимать эти функции и использовать их в своих проектах!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примеры на задачах из ЕГЭ"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "№ 7824 (Уровень: Средний) ",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "(М. Ишимов)",
+          "href": "https://t.me/infkege",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Текстовый файл состоит из символов, обозначающих прописные буквы латинского алфавита.Определите максимальное количество идущих подряд символов, среди которых никакие три буквы из набора букв A, B и С (с учетом повторений) не записаны подряд. Для выполнения этого задания следует написать программу."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "24.txt",
+          "href": "https://kompege.ru/files/58NBz_FT6.txt"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/funktsii-split-i-join-gde-oni-mogut-prigoditsya-na-ege/02.webp",
+      "width": 600,
+      "height": 442,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import itertools\ns = open('24.txt').readline()\nM = []\nmaxi = 0\nfor i in itertools.product('ABC', repeat = 3):\n    r = ''.join(i)\n    M.append(r)\nfor x in M:\n    s = s.replace(x, ' ')\nmaxi = max([len(i) for i in s.split()])\nprint(maxi+3)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В данной задаче нам было сказано, что в строке не должно быть ни одной тройки, состоящей из символов "
+        },
+        {
+          "text": "\"ABC\"",
+          "bold": true
+        },
+        {
+          "text": ". Чтобы найти все возможные тройки символов, мы воспользовались библиотекой "
+        },
+        {
+          "text": "itertools",
+          "bold": true
+        },
+        {
+          "text": " и методом "
+        },
+        {
+          "text": "product()",
+          "bold": true
+        },
+        {
+          "text": ". Однако была проблема: метод "
+        },
+        {
+          "text": "product()",
+          "bold": true
+        },
+        {
+          "text": " возвращает кортежи со строчными элементами, а нам нужны тройки символов."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Решение существует: мы склеили каждый такой кортеж в строку, используя функцию "
+        },
+        {
+          "text": ".join()",
+          "bold": true
+        },
+        {
+          "text": "!"
+        }
+      ]
+    }
+  ],
+  "originalTitle": "💡 Функции split() и join(), где они могут пригодиться на ЕГЭ #tpy"
+}

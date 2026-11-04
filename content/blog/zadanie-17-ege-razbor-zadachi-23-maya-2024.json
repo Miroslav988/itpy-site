@@ -1,0 +1,125 @@
+{
+  "slug": "zadanie-17-ege-razbor-zadachi-23-maya-2024",
+  "title": "Задание 17 ЕГЭ: разбор задачи (23 мая 2024)",
+  "description": "• Статья подготовлена командой itpy • Полный разбор задачи в Telegram",
+  "date": "2024-05-23",
+  "task": 17,
+  "source": "https://dzen.ru/a/Zk77Rnu0u02zlu5f",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-23-maya-2024/01.webp",
+      "width": 750,
+      "height": 328,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Telegram",
+          "href": "https://t.me/informatika_kege_itpy/420"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "📌  "
+        },
+        {
+          "text": "Ссылка на полную версию шпаргалки/методички на Notion.",
+          "href": "https://informatikakegeitpy.notion.site/17-aef1f23644794ebba75af2e4e84430a5?pvs=4"
+        },
+        {
+          "text": "\n\nПоставь ❤лайк, отправь другу, и забирай несколько полезных функций, которые уже ждут тебя здесь:"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Считываем файл 17.txt в общий список M"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "M = [int(x) for x in open('17.txt')]"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Три основных типа задач 17 номера"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "В данной задаче под парой подразумевается два идущих подряд элемента последовательности:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-23-maya-2024/02.webp",
+      "width": 750,
+      "height": 423,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2.  Назовём тройкой три идущих подряд элемента последовательности:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-23-maya-2024/03.webp",
+      "width": 750,
+      "height": 423,
+      "alt": "-3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. В данной задаче под парой подразумевается два различных элемента последовательности:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-23-maya-2024/04.webp",
+      "width": 750,
+      "height": 584,
+      "alt": "-4"
+    }
+  ],
+  "originalTitle": "17 Шпаргалка ЕГЭ | Задание #ЕГЭ17 #шпора"
+}

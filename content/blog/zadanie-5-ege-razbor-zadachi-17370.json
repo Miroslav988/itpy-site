@@ -1,0 +1,372 @@
+{
+  "slug": "zadanie-5-ege-razbor-zadachi-17370",
+  "title": "Задание 5 ЕГЭ: разбор задачи 17370",
+  "description": "Условие: № 17370 Досрочная волна 2024 (Уровень: Базовый) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-11-21",
+  "cover": {
+    "src": "/blog/zadanie-5-ege-razbor-zadachi-17370/01.webp",
+    "width": 510,
+    "height": 340
+  },
+  "source": "https://dzen.ru/a/ZVOzXnuAPjmcIErI",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-17370/01.webp",
+      "width": 510,
+      "height": 340,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ ",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": "17370",
+          "href": "https://kompege.ru/task"
+        },
+        {
+          "text": " Досрочная волна 2024 (Уровень: Базовый)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Автомат обрабатывает натуральное число "
+        },
+        {
+          "text": "N",
+          "italic": true
+        },
+        {
+          "text": " по следующему алгоритму:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1.  Строится двоичная запись числа "
+        },
+        {
+          "text": "N",
+          "italic": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2.  Удаляется первая слева единица и все следующие непосредственно за ней нули. Если после этого в числе не остаётся цифр, результат этого действия считается равным нулю."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3.  Полученное число переводится в десятичную запись."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4.  Новое число вычитается из исходного, полученная разность выводится на экран."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сколько",
+          "bold": true
+        },
+        {
+          "text": " разных значений будет показано на экране автомата при последовательном вводе всех натуральных чисел от 100 до 3000?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-17370/02.webp",
+      "width": 481,
+      "height": 396,
+      "alt": "Вариант 1: решение через строки ",
+      "caption": "Вариант 1: решение через строки"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# Код решения Вариант 1\nA = set()\nfor n in range(100, 3000+1):\n    s = bin(n)[3:]\n    s = int(s, 2)\n    r = n - s\n    A.add(r)\nprint(len(A))"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к первому варианту решения задачи:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "создаем "
+          },
+          {
+            "text": "множество set()",
+            "href": "https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset:~:text=in%20version%203.3.-,Set%20Types,-%E2%80%94%20set%2C"
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": " , в которое будем добавлять разность нового числа и исходного"
+          }
+        ],
+        [
+          {
+            "text": "делаем перебор от "
+          },
+          {
+            "text": "100",
+            "bold": true
+          },
+          {
+            "text": " до "
+          },
+          {
+            "text": "3000",
+            "bold": true
+          },
+          {
+            "text": " (как сказано в условии)"
+          }
+        ],
+        [
+          {
+            "text": "переводим число в двоичную систему  и делаем "
+          },
+          {
+            "text": "срез от 3 цифры",
+            "bold": true
+          },
+          {
+            "text": ", т.к. нам нужно удалить первую единицу слева"
+          }
+        ],
+        [
+          {
+            "text": "переводим наше число в десятичную систему"
+          }
+        ],
+        [
+          {
+            "text": "находим разность нового числа и исходного"
+          }
+        ],
+        [
+          {
+            "text": "добавляем во "
+          },
+          {
+            "text": "множество set()",
+            "href": "https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset:~:text=in%20version%203.3.-,Set%20Types,-%E2%80%94%20set%2C"
+          },
+          {
+            "text": " разность"
+          }
+        ],
+        [
+          {
+            "text": "и выводим длину "
+          },
+          {
+            "text": "A",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-17370/03.webp",
+      "width": 481,
+      "height": 419,
+      "alt": "Вариант 2: похоже на первое, но через список",
+      "caption": "Вариант 2: похоже на первое, но через список"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# Код решения Вариант 2\nA = []\nfor n in range(100, 3001):\n    s = bin(n)[3:]\n    s = int(s, 2)\n    if n - s not in A:\n        A.append(n - s)\nprint(len(A))"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии ко второму варианту решения задачи:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "создаем список "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": " , в который будем добавлять "
+          },
+          {
+            "text": "разность нового числа и исходного",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "делаем перебор от "
+          },
+          {
+            "text": "100",
+            "bold": true
+          },
+          {
+            "text": " до "
+          },
+          {
+            "text": "3000",
+            "bold": true
+          },
+          {
+            "text": " (как сказано в условии)"
+          }
+        ],
+        [
+          {
+            "text": "переводим число в двоичную систему и делаем "
+          },
+          {
+            "text": "срез от 3",
+            "bold": true
+          },
+          {
+            "text": " цифры, т.к. нам нужно удалить первую единицу слева"
+          }
+        ],
+        [
+          {
+            "text": "переводим наше число в "
+          },
+          {
+            "text": "десятичную",
+            "bold": true
+          },
+          {
+            "text": " систему"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5-6. если такой разности в списке нет, то добавляем в список. Это нужно для того, чтобы не было одинаковых чисел"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7.  выводим длину списка "
+        },
+        {
+          "text": "A",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 6"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-17370/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 17370 ЕГЭ по информатике #5",
+  "task": 5
+}

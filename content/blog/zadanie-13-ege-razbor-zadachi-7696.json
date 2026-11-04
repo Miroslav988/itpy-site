@@ -1,0 +1,163 @@
+{
+  "slug": "zadanie-13-ege-razbor-zadachi-7696",
+  "title": "Задание 13 ЕГЭ: разбор задачи 7696",
+  "description": "Для узла с IP-адресом 224.128.112.142 адрес сети равен 224.128.96.0. Чему равен третий слева байт маски? Ответ запишите в виде десятичного числа.",
+  "date": "2024-05-11",
+  "cover": {
+    "src": "/blog/zadanie-13-ege-razbor-zadachi-7696/01.webp",
+    "width": 530,
+    "height": 270
+  },
+  "source": "https://dzen.ru/a/Zj-Hxis4gXy7hgFQ",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-7696/01.webp",
+      "width": 530,
+      "height": 270,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие: № 5911 (Уровень: Средний)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Telegram",
+          "href": "https://t.me/informatika_kege_itpy/418"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "🚩 Условие задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для узла с IP-адресом 224.128.112.142 адрес сети равен 224.128.96.0.\nЧему равен третий слева байт маски? Ответ запишите в виде десятичного числа."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "🚩 Теоретическая справка"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Маска сети имеет длину 32 бита и вид 1111..000 (сначала единицы, потом нули). Поэтому мы можем перебрать ее значения через for mask in range(32+1):"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "👩‍💻 Код решения"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "from ipaddress import *\nfor mask in range(32+1):\n    net = ip_network(f'224.128.112.142/{mask}', 0)\n    if str(net) == f'224.128.96.0/{mask}':\n        print(str(net.netmask).split('.')[2])"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "👩‍💻 Комментарии к коду"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "from ipaddress import *",
+          "bold": true
+        },
+        {
+          "text": "\nИмпорт всех функций из модуля ipaddress для работы с сетевыми адресами.\n\n2.  "
+        },
+        {
+          "text": "Цикл for mask in range(32+1): ",
+          "bold": true
+        },
+        {
+          "text": "\nДля перебора возможных значений маски сети от 0 до 32 (включительно).\n\n3. "
+        },
+        {
+          "text": "net = ip_network(f'224.128.112.142/{mask}', 0) ",
+          "bold": true
+        },
+        {
+          "text": "\nСоздание объекта сети net с заданным IP-адресом и переменной маской подсети, где последний аргумент указывает на коррекцию префикса.\n\n4. "
+        },
+        {
+          "text": "if str(net) == f'224.128.96.0/{mask}': ",
+          "bold": true
+        },
+        {
+          "text": "\nУсловие проверки соответствия адреса сети определенному значению.\n\n5. "
+        },
+        {
+          "text": "print(str(net.netmask).split('.')[2]) ",
+          "bold": true
+        },
+        {
+          "text": "\nВывод третьего октета маски подсети из объекта сети net, если условие выполнено."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 224"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-7696/02.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 7696 по информатике #13",
+  "task": 13
+}

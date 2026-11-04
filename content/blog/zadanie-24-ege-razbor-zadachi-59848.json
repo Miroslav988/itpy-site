@@ -1,0 +1,283 @@
+{
+  "slug": "zadanie-24-ege-razbor-zadachi-59848",
+  "title": "Задание 24 ЕГЭ: разбор задачи 59848",
+  "description": "Условие: Тип 24 № 59848 с сайта Решу ЕГЭ • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-01-30",
+  "cover": {
+    "src": "/blog/zadanie-24-ege-razbor-zadachi-59848/01.webp",
+    "width": 530,
+    "height": 310
+  },
+  "source": "https://dzen.ru/a/ZbgBTIHwkSDrGxEb",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-59848/01.webp",
+      "width": 530,
+      "height": 310,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "Тип 24 № "
+        },
+        {
+          "text": "59848",
+          "href": "https://www.notion.so/problem?id=59848"
+        },
+        {
+          "text": " с сайта"
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "Решу ЕГЭ",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=59848"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "П",
+          "href": "https://t.me/informatika_kege_itpy/334"
+        },
+        {
+          "text": "олный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/336"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Текстовый файл состоит не более чем из 10**6 символов латинского алфавита. Необходимо найти самую длинную подстроку, которая может являться числом в 24 системе счисления. В ответ записать длину последовательности символов, которая может являться числом в 24 системе счисления."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Примечание:",
+          "italic": true
+        },
+        {
+          "text": " число не может начинаться с нуля!"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Скачать файл: "
+        },
+        {
+          "text": "24.txt",
+          "href": "https://inf-ege.sdamgia.ru/get_file?id=141036"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-59848/02.webp",
+      "width": 750,
+      "height": 357,
+      "alt": "-2"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM') ",
+            "bold": true
+          },
+          {
+            "text": "- Создаем отсортированный список символов "
+          },
+          {
+            "text": "36-ого",
+            "bold": true
+          },
+          {
+            "text": " алфавита."
+          }
+        ],
+        [
+          {
+            "text": "bad = alphabet[24:]",
+            "bold": true
+          },
+          {
+            "text": " - Собираем список символов, начиная с "
+          },
+          {
+            "text": "25-го",
+            "bold": true
+          },
+          {
+            "text": " элемента алфавита используя "
+          },
+          {
+            "text": "срез",
+            "bold": true
+          },
+          {
+            "text": " (список плохих символов)."
+          }
+        ],
+        [
+          {
+            "text": "s = open('24.txt').readline()",
+            "bold": true
+          },
+          {
+            "text": " - Чтение первой строки из файла "
+          },
+          {
+            "text": "'24.txt'",
+            "italic": true
+          },
+          {
+            "text": " и сохранение в переменную "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for x in bad:",
+            "bold": true
+          },
+          {
+            "text": " - Цикл по всем символам в списке"
+          },
+          {
+            "text": " bad",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(x, ' ') ",
+            "bold": true
+          },
+          {
+            "text": "- Замена каждого символа "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "пробел",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(max([len(x) for x in s.split() if x[0] != '0']))",
+            "bold": true
+          },
+          {
+            "text": " - Вывод максимальной длины слова, начинающегося не с "
+          },
+          {
+            "text": "'0'",
+            "bold": true
+          },
+          {
+            "text": ", в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 40"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-59848/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 59848 ЕГЭ по информатике #24",
+  "task": 24
+}

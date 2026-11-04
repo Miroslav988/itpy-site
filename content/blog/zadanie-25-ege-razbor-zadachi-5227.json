@@ -1,0 +1,311 @@
+{
+  "slug": "zadanie-25-ege-razbor-zadachi-5227",
+  "title": "Задание 25 ЕГЭ: разбор задачи 5227",
+  "description": "Назовём маской числа последовательность цифр, в которой также могут встречаться следующие символы:",
+  "date": "2023-09-15",
+  "cover": {
+    "src": "/blog/zadanie-25-ege-razbor-zadachi-5227/01.webp",
+    "width": 530,
+    "height": 350
+  },
+  "source": "https://dzen.ru/a/ZNJQoDl-EVpz9tmL",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-5227/01.webp",
+      "width": 530,
+      "height": 350,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 5227 (Уровень: Сложный) (М. Ишимов)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Назовём маской числа последовательность цифр, в которой также могут встречаться следующие символы:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "символ «?» означает ровно одну произвольную цифру;"
+          }
+        ],
+        [
+          {
+            "text": "символ «"
+          },
+          {
+            "text": "» означает любую последовательность цифр произвольной длины; в том числе «",
+            "italic": true
+          },
+          {
+            "text": "» может задавать и пустую последовательность."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Например, маске 123*4?5 соответствуют числа 123405 и 12300405."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Среди натуральных чисел, не превышающих 10**7, найдите все числа, соответствующие маске 3*52?, у которых нечётное количество делителей."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе запишите в первом столбце таблицы все найденные числа в порядке возрастания, а во втором столбце – соответствующие им максимальные делители, не считая самого числа."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-5227/02.webp",
+      "width": 750,
+      "height": 519,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "from fnmatch import *\nfor x in range(3520, 10**7):\n    if fnmatch(str(x), '3*52?'):\n        divisors = set()\n        for j in range(2, int(x ** 0.5) + 1):\n            if x % j == 0:\n                divisors.add(j)\n                divisors.add(x // j)\n        if len(divisors) % 2 != 0:\n            print(x, max(divisors))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from fnmatch import *",
+            "italic": true
+          },
+          {
+            "text": " - Импортируем все функции из библиотеки "
+          },
+          {
+            "text": "fnmatch",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(3520, 10**7):",
+            "italic": true
+          },
+          {
+            "text": " - Создаём цикл по диапазону чисел от 3520 до 10**7 (в соответствии с условием) с помощью переменной "
+          },
+          {
+            "text": "x",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "if fnmatch(str(x), '3*52?'):",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, соответствует ли строковое представление x шаблону '3*52?', используя функции "
+          },
+          {
+            "text": "fnmatch",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "divisors = set()",
+            "italic": true
+          },
+          {
+            "text": " - Создаём пустое множество "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "for j in range(2, int(x ** 0.5) + 1): ",
+            "italic": true
+          },
+          {
+            "text": "- Пробегаем цикл по диапазону чисел от 2 до квадратного корня из x плюс 1 (используем квадратный корень, так как это значительно ускоряет выполнение программы) с помощью переменной j"
+          }
+        ],
+        [
+          {
+            "text": "if x % j == 0:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, делится ли "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " без остатка."
+          }
+        ],
+        [
+          {
+            "text": "divisors.add(j) ",
+            "italic": true
+          },
+          {
+            "text": "- Добавляем "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " во множество "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "divisors.add(x // j) ",
+            "italic": true
+          },
+          {
+            "text": "- Добавляем результат целочисленного деления "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " на"
+          },
+          {
+            "text": " j",
+            "bold": true
+          },
+          {
+            "text": " во множество "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if len(divisors) % 2 != 0:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, является ли количество элементов в множестве"
+          },
+          {
+            "text": " divisors",
+            "bold": true
+          },
+          {
+            "text": " нечетным"
+          }
+        ],
+        [
+          {
+            "text": "print(x, max(divisors))",
+            "italic": true
+          },
+          {
+            "text": " - Выводим значение "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " и максимальный элемент из множества "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: ",
+          "bold": true
+        },
+        {
+          "text": "\n3143529 1047843\n3175524 1587762\n3200521 1789\n3845521 103933\n3908529 1302843"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-5227/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 5227 ЕГЭ по информатике #25",
+  "task": 25
+}

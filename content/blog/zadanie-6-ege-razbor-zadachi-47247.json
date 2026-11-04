@@ -1,0 +1,493 @@
+{
+  "slug": "zadanie-6-ege-razbor-zadachi-47247",
+  "title": "Задание 6 ЕГЭ: разбор задачи 47247",
+  "description": "Условие: № 47247 • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-11-24",
+  "cover": {
+    "src": "/blog/zadanie-6-ege-razbor-zadachi-47247/01.webp",
+    "width": 510,
+    "height": 340
+  },
+  "source": "https://dzen.ru/a/ZVweBnPUagIUZ8UD",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-47247/01.webp",
+      "width": 510,
+      "height": 340,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=47247",
+          "italic": true
+        },
+        {
+          "text": " ",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": "47247",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=47247"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Исполнитель Черепаха действует на плоскости с декартовой системой координат. В начальный момент Черепаха находится в начале координат, "
+        },
+        {
+          "text": "её голова направлена вдоль положительного направления оси ординат",
+          "bold": true
+        },
+        {
+          "text": ", хвост опущен."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Черепахе был дан для исполнения следующий алгоритм:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Повтори 8 [Вперёд 6 Направо 120]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите, "
+        },
+        {
+          "text": "сколько точек",
+          "bold": true
+        },
+        {
+          "text": " с целочисленными координатами будут находиться внутри области, ограниченной линией, заданной данным алгоритмом. Точки на линии учитывать "
+        },
+        {
+          "text": "не следует",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-47247/02.webp",
+      "width": 537,
+      "height": 382,
+      "alt": "Первый вариант решения задачи  (первая часть - рисуем фигуру)",
+      "caption": "Первый вариант решения задачи  (первая часть - рисуем фигуру)"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-47247/03.webp",
+      "width": 437,
+      "height": 401,
+      "alt": "Рисунок, который должен получиться\n",
+      "caption": "Первый вариант решения задачи  (первая часть - рисуем фигуру)"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Код решения Вариант 1\nfrom turtle import *\n\nleft(90)\nspeed(10)\nl = 20\nfor i in range(8):\n    forward(6*l)\n    right(120)\ndone()"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Описание к первой части решения задачи через библиотеку turtle"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "импортируем все методы ("
+          },
+          {
+            "text": "*",
+            "bold": true
+          },
+          {
+            "text": ") библиотеки"
+          },
+          {
+            "text": " turtle",
+            "bold": true
+          }
+        ],
+        [],
+        [
+          {
+            "text": "обязательно разворачиваем голову Черепахи вдоль оси ординат (как сказано в условии)"
+          }
+        ],
+        [
+          {
+            "text": "увеличим скорость отрисовки пера, чтобы не ждать"
+          }
+        ],
+        [
+          {
+            "text": "добавляем переменную "
+          },
+          {
+            "text": "L",
+            "bold": true
+          },
+          {
+            "text": ", отвечающую за масштаб фигуры на холсте"
+          }
+        ],
+        [
+          {
+            "text": "удовлетворяя условию, повторяем "
+          },
+          {
+            "text": "8 ",
+            "bold": true
+          },
+          {
+            "text": "раза действия:"
+          }
+        ],
+        [
+          {
+            "text": "вперед "
+          },
+          {
+            "text": "6",
+            "bold": true
+          },
+          {
+            "text": " шагов (пикселей на масштаб "
+          },
+          {
+            "text": "L",
+            "bold": true
+          },
+          {
+            "text": ")"
+          }
+        ],
+        [
+          {
+            "text": "разворачиваем направление головы вправо на "
+          },
+          {
+            "text": "120",
+            "bold": true
+          },
+          {
+            "text": " градусов (не зависит от масштаба)"
+          }
+        ],
+        [
+          {
+            "text": "команда "
+          },
+          {
+            "text": "done() ",
+            "bold": true
+          },
+          {
+            "text": "необходима для фиксации отрисованной фигуры на холсте (чтоб она не закрывалась)."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-47247/04.webp",
+      "width": 537,
+      "height": 589,
+      "alt": "Первый вариант решения задачи (полное решение)",
+      "caption": "Первый вариант решения задачи (полное решение)"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-47247/05.webp",
+      "width": 418,
+      "height": 417,
+      "alt": "Рисунок, который должен получиться\n",
+      "caption": "Первый вариант решения задачи (полное решение)"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Код решения Вариант 1(полное решение)\nfrom turtle import *\n\nleft(90)\nspeed(10)\nl = 20\nfor i in range(8):\n    forward(6*l)\n    right(120)\n\ncolor('red')\nup()\nfor x in range(0, 15):\n    for y in range(0, 15):\n        goto(x * l, y * l)\n        dot('blue')\ndone()"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Продолжим описание первого варианта решения задачи через библиотеку turtle, вторая часть:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "10. Меняем цвет пера на"
+        },
+        {
+          "text": " красный",
+          "bold": true
+        },
+        {
+          "text": " (или любой другой)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "11. Команда "
+        },
+        {
+          "text": "up()",
+          "bold": true
+        },
+        {
+          "text": " поднимает перо, чтобы не было лишних элементов на холсте"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "12. Так как наша фигура лежит в первой четверти (можно увидеть по картинке и началу отрисовки), то перебираем "
+        },
+        {
+          "text": "x",
+          "bold": true
+        },
+        {
+          "text": " в диапазоне от "
+        },
+        {
+          "text": "0",
+          "bold": true
+        },
+        {
+          "text": " до большего шагу числа, чтобы покрыть всю фигуру"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "13. Аналогичный перебор делаем для переменной"
+        },
+        {
+          "text": " y",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "14. Команда "
+        },
+        {
+          "text": "goto() ",
+          "bold": true
+        },
+        {
+          "text": "переносит наше перо в координату, не забываем про масштаб "
+        },
+        {
+          "text": "L",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "15. Ставим точку на (цвет можно было поменять здесь, как указано на картинке)"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-47247/06.webp",
+      "width": 537,
+      "height": 650,
+      "alt": "Второй вариант решения через заливку с автоматическим счетом точек",
+      "caption": "Второй вариант решения через заливку с автоматическим счетом точек"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-47247/07.webp",
+      "width": 462,
+      "height": 408,
+      "alt": "Рисунок, который должен получиться\n",
+      "caption": "Второй вариант решения через заливку с автоматическим счетом точек"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Код решения Вариант 2(полное решение)\nfrom turtle import *\n\nleft(90)\nspeed(10)\nl = 20\n\nbegin_fill()\nfor i in range(8):\n    forward(6*l)\n    right(120)\nend_fill()\n\ncanvas = getcanvas()\ncount = 0\nfor x in range(-100*l, 100*l, l):\n    for y in range(-100*l, 100*l, l):\n        item = canvas.find_overlapping(x, y, x, y)\n        if len(item) == 1 and item[0] == 5:\n            count += 1\nprint(count)\n\ndone()"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Рассмотрим подробнее второй вариант решения задачи через библиотеку turtle"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. Возьмем полученную нами фигуру и зальем ее через begin_fill() и end_fill(), важно взять такое кол-во повторений итераций цикла for, чтобы фигура отрисовывалась ровно один раз. Не должно быть повторных кругов по кромке фигуры"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8. Заканчиваем заливку"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "9. Создаём объект, используя метод getcanvas()"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "10. И счетчик count, для счета точек лежащих внутри заливки (фигуры)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "11. Этот вариант решения подходит для очень больших фигур,  поэтому берем диапазон от -100 до 100 с соблюдением масштаба"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "12. Создаем “прямоугольник” через метод find_overlapping(x, y, x, y) , но за счет передачи в него одной и той же точки - получается не прямоугольник, а точка в заливке"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "13. Если точка лежит внутри заливки и совпадает с ее цветом"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "14. То добавляем такую точку к счетчику -"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "15. Программа выведет в консоль подходящее число точек"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 13"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-47247/08.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 47247 ЕГЭ по информатике #6",
+  "task": 6
+}

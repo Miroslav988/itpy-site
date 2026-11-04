@@ -1,0 +1,278 @@
+{
+  "slug": "zadanie-8-ege-razbor-zadachi-6782",
+  "title": "Задание 8 ЕГЭ: разбор задачи 6782",
+  "description": "(PRO100 ЕГЭ) Определите количество шестизначных чисел, записанных в восьмеричной системе счисления, в записи которых есть ровно две цифры 6, при этом никакая нечётная цифра не…",
+  "date": "2023-08-05",
+  "cover": {
+    "src": "/blog/zadanie-8-ege-razbor-zadachi-6782/01.webp",
+    "width": 530,
+    "height": 250
+  },
+  "source": "https://dzen.ru/a/ZM6EqdGr51YhGuVs",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-6782/01.webp",
+      "width": 530,
+      "height": 250,
+      "alt": "Интересная задачка на комбинаторику от PRO100 ЕГЭ, взята с сайта kompege.ru",
+      "caption": "Интересная задачка на комбинаторику от PRO100 ЕГЭ, взята с сайта kompege.ru"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Уровень сложности средний из-за условия: \"при этом никакая нечётная цифра не стоит рядом с цифрой 6\". Сделали для Вас два варианта решения 🫡"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 6782 (Уровень: Средний)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(PRO100 ЕГЭ)",
+          "href": "https://vk.com/pro100ege68"
+        },
+        {
+          "text": " Определите количество шестизначных чисел, записанных в восьмеричной системе счисления, в записи которых есть ровно две цифры 6, при этом никакая нечётная цифра не стоит рядом с цифрой 6."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример шестизначного числа, записанного в восьмеричной системе счисления – 123456_8."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-6782/02.webp",
+      "width": 750,
+      "height": 338,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "from ",
+          "italic": true
+        },
+        {
+          "text": "itertools "
+        },
+        {
+          "text": "import ",
+          "italic": true
+        },
+        {
+          "text": "product\ncount = 0\n"
+        },
+        {
+          "text": "for ",
+          "italic": true
+        },
+        {
+          "text": "s "
+        },
+        {
+          "text": "in ",
+          "italic": true
+        },
+        {
+          "text": "product('01234567', repeat=6):\n    temp = ''.join(s)\n"
+        },
+        {
+          "text": "if ",
+          "italic": true
+        },
+        {
+          "text": "temp[0] != '0':\n"
+        },
+        {
+          "text": "if ",
+          "italic": true
+        },
+        {
+          "text": "temp.count('6') == 2:\n"
+        },
+        {
+          "text": "if all",
+          "italic": true
+        },
+        {
+          "text": "(x "
+        },
+        {
+          "text": "not in ",
+          "italic": true
+        },
+        {
+          "text": "temp "
+        },
+        {
+          "text": "for ",
+          "italic": true
+        },
+        {
+          "text": "x "
+        },
+        {
+          "text": "in ",
+          "italic": true
+        },
+        {
+          "text": "'16 61 36 63 56 65 76 67'.split()):\n                count += 1\n"
+        },
+        {
+          "text": "print",
+          "italic": true
+        },
+        {
+          "text": "(count)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к каждой строчки кода:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "from itertools import product",
+            "italic": true
+          },
+          {
+            "text": " - Импортируем функцию product из модуля "
+          },
+          {
+            "text": "itertools",
+            "italic": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count = 0",
+            "italic": true
+          },
+          {
+            "text": " - Инициализируем переменную count со значением 0 (будем считать все подходящие значения сюда)."
+          }
+        ],
+        [
+          {
+            "text": "for s in product('01234567', repeat=6):",
+            "italic": true
+          },
+          {
+            "text": " - Начинаем цикл, перебирая все возможные комбинации из цифр '01234567' длиной 6 символов и сохраняем каждую комбинацию в переменную s."
+          }
+        ],
+        [
+          {
+            "text": "temp = ''.join(s)",
+            "italic": true
+          },
+          {
+            "text": " - Преобразуем кортеж s в строку и сохраняем результат в переменную temp."
+          }
+        ],
+        [
+          {
+            "text": "if temp[0] != '0':",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, если первый символ в temp не равен '0', выполняем следующие инструкции."
+          }
+        ],
+        [
+          {
+            "text": "if temp.count('6') == 2:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, если символ '6' встречается в temp ровно 2 раза и выполняем следующие инструкции."
+          }
+        ],
+        [
+          {
+            "text": "if all(x not in temp for x in '16 61 36 63 56 65 76 67'.split()):",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, если все числа из списка '16 61 36 63 56 65 76 67' не встречаются в temp, то все условия выполнены."
+          }
+        ],
+        [
+          {
+            "text": "count += 1",
+            "italic": true
+          },
+          {
+            "text": " - И мы можем увеличивать значение переменной count на +1."
+          }
+        ],
+        [
+          {
+            "text": "print(count)",
+            "italic": true
+          },
+          {
+            "text": " - Выводим значение переменной count."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 5229"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy",
+          "href": "https://t.me/informatika_kege_itpy"
+        },
+        {
+          "text": " 👨‍💻"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-6782/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 6782 ЕГЭ по информатике #8",
+  "task": 8
+}

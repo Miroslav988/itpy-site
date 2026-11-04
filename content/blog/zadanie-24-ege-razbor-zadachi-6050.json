@@ -1,0 +1,363 @@
+{
+  "slug": "zadanie-24-ege-razbor-zadachi-6050",
+  "title": "Задание 24 ЕГЭ: разбор задачи 6050",
+  "description": "Условие: № 6050 Основная волна 27.06.23 (Уровень: Базовый) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-10-04",
+  "cover": {
+    "src": "/blog/zadanie-24-ege-razbor-zadachi-6050/01.webp",
+    "width": 530,
+    "height": 300
+  },
+  "source": "https://dzen.ru/a/ZRftm7a_jhQG7UJh",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-6050/01.webp",
+      "width": 530,
+      "height": 300,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 6050",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": " Основная волна 27.06.23 (Уровень: Базовый)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Текстовый файл "
+        },
+        {
+          "text": "24-240.txt",
+          "href": "https://kpolyakov.spb.ru/cms/files/ege-sym/24-240.txt"
+        },
+        {
+          "text": " состоит не более чем из 10**6 символов и содержит только заглавные буквы латинского алфавита."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Найдите максимальную длину подстроки, не содержащей подстрок, отличающихся от «DANOV» лишь на одну букву."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-6050/02.webp",
+      "width": 750,
+      "height": 365,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "s = open('24.txt').readline()\ncount = 4\nMaxcount = 0\nfor i in range(0, len(s)-4):\n    if (int(s[i] == 'D') + int(s[i+1] == 'A') + int(s[i+2] == 'N') + int(s[i+3] == 'O') + int(s[i+4] == 'V')) == 4:\n        count = 4\n    else:\n        count += 1\n        Maxcount = max(Maxcount, count)\nprint(Maxcount)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline() - открываем файл с именем "
+          },
+          {
+            "text": "\"24.txt\"",
+            "bold": true
+          },
+          {
+            "text": " и считываем первую строку из него, присваивая результат переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count = 4 - присваиваем переменной "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " значение "
+          },
+          {
+            "text": "4",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Maxcount = 0 - присваиваем переменной "
+          },
+          {
+            "text": "Maxcount ",
+            "bold": true
+          },
+          {
+            "text": "значение "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(0, len(s)-4): - начинаем цикл, который будет выполняться для каждого значения "
+          },
+          {
+            "text": "i",
+            "bold": true
+          },
+          {
+            "text": " в диапазоне от "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": " до длины строки "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " минус "
+          },
+          {
+            "text": "4",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if (int(s[i] == 'D') + int(s[i+1] == 'A') + int(s[i+2] == 'N') + int(s[i+3] == 'O') + int(s[i+4] == 'V')) == 4: - проверяем, если сумма результатов сравнений символов "
+          },
+          {
+            "text": "s[i], s[i+1], s[i+2], s[i+3] и s[i+4] ",
+            "bold": true
+          },
+          {
+            "text": "с соответствующими символами"
+          },
+          {
+            "text": " 'D'",
+            "bold": true
+          },
+          {
+            "text": ", "
+          },
+          {
+            "text": "'A'",
+            "bold": true
+          },
+          {
+            "text": ","
+          },
+          {
+            "text": " 'N'",
+            "bold": true
+          },
+          {
+            "text": ", "
+          },
+          {
+            "text": "'O'",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "'V",
+            "bold": true
+          },
+          {
+            "text": "' равна "
+          },
+          {
+            "text": "4",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count = 4 - присваиваем переменной "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " значение "
+          },
+          {
+            "text": "4",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "else: - в противном случае "
+          },
+          {
+            "text": "(если сумма не равна 4)",
+            "bold": true
+          },
+          {
+            "text": ", выполняем следующие действия."
+          }
+        ],
+        [
+          {
+            "text": "count += 1 - увеличиваем значение переменной"
+          },
+          {
+            "text": " count",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Maxcount = max(Maxcount, count) - присваиваем переменной "
+          },
+          {
+            "text": "Maxcount ",
+            "bold": true
+          },
+          {
+            "text": "максимальное значение между текущим значением "
+          },
+          {
+            "text": "Maxcount",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(Maxcount) - выводим значение переменной "
+          },
+          {
+            "text": "Maxcount",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 229549"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-6050/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 6050 ЕГЭ по информатике #24",
+  "task": 24
+}

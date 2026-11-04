@@ -1,0 +1,317 @@
+{
+  "slug": "zadanie-12-ege-razbor-zadachi-39241-2",
+  "title": "Задание 12 ЕГЭ: разбор задачи 39241",
+  "description": "Условие: Тип 12 № 39241 • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-03-03",
+  "cover": {
+    "src": "/blog/zadanie-12-ege-razbor-zadachi-39241-2/01.webp",
+    "width": 530,
+    "height": 320
+  },
+  "source": "https://dzen.ru/a/ZeRToVkpyUDCqTAA",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-12-ege-razbor-zadachi-39241-2/01.webp",
+      "width": 530,
+      "height": 320,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "Тип 12 № ",
+          "bold": true
+        },
+        {
+          "text": "39241",
+          "href": "https://www.notion.so/problem?id=39241"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/384"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Дана программа для редактора:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "ПОКА нашлось (111) ИЛИ нашлось (222)\nзаменить (111, 22)\nзаменить (222, 1)\nКОНЕЦ ПОКА"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Известно, что исходная строка содержала больше 200 единиц и не содержала других цифр, а после выполнения программы получилась строка, содержащая только двойки. Какое наименьшее количество единиц могло быть в исходной строке?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-12-ege-razbor-zadachi-39241-2/02.webp",
+      "width": 750,
+      "height": 455,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "for n in range(201, 1000):",
+            "bold": true
+          },
+          {
+            "text": " - Просто пробегаем числа "
+          },
+          {
+            "text": "большие 200",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = '1' * n",
+            "bold": true
+          },
+          {
+            "text": " - Создание "
+          },
+          {
+            "text": "строки",
+            "bold": true
+          },
+          {
+            "text": ", состоящей из "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " символов '"
+          },
+          {
+            "text": "1'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "while '111' in s or '222' in s: ",
+            "bold": true
+          },
+          {
+            "text": "- Запускаем цикл, пока в строке есть подстроки "
+          },
+          {
+            "text": "'111' ",
+            "bold": true
+          },
+          {
+            "text": "или "
+          },
+          {
+            "text": "'222'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('111', '22', 1)",
+            "bold": true
+          },
+          {
+            "text": " - Заменяем "
+          },
+          {
+            "text": "первую",
+            "bold": true
+          },
+          {
+            "text": " найденную "
+          },
+          {
+            "text": "подстроку",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "'111'",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "'22'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('222', '1', 1)",
+            "bold": true
+          },
+          {
+            "text": " - Заменяем "
+          },
+          {
+            "text": "первую",
+            "bold": true
+          },
+          {
+            "text": " найденную "
+          },
+          {
+            "text": "подстроку '222'",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "'1'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if len(s) == s.count('2'):",
+            "bold": true
+          },
+          {
+            "text": " - Проверка: если длина строки равна количеству символов '2' (строка содержащая только двойки)."
+          }
+        ],
+        [
+          {
+            "text": "print(n)",
+            "bold": true
+          },
+          {
+            "text": " - Выводим найденное числа "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " (кол-во единиц в исходной строке)."
+          }
+        ],
+        [
+          {
+            "text": "break -",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "Прерываем",
+            "bold": true
+          },
+          {
+            "text": " выполнения цикла."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 206"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-12-ege-razbor-zadachi-39241-2/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 39241 ЕГЭ по информатике #12",
+  "task": 12,
+  "hidden": true
+}

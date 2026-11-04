@@ -1,0 +1,362 @@
+{
+  "slug": "zadanie-23-ege-razbor-zadachi-11240",
+  "title": "Задание 23 ЕГЭ: разбор задачи 11240",
+  "description": "Условие: № 11240 (Уровень: Средний) задача с сайта kompege.ru • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-02-05",
+  "cover": {
+    "src": "/blog/zadanie-23-ege-razbor-zadachi-11240/01.webp",
+    "width": 530,
+    "height": 300
+  },
+  "source": "https://dzen.ru/a/Zb-stkipqnvO7ZFP",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-11240/01.webp",
+      "width": 530,
+      "height": 300,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " № 11240 (Уровень: Средний) задача с сайта",
+          "italic": true
+        },
+        {
+          "text": " ",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "kompege.ru",
+          "href": "https://kompege.ru/task"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/346"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(М. Ишимов)",
+          "href": "https://vk.com/inf.kege",
+          "bold": true
+        },
+        {
+          "text": " Исполнитель преобразует число на экране.\nУ исполнителя есть три команды, которые обозначены латинскими буквами:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "A. Прибавить 2\nB. Возвести в квадрат\nC. Умножить на 3"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Программа для исполнителя – это последовательность команд.\n\nСколько существует программ, для которых при исходном числе 2 результатом является число 64, если после выполнения команды "
+        },
+        {
+          "text": "B",
+          "italic": true
+        },
+        {
+          "text": " можно выполнить только команду "
+        },
+        {
+          "text": "A",
+          "italic": true
+        },
+        {
+          "text": " или "
+        },
+        {
+          "text": "C",
+          "italic": true
+        },
+        {
+          "text": "?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-11240/02.webp",
+      "width": 750,
+      "height": 395,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a, b, flag):",
+            "bold": true
+          },
+          {
+            "text": " - Определение функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с параметрами "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " - переменная старта и траектории, "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": " - переменная "
+          },
+          {
+            "text": "стоп",
+            "bold": true
+          },
+          {
+            "text": ","
+          },
+          {
+            "text": " ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "flag",
+            "bold": true
+          },
+          {
+            "text": " - переменная для учета действий."
+          }
+        ],
+        [
+          {
+            "text": "if a >= b: ",
+            "bold": true
+          },
+          {
+            "text": "- Проверка условия: если "
+          },
+          {
+            "text": "a больше или равно b",
+            "bold": true
+          },
+          {
+            "text": " (то есть переменная"
+          },
+          {
+            "text": " a превысила наше условие",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": ")."
+          }
+        ],
+        [
+          {
+            "text": "return a == b ",
+            "bold": true
+          },
+          {
+            "text": "- Возвращаем результат сравнения "
+          },
+          {
+            "text": "a и b",
+            "bold": true
+          },
+          {
+            "text": " ("
+          },
+          {
+            "text": "True",
+            "bold": true
+          },
+          {
+            "text": ", если равны, иначе "
+          },
+          {
+            "text": "False",
+            "bold": true
+          },
+          {
+            "text": ")."
+          }
+        ],
+        [
+          {
+            "text": "if flag == \"B\":",
+            "bold": true
+          },
+          {
+            "text": " - Проверка условия: если"
+          },
+          {
+            "text": " flag ",
+            "bold": true
+          },
+          {
+            "text": "равен "
+          },
+          {
+            "text": "\"B\"",
+            "bold": true
+          },
+          {
+            "text": " (если на предыдущем шаге была выполнена команда "
+          },
+          {
+            "text": "\"B”",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return F(a + 2, b, \"A\") + F(a * 3, b, \"C\") ",
+            "bold": true
+          },
+          {
+            "text": "- Рекурсивный вызов функции"
+          },
+          {
+            "text": " F ",
+            "bold": true
+          },
+          {
+            "text": "с новыми параметрами исходя из условий."
+          }
+        ],
+        [
+          {
+            "text": "return F(a + 2, b, \"A\") + F(a**2, b, \"B\") + F(a * 3, b, \"C\") ",
+            "bold": true
+          },
+          {
+            "text": "- Рекурсивный вызов функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с новыми параметрами."
+          }
+        ],
+        [
+          {
+            "text": "print(F2, 64, 0)) ",
+            "bold": true
+          },
+          {
+            "text": "- Вывод результата вызова функции"
+          },
+          {
+            "text": " F",
+            "bold": true
+          },
+          {
+            "text": " с начальными параметрами "
+          },
+          {
+            "text": "(2, 64, 0",
+            "bold": true
+          },
+          {
+            "text": ")."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 55"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-11240/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 11240 ЕГЭ по информатике #23",
+  "task": 23
+}

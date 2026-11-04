@@ -1,0 +1,256 @@
+{
+  "slug": "zadanie-9-ege-razbor-zadachi-5627",
+  "title": "Задание 9 ЕГЭ: разбор задачи 5627",
+  "description": "Условие: № 5627 (Уровень: Средний) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-10-20",
+  "cover": {
+    "src": "/blog/zadanie-9-ege-razbor-zadachi-5627/01.webp",
+    "width": 530,
+    "height": 240
+  },
+  "source": "https://dzen.ru/a/ZRf9mra_jhQGCxf5",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-5627/01.webp",
+      "width": 530,
+      "height": 240,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 5627",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": " (Уровень: Средний)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел. Определите количество строк таблицы, содержащих числа, для которых выполнено хотя бы одно из условий:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "–   в строке есть хотя бы одно повторяющееся число;"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "–   будучи упорядоченными, все числа строки образуют арифметическую прогрессию."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе запишите только число."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9.xlsx",
+          "href": "https://kompege.ru/files/y4M7HzJ2k.xlsx"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-5627/02.webp",
+      "width": 750,
+      "height": 239,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "count = 0\nfor s in open('9.txt'):\n    M = sorted([int(i) for i in s.split()])\n    if len(set(M)) != len(M) or all(M[i + 1] - M[i] == M[1] - M[0] for i in range(len(M) - 1)):\n        count += 1  \nprint(count)"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "count = 0 - объявляем переменную count и присваиваем ей значение "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.txt'): - начинаем цикл, перебирая строки"
+          },
+          {
+            "text": " s",
+            "bold": true
+          },
+          {
+            "text": " из файла "
+          },
+          {
+            "text": "'9.txt'.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(i) for i in s.split()]) - разделяем строку "
+          },
+          {
+            "text": "s ",
+            "bold": true
+          },
+          {
+            "text": "на отдельные элементы, преобразуем их в целые числа и сортируем их в порядке возрастания, сохраняя результат в переменную "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if len(set(M)) != len(M) or all(M[i + 1] - M[i] == M[1] - M[0] for i in range(len(M) - 1)): - проверяем, если количество уникальных элементов в "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " не равно общему количеству элементов в "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " или если все разности между соседними элементами "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " равны разности первых двух элементов "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count += 1 - увеличиваем значение "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "1.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "print(count) - выводим значение "
+          },
+          {
+            "text": "count.",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 525"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-5627/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy \n",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 5627 ЕГЭ по информатике #9",
+  "task": 9
+}

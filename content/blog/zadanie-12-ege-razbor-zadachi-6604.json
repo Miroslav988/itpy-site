@@ -1,0 +1,518 @@
+{
+  "slug": "zadanie-12-ege-razbor-zadachi-6604",
+  "title": "Задание 12 ЕГЭ: разбор задачи 6604",
+  "description": "Дана программа для Редактора:",
+  "date": "2023-08-17",
+  "cover": {
+    "src": "/blog/zadanie-12-ege-razbor-zadachi-6604/01.webp",
+    "width": 530,
+    "height": 480
+  },
+  "source": "https://dzen.ru/a/ZNIysOQZIirOlX98",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-12-ege-razbor-zadachi-6604/01.webp",
+      "width": 530,
+      "height": 480,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 6604 Пробник ИМЦ СПб (Уровень: Средний)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Дана программа для Редактора:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "ПОКА нашлось(>1) ИЛИ нашлось(>2) ИЛИ нашлось(>3)\n   ЕСЛИ нашлось(>1)\n      ТО заменить(>1,2>)\n   КОНЕЦ ЕСЛИ\n   ЕСЛИ нашлось(>2)\n      ТО заменить(>2,3>)\n   КОНЕЦ ЕСЛИ\n   ЕСЛИ нашлось(>3)\n      ТО заменить(>3,11>)\n   КОНЕЦ ЕСЛИ\nКОНЕЦ ПОКА"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "На вход программы поступает строка, начинающаяся с символа «>», а затем содержащая 15 цифр 1, 35 цифры 2 и m цифр 3, расположенных в произвольном порядке.  Определите минимальное значение m, при котором сумма числовых значений цифр строки, получившейся в результате выполнения программы, будет иметь ровно 3 различных натуральных делителя, не включая единицы и самого значения суммы."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-12-ege-razbor-zadachi-6604/02.webp",
+      "width": 627,
+      "height": 750,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def Divisors(x):\n    divisors = set()\n    for j in range(2, int(x**0.5)+1):\n        if x % j == 0:\n            divisors.add(j)\n            divisors.add(x // j)\n    return sorted(divisors)\n\nfor m in range(1, 10000):\n    s = '>' + '1' * 15 + '2' * 35 + '3' * m\n\n    while '>1' in s or '>2' in s or '>3' in s:\n        if '>1' in s:\n            s = s.replace('>1', '2>', 1)\n        if '>2' in s:\n            s = s.replace('>2', '3>', 1)\n        if '>3' in s:\n            s = s.replace('>3', '11>', 1)\n\n    summ = sum([int(i) for i in s if i.isdigit()])\n\n    divisors = Divisors(summ)\n    if len(divisors) == 3:\n        print(m)\n        break"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def Divisors(x):",
+            "italic": true
+          },
+          {
+            "text": " - Создаем функцию с именем "
+          },
+          {
+            "text": "Divisors",
+            "bold": true
+          },
+          {
+            "text": ", которая принимает один аргумент "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": ". В этой функции будем искать делители числа."
+          }
+        ],
+        [
+          {
+            "text": "divisors = set()",
+            "italic": true
+          },
+          {
+            "text": " - Создаем пустое множество с именем "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          },
+          {
+            "text": ". В него будем складывать найденные делители."
+          }
+        ],
+        [
+          {
+            "text": "for j in range(2, int(x**0.5)+1): ",
+            "italic": true
+          },
+          {
+            "text": "- Используем цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": " для перебора всех чисел от 2 до целой части квадратного корня из x плюс 1 и присваиваем каждому числу значение переменной "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": ". Таким способом мы сможем перебрав меньшее кол-во чисел найти все делители числа через найденный левый делитель и его сомножитель - правый делитель."
+          }
+        ],
+        [
+          {
+            "text": "if x % j == 0: ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, делится ли "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " без остатка, если делится, то нашли делитель."
+          }
+        ],
+        [
+          {
+            "text": "divisors.add(j)",
+            "italic": true
+          },
+          {
+            "text": " - Добавляем значение "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " в "
+          },
+          {
+            "text": "множество divisors",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "divisors.add(x // j) ",
+            "italic": true
+          },
+          {
+            "text": "- Добавляем значение "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " деленное на "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " (сомножитель) без остатка в множество "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return sorted(divisors) ",
+            "italic": true
+          },
+          {
+            "text": "- Возвращаем отсортированное множество "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          },
+          {
+            "text": ", то есть множество всех делителей числа "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for m in range(1, 10000):",
+            "italic": true
+          },
+          {
+            "text": " - Используем цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": " для перебора всех чисел от 1 до 9999 и присваиваем каждому числу значение переменной "
+          },
+          {
+            "text": "m",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = '>' + '1' * 15 + '2' * 35 + '3' * m",
+            "italic": true
+          },
+          {
+            "text": " - Создаем строку "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", состоящую из символа >, 15 символов 1, 35 символов 2 и m символов 3."
+          }
+        ],
+        [
+          {
+            "text": "while '>1' in s or '>2' in s or '>3' in s: ",
+            "italic": true
+          },
+          {
+            "text": "- Используем цикл "
+          },
+          {
+            "text": "while",
+            "bold": true
+          },
+          {
+            "text": ", чтобы проверить, содержится ли в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " подстрока >1, >2 или >3."
+          }
+        ],
+        [
+          {
+            "text": "if '>1' in s:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, содержится ли в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " подстрока >1."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('>1', '2>', 1) ",
+            "italic": true
+          },
+          {
+            "text": "- Заменяем первое вхождение подстроки >1 в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " на 2>."
+          }
+        ],
+        [
+          {
+            "text": "if '>2' in s:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, содержится ли в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " подстрока >2."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('>2', '3>', 1) ",
+            "italic": true
+          },
+          {
+            "text": "- Заменяем первое вхождение подстроки >2 в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " на 3>."
+          }
+        ],
+        [
+          {
+            "text": "if '>3' in s: ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, содержится ли в строке "
+          },
+          {
+            "text": "s ",
+            "bold": true
+          },
+          {
+            "text": "подстрока >3."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('>3', '11>', 1) ",
+            "italic": true
+          },
+          {
+            "text": "- Заменяем первое вхождение подстроки >3 в строке"
+          },
+          {
+            "text": " s",
+            "bold": true
+          },
+          {
+            "text": " на 11>."
+          }
+        ],
+        [
+          {
+            "text": "summ = sum([int(i) for i in s if i.isdigit()]) ",
+            "italic": true
+          },
+          {
+            "text": "- Считаем сумму всех цифр в строке "
+          },
+          {
+            "text": "s ",
+            "bold": true
+          },
+          {
+            "text": "и присваиваем результат переменной "
+          },
+          {
+            "text": "summ",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "divisors = Divisors(summ)",
+            "italic": true
+          },
+          {
+            "text": " - Вызываем функцию "
+          },
+          {
+            "text": "Divisors",
+            "bold": true
+          },
+          {
+            "text": " со значением summ и присваиваем результат переменной "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if len(divisors) == 3: ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, равна ли длина списка"
+          },
+          {
+            "text": " divisors ",
+            "bold": true
+          },
+          {
+            "text": "значению 3."
+          }
+        ],
+        [
+          {
+            "text": "print(m)",
+            "italic": true
+          },
+          {
+            "text": " - Выводим значение переменной "
+          },
+          {
+            "text": "m",
+            "bold": true
+          },
+          {
+            "text": " на экран."
+          }
+        ],
+        [
+          {
+            "text": "break ",
+            "italic": true
+          },
+          {
+            "text": "- Прерываем выполнение цикла, после первого найденного (наименьшего) числа."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Еще один сокращенный вариант решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "for m in range(1, 10000):\n    s = '>' + '1' * 15 + '2' * 35 + '3' * m\n\n    while '>1' in s or '>2' in s or '>3' in s:\n        if '>1' in s:\n            s = s.replace('>1', '2>', 1)\n        if '>2' in s:\n            s = s.replace('>2', '3>', 1)\n        if '>3' in s:\n            s = s.replace('>3', '11>', 1)\n\n    summ = sum([int(i) for i in s if i.isdigit()])\n\n    divisors = set()\n    for j in range(2, int(summ**0.5)+1):\n        if summ % j == 0:\n            divisors.add(j)\n            divisors.add(summ // j)\n\n    if len(divisors) == 3:\n        print(m)\n        break"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 245"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-12-ege-razbor-zadachi-6604/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 6604 ЕГЭ по информатике #12",
+  "task": 12
+}

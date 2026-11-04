@@ -1,0 +1,317 @@
+{
+  "slug": "zadanie-24-ege-razbor-zadachi-60266",
+  "title": "Задание 24 ЕГЭ: разбор задачи 60266",
+  "description": "Условие: Тип 24 № 60266 • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-04-26",
+  "cover": {
+    "src": "/blog/zadanie-24-ege-razbor-zadachi-60266/01.webp",
+    "width": 530,
+    "height": 270
+  },
+  "source": "https://dzen.ru/a/ZiiHookuO0GTVn58",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-60266/01.webp",
+      "width": 530,
+      "height": 270,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие: Тип 24 № ",
+          "bold": true
+        },
+        {
+          "text": "60266",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=60266"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/402"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Текстовый файл состоит из символов T, U, V, W, X, Y и Z."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите в прилагаемом файле максимальное количество идущих подряд символов (длину непрерывной подпоследовательности), среди которых символ T встречается ровно 100 раз."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для выполнения этого задания следует написать программу."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Файлы к заданию: "
+        },
+        {
+          "text": "24.txt",
+          "href": "https://ege.sdamgia.ru/get_file?id=142062"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-60266/02.webp",
+      "width": 750,
+      "height": 390,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline().split('T') ",
+            "bold": true
+          },
+          {
+            "text": "- считывает строку из файла "
+          },
+          {
+            "text": "'24.txt' ",
+            "bold": true
+          },
+          {
+            "text": "и разделяет ее на части, используя разделитель "
+          },
+          {
+            "text": "'T'",
+            "bold": true
+          },
+          {
+            "text": ". Результат сохраняется в списке"
+          },
+          {
+            "text": " s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "bold": true
+          },
+          {
+            "text": " - инициализирует переменную "
+          },
+          {
+            "text": "maxi ",
+            "bold": true
+          },
+          {
+            "text": "значением "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": ", которая будет использоваться для хранения максимальной длины строки."
+          }
+        ],
+        [
+          {
+            "text": "Цикл for i in range(len(s)-100):",
+            "bold": true
+          },
+          {
+            "text": " проходит по всем элементам списка "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", за исключением последних "
+          },
+          {
+            "text": "100",
+            "bold": true
+          },
+          {
+            "text": " элементов."
+          }
+        ],
+        [
+          {
+            "text": "r = 'T'.join(s[i:i+101]) ",
+            "bold": true
+          },
+          {
+            "text": "- объединяет элементы списка s от индекса"
+          },
+          {
+            "text": " i",
+            "bold": true
+          },
+          {
+            "text": " до индекса "
+          },
+          {
+            "text": "i+101 ",
+            "bold": true
+          },
+          {
+            "text": "с использованием разделителя "
+          },
+          {
+            "text": "'T' ",
+            "bold": true
+          },
+          {
+            "text": "и сохраняет результат в переменную "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(maxi, len(r))",
+            "bold": true
+          },
+          {
+            "text": " - обновляет значение переменной "
+          },
+          {
+            "text": "maxi",
+            "bold": true
+          },
+          {
+            "text": ", если текущая длина строки "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": " больше текущего значения переменной "
+          },
+          {
+            "text": "maxi",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(maxi) ",
+            "bold": true
+          },
+          {
+            "text": "- выводит на экран максимальную длину строки после прохождения всех элементов списка "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таким образом, данный код считывает строку из файла, разделяет ее на части, объединяет определенное количество частей с разделителем "
+        },
+        {
+          "text": "'T'",
+          "bold": true
+        },
+        {
+          "text": " и находит максимальную длину строки, составленной из этих частей. Результат выводится на экран."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 133"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-60266/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 60266 ЕГЭ по информатике #24",
+  "task": 24
+}

@@ -1,0 +1,660 @@
+{
+  "slug": "zadanie-15-ege-razbor-zadachi-34521",
+  "title": "Задание 15 ЕГЭ: разбор задачи 34521",
+  "description": "Обозначим через m & n поразрядную конъюнкцию неотрицательных целых чисел m и n.",
+  "date": "2023-08-07",
+  "cover": {
+    "src": "/blog/zadanie-15-ege-razbor-zadachi-34521/01.webp",
+    "width": 750,
+    "height": 266
+  },
+  "source": "https://dzen.ru/a/ZNB6Rl_Zdi0WJRVJ",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-34521/01.webp",
+      "width": 750,
+      "height": 266,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: Тип 15 № 34521"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Обозначим через m & n поразрядную конъюнкцию неотрицательных целых чисел "
+        },
+        {
+          "text": "m",
+          "italic": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "n",
+          "italic": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Например, 14 & 5  =  1110_2 & 0101_2  =  0100_2  =  4."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для какого наибольшего целого числа А формула"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "x",
+          "italic": true
+        },
+        {
+          "text": " & 51 = 0 ∨ ("
+        },
+        {
+          "text": "x",
+          "italic": true
+        },
+        {
+          "text": " & 41 = 0 → "
+        },
+        {
+          "text": "x",
+          "italic": true
+        },
+        {
+          "text": " & "
+        },
+        {
+          "text": "А",
+          "italic": true
+        },
+        {
+          "text": " = 0)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "тождественно истинна (т. е. принимает значение 1 при любом неотрицательном целом значении переменной "
+        },
+        {
+          "text": "x",
+          "italic": true
+        },
+        {
+          "text": ")?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-34521/02.webp",
+      "width": 750,
+      "height": 506,
+      "alt": "Вариант 1: классическое решение через переменную True",
+      "caption": "Вариант 1: классическое решение через переменную True"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "# Код решения Вариант 1\n"
+        },
+        {
+          "text": "def F(x, A):",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    return (x & 51 == 0) or ((x & 41 == 0) <= (x & A == 0))",
+          "bold": true
+        },
+        {
+          "text": "\n\n"
+        },
+        {
+          "text": "R = []",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "for A in range(0, 1000):",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    flag = True",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    for x in range(0, 1000):",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        if F(x, A) == False:",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        flag = False",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        break ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    if flag == True:",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        R.append(A)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(max(R))",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к первому варианту решения задачи"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "создаем свою функцию для обработки формулы логики из условия, функция принимает всего два аргумента",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "возвращаем значение логической функции из условия",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "-",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "создадим пустой список для удобства поиска наибольшего подходящего числа",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "пробегаем диапазон неотрицательных целых чисел через range()",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "для каждого нового взятого числа А создаем переменную со значением True",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "таким же образом пробегаем диапазон для переменной х - просто большое кол-во чисел",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "если функция при переданных ей аргументах вернет ложь, то такое А нам не подходит по условию",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "в таком случае меняем переменную flag на False значение",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "и прерываем цикл перебора переменной х, так как это просто трата времени",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "но если же пройдя все значения диапазона х переменной, ни разу не произошел break и значение flag равно True, то такое число А нам подходит по условию – при А формула тождественно истинна при любых х (большом кол-ве)",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "добавляем подходящее число в список R",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "и выводим максимальный элемент из всех подходящих чисел А, лежащих в списке R",
+            "italic": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-34521/03.webp",
+      "width": 750,
+      "height": 366,
+      "alt": "Вариант 2: решение с использованием функции all и списка list",
+      "caption": "Вариант 2: решение с использованием функции all и списка list"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "# Код решения Вариант 2\n"
+        },
+        {
+          "text": "def F(x):     ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    return (x & 51 == 0) or ((x & 41 == 0) <= (x & A == 0))  ",
+          "bold": true
+        },
+        {
+          "text": "\n\n"
+        },
+        {
+          "text": "R = [] ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "for A in range(0, 1000):     ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    if all(F(x) for x in range(0, 1000)):         ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        R.append(A) ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(max(R))",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии ко второму варианту решения задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1-4. "
+        },
+        {
+          "text": "строки идентичные прошлому решению",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. "
+        },
+        {
+          "text": " пробегаем подходящие по условию целые, неотрицательные числа А",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6.  "
+        },
+        {
+          "text": "если все функции в all() буду истинными, то условие if истинно",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7.  "
+        },
+        {
+          "text": "добавляем подходящее число А в список R",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8.  "
+        },
+        {
+          "text": "и выводим максимальный элемент из всех подходящих чисел А, лежащих в списке R",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-34521/04.webp",
+      "width": 750,
+      "height": 336,
+      "alt": "Вариант 3: решение с использованием только лишь функции all",
+      "caption": "Вариант 3: решение с использованием только лишь функции all"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "# Код решения Вариант 3\n"
+        },
+        {
+          "text": "def F(x):    ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    return (x & 51 == 0) or ((x & 41 == 0) <= (x & A == 0))  ",
+          "bold": true
+        },
+        {
+          "text": "\n\n"
+        },
+        {
+          "text": "for A in range(1000, -1, -1):   ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    if all(F(x) for x in range(0, 1000)):         ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        print(A)         ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        break",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к третьему варианту решения задачи"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "обратите внимание, если пробегать диапазон от большего к меньшему, то первое найденное число будет - наибольшим",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "если все функции в all() будут истинными, то условие if истинно",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "выводим подходящее число А на экран",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "и прерываем цикл перебора, чтобы  остаться с наибольшим подходящим А",
+            "italic": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-34521/05.webp",
+      "width": 750,
+      "height": 175,
+      "alt": "Вариант 4: компактное решение без использования самописной функции F",
+      "caption": "Вариант 4: компактное решение без использования самописной функции F"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "# Код решения Вариант 4 \n"
+        },
+        {
+          "text": "for A in range(1000, -1, -1):     ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    if all(((x & 51 == 0) or ((x & 41 == 0) <= (x & A == 0))) for x in range(0, 1000)):   ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        print(A)         ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        break",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к четвертому варианту решения задачи"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "пробегаем диапазон целых неотрицательных чисел",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "если все функции в all() буду истинными, то условие if истинно",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "выводим на экран первое подошедшее число",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "так как мы пробегали убывающий диапазон, то первое - будет наибольшим",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-34521/06.webp",
+      "width": 750,
+      "height": 81,
+      "alt": "Вариант 5: просто полюбуйтесь на эту красоту",
+      "caption": "Вариант 5: просто полюбуйтесь на эту красоту"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "# Код решения Вариант 5\n"
+        },
+        {
+          "text": "print(max([A for A in range(0, 1000) if all(((x & 51 == 0) or ((x & 41 == 0) <= (x & A == 0))) for x in range(0, 1000))]))",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к пятому варианту решения задачи"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Данное решение является совокупностью предыдущих, оставим Вам на саморазбор",
+            "italic": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 41"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy",
+          "href": "https://t.me/informatika_kege_itpy"
+        },
+        {
+          "text": " 👨‍💻"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-34521/07.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 34521 ЕГЭ по информатике #15",
+  "task": 15
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "shpargalka-po-generatoram-spiskov",
+  "title": "Шпаргалка по генераторам списков",
+  "description": "Пример кода тут: numbers = [3, 4, 2, 7, 2, 3, 8, 3, 1, 9]\nA = [x**2 for x in numbers if x % 2 == 0]\nprint(A)  # [16, 4, 4, 64]\n\nB = [x**2",
+  "date": "2024-05-03",
+  "cover": {
+    "src": "/blog/shpargalka-po-generatoram-spiskov/01.webp",
+    "width": 750,
+    "height": 611
+  },
+  "source": "https://dzen.ru/a/ZjNfKBK41khwPcd8",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/shpargalka-po-generatoram-spiskov/01.webp",
+      "width": 750,
+      "height": 611,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Пример кода тут"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "numbers = [3, 4, 2, 7, 2, 3, 8, 3, 1, 9]\nA = [x**2 for x in numbers if x % 2 == 0]\nprint(A)  # [16, 4, 4, 64]\n\nB = [x**2 if x % 2 == 0 else x ** 3 for x in numbers]\nprint(B)  # [27, 16, 4, 343, 4, 27, 64, 27, 1, 729]"
+        }
+      ]
+    }
+  ],
+  "originalTitle": "🐍 Шпаргалка по генераторам списков #tpy"
+}

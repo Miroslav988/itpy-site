@@ -1,0 +1,199 @@
+{
+  "slug": "zadanie-13-ege-razbor-zadachi-7843",
+  "title": "Задание 13 ЕГЭ: разбор задачи 7843",
+  "description": "(А.Богданов) На рисунке представлена схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж, З, И, К, Л, М.",
+  "date": "2023-08-22",
+  "cover": {
+    "src": "/blog/zadanie-13-ege-razbor-zadachi-7843/01.webp",
+    "width": 530,
+    "height": 360
+  },
+  "source": "https://dzen.ru/a/ZNI6SuQZIirOpRZQ",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-7843/01.webp",
+      "width": 530,
+      "height": 360,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 7843 Danov2304 (Уровень: Средний)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "("
+        },
+        {
+          "text": "А.Богданов",
+          "href": "https://vk.com/inf_intensive"
+        },
+        {
+          "text": ") На рисунке представлена схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж, З, И, К, Л, М."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "По каждой дороге можно двигаться только в одном направлении, указанном стрелкой."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите количество различных путей, которые начинаются в городе А и заканчиваются в городе М и не содержат дороги между городами, обозначенными гласными."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-7843/02.webp",
+      "width": 662,
+      "height": 425,
+      "alt": "-2"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Внимательно читаем условие."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В данном случае оно требует особого внимания:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Нам сказано, что нас не интересуют пути, которые соединяют два города, обозначенных гласными. Например, путь из города А в город Е."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сразу отбрасываем названный выше путь:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-7843/03.webp",
+      "width": 662,
+      "height": 425,
+      "alt": "-3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Важное уточнение:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Путь из города А в город Б нас устраивает, ведь он соединяет город, обозначенный гласной и город, который обозначен согласной."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. Мы видим, что нас также не интересует путь из города Е в город И."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Отбрасываем и его:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-7843/04.webp",
+      "width": 662,
+      "height": 425,
+      "alt": "-4"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3.  Теперь, когда мы избавились от ненужных нам путей, мы считаем количество путей из города А в город М:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-7843/05.webp",
+      "width": 662,
+      "height": 425,
+      "alt": "-5"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-7843/06.webp",
+      "width": 662,
+      "height": 425,
+      "alt": "-5-2"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-7843/07.webp",
+      "width": 662,
+      "height": 425,
+      "alt": "-5-3"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 26"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-7843/08.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6  ",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 7843 ЕГЭ по информатике #13",
+  "task": 13
+}

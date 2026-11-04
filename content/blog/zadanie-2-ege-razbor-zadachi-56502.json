@@ -1,0 +1,333 @@
+{
+  "slug": "zadanie-2-ege-razbor-zadachi-56502",
+  "title": "Задание 2 ЕГЭ: разбор задачи 56502",
+  "description": "Условие: Тип 2 № 56502 • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-01-02",
+  "cover": {
+    "src": "/blog/zadanie-2-ege-razbor-zadachi-56502/01.webp",
+    "width": 530,
+    "height": 330
+  },
+  "source": "https://dzen.ru/a/ZZLYcTnG4kyLgaNF",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-56502/01.webp",
+      "width": 530,
+      "height": 330,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "Тип 2 №"
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "56502",
+          "href": "https://www.notion.so/problem?id=56502"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/327"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Логическая функция "
+        },
+        {
+          "text": "F",
+          "italic": true
+        },
+        {
+          "text": " задаётся выражением:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "((x → y) ∨ (z → w)) ∧ ((z ≡ y) → (w ≡ x)).",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Дан частично заполненный фрагмент, содержащий неповторяющиеся строки таблицы истинности функции "
+        },
+        {
+          "text": "F",
+          "italic": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите, какому столбцу таблицы истинности соответствует каждая из переменных "
+        },
+        {
+          "text": "w",
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "x",
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "y",
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "z",
+          "italic": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-56502/02.webp",
+      "width": 662,
+      "height": 193,
+      "alt": "-2"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-56502/03.webp",
+      "width": 662,
+      "height": 385,
+      "alt": "-3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "💡 "
+        },
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "bold": true
+          },
+          {
+            "text": " - Импортируем все функци из модуля"
+          },
+          {
+            "text": " itertools",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "def F(x, y, z, w):",
+            "bold": true
+          },
+          {
+            "text": " - Определяем функцию "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с четырьмя параметрами"
+          },
+          {
+            "text": " x, y, z, w",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return ((x <= y) or (z <= w)) and ((z == y) <= (w == x)) ",
+            "bold": true
+          },
+          {
+            "text": "- Возвращаем результат логического выражения."
+          }
+        ],
+        [
+          {
+            "text": "for a1, a2, a3, a4 in product([0, 1], repeat=4):",
+            "bold": true
+          },
+          {
+            "text": " - Запускаем итерацию по всем возможным комбинациям "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": " для переменных "
+          },
+          {
+            "text": "a1, a2, a3, a4",
+            "bold": true
+          },
+          {
+            "text": " (кол-во переменных зависит от кол-ва пропусков в таблице)."
+          }
+        ],
+        [
+          {
+            "text": "table = [(a1, 1, 0, a2), (0, 1, 0, 1), (a3, 1, 0, a4)]",
+            "bold": true
+          },
+          {
+            "text": " - Формируем таблицу истинности значений по заданным правилам (из условия)."
+          }
+        ],
+        [
+          {
+            "text": "if len(set(table)) == len(table): ",
+            "bold": true
+          },
+          {
+            "text": "- Проверяем, что все строки в таблице уникальны."
+          }
+        ],
+        [
+          {
+            "text": "for i in permutations('xyzw'):",
+            "bold": true
+          },
+          {
+            "text": " - Запускаем итерацию по всем перестановкам символов "
+          },
+          {
+            "text": "'xyzw'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if [F(**dict(zip(i, r))) for r in table] == [0, 0, 0]: ",
+            "bold": true
+          },
+          {
+            "text": "- Проверяем условие для текущей перестановки и таблицы значений."
+          }
+        ],
+        [
+          {
+            "text": "print(*i, sep='')",
+            "bold": true
+          },
+          {
+            "text": " - Выводим перестановку, удовлетворяющую условию."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: yxwz"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-56502/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 56502 ЕГЭ по информатике #2",
+  "task": 2
+}

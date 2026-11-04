@@ -1,0 +1,535 @@
+{
+  "slug": "zadanie-17-ege-razbor-zadachi-6059-2",
+  "title": "Задание 17 ЕГЭ: разбор задачи 6059",
+  "description": "Главное условие вызывающее сложность: \"Имеется два четных натуральных числа с наибольшим общими делителем, превышающим число 100\".",
+  "date": "2023-08-14",
+  "cover": {
+    "src": "/blog/zadanie-17-ege-razbor-zadachi-6059-2/01.webp",
+    "width": 530,
+    "height": 290
+  },
+  "source": "https://dzen.ru/a/ZNn_lJz7lFBXwnud",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-6059-2/01.webp",
+      "width": 530,
+      "height": 290,
+      "alt": "Разбор интересного 17-го номера, задача №6059 с сайта kompege.ru. Уровень сложности базовый. ",
+      "caption": "Разбор интересного 17-го номера, задача №6059 с сайта kompege.ru. Уровень сложности базовый."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Главное условие вызывающее сложность: \"Имеется два четных натуральных числа с наибольшим общими делителем, превышающим число 100\"."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "№ 6059 (Уровень: Базовый)",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ("
+        },
+        {
+          "text": "А. Игнатюк",
+          "href": "https://vk.com/programmist_ka"
+        },
+        {
+          "text": ")"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В файле представлена последовательность чисел от 0 от 10000 включительно. Необходимо определить количество пар, где имеется два четных натуральных числа с наибольшим общими делителем, превышающим число 100, и указать наибольшую возможную разность между числами в паре. Известно, что парой принято называть два стоящих подряд числа."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "17.txt",
+          "href": "https://kompege.ru/files/ztWdk3xW5.txt"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-6059-2/02.webp",
+      "width": 750,
+      "height": 501,
+      "alt": "-2"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к первому решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import math as m",
+            "italic": true
+          },
+          {
+            "text": " - импортируем библиотеку math и задаем ему псевдоним m."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(i) for i in open('17.txt')]",
+            "italic": true
+          },
+          {
+            "text": " - открываем файл '17.txt' и читаем его содержимое, преобразуя каждую строку в целое число. Результат сохраняется в списке M."
+          }
+        ],
+        [
+          {
+            "text": "count = 0",
+            "italic": true
+          },
+          {
+            "text": " - создаём переменную count значением 0."
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "italic": true
+          },
+          {
+            "text": " - создаём переменную maxi значением 0."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(0, len(M)-1):",
+            "italic": true
+          },
+          {
+            "text": " - пробегаем цикл, перебирая индексы элементов списка M от 0 до len(M)-1."
+          }
+        ],
+        [
+          {
+            "text": "if M[i] % 2 == 0 and M[i+1] % 2 == 0:",
+            "italic": true
+          },
+          {
+            "text": " - проверяем, являются ли текущий элемент и следующий элемент четными числами."
+          }
+        ],
+        [
+          {
+            "text": "if m.gcd(M[i], M[i+1]) > 100:",
+            "italic": true
+          },
+          {
+            "text": " - проверяем, является ли НОД (наибольший общий делитель) текущего и следующего элементов больше 100."
+          }
+        ],
+        [
+          {
+            "text": "count += 1",
+            "italic": true
+          },
+          {
+            "text": " - увеличиваем значение переменной count на 1."
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(maxi, abs(M[i] - M[i+1]))",
+            "italic": true
+          },
+          {
+            "text": " - обновляем значение переменной maxi, выбирая максимальное значение между текущим значением maxi и абсолютной разницей между текущим и следующим элементами."
+          }
+        ],
+        [
+          {
+            "text": "print(count, maxi)",
+            "italic": true
+          },
+          {
+            "text": " - выводим значения переменных count и maxi."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "import math as m",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "M = [int(i) for i in open('17.txt')]",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "count = 0",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "maxi = 0",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "for i in range(0, len(M)-1):",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    if M[i] % 2 == 0 and M[i+1] % 2 == 0:",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        if m.gcd(M[i], M[i+1]) > 100:",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "            count += 1",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "            maxi = max(maxi, abs(M[i] - M[i+1]))",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(count, maxi)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-6059-2/03.webp",
+      "width": 750,
+      "height": 721,
+      "alt": "-3"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии ко второму решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def NOD(a, b):",
+            "italic": true
+          },
+          {
+            "text": " - создаём функцию NOD с двумя параметрами a и b."
+          }
+        ],
+        [
+          {
+            "text": "big_divisors = 1",
+            "italic": true
+          },
+          {
+            "text": " - инициализируем переменную big_divisors значением 1."
+          }
+        ],
+        [
+          {
+            "text": "for j in range(1, min(a, b)+1):",
+            "italic": true
+          },
+          {
+            "text": " - пробегаем цикл, перебирая значения переменной j от 1 до минимального значения между a и b плюс 1."
+          }
+        ],
+        [
+          {
+            "text": "if a % j == 0 and b % j == 0:",
+            "italic": true
+          },
+          {
+            "text": " - проверяем, являются ли a и b делителями переменной j."
+          }
+        ],
+        [
+          {
+            "text": "big_divisors = j",
+            "italic": true
+          },
+          {
+            "text": " - присваиваем переменной big_divisors значение переменной j."
+          }
+        ],
+        [
+          {
+            "text": "return big_divisors",
+            "italic": true
+          },
+          {
+            "text": " - возвращаем значение переменной big_divisors из функции NOD."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(i) for i in open('17.txt')]",
+            "italic": true
+          },
+          {
+            "text": " - открываем файл '17.txt' и читаем его содержимое, преобразуя каждую строку в целое число. Результат сохраняется в списке M."
+          }
+        ],
+        [
+          {
+            "text": "count = 0",
+            "italic": true
+          },
+          {
+            "text": " - создаём переменную count значением 0."
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "italic": true
+          },
+          {
+            "text": " - создаём переменную maxi значением 0."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(0, len(M)-1):",
+            "italic": true
+          },
+          {
+            "text": " - пробегаем цикл, перебирая индексы элементов списка M от 0 до len(M)-1."
+          }
+        ],
+        [
+          {
+            "text": "if M[i] % 2 == 0 and M[i+1] % 2 == 0:",
+            "italic": true
+          },
+          {
+            "text": " - проверяем, являются ли текущий элемент и следующий элемент четными числами."
+          }
+        ],
+        [
+          {
+            "text": "if NOD(M[i], M[i+1]) > 100:",
+            "italic": true
+          },
+          {
+            "text": " - проверяем, является ли НОД (наибольший общий делитель) текущего и следующего элементов больше 100."
+          }
+        ],
+        [
+          {
+            "text": "count += 1",
+            "italic": true
+          },
+          {
+            "text": " - увеличиваем значение переменной count на 1."
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(maxi, abs(M[i] - M[i+1]))",
+            "italic": true
+          },
+          {
+            "text": " - обновляем значение переменной maxi, выбирая максимальное значение между текущим значением maxi и абсолютной разницей между текущим и следующим элементами."
+          }
+        ],
+        [
+          {
+            "text": "print(count, maxi)",
+            "italic": true
+          },
+          {
+            "text": " - выводим значения переменных count и maxi."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "def NOD(a, b):",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    big_divisors = 1",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    for j in range(1, min(a, b)+1):",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        if a % j == 0 and b % j == 0:",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "            big_divisors = j",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    return big_divisors",
+          "italic": true
+        },
+        {
+          "text": "\n\n"
+        },
+        {
+          "text": "M = [int(i) for i in open('17.txt')]",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "count = 0",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "maxi = 0",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "for i in range(0, len(M)-1):",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "    if M[i] % 2 == 0 and M[i+1] % 2 == 0:",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "        if NOD(M[i], M[i+1]) > 100:",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "            count += 1",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "            maxi = max(maxi, abs(M[i] - M[i+1]))",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(count, maxi)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 25 7952"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-6059-2/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 6059 КЕГЭ по информатике #17",
+  "task": 17,
+  "hidden": true
+}

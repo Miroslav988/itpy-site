@@ -1,0 +1,252 @@
+{
+  "slug": "zadanie-7-ege-razbor-zadachi-8661",
+  "title": "Задание 7 ЕГЭ: разбор задачи 8661",
+  "description": "Условие: № 8661 (Уровень: Базовый) • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2023-12-23",
+  "cover": {
+    "src": "/blog/zadanie-7-ege-razbor-zadachi-8661/01.webp",
+    "width": 510,
+    "height": 340
+  },
+  "source": "https://dzen.ru/a/ZYWxLb_6RH3JuznM",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-7-ege-razbor-zadachi-8661/01.webp",
+      "width": 510,
+      "height": 340,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "№ 8661",
+          "href": "https://kompege.ru/"
+        },
+        {
+          "text": " (Уровень: Базовый)",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://wave-flood-226.notion.site/8661-7-cd08602705324ca5b8fe60af5cc826f0"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(М. Шагитов)",
+          "bold": true
+        },
+        {
+          "text": " Музыкальный трек продолжительностью 180 секунд был записан в формате стерео и оцифрован с глубиной кодирования 24 бита и частотой дискретизации 44100 измерений в секунду. Сжатие данных не использовалось. Файл с оцифрованным треком был передан по каналу связи, пропускная способность которого 64000 бит/с."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сколько секунд длилась передача файла? В ответе запишите целую часть числа, единицу измерения указывать не нужно."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-7-ege-razbor-zadachi-8661/02.webp",
+      "width": 750,
+      "height": 357,
+      "alt": "-2"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "V = 2 * 44100 * 24 * 180",
+            "bold": true
+          },
+          {
+            "text": " - вычисляем значение переменной "
+          },
+          {
+            "text": "V",
+            "bold": true
+          },
+          {
+            "text": " как произведение "
+          },
+          {
+            "text": "2",
+            "bold": true
+          },
+          {
+            "text": " (стерео) и "
+          },
+          {
+            "text": "44100 ",
+            "bold": true
+          },
+          {
+            "text": "(частота дискретизации), "
+          },
+          {
+            "text": "24",
+            "bold": true
+          },
+          {
+            "text": " (глубина кодирования) и "
+          },
+          {
+            "text": "180",
+            "bold": true
+          },
+          {
+            "text": " (секунд)"
+          }
+        ],
+        [
+          {
+            "text": "t = int(V / 64000)",
+            "bold": true
+          },
+          {
+            "text": " - вычисляем время с помощью переменной  "
+          },
+          {
+            "text": "t",
+            "bold": true
+          },
+          {
+            "text": " как результат деления значения переменной "
+          },
+          {
+            "text": "V",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "64000",
+            "bold": true
+          },
+          {
+            "text": ". И округляем до целых с помощью "
+          },
+          {
+            "text": "int()",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "print(t)",
+            "bold": true
+          },
+          {
+            "text": " - выводим значение переменной "
+          },
+          {
+            "text": "t",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Решение ручками"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Находим время с помощью переменной t. В числитель записываем формулу веса файла, а в знаменатель - скорость передачи данных."
+          }
+        ],
+        [
+          {
+            "text": "Получаем ответ и округляем его до целых."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-7-ege-razbor-zadachi-8661/03.webp",
+      "width": 662,
+      "height": 341,
+      "alt": "-3"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 5953"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-7-ege-razbor-zadachi-8661/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 8661 ЕГЭ по информатике #7",
+  "task": 7
+}

@@ -1,0 +1,390 @@
+{
+  "slug": "zadanie-5-ege-razbor-zadachi-4869",
+  "title": "Задание 5 ЕГЭ: разбор задачи 4869",
+  "description": "Условие: КЕГЭ № 4869 (Уровень: Сложный) • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-02-12",
+  "cover": {
+    "src": "/blog/zadanie-5-ege-razbor-zadachi-4869/01.webp",
+    "width": 530,
+    "height": 370
+  },
+  "source": "https://dzen.ru/a/ZcjxW4sDo1x65vX_",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-4869/01.webp",
+      "width": 530,
+      "height": 370,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "КЕГЭ",
+          "href": "https://kompege.ru/task"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "№ 4869 (Уровень: Сложный)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/353"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Алгоритм получает на вход натуральное число N > 1 и строит по нему новое число R следующим образом:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "1. Строится двоичная запись числа N."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "2. Вычисляется количество единиц, стоящих на чётных местах в двоичной записи числа N без ведущих нулей, и количество нулей, стоящих на нечётных местах. Места отсчитываются слева направо (от старших разрядов к младшим, начиная с единицы)."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "3. Результатом работы алгоритма становится модуль разности полученных двух чисел."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример.",
+          "bold": true
+        },
+        {
+          "text": " Дано число N = 39. Алгоритм работает следующим образом:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "1. Строится двоичная запись: 3910 = 1001112"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "2. Выделяем единицы на чётных и нули на нечётных местах: 100111"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "На чётных местах стоят две единицы, на нечётных – один ноль."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "3. Модуль разности равен 1"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Результат работы алгоритма R = 1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При каком наименьшем N в результате работы алгоритма получится R = 5?",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-4869/02.webp",
+      "width": 662,
+      "height": 488,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "for n in range(2, 10000):",
+            "bold": true
+          },
+          {
+            "text": " - Просто пробегаем большой диапазон натуральных чисел."
+          }
+        ],
+        [
+          {
+            "text": "s = bin(n)[2:] ",
+            "bold": true
+          },
+          {
+            "text": "- Преобразование числа"
+          },
+          {
+            "text": " n",
+            "bold": true
+          },
+          {
+            "text": " в "
+          },
+          {
+            "text": "двоичное представлени",
+            "bold": true
+          },
+          {
+            "text": "е и удаление префикса "
+          },
+          {
+            "text": "'0b'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "chet1 = [x for x in s[1::2] if x == '1'] ",
+            "bold": true
+          },
+          {
+            "text": "- Формирование списка всех "
+          },
+          {
+            "text": "'1'",
+            "bold": true
+          },
+          {
+            "text": " на четных позициях в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "nechet0 = [x for x in s[0::2] if x == '0'] ",
+            "bold": true
+          },
+          {
+            "text": "- Формирование списка всех "
+          },
+          {
+            "text": "'0' ",
+            "bold": true
+          },
+          {
+            "text": "на нечетных позициях в строке s."
+          }
+        ],
+        [
+          {
+            "text": "r = abs(len(chet1) - len(nechet0))",
+            "bold": true
+          },
+          {
+            "text": " - Вычисляем разницу между количеством "
+          },
+          {
+            "text": "'1' ",
+            "bold": true
+          },
+          {
+            "text": "на "
+          },
+          {
+            "text": "четных",
+            "bold": true
+          },
+          {
+            "text": " и"
+          },
+          {
+            "text": " '0'",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "нечетных ",
+            "bold": true
+          },
+          {
+            "text": "позициях."
+          }
+        ],
+        [
+          {
+            "text": "if r == 5:",
+            "bold": true
+          },
+          {
+            "text": " - Проверяем: если разница равна "
+          },
+          {
+            "text": "5",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(n)",
+            "bold": true
+          },
+          {
+            "text": " - Вывод число "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "break ",
+            "bold": true
+          },
+          {
+            "text": "- Прерываем цикл, так как нам нужно "
+          },
+          {
+            "text": "наименьшее",
+            "bold": true
+          },
+          {
+            "text": ", а диапазон чисел изначально упорядочен по возрастанию."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Это еще один вариант решения, считаю его более универсальным. Оставляю для самоизучения.",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-4869/03.webp",
+      "width": 750,
+      "height": 674,
+      "alt": "-3"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 1023"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-4869/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 4869 ЕГЭ по информатике #5",
+  "task": 5
+}

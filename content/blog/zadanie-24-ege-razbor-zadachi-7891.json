@@ -1,0 +1,362 @@
+{
+  "slug": "zadanie-24-ege-razbor-zadachi-7891",
+  "title": "Задание 24 ЕГЭ: разбор задачи 7891",
+  "description": "Условие: № 7891 (Уровень: Средний) • Статья подготовлена командой itpy • Полный разбор задачи в Telegram",
+  "date": "2024-05-01",
+  "cover": {
+    "src": "/blog/zadanie-24-ege-razbor-zadachi-7891/01.webp",
+    "width": 530,
+    "height": 400
+  },
+  "source": "https://dzen.ru/a/Zi-n17R4zyGbY1II",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7891/01.webp",
+      "width": 530,
+      "height": 400,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие: ",
+          "bold": true
+        },
+        {
+          "text": "№ 7891 (Уровень: Средний)\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Telegram",
+          "href": "https://t.me/informatika_kege_itpy/405"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(Е. Фокин)",
+          "href": "https://vk.com/appendiamv",
+          "bold": true
+        },
+        {
+          "text": " Текстовый файл состоит не более чем из 10^6 символов и содержит только буквы латинского алфавита и десятичные цифры. Найдите максимальную длину подстроки, ограниченной с двух сторон одним и тем же символом и не содержащей этого символа между ними. В ответе укажите длину найденной строки, включая граничные символы. Например, для строки ABCDABECD ответом будет 6."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Файлы к заданию: "
+        },
+        {
+          "text": "24.txt",
+          "href": "https://kompege.ru/files/mcsGxbAFm.txt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7891/02.webp",
+      "width": 750,
+      "height": 565,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from string import *",
+            "bold": true
+          },
+          {
+            "text": " -"
+          },
+          {
+            "text": " импортирует все символы и константы из модуля strin",
+            "bold": true
+          },
+          {
+            "text": "g, что включает в себя"
+          },
+          {
+            "text": " ascii_uppercase",
+            "bold": true
+          },
+          {
+            "text": " (заглавные буквы), "
+          },
+          {
+            "text": "digits",
+            "bold": true
+          },
+          {
+            "text": " (цифры) и другие."
+          }
+        ],
+        [
+          {
+            "text": "alphabet = digits + ascii_uppercase",
+            "bold": true
+          },
+          {
+            "text": " - объединяет цифры и заглавные буквы в одну строку и сохраняет результат в переменной "
+          },
+          {
+            "text": "alphabet",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(alphabet)",
+            "bold": true
+          },
+          {
+            "text": " - выводит на экран строку, содержащую все цифры и заглавные буквы:"
+          },
+          {
+            "text": " \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\"",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = open('24.txt').readline() ",
+            "bold": true
+          },
+          {
+            "text": "- считывает строку из файла"
+          },
+          {
+            "text": " '24.txt'",
+            "bold": true
+          },
+          {
+            "text": " и сохраняет ее в переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0 ",
+            "bold": true
+          },
+          {
+            "text": "- инициализирует переменную maxi значением 0, которая будет использоваться для хранения максимальной длины строки."
+          }
+        ],
+        [
+          {
+            "text": "Цикл"
+          },
+          {
+            "text": " for a in alphabet:",
+            "bold": true
+          },
+          {
+            "text": " проходит по символам в строке "
+          },
+          {
+            "text": "alphabet",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(f'{a}', f'{a} {a}') ",
+            "bold": true
+          },
+          {
+            "text": "- заменяет каждое вхождение символа "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "a a",
+            "bold": true
+          },
+          {
+            "text": ", чтобы "
+          },
+          {
+            "text": "удвоить символ",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if maxi < max([len(x) for x in s.split()]):",
+            "bold": true
+          },
+          {
+            "text": " - проверяет, если "
+          },
+          {
+            "text": "текущая максимальная длина строки",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "меньше максимальной длины",
+            "bold": true
+          },
+          {
+            "text": " из списка длин слов, то обновляет "
+          },
+          {
+            "text": "maxi",
+            "bold": true
+          },
+          {
+            "text": " и выводит "
+          },
+          {
+            "text": "текущий символ",
+            "bold": true
+          },
+          {
+            "text": " и максимальную "
+          },
+          {
+            "text": "длину",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(f'{a} {a}', f'{a}') ",
+            "bold": true
+          },
+          {
+            "text": "-"
+          },
+          {
+            "text": " заменяет удвоенные символы обратно",
+            "bold": true
+          },
+          {
+            "text": ", чтобы восстановить исходную строку."
+          }
+        ],
+        [
+          {
+            "text": "print(maxi) ",
+            "bold": true
+          },
+          {
+            "text": "- выводит на экран"
+          },
+          {
+            "text": " максимальную длину строки",
+            "bold": true
+          },
+          {
+            "text": " после прохождения всех символов алфавита."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Итак, данный код удваивает символы из алфавита в строке, находит максимальную длину строки после этой операции и выводит ее на экран."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 9747"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7891/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 7891 ЕГЭ по информатике #24",
+  "task": 24
+}

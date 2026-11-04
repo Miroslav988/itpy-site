@@ -1,0 +1,447 @@
+{
+  "slug": "zadanie-16-ege-razbor-zadachi-8426",
+  "title": "Задание 16 ЕГЭ: разбор задачи 8426",
+  "description": "Условие: № 8426 (Уровень: Средний) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-10-28",
+  "cover": {
+    "src": "/blog/zadanie-16-ege-razbor-zadachi-8426/01.webp",
+    "width": 530,
+    "height": 470
+  },
+  "source": "https://dzen.ru/a/ZTXVy-xw-1ZbcK07",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-16-ege-razbor-zadachi-8426/01.webp",
+      "width": 530,
+      "height": 470,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 8426",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": " (Уровень: Средний)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функции "
+        },
+        {
+          "text": "F",
+          "italic": true
+        },
+        {
+          "text": "("
+        },
+        {
+          "text": "n",
+          "italic": true
+        },
+        {
+          "text": ") и "
+        },
+        {
+          "text": "G",
+          "italic": true
+        },
+        {
+          "text": "("
+        },
+        {
+          "text": "n",
+          "italic": true
+        },
+        {
+          "text": "), где "
+        },
+        {
+          "text": "n",
+          "italic": true
+        },
+        {
+          "text": " – натуральное число, заданы следующими"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "соотношениями:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "F(n)= n, если n > 1000000;"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "F(n)= n+F(2n),  если n ≤ 1000000;**"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "G(n)= F(n)/n."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сколько существует таких натуральных чисел "
+        },
+        {
+          "text": "n",
+          "italic": true
+        },
+        {
+          "text": " (включая число 1000), для которых "
+        },
+        {
+          "text": "G",
+          "italic": true
+        },
+        {
+          "text": "("
+        },
+        {
+          "text": "n",
+          "italic": true
+        },
+        {
+          "text": ") = "
+        },
+        {
+          "text": "G",
+          "italic": true
+        },
+        {
+          "text": "(2000)?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-16-ege-razbor-zadachi-8426/02.webp",
+      "width": 750,
+      "height": 649,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def F(n):\n    if n > 1000000:\n        return n\n    if n <= 1000000:\n        return n + F(2 * n)\n\ndef G(n):\n    return F(n) / n\n\ncount = 0\nfor i in range(1, 1000000):\n    if G(i) == G(2000):\n        count += 1\n        print(count)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(n): - объявляем функцию с именем "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " и параметром "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if n > 1000000: - проверяем, если значение "
+          },
+          {
+            "text": "n больше 1000000",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return n- возвращаем значение "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if n <= 1000000: - проверяем, если значение "
+          },
+          {
+            "text": "n меньше или равно 1000000",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return n + F(2 * n) - возвращаем сумму значения "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " и рекурсивного вызова функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с аргументом "
+          },
+          {
+            "text": "2 * n",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "def G(n): - объявляем функцию с именем "
+          },
+          {
+            "text": "G",
+            "bold": true
+          },
+          {
+            "text": " и параметром "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return F(n) / n - возвращаем результат деления значения функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с аргументом "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count = 0 - объявляем переменную "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " и присваиваем ей значение "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(1, 1000000): - начинаем цикл, перебирая значения "
+          },
+          {
+            "text": "i от 1",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "до 999999",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if G(i) == G(2000): - проверяем, если результат вызова функции "
+          },
+          {
+            "text": "G",
+            "bold": true
+          },
+          {
+            "text": " с аргументом"
+          },
+          {
+            "text": " i",
+            "bold": true
+          },
+          {
+            "text": " равен результату вызова функции "
+          },
+          {
+            "text": "G",
+            "bold": true
+          },
+          {
+            "text": " с аргументом "
+          },
+          {
+            "text": "2000",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count += 1 - увеличиваем значение "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(count) - выводим значение "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 1953"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-16-ege-razbor-zadachi-8426/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 8426 ЕГЭ по информатике #16",
+  "task": 16
+}

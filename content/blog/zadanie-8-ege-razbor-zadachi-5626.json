@@ -1,0 +1,297 @@
+{
+  "slug": "zadanie-8-ege-razbor-zadachi-5626",
+  "title": "Задание 8 ЕГЭ: разбор задачи 5626",
+  "description": "Условие: № 5626 (Уровень: Базовый) задача с сайта kompege.ru • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-02-09",
+  "cover": {
+    "src": "/blog/zadanie-8-ege-razbor-zadachi-5626/01.webp",
+    "width": 530,
+    "height": 370
+  },
+  "source": "https://dzen.ru/a/ZcJrJkIDw2fWoWU1",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-5626/01.webp",
+      "width": 530,
+      "height": 370,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 5626 (Уровень: Базовый) "
+        },
+        {
+          "text": "задача с сайта ",
+          "italic": true
+        },
+        {
+          "text": "kompege.ru",
+          "href": "https://kompege.ru/task"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/346"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(М. Ишимов)",
+          "href": "https://vk.com/phmarvi"
+        },
+        {
+          "text": " Определите количество пятизначных чисел, записанных в восьмеричной системе счисления, запись которых не начинается с нечётных цифр, не оканчивается цифрами 2 или 6, а также не содержит более двух цифр 7."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-5626/02.webp",
+      "width": 750,
+      "height": 530,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import itertools *",
+            "bold": true
+          },
+          {
+            "text": " - Импортируем модуль "
+          },
+          {
+            "text": "itertools",
+            "bold": true
+          },
+          {
+            "text": " для работы с итераторами."
+          }
+        ],
+        [
+          {
+            "text": "count = 0",
+            "bold": true
+          },
+          {
+            "text": " - Инициализируем счетчик для счета подходящих чисел."
+          }
+        ],
+        [
+          {
+            "text": "for s in itertools.product('01234567', repeat=5): ",
+            "bold": true
+          },
+          {
+            "text": "- Генерация всех возможных комбинаций длины "
+          },
+          {
+            "text": "5",
+            "bold": true
+          },
+          {
+            "text": " из цифр "
+          },
+          {
+            "text": "0-7",
+            "bold": true
+          },
+          {
+            "text": " (восьмеричная система счисления) ."
+          }
+        ],
+        [
+          {
+            "text": "slovo = ''.join(s) -",
+            "bold": true
+          },
+          {
+            "text": " Преобразуем кортеж"
+          },
+          {
+            "text": " s",
+            "bold": true
+          },
+          {
+            "text": " в строку"
+          },
+          {
+            "text": " slovo",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if slovo[0] != '0': ",
+            "bold": true
+          },
+          {
+            "text": "- Проверка: если первая цифра не равна"
+          },
+          {
+            "text": " '0'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if slovo[0] not in '1357': ",
+            "bold": true
+          },
+          {
+            "text": "- Проверка: если первая цифра не содержится в "
+          },
+          {
+            "text": "'1357'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if slovo[-1] not in '26': ",
+            "bold": true
+          },
+          {
+            "text": "- Проверка: если последняя цифра не содержится в "
+          },
+          {
+            "text": "'26'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if slovo.count('7') <= 2: ",
+            "bold": true
+          },
+          {
+            "text": "- Проверка: если количество цифр "
+          },
+          {
+            "text": "'7'",
+            "bold": true
+          },
+          {
+            "text": " в слове не превышает "
+          },
+          {
+            "text": "2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count += 1",
+            "bold": true
+          },
+          {
+            "text": " - При выполнении всех условие, увеличивает счетчик на "
+          },
+          {
+            "text": "+1",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(count) ",
+            "bold": true
+          },
+          {
+            "text": "- Выводим результат подсчета подходящих чисел."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 9135"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-5626/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 5626 ЕГЭ по информатике #8",
+  "task": 8
+}

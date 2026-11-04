@@ -1,0 +1,293 @@
+{
+  "slug": "zadanie-8-ege-razbor-zadachi-6040",
+  "title": "Задание 8 ЕГЭ: разбор задачи 6040",
+  "description": "Определите количество шестизначных чисел, записанных в семеричной системе счисления, в записи которых ровно одна цифра 6, при этом чётные и нечётные цифры чередуются.",
+  "date": "2023-08-31",
+  "cover": {
+    "src": "/blog/zadanie-8-ege-razbor-zadachi-6040/01.webp",
+    "width": 530,
+    "height": 220
+  },
+  "source": "https://dzen.ru/a/ZNJEmkolnn0Q7LvM",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-6040/01.webp",
+      "width": 530,
+      "height": 220,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 6040 ФИПИ 04.02.23 (Уровень: Базовый)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите количество шестизначных чисел, записанных в семеричной системе счисления,  в записи которых ровно одна цифра 6, при этом чётные и нечётные цифры чередуются."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-6040/02.webp",
+      "width": 750,
+      "height": 335,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "from itertools import *\ncount = 0\nfor s in product('0123456', repeat=6):\n    slovo = ''.join(s)\n    if slovo[0] != '0' and slovo.count('6') == 1:\n        if all(''.join(x) not in slovo for x in product('0246', repeat=2)):\n            if all(''.join(x) not in slovo for x in product('135', repeat=2)):\n                count += 1\nprint(count)"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "italic": true
+          },
+          {
+            "text": "- Импортируем все функции из модуля "
+          },
+          {
+            "text": "itertools",
+            "bold": true
+          },
+          {
+            "text": ", через оператор раскрытия"
+          },
+          {
+            "text": " *",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count = 0",
+            "italic": true
+          },
+          {
+            "text": " - Инициализируем переменную count со значением "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": ", для подсчета подходящих по условию слов."
+          }
+        ],
+        [
+          {
+            "text": "for s in product('0123456', repeat=6): ",
+            "italic": true
+          },
+          {
+            "text": "- Создаём цикл по всем возможным комбинациям длиной 6 из символов "
+          },
+          {
+            "text": "'0123456' ",
+            "bold": true
+          },
+          {
+            "text": "с помощью функции "
+          },
+          {
+            "text": "product ",
+            "bold": true
+          },
+          {
+            "text": "из модуля "
+          },
+          {
+            "text": "itertools",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "slovo = ''.join(s) ",
+            "italic": true
+          },
+          {
+            "text": "- Соединяем символы из текущей комбинации "
+          },
+          {
+            "text": "кортежа s",
+            "bold": true
+          },
+          {
+            "text": " в строку"
+          },
+          {
+            "text": " slovo",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if slovo[0] != '0' and slovo.count('6') == 1:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, что первый символ в строке не равен"
+          },
+          {
+            "text": " '0'",
+            "bold": true
+          },
+          {
+            "text": " и символ "
+          },
+          {
+            "text": "'6'",
+            "bold": true
+          },
+          {
+            "text": " только один."
+          }
+        ],
+        [
+          {
+            "text": "if all(''.join(x) not in slovo for x in product('0246', repeat=2)): ",
+            "italic": true
+          },
+          {
+            "text": "- Через функцию "
+          },
+          {
+            "text": "all() ",
+            "bold": true
+          },
+          {
+            "text": "проверяем, что для всех комбинаций длины 2 из символов "
+          },
+          {
+            "text": "'0246'",
+            "bold": true
+          },
+          {
+            "text": ", соединенных в строку "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": ", эта строка не является подстрокой в"
+          },
+          {
+            "text": " slovo ",
+            "bold": true
+          },
+          {
+            "text": "(не находится внутри)."
+          }
+        ],
+        [
+          {
+            "text": "if all(''.join(x) not in slovo for x in product('135', repeat=2)): ",
+            "italic": true
+          },
+          {
+            "text": "- Аналогичное действие для  всех комбинаций длины 2 из символов "
+          },
+          {
+            "text": "'135'",
+            "bold": true
+          },
+          {
+            "text": ", соединенных в строку "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count += 1",
+            "italic": true
+          },
+          {
+            "text": " - Увеличиваем значение переменной"
+          },
+          {
+            "text": " count ",
+            "bold": true
+          },
+          {
+            "text": "на "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": ", если все условия выполняются."
+          }
+        ],
+        [
+          {
+            "text": "print(count)",
+            "italic": true
+          },
+          {
+            "text": " - Выводим значение переменной "
+          },
+          {
+            "text": "count ",
+            "bold": true
+          },
+          {
+            "text": "на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 1296"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-6040/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6 \n",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 6040 ЕГЭ по информатике #8",
+  "task": 8
+}

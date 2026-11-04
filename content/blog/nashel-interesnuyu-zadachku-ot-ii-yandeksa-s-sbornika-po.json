@@ -1,0 +1,294 @@
+{
+  "slug": "nashel-interesnuyu-zadachku-ot-ii-yandeksa-s-sbornika-po",
+  "title": "Нашел интересную задачку от ИИ Яндекса с сборника по подготовке к ЕГЭ",
+  "description": "Уровень: Средний",
+  "date": "2024-12-03",
+  "meta": {
+    "source": "Яндекс учебник",
+    "level": "Средний"
+  },
+  "cover": {
+    "src": "/blog/nashel-interesnuyu-zadachku-ot-ii-yandeksa-s-sbornika-po/01.webp",
+    "width": 750,
+    "height": 366
+  },
+  "source": "https://dzen.ru/a/Z0sNiJmzICwfAZqF",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие задачи:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Существуют числа, обладающие свойствами:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. Число делится на все свои цифры;"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. Число, полученное из данного числа записью цифр в обратном порядке, тоже делится на все свои цифры."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Примером такого числа является 216. Сколько существует трёхзначных чисел, без нулей в записи, обладающих этими свойствами?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Примером такого числа является 216. Сколько существует трёхзначных чисел, без нулей в записи, обладающих этими свойствами?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Теоретическая справка:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Считаю такую задачу весьма интересной для практики программирования, да тут нет ничего похожего с задачами ФИПИ, но практика дает нам много ценного опыта."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Код решения",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/nashel-interesnuyu-zadachku-ot-ii-yandeksa-s-sbornika-po/01.webp",
+      "width": 750,
+      "height": 366,
+      "alt": "Ответ: 16",
+      "caption": "Ответ: 16"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "cnt = 0",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Инициализируется переменная cnt для подсчета количества чисел, удовлетворяющих условиям задачи."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": "for n in range(100, 1000):",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Цикл for перебирает все трехзначные числа от 100 до 999 включительно."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "# if str(n).count('0') == 0:",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Закомментированная строка изначально проверяла, что в числе n нет нулей."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. "
+        },
+        {
+          "text": "if '0' not in str(n):",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Проверяется, что число n не содержит цифру '0'."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5."
+        },
+        {
+          "text": " if all(n % int(x) == 0 for x in str(n)):",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Проверяется, что число n делится на каждую из своих цифр без остатка."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6. "
+        },
+        {
+          "text": "new_n = int(str(n)[::-1])",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Переменная new_n получает значение числа n с цифрами в обратном порядке."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. "
+        },
+        {
+          "text": "if all(new_n % int(x) == 0 for x in str(new_n)):",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Проверяется, что число new_n также делится на каждую из своих цифр без остатка."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8."
+        },
+        {
+          "text": " cnt += 1",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Увеличивается счетчик cnt на 1, если оба условия делимости выполняются."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "9. "
+        },
+        {
+          "text": "print(cnt)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Выводится общее количество чисел, удовлетворяющих всем условиям."
+        }
+      ]
+    }
+  ],
+  "originalTitle": "Нашел интересную задачку от ИИ Яндекса с сборника по подготовке к ЕГЭ"
+}

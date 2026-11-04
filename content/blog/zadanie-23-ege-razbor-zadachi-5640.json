@@ -1,0 +1,643 @@
+{
+  "slug": "zadanie-23-ege-razbor-zadachi-5640",
+  "title": "Задание 23 ЕГЭ: разбор задачи 5640",
+  "description": "Условие: № 5640 (Уровень: Средний) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-10-02",
+  "cover": {
+    "src": "/blog/zadanie-23-ege-razbor-zadachi-5640/01.webp",
+    "width": 530,
+    "height": 350
+  },
+  "source": "https://dzen.ru/a/ZRfqj3avM0Y2KJ16",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-5640/01.webp",
+      "width": 530,
+      "height": 350,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 5640",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": " (Уровень: Средний)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Исполнитель преобразует число на экране.\nУ исполнителя есть две команды, которые обозначены латинскими буквами:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "  Вычти 4",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "B",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ".  Вычти сумму цифр числа",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Программа для исполнителя – это последовательность команд.\n    Сколько существует программ, для которых при исходном числе 36 результатом является число 2, и при этом траектория вычислений содержит число 14?\n    Траектория вычислений программы – это последовательность результатов выполнения всех команд программы. "
+        },
+        {
+          "text": "Например",
+          "italic": true
+        },
+        {
+          "text": ", для программы "
+        },
+        {
+          "text": "ABA",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " при исходном числе 33 траектория будет состоять из чисел 29, 18, 14."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Решение через Python"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-5640/02.webp",
+      "width": 750,
+      "height": 482,
+      "alt": "Вариант решения №1",
+      "caption": "Вариант решения №1"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def MySum(x):\n    summ = sum([int(i) for i in str(x)])\n    return summ\n\ndef F(a, b):\n    if a < b:\n        return 0\n    elif a == b:\n        return 1\n    else:\n        return F(a-4, b) + F(a - MySum(a), b)\n\nprint(F(36, 14) * F(14, 2))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к первому решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def MySum(x): - объявление функции с именем "
+          },
+          {
+            "text": "MySum",
+            "bold": true
+          },
+          {
+            "text": ", которая принимает один аргумент "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "summ = sum([int(i) for i in str(x)]) - вычисление суммы цифр числа "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": ". Каждая цифра из числа "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " преобразуется в целое число и добавляется в список, затем сумма всех элементов списка присваивается переменной "
+          },
+          {
+            "text": "summ",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return summ - возвращение значения переменной "
+          },
+          {
+            "text": "summ",
+            "bold": true
+          },
+          {
+            "text": " из функции "
+          },
+          {
+            "text": "MySum",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "def F(a, b): - объявление функции с именем "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": ", которая принимает два аргумента "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if a < b: - проверка, если значение "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " меньше значения "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return 0 - возвращение значения "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": ", если условие в строке "
+          },
+          {
+            "text": "5",
+            "bold": true
+          },
+          {
+            "text": " выполняется."
+          }
+        ],
+        [
+          {
+            "text": "elif a == b: - проверка, если значение "
+          },
+          {
+            "text": "a ",
+            "bold": true
+          },
+          {
+            "text": "равно значению "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return 1 - возвращение значения "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": ", если условие в строке "
+          },
+          {
+            "text": "7",
+            "bold": true
+          },
+          {
+            "text": " выполняется."
+          }
+        ],
+        [
+          {
+            "text": "else: - выполнение кода, если ни одно из условий в строках "
+          },
+          {
+            "text": "5",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "7",
+            "bold": true
+          },
+          {
+            "text": " не выполняется."
+          }
+        ],
+        [
+          {
+            "text": "return F(a-4, b) + F(a - MySum(a), b) - рекурсивный вызов функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с измененными аргументами "
+          },
+          {
+            "text": "a ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": " и сложение результатов."
+          }
+        ],
+        [
+          {
+            "text": "print(F(36, 14) * F(14, 2)) - вызов функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с аргументами"
+          },
+          {
+            "text": " 36",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "14",
+            "bold": true
+          },
+          {
+            "text": ", умножение результата на вызов функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с аргументами "
+          },
+          {
+            "text": "14",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "2",
+            "bold": true
+          },
+          {
+            "text": ", и вывод результата на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-5640/03.webp",
+      "width": 750,
+      "height": 416,
+      "alt": " Вариант решения №2",
+      "caption": "Вариант решения №2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def MySum(x):\n    summ = sum([int(i) for i in str(x)])\n    return summ\n\ndef F(a, b):\n    if a <= b:\n        return a == b\n    return F(a-4, b) + F(a - MySum(a), b)\n\nprint(F(36, 14) * F(14, 2))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии ко второму решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def MySum(x): - объявление функции с именем "
+          },
+          {
+            "text": "MySum",
+            "bold": true
+          },
+          {
+            "text": ", которая принимает один аргумент "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "summ = sum([int(i) for i in str(x)]) - вычисление суммы цифр числа "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": ". Каждая цифра из числа "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " преобразуется в целое число и добавляется в список, затем сумма всех элементов списка присваивается переменной "
+          },
+          {
+            "text": "summ",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return summ - возвращение значения переменной "
+          },
+          {
+            "text": "summ ",
+            "bold": true
+          },
+          {
+            "text": "из функции "
+          },
+          {
+            "text": "MySum",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "def F(a, b): - объявление функции с именем "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": ", которая принимает два аргумента "
+          },
+          {
+            "text": "a ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if a <= b: - проверка, если значение "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " меньше или равно значению "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return a == b - возвращение значения True, если "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " равно "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": ", иначе возвращение значения"
+          },
+          {
+            "text": " False",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return F(a-4, b) + F(a - MySum(a), b) - рекурсивный вызов функции F с измененными аргументами a и b и сложение результатов."
+          }
+        ],
+        [
+          {
+            "text": "print(F(36, 14) * F(14, 2)) - вызов функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с аргументами "
+          },
+          {
+            "text": "36",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "14",
+            "bold": true
+          },
+          {
+            "text": ", умножение результата на вызов функции "
+          },
+          {
+            "text": "F ",
+            "bold": true
+          },
+          {
+            "text": "с аргументами "
+          },
+          {
+            "text": "14 ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "2",
+            "bold": true
+          },
+          {
+            "text": ", и вывод результата на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 7"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-5640/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy \n",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 5640 ЕГЭ по информатике #23",
+  "task": 23
+}

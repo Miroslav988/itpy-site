@@ -1,0 +1,500 @@
+{
+  "slug": "funktsii-all-i-any-gde-oni-mogut-prigoditsya-na-ege",
+  "title": "Функции all() и any(), где они могут пригодиться на ЕГЭ",
+  "description": "Функции all() и any() очень полезны при работе с большим количеством данных. Они позволяют легко проверять, удовлетворяют ли все или хотя бы один элементы списка или другого…",
+  "date": "2023-06-04",
+  "cover": {
+    "src": "/blog/funktsii-all-i-any-gde-oni-mogut-prigoditsya-na-ege/01.webp",
+    "width": 728,
+    "height": 320
+  },
+  "source": "https://dzen.ru/a/ZHxvd8On734jnRYp",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/funktsii-all-i-any-gde-oni-mogut-prigoditsya-na-ege/01.webp",
+      "width": 728,
+      "height": 320,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вступительная теория"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функции "
+        },
+        {
+          "text": "all()",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "any()",
+          "bold": true
+        },
+        {
+          "text": " очень полезны при работе с большим количеством данных. Они позволяют легко проверять, удовлетворяют ли все или хотя бы один элементы списка или другого "
+        },
+        {
+          "text": "итерируемого",
+          "href": "https://pyneng.readthedocs.io/ru/latest/book/13_iterator_generator/iterable.html"
+        },
+        {
+          "text": " объекта определенному условию."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В целом, функции "
+        },
+        {
+          "text": "all()",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "any()",
+          "bold": true
+        },
+        {
+          "text": " очень удобны и позволяют значительно упростить ряд задач, связанных с проверкой условий в больших объемах данных."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Функция all() на примерах"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример 1:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "lst = [2, 4, 6, 8]\nresult = all(x % 2 == 0 for x in lst)\nprint(result)  # True"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Код выше создает список чисел "
+        },
+        {
+          "text": "lst",
+          "bold": true
+        },
+        {
+          "text": " и использует генератор списка, чтобы проверить, что каждый элемент списка является четным числом. Затем используется функция "
+        },
+        {
+          "text": "all()",
+          "bold": true
+        },
+        {
+          "text": " для проверки, что все элементы генератора списка истинны (т.е. все элементы в списке "
+        },
+        {
+          "text": "lst",
+          "bold": true
+        },
+        {
+          "text": " являются четными число). Функция "
+        },
+        {
+          "text": "all()",
+          "bold": true
+        },
+        {
+          "text": " возвращает "
+        },
+        {
+          "text": "True",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример 2:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "lst = [2, 4, 7, 8]\nresult = all(x % 2 == 0 for x in lst)\nprint(result)  # False"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Код выше создает список чисел"
+        },
+        {
+          "text": " lst",
+          "bold": true
+        },
+        {
+          "text": " и использует генератор списка, чтобы проверить, что каждый элемент списка является четным числом. Однако в списке есть число 7, которое не является четным числом, поэтому функция "
+        },
+        {
+          "text": "all()",
+          "bold": true
+        },
+        {
+          "text": " возвращает "
+        },
+        {
+          "text": "False",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Функци any() на примерах"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример 1:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "lst = [2, 4, 6, 8]\nresult = any(x % 2 != 0 for x in lst)\nprint(result)  # False"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Код выше создает список чисел "
+        },
+        {
+          "text": "lst",
+          "bold": true
+        },
+        {
+          "text": " и использует генератор списка, чтобы проверить, что есть хотя бы одно нечетное число в списке. Затем используется функция "
+        },
+        {
+          "text": "any()",
+          "bold": true
+        },
+        {
+          "text": " для проверки, что хотя бы один элемент генератора списка истинен (т.е. в списке "
+        },
+        {
+          "text": "lst",
+          "bold": true
+        },
+        {
+          "text": " нет нечетных чисел). Функция "
+        },
+        {
+          "text": "any()",
+          "bold": true
+        },
+        {
+          "text": " возвращает "
+        },
+        {
+          "text": "False",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример 2:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "lst = [2, 4, 7, 8]\nresult = any(x % 2 != 0 for x in lst)\nprint(result)  # True"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Код выше создает список чисел "
+        },
+        {
+          "text": "lst",
+          "bold": true
+        },
+        {
+          "text": " и использует генератор списка, чтобы проверить, что есть хотя бы одно нечетное число в списке. В списке есть число 7, которое является нечетным числом, поэтому функция "
+        },
+        {
+          "text": "any()",
+          "bold": true
+        },
+        {
+          "text": " возвращает "
+        },
+        {
+          "text": "True",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примеры на задачах из ЕГЭ"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "№ 1950 (Уровень: Базовый)",
+          "italic": true,
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "("
+        },
+        {
+          "text": "И. Женецкий",
+          "href": "https://vk.com/programmer7"
+        },
+        {
+          "text": ") Абдурахман составляет 8-буквенные слова из букв П, И, Т, О, Н, Я, Г, А, причём гласная буква не может стоять в начале слова, а также рядом с гласной буквой. Буквы в слове могут повторяться. Сколько таких слов может составить Абдурахман?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/funktsii-all-i-any-gde-oni-mogut-prigoditsya-na-ege/02.webp",
+      "width": 750,
+      "height": 573,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import itertools\ncount = 0\nM = []\nfor s in itertools.product('ИОЯА', repeat = 2):\n    pair = ''.join(s)\n    M.append(pair)\nprint(M)\nfor s in itertools.product('ПИТОНЯГА', repeat=8):  \n    slovo = ''.join(s)\n    if slovo[0] not in 'ИОЯА':\n        if all(x not in slovo for x in M):  \n            count += 1\nprint(count)"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "Функция "
+          },
+          {
+            "text": "all()",
+            "bold": true
+          },
+          {
+            "text": " используется в этом коде для проверки того, что все элементы заданного списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " не присутствуют в строке "
+          },
+          {
+            "text": "slovo",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Посмотрим на код по подробнее. Здесь мы импортируем модуль "
+          },
+          {
+            "text": "itertools",
+            "bold": true
+          },
+          {
+            "text": " и создаем список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", который будет использоваться для проверки элементов строки "
+          },
+          {
+            "text": "slovo",
+            "bold": true
+          },
+          {
+            "text": ". Список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " содержит все возможные комбинации из двух гласных символов."
+          }
+        ],
+        [
+          {
+            "text": "Далее мы создаем вложенный цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": ", который будет создавать все возможные комбинации из 8 символов алфавита (слова). Внутри этого цикла мы присваиваем каждой комбинации строку "
+          },
+          {
+            "text": "slovo",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Затем мы проверяем, что первый символ строки "
+          },
+          {
+            "text": "slovo",
+            "bold": true
+          },
+          {
+            "text": " не является одним из символов "
+          },
+          {
+            "text": "\"И\", \"О\", \"Я\", \"А\"",
+            "bold": true
+          },
+          {
+            "text": ", с помощью условия "
+          },
+          {
+            "text": "if slovo[0] not in 'ИОЯА'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Далее мы используем функцию "
+          },
+          {
+            "text": "all()",
+            "bold": true
+          },
+          {
+            "text": " для проверки того, что элементы из списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " не присутствуют в строке "
+          },
+          {
+            "text": "slovo",
+            "bold": true
+          },
+          {
+            "text": ". Если все элементы списка отсутствуют в строке, переменная "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " увеличивается на 1."
+          }
+        ],
+        [
+          {
+            "text": "Таким образом, функция "
+          },
+          {
+            "text": "all()",
+            "bold": true
+          },
+          {
+            "text": " позволяет нам более эффективно проверять условие, представленное в коде, и получать результаты, необходимые для дальнейшей обработки данных."
+          }
+        ]
+      ]
+    }
+  ],
+  "originalTitle": "💡 Функции all() и any(), где они могут пригодиться на ЕГЭ #tpy"
+}

@@ -1,0 +1,250 @@
+{
+  "slug": "zadanie-8-ege-razbor-zadachi-7610",
+  "title": "Задание 8 ЕГЭ: разбор задачи 7610",
+  "description": "Условие: № 7610 Досрочная волна 2023 (Уровень: Базовый) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-11-04",
+  "cover": {
+    "src": "/blog/zadanie-8-ege-razbor-zadachi-7610/01.webp",
+    "width": 510,
+    "height": 340
+  },
+  "source": "https://dzen.ru/a/ZUYg9TiNnTQIJCsG",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-7610/01.webp",
+      "width": 510,
+      "height": 340,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 7610",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": " Досрочная волна 2023",
+          "italic": true
+        },
+        {
+          "text": " ",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "(Уровень: Базовый)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Все пятибуквенные слова, в составе которых могут быть только русские буквы А, К, Л, М, Н, Я, записаны в алфавитном порядке и пронумерованы начиная с 1."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ниже приведено начало списка."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "ААААА"
+          }
+        ],
+        [
+          {
+            "text": "ААААК"
+          }
+        ],
+        [
+          {
+            "text": "ААААЛ"
+          }
+        ],
+        [
+          {
+            "text": "ААААМ"
+          }
+        ],
+        [
+          {
+            "text": "ААААН"
+          }
+        ],
+        [
+          {
+            "text": "ААААЯ"
+          }
+        ],
+        [
+          {
+            "text": "АААКА"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "…"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Под каким номером в списке идёт первое слово, которое начинается на буквы КМ?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-7610/02.webp",
+      "width": 718,
+      "height": 617,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "s = 'АКЛМНЯ'\ncount = 1\nfor a in s:\n    for b in s:\n        for c in s:\n            for d in s:\n                for e in s:\n                    slovo = a + b + c + d + e\n                    if slovo[:2] == 'КМ':\n                    # if a == 'К' and b == 'М':\n                        print(count, slovo)\n                        exit()\n                    count += 1"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = 'АКЛМНЯ' - объявляем переменную s и присваиваем ей значение 'АКЛМНЯ' (наш алфавит из условия)."
+          }
+        ],
+        [
+          {
+            "text": "count = 1 - объявляем переменную count и присваиваем ей значение 1 (чтобы в последствии соблюдать нумерацию списка, как в условии)."
+          }
+        ],
+        [
+          {
+            "text": "for a in s: - начинаем цикл, перебирая символы a в строке s."
+          }
+        ],
+        [
+          {
+            "text": "for b in s: - начинаем вложенный цикл, перебирая символы b в строке s."
+          }
+        ],
+        [
+          {
+            "text": "for c in s: - начинаем еще один вложенный цикл, перебирая символы c в строке s."
+          }
+        ],
+        [
+          {
+            "text": "for d in s: - начинаем еще один вложенный цикл, перебирая символы d в строке s."
+          }
+        ],
+        [
+          {
+            "text": "for e in s: - начинаем еще один вложенный цикл, перебирая символы e в строке s."
+          }
+        ],
+        [
+          {
+            "text": "slovo = a + b + c + d + e - объединяем символы a, b, c, d и e в переменную slovo (получаем всевозможные комбинации букв)."
+          }
+        ],
+        [
+          {
+            "text": "if slovo[:2] == 'КМ': - проверяем, если первые два символа в slovo равны 'КМ'."
+          }
+        ],
+        [
+          {
+            "text": "print(count, slovo) - выводим значение count и slovo."
+          }
+        ],
+        [
+          {
+            "text": "exit() - выходим из программы."
+          }
+        ],
+        [
+          {
+            "text": "count += 1 - увеличиваем значение count на 1."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 1945"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-7610/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 7610 ЕГЭ по информатике #8",
+  "task": 8
+}

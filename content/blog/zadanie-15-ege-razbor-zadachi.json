@@ -1,0 +1,99 @@
+{
+  "slug": "zadanie-15-ege-razbor-zadachi",
+  "title": "Задание 15 ЕГЭ: разбор задачи",
+  "description": "Поставь ❤‍🔥 и отправь другу эту супер полезную шпаргалку по 15 номеру ЕГЭ!",
+  "date": "2024-10-16",
+  "task": 15,
+  "source": "https://dzen.ru/a/Zw_5lLqEUVuwCX5r",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поставь ❤‍🔥 и отправь другу эту супер полезную шпаргалку по 15 номеру ЕГЭ!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "1. Шаблон для первого типа"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(ДЕЛ(x, 2) → ¬ДЕЛ(x, 13)) ∨ (x + A ≥ 1000)"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi/01.webp",
+      "width": 750,
+      "height": 441,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "1. Шаблон для второго типа"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(3x+y>48)∨(x>y)∨(4x+y<A)"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi/02.webp",
+      "width": 750,
+      "height": 306,
+      "alt": "-2"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "3. Шаблон для третьего типа"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "x&25 ≠ 0 → (x&17 = 0 → x&А ≠ 0)"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi/03.webp",
+      "width": 750,
+      "height": 441,
+      "alt": "-3"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "4. Шаблон для четвертого типа"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "((x  принадлежит  A) → ¬(x  принадлежит  P)) → ((x  принадлежит  A) → (x  принадлежит Q))"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi/04.webp",
+      "width": 750,
+      "height": 636,
+      "alt": "-4"
+    }
+  ],
+  "originalTitle": "Шпаргалка ЕГЭ | Задание #ЕГЭ15 #шпора"
+}

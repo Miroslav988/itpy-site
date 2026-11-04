@@ -1,0 +1,403 @@
+{
+  "slug": "zadanie-16-ege-razbor-zadachi-10718",
+  "title": "Задание 16 ЕГЭ: разбор задачи 10718",
+  "description": "Условие: КЕГЭ № 10718 (Уровень: Средний) • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-03-18",
+  "cover": {
+    "src": "/blog/zadanie-16-ege-razbor-zadachi-10718/01.webp",
+    "width": 530,
+    "height": 440
+  },
+  "source": "https://dzen.ru/a/Ze841ku6cWxEtiiR",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-16-ege-razbor-zadachi-10718/01.webp",
+      "width": 530,
+      "height": 440,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "КЕГЭ",
+          "href": "https://kompege.ru/task"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "№ 10718 (Уровень: Средний)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/388"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Алгоритм вычисления значения функции F(n), где n – натуральное число, задан следующими соотношениями:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "F(n) = 2 при n < 3;"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "F(n)= 2 × F(n−2) − F(n−1) + 2, если n > 2 и при этом n чётно;"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "F(n) = 2 × F(n−1) + F(n−2) − 2, если n > 2 и при этом n нечётно."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Чему равно значение функции F(170)?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-16-ege-razbor-zadachi-10718/02.webp",
+      "width": 750,
+      "height": 649,
+      "alt": "-2"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к коду решения"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from functools import *",
+            "bold": true
+          },
+          {
+            "text": " - Подключение модуля "
+          },
+          {
+            "text": "functools",
+            "bold": true
+          },
+          {
+            "text": " для использования декоратора"
+          },
+          {
+            "text": " lru_cache",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "@lru_cache(None) ",
+            "bold": true
+          },
+          {
+            "text": "- Применение декоратора "
+          },
+          {
+            "text": "lru_cache",
+            "bold": true
+          },
+          {
+            "text": " для кэширования результатов функции "
+          },
+          {
+            "text": "f",
+            "bold": true
+          },
+          {
+            "text": " и установки размера кэша как неограниченный."
+          }
+        ],
+        [
+          {
+            "text": "def f(n):",
+            "bold": true
+          },
+          {
+            "text": " - Объявление функции "
+          },
+          {
+            "text": "f",
+            "bold": true
+          },
+          {
+            "text": " с аргументом "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if n < 3",
+            "bold": true
+          },
+          {
+            "text": ": -"
+          },
+          {
+            "text": " Если значение n меньше 3",
+            "bold": true
+          },
+          {
+            "text": ", выполнить следующий блок кода."
+          }
+        ],
+        [
+          {
+            "text": "return 2",
+            "bold": true
+          },
+          {
+            "text": " - Вернуть значение "
+          },
+          {
+            "text": "2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if n > 2 and n % 2 == 0: ",
+            "bold": true
+          },
+          {
+            "text": "- Если значение "
+          },
+          {
+            "text": "n больше 2",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "остаток от деления на 2 равен 0",
+            "bold": true
+          },
+          {
+            "text": ", выполнить следующий блок кода."
+          }
+        ],
+        [
+          {
+            "text": "return 2 * f(n-2) - f(n-1) + 2",
+            "bold": true
+          },
+          {
+            "text": " - Вернуть результат выражения "
+          },
+          {
+            "text": "2 * f(n-2) - f(n-1) + 2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if n > 2 and n % 2 != 0: ",
+            "bold": true
+          },
+          {
+            "text": "- Если значение "
+          },
+          {
+            "text": "n больше 2",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "остаток от деления на",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "2 не равен 0",
+            "bold": true
+          },
+          {
+            "text": ", выполнить следующий блок кода."
+          }
+        ],
+        [
+          {
+            "text": "return 2 * f(n-1) + f(n-2) - 2",
+            "bold": true
+          },
+          {
+            "text": " - Вернуть результат выражения "
+          },
+          {
+            "text": "2 * f(n-1) + f(n-2) - 2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(f(170)) ",
+            "bold": true
+          },
+          {
+            "text": "- Вывести результат вызова функции "
+          },
+          {
+            "text": "f",
+            "bold": true
+          },
+          {
+            "text": " с"
+          },
+          {
+            "text": " аргументом 170",
+            "bold": true
+          },
+          {
+            "text": " на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В данном коде @lru_cache(None) используется для кэширования результатов функции f(n) с помощью декоратора lru_cache из модуля functools."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Аргумент None указывает, что размер кэша неограничен."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Кэширование функции позволяет избежать повторных вычислений для одних и тех же входных данных."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При первом вызове функции f(n) результат сохраняется в кэше. При последующих вызовах функции с тем же аргументом, результат будет возвращен из кэша, вместо повторного выполнения вычислений."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таким образом, в данном коде использование @lru_cache(None) позволяет сэкономить время на вычислениях, так как функция f(n) будет выполняться только один раз для каждого уникального аргумента."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 3596910688800"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-16-ege-razbor-zadachi-10718/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 10718 ЕГЭ по информатике #16",
+  "task": 16
+}

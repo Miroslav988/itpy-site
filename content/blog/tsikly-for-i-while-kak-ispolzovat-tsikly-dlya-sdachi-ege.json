@@ -1,0 +1,428 @@
+{
+  "slug": "tsikly-for-i-while-kak-ispolzovat-tsikly-dlya-sdachi-ege",
+  "title": "Циклы for и while, как использовать циклы для сдачи ЕГЭ",
+  "description": "Вот пример использования цикла while для вывода чисел от 1 до 5:",
+  "date": "2023-08-20",
+  "cover": {
+    "src": "/blog/tsikly-for-i-while-kak-ispolzovat-tsikly-dlya-sdachi-ege/01.webp",
+    "width": 530,
+    "height": 220
+  },
+  "source": "https://dzen.ru/a/ZNI0LPE1AzJV6S0L",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/tsikly-for-i-while-kak-ispolzovat-tsikly-dlya-sdachi-ege/01.webp",
+      "width": 530,
+      "height": 220,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Цикл for обычно используется для пробежки по элементам в списке, кортеже или другой последовательности."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вот пример использования цикла "
+        },
+        {
+          "text": "for",
+          "bold": true
+        },
+        {
+          "text": " для вывода каждого элемента списка:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/tsikly-for-i-while-kak-ispolzovat-tsikly-dlya-sdachi-ege/02.webp",
+      "width": 650,
+      "height": 270,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "my_list = [1, 2, 3, 4, 5]\nfor number in my_list:\n    print(number, end=' ')"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этом примере мы создаем список "
+        },
+        {
+          "text": "my_list ",
+          "bold": true
+        },
+        {
+          "text": "и затем используем цикл"
+        },
+        {
+          "text": " for ",
+          "bold": true
+        },
+        {
+          "text": "для вывода каждого элемента списка на отдельной строке.  В цикле"
+        },
+        {
+          "text": " for",
+          "bold": true
+        },
+        {
+          "text": " мы используем переменную "
+        },
+        {
+          "text": "number",
+          "bold": true
+        },
+        {
+          "text": ", которая принимает значение каждого элемента списка на каждой итерации."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Цикл for можно использовать для пробежки последовательности через индексы её элементов."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вот пример такого использования цикла "
+        },
+        {
+          "text": "for ",
+          "bold": true
+        },
+        {
+          "text": "(работа через индексы):"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/tsikly-for-i-while-kak-ispolzovat-tsikly-dlya-sdachi-ege/03.webp",
+      "width": 650,
+      "height": 270,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "my_list = [1, 2, 3, 4, 5] \nfor i in range(0, len(my_list)):     \n   print(my_list[i], end=' ')"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этом примере мы создаем список значений "
+        },
+        {
+          "text": "1",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "2",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "3",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "4",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "5",
+          "bold": true
+        },
+        {
+          "text": " и присваиваем его переменной "
+        },
+        {
+          "text": "my_list",
+          "bold": true
+        },
+        {
+          "text": ".   Используем цикл "
+        },
+        {
+          "text": "for",
+          "bold": true
+        },
+        {
+          "text": ", чтобы перебрать все числа от "
+        },
+        {
+          "text": "0",
+          "bold": true
+        },
+        {
+          "text": " до длины списка "
+        },
+        {
+          "text": "my_list",
+          "bold": true
+        },
+        {
+          "text": " и присваиваем каждому числу значение переменной "
+        },
+        {
+          "text": "i",
+          "bold": true
+        },
+        {
+          "text": ".  После чего выводим на экран значение элемента списка "
+        },
+        {
+          "text": "my_list",
+          "bold": true
+        },
+        {
+          "text": ", соответствующего значению переменной"
+        },
+        {
+          "text": " i",
+          "bold": true
+        },
+        {
+          "text": " и добавляем пробел в конце."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Цикл while, с другой стороны, выполняет блок кода до тех пор, пока условие истинно."
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вот пример использования цикла "
+        },
+        {
+          "text": "while",
+          "bold": true
+        },
+        {
+          "text": " для вывода чисел от 1 до 5:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/tsikly-for-i-while-kak-ispolzovat-tsikly-dlya-sdachi-ege/04.webp",
+      "width": 650,
+      "height": 297,
+      "alt": "-4"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "number = 1 \nwhile number <= 5:     \n    print(number, end=' ')     \n    number += 1  \n\n# результат: 1 2 3 4 5"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этом примере мы создаем переменную "
+        },
+        {
+          "text": "number",
+          "bold": true
+        },
+        {
+          "text": " и затем используем цикл while, чтобы распечатать числа от "
+        },
+        {
+          "text": "1",
+          "bold": true
+        },
+        {
+          "text": " до "
+        },
+        {
+          "text": "5",
+          "bold": true
+        },
+        {
+          "text": ".  В цикле"
+        },
+        {
+          "text": " while",
+          "bold": true
+        },
+        {
+          "text": " мы используем условие "
+        },
+        {
+          "text": "number <= 5",
+          "bold": true
+        },
+        {
+          "text": ", которое означает, что цикл будет продолжаться до тех пор, пока "
+        },
+        {
+          "text": "number ",
+          "bold": true
+        },
+        {
+          "text": "меньше или равно "
+        },
+        {
+          "text": "5",
+          "bold": true
+        },
+        {
+          "text": ".  На каждой итерации мы увеличиваем "
+        },
+        {
+          "text": "number",
+          "bold": true
+        },
+        {
+          "text": " на "
+        },
+        {
+          "text": "1",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Но в чем же все таки заключаются отличия for от while и наоборот?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основным отличием между циклами "
+        },
+        {
+          "text": "for",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "while",
+          "bold": true
+        },
+        {
+          "text": " является то, что для цикла "
+        },
+        {
+          "text": "for",
+          "bold": true
+        },
+        {
+          "text": " требуется "
+        },
+        {
+          "text": "последовательность",
+          "bold": true
+        },
+        {
+          "text": ",  которую нужно перебрать, тогда как цикл"
+        },
+        {
+          "text": " while ",
+          "bold": true
+        },
+        {
+          "text": "требуется "
+        },
+        {
+          "text": "условие",
+          "bold": true
+        },
+        {
+          "text": ", которое должно быть выполнено для выполнения блока кода."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Если вам нужно выполнить операции определенное количество раз, то лучше использовать цикл "
+        },
+        {
+          "text": "for",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Если вы хотите выполнить операции до тех пор, пока не будет выполнено определенное условие, то лучше использовать цикл "
+        },
+        {
+          "text": "while",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/tsikly-for-i-while-kak-ispolzovat-tsikly-dlya-sdachi-ege/05.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6  ",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "💡 Циклы for и while, как использовать циклы для сдачи ЕГЭ #tpy"
+}

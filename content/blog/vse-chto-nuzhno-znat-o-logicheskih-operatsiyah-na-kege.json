@@ -1,0 +1,1399 @@
+{
+  "slug": "vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege",
+  "title": "Все, что нужно знать о логических операциях на КЕГЭ",
+  "description": "• Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-10-14",
+  "cover": {
+    "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/01.webp",
+    "width": 530,
+    "height": 220
+  },
+  "source": "https://dzen.ru/a/ZRf3aHavM0Y2QI51",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/01.webp",
+      "width": 530,
+      "height": 220,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Какие существуют операции?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Начать статью хотелось бы с перечисления этих самых логических операций."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Всего, для подготовки к "
+        },
+        {
+          "text": "КЕГЭ",
+          "bold": true
+        },
+        {
+          "text": " следует знать 5 операций:"
+        },
+        {
+          "text": "Конъюнкция",
+          "bold": true
+        },
+        {
+          "text": " или логическое "
+        },
+        {
+          "text": "умножение",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Дизъюнкция",
+          "bold": true
+        },
+        {
+          "text": " или логическое "
+        },
+        {
+          "text": "сложение",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Инверсия",
+          "bold": true
+        },
+        {
+          "text": " или логическое "
+        },
+        {
+          "text": "отрицание",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Импликация",
+          "bold": true
+        },
+        {
+          "text": " или логическое "
+        },
+        {
+          "text": "следование",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Эквивалентность",
+          "bold": true
+        },
+        {
+          "text": " или логическое "
+        },
+        {
+          "text": "тождество",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Далее, продолжим по списку."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Как и в любом изучении следует начать с определения, а дальше разбираться с практической частью, поэтому мы так и поступим для общего удобства :)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Конъюнкция или логическое умножение"
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/02.webp",
+      "width": 192,
+      "height": 136,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Конъю́нкция",
+          "bold": true
+        },
+        {
+          "text": " (от лат. "
+        },
+        {
+          "text": "conjunctio",
+          "italic": true
+        },
+        {
+          "text": " — «союз, связь») — логическая операция, по смыслу максимально приближенная к союзу «и». Синонимы: "
+        },
+        {
+          "text": "логи́ческое «И»",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "логи́ческое умноже́ние",
+          "bold": true
+        },
+        {
+          "text": ", иногда просто "
+        },
+        {
+          "text": "«И»",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Конъюнкция может быть "
+        },
+        {
+          "text": "бинарной",
+          "italic": true
+        },
+        {
+          "text": " операцией (т. e. иметь два операнда), "
+        },
+        {
+          "text": "тернарной",
+          "italic": true
+        },
+        {
+          "text": " операцией (т. e. иметь три операнда), или "
+        },
+        {
+          "text": "n-арной",
+          "italic": true
+        },
+        {
+          "text": " операцией (т. e. иметь "
+        },
+        {
+          "text": "n",
+          "italic": true
+        },
+        {
+          "text": " операндов)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Наиболее "
+        },
+        {
+          "text": "часто",
+          "bold": true
+        },
+        {
+          "text": " встречается следующее обозначение:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "a /\\ b",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "\n\nНо в"
+        },
+        {
+          "text": " Python",
+          "bold": true
+        },
+        {
+          "text": " мы используем другое обозначение:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "a and b",
+          "italic": true,
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Из заголовка пункта становится понятно, что в целом-то, "
+        },
+        {
+          "text": "конъюнкция",
+          "bold": true
+        },
+        {
+          "text": " представляет из себя ни что иное, как "
+        },
+        {
+          "text": "умножение",
+          "bold": true
+        },
+        {
+          "text": " одного операнда, на другой операнд."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Дизъюнкция или логическое сложение"
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/03.webp",
+      "width": 196,
+      "height": 146,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Дизъю́нкция",
+          "bold": true
+        },
+        {
+          "text": " (от лат. "
+        },
+        {
+          "text": "disjunctio",
+          "italic": true
+        },
+        {
+          "text": " — «разобщение»), "
+        },
+        {
+          "text": "логи́ческое сложе́ние",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "логи́ческое ИЛИ",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "включа́ющее ИЛИ",
+          "bold": true
+        },
+        {
+          "text": "; иногда просто "
+        },
+        {
+          "text": "ИЛИ",
+          "bold": true
+        },
+        {
+          "text": " — логическая операция, по своему применению максимально приближённая к союзу "
+        },
+        {
+          "text": "«или»",
+          "italic": true
+        },
+        {
+          "text": " в смысле "
+        },
+        {
+          "text": "«или то, или это, или оба сразу»",
+          "italic": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Дизъюнкция может быть операцией как бинарной (имеющей два операнда), так и "
+        },
+        {
+          "text": "n-арной",
+          "italic": true
+        },
+        {
+          "text": " (имеющей "
+        },
+        {
+          "text": "n",
+          "italic": true
+        },
+        {
+          "text": " операндов) для произвольного "
+        },
+        {
+          "text": "n.",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Запись может быть "
+        },
+        {
+          "text": "префиксной",
+          "italic": true
+        },
+        {
+          "text": " — знак операции стоит перед операндами (польская запись, подробнее здесь ⇒ "
+        },
+        {
+          "text": "[Польская запись]",
+          "href": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C"
+        },
+        {
+          "text": "), "
+        },
+        {
+          "text": "инфиксной",
+          "italic": true
+        },
+        {
+          "text": " — знак операции стоит между операндами или "
+        },
+        {
+          "text": "постфиксной",
+          "italic": true
+        },
+        {
+          "text": " — знак операции стоит после операндов. При числе операндов более двух префиксная и постфиксная записи экономичнее."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Наиболее "
+        },
+        {
+          "text": "частое",
+          "bold": true
+        },
+        {
+          "text": " обозначение:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "a \\/ b",
+          "italic": true,
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "a or b",
+          "italic": true,
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "По аналогии с "
+        },
+        {
+          "text": "конъюнкцией",
+          "bold": true
+        },
+        {
+          "text": ", получаем "
+        },
+        {
+          "text": "узкое",
+          "bold": true
+        },
+        {
+          "text": " представление о том, что такое "
+        },
+        {
+          "text": "дизъюнкция",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Инверсия или логическое отрицание"
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/04.webp",
+      "width": 193,
+      "height": 193,
+      "alt": "-4"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Отрица́ние",
+          "bold": true
+        },
+        {
+          "text": " ("
+        },
+        {
+          "text": "инве́рсия",
+          "bold": true
+        },
+        {
+          "text": ", от лат. "
+        },
+        {
+          "text": "inversio",
+          "italic": true
+        },
+        {
+          "text": " — "
+        },
+        {
+          "text": "переворот",
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "логи́ческое «НЕ»",
+          "bold": true
+        },
+        {
+          "text": ") в логике — унарная операция над суждениями, результатом которой является суждение, «противоположное» исходному."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Тавтология двойной инверсии в математической логике - это выражение, которое всегда истинно независимо от значений переменных. Оно имеет вид \""
+        },
+        {
+          "text": "¬¬A",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "\", где \""
+        },
+        {
+          "text": "A",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "\" - некоторое высказывание. То есть, если \""
+        },
+        {
+          "text": "A",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "\" истинно, то \""
+        },
+        {
+          "text": "¬A",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "\" ложно, и наоборот. А двойная инверсия \""
+        },
+        {
+          "text": "¬¬A",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "\" снова делает выражение истинным."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Обозначается знаком "
+        },
+        {
+          "text": "¬",
+          "bold": true
+        },
+        {
+          "text": " перед или чертой "
+        },
+        {
+          "text": "—",
+          "bold": true
+        },
+        {
+          "text": " над суждением."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "not(a)",
+          "italic": true,
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Импликация или логическое следование"
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/05.webp",
+      "width": 207,
+      "height": 153,
+      "alt": "-5"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Имплика́ция",
+          "bold": true
+        },
+        {
+          "text": " (от лат. "
+        },
+        {
+          "text": "implicatio",
+          "italic": true
+        },
+        {
+          "text": " — «связь; сплетение») — бинарная логическая связка, по своему применению приближенная к союзам "
+        },
+        {
+          "text": "«",
+          "bold": true
+        },
+        {
+          "text": "если",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "…, ",
+          "bold": true
+        },
+        {
+          "text": "то",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "…»",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Суждение, выражаемое "
+        },
+        {
+          "text": "импликацией",
+          "bold": true
+        },
+        {
+          "text": ", выражается также следующими способами:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "a",
+            "italic": true,
+            "bold": true
+          },
+          {
+            "text": " ("
+          },
+          {
+            "text": "посылка)",
+            "italic": true
+          },
+          {
+            "text": " является условием, достаточным для выполнения "
+          },
+          {
+            "text": "b",
+            "italic": true,
+            "bold": true
+          },
+          {
+            "text": " (следствия)",
+            "italic": true
+          },
+          {
+            "text": ":"
+          }
+        ],
+        [
+          {
+            "text": "b",
+            "italic": true,
+            "bold": true
+          },
+          {
+            "text": " (следствие)",
+            "italic": true
+          },
+          {
+            "text": " является условием, необходимым для истинности "
+          },
+          {
+            "text": "a",
+            "italic": true,
+            "bold": true
+          },
+          {
+            "text": " (посылки)",
+            "italic": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Импликация играет очень важную роль в умозаключениях. С её помощью формулируются определения различных понятий, теоремы, научные законы."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При учёте смыслового содержания высказываний импликация подразумевает причинную связь между посылкой и заключением."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Импликация",
+          "bold": true
+        },
+        {
+          "text": " записывается как "
+        },
+        {
+          "text": "a ⇒ b",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "; применяются также стрелки другой формы и направленные в другую сторону, но всегда указывающие на следствие. А в "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": " запись выглядит следующим образом: "
+        },
+        {
+          "text": "a <= b",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Эквиваленция или логическое тождество"
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/06.webp",
+      "width": 191,
+      "height": 126,
+      "alt": "-6"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Логическая равнозначность или эквивале́нция",
+          "bold": true
+        },
+        {
+          "text": " (или "
+        },
+        {
+          "text": "эквивале́нтность",
+          "bold": true
+        },
+        {
+          "text": ") — это логическое выражение, которое является истинным тогда, когда оба простых логических выражения имеют одинаковую истинность."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Специфика союза “эквиваленция” состоит в том, что эквивалентное суждение признается истинным, когда оба входящие в ее состав исходные суждения имеют одинаковое значение истинности: либо они одновременно истинные, либо одновременно ложные."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Логический смысл высказывания вида "
+        },
+        {
+          "text": "A↔Β",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " равносилен смыслу выражения "
+        },
+        {
+          "text": "(A→Β)&(A←Β)",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ". Данные выражения принимают значение «истина» в одних и тех же случаях: 1) когда "
+        },
+        {
+          "text": "А",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "В",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " истинны, 2) когда "
+        },
+        {
+          "text": "А",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "В",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ложны. Таким образом, функция "
+        },
+        {
+          "text": "эквиваленции",
+          "bold": true
+        },
+        {
+          "text": " выразима посредством функций "
+        },
+        {
+          "text": "конъюнкции",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "импликации",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Логическую эквивалентность "
+        },
+        {
+          "text": "a",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "b",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " иногда обозначают как "
+        },
+        {
+          "text": "a≡b",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "a::b",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "Eab",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ", или "
+        },
+        {
+          "text": "a⟺b",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ", в зависимости от используемой нотации. В "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "a==b",
+          "italic": true,
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Теперь стоит поговорить про так называемые "
+        },
+        {
+          "text": "таблицы истинности",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Таблицы истинности"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таблица истинности",
+          "bold": true
+        },
+        {
+          "text": " — таблица, описывающая логическую функцию."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Под «логической функцией» в данном случае понимается функция, у которой значения переменных (параметров функции) и значение самой функции выражают логическую истинность. Например, в двузначной логике они могут принимать значения «истина» либо «ложь» (1 либо 0)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Табличное задание функций встречается не только в логике, но и в логических функциях. Таблицы оказались довольно удобными, и с начала XX века за ними закрепилось это специальное название. Особенно часто таблицы истинности применяются в "
+        },
+        {
+          "text": "булевой алгебре",
+          "href": "https://ru.wikipedia.org/wiki/%D0%91%D1%83%D0%BB%D0%B5%D0%B2%D0%B0_%D0%B0%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0"
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вот несколько примеров таблиц описывающих операции, про которые мы узнали выше:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. Конъюнкция ",
+          "bold": true
+        },
+        {
+          "text": "Бинарная:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/07.webp",
+      "width": 192,
+      "height": 265,
+      "alt": "-7"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Тренарная:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/08.webp",
+      "width": 191,
+      "height": 315,
+      "alt": "-8"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. Дизъюнкция ",
+          "bold": true
+        },
+        {
+          "text": "Бинарная:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/09.webp",
+      "width": 188,
+      "height": 156,
+      "alt": "-9"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Тренарная:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/10.webp",
+      "width": 194,
+      "height": 318,
+      "alt": "-10"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. Инверсия",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/11.webp",
+      "width": 190,
+      "height": 280,
+      "alt": "-11"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. Импликация",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Импликация как булева функция "
+        },
+        {
+          "text": "ложна ",
+          "italic": true
+        },
+        {
+          "text": "лишь тогда, когда "
+        },
+        {
+          "text": "a",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " (посылка) истинна, а  "
+        },
+        {
+          "text": "b ",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "(следствие) ложно. Иными словами, операция "
+        },
+        {
+          "text": "A→B ",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "— это сокращённая запись выражения "
+        },
+        {
+          "text": "¬A∨B",
+          "italic": true,
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/12.webp",
+      "width": 191,
+      "height": 173,
+      "alt": "-12"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. ",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "Эквиваленция",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/13.webp",
+      "width": 189,
+      "height": 276,
+      "alt": "-13"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Правила построения таблицы истинности"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При составлении таблицы истинности важно учитывать следующий порядок выполнения"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Инверсия"
+          }
+        ],
+        [
+          {
+            "text": "Конъюнкция"
+          }
+        ],
+        [
+          {
+            "text": "Дизъюнкция"
+          }
+        ],
+        [
+          {
+            "text": "Импликация"
+          }
+        ],
+        [
+          {
+            "text": "Эквиваленция"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Далее требуется определить количество столбцов и строк. "
+        },
+        {
+          "text": "Строки",
+          "bold": true
+        },
+        {
+          "text": " определяются по формуле "
+        },
+        {
+          "text": "2^n + 1",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ", а количество "
+        },
+        {
+          "text": "столбцов",
+          "bold": true
+        },
+        {
+          "text": " по формуле — "
+        },
+        {
+          "text": "количество переменных + количество операций (учитывая приоритет)",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ". Только после определения всего этого, можно будет перейти к заполнению таблицы"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Так, например, для "
+        },
+        {
+          "text": "бинарного",
+          "bold": true
+        },
+        {
+          "text": " выражения — "
+        },
+        {
+          "text": "(A \\/ B) /\\ (¬A \\/ ¬B) /\\ (A \\/ ¬B)",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ", получится такая таблица:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/14.webp",
+      "width": 408,
+      "height": 111,
+      "alt": "-14"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/15.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy \n",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    },
+    {
+      "type": "image",
+      "src": "/blog/vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege/16.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "-16"
+    }
+  ],
+  "originalTitle": "💡Все, что нужно знать о логических операциях на КЕГЭ #tpy"
+}

@@ -1,0 +1,508 @@
+{
+  "slug": "zadanie-6-ege-razbor-zadachi-13843",
+  "title": "Задание 6 ЕГЭ: разбор задачи 13843",
+  "description": "Условие: № 13843 (Уровень: Базовый) • Статья подготовлена командой itpy • Полный разбор задачи в Telegram",
+  "date": "2024-05-09",
+  "cover": {
+    "src": "/blog/zadanie-6-ege-razbor-zadachi-13843/01.webp",
+    "width": 420,
+    "height": 530
+  },
+  "source": "https://dzen.ru/a/ZjzTuJWqITLyeUXL",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-13843/01.webp",
+      "width": 420,
+      "height": 530,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие: № 13843 (Уровень: Базовый)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Telegram",
+          "href": "https://t.me/informatika_kege_itpy/411"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Исполнитель Черепаха действует на плоскости с декартовой системой координат. В начальный момент Черепаха находится в начале координат, её голова направлена вдоль положительного направления оси ординат, хвост опущен. При опущенном хвосте Черепаха оставляет на поле след в виде линии. В каждый конкретный момент известно положение исполнителя и направление его движения."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Черепахе был дан для исполнения следующий алгоритм:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Повтори 5 [Вправо 45 Вперед 10 Вправо 45]",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Повтори 6 [Вперед 20 Вправо 90]",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сколько точек с целочисленными координатами находится внутри области объединения полученных контуров? Точки на линиях контуров учитывать не следует."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-13843/02.webp",
+      "width": 558,
+      "height": 750,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import turtle as t ",
+            "bold": true
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "импорт модуля turtle",
+            "bold": true
+          },
+          {
+            "text": " под псевдонимом "
+          },
+          {
+            "text": "t",
+            "bold": true
+          },
+          {
+            "text": " для работы с графикой."
+          }
+        ],
+        [
+          {
+            "text": "t.tracer(0)",
+            "bold": true
+          },
+          {
+            "text": " - "
+          },
+          {
+            "text": "отключение анимации",
+            "bold": true
+          },
+          {
+            "text": " для "
+          },
+          {
+            "text": "ускорения отрисовки",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "t.left(90) ",
+            "bold": true
+          },
+          {
+            "text": "- поворот черепахи на "
+          },
+          {
+            "text": "90 градусов влево",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "m = 20",
+            "bold": true
+          },
+          {
+            "text": " - задание переменной "
+          },
+          {
+            "text": "m",
+            "bold": true
+          },
+          {
+            "text": " со значением "
+          },
+          {
+            "text": "20.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "t.up() ",
+            "bold": true
+          },
+          {
+            "text": "- поднятие пера черепахи."
+          }
+        ],
+        [
+          {
+            "text": "Цикл "
+          },
+          {
+            "text": "for _ in range(10):",
+            "bold": true
+          },
+          {
+            "text": " для отрисовки рисунка:"
+          }
+        ],
+        [
+          {
+            "text": "t.right(120) -",
+            "bold": true
+          },
+          {
+            "text": " поворот на "
+          },
+          {
+            "text": "120 градусов вправо",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "t.forward(12 * m) ",
+            "bold": true
+          },
+          {
+            "text": "- перемещение вперед на 12 единиц, умноженных на "
+          },
+          {
+            "text": "m",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "t.down() ",
+            "bold": true
+          },
+          {
+            "text": "- опускание пера черепахи для рисования."
+          }
+        ],
+        [
+          {
+            "text": "Цикл for _ in range(7):",
+            "bold": true
+          },
+          {
+            "text": " для отрисовки прямоугольника:"
+          }
+        ],
+        [
+          {
+            "text": "t.forward(7 * m) ",
+            "bold": true
+          },
+          {
+            "text": "- передвижение "
+          },
+          {
+            "text": "вперед на 7 единиц",
+            "bold": true
+          },
+          {
+            "text": ", умноженных на m."
+          }
+        ],
+        [
+          {
+            "text": "t.right(90) ",
+            "bold": true
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "поворот на 90 градусов вправо",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Цикл for _ in range(5): ",
+            "bold": true
+          },
+          {
+            "text": "для отрисовки "
+          },
+          {
+            "text": "шестиугольника",
+            "bold": true
+          },
+          {
+            "text": ":"
+          }
+        ],
+        [
+          {
+            "text": "t.right(60) ",
+            "bold": true
+          },
+          {
+            "text": "- поворот на "
+          },
+          {
+            "text": "60 градусов вправо",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "t.forward(20 * m) ",
+            "bold": true
+          },
+          {
+            "text": "- перемещение вперед на "
+          },
+          {
+            "text": "20 единиц",
+            "bold": true
+          },
+          {
+            "text": ", умноженных на "
+          },
+          {
+            "text": "m",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "t.right(30)",
+            "bold": true
+          },
+          {
+            "text": " - поворот "
+          },
+          {
+            "text": "на 30 градусов вправо",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "t.up() ",
+            "bold": true
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "поднятие пера",
+            "bold": true
+          },
+          {
+            "text": " черепахи."
+          }
+        ],
+        [
+          {
+            "text": "Вложенные циклы "
+          },
+          {
+            "text": "for x in range(-30, 30) ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "for y in range(-30, 30)",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "для отображения",
+            "bold": true
+          },
+          {
+            "text": " красных"
+          },
+          {
+            "text": " точек",
+            "bold": true
+          },
+          {
+            "text": ":"
+          }
+        ],
+        [
+          {
+            "text": "t.goto(x * m, y * m) ",
+            "bold": true
+          },
+          {
+            "text": "- перемещение черепахи в точку с координатами (x"
+          },
+          {
+            "text": "m, y",
+            "italic": true
+          },
+          {
+            "text": "m)."
+          }
+        ],
+        [
+          {
+            "text": "t.dot(2, 'red') ",
+            "bold": true
+          },
+          {
+            "text": "- отображение точки радиусом 2 и"
+          },
+          {
+            "text": " красного",
+            "bold": true
+          },
+          {
+            "text": " цвета."
+          }
+        ],
+        [
+          {
+            "text": "t.done() -",
+            "bold": true
+          },
+          {
+            "text": " завершение работы с модулем "
+          },
+          {
+            "text": "turtle",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Считаем точки в пересечении двух фигур"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-13843/03.webp",
+      "width": 750,
+      "height": 587,
+      "alt": "-3"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 11"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-6-ege-razbor-zadachi-13843/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 13843 ЕГЭ по информатике #6",
+  "task": 6
+}

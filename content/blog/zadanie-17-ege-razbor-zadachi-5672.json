@@ -1,0 +1,288 @@
+{
+  "slug": "zadanie-17-ege-razbor-zadachi-5672",
+  "title": "Задание 17 ЕГЭ: разбор задачи 5672",
+  "description": "(М. Ишимов) В файле содержится последовательность натуральных чисел. Элементы последовательности могут принимать целые значения от 1 до 10 000 включительно. Определите количество…",
+  "date": "2023-08-08",
+  "cover": {
+    "src": "/blog/zadanie-17-ege-razbor-zadachi-5672/01.webp",
+    "width": 520,
+    "height": 250
+  },
+  "source": "https://dzen.ru/a/ZNInxnCgmyQBtouK",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-5672/01.webp",
+      "width": 520,
+      "height": 250,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 5672 Вариант 09.01.23(Уровень: Базовый)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(М. Ишимов)",
+          "bold": true
+        },
+        {
+          "text": " В файле содержится последовательность натуральных чисел. Элементы последовательности могут принимать целые значения от 1 до 10 000 включительно. Определите количество пар последовательности, в которых оба числа не меньше всех чисел последовательности, которые кратны 73. Гарантируется, что такой элемент в последовательности есть. В ответе запишите количество найденных пар, затем максимальную из сумм элементов таких пар. В данной задаче под парой подразумевается два идущих подряд элемента последовательности."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "17.txt",
+          "href": "https://kompege.ru/files/Kpqv2sS5I.txt"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-5672/02.webp",
+      "width": 750,
+      "height": 375,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "M = [int(i) for i in open('17.txt')]\nA = [i for i in M if i % 73 == 0 and i > 0]\ncount = 0\nmaxi = 0\nfor i in range(0, len(M)-1):\n    if all(M[i] >= x for x in A) and all(M[i+1] >= x for x in A):\n        count += 1\n        maxi = max(maxi, M[i] + M[i+1])\nprint(count, maxi)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "M = [int(i) for i in open('17.txt')] ",
+            "italic": true
+          },
+          {
+            "text": "- Открываем файл "
+          },
+          {
+            "text": "17.txt",
+            "bold": true
+          },
+          {
+            "text": ", читаем его содержимое, и преобразуем каждую строку в целое число"
+          }
+        ],
+        [
+          {
+            "text": "A = [i for i in M if i % 73 == 0 and i > 0]",
+            "italic": true
+          },
+          {
+            "text": " - Создаем список A, который содержит все элементы списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", которые кратны 73 и больше 0 (иначе "
+          },
+          {
+            "text": "0 % 73 == 0",
+            "bold": true
+          },
+          {
+            "text": ", что для нас неприемлемо)"
+          }
+        ],
+        [
+          {
+            "text": "count = 0",
+            "italic": true
+          },
+          {
+            "text": " - Создаем переменную "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": ", которая будет хранить кол-во подходящих строк"
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "italic": true
+          },
+          {
+            "text": " - Создаем переменную "
+          },
+          {
+            "text": "maxi,",
+            "bold": true
+          },
+          {
+            "text": " которая будет хранить максимальную сумму элементов пары"
+          }
+        ],
+        [
+          {
+            "text": "for i in range(0, len(M)-1): ",
+            "italic": true
+          },
+          {
+            "text": "- Используем цикл"
+          },
+          {
+            "text": " for",
+            "bold": true
+          },
+          {
+            "text": ", чтобы перебрать все элементы списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", кроме последнего элемента (чтобы не выйти из диапазона из-за "
+          },
+          {
+            "text": "i+1",
+            "bold": true
+          },
+          {
+            "text": ")"
+          }
+        ],
+        [
+          {
+            "text": "if all(M[i] >= x for x in A) and all(M[i+1] >= x for x in A): ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, каждый элемент в списке "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": ", должен быть меньше или равен "
+          },
+          {
+            "text": "M[i]",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "M[i+1]",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "count += 1",
+            "italic": true
+          },
+          {
+            "text": " - Увеличиваем переменную count на 1, если условие истинно"
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(maxi, M[i] + M[i+1]) ",
+            "italic": true
+          },
+          {
+            "text": "- Находим максимальное значение суммы  "
+          },
+          {
+            "text": "M[i] + M[i+1]",
+            "bold": true
+          },
+          {
+            "text": " с помощью функции "
+          },
+          {
+            "text": "max()",
+            "bold": true
+          },
+          {
+            "text": ", перезаписываем ее саму в себя"
+          }
+        ],
+        [
+          {
+            "text": "print(count, maxi) ",
+            "italic": true
+          },
+          {
+            "text": "- Выводим результат на экран – переменные "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "maxi",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 161 19678"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-17-ege-razbor-zadachi-5672/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 5672 ЕГЭ по информатике #17",
+  "task": 17
+}

@@ -1,0 +1,221 @@
+{
+  "slug": "zadanie-19-ege-razbor-zadachi-5664",
+  "title": "Задание 19 ЕГЭ: разбор задачи 5664",
+  "description": "Условие: № 5664 Вариант 09.01.23 (Уровень: Базовый) • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2023-12-20",
+  "cover": {
+    "src": "/blog/zadanie-19-ege-razbor-zadachi-5664/01.webp",
+    "width": 530,
+    "height": 270
+  },
+  "source": "https://dzen.ru/a/ZYH_mTluhC3EoVDy",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-19-ege-razbor-zadachi-5664/01.webp",
+      "width": 530,
+      "height": 270,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "№ 5664",
+          "href": "https://kompege.ru"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Вариант 09.01.23 (Уровень: Базовый)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n • "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/5664-9-27b4fdd450dc4b82926f9c9a376bbc7c?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(А. Игнатюк)",
+          "bold": true
+        },
+        {
+          "text": " В каждой строке электронной таблицы содержится 3 натуральных числа. Необходимо найти количество строк, где хотя бы одно любое произведение двух чисел оканчивается на 4."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Файлы к заданию: "
+        },
+        {
+          "text": "9.xlsx",
+          "href": "https://kompege.ru/files/Kk-uMeA9h.xlsx"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": []
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-19-ege-razbor-zadachi-5664/02.webp",
+      "width": 750,
+      "height": 455,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к решению задачи:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import permutations  - Импорт функции "
+          },
+          {
+            "text": "permutations",
+            "bold": true
+          },
+          {
+            "text": " из модуля itertools для генерации перестановок."
+          }
+        ],
+        [
+          {
+            "text": "count = 0 - Инициализация счетчика количества строк, удовлетворяющих условию."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.txt'): - Итерация по строкам файла "
+          },
+          {
+            "text": "'9.txt'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(i) for i in s.split()] - Преобразование строковых значений в целые числа и сохранение в списке "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if any((A[0] * A[1]) % 10 == 4 for A in permutations(M, 2)): - Проверка условия: хотя бы для одной перестановки в списке "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " произведение первых двух элементов оканчивается на "
+          },
+          {
+            "text": "4",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count += 1 - Увеличение счетчика на "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": ", если условие выполнено."
+          }
+        ],
+        [
+          {
+            "text": "print(count) - Вывод общего количества строк, удовлетворяющих условию."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 965"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-19-ege-razbor-zadachi-5664/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 5664 ЕГЭ по информатике #19",
+  "task": 19
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "zadanie-13-ege-razbor-zadachi-10783",
+  "title": "Задание 13 ЕГЭ: разбор задачи 10783",
+  "description": "Два узла, находящиеся в одной сети, имеют IP-адреса 121.171.5.70 и 121.171.5.107. Укажите наименьшее возможное количество адресов в этой сети.",
+  "date": "2024-05-16",
+  "cover": {
+    "src": "/blog/zadanie-13-ege-razbor-zadachi-10783/01.webp",
+    "width": 530,
+    "height": 350
+  },
+  "source": "https://dzen.ru/a/ZkWuCmpsjEEazMGL",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-10783/01.webp",
+      "width": 530,
+      "height": 350,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие: № 10783 (Уровень: Средний)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Telegram",
+          "href": "https://t.me/informatika_kege_itpy/420"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "🚩 Условие задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Два узла, находящиеся в одной сети, имеют IP-адреса 121.171.5.70 и 121.171.5.107.\nУкажите наименьшее возможное количество адресов в этой сети."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "👩‍💻 Код решения"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "from ipaddress import *\nR = []\nfor mask in range(32+1):\n    net1 = ip_network(f'121.171.5.70/{mask}', 0)\n    net2 = ip_network(f'121.171.5.107/{mask}', 0)\n    if net1 == net2:\n        R.append(net1.num_addresses)\nprint(min(R))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "👩‍💻 Комментарии к коду"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. from ipaddress import *",
+          "bold": true
+        },
+        {
+          "text": "\nИмпорт всех функций из модуля ipaddress для работы с сетевыми адресами.\n\n"
+        },
+        {
+          "text": "2. R = [] ",
+          "bold": true
+        },
+        {
+          "text": "\nСоздание пустого списка R, куда будут добавляться результаты.\n\n"
+        },
+        {
+          "text": "3. Цикл for mask in range(32+1): ",
+          "bold": true
+        },
+        {
+          "text": "\nДля перебора возможных значений маски сети от 0 до 32 (включительно).\n\n"
+        },
+        {
+          "text": "4. net1 = ip_network(f'121.171.5.70/{mask}', 0) ",
+          "bold": true
+        },
+        {
+          "text": "\nСоздание объекта сети net1 с заданным IP-адресом и переменной маской подсети, с коррекцией префикса.\n\n"
+        },
+        {
+          "text": "5. net2 = ip_network(f'121.171.5.107/{mask}', 0)",
+          "bold": true
+        },
+        {
+          "text": "\nСоздание объекта сети net2 с другим IP-адресом, но той же маской подсети.\n\n"
+        },
+        {
+          "text": "6. if net1 == net2:",
+          "bold": true
+        },
+        {
+          "text": "\nУсловие проверки, совпадают ли сети net1 и net2.\n\n"
+        },
+        {
+          "text": "7. R.append(net1.num_addresses)",
+          "bold": true
+        },
+        {
+          "text": "\nДобавление количества адресов в сети net1 в список R.\n\n"
+        },
+        {
+          "text": "8. print(min(R)) ",
+          "bold": true
+        },
+        {
+          "text": "\nВывод минимального значения количества адресов среди всех сетей, для которых условие совпадения сетей выполнилось."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 64"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-10783/02.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 10783 по информатике #13",
+  "task": 13
+}

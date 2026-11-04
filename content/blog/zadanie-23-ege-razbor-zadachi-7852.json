@@ -1,0 +1,677 @@
+{
+  "slug": "zadanie-23-ege-razbor-zadachi-7852",
+  "title": "Задание 23 ЕГЭ: разбор задачи 7852",
+  "description": "Условие: № 7852 Danov2304 (Уровень: Базовый) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-10-18",
+  "cover": {
+    "src": "/blog/zadanie-23-ege-razbor-zadachi-7852/01.webp",
+    "width": 530,
+    "height": 360
+  },
+  "source": "https://dzen.ru/a/ZRf7yk4ZHkpf5R4R",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-7852/01.webp",
+      "width": 530,
+      "height": 360,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 7852",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": " Danov2304 (Уровень: Базовый)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Исполнитель Симпли преобразует число на экране. У исполнителя есть три команды, которым присвоены номера:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1.Прибавить 1",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Прибавить 2",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. Умножить на 3",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Программа для исполнителя Симпли – это последовательность команд. Сколько существует программ, для которых при исходном числе 8 результатом является число 32 и при этом траектория вычислений содержит число 16 и не содержит простые числа?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-7852/02.webp",
+      "width": 750,
+      "height": 559,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def Prime(x):\n    for j in range(2, x):\n        if x % j == 0:\n            return False\n    return True\n\ndef F(a, b):\n    if a > b or Prime(a) == True:\n        return 0\n    elif a == b:\n        return 1\n    else:\n        return F(a+1, b) + F(a+2, b) + F(a*3, b)\n\nprint(F(8, 16) * F(16, 32))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к первому решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def Prime(x): - создаём функцию "
+          },
+          {
+            "text": "Prime",
+            "bold": true
+          },
+          {
+            "text": " с параметром "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for j in range(2, x): - пробегаем цикл, перебирая значения переменной "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " от "
+          },
+          {
+            "text": "2",
+            "bold": true
+          },
+          {
+            "text": " до "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " (не включая x)."
+          }
+        ],
+        [
+          {
+            "text": "if x % j == 0: - проверяем, делится ли "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " без остатка."
+          }
+        ],
+        [
+          {
+            "text": "return False - возвращаем значение "
+          },
+          {
+            "text": "False",
+            "bold": true
+          },
+          {
+            "text": ", если "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " имеет делитель отличный от "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": " и самого себя."
+          }
+        ],
+        [
+          {
+            "text": "return True - возвращаем значение "
+          },
+          {
+            "text": "True",
+            "bold": true
+          },
+          {
+            "text": ", если "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " является простым числом (не имеет делителей, кроме "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": " и самого себя)."
+          }
+        ],
+        [
+          {
+            "text": "def F(a, b): - объявляем функцию"
+          },
+          {
+            "text": " F",
+            "bold": true
+          },
+          {
+            "text": " с параметрами "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if a > b or Prime(a) == True: - проверяем, если "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " больше "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": " или "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " является простым числом."
+          }
+        ],
+        [
+          {
+            "text": "return 0 - возвращаем значение "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": ", если выполняется условие из предыдущего шага."
+          }
+        ],
+        [
+          {
+            "text": "elif a == b: - проверяем, если "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " равно "
+          },
+          {
+            "text": "b.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "return 1 - возвращаем значение "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": ", если "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " равно "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "else: - в противном случае (если ни одно из предыдущих условий не выполняется)."
+          }
+        ],
+        [
+          {
+            "text": "return F(a+1, b) + F(a+2, b) + F(a*3, b) - рекурсивно вызываем функцию "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с разными значениями "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": " и возвращаем сумму результатов."
+          }
+        ],
+        [
+          {
+            "text": "print(F(8, 16) * F(16, 32)) - выводим результат умножения двух вызовов функции"
+          },
+          {
+            "text": " F",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-7852/03.webp",
+      "width": 750,
+      "height": 479,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def Prime(x):\n    for j in range(2, x):\n        if x % j == 0:\n            return False\n    return True\n\ndef F(a, b):\n    if a >= b or Prime(a) == True:\n        return a == b\n    return F(a+1, b) + F(a+2, b) + F(a*3, b)\n\nprint(F(8, 16) * F(16, 32))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии ко второму решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def Prime(x): - объявляем функцию "
+          },
+          {
+            "text": "Prime",
+            "bold": true
+          },
+          {
+            "text": " с параметром "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for j in range(2, x): - начинаем цикл, перебирая значения переменной "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " от "
+          },
+          {
+            "text": "2",
+            "bold": true
+          },
+          {
+            "text": " до "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " (не включая x)."
+          }
+        ],
+        [
+          {
+            "text": "if x % j == 0: - проверяем, делится ли "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " без остатка."
+          }
+        ],
+        [
+          {
+            "text": "return False - возвращаем значение "
+          },
+          {
+            "text": "False",
+            "bold": true
+          },
+          {
+            "text": ", если "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " имеет делитель отличный от "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": " и самого себя."
+          }
+        ],
+        [
+          {
+            "text": "return True - возвращаем значение "
+          },
+          {
+            "text": "True",
+            "bold": true
+          },
+          {
+            "text": ", если "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " является простым числом (не имеет делителей, кроме "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": " и самого себя)."
+          }
+        ],
+        [
+          {
+            "text": "def F(a, b): - объявляем функцию "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с параметрами "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if a >= b or Prime(a) == True: - проверяем, если "
+          },
+          {
+            "text": "a ",
+            "bold": true
+          },
+          {
+            "text": "больше или равно "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": " или "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " является простым числом."
+          }
+        ],
+        [
+          {
+            "text": "return a == b - возвращаем значение "
+          },
+          {
+            "text": "True",
+            "bold": true
+          },
+          {
+            "text": ", если "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " равно "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": ", иначе возвращаем "
+          },
+          {
+            "text": "False",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return F(a+1, b) + F(a+2, b) + F(a*3, b) - рекурсивно вызываем функцию "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с разными значениями "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": " и возвращаем сумму результатов."
+          }
+        ],
+        [
+          {
+            "text": "print(F(8, 16) * F(16, 32)) - выводим результат умножения двух вызовов функции"
+          },
+          {
+            "text": " F",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 40"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-7852/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy \n",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 7852 ЕГЭ по информатике #23",
+  "task": 23
+}

@@ -1,0 +1,166 @@
+{
+  "slug": "poleznye-funktsii-modulya-math-dlya-podgotovki-k-ege",
+  "title": "Полезные функции модуля math для подготовки к ЕГЭ",
+  "description": "math - это встроенный модуль в Python, который предоставляет доступ к математическим функциям и константам. Этот модуль позволяет выполнять различные математические операции,…",
+  "date": "2024-02-24",
+  "cover": {
+    "src": "/blog/poleznye-funktsii-modulya-math-dlya-podgotovki-k-ege/01.webp",
+    "width": 530,
+    "height": 220
+  },
+  "source": "https://dzen.ru/a/ZdjCc4mLZ2Q4FgVL",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/poleznye-funktsii-modulya-math-dlya-podgotovki-k-ege/01.webp",
+      "width": 530,
+      "height": 220,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "math",
+          "bold": true
+        },
+        {
+          "text": " - это встроенный модуль в Python, который предоставляет доступ к математическим функциям и константам. Этот модуль позволяет выполнять различные математические операции, такие как вычисление квадратных корней, тригонометрические функции, логарифмы, степени, округления чисел и многое другое."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "1. sqrt(x)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Возвращает квадратный корень числа x"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import math\n\nresult = math.sqrt(25)\nprint(result)  # Вывод: 5.0"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2.  prod(iterable)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Возвращает произведение всех элементов итерируемого объекта:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import math\n\nnumbers = [1, 2, 3, 4, 5]\nresult = math.prod(numbers)\nprint(result)  # Вывод: 120 (произведение 1 * 2 * 3 * 4 * 5)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "3. ceil(x)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Возвращает наименьшее целое число, которое больше или равно x:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import math\n\nresult = math.ceil(3.14)\nprint(result)  # Вывод: 4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "4. floor(x)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Возвращает наибольшее целое число, которое меньше или равно x:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import math\n\nresult = math.floor(3.14)\nprint(result)  # Вывод: 3"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "5. factorial(x)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Возвращает факториал числа x:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import math\n\nresult = math.factorial(5)\nprint(result)  # Вывод: 120 (факториал числа 5)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Кстати, вместо import math можно написать import math as m , что позволит обращаться к модулю через переменную m (или любую другую, на ваш выбор). Это удобно для сокращения кода и повышения его читаемости.",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/poleznye-funktsii-modulya-math-dlya-podgotovki-k-ege/02.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "👩‍💻 Полезные функции модуля math для подготовки к ЕГЭ."
+}

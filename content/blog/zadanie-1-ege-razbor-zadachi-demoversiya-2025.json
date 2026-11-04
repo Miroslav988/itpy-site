@@ -1,0 +1,162 @@
+{
+  "slug": "zadanie-1-ege-razbor-zadachi-demoversiya-2025",
+  "title": "Задание 1 ЕГЭ: разбор задачи — Демоверсия 2025",
+  "description": "Определите, какова сумма протяжённостей дорог из пункта D в пункт G и из пункта A в пункт C.",
+  "date": "2024-08-29",
+  "task": 1,
+  "meta": {
+    "source": "Демоверсия 2025",
+    "level": "Базовый"
+  },
+  "source": "https://dzen.ru/a/ZtA0F3-gGwQ2iCCD",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите, какова сумма протяжённостей дорог из пункта D в пункт G и из пункта A в пункт C."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-1-ege-razbor-zadachi-demoversiya-2025/01.webp",
+      "width": 503,
+      "height": 193,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Представленный код решения выполняет тривиальный перевод всех вариантов, таким образом, в любой задаче мы сможем найти сопоставление вершин графа. В данном случае нужно заметить, что длина DG получилась равной 8, а длина AC — 30."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Код решения"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-1-ege-razbor-zadachi-demoversiya-2025/02.webp",
+      "width": 750,
+      "height": 719,
+      "alt": "Ответ: 30 + 8 = 38",
+      "caption": "Ответ: 30 + 8 = 38"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import permutations  ",
+            "code": true
+          },
+          {
+            "text": "\nИмпортируем функцию permutations из модуля itertools, которая позволяет генерировать все возможные перестановки элементов."
+          }
+        ],
+        [
+          {
+            "text": "table = '14 15 17 24 26 35 36 37 41 42 51 53 56 62 63 65 71 73'  ",
+            "code": true
+          },
+          {
+            "text": "\nЗадаем строку table, которая содержит пары чисел, разделенных пробелами."
+          }
+        ],
+        [
+          {
+            "text": "graph = 'AB BA AC CA EC CE CG GC EF FE FG GF FD DF DG GD DB BD'  ",
+            "code": true
+          },
+          {
+            "text": "\nЗадаем строку graph, которая содержит пары букв, разделенных пробелами, представляющих связи в графе."
+          }
+        ],
+        [
+          {
+            "text": "for per in permutations('ABCDEFG'): ",
+            "code": true
+          },
+          {
+            "text": "\nПроходим по всем возможным перестановкам букв 'A', 'B', 'C', 'D', 'E', 'F', 'G'."
+          }
+        ],
+        [
+          {
+            "text": "new_table = table  ",
+            "code": true
+          },
+          {
+            "text": "\nСоздаем копию строки table, которая будет изменяться в процессе."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(1, 7+1):  ",
+            "code": true
+          },
+          {
+            "text": "\nПроходим по числам от 1 до 7 включительно (индексам элементов строки per)."
+          }
+        ],
+        [
+          {
+            "text": "new_table = new_table.replace(str(i), per[i-1])  ",
+            "code": true
+          },
+          {
+            "text": "\nЗаменяем все вхождения числа i в строке new_table на соответствующую букву перестановки per."
+          }
+        ],
+        [
+          {
+            "text": "if set(new_table.split()) == set(graph.split()):  ",
+            "code": true
+          },
+          {
+            "text": "\nСравниваем множества пар из new_table и graph. Если они совпадают, то:"
+          }
+        ],
+        [
+          {
+            "text": "print('1 2 3 4 5 6 7')  ",
+            "code": true
+          },
+          {
+            "text": "\nПечатаем строку с числами от 1 до 7."
+          }
+        ],
+        [
+          {
+            "text": "print(*per) ",
+            "code": true
+          },
+          {
+            "text": "\nПечатаем текущую перестановку букв 'A', 'B', 'C', 'D', 'E', 'F', 'G', разделяя их пробелами."
+          }
+        ]
+      ]
+    }
+  ],
+  "originalTitle": "Разбор задачи 17855 #kege по информатике #ЕГЭ1 номер"
+}

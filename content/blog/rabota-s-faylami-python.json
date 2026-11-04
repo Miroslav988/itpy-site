@@ -1,0 +1,697 @@
+{
+  "slug": "rabota-s-faylami-python",
+  "title": "Работа с файлами Python",
+  "description": "Язык программирования Python, с его простым и выразительным синтаксисом, пользуется огромной популярностью среди разработчиков по всему миру. Одной из наиболее важных и…",
+  "date": "2024-04-24",
+  "cover": {
+    "src": "/blog/rabota-s-faylami-python/01.webp",
+    "width": 530,
+    "height": 220
+  },
+  "source": "https://dzen.ru/a/ZiiECST2KjCGUhgS",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/rabota-s-faylami-python/01.webp",
+      "width": 530,
+      "height": 220,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Вступление"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Язык программирования "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": ", с его простым и выразительным синтаксисом, пользуется огромной популярностью среди разработчиков по всему миру.  Одной из наиболее важных и необходимых операций при работе с программами является взаимодействие с файлами.  Файлы позволяют сохранять, читать и обрабатывать данные на диске, делая "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": " мощным инструментом для работы с информацией различного вида."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этой статье мы погрузимся в удивительный мир работы с файлами в языке программирования "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": ".  Мы научимся открывать файлы, читать их содержимое, записывать данные, а также разберемся с другими основными операциями, которые помогут нам эффективно управлять данными на диске."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Готовы узнать, как работать с файлами в "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": "?  Тогда давайте начнем этот захватывающий путь, который поможет вам стать более компетентным и уверенным в использовании "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": " для управления данными на вашем компьютере!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Начнем с Открытия файла"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для начала работы с файлом в "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": ", нам необходимо его открыть с помощью функции "
+        },
+        {
+          "text": "open()",
+          "bold": true
+        },
+        {
+          "text": ".  Эта функция принимает два аргумента: имя файла и режим доступа."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# Открываем файл для чтения ('r')\nfile = open('example.txt', 'r')"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Режим доступа может быть различным:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/rabota-s-faylami-python/02.webp",
+      "width": 547,
+      "height": 225,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "После завершения работы с файлом, его следует закрыть с помощью метода "
+        },
+        {
+          "text": "close()",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "file.close()"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Чтение данных из файла"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Существует несколько способов прочитать данные из файла:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод read()",
+          "bold": true
+        },
+        {
+          "text": " позволяет прочитать весь файл целиком:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/rabota-s-faylami-python/03.webp",
+      "width": 481,
+      "height": 213,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "with open('example.txt', 'r') as file:\n    content = file.read()\n    print(content)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод readline()",
+          "bold": true
+        },
+        {
+          "text": " позволяет читать файл построчно:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/rabota-s-faylami-python/04.webp",
+      "width": 481,
+      "height": 275,
+      "alt": "-4"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "with open('example.txt', 'r') as file:\n    line = file.readline()\n    while line:\n        print(line)\n        line = file.readline()"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод readlines()",
+          "bold": true
+        },
+        {
+          "text": " складывает все строки файла в список:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/rabota-s-faylami-python/05.webp",
+      "width": 481,
+      "height": 240,
+      "alt": "-5"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "with open('example.txt', 'r') as file:\n    lines = file.readlines()\n    for line in lines:\n        print(line)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Запись данных в файл"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для записи данных в файл нужно открыть его в режиме записи "
+        },
+        {
+          "text": "'w'",
+          "bold": true
+        },
+        {
+          "text": " или добавления "
+        },
+        {
+          "text": "'a'",
+          "bold": true
+        },
+        {
+          "text": ". Затем можно использовать метод "
+        },
+        {
+          "text": "write()",
+          "bold": true
+        },
+        {
+          "text": " для записи данных:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/rabota-s-faylami-python/06.webp",
+      "width": 481,
+      "height": 231,
+      "alt": "-6"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "with open('example.txt', 'w') as file:\n    file.write('Hello, world!\\n')\n    file.write('This is a new line.\\n')"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Если файл уже существует, режим "
+        },
+        {
+          "text": "'w'",
+          "bold": true
+        },
+        {
+          "text": " перезапишет его содержимое, тогда как режим "
+        },
+        {
+          "text": "'a'",
+          "bold": true
+        },
+        {
+          "text": " добавит данные в конец файла, не удаляя существующие."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Другие операции с файлами"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Существуют и другие полезные операции, позволяющие эффективно управлять данными на диске:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Проверка существования файла с помощью "
+        },
+        {
+          "text": "os.path.exists()",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/rabota-s-faylami-python/07.webp",
+      "width": 481,
+      "height": 289,
+      "alt": "-7"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import os\n\nfile_path = 'example.txt'\nif os.path.exists(file_path):\n    print(\"Файл существует.\")\nelse:\n    print(\"Файл не найден.\")"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Удаление файла с помощью "
+        },
+        {
+          "text": "os.remove()",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/rabota-s-faylami-python/08.webp",
+      "width": 481,
+      "height": 311,
+      "alt": "-8"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import os\n\nfile_path = 'example.txt'\nif os.path.exists(file_path):\n    os.remove(file_path)\n    print(\"Файл успешно удален.\")\nelse:\n    print(\"Файл не найден.\")"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Работа с файлами на ЕГЭ"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "№ 7030 Danov2303 (Уровень: Сложный)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "("
+        },
+        {
+          "text": "А.Богданов",
+          "href": "https://vk.com/inf_intensive"
+        },
+        {
+          "text": ") Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел. Определите количество строк таблицы, для которых выполняются все условия:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "в строке три числа повторяются ровно два раза;"
+          }
+        ],
+        [
+          {
+            "text": "эти три числа образуют стороны прямоугольного треугольника."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе запишите одно число."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9.csv",
+          "href": "https://kompege.ru/files/6UwhU_lMr.csv"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/rabota-s-faylami-python/09.webp",
+      "width": 481,
+      "height": 235,
+      "alt": "-9"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "count = 0 ",
+            "bold": true
+          },
+          {
+            "text": "- Создаем переменную "
+          },
+          {
+            "text": "count ",
+            "bold": true
+          },
+          {
+            "text": "и присваиваем ей значение "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.txt'): ",
+            "bold": true
+          },
+          {
+            "text": "- используем цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": ", чтобы перебрать строки файла "
+          },
+          {
+            "text": "'9.txt' ",
+            "bold": true
+          },
+          {
+            "text": "и присваиваем каждой строке значение переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(i) for i in s.split()]) ",
+            "bold": true
+          },
+          {
+            "text": "- Создаем список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", который содержит целочисленные элементы строки "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", отсортированные в порядке "
+          },
+          {
+            "text": "возрастания.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "if len(set(M)) == 3 and all(M.count(x) == 2 for x in M):",
+            "bold": true
+          },
+          {
+            "text": " - используем условный оператор "
+          },
+          {
+            "text": "if",
+            "bold": true
+          },
+          {
+            "text": ", чтобы проверить, состоит ли список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " из трех разных чисел, каждое из которых встречается ровно "
+          },
+          {
+            "text": "2 раза ",
+            "bold": true
+          },
+          {
+            "text": "в списке"
+          },
+          {
+            "text": " M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "a, b, c = sorted(set(M)) ",
+            "bold": true
+          },
+          {
+            "text": "- Присваиваем значениям "
+          },
+          {
+            "text": "a, b и c",
+            "bold": true
+          },
+          {
+            "text": " уникальные отсортированные значения из списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if c  2 == a  2 + b ** 2:",
+            "bold": true
+          },
+          {
+            "text": " - используем условный оператор "
+          },
+          {
+            "text": "if",
+            "bold": true
+          },
+          {
+            "text": ", чтобы проверить, является ли большее число c квадратом суммы квадратов меньших чисел "
+          },
+          {
+            "text": "a и b(теорема Пифагора)",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "count += 1 ",
+            "bold": true
+          },
+          {
+            "text": "- Увеличиваем значение переменной "
+          },
+          {
+            "text": "count на единицу",
+            "bold": true
+          },
+          {
+            "text": ", если все прошло успешно."
+          }
+        ],
+        [
+          {
+            "text": "print(count) ",
+            "bold": true
+          },
+          {
+            "text": "- Выводим на экран значение переменной "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/rabota-s-faylami-python/10.webp",
+      "width": 750,
+      "height": 420,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "💡 Работа с файлами Python #tpy"
+}

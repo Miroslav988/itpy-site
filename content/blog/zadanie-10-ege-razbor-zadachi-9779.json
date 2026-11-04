@@ -1,0 +1,266 @@
+{
+  "slug": "zadanie-10-ege-razbor-zadachi-9779",
+  "title": "Задание 10 ЕГЭ: разбор задачи 9779",
+  "description": "Условие: № 9779 Основная волна 20.06.23 (Уровень: Базовый) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-10-12",
+  "cover": {
+    "src": "/blog/zadanie-10-ege-razbor-zadachi-9779/01.webp",
+    "width": 530,
+    "height": 430
+  },
+  "source": "https://dzen.ru/a/ZRf2Wz27qgj0cpjJ",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-10-ege-razbor-zadachi-9779/01.webp",
+      "width": 530,
+      "height": 430,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 9779",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": " Основная волна 20.06.23 (Уровень: Базовый)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "С помощью текстового редактора определите, сколько раз встречается слово «Лбов», начинающееся с прописной буквы, в тексте повести А.И. Куприна «Поединок». Другие формы слова «Лбов», такие как «Лбову» и т.д., учитывать не следует."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе укажите только число."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Решение задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Как только мы открыли файл, нажимаем комбинацию клавиш "
+        },
+        {
+          "text": "CTRL + F",
+          "bold": true
+        },
+        {
+          "text": ", чтобы открыть меню поиска."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-10-ege-razbor-zadachi-9779/02.webp",
+      "width": 512,
+      "height": 165,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Далее нажимаем на стрелочку справа от иконки "
+        },
+        {
+          "text": "“Поиск”",
+          "bold": true
+        },
+        {
+          "text": " и выбираем "
+        },
+        {
+          "text": "“Расширенный поиск”",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-10-ege-razbor-zadachi-9779/03.webp",
+      "width": 257,
+      "height": 236,
+      "alt": "-3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Записываем слово, которое нужно найти в строку "
+        },
+        {
+          "text": "“Найти”",
+          "bold": true
+        },
+        {
+          "text": " и нажимаем на кнопку "
+        },
+        {
+          "text": "“Больше”",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-10-ege-razbor-zadachi-9779/04.webp",
+      "width": 358,
+      "height": 145,
+      "alt": "-4"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Далее ставим галочку на параметрах:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "“Учитывать регистр”",
+            "bold": true
+          },
+          {
+            "text": " (будет учитывать слова, начинающиеся в нашем случае с прописной, т.е. заглавной буквы)."
+          }
+        ],
+        [
+          {
+            "text": "“Только слово целиком”",
+            "bold": true
+          },
+          {
+            "text": " (будет учитывать только данное сочетание букв, не входящее в состав других слов)."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-10-ege-razbor-zadachi-9779/05.webp",
+      "width": 362,
+      "height": 282,
+      "alt": "-5"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Нажимаем на "
+        },
+        {
+          "text": "“Выделение при чтении”",
+          "bold": true
+        },
+        {
+          "text": " и выбираем "
+        },
+        {
+          "text": "“Выделить все”",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-10-ege-razbor-zadachi-9779/06.webp",
+      "width": 361,
+      "height": 283,
+      "alt": "-6"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Получаем ответ."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-10-ege-razbor-zadachi-9779/07.webp",
+      "width": 360,
+      "height": 285,
+      "alt": "-7"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 28"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-10-ege-razbor-zadachi-9779/08.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy \n",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 9779 ЕГЭ по информатике #10",
+  "task": 10
+}

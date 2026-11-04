@@ -1,0 +1,97 @@
+{
+  "slug": "zadanie-13-ege-razbor-zadachi-24-sentyabrya-2024",
+  "title": "Задание 13 ЕГЭ: разбор задачи (24 сентября 2024)",
+  "description": "Собрали все полезные функции из библиотеки ipaddress для нового 13 номера ЕГЭ по информатике. В меню навигации ты найдешь шпаргалки по остальным номерам!",
+  "date": "2024-09-24",
+  "task": 13,
+  "source": "https://dzen.ru/a/ZvHHT6Ho_VuW4sLW",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Собрали все полезные функции из библиотеки ipaddress для нового 13 номера ЕГЭ по информатике. "
+        },
+        {
+          "text": "В меню навигации ты найдешь шпаргалки по остальным номерам!",
+          "href": "http://t.me/+nGlqqsrW7EYzZWQy"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-24-sentyabrya-2024/01.webp",
+      "width": 750,
+      "height": 501,
+      "alt": ""
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Подключаем библиотеку:\n"
+          },
+          {
+            "text": "from ipaddress import *",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "Функция для создания объекта сети:\n"
+          },
+          {
+            "text": "net = ip_network('адрес сети/маска')",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "Получение маски сети:\n"
+          },
+          {
+            "text": "net.netmask",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "Цикл для перебора значений маски:\n"
+          },
+          {
+            "text": "for mask in range(33):",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "    net = ip_network(f'адрес узла/{mask}', 0)",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "Цикл для перебора IP-адресов в сети:\n"
+          },
+          {
+            "text": "for ip in net:",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "Представление IP-адреса в двоичном виде:\n"
+          },
+          {
+            "text": "ip_b = f'{ip:b}'",
+            "bold": true
+          }
+        ]
+      ]
+    }
+  ],
+  "originalTitle": "Шпаргалка для номера #ЕГЭ13"
+}

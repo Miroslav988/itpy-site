@@ -1,0 +1,233 @@
+{
+  "slug": "zadanie-7-ege-razbor-zadachi-35981",
+  "title": "Задание 7 ЕГЭ: разбор задачи 35981",
+  "description": "Условие: Тип 7 № 35981 • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-03-12",
+  "cover": {
+    "src": "/blog/zadanie-7-ege-razbor-zadachi-35981/01.webp",
+    "width": 530,
+    "height": 280
+  },
+  "source": "https://dzen.ru/a/Ze83SS4012C5NV6s",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-7-ege-razbor-zadachi-35981/01.webp",
+      "width": 530,
+      "height": 280,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "Тип 7 № ",
+          "bold": true
+        },
+        {
+          "text": "35981",
+          "href": "https://www.notion.so/problem?id=35981"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/385"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В информационной системе хранятся изображения размером 2048 × 1536 пк."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При кодировании используется алгоритм сжатия изображений, позволяющий уменьшить размер памяти для хранения одного изображения в среднем в 8 раз по сравнению с независимым кодированием каждого пикселя."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Каждое изображение дополняется служебной информацией, которая занимает 128 Кбайт."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для хранения 32 изображений потребовалось 16 Мбайт."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сколько цветов использовано в палитре каждого изображения?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-7-ege-razbor-zadachi-35981/02.webp",
+      "width": 750,
+      "height": 371,
+      "alt": "-2"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к коду решения"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "I = (16 * 2 ** 23) / 32 ",
+            "bold": true
+          },
+          {
+            "text": "- Вычисление веса одного изображения с дополнительной информацией и сжатием."
+          }
+        ],
+        [
+          {
+            "text": "I = I - (128 * 2**13) ",
+            "bold": true
+          },
+          {
+            "text": "- Вычисление веса одного изображения только с сжатием."
+          }
+        ],
+        [
+          {
+            "text": "I = I * 8",
+            "bold": true
+          },
+          {
+            "text": " - Вычисление веса одного изображения после уменьшения размера в "
+          },
+          {
+            "text": "8",
+            "bold": true
+          },
+          {
+            "text": " раз."
+          }
+        ],
+        [
+          {
+            "text": "i = I / (2048 * 1536) ",
+            "bold": true
+          },
+          {
+            "text": "- Вычисление "
+          },
+          {
+            "text": "отношения веса одного изображения ",
+            "bold": true
+          },
+          {
+            "text": "к "
+          },
+          {
+            "text": "общему размеру",
+            "bold": true
+          },
+          {
+            "text": " изображения."
+          }
+        ],
+        [
+          {
+            "text": "Colors = 2 ** i",
+            "bold": true
+          },
+          {
+            "text": " - Вычисление "
+          },
+          {
+            "text": "количества цветов в палитре",
+            "bold": true
+          },
+          {
+            "text": " каждого изображения."
+          }
+        ],
+        [
+          {
+            "text": "print(f\"Цветов использовано в палитре: {Colors}\") ",
+            "bold": true
+          },
+          {
+            "text": "- Вывод результата."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 256"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-7-ege-razbor-zadachi-35981/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 35981 ЕГЭ по информатике #7",
+  "task": 7
+}

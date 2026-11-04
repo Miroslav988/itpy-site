@@ -1,0 +1,442 @@
+{
+  "slug": "zadanie-2-ege-razbor-zadachi-6842",
+  "title": "Задание 2 ЕГЭ: разбор задачи 6842",
+  "description": "Логическая функция F задаётся выражением (z → w)∧ y ∧¬ x. На рисунке приведён частично заполненный фрагмент таблицы истинности функции F, содержащий неповторяющиеся строки.…",
+  "date": "2023-09-05",
+  "cover": {
+    "src": "/blog/zadanie-2-ege-razbor-zadachi-6842/01.webp",
+    "width": 530,
+    "height": 310
+  },
+  "source": "https://dzen.ru/a/ZNJIYvE1AzJVEmRR",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-6842/01.webp",
+      "width": 530,
+      "height": 310,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 6843 (Уровень: Средний) (А. Богданов)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Логическая функция F задаётся выражением ("
+        },
+        {
+          "text": "z",
+          "italic": true
+        },
+        {
+          "text": " → "
+        },
+        {
+          "text": "w",
+          "italic": true
+        },
+        {
+          "text": ")∧ "
+        },
+        {
+          "text": "y",
+          "italic": true
+        },
+        {
+          "text": " ∧¬ "
+        },
+        {
+          "text": "x",
+          "italic": true
+        },
+        {
+          "text": ". На рисунке приведён частично заполненный фрагмент таблицы истинности функции F, содержащий неповторяющиеся строки. Определите, какому столбцу таблицы истинности функции F соответствует каждая из переменных "
+        },
+        {
+          "text": "x",
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "y",
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "z",
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "w",
+          "italic": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-6842/02.webp",
+      "width": 443,
+      "height": 89,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе напишите буквы "
+        },
+        {
+          "text": "x",
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "y",
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "z",
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "w",
+          "italic": true
+        },
+        {
+          "text": " в том порядке, в котором идут соответствующие им столбцы. Буквы в ответе пишите подряд, никаких разделителей между буквами ставить не нужно."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-6842/03.webp",
+      "width": 750,
+      "height": 455,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "print('x y z w F')\nfor x in range(2):\n    for y in range(2):\n        for z in range(2):\n            for w in range(2):\n                F = (z <= w) and y and (not x)\n                print(x, y, z, w, F)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к решению задачи"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "print(f'x y z w F') ",
+            "italic": true
+          },
+          {
+            "text": "- Выводим заголовок столбцов, используя форматированную строку, чтобы отобразить названия переменных."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(2):",
+            "italic": true
+          },
+          {
+            "text": " - Ищем все возможные варианты переменной "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for y in range(2): ",
+            "italic": true
+          },
+          {
+            "text": "- Ищем все возможные варианты переменной "
+          },
+          {
+            "text": "y",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for z in range(2):",
+            "italic": true
+          },
+          {
+            "text": " - Ищем все возможные варианты переменной "
+          },
+          {
+            "text": "z",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for w in range(2):",
+            "italic": true
+          },
+          {
+            "text": " - Ищем все возможные варианты переменной "
+          },
+          {
+            "text": "w",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "F = (z <= w) and y and (not x) ",
+            "italic": true
+          },
+          {
+            "text": "- задаём логическую функцию\n переменной "
+          },
+          {
+            "text": "F",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "print(x, y, z, w, F) ",
+            "italic": true
+          },
+          {
+            "text": "- Выводим значения переменных"
+          },
+          {
+            "text": " x",
+            "bold": true
+          },
+          {
+            "text": ","
+          },
+          {
+            "text": " y",
+            "bold": true
+          },
+          {
+            "text": ", "
+          },
+          {
+            "text": "z",
+            "bold": true
+          },
+          {
+            "text": ","
+          },
+          {
+            "text": " w ",
+            "bold": true
+          },
+          {
+            "text": "и"
+          },
+          {
+            "text": " F",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ходе выполнения программы получаем следующую таблицу:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-6842/04.webp",
+      "width": 750,
+      "height": 725,
+      "alt": "-4"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Теперь сопостовляем полученную и данную в условии таблицы"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Для начала разберёмся с тем, какие строчки нам нужны. Из условия мы имеем, что нам нужны две строчки со значением True (т.е. 1) и одна строчка со значением False ( т.е. 0)"
+          }
+        ],
+        [
+          {
+            "text": "Мы можем определить первую строчку таблицы (’01 0’), на месте пропуска будет стоять 1, т.к. в ином случае логическая функция будет принимать значение 0"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-6842/05.webp",
+      "width": 706,
+      "height": 122,
+      "alt": "-5"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3.  Таким же образом определяем значение на месте пропуска в последней строчке. Этим значением будет 1, т.к. иначе мы получим значение логической функции F == 1, что нам не нужно"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-6842/06.webp",
+      "width": 487,
+      "height": 471,
+      "alt": "-6"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-6842/07.webp",
+      "width": 706,
+      "height": 122,
+      "alt": "-7"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4.  Теперь определяемся со второй строчкой таблицы. Из полученных раньше значений и строк определяем, что второй столбец - это переменная "
+        },
+        {
+          "text": "w",
+          "bold": true
+        },
+        {
+          "text": ", а третий столбец - это "
+        },
+        {
+          "text": "y",
+          "bold": true
+        },
+        {
+          "text": ", т.к только у него значение во всех полученных строчках == 1. Так же делаем и с переменными "
+        },
+        {
+          "text": "z",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "x",
+          "bold": true
+        },
+        {
+          "text": ", мы имеем, что в последней строчке, только переменная "
+        },
+        {
+          "text": "z",
+          "bold": true
+        },
+        {
+          "text": ", таким образом получаем, что первый столбец - это "
+        },
+        {
+          "text": "z",
+          "bold": true
+        },
+        {
+          "text": ", а последний - "
+        },
+        {
+          "text": "x",
+          "bold": true
+        },
+        {
+          "text": ", ведь два других столбца нам уже известны."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-6842/08.webp",
+      "width": 750,
+      "height": 130,
+      "alt": "-8"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: zwyx"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-2-ege-razbor-zadachi-6842/09.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 6842 ЕГЭ по информатике #2",
+  "task": 2
+}

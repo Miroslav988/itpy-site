@@ -1,0 +1,476 @@
+{
+  "slug": "biblioteka-turtle-chem-mozhet-byt-polezna-na-ege",
+  "title": "Библиотека Turtle, чем может быть полезна на ЕГЭ",
+  "description": "Библиотека Turtle в Python предоставляет простой и интуитивно понятный способ рисования графики и создания простых анимаций с помощью черепашьей графики (turtle graphics). Она…",
+  "date": "2024-05-07",
+  "cover": {
+    "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/01.webp",
+    "width": 530,
+    "height": 220
+  },
+  "source": "https://dzen.ru/a/ZjoFPMn1BmLjSa8-",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/01.webp",
+      "width": 530,
+      "height": 220,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вступительная теория"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Библиотека "
+        },
+        {
+          "text": "Turtle",
+          "bold": true
+        },
+        {
+          "text": " в Python предоставляет простой и интуитивно понятный способ рисования графики и создания простых анимаций с помощью черепашьей графики ("
+        },
+        {
+          "text": "turtle graphics",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "). Она включает различные функции для управления черепашкой и рисования различных графических фигур."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Принцип работы библиотеки Turtle можно представить следующим образом:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/02.webp",
+      "width": 606,
+      "height": 333,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/03.webp",
+      "width": 481,
+      "height": 328,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import turtle\n\n# Создаем черепашку\nt = turtle.Turtle()\n\n# Рисуем квадрат\nfor _ in range(4):\n    t.forward(100)  # Перемещение вперед на 100 пикселей\n    t.left(90)  # Поворот налево на 90 градусов\n\n# Ожидаем завершения рисования\nturtle.done()"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этом примере мы создали черепашку "
+        },
+        {
+          "text": "t",
+          "bold": true
+        },
+        {
+          "text": ", которая рисует квадрат с помощью цикла.  Она перемещается вперед на 100 пикселей, а затем поворачивает налево на 90 градусов.  Цикл повторяется 4 раза, чтобы нарисовать четыре стороны квадрата.  После завершения рисования, программа ожидает закрытия окна пользователем с помощью "
+        },
+        {
+          "text": "turtle.done()",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Цвета и как их менять"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В библиотеке "
+        },
+        {
+          "text": "turtle",
+          "bold": true
+        },
+        {
+          "text": " есть возможность изменять цвет линий и заливки для черепашьего рисунка с помощью методов "
+        },
+        {
+          "text": "color()",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "fillcolor()",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Изменение цвета линий с помощью color()",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": "color()",
+          "bold": true
+        },
+        {
+          "text": " используется для изменения цвета линий, которые рисует черепашка. Этот метод принимает один или два аргумента. Если указан только один аргумент, то он задает цвет линий, а если указаны два аргумента, то первый аргумент задает цвет пера, а второй аргумент - цвет заливки ("
+        },
+        {
+          "text": "если черепашка рисует закрытую фигуру",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример использования "
+        },
+        {
+          "text": "color()",
+          "bold": true
+        },
+        {
+          "text": " для изменения цвета линий:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/04.webp",
+      "width": 481,
+      "height": 248,
+      "alt": "-4"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import turtle\n\nt = turtle.Turtle()\n\nt.color(\"red\")  # Устанавливаем цвет линий на \"красный\"\nt.forward(100)\n\nt.color(\"blue\", \"yellow\")  # Устанавливаем цвет линий на \"синий\" и цвет заливки на \"желтый\"\nt.begin_fill()\nt.circle(50)\nt.end_fill()\n\nturtle.done()"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Изменение цвета заливки с помощью fillcolor()",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": "fillcolor()",
+          "bold": true
+        },
+        {
+          "text": " используется только для изменения цвета заливки, когда черепашка рисует закрытую фигуру с помощью методов "
+        },
+        {
+          "text": "begin_fill()",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "end_fill()",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Синтаксис:\nturtle.fillcolor(\"цвет_заливки\")"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример использования "
+        },
+        {
+          "text": "fillcolor()",
+          "bold": true
+        },
+        {
+          "text": " для изменения цвета заливки:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/05.webp",
+      "width": 481,
+      "height": 293,
+      "alt": "-5"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import turtle\n\nt = turtle.Turtle()\n\nt.fillcolor(\"yellow\")  # Устанавливаем цвет заливки на \"желтый\"\nt.begin_fill()\nfor _ in range(4):\n    t.forward(100)\n    t.right(90)\nt.end_fill()\n\nturtle.done()"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этих примерах мы использовали различные комбинации методов "
+        },
+        {
+          "text": "color()",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "fillcolor()",
+          "bold": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "begin_fill()",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "end_fill()",
+          "bold": true
+        },
+        {
+          "text": " для изменения цвета линий и заливки.  Вы можете экспериментировать с разными цветами и комбинациями для создания красочных и интересных черепашьих рисунков!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Предлагаю рассмотреть пример уже на реальной задаче с экзамена ЕГЭ"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Тип 6 № ",
+            "bold": true
+          },
+          {
+            "text": "47246",
+            "href": "https://inf-ege.sdamgia.ru/problem?id=47246",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Исполнитель Черепаха действует на плоскости с декартовой системой координат. В начальный момент Черепаха находится в начале координат, её голова направлена вдоль положительного направления оси ординат, хвост опущен.\nЧерепахе был дан для исполнения следующий алгоритм:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Повтори 4 [Вперёд 14 Направо 120]",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите, "
+        },
+        {
+          "text": "сколько точек",
+          "bold": true
+        },
+        {
+          "text": " с целочисленными координатами будут находиться внутри области, ограниченной линией, заданной данным алгоритмом. Точки на линии учитывать "
+        },
+        {
+          "text": "не следует",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/06.webp",
+      "width": 481,
+      "height": 341,
+      "alt": "-6"
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/07.webp",
+      "width": 605,
+      "height": 240,
+      "alt": "-6-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Рисунок который должен получиться:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/08.webp",
+      "width": 263,
+      "height": 241,
+      "alt": "-7"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Продолжим описание первого варианта решения задачи через библиотеку turtle:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/09.webp",
+      "width": 481,
+      "height": 519,
+      "alt": "-8"
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/10.webp",
+      "width": 601,
+      "height": 181,
+      "alt": "-8-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Рисунок, который должен получиться:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/11.webp",
+      "width": 261,
+      "height": 261,
+      "alt": "-9"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 78"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/biblioteka-turtle-chem-mozhet-byt-polezna-na-ege/12.webp",
+      "width": 750,
+      "height": 420,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "💡 Библиотека Turtle, чем может быть полезна на ЕГЭ #tpy"
+}

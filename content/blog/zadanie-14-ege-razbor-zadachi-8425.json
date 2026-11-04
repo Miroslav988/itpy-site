@@ -1,0 +1,292 @@
+{
+  "slug": "zadanie-14-ege-razbor-zadachi-8425",
+  "title": "Задание 14 ЕГЭ: разбор задачи 8425",
+  "description": "Условие: КЕГЭ № 8425 (Уровень: Средний) • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-02-15",
+  "cover": {
+    "src": "/blog/zadanie-14-ege-razbor-zadachi-8425/01.webp",
+    "width": 530,
+    "height": 230
+  },
+  "source": "https://dzen.ru/a/Zcz9jk75bG3jNU-W",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-14-ege-razbor-zadachi-8425/01.webp",
+      "width": 530,
+      "height": 230,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "КЕГЭ",
+          "href": "https://kompege.ru/task"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "№ 8425 (Уровень: Средний)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/368"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В системе счисления с основанием p выполняется равенство "
+        },
+        {
+          "text": "32 * 14 = xy2",
+          "bold": true
+        },
+        {
+          "text": ". Буквами x и y обозначены некоторые цифры из алфавита системы счисления с основанием p. \nОпределите значение числа "
+        },
+        {
+          "text": "yx_p",
+          "bold": true
+        },
+        {
+          "text": " и запишите это значение в десятичной системе счисления."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-14-ege-razbor-zadachi-8425/02.webp",
+      "width": 750,
+      "height": 318,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "ALPHABET = sorted('0123456789AQWERTYUIOPSDFGHJKLZXCVBNM')",
+            "bold": true
+          },
+          {
+            "text": " - Удобный способ создание "
+          },
+          {
+            "text": "отсортированного",
+            "bold": true
+          },
+          {
+            "text": " списка символов алфавита "
+          },
+          {
+            "text": "36-ой",
+            "bold": true
+          },
+          {
+            "text": " системы счисления."
+          }
+        ],
+        [
+          {
+            "text": "for p in range(5, 36+1): ",
+            "bold": true
+          },
+          {
+            "text": "- Цикл по основаниям систем счисления "
+          },
+          {
+            "text": "от 5 до 36",
+            "bold": true
+          },
+          {
+            "text": ". От"
+          },
+          {
+            "text": " 5",
+            "bold": true
+          },
+          {
+            "text": ", потому что в нашем выражении старшая цифра "
+          },
+          {
+            "text": "4",
+            "bold": true
+          },
+          {
+            "text": ","
+          },
+          {
+            "text": " ",
+            "bold": true
+          },
+          {
+            "text": "а до"
+          },
+          {
+            "text": " 36",
+            "bold": true
+          },
+          {
+            "text": " - ограничения нашего алфавита."
+          }
+        ],
+        [
+          {
+            "text": "for x in ALPHABET[:p]: ",
+            "bold": true
+          },
+          {
+            "text": "- Цикл по символам алфавита для текущего основания "
+          },
+          {
+            "text": "p",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for y in ALPHABET[:p]: ",
+            "bold": true
+          },
+          {
+            "text": "- Вложенный цикл по символам алфавита для текущего основания "
+          },
+          {
+            "text": "p",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if int('32', p) * int('14', p) == int(f'{x}{y}2', p):",
+            "bold": true
+          },
+          {
+            "text": " - Проверка: если произведение чисел в системе счисления "
+          },
+          {
+            "text": "p равно числу в системе счисления p",
+            "bold": true
+          },
+          {
+            "text": ", собранному из символов "
+          },
+          {
+            "text": "x, y и '2'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(int(f'{y}{x}', p)) ",
+            "bold": true
+          },
+          {
+            "text": "-  Вывод числа, собранного из символов "
+          },
+          {
+            "text": "y ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " в системе счисления "
+          },
+          {
+            "text": "p",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 23"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-14-ege-razbor-zadachi-8425/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 8425 ЕГЭ по информатике #14",
+  "task": 14
+}

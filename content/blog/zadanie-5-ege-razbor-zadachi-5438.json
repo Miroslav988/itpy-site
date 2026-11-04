@@ -1,0 +1,438 @@
+{
+  "slug": "zadanie-5-ege-razbor-zadachi-5438",
+  "title": "Задание 5 ЕГЭ: разбор задачи 5438",
+  "description": "На вход алгоритма подаётся два натуральных числа N и M. Алгоритм строит по ним новое число R следующим образом:",
+  "date": "2023-09-01",
+  "cover": {
+    "src": "/blog/zadanie-5-ege-razbor-zadachi-5438/01.webp",
+    "width": 530,
+    "height": 400
+  },
+  "source": "https://dzen.ru/a/ZNJFkYCslF-hJ33J",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-5438/01.webp",
+      "width": 530,
+      "height": 400,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 5438 (А. Сардарян)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "На вход алгоритма подаётся два натуральных числа N и M. Алгоритм строит по ним новое число R следующим образом:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Вычисляется произведение P1 всех ненулевых чётных цифр чисел N и M."
+          }
+        ],
+        [
+          {
+            "text": "Вычисляется произведение P2 всех нечётных цифр чисел N и M."
+          }
+        ],
+        [
+          {
+            "text": "Результат R вычисляется как модуль разности P1 и P2."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Например, для N = 256 и M = 108 получаем P1 = 2·6·8 = 96 и P2 = 5·1 = 5, так что R = |96 - 5|= 91. Укажите минимальное число M, при котором для N = 120 получается R = 29."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-5438/02.webp",
+      "width": 750,
+      "height": 540,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def F(A):\n    temp = 1\n    for x in A:\n        temp *= x\n    return temp\n\nfor m in range(1, 1000):\n    n = 120\n    P = [int(i) for i in str(n)] + [int(i) for i in str(m)]\n    P1 = [i for i in P if i != 0 and i % 2 == 0]\n    P2 = [i for i in P if i % 2 != 0]\n    p1, p2 = F(P1), F(P2)\n    r = abs(p1 - p2)\n    if r == 29:\n        print(m)\n        break"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарий к решению задачи"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(A):",
+            "italic": true
+          },
+          {
+            "text": " - Определяем функцию "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с параметром "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "temp = 1 ",
+            "italic": true
+          },
+          {
+            "text": "- Инициализируем переменную "
+          },
+          {
+            "text": "temp ",
+            "bold": true
+          },
+          {
+            "text": "со значением 1."
+          }
+        ],
+        [
+          {
+            "text": "for x in A:",
+            "italic": true
+          },
+          {
+            "text": " - Создаём цикл по элементам "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": " с помощью переменной "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "temp *= x",
+            "italic": true
+          },
+          {
+            "text": " - Умножаем текущее значение "
+          },
+          {
+            "text": "temp",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " и присваиваем результат "
+          },
+          {
+            "text": "temp",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return temp",
+            "italic": true
+          },
+          {
+            "text": " - Возвращаем значение переменной "
+          },
+          {
+            "text": "temp",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for m in range(1, 1000):",
+            "italic": true
+          },
+          {
+            "text": " - Создаём цикл по диапазону от 1 до 999 с помощью переменной "
+          },
+          {
+            "text": "m",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "n = 120 ",
+            "italic": true
+          },
+          {
+            "text": "- Присваиваем переменной "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " значение "
+          },
+          {
+            "text": "120.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "P = [int(i) for i in str(n)] + [int(i) for i in str(m)] ",
+            "italic": true
+          },
+          {
+            "text": "- Создаем список "
+          },
+          {
+            "text": "P",
+            "bold": true
+          },
+          {
+            "text": ", который содержит целочисленные значения цифр из строки "
+          },
+          {
+            "text": "n ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "m",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "P1 = [i for i in P if i != 0 and i % 2 == 0] ",
+            "italic": true
+          },
+          {
+            "text": "- Создаем список "
+          },
+          {
+            "text": "P1,",
+            "bold": true
+          },
+          {
+            "text": " который содержит только не нулевые четные числа из списка "
+          },
+          {
+            "text": "P",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "P2 = [i for i in P if i % 2 != 0]",
+            "italic": true
+          },
+          {
+            "text": " - Создаем список "
+          },
+          {
+            "text": "P2",
+            "bold": true
+          },
+          {
+            "text": ", который содержит только нечетные числа из списка "
+          },
+          {
+            "text": "P",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "p1, p2 = F(P1), F(P2) ",
+            "italic": true
+          },
+          {
+            "text": "- Вызываем функцию "
+          },
+          {
+            "text": "F ",
+            "bold": true
+          },
+          {
+            "text": "с аргументом "
+          },
+          {
+            "text": "P1 ",
+            "bold": true
+          },
+          {
+            "text": "и присваиваем результаты переменным "
+          },
+          {
+            "text": "p1 ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "p2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "r = abs(p1 - p2)",
+            "italic": true
+          },
+          {
+            "text": " - Присваиваем переменной"
+          },
+          {
+            "text": " r",
+            "bold": true
+          },
+          {
+            "text": " абсолютное значение разности между"
+          },
+          {
+            "text": " p1",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "p2.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "if r == 29",
+            "italic": true
+          },
+          {
+            "text": ": - Проверяем, если "
+          },
+          {
+            "text": "r ",
+            "bold": true
+          },
+          {
+            "text": "равно 29."
+          }
+        ],
+        [
+          {
+            "text": "print(m) ",
+            "italic": true
+          },
+          {
+            "text": "- Выводим значение переменной "
+          },
+          {
+            "text": "m",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "break ",
+            "italic": true
+          },
+          {
+            "text": "- Прерываем цикл."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 238"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-5438/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 5438 ЕГЭ по информатике #5",
+  "task": 5
+}

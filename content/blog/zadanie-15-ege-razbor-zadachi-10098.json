@@ -1,0 +1,248 @@
+{
+  "slug": "zadanie-15-ege-razbor-zadachi-10098",
+  "title": "Задание 15 ЕГЭ: разбор задачи 10098",
+  "description": "Условие: № 10098 Демоверсия 2024 (Уровень: Базовый) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-10-24",
+  "cover": {
+    "src": "/blog/zadanie-15-ege-razbor-zadachi-10098/01.webp",
+    "width": 530,
+    "height": 260
+  },
+  "source": "https://dzen.ru/a/ZTXT72u_lQLQLzAk",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-10098/01.webp",
+      "width": 530,
+      "height": 260,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 10098",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": " Демоверсия 2024 (Уровень: Базовый)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для какого наименьшего целого неотрицательного числа "
+        },
+        {
+          "text": "A ",
+          "italic": true
+        },
+        {
+          "text": "выражение \n"
+        },
+        {
+          "text": "(x + 2y < A) ∨ (y > x) ∨ (x > 60)",
+          "bold": true
+        },
+        {
+          "text": "  тождественно истинно, т.е. принимает значение 1 при любых целых неотрицательных x и y?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-10098/02.webp",
+      "width": 750,
+      "height": 350,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def F(x, y, A):\n    return (x + 2 * y < A) or (y > x) or (x > 60)\n\nfor A in range(0, 1000):\n    if all(F(x, y, A) for x in range(0, 100) for y in range(0, 100)):\n        print(A)\n        break"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к решению:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(x, y, A): - создаем функцию с именем "
+          },
+          {
+            "text": "F ",
+            "bold": true
+          },
+          {
+            "text": "и параметрами"
+          },
+          {
+            "text": " x, y, A",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return (x + 2 * y < A) or (y > x) or (x > 60) - возвращаем результат логического выражения, которое проверяет три условия: "
+          },
+          {
+            "text": "(x + 2 * y < A), (y > x), (x > 60)",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for A in range(0, 1000): - начинаем цикл, перебирая значения "
+          },
+          {
+            "text": "A от 0 до 999",
+            "bold": true
+          },
+          {
+            "text": " (т.к. нам сказано, что число "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": " целое и неотрицательное)"
+          }
+        ],
+        [
+          {
+            "text": "if all(F(x, y, A) for x in range(0, 100) for y in range(0, 100)): - проверяем, если все значения функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " для каждой комбинации "
+          },
+          {
+            "text": "x ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "y",
+            "bold": true
+          },
+          {
+            "text": " в диапазоне "
+          },
+          {
+            "text": "1000",
+            "bold": true
+          },
+          {
+            "text": " являются истинными. "
+          },
+          {
+            "text": "(F == 1 / F == True)",
+            "bold": true
+          },
+          {
+            "text": " Если функция возвращает нам истину, то мы прекращаем работу цикла и останавливаемся на нужном значении A."
+          }
+        ],
+        [
+          {
+            "text": "print(A) - выводим значение "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "break - прерываем выполнение цикла после вывода первого (наименьшего) значения"
+          },
+          {
+            "text": " A",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 181"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-10098/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy \n",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 10098 ЕГЭ по информатике #15",
+  "task": 15
+}

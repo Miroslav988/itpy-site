@@ -1,0 +1,314 @@
+{
+  "slug": "zadanie-23-ege-razbor-zadachi-7011",
+  "title": "Задание 23 ЕГЭ: разбор задачи 7011",
+  "description": "Условие: КЕГЭ № 7011 (Уровень: Средний) • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-04-09",
+  "cover": {
+    "src": "/blog/zadanie-23-ege-razbor-zadachi-7011/01.webp",
+    "width": 530,
+    "height": 260
+  },
+  "source": "https://dzen.ru/a/ZhQINwStdRWlE58-",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-7011/01.webp",
+      "width": 530,
+      "height": 260,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "КЕГЭ",
+          "href": "https://kompege.ru/task"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "№ 7011 (Уровень: Средний)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/390"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Исполнитель Калькулятор преобразует число, записанное на экране. У исполнителя есть три команды, которым присвоены коды:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "A. Прибавь 2\nB. Прибавь 3\nС. Умножь на 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Первая команда увеличивает число на 2 раза, вторая – на 3 раза, третья – в 2 раза. Программа для исполнителя – это последовательность команд."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сколько существует программ, для которых при исходном числе 2 результатом будет являться число 40, при этом траектория вычисления не содержит число 28, а также не содержит подпоследовательность команд BACA. Траектория вычисления программы – это последовательности результатов выполнения всех команд."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-7011/02.webp",
+      "width": 750,
+      "height": 336,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a, b, s: str):",
+            "bold": true
+          },
+          {
+            "text": " - объявление функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с "
+          },
+          {
+            "text": "тремя параметрами: a и b (целые числа) и s (строка)",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if a >= b or a == 28:",
+            "bold": true
+          },
+          {
+            "text": " - проверка условия. Если "
+          },
+          {
+            "text": "a больше или равно b",
+            "bold": true
+          },
+          {
+            "text": " или"
+          },
+          {
+            "text": " a равно 28",
+            "bold": true
+          },
+          {
+            "text": ", то выполняется следующий блок кода."
+          }
+        ],
+        [
+          {
+            "text": "return a == b and 'BACA' not in s",
+            "bold": true
+          },
+          {
+            "text": " - возвращается результат проверки двух условий: "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " равно "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": " и строка "
+          },
+          {
+            "text": "'BACA'",
+            "bold": true
+          },
+          {
+            "text": " не содержится в переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return F(a+2, b, s+'A') + F(a+3, b, s+'B') + F(a*2, b, s+'C') ",
+            "bold": true
+          },
+          {
+            "text": "- возвращается сумма трех рекурсивных вызовов функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": ". В каждом вызове значение "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " увеличивается на "
+          },
+          {
+            "text": "2, 3",
+            "bold": true
+          },
+          {
+            "text": " или удваивается, "
+          },
+          {
+            "text": "а",
+            "bold": true
+          },
+          {
+            "text": " строка "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " дополняется символом "
+          },
+          {
+            "text": "'A', 'B' ",
+            "bold": true
+          },
+          {
+            "text": "или "
+          },
+          {
+            "text": "'C'",
+            "bold": true
+          },
+          {
+            "text": " соответственно."
+          }
+        ],
+        [
+          {
+            "text": "print(F(2, 40, ''))",
+            "bold": true
+          },
+          {
+            "text": " - вызов функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " со значениями аргументов "
+          },
+          {
+            "text": "2, 40",
+            "bold": true
+          },
+          {
+            "text": " и пустой строки. Результат выводится на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 27609"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-7011/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 7011 ЕГЭ по информатике #23",
+  "task": 23
+}

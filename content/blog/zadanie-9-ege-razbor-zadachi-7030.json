@@ -1,0 +1,355 @@
+{
+  "slug": "zadanie-9-ege-razbor-zadachi-7030",
+  "title": "Задание 9 ЕГЭ: разбор задачи 7030",
+  "description": "(А.Богданов) Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел. Определите количество строк таблицы, для которых выполняются все условия:",
+  "date": "2023-08-15",
+  "cover": {
+    "src": "/blog/zadanie-9-ege-razbor-zadachi-7030/01.webp",
+    "width": 530,
+    "height": 290
+  },
+  "source": "https://dzen.ru/a/ZNIwbvE1AzJV4XyI",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-7030/01.webp",
+      "width": 530,
+      "height": 290,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 7030 Danov2303 (Уровень: Сложный)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "("
+        },
+        {
+          "text": "А.Богданов",
+          "href": "https://vk.com/inf_intensive"
+        },
+        {
+          "text": ") Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел. Определите количество строк таблицы, для которых выполняются все условия:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "в строке три числа повторяются ровно два раза;"
+          }
+        ],
+        [
+          {
+            "text": "эти три числа образуют стороны прямоугольного треугольника."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе запишите одно число."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9.csv",
+          "href": "https://kompege.ru/files/6UwhU_lMr.csv"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-7030/02.webp",
+      "width": 750,
+      "height": 346,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "count = 0\nfor s in open('9.txt'):\n    M = sorted([int(i) for i in s.split()])\n    if len(set(M)) == 3 and all(M.count(x) == 2 for x in M):\n        a, b, c = sorted(set(M))\n        if c ** 2 == a ** 2 + b ** 2:\n            count += 1\nprint(count)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "count = 0 ",
+            "italic": true
+          },
+          {
+            "text": "- Создаем переменную "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " и присваиваем ей значение "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.txt'):",
+            "italic": true
+          },
+          {
+            "text": " - используем цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": ", чтобы перебрать строки файла "
+          },
+          {
+            "text": "'9.txt",
+            "bold": true
+          },
+          {
+            "text": "' и присваиваем каждой строке значение переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(i) for i in s.split()]) ",
+            "italic": true
+          },
+          {
+            "text": "- Создаем "
+          },
+          {
+            "text": "список",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", который содержит целочисленные элементы строки "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", отсортированные в порядке возрастания."
+          }
+        ],
+        [
+          {
+            "text": "if len(set(M)) == 3 and all(M.count(x) == 2 for x in M): ",
+            "italic": true
+          },
+          {
+            "text": "- используем условный оператор "
+          },
+          {
+            "text": "if",
+            "bold": true
+          },
+          {
+            "text": ", чтобы проверить, состоит ли "
+          },
+          {
+            "text": "список",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " из трех разных чисел, каждое из которых встречается "
+          },
+          {
+            "text": "ровно 2 раза",
+            "bold": true
+          },
+          {
+            "text": " в "
+          },
+          {
+            "text": "списке M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "a, b, c = sorted(set(M))",
+            "italic": true
+          },
+          {
+            "text": " - Присваиваем значениям"
+          },
+          {
+            "text": " a, b и c",
+            "bold": true
+          },
+          {
+            "text": " уникальные отсортированные значения из"
+          },
+          {
+            "text": " списка M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if c ** 2 == a ** 2 + b ** 2: ",
+            "italic": true
+          },
+          {
+            "text": "- используем условный оператор "
+          },
+          {
+            "text": "if",
+            "bold": true
+          },
+          {
+            "text": ", чтобы проверить, является ли большее число c квадратом суммы квадратов меньших чисел "
+          },
+          {
+            "text": "a и b",
+            "bold": true
+          },
+          {
+            "text": "(теорема Пифагора)."
+          }
+        ],
+        [
+          {
+            "text": "count += 1",
+            "italic": true
+          },
+          {
+            "text": " - Увеличиваем значение переменной "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " на единицу, если всё прошло успешно."
+          }
+        ],
+        [
+          {
+            "text": "print(count) -",
+            "italic": true
+          },
+          {
+            "text": " Выводим на экран значение переменной "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-7030/03.webp",
+      "width": 750,
+      "height": 455,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "count = 0\nfor s in open('lessons/9.txt'):\n    M = sorted([int(i) for i in s.split()])\n    copied = [x for x in M if M.count(x) == 2]\n    if len(set(copied)) != 3: continue\n    a, b, c = sorted(set(M))\n    if c ** 2 == a ** 2 + b ** 2:\n        count += 1\nprint(count)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 148"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-7030/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6 \n",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 7030 ЕГЭ по информатике #9",
+  "task": 9
+}

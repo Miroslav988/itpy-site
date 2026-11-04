@@ -1,0 +1,303 @@
+{
+  "slug": "zadanie-1-ege-razbor-zadachi-58468",
+  "title": "Задание 1 ЕГЭ: разбор задачи 58468",
+  "description": "Условие: Тип 1 № 58468 • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-01-01",
+  "cover": {
+    "src": "/blog/zadanie-1-ege-razbor-zadachi-58468/01.webp",
+    "width": 530,
+    "height": 270
+  },
+  "source": "https://dzen.ru/a/ZZD7RuvCJlTsG2mi",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-1-ege-razbor-zadachi-58468/01.webp",
+      "width": 530,
+      "height": 270,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "Тип 1 №"
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "58468",
+          "href": "https://www.notion.so/problem?id=58468"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/326"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "На рисунке схема дорог изображена в виде графа, в таблице звёздочками обозначено наличие дороги между населёнными пунктами. Так как таблицу и схему рисовали независимо друг от друга, нумерация населённых пунктов в таблице никак не связана с буквенными обозначениями на графе. Выпишите последовательно без пробелов и знаков препинания указанные на графе буквенные обозначения пунктов от П1 до П8: сначала букву, соответствующую П1, затем букву, соответствующую П2, и т. д."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-1-ege-razbor-zadachi-58468/02.webp",
+      "width": 546,
+      "height": 213,
+      "alt": "-2"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-1-ege-razbor-zadachi-58468/03.webp",
+      "width": 750,
+      "height": 365,
+      "alt": "-3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "💡 "
+        },
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import permutations ",
+            "bold": true
+          },
+          {
+            "text": "- Импортируем функцию "
+          },
+          {
+            "text": "permutations",
+            "bold": true
+          },
+          {
+            "text": " из модуля"
+          },
+          {
+            "text": " itertools",
+            "bold": true
+          },
+          {
+            "text": " для генерации перестановок получаемого алфавита."
+          }
+        ],
+        [
+          {
+            "text": "table = '14 17 18 23 25 26 32 34 38 41 43 47 48 52 56 58 62 65 71 74 81 83 84 85'",
+            "bold": true
+          },
+          {
+            "text": " - По таблице из условия составляем строку"
+          },
+          {
+            "text": " всех возможных дорог ",
+            "bold": true
+          },
+          {
+            "text": "(туда и обратно)."
+          }
+        ],
+        [
+          {
+            "text": "graph = 'АБ БА АИ ИА ИБ БИ ИЖ ЖИ БЖ ЖБ БВ ВБ ВЖ ЖВ ВГ ГВ ЖЕ ЕЖ ЕГ ГЕ ДГ ГД ЕД ДЕ'",
+            "bold": true
+          },
+          {
+            "text": " - Аналогично делаем для графа с буквенными вершинами."
+          }
+        ],
+        [
+          {
+            "text": "for per in permutations('АБВГДЖИЕ'):",
+            "bold": true
+          },
+          {
+            "text": " - Через "
+          },
+          {
+            "text": "permutations",
+            "bold": true
+          },
+          {
+            "text": " получаем все возможные перестановки символов "
+          },
+          {
+            "text": "'АБВГДЖИЕ'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "new_table = table ",
+            "bold": true
+          },
+          {
+            "text": "- Инициализируем переменную "
+          },
+          {
+            "text": "new_table",
+            "bold": true
+          },
+          {
+            "text": " с текущим значением "
+          },
+          {
+            "text": "table",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(1, 8+1):",
+            "bold": true
+          },
+          {
+            "text": " - Будем пробегать все числовые вершины из таблицы."
+          }
+        ],
+        [
+          {
+            "text": "new_table = new_table.replace(str(i), per[i-1]) ",
+            "bold": true
+          },
+          {
+            "text": "- И заменяем числа в строке "
+          },
+          {
+            "text": "new_table",
+            "bold": true
+          },
+          {
+            "text": " на символы из текущей перестановки"
+          },
+          {
+            "text": " per",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if set(new_table.split()) == set(graph.split()):",
+            "bold": true
+          },
+          {
+            "text": " - Проверяем, получившиеся наборы дорог совпадают через множества элементов строк "
+          },
+          {
+            "text": "new_table",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "graph",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print('1 2 3 4 5 6 7 8')",
+            "bold": true
+          },
+          {
+            "text": " - Вывод числовой набор вершин."
+          }
+        ],
+        [
+          {
+            "text": "print(*per)",
+            "bold": true
+          },
+          {
+            "text": " - И выводим текущую перестановку, которая соответствует графу."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: ИГВБЕДАЖ"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-1-ege-razbor-zadachi-58468/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 58468 ЕГЭ по информатике #1",
+  "task": 1
+}

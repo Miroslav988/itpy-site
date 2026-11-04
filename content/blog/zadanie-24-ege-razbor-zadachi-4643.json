@@ -1,0 +1,346 @@
+{
+  "slug": "zadanie-24-ege-razbor-zadachi-4643",
+  "title": "Задание 24 ЕГЭ: разбор задачи 4643",
+  "description": "Условие: № 4643 (Уровень: Базовый) • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2023-12-29",
+  "cover": {
+    "src": "/blog/zadanie-24-ege-razbor-zadachi-4643/01.webp",
+    "width": 530,
+    "height": 230
+  },
+  "source": "https://dzen.ru/a/ZY6FQznG4kyL_roi",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-4643/01.webp",
+      "width": 530,
+      "height": 230,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 4643",
+          "href": "https://kompege.ru/"
+        },
+        {
+          "text": " (Уровень: Базовый)\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/322"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(А. Калинин)",
+          "href": "https://vk.com/sanchopancho282",
+          "bold": true
+        },
+        {
+          "text": " Текстовый файл состоит из символов A, B и цифр 1, 2. Определите максимальное количество идущих подряд троек символов вида "
+        },
+        {
+          "text": "двузначное число + буква",
+          "bold": true
+        },
+        {
+          "text": " в прилагаемом файле. Для выполнения этого задания следует написать программу."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Файлы к заданию: "
+        },
+        {
+          "text": "24.txt",
+          "href": "https://kompege.ru/files/8yQZfjOY_.txt"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-4643/02.webp",
+      "width": 750,
+      "height": 305,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "💡 "
+        },
+        {
+          "text": "Комментарии к решению:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline()",
+            "bold": true
+          },
+          {
+            "text": " - Читаем первую строку из файла "
+          },
+          {
+            "text": "'24.txt'",
+            "bold": true
+          },
+          {
+            "text": " и сохраняем её в переменную "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('B', 'A').replace('2', '1')",
+            "bold": true
+          },
+          {
+            "text": " - Заменяем символ "
+          },
+          {
+            "text": "'B'",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "на",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "'A'",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "'2' на '1'",
+            "bold": true
+          },
+          {
+            "text": " в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", чтобы удобнее отсеивать необходимые"
+          },
+          {
+            "text": " тройки",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('11A', '*').replace('A', ' ').replace('1', ' ')",
+            "bold": true
+          },
+          {
+            "text": " - Заменяем последовательность "
+          },
+          {
+            "text": "'11A'",
+            "bold": true
+          },
+          {
+            "text": " на"
+          },
+          {
+            "text": " '*'",
+            "bold": true
+          },
+          {
+            "text": " и символ"
+          },
+          {
+            "text": " 'A' на пробел",
+            "bold": true
+          },
+          {
+            "text": ", затем "
+          },
+          {
+            "text": "символ '1' на пробел",
+            "bold": true
+          },
+          {
+            "text": " в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ". Таким образом в строке останутся только "
+          },
+          {
+            "text": "тройки",
+            "italic": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "A = [len(i) for i in s.split()]",
+            "bold": true
+          },
+          {
+            "text": " - Создаём список "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": ", содержащий "
+          },
+          {
+            "text": "длины",
+            "bold": true
+          },
+          {
+            "text": " каждой строчки после разбиения строки "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " на список строк через метод"
+          },
+          {
+            "text": " .split()",
+            "bold": true
+          },
+          {
+            "text": " по пробелам."
+          }
+        ],
+        [
+          {
+            "text": "print(max(A))",
+            "bold": true
+          },
+          {
+            "text": " - Выводим максимальную длину из найденных в списке "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-4643/03.webp",
+      "width": 750,
+      "height": 684,
+      "alt": "-3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Это решение не такое оптимальное, поэтому без комментариев, но если нужно - напишите об этом "
+        },
+        {
+          "text": "в комментариях на канале",
+          "href": "https://dzen.ru/d47ce4efcec64dd19e2334ed4ac8da9a?pvs=25#44e42fa9d8544e16ab713a701132aeaf"
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 67"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-4643/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 4643 ЕГЭ по информатике #24",
+  "task": 24
+}

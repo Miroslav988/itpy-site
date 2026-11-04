@@ -1,0 +1,56 @@
+{
+  "slug": "zadanie-12-ege-razbor-zadachi-39241",
+  "title": "Задание 12 ЕГЭ: разбор задачи 39241",
+  "description": "Полный разбор задачи в Notion",
+  "date": "2025-02-20",
+  "task": 12,
+  "source": "https://dzen.ru/a/Z6ilw3sEAk_FJK_V",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/39241-12-59d2fed0292d4105afbb5036f86369ad?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Задачка 12 номера с сайте "
+        },
+        {
+          "text": "Решу ЕГЭ.",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=39241"
+        },
+        {
+          "text": " Интересна она благодаря условию: \"После выполнения программы получилась строка, содержащая только "
+        },
+        {
+          "text": "двойки\".",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Код решения"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-12-ege-razbor-zadachi-39241/01.webp",
+      "width": 530,
+      "height": 320,
+      "alt": ""
+    }
+  ],
+  "originalTitle": "Разбор номера 39241 #reshu по информатике #ЕГЭ12"
+}

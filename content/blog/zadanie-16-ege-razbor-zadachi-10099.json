@@ -1,0 +1,194 @@
+{
+  "slug": "zadanie-16-ege-razbor-zadachi-10099",
+  "title": "Задание 16 ЕГЭ: разбор задачи 10099",
+  "description": "Условие: № 10099 Досрочная волна 2024 (Уровень: Базовый) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-11-08",
+  "cover": {
+    "src": "/blog/zadanie-16-ege-razbor-zadachi-10099/01.webp",
+    "width": 510,
+    "height": 340
+  },
+  "source": "https://dzen.ru/a/ZUqXLOFbnymJrONH",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-16-ege-razbor-zadachi-10099/01.webp",
+      "width": 510,
+      "height": 340,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ ",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": "10099",
+          "italic": true
+        },
+        {
+          "text": " ",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "Досрочная волна 2024 (Уровень: Базовый)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Алгоритм вычисления значения функции F(n), где "
+        },
+        {
+          "text": "n",
+          "italic": true
+        },
+        {
+          "text": " – натуральное число, задан следующими соотношениями: F(n) = n при n > 2024; F(n) = n * F(n + 1), если n ≤ 2024."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Чему равно значение выражения F(2022) / F(2024)?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-16-ege-razbor-zadachi-10099/02.webp",
+      "width": 750,
+      "height": 519,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import sys\nsys.setrecursionlimit(10000)\n\ndef F(n):\n    if n > 2024:\n        return n\n    if n <= 2024:\n        return n * F(n + 1)\n\nprint(F(2022) / F(2024))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import sys - импортируем модуль sys, который предоставляет функциональность, связанную с системой. В нашем случае, он поможет избавиться от лимита рекурсии в python."
+          }
+        ],
+        [
+          {
+            "text": "sys.setrecursionlimit(10000) - устанавливаем максимальную глубину рекурсии равной 10000. На месте 10000 может быть любое число, главное чтобы оно превышало наибольшее n (в нашем случае ≥ 2024)."
+          }
+        ],
+        [
+          {
+            "text": "def F(n): - создаем функцию с именем F и параметром n."
+          }
+        ],
+        [
+          {
+            "text": "if n > 2024: - проверяем условие "
+          },
+          {
+            "text": "“если значение n больше 2024”",
+            "italic": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return n - возвращаем значение n."
+          }
+        ],
+        [
+          {
+            "text": "if n <= 2024: - проверяем условие "
+          },
+          {
+            "text": "“если значение n меньше или равно 2024”",
+            "italic": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return n * F(n + 1) - возвращаем произведение значения n и рекурсивного вызова функции F с аргументом n + 1."
+          }
+        ],
+        [
+          {
+            "text": "print(F(2022) / F(2024)) - выводим результат деления функции F с аргументом 2022 на функцию F с аргументом 2024."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 4090506"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-16-ege-razbor-zadachi-10099/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 10099 ЕГЭ по информатике #16",
+  "task": 16
+}

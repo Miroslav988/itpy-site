@@ -1,0 +1,36 @@
+{
+  "slug": "zadanie-15-ege-razbor-zadachi-iz-dosrochnoy-volny-2025",
+  "title": "Задание 15 ЕГЭ: разбор задачи из досрочной волны 2025",
+  "description": "Укажите наименьшее целое значение А, при котором выражение (2y + 3x < A) V (x > 15) V (y > 35) истинно для любых целых положительных значений х и у.",
+  "date": "2025-08-27",
+  "task": 15,
+  "source": "https://dzen.ru/a/aJzY3ocmMzMeIVau",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Укажите наименьшее целое значение А, при котором выражение\n(2y + 3x < A) V (x > 15) V (y > 35)\nистинно для любых целых положительных значений х и у."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Код решения"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-iz-dosrochnoy-volny-2025/01.webp",
+      "width": 750,
+      "height": 291,
+      "alt": ""
+    }
+  ],
+  "originalTitle": "Разбор #ДВ2025 номера #ЕГЭ15 по информатике"
+}

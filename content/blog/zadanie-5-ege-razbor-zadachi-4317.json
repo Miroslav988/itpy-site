@@ -1,0 +1,673 @@
+{
+  "slug": "zadanie-5-ege-razbor-zadachi-4317",
+  "title": "Задание 5 ЕГЭ: разбор задачи 4317",
+  "description": "Автомат обрабатывает натуральное число N по следующему алгоритму:",
+  "date": "2023-08-26",
+  "cover": {
+    "src": "/blog/zadanie-5-ege-razbor-zadachi-4317/01.webp",
+    "width": 520,
+    "height": 530
+  },
+  "source": "https://dzen.ru/a/ZNI7vYkxB3-h9dyx",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-4317/01.webp",
+      "width": 520,
+      "height": 530,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 4317 Пробный 06.2022 /dev/inf advanced (Уровень: Сложный)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Автомат обрабатывает натуральное число "
+        },
+        {
+          "text": "N",
+          "italic": true
+        },
+        {
+          "text": " по следующему алгоритму:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Строится пятеричная запись числа "
+          },
+          {
+            "text": "N",
+            "italic": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "К полученной записи дописываются разряды. Если последняя цифра в пятеричной записи четная, справа дописывается 2, если нечетная – слева дописывается 2 и справа 3."
+          }
+        ],
+        [
+          {
+            "text": "Результат переводится в десятичную систему и выводится на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В результате работы автомата на экране появилось число, меньшее 1000. Для какого наибольшего значения "
+        },
+        {
+          "text": "N",
+          "italic": true
+        },
+        {
+          "text": " данная ситуация возможна?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-4317/02.webp",
+      "width": 650,
+      "height": 703,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "for n in range(1, 1000):\n    M = []\n    x = n\n\n    while x > 0:\n        M.append(x % 5)\n        x //= 5\n    M.reverse()\n\n    if M[-1] % 2 == 0:\n        M.append(2)\n    else:\n        M = [3] + M + [2]\n\n    s = ''.join([str(x) for x in M])\n    r = int(s, 5)\n\n    if r < 1000:\n        print(n)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к первому варианту решения задачи:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "for n in range(1, 1000): ",
+            "italic": true
+          },
+          {
+            "text": "- Используем цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": " для перебора всех значений от 1 до 999, присваивая каждое значение переменной "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M = []",
+            "italic": true
+          },
+          {
+            "text": " - Создаем пустой список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "x = n ",
+            "italic": true
+          },
+          {
+            "text": "- Копируем значение переменной "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " в переменную"
+          },
+          {
+            "text": " x",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "while x > 0: - Запускаем цикл "
+          },
+          {
+            "text": "while",
+            "bold": true
+          },
+          {
+            "text": ", который будет выполняться, пока значение переменной "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " больше 0."
+          }
+        ],
+        [
+          {
+            "text": "M.append(x % 5)",
+            "italic": true
+          },
+          {
+            "text": " - Добавляем остаток от деления значения переменной "
+          },
+          {
+            "text": "x ",
+            "bold": true
+          },
+          {
+            "text": "на 5 в конец списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "x //= 5",
+            "italic": true
+          },
+          {
+            "text": " - Делаем целочисленное деление значения переменной"
+          },
+          {
+            "text": " x",
+            "bold": true
+          },
+          {
+            "text": " на 5 и присваиваем результат переменной "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M.reverse() ",
+            "italic": true
+          },
+          {
+            "text": "- Разворачиваем список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " в обратном порядке."
+          }
+        ],
+        [
+          {
+            "text": "if M[-1] % 2 == 0: ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, является ли последний элемент списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " четным числом."
+          }
+        ],
+        [
+          {
+            "text": "M.append(2) ",
+            "italic": true
+          },
+          {
+            "text": "- Если последний элемент списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " четный, добавляем число 2 в конец списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "italic": true
+          },
+          {
+            "text": " - Если условие из "
+          },
+          {
+            "text": "строки 8",
+            "bold": true
+          },
+          {
+            "text": " ложно."
+          }
+        ],
+        [
+          {
+            "text": "M = [3] + M + [2] ",
+            "italic": true
+          },
+          {
+            "text": "- Присваиваем переменной "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " список, который состоит из числа 3, содержимого списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " и числа 2."
+          }
+        ],
+        [
+          {
+            "text": "s = ''.join([str(x) for x in M]) ",
+            "italic": true
+          },
+          {
+            "text": "- Создаем строку "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", объединяя все элементы списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " в строку, преобразуя их в строки."
+          }
+        ],
+        [
+          {
+            "text": "r = int(s, 5) ",
+            "italic": true
+          },
+          {
+            "text": "- Преобразуем строку "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " в целое число, используя систему счисления "
+          },
+          {
+            "text": "5",
+            "bold": true
+          },
+          {
+            "text": ", и присваиваем результат переменной "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if r < 1000: ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, является ли значение переменной "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": " меньше 1000."
+          }
+        ],
+        [
+          {
+            "text": "print(n) ",
+            "italic": true
+          },
+          {
+            "text": "- Если условие из "
+          },
+          {
+            "text": "строки 14 ",
+            "bold": true
+          },
+          {
+            "text": "истинно, выводим значение переменной "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-4317/03.webp",
+      "width": 650,
+      "height": 703,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def system(x):\n    s = ''\n    while x > 0:\n        s += str(x % 5)\n        x //= 5\n    return s[::-1]\n\nfor n in range(1, 1000):\n    s = system(n)\n\n    if int(s[-1]) % 2 == 0:\n        s += '2'\n    else:\n        s = '2' + s + '3'\n\n    r = int(s, 5)\n\n    if r < 1000:\n        print(n)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии ко второму варианту решения задачи:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def system(x): ",
+            "italic": true
+          },
+          {
+            "text": "- Здесь мы определяем функцию "
+          },
+          {
+            "text": "system",
+            "bold": true
+          },
+          {
+            "text": ", которая переводит из десятичной записи числа в пятеричную."
+          }
+        ],
+        [
+          {
+            "text": "for n in range(1, 1000):",
+            "italic": true
+          },
+          {
+            "text": " - Запускаем цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": ", который проходит через числа от 1 до 999."
+          }
+        ],
+        [
+          {
+            "text": "s = system(n)",
+            "italic": true
+          },
+          {
+            "text": " - Вызываем функцию "
+          },
+          {
+            "text": "system",
+            "bold": true
+          },
+          {
+            "text": " для числа "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " и сохраняем результат в переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ". Это дает нам представление числа "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " в пятеричной системе исчисления в виде строки."
+          }
+        ],
+        [
+          {
+            "text": "if int(s[-1]) % 2 == 0:",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, является ли последний символ строки "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " четной цифрой."
+          }
+        ],
+        [
+          {
+            "text": "s += '2'",
+            "italic": true
+          },
+          {
+            "text": " - Если последний символ строки "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " четный, добавляем символ '2' в конец строки."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "italic": true
+          },
+          {
+            "text": " ",
+            "bold": true
+          },
+          {
+            "text": " - Если последний символ строки "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " нечетный, то"
+          }
+        ],
+        [
+          {
+            "text": "s = '2' + s + '3' ",
+            "italic": true
+          },
+          {
+            "text": "- добавляем символ '2' в начало строки, затем добавляя содержимое исходной строки "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " и, наконец, символ '3' в конец строки."
+          }
+        ],
+        [
+          {
+            "text": "r = int(s, 5) ",
+            "italic": true
+          },
+          {
+            "text": "- Преобразуем строку "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " в целое число, интерпретируя ее как число в пятеричной системе исчисления."
+          }
+        ],
+        [
+          {
+            "text": "if r < 1000: ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, является ли число "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": " меньшим 1000."
+          }
+        ],
+        [
+          {
+            "text": "print(n) ",
+            "italic": true
+          },
+          {
+            "text": "- Если число "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": " меньше 1000, выводим значение "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 199"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-4317/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6 \n",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 4317 ЕГЭ по информатике #5",
+  "task": 5
+}

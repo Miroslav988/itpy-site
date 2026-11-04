@@ -1,0 +1,76 @@
+{
+  "slug": "zadanie-14-ege-razbor-zadachi-2",
+  "title": "Задание 14 ЕГЭ: разбор задачи",
+  "description": "Информатика ЕГЭ | itpy 🧑‍💻 Поддержать автора донатом 💵",
+  "date": "2024-10-23",
+  "task": 14,
+  "source": "https://dzen.ru/a/Zw__xbqEUVuwEnT0",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Подготовил для вас шпоргалочку для решению 14 номера!"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Собрать универсальный алфавит для систем счисления от 2 до 36:",
+            "bold": true
+          },
+          {
+            "text": "\nalphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')"
+          }
+        ],
+        [
+          {
+            "text": "Аналогичный способ через библиотеку string:",
+            "bold": true
+          },
+          {
+            "text": "\nfrom string import *\nalphabet = digits + ascii_uppercase"
+          }
+        ],
+        [
+          {
+            "text": "Перебор элементов n-ой системы счисления:",
+            "bold": true
+          },
+          {
+            "text": "\nfor y in alphabet[:n]:"
+          }
+        ],
+        [
+          {
+            "text": "Перевод строку из n-ой системы счисления в десятичную:",
+            "bold": true
+          },
+          {
+            "text": "\nx = int(f'79{x}{y}7', n)"
+          }
+        ],
+        [
+          {
+            "text": "Встроенные функции перевода:",
+            "bold": true
+          },
+          {
+            "text": "\nbin()[2:]  # перевод в 2-ую\noct()[2:]  # перевод в 8-ую\nhex()[2:]  # перевод в 16-ую"
+          }
+        ],
+        [
+          {
+            "text": "Перевод в другую систему счисления через f-строки:",
+            "bold": true
+          },
+          {
+            "text": "\nx = 27\nprint(f'{x:b}')  # 11011\nprint(f'{x:o}')  # 33\nprint(f'{x:x}')  # 1b\nprint(f'{x:X}')  # 1B"
+          }
+        ]
+      ]
+    }
+  ],
+  "originalTitle": "Шпаргалка ЕГЭ | Задание #ЕГЭ14 #шпора"
+}

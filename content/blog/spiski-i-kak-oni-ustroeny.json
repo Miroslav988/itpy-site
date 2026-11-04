@@ -1,0 +1,1732 @@
+{
+  "slug": "spiski-i-kak-oni-ustroeny",
+  "title": "Списки и как они устроены",
+  "description": "В языке программирования **Python** списки - это упорядоченные коллекции элементов, которые могут быть различных типов данных. Списки позволяют хранить несколько значений в одной…",
+  "date": "2023-10-30",
+  "cover": {
+    "src": "/blog/spiski-i-kak-oni-ustroeny/01.webp",
+    "width": 530,
+    "height": 230
+  },
+  "source": "https://dzen.ru/a/ZTXWq9Ea4B0q56iz",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/01.webp",
+      "width": 530,
+      "height": 230,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Что такое списки"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В языке программирования **Python** списки - это упорядоченные коллекции элементов, которые могут быть различных типов данных. Списки позволяют хранить несколько значений в одной переменной и обращаться к этим значениям по индексу. Они являются одной из основных структур данных в Python и широко используются для организации и манипулирования данными."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/02.webp",
+      "width": 212,
+      "height": 197,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основные характеристики списков в "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/03.webp",
+      "width": 570,
+      "height": 135,
+      "alt": "-3"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Пример создания списка"
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/04.webp",
+      "width": 481,
+      "height": 165,
+      "alt": "-4"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "my_list = [1, 2, 3, 'four', 5.0]"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Примеры операций с списками"
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/05.webp",
+      "width": 481,
+      "height": 483,
+      "alt": "-5"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# Добавление элемента в конец списка\nmy_list.append(6)\n\n# Удаление элемента по значению\nmy_list.remove('four')\n\n# Изменение элемента по индексу\nmy_list[1] = 7\n\n# Получение длины списка\nlength = len(my_list)\n\n# Извлечение подсписка\nsub_list = my_list[2:4]  # Это вернет список [3, 7]\n\n# Проверка наличия элемента в списке\nif 5.0 in my_list:\n    print(\"5.0 есть в списке\")"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Списки предоставляют множество встроенных методов и функций для работы с данными, таких как сортировка, обратное сортировка, объединение списков и многое другое."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Индексы списков"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Индексы в списках - это числовые значения, которые используются для обращения к элементам списка. Индексация начинается с 0, то есть первый элемент списка имеет индекс 0, второй - индекс 1, и так далее. В **Python** индексы могут быть положительными и отрицательными."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вот некоторые важные аспекты работы с индексами в списках:",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Положительные индексы",
+            "bold": true
+          },
+          {
+            "text": ": Элементы списка нумеруются начиная с 0. Положительные индексы соответствуют порядковому номеру элементов в списке."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/06.webp",
+      "width": 481,
+      "height": 210,
+      "alt": "-6"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = ['a', 'b', 'c', 'd']\nprint(my_list[0])  # Выводит 'a'\nprint(my_list[2])  # Выводит 'c'"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": "Отрицательные индексы",
+          "bold": true
+        },
+        {
+          "text": ": Отрицательные индексы представляют собой обратную нумерацию с конца списка.  "
+        },
+        {
+          "text": "-1",
+          "bold": true
+        },
+        {
+          "text": " соответствует последнему элементу, "
+        },
+        {
+          "text": "-2",
+          "bold": true
+        },
+        {
+          "text": " - предпоследнему и так далее."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/07.webp",
+      "width": 481,
+      "height": 213,
+      "alt": "-7"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = ['a', 'b', 'c', 'd']\nprint(my_list[-1])  # Выводит 'd'\nprint(my_list[-3])  # Выводит 'b'"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3."
+        },
+        {
+          "text": " Выход за границы списка",
+          "bold": true
+        },
+        {
+          "text": ": При обращении к индексам за пределами диапазона, "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": " вызовет ошибку \"IndexError\".  Важно убедиться, что индексы находятся в пределах допустимого диапазона."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/08.webp",
+      "width": 481,
+      "height": 105,
+      "alt": "-8"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = ['a', 'b', 'c']\nprint(my_list[3])  # Вызовет ошибку IndexError, так как индекс 3 выходит за границы списка"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. "
+        },
+        {
+          "text": "Срезы (slicing)",
+          "bold": true
+        },
+        {
+          "text": ": Срезы позволяют получить подсписок элементов, указав начальный и конечный индексы через двоеточие."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/09.webp",
+      "width": 481,
+      "height": 106,
+      "alt": "-9"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = ['a', 'b', 'c', 'd', 'e']\nsub_list = my_list[1:4]  # Включает элементы с индексами 1, 2 и 3: ['b', 'c', 'd']"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5."
+        },
+        {
+          "text": " Необязательные аргументы при срезах",
+          "bold": true
+        },
+        {
+          "text": ": При использовании срезов, вы можете опускать начальный или конечный индекс.  Это означает, что если начальный индекс не указан, срез начнется с начала списка, а если конечный индекс не указан, срез продолжится до конца списка."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/10.webp",
+      "width": 481,
+      "height": 151,
+      "alt": "-10"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = ['a', 'b', 'c', 'd', 'e']\nsub_list1 = my_list[:3]   # Эквивалентно my_list[0:3], результат: ['a', 'b', 'c']\nsub_list2 = my_list[2:]   # Эквивалентно my_list[2:5], результат: ['c', 'd', 'e']\nsub_list3 = my_list[:]    # Копия всего списка: ['a', 'b', 'c', 'd', 'e']"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Использование индексов и срезов позволяет эффективно манипулировать элементами списков в "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Функции списков (len, max, min, sum)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": " для работы с списками предоставляются различные встроенные функции, которые облегчают манипуляции с данными в списках."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вот несколько таких функций:",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. ",
+          "italic": true
+        },
+        {
+          "text": "len()",
+          "bold": true
+        },
+        {
+          "text": ": Эта функция возвращает количество элементов в списке."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/11.webp",
+      "width": 481,
+      "height": 186,
+      "alt": "-11"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [1, 2, 3, 4, 5]\nlength = len(my_list)  # length будет равно 5"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": "max()",
+          "bold": true
+        },
+        {
+          "text": ": Функция "
+        },
+        {
+          "text": "max()",
+          "bold": true
+        },
+        {
+          "text": " возвращает наибольший элемент в списке."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/12.webp",
+      "width": 481,
+      "height": 184,
+      "alt": "-12"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [7, 2, 9, 4, 6]\nmaximum = max(my_list)  # maximum будет равно 9"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "min()",
+          "bold": true
+        },
+        {
+          "text": ": Функция "
+        },
+        {
+          "text": "min()",
+          "bold": true
+        },
+        {
+          "text": " возвращает наименьший элемент в списке."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/13.webp",
+      "width": 481,
+      "height": 180,
+      "alt": "-13"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [7, 2, 9, 4, 6]\nminimum = min(my_list)  # minimum будет равно 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. "
+        },
+        {
+          "text": "sum()",
+          "bold": true
+        },
+        {
+          "text": ": Функция "
+        },
+        {
+          "text": "sum()",
+          "bold": true
+        },
+        {
+          "text": " возвращает сумму всех числовых элементов в списке.  Однако все элементы должны быть числовыми, иначе будет вызвано исключение."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/14.webp",
+      "width": 481,
+      "height": 195,
+      "alt": "-14"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [1, 2, 3, 4, 5]\ntotal = sum(my_list)  # total будет равно 15"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Эти функции могут быть полезными при анализе и обработке списков.  Например, вы можете использовать функцию "
+        },
+        {
+          "text": "len()",
+          "bold": true
+        },
+        {
+          "text": " для определения размера списка, функции "
+        },
+        {
+          "text": "max()",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "min()",
+          "bold": true
+        },
+        {
+          "text": " для нахождения наибольшего и наименьшего элементов, а функцию "
+        },
+        {
+          "text": "sum()",
+          "bold": true
+        },
+        {
+          "text": " для вычисления суммы числовых значений в списке."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/15.webp",
+      "width": 198,
+      "height": 168,
+      "alt": "-15"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Методы списков"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Методы списков - это функции, которые применяются непосредственно к объектам типа \"список\" в **Python**. Они позволяют выполнять разнообразные операции над списками, такие как добавление, удаление, изменение элементов, сортировка, поиск и многое другое."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вот некоторые из наиболее распространенных методов списков:",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. ",
+          "italic": true
+        },
+        {
+          "text": ".append(element)",
+          "bold": true
+        },
+        {
+          "text": ": Добавляет элемент в конец списка."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/16.webp",
+      "width": 481,
+      "height": 153,
+      "alt": "-16"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [1, 2, 3]\nmy_list.append(4)  # Теперь my_list содержит [1, 2, 3, 4]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": ".insert(index, element)",
+          "bold": true
+        },
+        {
+          "text": ": Вставляет элемент на указанный индекс."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/17.webp",
+      "width": 481,
+      "height": 145,
+      "alt": "-17"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [1, 2, 3]\nmy_list.insert(1, 5)  # Теперь my_list содержит [1, 5, 2, 3]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": ".remove(element)",
+          "bold": true
+        },
+        {
+          "text": ": Удаляет первый найденный элемент с указанным значением."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/18.webp",
+      "width": 481,
+      "height": 163,
+      "alt": "-18"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [1, 2, 3, 2]\nmy_list.remove(2)  # Теперь my_list содержит [1, 3, 2]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. "
+        },
+        {
+          "text": ".pop(index)",
+          "bold": true
+        },
+        {
+          "text": ": Удаляет элемент по индексу и возвращает его значение.  Если индекс не указан, удаляется и возвращается последний элемент."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/19.webp",
+      "width": 481,
+      "height": 106,
+      "alt": "-19"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [1, 2, 3]\npopped_value = my_list.pop(1)  # Теперь my_list содержит [1, 3], а popped_value равно 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. "
+        },
+        {
+          "text": ".index(element)",
+          "bold": true
+        },
+        {
+          "text": ": Возвращает индекс первого вхождения указанного элемента."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/20.webp",
+      "width": 481,
+      "height": 201,
+      "alt": "-20"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [10, 20, 30, 20]\nindex = my_list.index(20)  # index равен 1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6. "
+        },
+        {
+          "text": ".sort()",
+          "bold": true
+        },
+        {
+          "text": ": Сортирует элементы списка в порядке возрастания (по умолчанию) или с использованием указанной функции-ключа."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/21.webp",
+      "width": 481,
+      "height": 139,
+      "alt": "-21"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [3, 1, 4, 1, 5, 9, 2]\nmy_list.sort()  # Теперь my_list содержит [1, 1, 2, 3, 4, 5, 9]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. "
+        },
+        {
+          "text": ".reverse()",
+          "bold": true
+        },
+        {
+          "text": ": Изменяет порядок элементов на обратный."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/22.webp",
+      "width": 481,
+      "height": 159,
+      "alt": "-22"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [1, 2, 3]\nmy_list.reverse()  # Теперь my_list содержит [3, 2, 1]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8. "
+        },
+        {
+          "text": ".count(element)",
+          "bold": true
+        },
+        {
+          "text": ": Возвращает количество вхождений указанного элемента в списке."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/23.webp",
+      "width": 481,
+      "height": 200,
+      "alt": "-23"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "#Пример:\nmy_list = [1, 2, 2, 3, 2, 4]\ncount = my_list.count(2)  # count равен 3"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Это только некоторые из методов, доступных для списков в "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": ".  \nМетоды позволяют эффективно управлять списками, изменяя, обновляя и анализируя их содержимое."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Списочные выражения"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Списочные выражения (list comprehensions) в "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": " - это компактный и удобный способ создания новых списков на основе существующих списков. Списочные выражения позволяют создать новый список путем применения выражения к каждому элементу в исходном списке и фильтрации элементов при необходимости. Это очень мощный инструмент для обработки данных в "
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Синтаксис списочных выражений выглядит следующим образом:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "new_list = [expression for item in iterable if condition]"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/24.webp",
+      "width": 430,
+      "height": 89,
+      "alt": "-24"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Примеры списочных выражений:",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. ",
+          "italic": true
+        },
+        {
+          "text": "Создание списка квадратов чисел от 1 до 5:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/25.webp",
+      "width": 481,
+      "height": 161,
+      "alt": "-25"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "squares = [x**2 for x in range(1, 6)]\n# Результат: [1, 4, 9, 16, 25]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. Создание списка только четных чисел из исходного списка:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/26.webp",
+      "width": 481,
+      "height": 169,
+      "alt": "-26"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\neven_numbers = [x for x in numbers if x % 2 == 0]\n# Результат: [2, 4, 6, 8, 10]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. Преобразование строк в верхний регистр:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/27.webp",
+      "width": 481,
+      "height": 129,
+      "alt": "-27"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "words = ['hello', 'world', 'python', 'list', 'comprehensions']\nuppercase_words = [word.upper() for word in words]\n# Результат: ['HELLO', 'WORLD', 'PYTHON', 'LIST', 'COMPREHENSIONS']"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Списочные выражения позволяют сделать код более кратким и читаемым при создании новых списков или обработке существующих.  Они часто используются вместо циклов "
+        },
+        {
+          "text": "for",
+          "bold": true
+        },
+        {
+          "text": " при необходимости создания итоговых списков на основе других данных."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Рассмотрим некоторые из заданий ЕГЭ, где необходимо прибегать к спискам"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "№ 7030 Danov2303 (Уровень: Сложный)",
+          "italic": true,
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "("
+        },
+        {
+          "text": "А.Богданов",
+          "href": "https://vk.com/inf_intensive"
+        },
+        {
+          "text": ") Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел. Определите количество строк таблицы, для которых выполняются все условия:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "в строке три числа повторяются ровно два раза;"
+          }
+        ],
+        [
+          {
+            "text": "эти три числа образуют стороны прямоугольного треугольника."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе запишите одно число."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9.csv",
+          "href": "https://kompege.ru/files/6UwhU_lMr.csv"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/28.webp",
+      "width": 481,
+      "height": 235,
+      "alt": "-28"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "count = 0\nfor s in open('9.txt'):\n    M = sorted([int(i) for i in s.split()])\n    if len(set(M)) == 3 and all(M.count(x) == 2 for x in M):\n        a, b, c = sorted(set(M))\n        if c ** 2 == a ** 2 + b ** 2:\n            count += 1\nprint(count)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "count = 0 - Создаем переменную "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " и присваиваем ей значение "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.txt'): - используем цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": ", чтобы перебрать строки файла "
+          },
+          {
+            "text": "'9.txt'",
+            "bold": true
+          },
+          {
+            "text": " и присваиваем каждой строке значение переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(i) for i in s.split()]) - Создаем список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", который содержит целочисленные элементы строки "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", отсортированные в порядке возрастания."
+          }
+        ],
+        [
+          {
+            "text": "if len(set(M)) == 3 and all(M.count(x) == 2 for x in M): - используем условный оператор "
+          },
+          {
+            "text": "if",
+            "bold": true
+          },
+          {
+            "text": ", чтобы проверить, состоит ли список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " из трех разных чисел, каждое из которых встречается ровно "
+          },
+          {
+            "text": "2",
+            "bold": true
+          },
+          {
+            "text": " раза в списке"
+          },
+          {
+            "text": " M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "a, b, c = sorted(set(M)) - Присваиваем значениям "
+          },
+          {
+            "text": "a, b и c",
+            "bold": true
+          },
+          {
+            "text": " уникальные отсортированные значения из списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if c  2 == a  2 + b ** 2: - используем условный оператор "
+          },
+          {
+            "text": "if,",
+            "bold": true
+          },
+          {
+            "text": " чтобы проверить, является ли большее число c квадратом суммы квадратов меньших чисел "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "(теорема Пифагора)."
+          }
+        ],
+        [
+          {
+            "text": "count += 1 - Увеличиваем значение переменной "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " на единицу, если все прошло успешно."
+          }
+        ],
+        [
+          {
+            "text": "print(count) - Выводим на экран значение переменной"
+          },
+          {
+            "text": " count",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 148"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Тип 17 № 37371"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В файле содержится последовательность из 10 000 целых положительных чисел. Каждое число не превышает 10 000."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите",
+          "bold": true
+        },
+        {
+          "text": " и запишите в ответе сначала количество пар элементов последовательности, у которых разность элементов кратна 60, затем максимальную из разностей элементов таких пар. В данной задаче под парой подразумевается два различных элемента последовательности."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для выполнения этого задания следует написать программу. "
+        },
+        {
+          "text": "Ссылка на файл",
+          "href": "https://inf-ege.sdamgia.ru/get_file?id=91281"
+        },
+        {
+          "text": ", который необходимо обработать с помощью данного алгоритма."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/29.webp",
+      "width": 481,
+      "height": 370,
+      "alt": "-29"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "f = open('17.txt')\nM = [int(i) for i in f]\nmaxi = 0\ncount = 0\n\nfor i in range(len(M) - 1):\n    for j in range(i + 1, len(M)):\n        if (M[i] - M[j]) % 60 == 0:\n            count += 1\n            maxi = max(maxi, abs(M[i] - M[j]))\nprint(count, maxi)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Открываем наш файл"
+          }
+        ],
+        [
+          {
+            "text": "Создаём список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", считываем все строки из файла и преобразуем каждую строку в целое число"
+          }
+        ],
+        [
+          {
+            "text": "Создаем переменную "
+          },
+          {
+            "text": "maxi",
+            "bold": true
+          },
+          {
+            "text": ", которая будет принимать максимальную из разностей элементов"
+          }
+        ],
+        [
+          {
+            "text": "и count, для счёта количества пар элементов"
+          }
+        ],
+        [
+          {
+            "text": "-"
+          }
+        ],
+        [
+          {
+            "text": "Пробегаем файл по элементам списка"
+          }
+        ],
+        [
+          {
+            "text": "пробегаем ещё раз, т.е. по элементам, которые будут различны с первым"
+          }
+        ],
+        [
+          {
+            "text": "Если  разность элементов кратна "
+          },
+          {
+            "text": "60",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "то добавляем "
+          },
+          {
+            "text": "+1",
+            "bold": true
+          },
+          {
+            "text": " к значению переменной "
+          },
+          {
+            "text": "count",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "и приравниваем переменной "
+          },
+          {
+            "text": "maxi ",
+            "bold": true
+          },
+          {
+            "text": "максимальную из разностей элементов таких пар"
+          }
+        ],
+        [
+          {
+            "text": "выводим количество и максимальное значение"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 8327229960"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "№ 7853 Danov2304 (Уровень: Сложный) А.Богданов"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Текстовый файл состоит из символов латинского алфавита и десятичных цифр. Определите максимальное количество идущих подряд символов, среди которых любые два символа из набора N,O,T в различных комбинациях(с учётом повторений) не стоят через один символ (который может быть любым)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Например, ТEN или NUТ не могут быть в искомой подстроке."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "24.txt",
+          "href": "https://kompege.ru/files/E9VsBlSM4.txt"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/30.webp",
+      "width": 481,
+      "height": 240,
+      "alt": "-30"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import itertools\ns = open('24.txt').readline()\nmaxi = 0\nM = []\nfor i in itertools.product('QWERTYUIOPASDFGHJKLZXCVBNM0123456789', repeat = 3):\n    r = ''.join(i)\n    if r[0] in 'NOT' and r[2] in 'NOT':\n        M.append(r)\nfor x in M:\n    s = s.replace(x, ' ')\nmaxi = max([len(i) for i in s.split()])\nprint(maxi)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import itertools - мы импортируем модуль "
+          },
+          {
+            "text": "itertools",
+            "href": "https://teletype.in/@ilandroxy/ZLQKlwNEOcg"
+          },
+          {
+            "text": ", который содержит функции для работы со списками и итераторами."
+          }
+        ],
+        [
+          {
+            "text": "s = open('24.txt').readline() - здесь мы открываем файл "
+          },
+          {
+            "text": "24.txt",
+            "bold": true
+          },
+          {
+            "text": " с помощью функции "
+          },
+          {
+            "text": "open()",
+            "bold": true
+          },
+          {
+            "text": " и читаем первую и единственную строку файла с помощью метода "
+          },
+          {
+            "text": "readline()",
+            "bold": true
+          },
+          {
+            "text": ", присваивая результат переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0 - это переменная, которая будет использоваться для хранения максимального значения длины строки."
+          }
+        ],
+        [
+          {
+            "text": "M = [] - это пустой "
+          },
+          {
+            "text": "список",
+            "bold": true
+          },
+          {
+            "text": ", который будет использоваться для хранения всех возможных комбинаций строк."
+          }
+        ],
+        [
+          {
+            "text": "for i in itertools.product('QWERTYUIOPASDFGHJKLZXCVBNM0123456789', repeat = 3): - здесь мы используем функцию "
+          },
+          {
+            "text": "product()",
+            "bold": true
+          },
+          {
+            "text": " из модуля "
+          },
+          {
+            "text": "itertools",
+            "href": "https://teletype.in/@ilandroxy/ZLQKlwNEOcg"
+          },
+          {
+            "text": ", чтобы создать все возможные комбинации из заданных символов длиной "
+          },
+          {
+            "text": "3",
+            "bold": true
+          },
+          {
+            "text": ". Результатом является итератор, который мы будем использовать в следующей строке кода."
+          }
+        ],
+        [
+          {
+            "text": "r = ''.join(i) - здесь мы объединяем символы из кортежа "
+          },
+          {
+            "text": "i",
+            "bold": true
+          },
+          {
+            "text": ", созданных ранее с помощью функции "
+          },
+          {
+            "text": "product()",
+            "bold": true
+          },
+          {
+            "text": ", в одну строку "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": " с помощью метода "
+          },
+          {
+            "text": "join()",
+            "href": "https://www.notion.so/630171bdfd9f4cf6be7cd1008adeac15?pvs=21"
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if r[0] in 'NOT' and r[2] in 'NOT': - здесь мы проверяем, что символы r[0] и r[2] находятся в строке "
+          },
+          {
+            "text": "'NOT'",
+            "bold": true
+          },
+          {
+            "text": " с помощью оператора "
+          },
+          {
+            "text": "in",
+            "bold": true
+          },
+          {
+            "text": ".  Если да, то мы добавляем строку "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": " в список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Строка M.append(r) добавляет текущую комбинацию "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": " в список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for x in M: - здесь мы перебираем список"
+          },
+          {
+            "text": " M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(x, ' ') - здесь мы заменяем все вхождения строки "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " в строке"
+          },
+          {
+            "text": " s",
+            "bold": true
+          },
+          {
+            "text": " на пробелы с помощью метода"
+          },
+          {
+            "text": " replace()",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "maxi = max([len(i) for i in s.split()]) - здесь мы разделяем строку s на слова с помощью метода "
+          },
+          {
+            "text": "split()",
+            "href": "https://www.notion.so/630171bdfd9f4cf6be7cd1008adeac15?pvs=21"
+          },
+          {
+            "text": " и находим максимальную длину слова в этом списке с помощью функции "
+          },
+          {
+            "text": "max()",
+            "bold": true
+          },
+          {
+            "text": ". Результат присваивается переменной "
+          },
+          {
+            "text": "maxi.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "print(maxi) - здесь мы выводим значение переменной "
+          },
+          {
+            "text": "maxi ",
+            "bold": true
+          },
+          {
+            "text": "на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ:1461"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/spiski-i-kak-oni-ustroeny/31.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "💡Списки и как они устроены #tpy"
+}

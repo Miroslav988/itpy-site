@@ -1,0 +1,381 @@
+{
+  "slug": "zadanie-24-ege-razbor-zadachi-7853",
+  "title": "Задание 24 ЕГЭ: разбор задачи 7853",
+  "description": "(А.Богданов) Текстовый файл состоит из символов латинского алфавита и десятичных цифр. Определите максимальное количество идущих подряд символов, среди которых любые два символа…",
+  "date": "2023-08-08",
+  "cover": {
+    "src": "/blog/zadanie-24-ege-razbor-zadachi-7853/01.webp",
+    "width": 530,
+    "height": 280
+  },
+  "source": "https://dzen.ru/a/ZNHS-nCfNUgoGtZ6",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7853/01.webp",
+      "width": 530,
+      "height": 280,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 7853 Danov2304 (Уровень: Сложный)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "("
+        },
+        {
+          "text": "А.Богданов",
+          "href": "https://vk.com/inf_intensive"
+        },
+        {
+          "text": ") Текстовый файл состоит из символов латинского алфавита и десятичных цифр. Определите максимальное количество идущих подряд символов, среди которых любые два символа из набора"
+        },
+        {
+          "text": " N,O,T",
+          "bold": true
+        },
+        {
+          "text": " в различных комбинациях(с учётом повторений) не стоят через один символ (который может быть любым)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Например, "
+        },
+        {
+          "text": "ТEN",
+          "bold": true
+        },
+        {
+          "text": " или "
+        },
+        {
+          "text": "NUТ",
+          "bold": true
+        },
+        {
+          "text": " не могут быть в искомой подстроке."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "24.txt",
+          "href": "https://kompege.ru/files/E9VsBlSM4.txt"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7853/02.webp",
+      "width": 750,
+      "height": 370,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import itertools\ns = open('24.txt').readline()\nmaxi = 0\nM = []\nfor i in itertools.product('QWERTYUIOPASDFGHJKLZXCVBNM0123456789', repeat = 3):\n    r = ''.join(i)\n    if r[0] in 'NOT' and r[2] in 'NOT':\n        M.append(r)\nfor x in M:\n    s = s.replace(x, ' ')\nmaxi = max([len(i) for i in s.split()])\nprint(maxi)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к первому варианту решения:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import itertools",
+            "italic": true
+          },
+          {
+            "text": " - мы импортируем модуль "
+          },
+          {
+            "text": "itertools",
+            "href": "https://teletype.in/@ilandroxy/ZLQKlwNEOcg"
+          },
+          {
+            "text": ", который содержит функции для работы со списками и итераторами."
+          }
+        ],
+        [
+          {
+            "text": "s = open('24.txt').readline()",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы открываем файл 24.txt с помощью функции open() и читаем первую и единственную строку файла с помощью метода readline(), присваивая результат переменной s."
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0 ",
+            "italic": true
+          },
+          {
+            "text": "- это переменная, которая будет использоваться для хранения максимального значения длины строки."
+          }
+        ],
+        [
+          {
+            "text": "M = [] ",
+            "italic": true
+          },
+          {
+            "text": "- это пустой список, который будет использоваться для хранения всех возможных комбинаций строк."
+          }
+        ],
+        [
+          {
+            "text": "for i in itertools.product('QWERTYUIOPASDFGHJKLZXCVBNM0123456789', repeat = 3):",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы используем функцию product() из модуля "
+          },
+          {
+            "text": "itertools",
+            "href": "https://teletype.in/@ilandroxy/ZLQKlwNEOcg"
+          },
+          {
+            "text": ", чтобы создать все возможные комбинации из заданных символов длиной 3. Результатом является итератор, который мы будем использовать в следующей строке кода."
+          }
+        ],
+        [
+          {
+            "text": "r = ''.join(i)",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы объединяем символы из кортежа i, созданных ранее с помощью функции product(), в одну строку r с помощью метода "
+          },
+          {
+            "text": "join()",
+            "href": "https://www.notion.so/af39452daa4a4ac18d54d9c24507e585?pvs=21"
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if r[0] in 'NOT' and r[2] in 'NOT': ",
+            "italic": true
+          },
+          {
+            "text": "- здесь мы проверяем, что символы r[0] и r[2] находятся в строке 'NOT' с помощью оператора in.  Если да, то мы добавляем строку r в список M."
+          }
+        ],
+        [
+          {
+            "text": "for x in M: ",
+            "italic": true
+          },
+          {
+            "text": "- здесь мы перебираем список M."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(x, ' ')",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы заменяем все вхождения строки x в строке s на пробелы с помощью метода replace()."
+          }
+        ],
+        [
+          {
+            "text": "maxi = max([len(i) for i in s.split()])",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы разделяем строку s на слова с помощью метода "
+          },
+          {
+            "text": "split()",
+            "href": "https://www.notion.so/af39452daa4a4ac18d54d9c24507e585?pvs=21"
+          },
+          {
+            "text": " и находим максимальную длину слова в этом списке с помощью функции max(). Результат присваивается переменной maxi."
+          }
+        ],
+        [
+          {
+            "text": "print(maxi)",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы выводим значение переменной maxi на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7853/03.webp",
+      "width": 750,
+      "height": 436,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "import itertools\ns = open('lessons/24.txt').readline()\nfor x in 'NOT':\n    s = s.replace(x, '*')\nfor x in 'QWERTYUIOPASDFGHJKLZXCVBNM0123456789':\n    s = s.replace(x, '?')\nmaxi = max([len(i) for i in s.split('*?*')])\nprint(maxi+4)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии ко второму варианту решения:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import itertools",
+            "italic": true
+          },
+          {
+            "text": " - мы импортируем модуль "
+          },
+          {
+            "text": "itertools",
+            "href": "https://teletype.in/@ilandroxy/ZLQKlwNEOcg"
+          },
+          {
+            "text": ", который содержит функции для работы со списками и итераторами."
+          }
+        ],
+        [
+          {
+            "text": "s = open('lessons/24.txt').readline()",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы открываем файл 24.txt из папки lessons с помощью функции open() и читаем первую строку файла с помощью метода readline(), присваивая результат переменной s."
+          }
+        ],
+        [
+          {
+            "text": "for x in 'NOT':",
+            "italic": true
+          },
+          {
+            "text": " - мы создаем цикл for, который будет перебирать символы 'N', 'O' и 'T'."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(x, '*')",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы заменяем каждый символ в строке s на символ '*' с помощью метода replace()."
+          }
+        ],
+        [
+          {
+            "text": "for x in 'QWERTYUIOPASDFGHJKLZXCVBNM0123456789': ",
+            "italic": true
+          },
+          {
+            "text": "- мы создаем цикл for, который будет перебирать все символы, которые могут быть в строке."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(x, '?')",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы заменяем каждый символ в строке s на символ '?' с помощью метода replace()."
+          }
+        ],
+        [
+          {
+            "text": "maxi = max([len(i) for i in s.split('*?*')])",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы разделяем строку s на подстроки с помощью метода "
+          },
+          {
+            "text": "split()",
+            "href": "https://www.notion.so/af39452daa4a4ac18d54d9c24507e585?pvs=21"
+          },
+          {
+            "text": ", используя строку '*?*' в качестве разделителя. Затем мы находим максимальную длину подстроки с помощью функции max() для списка, содержащего длины всех подстрок."
+          }
+        ],
+        [
+          {
+            "text": "print(maxi+4)",
+            "italic": true
+          },
+          {
+            "text": " - здесь мы выводим значение переменной maxi плюс 4 на экран. 4 - это количество символов в строке '*?*', которые мы использовали для разделения строки s и теряли при удалении тройки (если тройка нам не подходить, то ее пара элементов очень даже подходить)."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 1461"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7853/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 7853 ЕГЭ по информатике #24",
+  "task": 24
+}

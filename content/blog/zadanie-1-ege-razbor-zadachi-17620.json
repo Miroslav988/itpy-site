@@ -1,0 +1,198 @@
+{
+  "slug": "zadanie-1-ege-razbor-zadachi-17620",
+  "title": "Задание 1 ЕГЭ: разбор задачи 17620",
+  "description": "Уровень: Базовый",
+  "date": "2025-02-06",
+  "task": 1,
+  "meta": {
+    "source": "Основная волна 19.06.24",
+    "level": "Базовый"
+  },
+  "source": "https://dzen.ru/a/Z6MUYkMg-ScC8717",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-1-ege-razbor-zadachi-17620/01.webp",
+      "width": 530,
+      "height": 410,
+      "alt": ""
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите, какова сумма протяжённостей дорог из пункта F в пункт B и из пункта E в пункт D."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Данный код позволяет нам в универсальном случае определить последовательность вершин графа. И если знаем вершины, то не сложно найти длины и сумму длин!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Код решения"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-1-ege-razbor-zadachi-17620/02.webp",
+      "width": 750,
+      "height": 454,
+      "alt": "-2"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Результат"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# 1 2 3 4 5 6 7 \n# B D E G A F C"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# FB = 53, ED = 2, => 55"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# 1 2 3 4 5 6 7 \n# F E D C A B G"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "# ED = 53, FB = 2, => 55"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import permutations",
+            "code": true
+          },
+          {
+            "text": "\nИмпортируем функцию permutations из модуля itertools для генерации всех возможных перестановок элементов."
+          }
+        ],
+        [
+          {
+            "text": "table = '12 15 16 21 23 24 32 36 37 42 47 51 56 61 63 65 73 74'",
+            "code": true
+          },
+          {
+            "text": "\nОпределяем строку 'table', представляющую набор чисел, разделенных пробелами, которые описывают соединения в графе."
+          }
+        ],
+        [
+          {
+            "text": "graph = 'AB BA AF FA FB BF FE EF BD DB ED DE EC CE DG GD CG GC'",
+            "code": true
+          },
+          {
+            "text": "\nОпределяем строку 'graph', которая описывает возможные связи между буквами A, B, C, D, E, F, G в графе."
+          }
+        ],
+        [
+          {
+            "text": "for per in permutations('ABCDEFG'):",
+            "code": true
+          },
+          {
+            "text": "\nЗапускаем цикл, перебирающий все возможные перестановки букв A, B, C, D, E, F, G."
+          }
+        ],
+        [
+          {
+            "text": "new_table = table",
+            "code": true
+          },
+          {
+            "text": "\nСоздаем копию строки 'table', чтобы постепенно заменять числа на соответствующие буквы из текущей перестановки."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(1, 7 + 1):",
+            "code": true
+          },
+          {
+            "text": "\nЗапускаем вложенный цикл, который проходит по всем числам от 1 до 7."
+          }
+        ],
+        [
+          {
+            "text": "new_table = new_table.replace(str(i), per[i - 1])",
+            "code": true
+          },
+          {
+            "text": "\nЗаменяем каждое число в 'new_table' на соответствующую букву из текущей перестановки 'per', используя индексы."
+          }
+        ],
+        [
+          {
+            "text": "if set(new_table.split()) == set(graph.split()):",
+            "code": true
+          },
+          {
+            "text": "\nПроверяем, совпадает ли множество уникальных элементов в 'new_table' с множеством уникальных элементов в 'graph'."
+          }
+        ],
+        [
+          {
+            "text": "print('1 2 3 4 5 6 7')",
+            "code": true
+          },
+          {
+            "text": "\nЕсли множества совпадают, выводим строку '1 2 3 4 5 6 7', что означает, что найдено подходящее соответствие."
+          }
+        ],
+        [
+          {
+            "text": "print(*per)",
+            "code": true
+          },
+          {
+            "text": "\nПечатаем текущее соответствие букв из перестановки, используя распаковку для форматированного вывода."
+          }
+        ]
+      ]
+    }
+  ],
+  "originalTitle": "Разбор номера 17620 #kege по информатике #ЕГЭ1"
+}

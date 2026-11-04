@@ -1,0 +1,407 @@
+{
+  "slug": "zadanie-25-ege-razbor-zadachi-7357",
+  "title": "Задание 25 ЕГЭ: разбор задачи 7357",
+  "description": "Условие: № 7357 (Уровень: Средний) • Статья подготовлена командой itpy • Полный разбор задачи в Telegram",
+  "date": "2024-05-10",
+  "cover": {
+    "src": "/blog/zadanie-25-ege-razbor-zadachi-7357/01.webp",
+    "width": 530,
+    "height": 330
+  },
+  "source": "https://dzen.ru/a/Zj4TXtkco3vOqWnz",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-7357/01.webp",
+      "width": 530,
+      "height": 330,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие: № 7357 (Уровень: Средний)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Telegram",
+          "href": "https://t.me/informatika_kege_itpy/412"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(Л. Шастин)",
+          "href": "https://vk.com/leonid_shastin",
+          "bold": true
+        },
+        {
+          "text": " Назовём маской числа последовательность цифр, в которой также могут встречаться следующие символы:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "– символ «?» означает ровно одну произвольную чётную цифру;",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– символ «",
+          "bold": true
+        },
+        {
+          "text": "» означает любое нечётное число; в том числе «",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "» может задавать и пустую последовательнос",
+          "bold": true
+        },
+        {
+          "text": "ть."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Например",
+          "italic": true
+        },
+        {
+          "text": ", маске 123*4?5 соответствуют числа 123737465 и 123485."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Среди натуральных чисел, не превышающих 10**10 , найдите 5 наибольших чисел, соответствующих маске "
+        },
+        {
+          "text": "?136*",
+          "bold": true
+        },
+        {
+          "text": ", делящихся на 53191 без остатка.\nВ ответе запишите в первом столбце таблицы все найденные числа в порядке возрастания, а во втором столбце – соответствующие им результаты деления этих чисел на 53191."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Количество строк в таблице для ответа избыточно."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-7357/02.webp",
+      "width": 750,
+      "height": 460,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from fnmatch import * ",
+            "bold": true
+          },
+          {
+            "text": "- импорт всех функций из модуля "
+          },
+          {
+            "text": "fnmatch",
+            "bold": true
+          },
+          {
+            "text": " для работы с "
+          },
+          {
+            "text": "шаблонами",
+            "bold": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "строками",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "R = [] ",
+            "bold": true
+          },
+          {
+            "text": "- создание пустого списка "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": ", куда будут добавляться результаты."
+          }
+        ],
+        [
+          {
+            "text": "Цикл "
+          },
+          {
+            "text": "for x in range(53191, 10**10, 53191): ",
+            "bold": true
+          },
+          {
+            "text": "для перебора чисел от "
+          },
+          {
+            "text": "53191",
+            "bold": true
+          },
+          {
+            "text": " до "
+          },
+          {
+            "text": "10^10",
+            "bold": true
+          },
+          {
+            "text": " с "
+          },
+          {
+            "text": "шагом 53191",
+            "bold": true
+          },
+          {
+            "text": ";"
+          }
+        ],
+        [
+          {
+            "text": "if fnmatch(str(x), '?136*'): ",
+            "bold": true
+          },
+          {
+            "text": "- проверка, соответствует ли строковое представление числа "
+          },
+          {
+            "text": "x ",
+            "bold": true
+          },
+          {
+            "text": "шаблону"
+          },
+          {
+            "text": " '?136*'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if str(x)[0] in '02468' and str(x)[-1] in '13579':",
+            "bold": true
+          },
+          {
+            "text": " - проверка, что "
+          },
+          {
+            "text": "первая цифра числа",
+            "bold": true
+          },
+          {
+            "text": " находится в диапазоне '02468', а последняя - в '13579'."
+          }
+        ],
+        [
+          {
+            "text": "R.append([x, x // 53191])",
+            "bold": true
+          },
+          {
+            "text": " - добавление пары чисел "
+          },
+          {
+            "text": "[x, x // 53191]",
+            "bold": true
+          },
+          {
+            "text": " в список "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Цикл "
+          },
+          {
+            "text": "for i in range(-5, 0):",
+            "bold": true
+          },
+          {
+            "text": " для вывода последних пяти элементов списка "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": ":"
+          }
+        ],
+        [
+          {
+            "text": "print(*R[i]) ",
+            "bold": true
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "вывод",
+            "bold": true
+          },
+          {
+            "text": " списка элементов с индексами "
+          },
+          {
+            "text": "с -5 по -1",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8136574079 152969",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8136680461 152971",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8136786843 152973",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8136893225 152975",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8136999607 152977",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-7357/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 7357 ЕГЭ по информатике #25",
+  "task": 25
+}

@@ -1,0 +1,308 @@
+{
+  "slug": "zadanie-9-ege-razbor-zadachi-5126",
+  "title": "Задание 9 ЕГЭ: разбор задачи 5126",
+  "description": "Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел.",
+  "date": "2023-09-13",
+  "cover": {
+    "src": "/blog/zadanie-9-ege-razbor-zadachi-5126/01.webp",
+    "width": 530,
+    "height": 290
+  },
+  "source": "https://dzen.ru/a/ZNJPM0onYhvCP5FE",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-5126/01.webp",
+      "width": 530,
+      "height": 290,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 5126 /dev/inf 11.22 (Уровень: Средний)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите количество строк таблицы, содержащих числа, для которых выполнены оба условия:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "– в строке только одно число повторяется ровно три раза, остальные числа различны;\n– среднее арифметическое неповторяющихся чисел строки не больше суммы повторяющихся чисел."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе запишите только число."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "9.xls",
+          "href": "https://kompege.ru/files/9yLNISRDc.xls"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-5126/02.webp",
+      "width": 750,
+      "height": 393,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "count = 0\nfor s in open('9.txt'):\n    M = [int(i) for i in s.split()]\n    if len(set(M)) == 4 and any(M.count(i) == 3 for i in M):\n        copied = (sum(M) - sum(set(M))) / 2\n        if (sum(M) - copied * 3) / 3 <= copied * 3:\n            count += 1\nprint(count)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Комментарии к решению задачи"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "count = 0",
+            "italic": true
+          },
+          {
+            "text": " - Создаём переменную"
+          },
+          {
+            "text": " count",
+            "bold": true
+          },
+          {
+            "text": " со значением "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.txt'):",
+            "italic": true
+          },
+          {
+            "text": " - Открываем файл"
+          },
+          {
+            "text": " '9.txt'",
+            "bold": true
+          },
+          {
+            "text": " и пробегаем цикл по строкам в файле с помощью переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(i) for i in s.split()]",
+            "italic": true
+          },
+          {
+            "text": " - Разделяем строку "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " на отдельные элементы, преобразуем каждый элемент в целое число и сохраняем в список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if len(set(M)) == 4 and any(M.count(i) == 3 for i in M): ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, что количество уникальных элементов в списке "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " равно 4, и есть хотя бы один элемент, который встречается в списке "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " ровно 3 раза."
+          }
+        ],
+        [
+          {
+            "text": "copied = (sum(M) - sum(set(M))) / 2",
+            "italic": true
+          },
+          {
+            "text": " - Вычисляем сумму всех элементов в списке "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", вычитаем сумму уникальных элементов из списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " и делим полученную разницу на 2, сохраняя результат в переменную"
+          },
+          {
+            "text": " copied",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if (sum(M) - copied * 3) / 3 <= copied * 3: ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, что разность суммы элементов списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "  и переменной"
+          },
+          {
+            "text": " copied",
+            "bold": true
+          },
+          {
+            "text": " умноженной на 3, с последующим делением этой скобки на 3 - меньше или равен "
+          },
+          {
+            "text": "copied",
+            "bold": true
+          },
+          {
+            "text": " * 3."
+          }
+        ],
+        [
+          {
+            "text": "count += 1 ",
+            "italic": true
+          },
+          {
+            "text": "- Увеличиваем значение переменной "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " на 1."
+          }
+        ],
+        [
+          {
+            "text": "print(count)",
+            "italic": true
+          },
+          {
+            "text": " - Выводим значение переменной "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 125"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-5126/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 5126 ЕГЭ по информатике #9",
+  "task": 9
+}

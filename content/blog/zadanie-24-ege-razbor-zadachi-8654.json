@@ -1,0 +1,368 @@
+{
+  "slug": "zadanie-24-ege-razbor-zadachi-8654",
+  "title": "Задание 24 ЕГЭ: разбор задачи 8654",
+  "description": "Условие: КЕГЭ № 8654 (Уровень: Средний) • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-04-15",
+  "cover": {
+    "src": "/blog/zadanie-24-ege-razbor-zadachi-8654/01.webp",
+    "width": 530,
+    "height": 260
+  },
+  "source": "https://dzen.ru/a/ZhQKgNRaU2db9AaJ",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-8654/01.webp",
+      "width": 530,
+      "height": 260,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "КЕГЭ",
+          "href": "https://kompege.ru/task"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "№ 8654 (Уровень: Средний)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/394"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(Л. Шастин)",
+          "href": "https://vk.com/leonid_shastin",
+          "bold": true
+        },
+        {
+          "text": " Текстовый файл состоит не более, чем из 1 200 000 прописных символов латинского алфавита."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Назовём маской подстроки последовательность символов, в которой также может встречаться символ «?», который означает ровно одну произвольную букву. Определите максимальное количество идущих подряд символов, среди которых нет ни одной подстроки, соответствующей маске ?B??D.",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Пример: подстроки CBFED и BBBBD соответствуют маске ?B??D, а подстроки BCEFD и RBECS - нет."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-8654/02.webp",
+      "width": 750,
+      "height": 400,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from fnmatch import fnmatch",
+            "bold": true
+          },
+          {
+            "text": " - импортирует функцию "
+          },
+          {
+            "text": "fnmatch",
+            "bold": true
+          },
+          {
+            "text": " из модуля "
+          },
+          {
+            "text": "fnmatch",
+            "bold": true
+          },
+          {
+            "text": ", который предоставляет возможность осуществлять поиск строк с использованием шаблонов, аналогично функции "
+          },
+          {
+            "text": "fnmatch() в Unix",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "from itertools import product ",
+            "bold": true
+          },
+          {
+            "text": "- импортирует функцию "
+          },
+          {
+            "text": "product",
+            "bold": true
+          },
+          {
+            "text": " из модуля "
+          },
+          {
+            "text": "itertools",
+            "bold": true
+          },
+          {
+            "text": ", который создает все возможные комбинации из входных данных."
+          }
+        ],
+        [
+          {
+            "text": "s = open('24.txt').readline() ",
+            "bold": true
+          },
+          {
+            "text": "- считывает первую строку из файла"
+          },
+          {
+            "text": " '24.txt'",
+            "bold": true
+          },
+          {
+            "text": " и сохраняет ее в переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for v in product('ABCDEFGHIJKLMNOPQRSTUVWXYZ', repeat=5):",
+            "bold": true
+          },
+          {
+            "text": " - запускает цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": ", который проходит через все возможные "
+          },
+          {
+            "text": "комбинации",
+            "bold": true
+          },
+          {
+            "text": " из букв латинского алфавита длиной"
+          },
+          {
+            "text": " 5",
+            "bold": true
+          },
+          {
+            "text": " и сохраняет каждую комбинацию в переменной"
+          },
+          {
+            "text": " v",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "slovo = ''.join(v) ",
+            "bold": true
+          },
+          {
+            "text": "- объединяет буквы из комбинации "
+          },
+          {
+            "text": "v",
+            "bold": true
+          },
+          {
+            "text": " в строку и сохраняет результат в переменной "
+          },
+          {
+            "text": "slovo",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if fnmatch(slovo, '?B??D'):",
+            "bold": true
+          },
+          {
+            "text": " - проверяет, соответствует ли строка "
+          },
+          {
+            "text": "slovo ",
+            "bold": true
+          },
+          {
+            "text": "заданному "
+          },
+          {
+            "text": "шаблону '?B??D'",
+            "bold": true
+          },
+          {
+            "text": ". Этот шаблон означает, что "
+          },
+          {
+            "text": "первый символ равен любому символу, второй символ - 'B'",
+            "bold": true
+          },
+          {
+            "text": ", затем следует "
+          },
+          {
+            "text": "два любых символа и последний символ - 'D'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(slovo, '**** ') ",
+            "bold": true
+          },
+          {
+            "text": "- если строка slovo соответствует шаблону, то заменяет все вхождения этой строки в переменной s на строку "
+          },
+          {
+            "text": "' ****'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(max(len(x) for x in s.split())) ",
+            "bold": true
+          },
+          {
+            "text": "- выводит на экран длину самого длинного слова в переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", после того как все предыдущие замены были сделаны."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таким образом, данный код осуществляет чтение строки из файла, генерацию всех возможных комбинаций из букв латинского алфавита длиной "
+        },
+        {
+          "text": "5",
+          "bold": true
+        },
+        {
+          "text": ", проверку каждой комбинации на соответствие шаблону, замену соответствующих слов и вывод длины самого длинного слова в модифицированной строке."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 4187"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-8654/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 8654 ЕГЭ по информатике #24",
+  "task": 24
+}

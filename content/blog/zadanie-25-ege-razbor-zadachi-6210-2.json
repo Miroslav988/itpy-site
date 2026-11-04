@@ -1,0 +1,634 @@
+{
+  "slug": "zadanie-25-ege-razbor-zadachi-6210-2",
+  "title": "Задание 25 ЕГЭ: разбор задачи 6210",
+  "description": "(Н. Сафронов) Назовём маской числа последовательность цифр, в которой также могут встречаться следующие символы:",
+  "date": "2023-08-12",
+  "cover": {
+    "src": "/blog/zadanie-25-ege-razbor-zadachi-6210-2/01.webp",
+    "width": 530,
+    "height": 390
+  },
+  "source": "https://dzen.ru/a/ZNIt_h7nYSOH3I6u",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-6210-2/01.webp",
+      "width": 530,
+      "height": 390,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 6210 (Уровень: Средний)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(Н. Сафронов)",
+          "href": "https://vk.com/safronov_nv",
+          "bold": true
+        },
+        {
+          "text": " Назовём маской числа последовательность цифр, в которой также могут встречаться следующие символы:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "символ "
+          },
+          {
+            "text": "«?»",
+            "bold": true
+          },
+          {
+            "text": " означает ровно одну произвольную цифру;"
+          }
+        ],
+        [
+          {
+            "text": "символ "
+          },
+          {
+            "text": "«*»",
+            "bold": true
+          },
+          {
+            "text": " означает любую последовательность цифр произвольной длины; в том числе "
+          },
+          {
+            "text": "«*»",
+            "bold": true
+          },
+          {
+            "text": " может задавать и пустую последовательность."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Например, маске "
+        },
+        {
+          "text": "123*4?5 ",
+          "bold": true
+        },
+        {
+          "text": "соответствуют числа "
+        },
+        {
+          "text": "123405",
+          "bold": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "12300425",
+          "bold": true
+        },
+        {
+          "text": ".\nНайдите все натуральные числа, не превосходящие "
+        },
+        {
+          "text": "10**7",
+          "bold": true
+        },
+        {
+          "text": ", для которых выполняются одновременно все условия:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "соответствуют маске *2?2*;"
+          }
+        ],
+        [
+          {
+            "text": "являются палиндромами;"
+          }
+        ],
+        [
+          {
+            "text": "делятся на число 53 без остатка;"
+          }
+        ],
+        [
+          {
+            "text": "количество делителей больше 30."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе запишите в первом столбце таблицы все найденные числа в порядке возрастания, а во втором столбце — сумму делителей."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-6210-2/02.webp",
+      "width": 750,
+      "height": 559,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def Divisors(x):\n    divisors = set()\n    for j in range(1, int(x**0.5)+1):\n        if x % j == 0:\n            divisors.add(j)\n            divisors.add(x // j)\n    return sorted(divisors)\n\nfrom fnmatch import *\nfor x in range(53, 10**7, 53):\n    if fnmatch(str(x), '*2?2*'):\n        if str(x) == str(x)[::-1]:  \n            if x % 53 == 0:  \n                diviors = Divisors(x)\n                if len(diviors) > 30:\n                    print(x, sum(diviors))"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к решению задачи:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def Divisors(x): ",
+            "italic": true
+          },
+          {
+            "text": "- Объявляем "
+          },
+          {
+            "text": "функцию Divisors",
+            "bold": true
+          },
+          {
+            "text": ", которая принимает один аргумент "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " и будет вычислять его делители."
+          }
+        ],
+        [
+          {
+            "text": "divisors = set()",
+            "italic": true
+          },
+          {
+            "text": " - Создаем пустое "
+          },
+          {
+            "text": "множество divisors",
+            "bold": true
+          },
+          {
+            "text": ", куда будем складывать найденные делители."
+          }
+        ],
+        [
+          {
+            "text": "for j in range(1, int(x**0.5)+1):",
+            "italic": true
+          },
+          {
+            "text": " - Используем цикл"
+          },
+          {
+            "text": " for",
+            "bold": true
+          },
+          {
+            "text": ", чтобы перебрать все значения "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " в интервале от "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": " до квадратного корня из "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": ". Уверен этот шаг стоит пояснить подробнее: такой алгоритм позволяет пробежать суммарно меньше чисел, но способствует нахождению первой половины делителей числа, а через найденные делители мы сможем найти их сомножители, например: делители числа"
+          },
+          {
+            "text": " 24: {1, 2, 3, 4, тут корень , 6, 8, 12, 24}",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "if x % j == 0:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, делится ли"
+          },
+          {
+            "text": " x",
+            "bold": true
+          },
+          {
+            "text": " на"
+          },
+          {
+            "text": " j ",
+            "bold": true
+          },
+          {
+            "text": "без остатка."
+          }
+        ],
+        [
+          {
+            "text": "divisors.add(j)",
+            "italic": true
+          },
+          {
+            "text": " - Если "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " делится на "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " без остатка, добавляем"
+          },
+          {
+            "text": " j",
+            "bold": true
+          },
+          {
+            "text": " во "
+          },
+          {
+            "text": "множество divisors",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "divisors.add(x // j)",
+            "italic": true
+          },
+          {
+            "text": " - Если "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " делится на "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": " без остатка, добавляем "
+          },
+          {
+            "text": "x // j",
+            "bold": true
+          },
+          {
+            "text": " во множество "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          },
+          {
+            "text": ", то есть сомножитель числа "
+          },
+          {
+            "text": "j",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return sorted(divisors)",
+            "italic": true
+          },
+          {
+            "text": " - Возвращаем множество "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          },
+          {
+            "text": ", отсортированное по возрастанию (сортировать не обязательно, но приятная фишка)."
+          }
+        ],
+        [
+          {
+            "text": "from fnmatch import ",
+            "italic": true
+          },
+          {
+            "text": " - Импортируем все функции из модуля "
+          },
+          {
+            "text": "fnmatch",
+            "bold": true
+          },
+          {
+            "text": ", для работы с масками "
+          },
+          {
+            "text": "«*», «?»",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "for x in range(53, 10**7, 53): ",
+            "italic": true
+          },
+          {
+            "text": "- Используем цикл"
+          },
+          {
+            "text": " for,",
+            "bold": true
+          },
+          {
+            "text": " чтобы перебрать все значения "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " в интервале от 53 до 10 миллионов с шагом 53, таким образом удовлетворяем условию, что число должно делиться на 53."
+          }
+        ],
+        [
+          {
+            "text": "if fnmatch(str(x), '2?2'): ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, соответствует ли строковое представление "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " шаблону"
+          },
+          {
+            "text": " 2?2*",
+            "bold": true
+          },
+          {
+            "text": ", используя функцию"
+          },
+          {
+            "text": " fnmatch",
+            "bold": true
+          },
+          {
+            "text": " (это одноименная функция из библиотеки fnmatch)."
+          }
+        ],
+        [
+          {
+            "text": "if str(x) == str(x)[::-1]:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, является ли строковое представление x палиндромом (то есть равным своему перевернутому виду)."
+          }
+        ],
+        [
+          {
+            "text": "if x % 53 == 0:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, является ли "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " кратным "
+          },
+          {
+            "text": "53",
+            "bold": true
+          },
+          {
+            "text": " (из-за шага в переборе - это действие бесполезное)."
+          }
+        ],
+        [
+          {
+            "text": "diviors = Divisors(x)",
+            "italic": true
+          },
+          {
+            "text": " - Вычисляем все делители "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": ", используя функцию "
+          },
+          {
+            "text": "Divisors",
+            "bold": true
+          },
+          {
+            "text": ", и сохраняем результат в переменной "
+          },
+          {
+            "text": "divisors",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if len(diviors) > 30:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, имеет ли "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " более "
+          },
+          {
+            "text": "30",
+            "bold": true
+          },
+          {
+            "text": " делителей."
+          }
+        ],
+        [
+          {
+            "text": "print(x, sum(diviors)) ",
+            "italic": true
+          },
+          {
+            "text": "- Если "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " соответствует всем условиям, выводим его и сумму всех его делителей на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-6210-2/03.webp",
+      "width": 750,
+      "height": 532,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "from fnmatch import *\nfor x in range(53, 10**7, 53):\n    if fnmatch(str(x), '*2?2*'):  \n        if str(x) == str(x)[::-1]: \n            divisors = set()\n            for j in range(1, int(x**0.5)+1):\n                if x % j == 0:\n                    divisors.add(j)\n                    divisors.add(x//j)\n            if len(divisors) > 30:  \n                print(x, sum(divisors))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "212212 508032 ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2527252 5588352 ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "4282824 13789440 ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "4626264 11787120 ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "8125218 19595520 ",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "8824288 19908504",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-25-ege-razbor-zadachi-6210-2/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6 \n",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 6210 ЕГЭ по информатике #25",
+  "task": 25,
+  "hidden": true
+}

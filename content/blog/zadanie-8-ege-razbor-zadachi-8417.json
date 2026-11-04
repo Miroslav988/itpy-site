@@ -1,0 +1,355 @@
+{
+  "slug": "zadanie-8-ege-razbor-zadachi-8417",
+  "title": "Задание 8 ЕГЭ: разбор задачи 8417",
+  "description": "Условие: КЕГЭ № 8417 (Уровень: Базовый) • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-04-12",
+  "cover": {
+    "src": "/blog/zadanie-8-ege-razbor-zadachi-8417/01.webp",
+    "width": 530,
+    "height": 270
+  },
+  "source": "https://dzen.ru/a/ZhQJVZx-LSQH_1y_",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-8417/01.webp",
+      "width": 530,
+      "height": 270,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "КЕГЭ",
+          "href": "https://kompege.ru/task"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "№ 8417 (Уровень: Базовый)",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/392"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ярослав составляет коды из букв, входящих в слово ЯРОСЛАВ. Код должен состоять из 5 букв, буквы в коде не должны повторяться, согласных в коде должно быть больше, чем гласных, две гласные буквы нельзя ставить рядом."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сколько кодов может составить Ярослав?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-8417/02.webp",
+      "width": 750,
+      "height": 401,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import itertools ",
+            "bold": true
+          },
+          {
+            "text": "- импортирует модуль "
+          },
+          {
+            "text": "itertools",
+            "bold": true
+          },
+          {
+            "text": ", который предоставляет функции для создания и использования итераторов."
+          }
+        ],
+        [
+          {
+            "text": "count = 0 ",
+            "bold": true
+          },
+          {
+            "text": "- инициализирует переменную count значением"
+          },
+          {
+            "text": " 0",
+            "bold": true
+          },
+          {
+            "text": ". Эта переменная будет использоваться для подсчета подходящих слов в цикле."
+          }
+        ],
+        [
+          {
+            "text": "for s in itertools.permutations('ЯРОСЛАВ', 5):",
+            "bold": true
+          },
+          {
+            "text": " - запускает цикл"
+          },
+          {
+            "text": " for",
+            "bold": true
+          },
+          {
+            "text": ", который проходит через все перестановки "
+          },
+          {
+            "text": "длиной 5",
+            "bold": true
+          },
+          {
+            "text": " букв из заданной "
+          },
+          {
+            "text": "строки 'ЯРОСЛАВ'",
+            "bold": true
+          },
+          {
+            "text": ". Каждая перестановка сохраняется в переменной "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "slovo = ''.join(s) ",
+            "bold": true
+          },
+          {
+            "text": "- объединяет буквы из перестановки "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": " в строку и сохраняет результат в переменной"
+          },
+          {
+            "text": " slovo",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "glas = [i for i in slovo if i in 'ЯОА'] ",
+            "bold": true
+          },
+          {
+            "text": "- создает список glas, в который добавляются только те буквы из строки slovo, которые присутствуют в строке 'ЯОА'."
+          }
+        ],
+        [
+          {
+            "text": "sogl = [i for i in slovo if i in 'РСЛВ']",
+            "bold": true
+          },
+          {
+            "text": " - создает список "
+          },
+          {
+            "text": "sogl",
+            "bold": true
+          },
+          {
+            "text": ", в который добавляются только те буквы из строки"
+          },
+          {
+            "text": " slovo",
+            "bold": true
+          },
+          {
+            "text": ", которые присутствуют в строке "
+          },
+          {
+            "text": "'РСЛВ'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if len(sogl) > len(glas):",
+            "bold": true
+          },
+          {
+            "text": " - проверяет, если количество согласных букв больше, чем количество гласных."
+          }
+        ],
+        [
+          {
+            "text": "if all(x not in slovo for x in 'ЯА АЯ АО ОА ЯО ОЯ'.split()): ",
+            "bold": true
+          },
+          {
+            "text": "- проверяет, что в слове"
+          },
+          {
+            "text": " slovo",
+            "bold": true
+          },
+          {
+            "text": " отсутствуют определенные комбинации букв. Если это условие выполнено для текущего слова, то счетчик "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": " увеличивается на "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(count)",
+            "bold": true
+          },
+          {
+            "text": " - выводит на экран значение переменной "
+          },
+          {
+            "text": "count",
+            "bold": true
+          },
+          {
+            "text": ", которое представляет количество подходящих слов, удовлетворяющих всем условиям."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таким образом, данный код выполняет перебор всех возможных перестановок из букв слова "
+        },
+        {
+          "text": "'ЯРОСЛАВ'",
+          "bold": true
+        },
+        {
+          "text": " длиной "
+        },
+        {
+          "text": "5",
+          "bold": true
+        },
+        {
+          "text": ", и подсчитывает количество слов, удовлетворяющих определенным условиям, после чего выводит этот результат."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Еще один вариант решения для самостоятельного изучения"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-8417/03.webp",
+      "width": 750,
+      "height": 388,
+      "alt": "-3"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 1224"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-8-ege-razbor-zadachi-8417/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 8417 ЕГЭ по информатике #8",
+  "task": 8
+}

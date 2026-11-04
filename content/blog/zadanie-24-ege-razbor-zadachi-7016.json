@@ -1,0 +1,438 @@
+{
+  "slug": "zadanie-24-ege-razbor-zadachi-7016",
+  "title": "Задание 24 ЕГЭ: разбор задачи 7016",
+  "description": "(Д. Статный) Текстовый файл состоит из букв латинского алфавита и десятичных цифр. Определите максимальную длину подстроки, которая ограничена с одной стороны буквой A, а с другой…",
+  "date": "2023-08-24",
+  "cover": {
+    "src": "/blog/zadanie-24-ege-razbor-zadachi-7016/01.webp",
+    "width": 530,
+    "height": 220
+  },
+  "source": "https://dzen.ru/a/ZNI2R4kxB3-h6RHv",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7016/01.webp",
+      "width": 530,
+      "height": 220,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 7016 (Уровень: Базовый)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(Д. Статный)",
+          "href": "https://vk.com/azinho",
+          "bold": true
+        },
+        {
+          "text": "  Текстовый файл состоит из букв латинского алфавита и десятичных цифр. Определите максимальную длину подстроки, которая ограничена с одной стороны буквой A, а с другой - D и не содержит других букв A и D внутри."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "24.txt",
+          "href": "https://kompege.ru/files/zytAPLWaj.txt"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7016/02.webp",
+      "width": 750,
+      "height": 243,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "s = open('24.txt').readline()\nfor x in '0123456789QWERTYUIOPSFGHJKLZXCVBNM':\n    s = s.replace(x, '*')\nM = [max(len(i) - i.index('D'), i.index('D')) for i in s.split('A') if 'D' in i]\nprint(max(M) + 1)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline() ",
+            "italic": true
+          },
+          {
+            "text": "- Читаем всю строку из файла "
+          },
+          {
+            "text": "'24.txt'",
+            "bold": true
+          },
+          {
+            "text": " и присваиваем ее значение переменной "
+          },
+          {
+            "text": "'s'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for x in '0123456789QWERTYUIOPSFGHJKLZXCVBNM': ",
+            "italic": true
+          },
+          {
+            "text": "- Используем цикл "
+          },
+          {
+            "text": "'for'",
+            "bold": true
+          },
+          {
+            "text": " для перебора каждого символа "
+          },
+          {
+            "text": "'x' ",
+            "bold": true
+          },
+          {
+            "text": "в строке "
+          },
+          {
+            "text": "'0123456789QWERTYUIOPSFGHJKLZXCVBNM'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(x, '  ') ",
+            "italic": true
+          },
+          {
+            "text": "- Заменяем каждое вхождение символа "
+          },
+          {
+            "text": "'x'",
+            "bold": true
+          },
+          {
+            "text": " в строке"
+          },
+          {
+            "text": " 's' ",
+            "bold": true
+          },
+          {
+            "text": "на символ "
+          },
+          {
+            "text": "'  '",
+            "bold": true
+          },
+          {
+            "text": " (пробел)."
+          }
+        ],
+        [
+          {
+            "text": "M = [max(len(i) - i.index('D'), i.index('D')) for i in s.split('A') if 'D' in i]",
+            "italic": true
+          },
+          {
+            "text": " - Создаем список "
+          },
+          {
+            "text": "'M'",
+            "bold": true
+          },
+          {
+            "text": ", в котором каждый элемент вычисляется как максимальное значение между разностью длины строки "
+          },
+          {
+            "text": "'i' ",
+            "bold": true
+          },
+          {
+            "text": "и индекса символа "
+          },
+          {
+            "text": "'D'",
+            "bold": true
+          },
+          {
+            "text": " и индексом символа "
+          },
+          {
+            "text": "'D'",
+            "bold": true
+          },
+          {
+            "text": ", для каждой разделенной подстроки "
+          },
+          {
+            "text": "'i'",
+            "bold": true
+          },
+          {
+            "text": " из строки "
+          },
+          {
+            "text": "'s'",
+            "bold": true
+          },
+          {
+            "text": ", если в подстроке "
+          },
+          {
+            "text": "'i'",
+            "bold": true
+          },
+          {
+            "text": " содержится символ "
+          },
+          {
+            "text": "'D'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(max(M) + 1) ",
+            "italic": true
+          },
+          {
+            "text": "- Выводим на экран максимальное значение из списка "
+          },
+          {
+            "text": "'M' ",
+            "bold": true
+          },
+          {
+            "text": "плюс 1."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7016/03.webp",
+      "width": 750,
+      "height": 306,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "s = open('24.txt').readline()\ns = s.replace('A', 'A A').replace('D', 'D D')\nM = [len(i) for i in s.split() if 'A' in i and 'D' in i]\nprint(max(M))"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline() - Читаем всю строку из файла "
+          },
+          {
+            "text": "'24.txt'",
+            "bold": true
+          },
+          {
+            "text": " и присваиваем ее значение переменной"
+          },
+          {
+            "text": " 's'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('A', 'A A').replace('D', 'D D') - Заменяем каждое вхождение символа "
+          },
+          {
+            "text": "'A'",
+            "bold": true
+          },
+          {
+            "text": " в строке "
+          },
+          {
+            "text": "'s'",
+            "bold": true
+          },
+          {
+            "text": " на "
+          },
+          {
+            "text": "'A A'",
+            "bold": true
+          },
+          {
+            "text": ", а каждое вхождение символа "
+          },
+          {
+            "text": "'D'",
+            "bold": true
+          },
+          {
+            "text": " на \n"
+          },
+          {
+            "text": "'D D'",
+            "bold": true
+          },
+          {
+            "text": " и перезаписываем значение переменной "
+          },
+          {
+            "text": "'s'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M = [len(i) for i in s.split() if 'A' in i and 'D' in i] - Создаем список "
+          },
+          {
+            "text": "'M'",
+            "bold": true
+          },
+          {
+            "text": ", в котором каждый элемент - это длина слова из строки "
+          },
+          {
+            "text": "'s' ",
+            "bold": true
+          },
+          {
+            "text": "разделенной по пробелам, но только если в слове содержатся и символ "
+          },
+          {
+            "text": "'A'",
+            "bold": true
+          },
+          {
+            "text": ", и символ "
+          },
+          {
+            "text": "'D'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(max(M)) - Выводим на экран максимальное значение из списка "
+          },
+          {
+            "text": "'M'",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7016/04.webp",
+      "width": 750,
+      "height": 488,
+      "alt": "-4"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Еще один вариант решение задачи для самостоятельного изучения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "s = open('24.txt').readline()\nfor x in '0123456789QWERTYUIOPSFGHJKLZXCVBNM':\n    s = s.replace(x, '*')\nM = [i for i in s.split('A') if 'D' in i]\nmaxi = 0\nfor x in M:\n    maxi = max(maxi, len(x) - x.index('D'))\n    maxi = max(maxi, x.index('D'))\nprint(maxi+1)  # не забываем букву А"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 273"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-7016/05.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6 \n",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 7016 ЕГЭ по информатике #24",
+  "task": 24
+}

@@ -1,0 +1,433 @@
+{
+  "slug": "zadanie-15-ege-razbor-zadachi-34537",
+  "title": "Задание 15 ЕГЭ: разбор задачи 34537",
+  "description": "Условие: Тип 15 № 34537 • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-02-26",
+  "cover": {
+    "src": "/blog/zadanie-15-ege-razbor-zadachi-34537/01.webp",
+    "width": 530,
+    "height": 480
+  },
+  "source": "https://dzen.ru/a/ZdjFxwIaXUlToajL",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-34537/01.webp",
+      "width": 530,
+      "height": 480,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "Тип 15 № ",
+          "bold": true
+        },
+        {
+          "text": "34537",
+          "href": "https://www.notion.so/problem?id=34537"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/380"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "На числовой прямой даны три отрезка: "
+        },
+        {
+          "text": "P = [10,15], Q = [10,20] и R=[5,15].",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Какова наименьшая возможная длина интервала A, что формулы"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "(x ∈ A) → (x ∈ P)   и (x ∈ Q) → (x ∈ R)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "тождественно равны, то есть принимают равные значения при любом значении переменной х ."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-34537/02.webp",
+      "width": 750,
+      "height": 714,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(x, a1, a2):",
+            "bold": true
+          },
+          {
+            "text": " - Определение функции "
+          },
+          {
+            "text": "F",
+            "bold": true
+          },
+          {
+            "text": " с тремя параметрами: "
+          },
+          {
+            "text": "x, a1 и a2",
+            "bold": true
+          },
+          {
+            "text": ", где "
+          },
+          {
+            "text": "a1 и a2",
+            "bold": true
+          },
+          {
+            "text": " это начало и конец отрезка "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "P = 10 <= x <= 15",
+            "bold": true
+          },
+          {
+            "text": " - Установление значения переменной"
+          },
+          {
+            "text": " P",
+            "bold": true
+          },
+          {
+            "text": " в зависимости от условия "
+          },
+          {
+            "text": "10 <= x <= 15  ((x ∈ P))",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Q = 10 <= x <= 20 ",
+            "bold": true
+          },
+          {
+            "text": "- Установление значения переменной "
+          },
+          {
+            "text": "Q",
+            "bold": true
+          },
+          {
+            "text": " в зависимости от условия "
+          },
+          {
+            "text": "10 <= x <= 20 ((x ∈ Q))",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "R = 5 <= x <= 15",
+            "bold": true
+          },
+          {
+            "text": " - Установление значения переменной "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": " в зависимости от условия "
+          },
+          {
+            "text": "5 <= x <= 15 ((x ∈ R))",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "A = a1 <= x <= a2",
+            "bold": true
+          },
+          {
+            "text": " - Установление значения переменной "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": " в зависимости от условия "
+          },
+          {
+            "text": "a1 <= x <= a2 ((x ∈ A)).",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "return (A <= P) == (Q <= R)",
+            "bold": true
+          },
+          {
+            "text": " - Возвращение значения, равного результату проверки двух логических выражений."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "bold": true
+          },
+          {
+            "text": " - Инициализация пустого списка "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "M = [x / 4 for x in range(5 * 4, 20 * 4)]",
+            "bold": true
+          },
+          {
+            "text": "  Формирование списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", в котором каждое число делится на "
+          },
+          {
+            "text": "4",
+            "bold": true
+          },
+          {
+            "text": " для формирования списка вещественных чисел (можно делить на любое другое число, но это повлечет за собой более долгое выполнение скрипта)."
+          }
+        ],
+        [
+          {
+            "text": "for a1 in M: ",
+            "bold": true
+          },
+          {
+            "text": "- Перебираем все варианты для переменной"
+          },
+          {
+            "text": " a1",
+            "bold": true
+          },
+          {
+            "text": " (начало отрезка "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": ")."
+          }
+        ],
+        [
+          {
+            "text": "for a2 in M: ",
+            "bold": true
+          },
+          {
+            "text": "- Перебираем все варианты для переменной "
+          },
+          {
+            "text": "a2",
+            "bold": true
+          },
+          {
+            "text": " (конец отрезка "
+          },
+          {
+            "text": "A",
+            "bold": true
+          },
+          {
+            "text": ")."
+          }
+        ],
+        [
+          {
+            "text": "if all(F(x, a1, a2) for x in M): ",
+            "bold": true
+          },
+          {
+            "text": "- Проверка: если все значения переменной "
+          },
+          {
+            "text": "х ",
+            "bold": true
+          },
+          {
+            "text": "удовлетворяют условию функции"
+          },
+          {
+            "text": " F",
+            "bold": true
+          },
+          {
+            "text": " (функция тождественно истинна)."
+          }
+        ],
+        [
+          {
+            "text": "R.append(a2 - a1)",
+            "bold": true
+          },
+          {
+            "text": " - Добавление длины отрезка "
+          },
+          {
+            "text": "A (разность конца a2 и начала a1 ) ",
+            "bold": true
+          },
+          {
+            "text": "в список "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(min(R)) ",
+            "bold": true
+          },
+          {
+            "text": "- Вывод минимального значения из списка "
+          },
+          {
+            "text": "R",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 5"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-34537/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 34537 ЕГЭ по информатике #15",
+  "task": 15
+}

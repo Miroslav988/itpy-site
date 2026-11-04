@@ -1,0 +1,41 @@
+{
+  "slug": "zadanie-15-ege-razbor-zadachi-16447",
+  "title": "Задание 15 ЕГЭ: разбор задачи 16447",
+  "description": "Полный разбор задачи в Notion",
+  "date": "2025-03-06",
+  "task": 15,
+  "source": "https://dzen.ru/a/Z6jACXsEAk_FVdfZ",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/16447-15-bf6dee74b54a405882b60cf393df4ce4?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основная сложность задачи заключается в определении наибольшего целого неотрицательного числа A, при котором выражение (2x + 3y < 30) ∨ (x + y ≥ A) истинно для всех целых неотрицательных x и y"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Код решения задачи"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-15-ege-razbor-zadachi-16447/01.webp",
+      "width": 530,
+      "height": 300,
+      "alt": ""
+    }
+  ],
+  "originalTitle": "Разбор номера 16447 #kege по информатике #ЕГЭ15"
+}

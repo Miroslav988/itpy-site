@@ -1,0 +1,378 @@
+{
+  "slug": "zadanie-24-ege-razbor-zadachi-59794",
+  "title": "Задание 24 ЕГЭ: разбор задачи 59794",
+  "description": "Условие: Тип 24 № 59794 • Статья подготовлена командой itpy • Полный разбор задачи в Telegram",
+  "date": "2024-04-25",
+  "cover": {
+    "src": "/blog/zadanie-24-ege-razbor-zadachi-59794/01.webp",
+    "width": 530,
+    "height": 290
+  },
+  "source": "https://dzen.ru/a/ZiiFucgI0nd3gCdn",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-59794/01.webp",
+      "width": 530,
+      "height": 290,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "Тип 24 № ",
+          "bold": true
+        },
+        {
+          "text": "59794",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=59794",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Telegram",
+          "href": "https://t.me/informatika_kege_itpy/401"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Текстовый файл состоит не более чем из "
+        },
+        {
+          "text": "10**6 символов",
+          "bold": true
+        },
+        {
+          "text": " латинского алфавита. Определите минимальную длину подстроки, содержащую ровно "
+        },
+        {
+          "text": "110 ",
+          "bold": true
+        },
+        {
+          "text": "символов "
+        },
+        {
+          "text": "\"U\"",
+          "italic": true
+        },
+        {
+          "text": ". Для выполнения этого задания следует написать программу."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Файлы к заданию: "
+        },
+        {
+          "text": "Задание 24",
+          "href": "https://inf-ege.sdamgia.ru/get_file?id=140108"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-59794/02.webp",
+      "width": 750,
+      "height": 423,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline() ",
+            "bold": true
+          },
+          {
+            "text": "- считывает строку из файла "
+          },
+          {
+            "text": "'24.txt'",
+            "bold": true
+          },
+          {
+            "text": " и сохраняет ее в переменную "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.split('U') ",
+            "bold": true
+          },
+          {
+            "text": "- разделяет строку"
+          },
+          {
+            "text": " s",
+            "bold": true
+          },
+          {
+            "text": " на части, используя разделитель "
+          },
+          {
+            "text": "'U'",
+            "bold": true
+          },
+          {
+            "text": ", и сохраняет результат в списке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "mini = 999999",
+            "bold": true
+          },
+          {
+            "text": " - инициализирует переменную"
+          },
+          {
+            "text": " mini ",
+            "bold": true
+          },
+          {
+            "text": "значением "
+          },
+          {
+            "text": "999999",
+            "bold": true
+          },
+          {
+            "text": ", которая будет использоваться для хранения минимальной длины строки."
+          }
+        ],
+        [
+          {
+            "text": "Цикл "
+          },
+          {
+            "text": "for i in range(len(s)-108): ",
+            "bold": true
+          },
+          {
+            "text": "проходит по всем элементам списка "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", за исключением последних "
+          },
+          {
+            "text": "108 ",
+            "bold": true
+          },
+          {
+            "text": "элементов."
+          }
+        ],
+        [
+          {
+            "text": "r = 'U'.join(s[i:i+109])",
+            "bold": true
+          },
+          {
+            "text": " - объединяет элементы списка"
+          },
+          {
+            "text": " s ",
+            "bold": true
+          },
+          {
+            "text": "от индекса "
+          },
+          {
+            "text": "i",
+            "bold": true
+          },
+          {
+            "text": " до индекса "
+          },
+          {
+            "text": "i+109",
+            "bold": true
+          },
+          {
+            "text": " с использованием разделителя "
+          },
+          {
+            "text": "'U'",
+            "bold": true
+          },
+          {
+            "text": " и сохраняет результат в переменную "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "mini = min(mini, len(r)) ",
+            "bold": true
+          },
+          {
+            "text": "- обновляет значение переменной"
+          },
+          {
+            "text": " mini",
+            "bold": true
+          },
+          {
+            "text": ", если текущая длина строки "
+          },
+          {
+            "text": "r ",
+            "bold": true
+          },
+          {
+            "text": "меньше текущего значения переменной "
+          },
+          {
+            "text": "mini",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(mini + 2) ",
+            "bold": true
+          },
+          {
+            "text": "- выводит на экран минимальную длину строки после прохождения всех элементов списка "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", увеличенную на "
+          },
+          {
+            "text": "2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таким образом, данный код считывает строку из файла, разделяет ее на части, объединяет определенное количество частей с разделителем "
+        },
+        {
+          "text": "'U'",
+          "bold": true
+        },
+        {
+          "text": " и находит минимальную длину строки, составленной из этих частей. Результат увеличивается на "
+        },
+        {
+          "text": "2",
+          "bold": true
+        },
+        {
+          "text": " и выводится на экран."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 1765"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-24-ege-razbor-zadachi-59794/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy ",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 59794 ЕГЭ по информатике #24",
+  "task": 24
+}

@@ -1,0 +1,348 @@
+{
+  "slug": "zadanie-23-ege-razbor-zadachi-8479",
+  "title": "Задание 23 ЕГЭ: разбор задачи 8479",
+  "description": "(В. Рыбальченко) Исполнитель Великий Изменитель преобразует число, записанное на доске. У Великого Изменителя есть три команды:",
+  "date": "2023-08-16",
+  "cover": {
+    "src": "/blog/zadanie-23-ege-razbor-zadachi-8479/01.webp",
+    "width": 530,
+    "height": 320
+  },
+  "source": "https://dzen.ru/a/ZNIxhdi31CRrwK85",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-8479/01.webp",
+      "width": 530,
+      "height": 320,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие:  № 8479 (Уровень: Базовый)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(В. Рыбальченко)",
+          "href": "https://discord.gg/7Ayj3uNKxU",
+          "bold": true
+        },
+        {
+          "text": " Исполнитель Великий Изменитель преобразует число, записанное на доске. У Великого Изменителя есть три команды:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. Вычти 5",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Вычти 4",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. Раздели на 2",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Первая команда уменьшает число на 5, вторая команда уменьшает его на 4, третья команда применяется только к четным числам и делит их на 2."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сколько существует программ, для которых при исходном числе 100 результатом является число 2, а траектория вычислений обязательно содержит числа 73, 22 и не содержит число 50?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-8479/02.webp",
+      "width": 750,
+      "height": 459,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def f(a, b):\n    if a < b or a == 50:\n        return 0\n    elif a == b:\n        return 1\n    else:\n        if a % 2 == 0:\n            return f(a - 5, b) + f(a - 4, b) + f(a // 2, b)\n        else:\n            return f(a - 5, b) + f(a - 4, b)\n\nprint(f(100, 73) * f(73, 22) * f(22, 2))"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def f(a, b):",
+            "italic": true
+          },
+          {
+            "text": " - Создаем функцию "
+          },
+          {
+            "text": "f",
+            "bold": true
+          },
+          {
+            "text": ", которая принимает два аргумента: "
+          },
+          {
+            "text": "a - траектория движения, b - точка выхода.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "if a < b or a == 50:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, меньше ли значение "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " значения"
+          },
+          {
+            "text": " b",
+            "bold": true
+          },
+          {
+            "text": " или равно ли значение "
+          },
+          {
+            "text": "a 50",
+            "bold": true
+          },
+          {
+            "text": " (траектория не содержит)."
+          }
+        ],
+        [
+          {
+            "text": "return 0 ",
+            "italic": true
+          },
+          {
+            "text": "- Возвращаем значение "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": ", если идя по траектории мы проскакиваем точку выхода "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": " или попадаем на 50."
+          }
+        ],
+        [
+          {
+            "text": "elif a == b: ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, равно ли значение "
+          },
+          {
+            "text": "a",
+            "bold": true
+          },
+          {
+            "text": " значению "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return 1",
+            "italic": true
+          },
+          {
+            "text": " - Возвращаем значение "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": ", если идя по траектории мы попадаем в нашу точку выхода "
+          },
+          {
+            "text": "b",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "italic": true
+          },
+          {
+            "text": " - В противном случае мы находимся в пути, значит вызываем рекурсию."
+          }
+        ],
+        [
+          {
+            "text": "if a % 2 == 0: ",
+            "italic": true
+          },
+          {
+            "text": "- Проверяем, является ли значение a четным числом."
+          }
+        ],
+        [
+          {
+            "text": "return f(a - 5, b) + f(a - 4, b) + f(a // 2, b)",
+            "italic": true
+          },
+          {
+            "text": " - Возвращаем сумму результатов выражения "
+          },
+          {
+            "text": "f(a - 5, b), f(a - 4, b) и f(a // 2, b)",
+            "bold": true
+          },
+          {
+            "text": ", если условие в строке "
+          },
+          {
+            "text": "7",
+            "bold": true
+          },
+          {
+            "text": " верно."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "italic": true
+          },
+          {
+            "text": " - В противном случае."
+          }
+        ],
+        [
+          {
+            "text": "return f(a - 5, b) + f(a - 4, b) ",
+            "italic": true
+          },
+          {
+            "text": "- Возвращаем сумму результатов выражений "
+          },
+          {
+            "text": "f(a - 5, b) и f(a - 4, b)",
+            "bold": true
+          },
+          {
+            "text": ", если условие в строке 9 верно."
+          }
+        ],
+        [
+          {
+            "text": "print(f(100, 73) * f(73, 22) * f(22, 2)) ",
+            "italic": true
+          },
+          {
+            "text": "- Выводим на экран результат произведения результатов трех вызовов функции "
+          },
+          {
+            "text": "f",
+            "bold": true
+          },
+          {
+            "text": ". \nПочему умножение? Потому что траектории будут пересекаться, если из 100 в 73 есть 2 пути, а из 72 в 22 будет 3 пути, то суммарно у нас будет 2*3=6 путей."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-8479/03.webp",
+      "width": 750,
+      "height": 435,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def f(a, b):\n    if a <= b or a == 50:\n        return a == b\n    if a % 2 == 0:\n        return f(a - 5, b) + f(a - 4, b) + f(a // 2, b)\n    else:\n        return f(a - 5, b) + f(a - 4, b)\n\nprint(f(100, 73) * f(73, 22) * f(22, 2))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 133760"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-23-ege-razbor-zadachi-8479/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6 \n",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 8479 ЕГЭ по информатике #23",
+  "task": 23
+}

@@ -1,0 +1,323 @@
+{
+  "slug": "zadanie-9-ege-razbor-zadachi-63025",
+  "title": "Задание 9 ЕГЭ: разбор задачи 63025",
+  "description": "Условие: Тип 9 № 63025 • Статья подготовлена командой itpy • Полный разбор задачи в Notion",
+  "date": "2024-02-20",
+  "cover": {
+    "src": "/blog/zadanie-9-ege-razbor-zadachi-63025/01.webp",
+    "width": 530,
+    "height": 340
+  },
+  "source": "https://dzen.ru/a/ZdRtFpLiN19n6aJ1",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-63025/01.webp",
+      "width": 530,
+      "height": 340,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "Тип 9 № ",
+          "bold": true
+        },
+        {
+          "text": "63025",
+          "href": "https://www.notion.so/problem?id=63025"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://t.me/informatika_kege_itpy/373"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите количество строк таблицы, для чисел которых одновременно выполнены все следующие условия:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "— в строке есть повторяющиеся числа;"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "— максимальное число в строке не повторяется;"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "— сумма всех повторяющихся чисел в строке больше максимального числа этой строки. При подсчёте суммы повторяющихся чисел каждое число учитывается столько раз, сколько оно встречается."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе запишите число  — количество строк, удовлетворяющих заданным условиям."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение через Python и комментарии к нему"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-63025/02.webp",
+      "width": 750,
+      "height": 450,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду решения:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "count = 0 ",
+            "bold": true
+          },
+          {
+            "text": "- Инициализируем счетчик кол-ва строк."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.txt'):",
+            "bold": true
+          },
+          {
+            "text": " - Через цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": " пробегаем по всем строкам из файла "
+          },
+          {
+            "text": "'9.txt'.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(x) for x in s.split()]) ",
+            "bold": true
+          },
+          {
+            "text": "- Преобразуем строку в "
+          },
+          {
+            "text": "отсортированный ",
+            "bold": true
+          },
+          {
+            "text": "список целых чисел."
+          }
+        ],
+        [
+          {
+            "text": "if len(M) != len(set(M)): ",
+            "bold": true
+          },
+          {
+            "text": "- Проверка: если в списке есть повторяющиеся элементы."
+          }
+        ],
+        [
+          {
+            "text": "if M.count(M[-1]) == 1: ",
+            "bold": true
+          },
+          {
+            "text": "- Проверка: если максимальный элемент встречается "
+          },
+          {
+            "text": "только один раз",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "copied = [x for x in M if M.count(x) > 1] ",
+            "bold": true
+          },
+          {
+            "text": "- Формирование списка "
+          },
+          {
+            "text": "повторяющихся",
+            "bold": true
+          },
+          {
+            "text": " элементов."
+          }
+        ],
+        [
+          {
+            "text": "if sum(copied) > M[-1]:",
+            "bold": true
+          },
+          {
+            "text": " - Проверка: если "
+          },
+          {
+            "text": "сумма",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "повторяющихся",
+            "bold": true
+          },
+          {
+            "text": " элементов "
+          },
+          {
+            "text": "больше максимального",
+            "bold": true
+          },
+          {
+            "text": " элемента."
+          }
+        ],
+        [
+          {
+            "text": "count += 1 ",
+            "bold": true
+          },
+          {
+            "text": "- Если все вышеописанные условия  "
+          },
+          {
+            "text": "верные",
+            "bold": true
+          },
+          {
+            "text": ", то "
+          },
+          {
+            "text": "увеличивает счетчик",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(count) ",
+            "bold": true
+          },
+          {
+            "text": "- Вывод значения счетчика на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Аналогичное решение без сортировки элементов (через функцию max)"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-63025/03.webp",
+      "width": 750,
+      "height": 450,
+      "alt": "-3"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ: 941"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-9-ege-razbor-zadachi-63025/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 63025 ЕГЭ по информатике #9",
+  "task": 9
+}

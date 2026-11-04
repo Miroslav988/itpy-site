@@ -1,0 +1,367 @@
+{
+  "slug": "zadanie-5-ege-razbor-zadachi-5427",
+  "title": "Задание 5 ЕГЭ: разбор задачи 5427",
+  "description": "Условие: № 5427 Джобс 21.12.22 (Уровень: Базовый) • Статья подготовлена командой itpy, подписывайтесь на наш телеграм канал!",
+  "date": "2023-10-13",
+  "cover": {
+    "src": "/blog/zadanie-5-ege-razbor-zadachi-5427/01.webp",
+    "width": 530,
+    "height": 350
+  },
+  "source": "https://dzen.ru/a/ZRf0ukXASV8TMOQH",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-5427/01.webp",
+      "width": 530,
+      "height": 350,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие:",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "№ 5427 ",
+          "href": "https://kompege.ru/task",
+          "italic": true
+        },
+        {
+          "text": "Джобс 21.12.22 (Уровень: Базовый)",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой itpy, "
+        },
+        {
+          "text": "подписывайтесь на наш телеграм канал!",
+          "href": "https://t.me/+Uimo_G9uG2BlNmFi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Автомат обрабатывает натуральное число "
+        },
+        {
+          "text": "N",
+          "italic": true
+        },
+        {
+          "text": " по следующему алгоритму:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1.     Из числа N вычитается количество нулей в двоичной записи числа N.\n2.     Строится двоичная запись полученного числа.\n3.     К полученной записи слева дописывается три младших разряда.\n4.     Результат переводится в десятичную систему и выводится на экран."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример",
+          "italic": true
+        },
+        {
+          "text": ". Дано число "
+        },
+        {
+          "text": "N",
+          "italic": true
+        },
+        {
+          "text": " = 13. Алгоритм работает следующим образом:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1.     Двоичная запись числа "
+        },
+        {
+          "text": "N",
+          "italic": true
+        },
+        {
+          "text": ": 1101. 13 – 1 = 12\n2.     12_10 = 1100_2\n3.     1100_2 -> 1001100.\n4.     1001100_2 = 76"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Какое наименьшее число, большее 224, может появиться на экране в результате работы автомата?"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-5427/02.webp",
+      "width": 750,
+      "height": 682,
+      "alt": "-2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "M = []\nfor n in range(1, 1000):\n    s = bin(n)[2:]\n\n    n2 = n - s.count('0')\n\n    s2 = bin(n2)[2:]\n\n    s2 = s2[-3:] + s2\n\n    r = int(s2, 2)\n\n    if r > 224:\n        M.append(r)\nprint(min(M))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к решению"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "M = [] - создаем пустой список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for n in range(1, 1000): - начинаем цикл, перебирая значения переменной "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " от "
+          },
+          {
+            "text": "1",
+            "bold": true
+          },
+          {
+            "text": " до "
+          },
+          {
+            "text": "999",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = bin(n)[2:] - преобразуем текущее значение "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " в двоичную строку и сохраняем ее в переменную "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "n2 = n - s.count('0') - вычисляем разницу между текущим значением "
+          },
+          {
+            "text": "n",
+            "bold": true
+          },
+          {
+            "text": " и количеством символов "
+          },
+          {
+            "text": "'0'",
+            "bold": true
+          },
+          {
+            "text": " в строке "
+          },
+          {
+            "text": "s",
+            "bold": true
+          },
+          {
+            "text": ", и сохраняем результат в переменную "
+          },
+          {
+            "text": "n2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s2 = bin(n2)[2:] - преобразуем значение "
+          },
+          {
+            "text": "n2",
+            "bold": true
+          },
+          {
+            "text": " в двоичную строку и сохраняем ее в переменную "
+          },
+          {
+            "text": "s2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s2 = s2[-3:] + s2 - объединяем последние три символа строки "
+          },
+          {
+            "text": "s2",
+            "bold": true
+          },
+          {
+            "text": " с самой строкой "
+          },
+          {
+            "text": "s2",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "r = int(s2, 2) - преобразуем строку "
+          },
+          {
+            "text": "s2",
+            "bold": true
+          },
+          {
+            "text": " в целое число в двоичной системе и сохраняем его в переменную "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if r > 224: - проверяем, является ли значение "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": " больше "
+          },
+          {
+            "text": "224.",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "M.append(r) - добавляем значение "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": " в список "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print(min(M)) - выводим минимальное значение из списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 227"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-5-ege-razbor-zadachi-5427/03.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy \n",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "Разбор номера 5427 ЕГЭ по информатике #5",
+  "task": 5
+}

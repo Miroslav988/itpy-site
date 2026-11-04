@@ -1,0 +1,277 @@
+{
+  "slug": "zadanie-13-ege-razbor-zadachi-25-maya-2024",
+  "title": "Задание 13 ЕГЭ: разбор задачи (25 мая 2024)",
+  "description": "• Статья подготовлена командой itpy • Полный разбор задачи в Telegram",
+  "date": "2024-05-25",
+  "task": 13,
+  "source": "https://dzen.ru/a/ZlGyEDmpWn-XCADz",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-25-maya-2024/01.webp",
+      "width": 530,
+      "height": 350,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "• ",
+          "italic": true
+        },
+        {
+          "text": "Статья подготовлена командой "
+        },
+        {
+          "text": "itpy",
+          "bold": true
+        },
+        {
+          "text": "\n• "
+        },
+        {
+          "text": "Полный разбор задачи в Telegram",
+          "href": "https://t.me/informatika_kege_itpy/423"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "📌 "
+        },
+        {
+          "text": "Ссылка на полную версию шпаргалки/методички на Notion.",
+          "href": "https://informatikakegeitpy.notion.site/13-e6277c9e5b62462b801d7badf9255937"
+        },
+        {
+          "text": "\n\nПоставь ❤ лайк, отправь другу, и забирай несколько полезных функций, которые уже ждут тебя здесь:"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Краткая теория к заданию"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "Адрес сети",
+            "bold": true
+          },
+          {
+            "text": " = "
+          },
+          {
+            "text": "IP-адрес узла",
+            "bold": true
+          },
+          {
+            "text": " & "
+          },
+          {
+            "text": "Маска сети",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "IP",
+            "bold": true
+          },
+          {
+            "text": " состоит из "
+          },
+          {
+            "text": "4",
+            "bold": true
+          },
+          {
+            "text": " чисел на каждое из которых выделено по 1 "
+          },
+          {
+            "text": "байту",
+            "bold": true
+          },
+          {
+            "text": " (то есть по 8 "
+          },
+          {
+            "text": "бит",
+            "bold": true
+          },
+          {
+            "text": ")."
+          }
+        ],
+        [
+          {
+            "text": "Таким образом числа лежат в диапазоне от "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": " до "
+          },
+          {
+            "text": "255",
+            "bold": true
+          },
+          {
+            "text": " ("
+          },
+          {
+            "text": "11111111",
+            "bold": true
+          },
+          {
+            "text": ")."
+          }
+        ],
+        [
+          {
+            "text": "Маска имеет длину "
+          },
+          {
+            "text": "32",
+            "bold": true
+          },
+          {
+            "text": " бита и вид: "
+          },
+          {
+            "text": "111111..00",
+            "bold": true
+          },
+          {
+            "text": " (сначала "
+          },
+          {
+            "text": "единицы",
+            "bold": true
+          },
+          {
+            "text": ", затем "
+          },
+          {
+            "text": "нули",
+            "bold": true
+          },
+          {
+            "text": ")."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Задание включает в себя пять типов"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Написать программу, которая определяет адрес сети.",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Написать программу, которая определяет чему равен конкретный байт/октет маски | наибольшее/наименьшее количество нулей/единиц в двоичной записи маски подсети.",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Написать программу, которая определяет сколько в сети IP-адресов.",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Написать программу, которая определяет максимальное/минимальное число А - некоторое допустимое для записи IP-адреса число.",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "В условии сказано что есть два узла, находящиеся в одной сети.",
+            "italic": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение первого типа задания"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-25-maya-2024/02.webp",
+      "width": 750,
+      "height": 239,
+      "alt": "-2"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение второго типа задания"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-25-maya-2024/03.webp",
+      "width": 750,
+      "height": 380,
+      "alt": "-3"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение третьего типа задания"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-25-maya-2024/04.webp",
+      "width": 750,
+      "height": 415,
+      "alt": "-4"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение четвертого типа задания"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-25-maya-2024/05.webp",
+      "width": 750,
+      "height": 283,
+      "alt": "-5"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Решение пятого типа задания"
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-13-ege-razbor-zadachi-25-maya-2024/06.webp",
+      "width": 750,
+      "height": 428,
+      "alt": "-6"
+    }
+  ],
+  "originalTitle": "13 Шпаргалка ЕГЭ | Задание #ЕГЭ13 #шпора"
+}

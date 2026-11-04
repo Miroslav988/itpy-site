@@ -1,0 +1,410 @@
+{
+  "slug": "zadanie-14-ege-razbor-zadachi-7346",
+  "title": "Задание 14 ЕГЭ: разбор задачи 7346",
+  "description": "(Д. Статный) Дано арифметическое выражение:",
+  "date": "2023-08-11",
+  "cover": {
+    "src": "/blog/zadanie-14-ege-razbor-zadachi-7346/01.webp",
+    "width": 716,
+    "height": 533
+  },
+  "source": "https://dzen.ru/a/ZNIsinCfNUgo2dDg",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/zadanie-14-ege-razbor-zadachi-7346/01.webp",
+      "width": 716,
+      "height": 533,
+      "alt": ""
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Условие: № 7346 (Уровень: Средний)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(Д. Статный)",
+          "href": "https://vk.com/azinho",
+          "bold": true
+        },
+        {
+          "text": " Дано арифметическое выражение:"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-14-ege-razbor-zadachi-7346/02.webp",
+      "width": 206,
+      "height": 45,
+      "alt": "-2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В записи чисел переменной "
+        },
+        {
+          "text": "x",
+          "bold": true
+        },
+        {
+          "text": " обозначена "
+        },
+        {
+          "text": "неизвестная цифра из допустимого алфавита",
+          "bold": true
+        },
+        {
+          "text": " для указанных систем счисления. Определите наибольшее значение x, при котором значение данного арифметического выражения кратно 35. Для найденного значения x "
+        },
+        {
+          "text": "вычислите частное от деления значения арифметического выражения на 35",
+          "bold": true
+        },
+        {
+          "text": " и укажите его в ответе в десятичной системе счисления."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-14-ege-razbor-zadachi-7346/03.webp",
+      "width": 750,
+      "height": 584,
+      "alt": "-3"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def my_int(M: list, n: int):\n    r = 0\n    M.reverse()\n    for i in range(0, len(M)):\n        r += M[i] * n ** i\n    return r\n\nfor x in range(0, 67):    \n  A = my_int([3, x, 2, 1], 81)\n  B = my_int([1, 7, x, 4], 67)\n  if (A + B) % 35 == 0:\n    print((A + B) // 35)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Комментарии к коду программы:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def my_int(M: list, n: int):",
+            "italic": true
+          },
+          {
+            "text": " - Объявляем функцию "
+          },
+          {
+            "text": "my_int",
+            "bold": true
+          },
+          {
+            "text": ", которая принимает два аргумента: число для перевода в виде списока M и систему счисления из которой будем переводить в виде переменной n."
+          }
+        ],
+        [
+          {
+            "text": "r = 0",
+            "italic": true
+          },
+          {
+            "text": " - Создаем переменную"
+          },
+          {
+            "text": " r",
+            "bold": true
+          },
+          {
+            "text": " со значением "
+          },
+          {
+            "text": "0",
+            "bold": true
+          },
+          {
+            "text": ", куда будем записывать итоговый результат перевода."
+          }
+        ],
+        [
+          {
+            "text": "M.reverse() ",
+            "italic": true
+          },
+          {
+            "text": "- Используем метод"
+          },
+          {
+            "text": " reverse()",
+            "bold": true
+          },
+          {
+            "text": " для переворачивания списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": ", таким образом порядковые номера выстроятся по направлению индексов цикла "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(0, len(M)):",
+            "italic": true
+          },
+          {
+            "text": " - Используем цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": ", чтобы перебрать все элементы списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " по индексам."
+          }
+        ],
+        [
+          {
+            "text": "r += M[i] * n **  i ",
+            "italic": true
+          },
+          {
+            "text": "- Для каждого элемента списка "
+          },
+          {
+            "text": "M",
+            "bold": true
+          },
+          {
+            "text": " вычисляем значение по формуле и добавляем его к переменной"
+          },
+          {
+            "text": " r ",
+            "bold": true
+          },
+          {
+            "text": "(итоговую сумму)."
+          }
+        ],
+        [
+          {
+            "text": "return r -",
+            "italic": true
+          },
+          {
+            "text": " Возвращаем значение переменной "
+          },
+          {
+            "text": "r",
+            "bold": true
+          },
+          {
+            "text": ", то есть результат перевода."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(0, 67):",
+            "italic": true
+          },
+          {
+            "text": " - Используем цикл "
+          },
+          {
+            "text": "for",
+            "bold": true
+          },
+          {
+            "text": ", чтобы перебрать все значения от 0 до 66 для переменной "
+          },
+          {
+            "text": "x",
+            "bold": true
+          },
+          {
+            "text": " (всегда выбираем нижнюю систему счисления, так как большие числа не могут находиться в меньшей системе счисления)."
+          }
+        ],
+        [
+          {
+            "text": "A = my_int([3, x, 2, 1], 81) ",
+            "italic": true
+          },
+          {
+            "text": "- Вызываем функцию "
+          },
+          {
+            "text": "my_int",
+            "bold": true
+          },
+          {
+            "text": " с аргументами"
+          },
+          {
+            "text": " [3, x, 2, 1] ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "81",
+            "bold": true
+          },
+          {
+            "text": " и сохраняем результат в переменной"
+          },
+          {
+            "text": " A",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "B = my_int([1, 7, x, 4], 67)",
+            "italic": true
+          },
+          {
+            "text": " - Вызываем функцию"
+          },
+          {
+            "text": " my_int ",
+            "bold": true
+          },
+          {
+            "text": "с аргументами "
+          },
+          {
+            "text": "[1, 7, x, 4] ",
+            "bold": true
+          },
+          {
+            "text": "и "
+          },
+          {
+            "text": "67 ",
+            "bold": true
+          },
+          {
+            "text": "и сохраняем результат в переменной "
+          },
+          {
+            "text": "B",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if (A + B) % 35 == 0:",
+            "italic": true
+          },
+          {
+            "text": " - Проверяем, является ли значение арифметического выражения "
+          },
+          {
+            "text": "A + B",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "кратным",
+            "bold": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "35",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "print((A + B) // 35) ",
+            "italic": true
+          },
+          {
+            "text": "- Если сумма "
+          },
+          {
+            "text": "A + B кратна 35",
+            "bold": true
+          },
+          {
+            "text": ", выводим ее целочисленное -"
+          },
+          {
+            "text": " частное от деления на 35",
+            "bold": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ответ: 62244"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Информатика ЕГЭ | itpy 👨‍💻",
+          "href": "https://t.me/+SIliQTddHE8xNTk6"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/blog/zadanie-14-ege-razbor-zadachi-7346/04.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6 \n",
+      "caption": "Присоединяйтесь и готовьтесь вместе с нами: https://t.me/+SIliQTddHE8xNTk6"
+    }
+  ],
+  "originalTitle": "Разбор номера 7346 ЕГЭ по информатике #14",
+  "task": 14
+}

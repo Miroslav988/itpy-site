@@ -1,0 +1,148 @@
+{
+  "slug": "osvoenie-kontrolnyh-operatorov-v-python-continue-break-exit",
+  "title": "Освоение контрольных операторов в Python: continue, break, exit, yield и pass",
+  "description": "Python предлагает разнообразные контрольные операторы, которые помогают управлять потоком выполнения программы. Давайте рассмотрим пять ключевых операторов: continue, break, exit,…",
+  "date": "2024-02-17",
+  "cover": {
+    "src": "/blog/osvoenie-kontrolnyh-operatorov-v-python-continue-break-exit/01.webp",
+    "width": 530,
+    "height": 220
+  },
+  "source": "https://dzen.ru/a/Zcz_DXzWMjgfFKQc",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog/osvoenie-kontrolnyh-operatorov-v-python-continue-break-exit/01.webp",
+      "width": 530,
+      "height": 220,
+      "alt": ""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Python предлагает разнообразные контрольные операторы, которые помогают управлять потоком выполнения программы. Давайте рассмотрим пять ключевых операторов: continue, break, exit, yield и pass, и узнаем, как они используются в Python."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. CONTINUE",
+          "bold": true
+        },
+        {
+          "text": "\nОператор continue используется в циклах для перехода к следующей итерации, пропуская текущую итерацию. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "for i in range(5):\n    if i == 2:\n        continue\n    print(i, end=' ')  # Вывод: 0 1 3 4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2.  BREAK",
+          "bold": true
+        },
+        {
+          "text": "\nОператор break используется для прерывания выполнения цикла (только в котором мы находимся), когда выполняется определенное условие. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "for i in range(5):\n    if i == 3:\n        break\n    print(i, end=' ')  # Вывод: 0 1 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. EXIT",
+          "bold": true
+        },
+        {
+          "text": "\nФункция exit() используется для выхода из программы или интерпретатора Python. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "answer = input(\"Хотите выйти из программы? (yes/no): \")\nif answer == 'yes':\n    exit()\nelse:\n    print(\"Программа продолжает работу.\")"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. YIELD",
+          "bold": true
+        },
+        {
+          "text": "\nОператор yield используется в генераторах для возврата значений последовательно, без завершения функции. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "def my_generator():\n    for i in range(5):\n        yield i\n\ngen = my_generator()\nfor item in gen:\n    print(item, end=' ')  # Вывод: 0 1 2 3 4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. PASS",
+          "bold": true
+        },
+        {
+          "text": "\nОператор pass не делает ничего. Он используется в тех местах, где синтаксически требуется оператор, но никаких действий выполнять не нужно. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "x = 5\nif x < 0:\n    pass  # Временно оставляем этот блок пустым\nelse:\n    print(\"x не отрицательное число\")"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читайте нас в телеграмме"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Информатика ЕГЭ | itpy 👨‍💻"
+    },
+    {
+      "type": "image",
+      "src": "/blog/osvoenie-kontrolnyh-operatorov-v-python-continue-break-exit/02.webp",
+      "width": 750,
+      "height": 421,
+      "alt": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy",
+      "caption": "Присоединяйся к нашему Телеграм каналу: t.me/informatika_kege_itpy"
+    }
+  ],
+  "originalTitle": "👩‍💻 Освоение контрольных операторов в Python: continue, break, exit, yield и pass #tpy"
+}
