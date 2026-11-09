@@ -20,6 +20,16 @@ export function PenUnderline() {
   );
 }
 
+export function Sparks() {
+  return (
+    <svg className="sparks" viewBox="0 0 40 40" aria-hidden="true">
+      <path d="M10 21 L8 5" />
+      <path d="M20 25 L32 11" />
+      <path d="M26 35 L40 31" />
+    </svg>
+  );
+}
+
 export function Check() {
   return <span className="check" aria-hidden="true">✓</span>;
 }

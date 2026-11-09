@@ -3,7 +3,7 @@ import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
 import ReviewCarousel from "./ReviewCarousel";
 import { BookingButton } from "./booking/Booking";
-import { Check, Icon, PenUnderline, SectionHead } from "./ui";
+import { Check, Icon, PenUnderline, SectionHead, Sparks } from "./ui";
 import { aboutFacts, environment, faqs, features, formats, heroFacts, heroFormats, links, pairsNote, steps, teacher } from "./content";
 import PostCard from "./blog/PostCard";
 import { commentedBreakdown, posts } from "./blog/posts";
@@ -33,7 +33,7 @@ export default async function Home() {
             <div className="hero-copy">
               <p className="tag">ЕГЭ по информатике · 10–11 класс</p>
               <h1 id="hero-title">
-                Информатика, которую <span className="pen-word">понимаешь<PenUnderline /></span>
+                <span className="sparked">Информатика,<Sparks /></span> которую <span className="pen-word">понимаешь<PenUnderline /></span>
               </h1>
               <p className="hero-lead">
                 <strong>Я Андрианов Илья,</strong> преподаватель с многолетним опытом, который помогает успешно сдавать ЕГЭ
@@ -172,7 +172,7 @@ export default async function Home() {
             <SectionHead
               id="reviews-title"
               part="Часть 3 · Отзывы учеников"
-              title={<>150+ отзывов <mark>на Авито</mark></>}
+              title={<>150+ отзывов<br /><mark>на Авито</mark></>}
               lead={
                 <>
                   Реальные отзывы от учеников и родителей на моём профиле{" "}
