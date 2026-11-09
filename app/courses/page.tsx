@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "../SiteHeader";
 import SiteFooter from "../SiteFooter";
@@ -6,17 +5,22 @@ import { BookingButton } from "../booking/Booking";
 import { PenUnderline } from "../ui";
 import CourseReviews from "./CourseReviews";
 import { categories, courses, stepikUrl } from "./catalog";
+import { JsonLd, breadcrumbSchema, coursesSchema, pageMetadata } from "../seo";
+import { siteOrigin } from "../site";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/courses",
   title: "Курсы по Python и ЕГЭ на Stepik — ITPY",
   description: "Записанные курсы ITPY на Stepik: Python с нуля, задания ЕГЭ по информатике и сборники вариантов. Оплата и обучение — на Stepik.",
-};
+});
 
-export default function CoursesPage() {
+export default async function CoursesPage() {
+  const origin = await siteOrigin();
   const filled = categories.filter((category) => courses.some((course) => course.category === category.id));
 
   return (
     <>
+      <JsonLd nodes={[coursesSchema(origin), breadcrumbSchema(origin, [["Главная", "/"], ["Курсы", "/courses"]])]} />
       <SiteHeader active="courses" />
       <main id="top" className="catalog">
         <section className="catalog-hero" aria-labelledby="catalog-title">

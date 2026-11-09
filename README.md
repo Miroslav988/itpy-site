@@ -37,8 +37,9 @@ docker compose logs -f         # логи
 | Отзывы (скриншоты) | `public/reviews/review-NN.webp` + превью в `public/reviews/thumbs/` |
 | Стили | `app/globals.css` |
 
-Неподтверждённые факты не выводятся: `teacher.story` и `teacher.experienceYears` со значением `null` скрыты,
-в `metrics` — только подтверждённые цифры (ТЗ, п. 4.1).
+Ссылки, которых пока нет (`links.avito`, `links.license` в `app/content.ts`), равны `null` — кнопки с ними скрыты.
+Фото на первом экране — снимок без фона (`public/media/teacher-cutout.webp`, вырезан через macOS Vision); при замене
+фото его нужно вырезать заново.
 
 ### Добавить курс
 
@@ -92,5 +93,17 @@ npm run blog:import -- --article https://dzen.ru/a/<id>   # одна стать�
 
 ## SEO
 
-`app/robots.ts` и `app/sitemap.ts` строят абсолютные адреса по хосту запроса — после выбора домена
-ничего менять не нужно. Картинка для соцсетей — `public/og.png` (1200×630).
+Когда будет выбран домен, задайте переменную окружения `SITE_URL=https://домен`: канонические адреса, sitemap и Open Graph
+перестанут зависеть от хоста запроса. Без неё адреса строятся по `Host` / `X-Forwarded-Host`.
+Картинка для соцсетей — `public/og.png` (1200×630).
+
+| Что | Где |
+|---|---|
+| Заголовки, описания, canonical, Open Graph | `pageMetadata` в `app/seo.tsx` |
+| Разметка schema.org (JSON-LD): человек, услуги и цены, FAQ, курсы, статьи, хлебные крошки | `app/seo.tsx` |
+| Правила для роботов, в том числе ИИ-краулеров | `app/robots.ts` |
+| Карта сайта: страницы, разборы по номерам заданий, статьи | `app/sitemap.ts` |
+| `/llms.txt` и `/llms-full.txt` — описание сайта для нейросетей | `app/llms.ts` |
+
+Всё это строится из `app/content.ts`, `app/courses/catalog.ts` и `content/blog`: достаточно поменять данные.
+В разметку и `llms.txt` идут только факты, которые есть на сайте.

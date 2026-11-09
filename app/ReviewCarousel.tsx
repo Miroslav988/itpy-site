@@ -15,6 +15,12 @@ export default function ReviewCarousel() {
   const isOpen = selected !== null;
   const current = selected === null ? null : reviews[selected];
 
+  // Start on the second review so both neighbours are visible, as in the mockup.
+  useEffect(() => {
+    const track = trackRef.current;
+    if (track && track.scrollLeft === 0) track.scrollLeft = cardStep();
+  }, []);
+
   useEffect(() => {
     if (!isOpen) return;
     const previousOverflow = document.body.style.overflow;
@@ -28,8 +34,10 @@ export default function ReviewCarousel() {
     return (card?.offsetWidth ?? 320) + gap;
   }
 
-  function scrollByCards(direction: number) {
-    trackRef.current?.scrollBy({ left: direction * cardStep(), behavior: "smooth" });
+  // Cards snap to the centre, so card N is centred at scrollLeft = N * step.
+  function goTo(index: number) {
+    const target = (index + reviews.length) % reviews.length;
+    trackRef.current?.scrollTo({ left: target * cardStep(), behavior: "smooth" });
   }
 
   function open(index: number) {
@@ -66,41 +74,48 @@ export default function ReviewCarousel() {
 
   return (
     <div className="reviews">
-      <div className="reviews-toolbar">
-        <p className="reviews-counter" aria-live="polite">
-          <strong>{pad(active + 1)}</strong> / {reviews.length}
-        </p>
-        <div className="reviews-buttons">
-          <button className="icon-button" type="button" aria-label="Предыдущие отзывы" onClick={() => scrollByCards(-1)}>←</button>
-          <button className="icon-button icon-button-ink" type="button" aria-label="Следующие отзывы" onClick={() => scrollByCards(1)}>→</button>
-        </div>
+      <div className="reviews-stage">
+        <button className="icon-button reviews-arrow reviews-prev" type="button" aria-label="Предыдущий отзыв" onClick={() => goTo(active - 1)}>←</button>
+        <ul
+          className="review-track"
+          ref={trackRef}
+          onScroll={(event) => {
+            const index = Math.round(event.currentTarget.scrollLeft / cardStep());
+            setActive(Math.min(reviews.length - 1, Math.max(0, index)));
+          }}
+        >
+          {reviews.map((review, index) => (
+            <li key={review.src} className={index === active ? "is-active" : undefined}>
+              <button className="review-card" type="button" onClick={() => open(index)} aria-label={`Открыть отзыв ${index + 1} из ${reviews.length}`}>
+                <img
+                  src={review.thumb}
+                  srcSet={`${review.thumb} 720w, ${review.src} ${review.width}w`}
+                  sizes="(min-width: 700px) 560px, 84vw"
+                  alt={`Отзыв ученика о подготовке к ЕГЭ по информатике, ${index + 1} из ${reviews.length}`}
+                  width={review.width}
+                  height={review.height}
+                  loading={index > 2 ? "lazy" : "eager"}
+                  decoding="async"
+                />
+              </button>
+            </li>
+          ))}
+        </ul>
+        <button className="icon-button reviews-arrow reviews-next" type="button" aria-label="Следующий отзыв" onClick={() => goTo(active + 1)}>→</button>
       </div>
 
-      <ul
-        className="review-track"
-        ref={trackRef}
-        onScroll={(event) => {
-          const index = Math.round(event.currentTarget.scrollLeft / cardStep());
-          setActive(Math.min(reviews.length - 1, Math.max(0, index)));
-        }}
-      >
+      <div className="reviews-dots">
         {reviews.map((review, index) => (
-          <li key={review.src}>
-            <button className="review-card" type="button" onClick={() => open(index)} aria-label={`Открыть отзыв ${index + 1} из ${reviews.length}`}>
-              <img
-                src={review.thumb}
-                srcSet={`${review.thumb} 720w, ${review.src} ${review.width}w`}
-                sizes="(min-width: 700px) 580px, 88vw"
-                alt=""
-                width={review.width}
-                height={review.height}
-                loading={index > 1 ? "lazy" : "eager"}
-                decoding="async"
-              />
-            </button>
-          </li>
+          <button
+            className="reviews-dot"
+            type="button"
+            key={review.src}
+            aria-label={`Отзыв ${index + 1} из ${reviews.length}`}
+            aria-current={index === active ? "true" : undefined}
+            onClick={() => goTo(index)}
+          />
         ))}
-      </ul>
+      </div>
 
       {/* Escape closes the native <dialog>; arrows switch reviews; the backdrop click is a mouse shortcut. */}
       {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}

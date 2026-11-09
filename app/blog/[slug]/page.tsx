@@ -7,6 +7,8 @@ import { BookingButton } from "../../booking/Booking";
 import ArticleBody from "../ArticleBody";
 import PostCard from "../PostCard";
 import { ctaText, findPost, formatDate, posts, readingMinutes } from "../posts";
+import { JsonLd, articleSchema, breadcrumbSchema, pageMetadata, personSchema } from "../../seo";
+import { siteOrigin } from "../../site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -17,20 +19,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = findPost((await params).slug);
   if (!post) return {};
-  const image = post.cover ?? { src: "/og.png", width: 1200, height: 630 };
-  return {
+  return pageMetadata({
+    path: `/blog/${post.slug}`,
     title: `${post.title} — блог ITPY`,
     description: post.description,
+    image: post.cover,
     robots: post.draft ? { index: false, follow: false } : undefined,
-    openGraph: {
-      type: "article",
-      siteName: "ITPY",
-      title: post.title,
-      description: post.description,
-      publishedTime: post.date,
-      images: [{ url: image.src, width: image.width, height: image.height, alt: post.title }],
-    },
-  };
+    openGraph: { type: "article", publishedTime: post.date },
+  });
 }
 
 export default async function PostPage({ params }: Props) {
@@ -39,9 +35,14 @@ export default async function PostPage({ params }: Props) {
   const others = posts.filter((other) => other.slug !== post.slug && !other.draft);
   const sameTask = post.task ? others.filter((other) => other.task === post.task) : [];
   const more = [...sameTask, ...others.filter((other) => !sameTask.includes(other))].slice(0, 3);
+  const origin = await siteOrigin();
+  const trail: Array<[string, string]> = [["Главная", "/"], ["Блог", "/blog"]];
+  if (post.task) trail.push([`Задание ${post.task}`, `/blog?task=${post.task}`]);
+  trail.push([post.title, `/blog/${post.slug}`]);
 
   return (
     <>
+      <JsonLd nodes={[personSchema(origin), articleSchema(origin, post), breadcrumbSchema(origin, trail)]} />
       <SiteHeader active="blog" />
       <main id="top">
         <article className="post" aria-labelledby="post-title">

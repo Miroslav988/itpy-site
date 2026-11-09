@@ -1,10 +1,18 @@
 // Content of the home page. Facts marked "согласовать" in the spec (ТЗ v1.0)
 // must be confirmed by Ilia before publishing; leave a value null to hide it.
 
+import type { IconName } from "./ui";
+
 export const links = {
   telegramPersonal: "https://t.me/ilandroxxy",
   telegramChannel: "https://t.me/informatika_kege_itpy",
+  dzen: "https://dzen.ru/informatika_kege_itpy",
   planerka: "https://planerka.app/ilandroxy/first-lesson",
+  // Where «Получить запись урока» leads. The channel until Ilia gives the post or bot link.
+  freeLesson: "https://t.me/informatika_kege_itpy",
+  // Not provided yet; the buttons that need these stay hidden while they are null.
+  avito: null as string | null,
+  license: null as string | null,
   diploma: "/media/teacher-diploma.webp",
   officialDocs: "/media/teacher-official.webp",
 };
@@ -21,47 +29,52 @@ export const teacher = {
   shortName: "Илья",
   role: "Подготовка к ЕГЭ по информатике",
   photo: { src: "/media/teacher-avatar.webp", width: 1254, height: 1254 },
-  // Spec 4.5: a short story about why Ilia teaches ЕГЭ informatics. Hidden until provided.
-  story: null as string | null,
-  education: "Высшее: бакалавриат «Информатика и вычислительная техника»",
-  // Spec 11: confirmed years of teaching. Hidden until provided.
-  experienceYears: null as number | null,
-  // Spec 4.5: legal wording to be approved before publishing.
-  official: "ИП: оплата на расчётный счёт, чек после каждой оплаты",
-  taxDeduction: "Документы для налогового вычета 13%",
+  // The same photo with the background removed, for the hero.
+  cutout: { src: "/media/teacher-cutout.webp", width: 811, height: 1068 },
+  // The polaroid in «О преподавателе».
+  portrait: { src: "/media/teacher-desk.webp", width: 865, height: 960 },
 };
 
-// Spec 4.1: only confirmed figures. Add «учеников подготовлено» and «средний балл»
-// here once Ilia confirms them.
-export const metrics: Array<{ value: string; label: string }> = [
-  { value: "Высшее", label: "IT-образование" },
-  { value: "18", label: "отзывов учеников" },
-  { value: "60 мин", label: "бесплатное пробное" },
+export const aboutFacts: Array<{ label: string; value: string; link?: { href: string; label: string } }> = [
+  { label: "Образование", value: "Бакалавриат: Информатика и вычислительная техника", link: { href: links.diploma, label: "Диплом" } },
+  { label: "Дополнительное обучение", value: "Яндекс Практикум, профессиональная переподготовка и повышение квалификации" },
+  { label: "Официальная деятельность", value: "ИП, образовательная лицензия", link: links.license ? { href: links.license, label: "Лицензия" } : undefined },
+  { label: "Налоговый вычет", value: "Возможен при соблюдении установленных условий и наличии необходимых документов", link: { href: links.officialDocs, label: "Подробнее о вычете" } },
 ];
 
-export const seasonNote =
-  "Набор в пары обычно идёт с середины августа до конца сентября, мест немного. Напишите — подскажу, есть ли место сейчас.";
+// Texts below follow the owner's change log (Notion, November 2026).
+export const heroFacts: Array<{ title: string; text: string; icon: IconName }> = [
+  { title: "Высшее образование", text: "Закончил IT-направление «Информатика и вычислительная техника»", icon: "cap" },
+  { title: "Работаю официально", text: "Как ИП и имею лицензию на образовательную деятельность", icon: "briefcase" },
+  { title: "150+ отзывов на Авито", text: "Реальные отзывы учеников и родителей", icon: "message" },
+];
+
+export const heroFormats: Array<{ title: string; text: string; icon: IconName }> = [
+  { title: "Парные занятия", text: "Готовимся в мини-группе из 2 человек", icon: "users" },
+  { title: "Вебинары", text: "Онлайн-занятия с теорией и практикой", icon: "radio" },
+  { title: "Курсы в записи", text: "Готовые уроки, которые можно проходить в удобном темпе на платформе Stepik", icon: "play" },
+];
 
 export type Format = {
   id: string;
-  badge: string;
-  meta: string;
   title: string;
+  subtitle?: string;
+  meta: string;
   rows: Array<{ label: string; value: string }>;
   price: string;
   priceNote?: string;
-  note?: string;
-  action: "booking" | "telegram";
+  action: "booking" | "telegram" | "courses";
   actionLabel: string;
-  featured?: boolean;
 };
+
+// Shown under the cards so that all three keep the same layout.
+export const pairsNote = "Количество мест ограничено. Рекомендую записываться заранее. Уточняйте наличие мест.";
 
 export const formats: Format[] = [
   {
     id: "pairs",
-    badge: "ПАРА",
-    meta: "2 ученика · 60 минут",
     title: "Парные занятия",
+    meta: "2 ученика · 60 минут",
     rows: [
       { label: "Кому подходит", value: "Тем, кому важны внимание преподавателя и персональный темп." },
       { label: "Как устроен урок", value: "Живое занятие в Zoom вдвоём: теория, задачи, ответы на вопросы прямо на уроке." },
@@ -70,54 +83,92 @@ export const formats: Format[] = [
     ],
     price: "2 000 ₽",
     priceNote: "за занятие с ученика",
-    note: seasonNote,
     action: "booking",
     actionLabel: "Записаться на пробный урок",
-    featured: true,
   },
   {
     id: "webinars",
-    badge: "ВЕБИНАРЫ",
-    meta: "группа · онлайн",
     title: "Вебинары",
-    // Spec 4.2: exact tariffs, schedule and included feedback are still to be confirmed.
+    subtitle: "Занятия проходят в Zoom",
+    meta: "2 раза в неделю",
     rows: [
-      { label: "Кому подходит", value: "Тем, кто готов заниматься в группе. Подходит и тогда, когда места в парах заняты." },
-      { label: "Как устроен урок", value: "Онлайн-занятие для группы по тому же маршруту подготовки к ЕГЭ." },
-      { label: "Обратная связь", value: "Что входит в тариф — расскажу при знакомстве." },
-      { label: "Материалы", value: "Конспекты в Telegram-боте, задания на Stepik." },
+      { label: "Кому подходит", value: "Всем, кто готовится к ЕГЭ и хочет системно пройти весь материал." },
+      { label: "Как устроен урок", value: "Встречаемся 2 раза в неделю по 1,5 часа. На каждом занятии разбираем одну тему и одно задание ЕГЭ." },
+      { label: "Обратная связь", value: "Вопросы в чате во время занятия и поддержка кураторов: разбор домашних заданий и ответы на вопросы." },
+      { label: "Материалы", value: "Конспекты и видеоконспекты после каждого урока, домашние задания на Stepik (без письменных работ)." },
     ],
-    price: "4 000–5 000 ₽",
-    priceNote: "в месяц, ориентир — точные условия уточняются",
+    price: "4 999 ₽",
+    priceNote: "в месяц",
     action: "telegram",
     actionLabel: "Уточнить условия",
   },
+  {
+    id: "recorded",
+    title: "Курсы в записи на платформе Stepik",
+    meta: "в удобном темпе",
+    rows: [
+      { label: "Кому подходит", value: "Тем, кто хочет изучать материал самостоятельно и в своём темпе." },
+      { label: "Как устроен курс", value: "Последовательные видеоуроки и текстовые уроки с теорией, практикой и разбором задач." },
+      { label: "Обратная связь", value: "Проверка решений на платформе и разборы в комментариях." },
+      { label: "Материалы", value: "Видеоуроки, текстовые конспекты, дополнительные материалы и задания на Stepik." },
+    ],
+    price: "от 299 ₽",
+    priceNote: "за курс",
+    action: "courses",
+    actionLabel: "Посмотреть каталог курсов",
+  },
 ];
 
-export const steps = [
-  { title: "Пробное занятие", text: "Знакомимся, определяем уровень и намечаем маршрут." },
-  { title: "Осваиваем базу", text: "Теория и задания из банка ФИПИ." },
-  { title: "Решаем сложнее", text: "Задачи повышенной сложности и разбор ошибок." },
-  { title: "Пишем пробники", text: "Видим прогресс и закрываем пробелы." },
-  { title: "Сдаём экзамен", text: "С отработанными заданиями и планом действий." },
+export const steps: Array<{ title: string; text: string; icon: IconName }> = [
+  { title: "Оценка знаний и старт", text: "Определяем текущий уровень, настраиваем все инструменты и включаемся в процесс.", icon: "laptop" },
+  { title: "Осваиваем базу ФИПИ", text: "Последовательно разбираем задания из банка ФИПИ, формируем прочную базу и учимся решать основные прототипы.", icon: "book" },
+  { title: "Решаем более сложные задачи", text: "Разбираем мои авторские задания, чтобы лучше ориентироваться в новых и изменённых формулировках.", icon: "code" },
+  { title: "Регулярно пишем пробники", text: "Проверяем прогресс в течение подготовки и вовремя закрываем пробелы.", icon: "checklist" },
+  { title: "Сдаём экзамен", text: "Разбираем с вами дальневосточные варианты и финально готовимся к ЕГЭ.", icon: "cap" },
 ];
 
 // Spec 4.3: check each item against the real terms of both formats.
-export const features = [
-  { title: "Живые занятия в Zoom", text: "В паре или на вебинаре — с преподавателем, а не в записи." },
-  { title: "Домашка с обратной связью", text: "Разбираю ошибки, а не просто ставлю «верно / неверно»." },
-  { title: "Конспекты всегда под рукой", text: "Telegram-бот с конспектами и домашкой — можно вернуться к теме." },
+export const features: Array<{ title: string; text: string; icon: IconName }> = [
+  { title: "Живые занятия в Zoom", text: "В паре или на вебинаре — в реальном времени, с возможностью задать любой вопрос.", icon: "video" },
+  { title: "Поддержка кураторов", text: "Кураторы помогают с домашними заданиями, отвечают на вопросы и следят за твоим прогрессом.", icon: "users" },
+  { title: "Удобные материалы", text: "Доступны видео-конспекты с уроков и текстовые конспекты для быстрого повторения.", icon: "layers" },
 ];
 
-export const environment = [
-  { name: "Zoom", role: "Живые занятия", text: "Объясняю тему, показываю решение и отвечаю на вопросы прямо на уроке.", icon: "/brands/zoom.png" },
-  { name: "Telegram", role: "Канал, бот и связь", text: "Конспекты, домашка и расписание в боте, полезное в канале, вопросы — мне в личные.", icon: "/brands/telegram.svg", link: { href: links.telegramChannel, label: "Открыть канал ↗", external: true } },
-  { name: "Stepik", role: "Курсы и задания", text: "Задания для работы между уроками и курсы для самостоятельной подготовки.", icon: "/brands/stepik.webp", link: { href: "/courses", label: "Каталог курсов →", external: false } },
-];
-
-export const answerSheet = [
-  { question: "Как будет на занятиях?", answer: "ПОНЯТНО" },
-  { question: "Кто ведёт занятия?", answer: "ИЛЬЯ,САМ" },
+export const environment: Array<{
+  name: string;
+  role: string;
+  icon: string;
+  text?: string;
+  points?: string[];
+  link: { href: string; label: string; external: boolean };
+}> = [
+  {
+    name: "Zoom",
+    role: "Занятия и вебинары",
+    icon: "/brands/zoom.png",
+    text: "Все занятия проходят в Zoom с записью — можно присутствовать онлайн или смотреть в удобное время.",
+    link: { href: "/#formats", label: "Посмотреть форматы →", external: false },
+  },
+  {
+    name: "Telegram",
+    role: "Канал и поддержка",
+    icon: "/brands/telegram.svg",
+    points: [
+      "Канал с конспектами, полезными материалами и новостями",
+      "Бот куратора — помощь с домашними заданиями и ответы на вопросы между занятиями",
+    ],
+    link: { href: links.telegramChannel, label: "Открыть канал →", external: true },
+  },
+  {
+    name: "Stepik",
+    role: "Практика и курсы",
+    icon: "/brands/stepik.webp",
+    points: [
+      "Домашние задания с автоматической проверкой для учеников занятий",
+      "Бесплатные и платные курсы: видеоуроки, текстовые объяснения и практика по темам ЕГЭ",
+    ],
+    link: { href: "/courses", label: "Перейти к курсам →", external: false },
+  },
 ];
 
 export const reviews = Array.from({ length: 18 }, (_, index) => {
@@ -146,7 +197,7 @@ export const faqs = [
   },
   {
     q: "Сколько стоит подготовка?",
-    a: "Парное занятие — 2 000 ₽ с ученика за 60 минут. Вебинары — ориентировочно 4 000–5 000 ₽ в месяц, точные условия расскажу при знакомстве. Пробное занятие бесплатное.",
+    a: "Парное занятие — 2 000 ₽ с ученика за 60 минут. Вебинары — 4 999 ₽ в месяц, два занятия в неделю. Пробное занятие бесплатное.",
   },
   {
     q: "Есть ли сейчас места в паре?",

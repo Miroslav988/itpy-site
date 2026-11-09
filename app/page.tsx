@@ -1,35 +1,31 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
 import ReviewCarousel from "./ReviewCarousel";
 import { BookingButton } from "./booking/Booking";
-import { AnswerCells, Check, PenUnderline, SectionHead } from "./ui";
-import { answerSheet, environment, faqs, features, formats, links, metrics, reviews, steps, teacher } from "./content";
+import { Check, Icon, PenUnderline, SectionHead } from "./ui";
+import { aboutFacts, environment, faqs, features, formats, heroFacts, heroFormats, links, pairsNote, steps, teacher } from "./content";
 import PostCard from "./blog/PostCard";
 import { commentedBreakdown, posts } from "./blog/posts";
+import { JsonLd, faqSchema, pageMetadata, personSchema, servicesSchema, websiteSchema } from "./seo";
+import { siteOrigin } from "./site";
 
 const latestPosts = posts.filter((post) => !post.draft).slice(0, 3);
 const commentedExample = commentedBreakdown();
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/",
   title: "Подготовка к ЕГЭ по информатике — Илья Андрианов · ITPY",
   description:
-    "Парные занятия и вебинары по ЕГЭ по информатике. Занятия ведёт Илья Андрианов: объясняет сложное человеческим языком и сам проверяет практику. Бесплатное пробное занятие.",
-};
+    "Онлайн-подготовка к ЕГЭ по информатике с Ильёй Андриановым: занятия в паре, вебинары и курсы на Stepik. Разборы заданий на Python, бесплатное пробное занятие.",
+});
 
-function yearsLabel(years: number) {
-  const lastTwo = years % 100;
-  const last = years % 10;
-  if (lastTwo >= 11 && lastTwo <= 14) return `${years} лет`;
-  if (last === 1) return `${years} год`;
-  if (last >= 2 && last <= 4) return `${years} года`;
-  return `${years} лет`;
-}
+export default async function Home() {
+  const origin = await siteOrigin();
 
-export default function Home() {
   return (
     <>
+      <JsonLd nodes={[websiteSchema(origin), personSchema(origin), ...servicesSchema(origin), faqSchema(origin)]} />
       <SiteHeader active="home" />
       <main id="top">
         <section className="hero" aria-labelledby="hero-title">
@@ -40,44 +36,51 @@ export default function Home() {
                 Информатика, которую <span className="pen-word">понимаешь<PenUnderline /></span>
               </h1>
               <p className="hero-lead">
-                Я — {teacher.name}. Готовлю к ЕГЭ по информатике в парах и на вебинарах: сам веду занятия,
-                проверяю практику и объясняю сложное человеческим языком.
+                <strong>Я Андрианов Илья,</strong> преподаватель с многолетним опытом, который помогает успешно сдавать ЕГЭ
+                по информатике своим ученикам <mark>с 2019 года.</mark>
               </p>
               <div className="actions">
-                <BookingButton className="btn btn-ink btn-lg">Бесплатное пробное занятие <span aria-hidden="true">→</span></BookingButton>
+                <a className="btn btn-ink btn-lg hero-lesson" href={links.freeLesson} target="_blank" rel="noopener noreferrer">
+                  <span>Получить запись урока<br />и оценку уровня знаний</span> <span aria-hidden="true">→</span>
+                </a>
                 <a className="btn btn-outline btn-lg" href="#formats">Форматы и цены</a>
               </div>
-              {metrics.length > 0 && (
-                <dl className="metrics">
-                  {metrics.map((metric) => (
-                    <div key={metric.label}>
-                      <dt>{metric.label}</dt>
-                      <dd>{metric.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-              )}
             </div>
 
-            <aside className="sheet" aria-label="Бланк ответов">
+            <img
+              className="hero-photo"
+              src={teacher.cutout.src}
+              alt={teacher.name}
+              width={teacher.cutout.width}
+              height={teacher.cutout.height}
+              fetchPriority="high"
+            />
+
+            <aside className="sheet hero-card" aria-labelledby="hero-card-title">
               <span className="sheet-corners" aria-hidden="true" />
-              <p className="sheet-title">Бланк ответов № 1 · Информатика</p>
-              <ol className="sheet-list">
-                {answerSheet.map((item) => (
-                  <li key={item.question}>
-                    <p>{item.question}</p>
-                    <AnswerCells text={item.answer} />
+              <p className="hero-card-tag"><Icon name="cap" /> Я не онлайн-школа</p>
+              <h2 id="hero-card-title">Занятия веду лично я —<br />Андрианов Илья</h2>
+              <p className="part-label">Форматы работы</p>
+              <ul className="hero-formats">
+                {heroFormats.map((item) => (
+                  <li key={item.title}>
+                    <span className="feature-icon"><Icon name={item.icon} /></span>
+                    <strong>{item.title}</strong>
+                    <span>{item.text}</span>
                   </li>
                 ))}
-                <li>
-                  <p>С чего начать?</p>
-                  <div className="sheet-answer">
-                    <BookingButton className="cell-link">с бесплатного пробного →</BookingButton>
-                    <span className="pen-note" aria-hidden="true">верно!</span>
-                  </div>
-                </li>
-              </ol>
+              </ul>
             </aside>
+
+            <ul className="hero-facts">
+              {heroFacts.map((fact) => (
+                <li key={fact.title}>
+                  <span className="feature-icon"><Icon name={fact.icon} /></span>
+                  <strong>{fact.title}</strong>
+                  <span>{fact.text}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -86,17 +89,17 @@ export default function Home() {
             <SectionHead
               id="formats-title"
               part="Часть 1 · Форматы и цены"
-              title="Два формата подготовки к ЕГЭ"
-              lead="Маршрут подготовки один — отличаются размер группы, внимание на уроке и стоимость."
+              title="Три формата подготовки к ЕГЭ"
+              lead="Выбирайте удобный формат подготовки под свои цели, график и уровень — от занятий в паре до вебинаров со мной и готовых курсов в записи."
             />
             <div className="formats">
               {formats.map((format) => (
-                <article className={`format${format.featured ? " format-featured" : ""}`} id={format.id} key={format.id} aria-labelledby={`${format.id}-title`}>
+                <article className="format" id={format.id} key={format.id} aria-labelledby={`${format.id}-title`}>
                   <div className="format-head">
-                    <span className="badge">{format.badge}</span>
-                    <span className="format-meta">{format.meta}</span>
+                    <h3 id={`${format.id}-title`}>{format.title}</h3>
+                    {format.subtitle && <p className="format-subtitle">{format.subtitle}</p>}
+                    <p className="format-meta">{format.meta}</p>
                   </div>
-                  <h3 id={`${format.id}-title`}>{format.title}</h3>
                   <dl className="format-rows">
                     {format.rows.map((row) => (
                       <div key={row.label}>
@@ -109,17 +112,24 @@ export default function Home() {
                     <strong>{format.price}</strong>
                     {format.priceNote && <span>{format.priceNote}</span>}
                   </p>
-                  {format.note && <p className="format-note">{format.note}</p>}
-                  {format.action === "booking" ? (
+                  {format.action === "booking" && (
                     <BookingButton className="btn btn-ink btn-wide">{format.actionLabel} <span aria-hidden="true">→</span></BookingButton>
-                  ) : (
+                  )}
+                  {format.action === "telegram" && (
                     <a className="btn btn-outline btn-wide" href={links.telegramPersonal} target="_blank" rel="noopener noreferrer">
                       {format.actionLabel} <span aria-hidden="true">↗</span>
                     </a>
                   )}
+                  {format.action === "courses" && (
+                    <Link className="btn btn-outline btn-wide" href="/courses">{format.actionLabel} <span aria-hidden="true">→</span></Link>
+                  )}
                 </article>
               ))}
             </div>
+            <p className="section-note">
+              <Icon name="info" />
+              <span><strong>Парные занятия.</strong> {pairsNote}</span>
+            </p>
           </div>
         </section>
 
@@ -128,13 +138,14 @@ export default function Home() {
             <SectionHead
               id="route-title"
               part="Часть 2 · Как устроена подготовка"
-              title={<>Учёба без режима <mark>«ничего не понимаю»</mark></>}
-              lead="Понятный маршрут вместо случайных уроков и надежды, что всё сложится само."
+              title={<>Комплексная подготовка <mark>по чёткому плану</mark></>}
+              lead={<>Понятный маршрут и системная работа без случайных тем и <strong>лишней теории</strong>.</>}
             />
             <ol className="steps">
               {steps.map((step, index) => (
                 <li className={index === steps.length - 1 ? "step step-finish" : "step"} key={step.title}>
                   <span className="step-number" aria-hidden="true">{index + 1}</span>
+                  <Icon name={step.icon} className="icon step-icon" />
                   <h3>{step.title}</h3>
                   <p>{step.text}</p>
                 </li>
@@ -143,11 +154,16 @@ export default function Home() {
             <ul className="features">
               {features.map((feature) => (
                 <li key={feature.title}>
+                  <span className="feature-icon"><Icon name={feature.icon} /></span>
                   <strong>{feature.title}</strong>
                   <span>{feature.text}</span>
                 </li>
               ))}
             </ul>
+            <p className="section-note">
+              <Icon name="info" />
+              <span><strong>Этот маршрут — для регулярной подготовки со мной (пары и вебинары).</strong> Курсы в записи на Stepik имеют собственные программы.</span>
+            </p>
           </div>
         </section>
 
@@ -155,53 +171,55 @@ export default function Home() {
           <div className="container">
             <SectionHead
               id="reviews-title"
-              part="Часть 3 · Проверено учениками"
-              title={`${reviews.length} отзывов учеников`}
-              lead="Нажмите на отзыв, чтобы открыть его крупно."
+              part="Часть 3 · Отзывы учеников"
+              title={<>150+ отзывов <mark>на Авито</mark></>}
+              lead={
+                <>
+                  Реальные отзывы от учеников и родителей на моём профиле{" "}
+                  {links.avito ? <a href={links.avito} target="_blank" rel="noopener noreferrer"><strong>Авито</strong></a> : <strong>Авито</strong>}.
+                </>
+              }
             />
             <ReviewCarousel />
+            {links.avito && (
+              <div className="section-more reviews-more">
+                <a className="btn btn-ink btn-lg" href={links.avito} target="_blank" rel="noopener noreferrer">Посмотреть все отзывы на Авито <span aria-hidden="true">↗</span></a>
+              </div>
+            )}
           </div>
         </section>
 
         <section className="section" id="about" aria-labelledby="about-title">
           <div className="container about-grid">
             <figure className="polaroid">
-              <img src={teacher.photo.src} alt={`${teacher.name} за рабочим столом`} width={teacher.photo.width} height={teacher.photo.height} loading="lazy" decoding="async" />
-              <figcaption>на связи и между уроками</figcaption>
+              <img src={teacher.portrait.src} alt={`${teacher.name} за рабочим столом`} width={teacher.portrait.width} height={teacher.portrait.height} loading="lazy" decoding="async" />
+              <figcaption>
+                <span className="polaroid-nick">Мой ник — <mark>@ilandroxxy</mark></span>
+                <span className="polaroid-social">Ищите меня в соцсетях:<br />YouTube · VK · TikTok</span>
+              </figcaption>
             </figure>
             <div className="about-copy">
-              <p className="part-label">Часть 4 · Сведения о преподавателе</p>
+              <p className="part-label">Часть 4 · О преподавателе</p>
               <h2 id="about-title">Занятия веду сам</h2>
-              <p className="section-lead">ITPY — мой проект, а не онлайн-школа. От первой встречи до экзамена вы общаетесь напрямую со мной.</p>
-              {teacher.story && <p className="about-story">{teacher.story}</p>}
+              <p className="section-lead">
+                <strong>ITPY</strong> — мой авторский проект по подготовке к ЕГЭ по информатике. Я лично разрабатываю программу,
+                провожу занятия и подбираю задания, которые помогают не просто запоминать решения, а действительно понимать информатику.
+              </p>
               <ul className="checklist">
-                <li><Check />Лично веду каждое занятие</li>
-                <li><Check />Сам проверяю практику и разбираю ошибки</li>
-                <li><Check />Отвечаю на вопросы напрямую</li>
+                <li><Check />Лично провожу занятия</li>
+                <li><Check />Записи занятий доступны для повторения</li>
+                <li><Check />Помогаю на занятиях, а между ними на вопросы отвечают кураторы</li>
               </ul>
               <dl className="form-table">
-                <div>
-                  <dt>Ф. И. О.</dt>
-                  <dd className="handwritten">{teacher.name.split(" ").reverse().join(" ")}</dd>
-                </div>
-                <div>
-                  <dt>Образование</dt>
-                  <dd>{teacher.education} · <a href={links.diploma} target="_blank" rel="noopener noreferrer">диплом ↗</a></dd>
-                </div>
-                {teacher.experienceYears !== null && (
-                  <div>
-                    <dt>Опыт</dt>
-                    <dd>{yearsLabel(teacher.experienceYears)} репетиторства</dd>
+                {aboutFacts.map((fact) => (
+                  <div key={fact.label}>
+                    <dt>{fact.label}</dt>
+                    <dd>
+                      {fact.value}
+                      {fact.link && <> · <a href={fact.link.href} target="_blank" rel="noopener noreferrer">{fact.link.label} ↗</a></>}
+                    </dd>
                   </div>
-                )}
-                <div>
-                  <dt>Оформление</dt>
-                  <dd>{teacher.official} · <a href={links.officialDocs} target="_blank" rel="noopener noreferrer">подробнее ↗</a></dd>
-                </div>
-                <div>
-                  <dt>Вычет</dt>
-                  <dd>{teacher.taxDeduction}</dd>
-                </div>
+                ))}
               </dl>
             </div>
           </div>
@@ -212,21 +230,28 @@ export default function Home() {
             <SectionHead
               id="environment-title"
               part="Часть 5 · Где проходит обучение"
-              title="Материалы и помощь — и между занятиями"
-              lead="Что именно входит, зависит от формата — расскажу на пробном уроке."
+              title={<>Материалы и поддержка <mark>на всём пути подготовки</mark></>}
+              lead="Занятия, домашние задания и поддержка всегда под рукой."
             />
             <ul className="env-grid">
               {environment.map((item) => (
                 <li className="env-card" key={item.name}>
-                  <img src={item.icon} alt="" width={40} height={40} loading="lazy" />
-                  <p className="env-role">{item.role}</p>
-                  <h3>{item.name}</h3>
-                  <p>{item.text}</p>
-                  {item.link && (item.link.external ? (
+                  <div className="env-head">
+                    <img src={item.icon} alt="" width={40} height={40} loading="lazy" />
+                    <p className="env-role">{item.role}</p>
+                    <h3>{item.name}</h3>
+                  </div>
+                  {item.text && <p>{item.text}</p>}
+                  {item.points && (
+                    <ul className="env-points">
+                      {item.points.map((point) => <li key={point}><Check />{point}</li>)}
+                    </ul>
+                  )}
+                  {item.link.external ? (
                     <a href={item.link.href} target="_blank" rel="noopener noreferrer">{item.link.label}</a>
                   ) : (
                     <Link href={item.link.href}>{item.link.label}</Link>
-                  ))}
+                  )}
                 </li>
               ))}
             </ul>
@@ -240,7 +265,7 @@ export default function Home() {
                 id="posts-title"
                 part="Часть 6 · Разборы заданий"
                 title="Так я объясняю задачи ЕГЭ"
-                lead="Условие, решение на Python и комментарий к каждой строке кода — так же, как на занятиях."
+                lead={<>Подробные разборы заданий ЕГЭ: от условия до готового решения. Объясняю <strong>логику</strong>, показываю <strong>способы решения</strong> и разбираю <strong>сложные моменты</strong>.</>}
               />
               <ul className="post-grid">
                 {latestPosts.map((post) => (
