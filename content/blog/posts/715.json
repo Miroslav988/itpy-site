@@ -1,0 +1,36 @@
+{
+  "id": 715,
+  "rubric": "breakdown",
+  "description": "Задание 14 ЕГЭ: разбор задачи",
+  "date": "2024-06-08",
+  "source": "https://t.me/informatika_kege_itpy/715",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/715-1.jpg",
+      "width": 800,
+      "height": 731,
+      "alt": "Задание 14 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "for x in range(0, 2030+1):\n    n = 7**218 + 7**150 - x\n    r = []\n    while n > 0:\n        r = [n % 7] + r\n        n //= 7\n    if r.count(0) == 70:\n        print(x)\n        break"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/jpmINQ0w-90h98xsowCgNjfpYxPOWzLskC9QVFxsVQcCt9TZr_JVV6GMWT5MenxPNKc9Ik0WCQkoHtIdjupeeeYQYO-OV1Kd8tp_G-5ZkrjvrjR4D5dybnUnt2k47AuOA-dJT1xt1Z7fL1sQFcbh3bNv4n7pwhSzFOeonWP1Zqi7NE25WgslA030U1Z7c2bqFnDKRUZWg9ROi5t7109ZfeHy_RhJi90-Sat0PX-6f6TLfj4cU-qDguHzNzCNwvjhvmCZSlEnP8zvFmlWS12GsarwbqDbWa5SXAoW2kCTenMSXmusfiRsqgryISlTO2JUYojNySVLJvXiE2GuvBHmvg.jpg",
+      "file": "715-1.jpg"
+    }
+  ],
+  "task": 14,
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи",
+  "title": "Задание 14 ЕГЭ: разбор задачи",
+  "slug": "zadanie-14-ege-razbor-zadachi-715",
+  "hidden": true
+}

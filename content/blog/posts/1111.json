@@ -1,0 +1,67 @@
+{
+  "id": 1111,
+  "rubric": "video",
+  "description": "",
+  "date": "2025-06-14",
+  "source": "https://t.me/informatika_kege_itpy/1111",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в TikTok",
+          "href": "https://vm.tiktok.com/ZNdAGcarJ/",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в видео",
+          "href": "https://youtube.com/shorts/-9_KFHAdBF4?si=VjTDi86wM_quvSgE",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в ДЗЕН",
+          "href": "https://dzen.ru/video/watch/6845d0c6c3e5315e1ba1958b",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в VK",
+          "href": "https://vk.com/clip-221025268_456239099?c=1",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/oC1zKiyazbtyI9p44Qb2gBMeeJpaX-RVJeuRDhzztAsA8ILJ0cNAynl5im69ponSX2KHD-sIA1iRwF1Pa3keyuOUsZ1yVYMJFPF1Jtkw84hrcopVaUDBf2IdU6b5SVR3gyjl97mCTLGcRTabDF-0ioJ-5rLnnpMHPQIjYBBC8MX15lp8WuSHileZVBthwfEMzUDXcdAcCyfcp8XyN-R3OT62K9PU6x3QrOhC5Q-omj9mkrAtiVajBfaX7H0xLcVqVfgAfJbf_g4IrCd2DMROUactbV7lCISEIunA5Bf8Vjw1fzFdl0OEVV7-IyKDdiUvqByOvECLKEdgrzlX3lNHxA",
+      "file": "1111-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://t.me/informatika_kege_itpy/1111",
+    "thumb": {
+      "src": "/blog-media/1111-1.jpg",
+      "width": 464,
+      "height": 619
+    }
+  },
+  "baseTitle": "Очень важный лайфхак для всех, кто идет сдавать ЕГЭ по Информатике",
+  "title": "Очень важный лайфхак для всех, кто идет сдавать ЕГЭ по Информатике",
+  "slug": "ochen-vazhnyy-layfhak-dlya-vseh-kto-idet-sdavat-ege-po",
+  "hidden": false
+}

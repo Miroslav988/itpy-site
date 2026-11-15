@@ -1,0 +1,220 @@
+{
+  "id": 1112,
+  "rubric": "breakdown",
+  "description": "Сеть задана IP-адресом 140.116.194.0 и маской сети 255.255.240.0. Сколько в этой сети IP-адресов, в двоичной записи которых каждый из четырёх байтов оканчивается нулём?",
+  "date": "2025-06-15",
+  "source": "https://t.me/informatika_kege_itpy/1112",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1112-1.jpg",
+      "width": 800,
+      "height": 512,
+      "alt": "Задание 13 ЕГЭ: разбор задачи 18445"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Сеть задана IP-адресом "
+        },
+        {
+          "text": "140.116.194.0",
+          "href": "http://140.116.194.0/"
+        },
+        {
+          "text": " и маской сети "
+        },
+        {
+          "text": "255.255.240.0",
+          "href": "http://255.255.240.0/"
+        },
+        {
+          "text": ". Сколько в этой сети IP-адресов, в двоичной записи которых каждый из четырёх байтов оканчивается нулём?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nnet = ip_network('140.116.194.0/255.255.240.0', 0)\ncnt = 0\nfor ip in net:\n    b = f'{ip:b}'\n    if b[:8][-1] == '0':\n        if b[8:16][-1] == '0':\n            if b[16:24][-1] == '0':\n                if b[24:][-1] == '0':\n                    cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 1024",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from ipaddress import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируются все классы и функции из модуля ipaddress, используемого для работы с IP-адресами и сетями."
+          }
+        ],
+        [
+          {
+            "text": "net = ip_network('140.116.194.0/255.255.240.0', 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаётся объект сети net с заданным IP-адресом и маской. Аргумент 0 указывает, что используется маска, а не префикс."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируется счётчик для подсчёта подходящих IP-адресов."
+          }
+        ],
+        [
+          {
+            "text": "for ip in net:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл перебирает все IP-адреса в заданной сети."
+          }
+        ],
+        [
+          {
+            "text": "b = f'{ip:b}'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразует IP-адрес в строку его двоичного представления (без точек и пробелов)."
+          }
+        ],
+        [
+          {
+            "text": "if b[:8][-1] == '0':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, оканчивается ли первый байт (первые 8 бит) на 0."
+          }
+        ],
+        [
+          {
+            "text": "if b[8:16][-1] == '0':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, оканчивается ли второй байт (биты с 8 по 15) на 0."
+          }
+        ],
+        [
+          {
+            "text": "if b[16:24][-1] == '0':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, оканчивается ли третий байт (биты с 16 по 23) на 0."
+          }
+        ],
+        [
+          {
+            "text": "if b[24:][-1] == '0':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, оканчивается ли четвёртый байт (биты с 24 по 31) на 0."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличивает счётчик, если все четыре байта оканчиваются нулём."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводит количество IP-адресов, удовлетворяющих условию задачи."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Q0KeLTDFSRE-NZ9Igm7Gz7hx6RcqImyvdgyDQx3O5ETHtt6KKKKms6nLTmbsmbZRfPCLbO1Aryjp1dpIhEtYg8dnV3o3UJobVFagFLXytzefZGEEdUoQ9yBI2fNz7Ops1y1Yf49GAfOAY8sfcI35G89NJfMdpiGJK6032puxnEIYmiXoT_4Vlk4wc5C01C4jbBgeC9XNayB3DldxDy-PQpPX0HbmVfPOV9HaQGSmhp6t1tj81fReEYlEV3RflXZobFHvqZ9SjlR83t64rRlZs2w3DR2JgK-59soXgC8qXnITMEdrhVIgzK1wDpkP3NMqNm4qtqrj3ldteOmP9GySrQ.jpg",
+      "file": "1112-1.jpg"
+    }
+  ],
+  "task": 13,
+  "problem": "18445",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Сергей Горбачев",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи 18445",
+  "title": "Задание 13 ЕГЭ: разбор задачи 18445",
+  "slug": "zadanie-13-ege-razbor-zadachi-18445-1112",
+  "hidden": true
+}

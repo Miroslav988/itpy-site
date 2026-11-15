@@ -1,0 +1,67 @@
+{
+  "id": 1117,
+  "rubric": "video",
+  "description": "",
+  "date": "2025-06-20",
+  "source": "https://t.me/informatika_kege_itpy/1117",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в TikTok",
+          "href": "https://vm.tiktok.com/ZNdAGKkbN/",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в видео",
+          "href": "https://youtube.com/shorts/lVUT0cYmSoo?si=kBoDUCdEQr62Vx-X",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в ДЗЕН",
+          "href": "https://dzen.ru/shorts/6845ce598816110351c6b7ff?share_to=link",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в VK",
+          "href": "https://vk.com/clip-221025268_456239105?c=1",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/du59PsrlxMGQ6f1EXgYo1otcICN5zDHzlCSpIryqgeHV9VrPBSeuR-pADYH64L5d-j58xtbWYb8-w2Gq_57q5057Wpe8gX2IOaEwwlynKTZGT5e2dfSsY2c5YEXCQPi9YjyvGQVJMdOZruskc72vLiUkUkNtskApQ0Us4wThVVDkpvzRIqib9ZqN_J9cBDLm5TlyAm8HXIyLiQSjdw-Jht1fax6jHxaGNkedNmjaNpiSlsBzUrAXSGCT1S9TrcwrepofJNo-cIrs09nIuH5J-IXQZZZwSjdZvHSJ9WUINo62ywGFRA2jCNBmDCXyUd-9qjtWr98BsaMDlFHm3_9OpQ",
+      "file": "1117-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://t.me/informatika_kege_itpy/1117",
+    "thumb": {
+      "src": "/blog-media/1117-1.jpg",
+      "width": 464,
+      "height": 619
+    }
+  },
+  "baseTitle": "ТОП 5 самых сложных номеров на информатике по-моему мнению",
+  "title": "ТОП 5 самых сложных номеров на информатике по-моему мнению",
+  "slug": "top-5-samyh-slozhnyh-nomerov-na-informatike-po-moemu-mneniyu",
+  "hidden": false
+}

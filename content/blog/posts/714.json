@@ -1,0 +1,36 @@
+{
+  "id": 714,
+  "rubric": "breakdown",
+  "description": "Задание 23 ЕГЭ: разбор задачи",
+  "date": "2024-06-08",
+  "source": "https://t.me/informatika_kege_itpy/714",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/714-1.jpg",
+      "width": 800,
+      "height": 578,
+      "alt": "Задание 23 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b):\n    if a >= b:\n        return a == b\n    return F(a+1, b) + F(a+2, b) + F(a+3, b)\n\nprint(F(3, 7) * F(7, 35))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/tcjo-aOkeqkxPczdTY5T0nvQ7FiX7DFzFNDpZjhj8ZfVWSIpQs_UIwT3Z7T2YzCFRmfFKPWJcJB1b8iSKhT-S3kaS5Q9joW4ICd706HKxjZcYSzmt83x7hid1XCPYOTWT9Xc8lDsfZ7tvfU04KsFh0A5MMf41Z3Ygjx2pLED_ZgVe3SSLVZv0npjIeGSCHa3nMiaSAj9L1eVZqfgeq-4j4_8Ec42N4FtBULbNCXskTbYxq5k8Vce3HsvsILyh1cnPLX3Sl5lNsrpc-oK5mFNeSJXnXcEym6xQkZRAFsWjbb6u4aKNjD25gJEBAsaVUO6dhhKYFUxt2Z05tCvAIunag.jpg",
+      "file": "714-1.jpg"
+    }
+  ],
+  "task": 23,
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи",
+  "title": "Задание 23 ЕГЭ: разбор задачи",
+  "slug": "zadanie-23-ege-razbor-zadachi-714",
+  "hidden": true
+}

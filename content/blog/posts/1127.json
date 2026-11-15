@@ -1,0 +1,172 @@
+{
+  "id": 1127,
+  "rubric": "breakdown",
+  "description": "У исполнителя есть три команды, которые обозначены цифрами: 1. Прибавить 3 2. Прибавить 4 3. Умножить на 2 Сколько существует программ, для которых при исходном числе 11…",
+  "date": "2025-06-30",
+  "source": "https://t.me/informatika_kege_itpy/1127",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1127-1.jpg",
+      "width": 800,
+      "height": 390,
+      "alt": "Задание 23 ЕГЭ: разбор задачи 18450"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "У исполнителя есть три команды, которые обозначены цифрами:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. Прибавить 3"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Прибавить 4"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. Умножить на 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько существует программ, для которых при исходном числе 11 результатом будет являться отрезок [50;54], при этом траектория вычислений не содержит числа 23?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b: list):\n    if a >= min(b) or a == 23:\n        return a in b\n    return F(a + 3, b) + F(a + 4, b) + F(a * 2, b)\n\n\nprint(F(11, [50, 51, 52, 53, 54]))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 3254",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a, b: list):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление функции F с двумя параметрами: a (число) и b (список чисел)."
+          }
+        ],
+        [
+          {
+            "text": "if a >= min(b) or a == 23:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Условие: если a больше или равен минимальному элементу списка b "
+          },
+          {
+            "text": "ИЛИ",
+            "bold": true
+          },
+          {
+            "text": " a равен 23."
+          }
+        ],
+        [
+          {
+            "text": "return a in b",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выше выполняется, возвращается True/False (проверка, есть ли a в списке b)."
+          }
+        ],
+        [
+          {
+            "text": "return F(a + 3, b) + F(a + 4, b) + F(a * 2, b)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие не выполняется, функция вызывает саму себя рекурсивно с тремя разными значениями a:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Результаты этих вызовов суммируются."
+          }
+        ],
+        [
+          {
+            "text": "print(F(11, [50, 51, 52, 53, 54]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции с аргументами a = 11 и b = [50, 51, 52, 53, 54], затем вывод результата."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Sp29zaPyuvQ_hYnPvDhcfswwNKpbJAxGqWBHqG7E-h0wVG1-YA32IqREhRkyAph5I7l3nQnqB5pilORBXAMZoH3QecG5ufHzjeZ46QUwGKr8IHOmtyn39K5CNFqEZ0cv0lRIFGhffjX2cVj9UNZ_kQeWWsF5eB75UT_nS4eALyuCfzn8xAui83TWIp6VO0x106FOl34QlJxSuxQQ8ZjPa3RT7fPhpxYn-sHrOdvVkjd6elk-fWYIUbsxD2m5e4nRiuXBDPg_54KkmfPPutbNzOapscpSOrv9Jq_OeiyjUmOmV6z2fKZJkNZz3l_3vlnJ8WX-HMK9CbAQgaZf6jTyEA.jpg",
+      "file": "1127-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "18450",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Сергей Горбачев",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 18450",
+  "title": "Задание 23 ЕГЭ: разбор задачи 18450",
+  "slug": "zadanie-23-ege-razbor-zadachi-18450",
+  "hidden": false
+}

@@ -1,0 +1,79 @@
+{
+  "id": 282,
+  "rubric": "breakdown",
+  "description": "Забирайте код программы и комментарии к каждой его строчке!",
+  "date": "2023-11-02",
+  "source": "https://t.me/informatika_kege_itpy/282",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/282",
+      "thumb": {
+        "src": "/blog-media/282-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/10707-5-aa141707cfb94ee0af19691bb27bf90f?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Забирайте код программы и комментарии к каждой его строчке!"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Не редкая в последнее время задача с "
+        },
+        {
+          "text": "\"не двоичной\"",
+          "italic": true
+        },
+        {
+          "text": " системой счисления."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Эта задача показывает, что не стоит полагаться на встроенные функции, так как не каждая 5-ая задача решается через функцию "
+        },
+        {
+          "text": "bin()",
+          "code": true
+        },
+        {
+          "text": " 😼"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/m1ff0jamAbGxegZsyRQc454U7DYDdE2VjZzRerMWnTT2fjXpyzuaw9jOaOmBRs44NltrxoeNrOEKZGKRsCqgNZiAZvT5X3xXvJ75j1v_1BQnCL-mR6WyQ3igu5bcpI_gcVcI01yqRGediAhhOUAWdpLz-IW0_vGMdWhcYgJPZejqPwB56pycv7IAGxyYLKGLxDNAIjokIQ1X-bmrEmSnSP_Oz5Udy9ry_XnwJNkluIVdFOal_aDyrX4sC-J9vUf6Wic5WGBXxYspMiL6LxTa2QiXDw63ZDwPM7-dvBLIcg17NFoF-bi9uvIv9UDJOawPZoB7i_fE71b2GwIex_bX2A",
+      "file": "282-1.jpg"
+    }
+  ],
+  "task": 5,
+  "problem": "10707",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 5 ЕГЭ: разбор задачи 10707",
+  "title": "Задание 5 ЕГЭ: разбор задачи 10707",
+  "slug": "zadanie-5-ege-razbor-zadachi-10707",
+  "hidden": false
+}

@@ -1,0 +1,40 @@
+{
+  "id": 229,
+  "rubric": "python",
+  "description": "Элементы математической логики встречаются в паре номер нашего экзамена, а именно 2 и 15. Но в том или ином виде этот раздел математике будет в любом университете с техническим…",
+  "date": "2023-08-18",
+  "source": "https://t.me/informatika_kege_itpy/229",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/229",
+      "thumb": {
+        "src": "/blog-media/229-1.jpg",
+        "width": 848,
+        "height": 352
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Элементы математической логики",
+          "code": true
+        },
+        {
+          "text": " встречаются в паре номер нашего экзамена, а именно 2 и 15. Но в том или ином виде этот раздел математике будет в любом университете с техническим уклоном ☝️"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/K1jr6kqXQ6RJPT0pGC1yA1EGkP1XuvMPXQC9dJruLwRMxHzuyw-tTmcRcboP_yVwFS7LGIfeGPMaq-dEBs34kPSQWpFv4QVhQVg-Sb0tkYN9xwwkvaNqU0o0IscBZSQws7pPywL7jkRzkipnK5Ptwvaf6d8gT6BbKpMwht2G9DcGCYqLfAmSm9Jg_o16isbs3c4tOgldM3_dmSTgjDTnF22UPWKU2lg5lVld_HqXiN32OdnyMTXvrG63yRWORfbSg1I9TKy4LtbhZu5rshxg3fH73YGq8viWpGlsp2roGqy16WI9UVz2CoV-r5h8IrjaucgUGFhkWx40an8x5czCRw",
+      "file": "229-1.jpg"
+    }
+  ],
+  "baseTitle": "Все, что нужно знать о логических операциях на КЕГЭ",
+  "title": "Все, что нужно знать о логических операциях на КЕГЭ",
+  "slug": "vse-chto-nuzhno-znat-o-logicheskih-operatsiyah-na-kege",
+  "hidden": false
+}

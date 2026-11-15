@@ -1,0 +1,419 @@
+{
+  "id": 1225,
+  "rubric": "breakdown",
+  "description": "Сколько существует семнадцатеричных пятизначных чисел, не содержащих в своей записи более двух цифр 1, при этом никакая нечётная цифра не стоит рядом с цифрой 1?",
+  "date": "2025-12-26",
+  "source": "https://t.me/informatika_kege_itpy/1225",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1225-1.jpg",
+      "width": 800,
+      "height": 372,
+      "alt": "Задание 8 ЕГЭ: разбор задачи 11616"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Закрепим тему со строками задачей, где оочень много условий с string 👇"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Сколько существует семнадцатеричных пятизначных чисел, не содержащих в своей записи более двух цифр 1, при этом никакая нечётная цифра не стоит рядом с цифрой 1?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Данный способ позволяет перебрать алфавит и отсортировать его."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\nprint(alphabet[3:17:2])\nfrom itertools import *\ncnt = 0\nfor s in product(alphabet[:17], repeat=5):\n    num = ''.join(s)\n    if num[0] != '0':\n        if num.count('1') <= 2:\n            for a in alphabet[3:17:2]:\n                num = num.replace(a, '*')\n            if '1*' not in num and '*1' not in num and '11' not in num:\n                cnt += 1\n\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 1117608",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "code",
+      "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Создается строка, содержащая цифры от 0 до 9 и заглавные буквы английского алфавита. Функция"
+          },
+          {
+            "text": " sorted ",
+            "code": true
+          },
+          {
+            "text": "сортирует символы в алфавитном порядке."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "print(alphabet[3:17:2])"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "Выводится часть алфавита с индексами от 3 до 17 (не включая 17) с шагом 2."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "Импортируется модуль"
+          },
+          {
+            "text": " itertools,",
+            "code": true
+          },
+          {
+            "text": " который предоставляет функции для работы с генерациями комбинаций."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "Создается переменная"
+          },
+          {
+            "text": " cnt,",
+            "code": true
+          },
+          {
+            "text": " которая будет использоваться для подсчета подходящих комбинаций."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for s in product(alphabet[:17], repeat=5):"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 5,
+      "items": [
+        [
+          {
+            "text": "Используется функция"
+          },
+          {
+            "text": " product,",
+            "code": true
+          },
+          {
+            "text": " которая генерирует все возможные комбинации длиной 5 из первых 17 символов алфавита ("
+          },
+          {
+            "text": "alphabet[:17]",
+            "code": true
+          },
+          {
+            "text": ")."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Каждая комбинация"
+          },
+          {
+            "text": " s ",
+            "code": true
+          },
+          {
+            "text": "представляет собой кортеж из 5 символов."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "num = ''.join(s)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 6,
+      "items": [
+        [
+          {
+            "text": "Кортеж символов"
+          },
+          {
+            "text": " s ",
+            "code": true
+          },
+          {
+            "text": "преобразуется в строку"
+          },
+          {
+            "text": " num ",
+            "code": true
+          },
+          {
+            "text": "с помощью метода"
+          },
+          {
+            "text": " join",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "if num[0] != '0':"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 7,
+      "items": [
+        [
+          {
+            "text": "Проверяется, что первый символ строки"
+          },
+          {
+            "text": " ",
+            "code": true
+          },
+          {
+            "text": "не равен"
+          },
+          {
+            "text": " '0'",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "if num.count('1') <= 2:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 8,
+      "items": [
+        [
+          {
+            "text": "Проверяется, что символ"
+          },
+          {
+            "text": " '1' ",
+            "code": true
+          },
+          {
+            "text": "встречается в строке"
+          },
+          {
+            "text": " ",
+            "code": true
+          },
+          {
+            "text": "не более двух раз."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for a in alphabet[3:17:2]:\n    num = num.replace(a, '*')"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Каждый символ из списка"
+          },
+          {
+            "text": " ",
+            "code": true
+          },
+          {
+            "text": "заменяется на"
+          },
+          {
+            "text": " '*' ",
+            "code": true
+          },
+          {
+            "text": "в строке."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "if '1*' not in num and '*1' not in num and '11' not in num:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 10,
+      "items": [
+        [
+          {
+            "text": "Проверяется, что в строке"
+          },
+          {
+            "text": " ",
+            "code": true
+          },
+          {
+            "text": "нет подстрок"
+          },
+          {
+            "text": " '1*', '*1' ",
+            "code": true
+          },
+          {
+            "text": "и"
+          },
+          {
+            "text": " '11'",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "cnt += 1"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 11,
+      "items": [
+        [
+          {
+            "text": "Если все условия выполнены, счетчик"
+          },
+          {
+            "text": " ",
+            "code": true
+          },
+          {
+            "text": "увеличивается на 1."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "print(cnt)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 12,
+      "items": [
+        [
+          {
+            "text": "В конце программы выводится значение счетчика, которое равно количеству подходящих комбинаций."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/BjMGueQ9oHYZCWIIVt0d1ncC6uK0i0KBAzvYffGHPo_eQLRLxhzA67vPL5HHHGRf5To-vhSvJ7Xf9qigXDm7qD6XW_oBRRG_-t9Q7CVzGsIDKejqh9Rt70uJxU1YoZRzNPPXU0rw8fV0qRK1VtqiDfOPZ_Xa3BUw_0fID2BApPx-RbnxVQOus2E2gZDdf4FiLsmz-IWtEreqYBl2dlDQRE09pqLQElYrBMSi19KGinWHdqmmyJ6GaZN_xNaivn3gL1W87IK8DiqD04H1oxDnsePzMOI6fWZxrlQ8x2p-TbWmCwdBFINCIs9Nf5H1-lLP3lah4lPLLBIgYm9pxL-q_g.jpg",
+      "file": "1225-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "11616",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М. Ишимов",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 11616",
+  "title": "Задание 8 ЕГЭ: разбор задачи 11616",
+  "slug": "zadanie-8-ege-razbor-zadachi-11616",
+  "hidden": false
+}

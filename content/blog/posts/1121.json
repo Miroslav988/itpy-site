@@ -1,0 +1,213 @@
+{
+  "id": 1121,
+  "rubric": "breakdown",
+  "description": "Откройте файл электронной таблицы, содержащей в каждой строке четыре натуральных чисел. Определите количество строк таблицы, для чисел которых выполнены следующие условия: – в…",
+  "date": "2025-06-23",
+  "source": "https://t.me/informatika_kege_itpy/1121",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1121-1.jpg",
+      "width": 800,
+      "height": 387,
+      "alt": "Задание 9 ЕГЭ: разбор задачи 12797"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Откройте файл электронной таблицы, содержащей в каждой строке четыре натуральных чисел. Определите количество строк таблицы, для чисел которых выполнены следующие условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– в строке есть только одно число, которое повторяется дважды, остальные два числа различны;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– все неповторяющиеся числа нечетны, повторяющиеся числа чётны."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе запишите только число."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('0. files/9.csv'):\n    M = sorted([int(x) for x in s.split(',')])\n    copied = [x for x in M if M.count(x) == 2]\n    uncopied = [x for x in M if M.count(x) == 1]\n    if len(copied) == 2 and len(uncopied) == 2:\n        if all(x % 2 != 0 for x in uncopied):\n            if all(x % 2 == 0 for x in copied):\n                cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 53",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация счетчика для подсчета подходящих строк."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('0. files/9.csv'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открытие файла и построчное чтение данных. Каждая строка s содержит числа, разделенные запятыми."
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(x) for x in s.split(',')])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разделение строки по запятым, преобразование в целые числа и сортировка списка."
+          }
+        ],
+        [
+          {
+            "text": "copied = [x for x in M if M.count(x) == 2]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание списка чисел, встречающихся ровно 2 раза (дубликаты)."
+          }
+        ],
+        [
+          {
+            "text": "uncopied = [x for x in M if M.count(x) == 1]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание списка уникальных чисел (встречаются 1 раз)."
+          }
+        ],
+        [
+          {
+            "text": "if len(copied) == 2 and len(uncopied) == 2:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что есть ровно 2 дублирующихся числа (1 пара) и 2 уникальных числа."
+          }
+        ],
+        [
+          {
+            "text": "if all(x % 2 != 0 for x in uncopied):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что все уникальные числа нечетные."
+          }
+        ],
+        [
+          {
+            "text": "if all(x % 2 == 0 for x in copied):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что все дублирующиеся числа четные."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если все условия выполнены, счетчик увеличивается на 1."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод общего количества подходящих строк."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ZoqAybATGfdMzN00XdOiYPJj_tHjcEosy4SyAG5_R9O15_mnJ94i9lrX3vzt3rj_rD8LM-TMuOZvdsxiDrU2mASLG77pnxiinfFjCZPx44dwl2ciYX1jjrRhaKNc006hfRgNWG7xqxnwj2oB7ynOB4WmcIyRxEgIX-zuehA4fRPfF1XeKurCaobYgi73i-2MK7lOhDupgnl69dmsRHtxQsaFctcWDUalDkNH5pgRA9zelUXZhB7pp0eoMXNoCvTgyV78hrqv4yUUWvJihRw5HbmA1LokgYBLPSmW3AbSC2WGSyZThgKw9HVRJ-BugK9ME39yNxpyX2mmHjoa7jp0Fg.jpg",
+      "file": "1121-1.jpg"
+    }
+  ],
+  "task": 9,
+  "problem": "12797",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М.Попков",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи 12797",
+  "title": "Задание 9 ЕГЭ: разбор задачи 12797",
+  "slug": "zadanie-9-ege-razbor-zadachi-12797",
+  "hidden": false
+}

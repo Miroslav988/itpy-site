@@ -1,0 +1,177 @@
+{
+  "id": 831,
+  "rubric": "breakdown",
+  "description": "Определите количество 12-ричных пятизначных чисел, в записи которых ровно одна цифра 7 и не более трёх цифр с числовым значением, превышающим 8.",
+  "date": "2024-09-10",
+  "source": "https://t.me/informatika_kege_itpy/831",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/831",
+      "thumb": {
+        "src": "/blog-media/831-1.jpg",
+        "width": 848,
+        "height": 528
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество 12-ричных пятизначных чисел, в записи которых ровно одна цифра 7 и не более трёх цифр с числовым значением, превышающим 8."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Базовая задачка с комбинаторикой цифр. Не забудьте, что в таких задачах необходимо проверять наличие 0 на первой позиции."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\ncnt = 0\nfor p in product('0123456789AB', repeat=5):\n    s = ''.join(p)\n    if s[0] != '0' and s.count('7') == 1:\n        if len([x for x in s if x > '8']) <= 3:\n            cnt += 1\nprint(cnt)\n\n# Ответ: 67476"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируем все функции из модуля itertools, который содержит функции для работы с итерациями."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем переменную cnt, которая будет использоваться для подсчета валидных комбинаций."
+          }
+        ],
+        [
+          {
+            "text": "for p in product('0123456789AB', repeat=5):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Генерируем декартово произведение символов '0123456789AB' длиной 5, создавая все возможные комбинации."
+          }
+        ],
+        [
+          {
+            "text": "s = ''.join(p)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем кортеж p (содержащий текущую комбинацию) в строку s."
+          }
+        ],
+        [
+          {
+            "text": "if s[0] != '0' and s.count('7') == 1:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что первый символ строки не является '0' и что символ '7' встречается ровно один раз."
+          }
+        ],
+        [
+          {
+            "text": "if len([x for x in s if x > '8']) <= 3:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список из символов строки s, которые больше '8', и проверяем, что таких символов не более трех."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличиваем счетчик cnt на 1, если предыдущие условия выполнены."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим общее количество валидных комбинаций, соответствующих заданным критериям."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/icWoNFYYF6Y0vSMB5HFMViQvNYLJ2yQJSV0b7D5Ox80lkmS_HMBphzgsOIQ5BWhsoMSl4nrSJlfK11wO3yGQK5uZQHy7RYPex73fRQZlf0K6qgXse2xPwdrzZ9t5AFrT7wQVYfutq6IvUydEttHYbbhDN7W4VNJj2vPMVvYz-SGExT5XJhnImWZw_gkf_-60hmcsCz_UKJ_RtH6PVq4ph4VQTSZCHokn5kiMpGS9VFgTUY0ZTHdBJJcvlNeFOdBASvPhUbEC5hecZQSEqJEJZT2G9Z0lEw0Mr3RrgCRjkaVHoHc1G18vTNtOr47zqD0q5X0pFL29eG-DGf0Jcv_uqg",
+      "file": "831-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "17862",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Демоверсия 2025",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 17862",
+  "title": "Задание 8 ЕГЭ: разбор задачи 17862",
+  "slug": "zadanie-8-ege-razbor-zadachi-17862",
+  "hidden": false
+}

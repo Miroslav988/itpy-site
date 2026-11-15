@@ -1,0 +1,45 @@
+{
+  "id": 1338,
+  "rubric": "breakdown",
+  "description": "Задание 23 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "date": "2026-06-18",
+  "source": "https://t.me/informatika_kege_itpy/1338",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1338-1.jpg",
+      "width": 800,
+      "height": 647,
+      "alt": "Задание 23 ЕГЭ: разбор варианта Дальнего Востока 2026"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b):\n    if a >= b:\n        return a == b\n    res = 0\n    res += F(a + 1, b)\n    a = str(a)\n    if a[1] < a[-1]:\n        res += F(int(a[0] + a[-1] + a[1]), b)\n    return res\n\nprint(F(110, 154))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 34",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/qz2VxKcuGGrTvWgLKSsb-yFFUabhWOUY_TsoZLGDCpxZGMkLz4VLLF1S8Yh_-j-pj9bDk_aYWjDIXon_KL2xgtPpp-CcSm7g1AgbA3ymUGhULa-4m_VNGiQu74Jzfd_czyNyxLJgKd2YABzeISrLCTfS_-SloeCXNgi0pvqSEtZcep16f9qelSYDmA4vJz0A9hpL3oLn63p3BtrZ77nRcUYqmgS2HjPVJ20n1BnMzH6bSC3Xb1p9yFf65CN-EKjnB1a7svnA8AuA4BJw9pUFpAaEBRpZQoquqOyuQovqKKnkXeraagpeuGpu2Nl_CXHEWCKk05Xf3ZvIY7FRY5n9gg.jpg",
+      "file": "1338-1.jpg"
+    }
+  ],
+  "task": 23,
+  "baseTitle": "Задание 23 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "title": "Задание 23 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "slug": "zadanie-23-ege-razbor-varianta-dalnego-vostoka-2026",
+  "hidden": false
+}

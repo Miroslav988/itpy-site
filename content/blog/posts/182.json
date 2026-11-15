@@ -1,0 +1,51 @@
+{
+  "id": 182,
+  "rubric": "video",
+  "description": "",
+  "date": "2023-07-16",
+  "source": "https://t.me/informatika_kege_itpy/182",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Мы в "
+        },
+        {
+          "text": "видео Shorts",
+          "href": "https://youtube.com/shorts/6BsowYlIumg?feature=share"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Мы в "
+        },
+        {
+          "text": "ВК Клипы",
+          "href": "https://vk.com/clip-221025268_456239020?c=0"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/WplL7pDxaDA1qzm9bJRgghD0JYMcgubC49qeqw69rKFK-jPdvVqgTdHlur2hG9B0hoKAWjKoqzsIjzXOuaB0N1GSgaUuvlh2X5asBuFwLZ1s3TvrmVJCQTHGSI1U7wbNO8ey7pCWykL02WAPrzqNngSmdpjwKpTcmMOm2Dcq7dVW1LJramP4hXWQTbiXygBjXC0jwS-qvJS4YiYr4cagV3_lJm6Ey_rLb7QdwfXwzVvCedWb4DHBvqMxiRUFi4oZYUr3MeawpheW1SkRxCRbu9ZweSfVzpt3FJ5yGOkgtan10WJwQCz6n29r5IEYnnqPoG6V1wZS5DYi7bdZGsYgTA.jpg",
+      "file": "182-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://youtube.com/shorts/6BsowYlIumg?feature=share",
+    "thumb": {
+      "src": "/blog-media/182-1.jpg",
+      "width": 640,
+      "height": 360
+    }
+  },
+  "baseTitle": "Поддержите наши короткие, но полезные видео лайком и по возможности кликом на",
+  "title": "Поддержите наши короткие, но полезные видео лайком и по возможности кликом на",
+  "slug": "podderzhite-nashi-korotkie-no-poleznye-video-laykom-i-po",
+  "hidden": false
+}

@@ -1,0 +1,75 @@
+{
+  "id": 346,
+  "rubric": "breakdown",
+  "description": "Задача 23 номера с сайта kompege.ru автор: М. Ишимов Интересная, но не очень сложная, рекомендую ознакомиться!",
+  "date": "2024-02-04",
+  "source": "https://t.me/informatika_kege_itpy/346",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/346",
+      "thumb": {
+        "src": "/blog-media/346-1.jpg",
+        "width": 848,
+        "height": 480
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/11240-23-d8147ee93cdd4aea89a03fea59dadec9?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Задача 23 номера с сайта "
+        },
+        {
+          "text": "kompege.ru",
+          "href": "https://kompege.ru/"
+        },
+        {
+          "text": " автор: ",
+          "bold": true
+        },
+        {
+          "text": "М. Ишимов",
+          "href": "https://vk.com/inf.kege"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Интересная, но не очень сложная, рекомендую ознакомиться!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b, flag):\n    if a >= b:\n        return a == b\n    if flag == \"B\":\n        return F(a + 2, b, \"A\") + F(a * 3, b, \"C\")\n    return F(a+2, b, \"A\") + F(a**2, b, \"B\") + F(a*3, b, \"C\")\n\nprint(F(2, 64, 0))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/QJAyed7ep9hK_OwD6gtT3xJBh9ewxd6ZQwI6-jKFIUhgc_CcLnYtaMLtAKeH0zTU1B4ApZUATYkp0KHGcJ9nwjVut6RkC15_neayp2fgPDCo8sYB-B3d3JgcE0EOK7rX1HU_yc2lyoMcLOo7KXcKAD5TaBAHSESnDQBBynoiUSD7vwVdv_csToQF4tBClXGD8QV4O0kfcX-9BQ3aBiCpW0kygqIkPr6uM-jjxiBsDzMIP0VnzeE2y6YrdvbI4mrAwbrV4eqNY0FzwPsoR4z4vuDjBcf_kpKplp8987sIUPSLzmPPWKcr7CRc4K4PKzBJcrdvXG4rNFaps5yVlFtOPA",
+      "file": "346-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "11240",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 11240",
+  "title": "Задание 23 ЕГЭ: разбор задачи 11240",
+  "slug": "zadanie-23-ege-razbor-zadachi-11240",
+  "hidden": false
+}

@@ -1,0 +1,34 @@
+{
+  "id": 601,
+  "rubric": "useful",
+  "description": "Как пользоваться встроенной функцией ВПР (VLOOKUP) в Excel. Очень полезная функция, так как она пригодится и в 22 номере ☝️",
+  "date": "2024-05-14",
+  "source": "https://t.me/informatika_kege_itpy/601",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/601-1.jpg",
+      "width": 800,
+      "height": 553,
+      "alt": "Шпаргалка для номера"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Как пользоваться встроенной функцией ВПР (VLOOKUP) в Excel. Очень полезная функция, так как она пригодится и в 22 номере ☝️"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/TqnLmQRsFEON7sMgKB0CigBgwiu6QpNx9AsS85PxQNrZioF7X9Xy2CWEut9ZAba6Z-ZV4DJa2k5UDuHMLZrL2Vh_uu-5Xv5NL1bc3V2AP4e8pJGz91aWkB4SA3SCK_gYwkfpUCHMa-zDzLCun3n58kPDhL4voz2VZ7La9cLlW0ASh4gWqPFDaaKfRhCbUY5FGOp12HxI0Xp7z4oPkxS2Nkmx1Pmy52d69-0V93GNYaR1ZzJKFfu8HW-yz6EPmLjN8WM-0v9sIX8cjH11TOLGoVwrndooqLoMQFdz1STP4z2XZQjnCSP8WLaRFcHMJESuV7-WnVkQ72bI3P9Lu2dl1A.jpg",
+      "file": "601-1.jpg"
+    }
+  ],
+  "baseTitle": "Шпаргалка для номера",
+  "title": "Шпаргалка для номера",
+  "slug": "shpargalka-dlya-nomera",
+  "hidden": false
+}

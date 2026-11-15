@@ -1,0 +1,214 @@
+{
+  "id": 1186,
+  "rubric": "breakdown",
+  "description": "Значение арифметического выражения 625**90 + 125**120 − 5*25 записали в системе счисления с основанием 25. Для найденного выражения вычислите сумму его чётных цифр.",
+  "date": "2025-10-10",
+  "source": "https://t.me/informatika_kege_itpy/1186",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1186-1.jpg",
+      "width": 800,
+      "height": 480,
+      "alt": "Задание 14 ЕГЭ: разбор задачи — Яндекс учебник"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Значение арифметического выражения"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "625**90 + 125**120 − 5*25"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "записали в системе счисления с основанием 25."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Для найденного выражения вычислите сумму его чётных цифр."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\n\ndef convert(n, b):\n    r = ''\n    while n > 0:\n        r = alp[n % b] + r\n        n //= b\n    return r\n\nn = 625**90+125**120 - 5*25\ns = convert(n, 25)\nprint(sum([int(x, 25) for x in s if x in alp[0::2]]))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 4292",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем отсортированный список символов для систем счисления (цифры 0-9 и буквы A-Z)"
+          }
+        ],
+        [
+          {
+            "text": "def convert(n, b):"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление функции convert для перевода числа n в систему счисления с основанием b"
+          }
+        ],
+        [
+          {
+            "text": "r = ''"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем пустую строку для хранения результата"
+          }
+        ],
+        [
+          {
+            "text": "while n > 0:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл выполняется, пока число n больше 0"
+          }
+        ],
+        [
+          {
+            "text": "r = alp[n % b] + r"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Берем остаток от деления n на b, находим соответствующий символ в alp и добавляем его в начало строки"
+          }
+        ],
+        [
+          {
+            "text": "n //= b"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Делим n на b нацело (убираем обработанный разряд)"
+          }
+        ],
+        [
+          {
+            "text": "return r"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращаем полученную строку - число в системе счисления с основанием b"
+          }
+        ],
+        [
+          {
+            "text": "n = 625**90+125**120 - 5*25"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляем большое число n по заданной формуле"
+          }
+        ],
+        [
+          {
+            "text": "s = convert(n, 25)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Переводим число n в 25-ричную систему счисления"
+          }
+        ],
+        [
+          {
+            "text": "print(sum([int(x, 25) for x in s if x in alp[0::2]]))"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "alp[0::2] выбирает только символы с четными индексами (0, 2, 4, ...)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "· Для каждого символа в строке s, если он есть в alp[0::2], преобразуем его обратно в число"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "· Суммируем все такие числа и выводим результат"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Lnxf5jyMvuITe7w7ohoAWPwgbtJ6_nrBrdF0s4hslTCKTettZ4iMyxZCLmSo3DgHE78zeYENHKCl_TRQTzDdzwta3uJy67VKOr08OaLlIY5Ts_JCGGkRiVB_9rd7Inio3QHydkSMujP2l9wzgDPbkFNDoffsmR6ErxeLA34ZpQeC5_OsXsxp0ry_m0V_Bb7wZkN0EzMI0VKTmi2FgeA5IXdhBgNO33Ff3HKhxKbbpBLT1GkeYnBL6QWZvlRLQtT529UNdB1AaBC4SDfGjsaBYz3Dws3OZJIGecQhs4SX6v2K4tcnIrtakKVhxsVkMx3xAEwH4JHyyF3niwzpeE597g.jpg",
+      "file": "1186-1.jpg"
+    }
+  ],
+  "task": 14,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Яндекс учебник",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи — Яндекс учебник",
+  "title": "Задание 14 ЕГЭ: разбор задачи — Яндекс учебник",
+  "slug": "zadanie-14-ege-razbor-zadachi-yandeks-uchebnik",
+  "hidden": false
+}

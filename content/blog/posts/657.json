@@ -1,0 +1,136 @@
+{
+  "id": 657,
+  "rubric": "breakdown",
+  "description": "В некоторой системе счисления с основанием p < 37 выполняется равенство TH_p + NQ_p + U_p = 1L7_p Определите значение 𝑝 и укажите его в ответе в десятичной системе счисления.",
+  "date": "2024-05-28",
+  "source": "https://t.me/informatika_kege_itpy/657",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/657",
+      "thumb": {
+        "src": "/blog-media/657-1.jpg",
+        "width": 848,
+        "height": 272
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В некоторой системе счисления с основанием p < 37 выполняется равенство TH_p + NQ_p + U_p = 1L7_p"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите значение 𝑝 и укажите его в ответе в десятичной системе счисления."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "for p in range(31, 36+1):  # U - 30\n    if int('TH', p) + int('NQ', p) + int('U', p) == int('1L7', p):\n        print(p)\n\n# Ответ: 33"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "for p in range(31, 36+1): # U - 30",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который проходит по значениям p от 31 до 36 включительно. Комментарий указывает на то, что в данном случае символ 'U' представляет число 30 в системе счисления с основанием p."
+          }
+        ],
+        [
+          {
+            "text": "if int('TH', p) + int('NQ', p) + int('U', p) == int('1L7', p):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Условное выражение, которое проверяет, равно ли суммарное значение чисел, представленных строками 'TH', 'NQ' и 'U' в системе счисления с основанием p, числу, представленному строкой '1L7' в той же системе счисления."
+          }
+        ],
+        [
+          {
+            "text": "print(p)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие из предыдущего пункта истинно, выводится значение p, при котором выполняется условие."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поддержать автора: boosty",
+          "href": "https://boosty.to/informatika_kege_itpy/donate",
+          "bold": true
+        },
+        {
+          "text": " 💵"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/N0KedJb4r9P3qqTHSqgm6aE83qsA8ch5cseugXqwzP-Duus2iKOzx5gdob2XLI4i9JT20eKKXleWFd4SAgbZQs7Ppnz13wcMxkOhkhcXfCpQUfNRVEXe2kGksRUeYJ-JpLV3BCJ2RNUPSGzYp96I4vBrRDFjpVMawjbPN_zSYHMjuBlbcwiNLCH73jhNYwaFMs-pINecZXcCiWxVq1osUAYHPPAkf_cZe2znbJALYADJy9S8V1v4QFsMx77pCG8Jun8IQlJZTayXCHGwiIAqVBXpgo9qoS6DswHIawkAQTt48k8yosecYAA5cmNB1n38ZWL6XguPjRxr304YVREEcQ",
+      "file": "657-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "13910",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Л. Шастин",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 13910",
+  "title": "Задание 14 ЕГЭ: разбор задачи 13910",
+  "slug": "zadanie-14-ege-razbor-zadachi-13910",
+  "hidden": false
+}

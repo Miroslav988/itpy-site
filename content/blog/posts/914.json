@@ -1,0 +1,190 @@
+{
+  "id": 914,
+  "rubric": "breakdown",
+  "description": "Операнды арифметического выражения записаны в системе счисления с основанием 19. 78x79643_19 + 25x43_19 + 63x5_19 В записи чисел переменной x обозначена неизвестная цифра из…",
+  "date": "2024-11-14",
+  "source": "https://t.me/informatika_kege_itpy/914",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/914",
+      "thumb": {
+        "src": "/blog-media/914-1.jpg",
+        "width": 848,
+        "height": 512
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Операнды арифметического выражения записаны в системе счисления с основанием 19."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "78x79643_19 + 25x43_19 + 63x5_19"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В записи чисел переменной x обозначена неизвестная цифра из алфавита 19-ричной системы счисления. Определите наименьшее значение x, при котором значение данного арифметического выражения кратно 18. Для найденного x вычислите частное от деления значения арифметического выражения на 18"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Век живи, век учись! Еще один вариант решения 14 номера (второй прототип)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "for x in '0123456789ABCDEFGHI':\n\n    A = int('78x79643'.replace('x', x), 19)\n    B = int('25x43'.replace('x', x), 19)\n    C = int('63x5'.replace('x', x), 19)\n\n    if (A + B + C) % 18 == 0:\n        print((A + B + C) // 18)\n        break\n\n# Ответ: 368599039"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "for x in '0123456789ABCDEFGHI':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускаем цикл, который будет перебирать все символы от 0 до I в строке."
+          }
+        ],
+        [
+          {
+            "text": "A = int('78x79643'.replace('x', x), 19)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяем 'x' на текущий символ и преобразуем строку в целое число в системе счисления с основанием 19, сохраняя результат в A."
+          }
+        ],
+        [
+          {
+            "text": "B = int('25x43'.replace('x', x), 19)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Аналогично, заменяем 'x' в другой строке и преобразуем её в целое число в системе счисления с основанием 19, сохраняя результат в B."
+          }
+        ],
+        [
+          {
+            "text": "C = int('63x5'.replace('x', x), 19)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяем 'x' в третьей строке, преобразуем строку в целое число в системе счисления с основанием 19 и сохраняем в C."
+          }
+        ],
+        [
+          {
+            "text": "if (A + B + C) % 18 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, делится ли сумма A, B и C на 18 без остатка."
+          }
+        ],
+        [
+          {
+            "text": "print((A + B + C) // 18)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, выводим результат деления суммы на 18."
+          }
+        ],
+        [
+          {
+            "text": "break",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Завершаем цикл, если нашли подходящее значение, чтобы избежать дальнейших итераций."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Наша Stepik подборкой задач ",
+          "href": "https://stepik.org/course/122969/promo",
+          "bold": true
+        },
+        {
+          "text": "😼"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/N49GUPQtJv7Ev25Cmq-opg4K6wyMcbz4zT71_A_c5AVEx6OGFtfFOjyrhdDAo2U26lY3GMscrHeVX7SsOtk2jH-ISeiZ5MMUOxTgij4n5Qsa6gBQ52ZLy_J2Ta303b6u27YimgCR12UGjaPmU-N8gejRVWNvwMSr7ghLoLe5cI5OHHyHDyrqVTKOhiVmuD2m6cKSAXYdBZt8WIEX9xhEes3kH6uLfgTQxoc7W7a2QjrPg8DUC3kA8Q8E5IBysya1z0_2-ZHlYHeNcM_Bxxcs1aZL0ccdFOA3SXQQihV5mG9Ihw8Y74Sfc7qZtVdcTJ6pXBxjXoPUF4ytq4X4zZZckA",
+      "file": "914-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "12468",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "kompege.ru",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 12468",
+  "title": "Задание 14 ЕГЭ: разбор задачи 12468",
+  "slug": "zadanie-14-ege-razbor-zadachi-12468",
+  "hidden": false
+}

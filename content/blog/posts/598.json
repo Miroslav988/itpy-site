@@ -1,0 +1,26 @@
+{
+  "id": 598,
+  "rubric": "video",
+  "description": "",
+  "date": "2024-05-13",
+  "source": "https://t.me/informatika_kege_itpy/598",
+  "blocks": [],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Nfx5IstvOtYE_60iA36suKVpFjmgijCnvEQ_7erA0g3v--t1sP3lBghUQXKk1kVYeAe4vPxmvINDVBorD6KfIUggtaaZ-GF9tI3TmSjfGIH7rHvC_j5WWPFE-FHo2pHLTUGApFKNJMfuF8Wl4lMpkZavyQmJEcP8mY8mZrLaQGF9XT3kOnmM1fHUUgyGpXl8iacxBmobRdsLn-bdNZI1svIOQ8cqyi2ImJml2t03nigoAqBkQP8WW8wVIVqKbCEVtll_ZsrxsjjE7QxiasBXtds9RU4kXtiJAuxjjuKVAQAhQoQuyKqSvAxRe6gshkOeUWojXBFF5wrx4fsAI-xiwA.jpg",
+      "file": "598-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://youtube.com/shorts/T3GkMTRWyQo?si=I0dfZz2-WDKUlBCb",
+    "thumb": {
+      "src": "/blog-media/598-1.jpg",
+      "width": 640,
+      "height": 360
+    }
+  },
+  "baseTitle": "Все функции Python библиотеки turtle для 6 номера",
+  "title": "Все функции Python библиотеки turtle для 6 номера",
+  "slug": "vse-funktsii-python-biblioteki-turtle-dlya-6-nomera",
+  "hidden": false
+}

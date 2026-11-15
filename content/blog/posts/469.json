@@ -1,0 +1,77 @@
+{
+  "id": 469,
+  "rubric": "useful",
+  "description": "Шкала такая же, как и в прошлом году",
+  "date": "2024-04-22",
+  "source": "https://t.me/informatika_kege_itpy/469",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/469",
+      "thumb": {
+        "src": "/blog-media/469-1.jpg",
+        "width": 848,
+        "height": 768
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Шкала такая же, как и в прошлом году",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "17 заданий - "
+        },
+        {
+          "text": "70 баллов",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "21 задание - "
+        },
+        {
+          "text": "80 баллов",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "25 заданий - "
+        },
+        {
+          "text": "90 баллов",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Последние два номера дают по 2 первичных балла (за каждый ответ), суммарно за них можно получить 10 вторичных."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/dYrloAbtBu0CWqhv0_aWtcnt21W8MS9Ei4yyQt85tse5Zc3kY5a4zwvm4orQyoRqPXOuOzKzWS90TSD7WMIsmU0JPUGixre-ZvdqXD7BWZ-fEaI6Tp5JZwL-ttmWL2FdmvcRbRcHsS598Je0jGs0zSZCvo1CSI_QOUtRQleJ7r0QZCdL71scvTBLtTWFUi6nZptpA1PRwwlZkoMBjZlGZajqpsmRgzrrxAng-Xgt3zmCI3senSW2SazXH-3FkUgzPzH5IaKtjxAVDXoet5cMSPxkUZ-enAed0o4FEQfWzjXaxElH962ZbbfmeKJcjwu5ERz4gJCYrz0OsJ8NBxco3w",
+      "file": "469-1.jpg"
+    }
+  ],
+  "baseTitle": "Шкала перевода баллов ЕГЭ по информатике 2024",
+  "title": "Шкала перевода баллов ЕГЭ по информатике 2024",
+  "slug": "shkala-perevoda-ballov-ege-po-informatike-2024-469",
+  "hidden": true
+}

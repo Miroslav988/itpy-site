@@ -1,0 +1,53 @@
+{
+  "id": 1052,
+  "rubric": "python",
+  "description": "Ответ: Да, можно! И это — вполне валидная и полезная конструкция.",
+  "date": "2025-04-22",
+  "source": "https://t.me/informatika_kege_itpy/1052",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1052-1.jpg",
+      "width": 800,
+      "height": 427,
+      "alt": "Можно ли использовать else после for или while в Python?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ:",
+          "bold": true
+        },
+        {
+          "text": " Да, можно! И это — вполне валидная и полезная конструкция."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Как это работает?",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В Python блок else после цикла for или while выполняется только в том случае, если цикл завершился нормально, то есть без использования break."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/PYJIwC4fyFTfidjYG8arL3s42fPoTKQDpwtF4p_0ZjKZ1rDDLk6iisvd76oPgbn8ELtECy6sRHE_v5Mb9fyvvV-sqb7gM0d2AaUUpPoyOCmQRNDxXGvHimAbUpCBfIUXb2UrF7-GmHOW2AArbRVE-LEL_dBVBPQDLdc0qSsFn7IpDTdh1_4L8-EYiPKTMN7gNV4G9MGPbVclg-wyJ79YkMJzykZLebfQpaxpIz8fn-yyVqqKD6y7CzjxEJjArve4hjh-UULBmhh-wo5W6Bq20sSDmWcwxohdTzx9QF79yh33bLHIz7AqD7blTgDL4qcbJqhTOaU5JDQNWRcka1e2bw.jpg",
+      "file": "1052-1.jpg"
+    }
+  ],
+  "baseTitle": "Можно ли использовать else после for или while в Python?",
+  "title": "Можно ли использовать else после for или while в Python? (22 апреля 2025)",
+  "slug": "mozhno-li-ispolzovat-else-posle-for-ili-while-v-python-22",
+  "hidden": false
+}

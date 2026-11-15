@@ -1,0 +1,26 @@
+{
+  "id": 610,
+  "rubric": "video",
+  "description": "",
+  "date": "2024-05-16",
+  "source": "https://t.me/informatika_kege_itpy/610",
+  "blocks": [],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/WulWFM7zOxtkMQec-etXX5z0JIBQfKmDiCMCFTY5jiLjiYH-Nvxb6F1p6vzow6XyOsiCm3IWEFglCLe-y6NXdo6ZUllpc0mSDjWxXq-y-i2c127WbRKvzeUXMyNSj4V5m_WOGcjY677IpHCDieMWy4siU4DN_bjEZ6QRv-0kxcwiYnca2qPdhTUeOIlkM08x58La78s5SkSTvEGzEpkNzEu4pfpQYavd3Ob9CjuiQTENSjNHXRSchxM6MsHFcFS263lKtkQCuQ6_3EVWbSf6950WcYrM0GEp1YtCJR4aprUKWo8PPPCe4jhbOp7OxxjOD5wd4eRpZIu5wci-HK7XNw.jpg",
+      "file": "610-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://youtube.com/shorts/9LAQIHWLV_U?si=KnYxqfbJAnphxjAr",
+    "thumb": {
+      "src": "/blog-media/610-1.jpg",
+      "width": 640,
+      "height": 360
+    }
+  },
+  "baseTitle": "Не допусти эту ошибку в номере",
+  "title": "Не допусти эту ошибку в номере",
+  "slug": "ne-dopusti-etu-oshibku-v-nomere",
+  "hidden": false
+}

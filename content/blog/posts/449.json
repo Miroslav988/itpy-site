@@ -1,0 +1,111 @@
+{
+  "id": 449,
+  "rubric": "python",
+  "description": "Функция bin() используется для преобразования целых чисел в их двоичное представление. Она возвращает строку, начинающуюся с префикса '0b'.",
+  "date": "2024-04-19",
+  "source": "https://t.me/informatika_kege_itpy/449",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/449",
+      "thumb": {
+        "src": "/blog-media/449-1.jpg",
+        "width": 848,
+        "height": 784
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "bin()",
+          "code": true
+        },
+        {
+          "text": " используется для преобразования целых чисел в их двоичное представление. Она возвращает строку, начинающуюся с префикса '0b'."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "num = 42\nbinary_num = bin(num)\nprint(binary_num)  \n# Вывод: 0b101010"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "oct()",
+          "code": true
+        },
+        {
+          "text": " используется для преобразования целых чисел в их восьмеричное представление. Она возвращает строку, начинающуюся с префикса '0o'."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "num = 42\noctal_num = oct(num)\nprint(octal_num)  \n# Вывод: 0o52"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "hex()",
+          "code": true
+        },
+        {
+          "text": " используется для преобразования целых чисел в их шестнадцатеричное представление. Она возвращает строку, начинающуюся с префикса '0x'."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "num = 42\nhex_num = hex(num)\nprint(hex_num)  \n# Вывод: 0x2a"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Оцените полезность поста"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "Полезный пост, надо делать еще"
+          }
+        ],
+        [
+          {
+            "text": "Я знал про существование bin()"
+          }
+        ],
+        [
+          {
+            "text": "Слишком легко для меня, скучно"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/sxqWFy6Ly7KH1EzXIsoRATZsqK8rame3SHYgdkrYuYZBN8Pw8rY7MAFIfaPiDBoTxJC7DI6fdgn5rbJXcnfaKBCiIsYsgwQLgPqZ6O13kGDQ04018pH-OWogdSJ5KTQ6h2s-XZ6nyJtOI9Ggrz7K6FGcL6SHbIavGV1PVeyIsI8RY-Yz731ywWb6Mu0T9VzACLpRNttxoM-EK3511kIA8DidZDs6z773PjGe0JRxQIAdF5AFsKv-ZCQUXMD-dnaRHQ_nf23BoAlIbszfZ_R453j74mdhEslkdbyT5Sby8TKHKSi0hcxvb8XP9gtcjZwmJIjoX2UVYhxpVHZFipUvZA",
+      "file": "449-1.jpg"
+    }
+  ],
+  "baseTitle": "Мини-шпаргалка по переводу в 2-, 8- и 16-ую системы счисления на Python из десятичной",
+  "title": "Мини-шпаргалка по переводу в 2-, 8- и 16-ую системы счисления на Python из десятичной",
+  "slug": "mini-shpargalka-po-perevodu-v-2-8-i-16-uyu-sistemy",
+  "hidden": false
+}

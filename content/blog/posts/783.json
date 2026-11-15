@@ -1,0 +1,223 @@
+{
+  "id": 783,
+  "rubric": "breakdown",
+  "description": "Все пятибуквенные слова, в составе которых могут быть только русские буквы Л, А, Й, М, записаны в алфавитном порядке и пронумерованы начиная с 1. Вот начало списка: 1. ААААА 2.…",
+  "date": "2024-08-09",
+  "source": "https://t.me/informatika_kege_itpy/783",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/783",
+      "thumb": {
+        "src": "/blog-media/783-1.jpg",
+        "width": 848,
+        "height": 432
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Все пятибуквенные слова, в составе которых могут быть только русские буквы Л, А, Й, М, записаны в алфавитном порядке и пронумерованы начиная с 1."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Вот начало списка:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. ААААА"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. ААААЙ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. ААААЛ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "4. ААААМ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "5. АААЙА"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Под каким номером в списке идёт последнее слово, которое не содержит ни одной буквы М, ни одной буквы Л и не содержит букв Й стоящих рядом?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Простейшую",
+          "bold": true
+        },
+        {
+          "text": " вариацию решения этого номера опубликую в комментариях к этому посту. Делитесь своими решениями!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\nR = []\nfor num, p in enumerate(product(sorted('ЛАЙМ'), repeat=5), 1):\n    word = ''.join(p)\n    if 'М' not in word and 'Л' not in word:\n        if 'ЙЙ' not in word:\n            R.append(num)\nprint(max(R))\n\n# Ответ: 274"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируем все функции из модуля itertools для работы с итераторами."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем пустой список R для хранения номеров подходящих комбинаций."
+          }
+        ],
+        [
+          {
+            "text": "for num, p in enumerate(product(sorted('ЛАЙМ'), repeat=5), 1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Используем product для генерации всех возможных комбинаций 5 букв из слова 'ЛАЙМ', сортируем буквы и пронумеровываем их с 1."
+          }
+        ],
+        [
+          {
+            "text": "word = ''.join(p)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объединяем кортеж p в строку для получения текущего слова."
+          }
+        ],
+        [
+          {
+            "text": "if 'М' not in word and 'Л' not in word:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что буквы 'М' и 'Л' отсутствуют в текущем слове."
+          }
+        ],
+        [
+          {
+            "text": "if 'ЙЙ' not in word:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что двойная буква 'ЙЙ' отсутствует в текущем слове."
+          }
+        ],
+        [
+          {
+            "text": "R.append(num)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условия выполнены, добавляем номер комбинации в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим максимальный номер из списка R, который соответствует самой последней подходящей комбинации."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/FhU2ZN5KuTMu2v7dMjzHo_3mjR80b6n_3997XWWVyf0Sol8CHDvmdtwAG8n7eG8Ae2dIG0sJ6mAIP29iw5n_9dQW3Vl9K5i_dvUmzZOh9s4vql57BvW3wjA4UMpmxGUj72C026h2HnT00OuZJyaHAhsgbb861idFHvlskVDWwF1RonLhLpBt3o71tmlKjhG1lmhvebOEnKea_lUHGzFt5Xs2Jmv34ScTSfRz9J_avGqNzS1MAgHdZa8aO0aI4qbVxsnv01DGUNKJ7N5C578hRPFmbI8iues1jjYkSCR4-TNqUAjYYdo-flAHlcYuc95Z6ZfLZMHaqhfVXux1jwSb-w",
+      "file": "783-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "17671",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Пересдача 04.07.2024",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 17671",
+  "title": "Задание 8 ЕГЭ: разбор задачи 17671",
+  "slug": "zadanie-8-ege-razbor-zadachi-17671",
+  "hidden": false
+}

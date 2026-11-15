@@ -1,0 +1,74 @@
+{
+  "id": 189,
+  "rubric": "useful",
+  "description": "Во1, у нас есть два способа создания алфавитов. Можно использовать импортируемый модуль string, чтобы получить готовую строку, или отсортировать все буквы с клавиатуры с помощью…",
+  "date": "2023-07-19",
+  "source": "https://t.me/informatika_kege_itpy/189",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/189",
+      "thumb": {
+        "src": "/blog-media/189-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Во1, у нас есть два способа создания алфавитов. Можно использовать импортируемый модуль "
+        },
+        {
+          "text": "string",
+          "code": true
+        },
+        {
+          "text": ", чтобы получить готовую строку, или отсортировать все буквы с клавиатуры с помощью "
+        },
+        {
+          "text": "sorted()",
+          "code": true
+        },
+        {
+          "text": " и получить готовый отсортированный список."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ссылка на код программы тут",
+          "href": "https://informatikakegeitpy.notion.site/useful-alphabet-b6ceec70cec840d28ed1d32d9be850ec?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Во2, при конвертации наших десятичных чисел с помощью подобного (или аналогичного) способа мы получаем строковый тип данных на выходе. Это позволяет нам использовать встроенную функцию "
+        },
+        {
+          "text": "int(s, n)",
+          "code": true
+        },
+        {
+          "text": " для обратного перевода из n-ной системы в десятичную."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Hzh4wEmgBbYFE-HTzk1dKYfzp8sA4HrsHrZ-5melVlzu8V_7z8HQjv9QaDGQIoqxdms0E7iD5VY_s0WFxTaqnY5z-3-s1qIcfP-XswEU_V6EaM7nAISyfV8hSp1CRtmxt3ra9uhOkA9m7c0oKl9Qp5-1rQG5ozyMz_LCNwJOxZVU8zgPdqDEtioSa-k0LOAzvvJ9tiVNjfdS1kHnH3_KuvzEulo9zcgPDMGIRuSH2XsiJnTh6yy3KIRaTg4aDRVNkhaExTVHgyHL1RspfzbMi3dVgDMWDAOtW5sPBQiDFeOET90pOsik3Dn0djEB-Zq1fJqP2Olih8ftephjv8BrgA",
+      "file": "189-1.jpg"
+    }
+  ],
+  "baseTitle": "Рассмотрим удобный способ работы с n-ми алфавитами",
+  "title": "Рассмотрим удобный способ работы с n-ми алфавитами",
+  "slug": "rassmotrim-udobnyy-sposob-raboty-s-n-mi-alfavitami",
+  "hidden": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": 400,
+  "rubric": "python",
+  "description": "Примеры работы с .txt файлами на некоторых номерах ЕГЭ",
+  "date": "2024-03-11",
+  "source": "https://t.me/informatika_kege_itpy/400",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Чтение .txt файла для 9 номера с целыми числами"
+    },
+    {
+      "type": "code",
+      "text": "for s in open('9.txt'):\n    M = [int(x) for x in s.split()]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Чтение .txt файла для 9 номера с вещественными числами"
+    },
+    {
+      "type": "code",
+      "text": "for s in open('9.txt'):\n    M = [float(x) for x in s.replace(',', '.').split()]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Чтение чисел из .txt файла для 17 номера"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(x) for x in open('17.txt')]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Чтение первой (и единственной) строки файла для 24 номера"
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline()"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Чтение всех строк файла для 24 номера"
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readlines()\nfor x in s:\n    print(x)"
+    }
+  ],
+  "media": [],
+  "baseTitle": "Примеры работы с .txt файлами на некоторых номерах ЕГЭ",
+  "title": "Примеры работы с .txt файлами на некоторых номерах ЕГЭ",
+  "slug": "primery-raboty-s-txt-faylami-na-nekotoryh-nomerah-ege",
+  "hidden": false
+}

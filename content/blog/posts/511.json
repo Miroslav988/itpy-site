@@ -1,0 +1,65 @@
+{
+  "id": 511,
+  "rubric": "python",
+  "description": "Хотите узнать, какой элемент встречается чаще всего в списке? Существует лайфхак, который поможет вам сделать это быстро и эффективно, не прибегая к сложным циклам.",
+  "date": "2024-04-29",
+  "source": "https://t.me/informatika_kege_itpy/511",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/511",
+      "thumb": {
+        "src": "/blog-media/511-1.jpg",
+        "width": 848,
+        "height": 416
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Хотите узнать, какой элемент встречается чаще всего в списке? Существует лайфхак, который поможет вам сделать это быстро и эффективно, не прибегая к сложным циклам."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "С помощью функции "
+        },
+        {
+          "text": "max()",
+          "code": true
+        },
+        {
+          "text": " и методов "
+        },
+        {
+          "text": "set()",
+          "code": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "count()",
+          "code": true
+        },
+        {
+          "text": " мы можем легко найти наиболее часто встречающийся элемент."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/AQrxMFAWC2QYjM-x2h9D2i2goy5UOgaoesTPOPD6oyXgQsrYXU7GhdoU8xR_XCcear2BsQFNdi-OKZWWqS2ayUCX9AznGYLBg3WlMtHpbhGK7WysgXNoqpB0sOopeuToXCYjp9rnVDUYhIaCfzL3L2_mdhN-e1S29IPOWMtRcEQEl1fPqT5RBwralTBJFLZp-xsyDp48ETx99YXzlS9fpwUapsFMFZjB8potnSoCiv_rYcBlkZzuzgIt8nC2FwBxlOWry3lqHEi_jGVDmD5r_C6aI9_myMg0GWB3Xd0qxrsLaAzF-Wpf8JuSVzYKlAd5B3ikAUXBOgZiPchCQwY3dA",
+      "file": "511-1.jpg"
+    }
+  ],
+  "baseTitle": "Нахождение наиболее частого элемента в списке",
+  "title": "Нахождение наиболее частого элемента в списке",
+  "slug": "nahozhdenie-naibolee-chastogo-elementa-v-spiske",
+  "hidden": false
+}

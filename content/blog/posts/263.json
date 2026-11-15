@@ -1,0 +1,52 @@
+{
+  "id": 263,
+  "rubric": "useful",
+  "description": "Давайте проведем небольшую ночную викторину! ✨",
+  "date": "2023-10-17",
+  "source": "https://t.me/informatika_kege_itpy/263",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/263",
+      "thumb": {
+        "src": "/blog-media/263-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Давайте проведем небольшую ночную викторину! ✨"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Задача: Какой будет результат выполнения следующего кода?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Эта задача проверит знание рекурсии и вычисления факториала с использованием рекурсивной функции."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/YkpoDghK4ldyAkJRcUDOHlCaJAFpbH6Tsz3zsoOT6-w4LKPduztkd69pHrqxkb3PcAbNdicf8hEOzpej891fcooyVzPqmULiMe8lHOQ5DnYBFqz1UIgdfib0pJnSbFJd5zxTJlZ1Z6AC6pIGAUg2UbCVWlUjnYaLHOpglLUOfHkkCM1Jbzf8vHQrcSzBpEQ5H_gCpVOc4_lzXkpCuQMCCa4Dbrr8mxzeo4jZP4v_VN8bkI3q5CKmIbXnUGCNNiX_GwlNirzaSpWz-yzBrwfdVDhFKU74-wFtCANGvcVCxz1Hag57-y1VNqQgj_9dgATo6LsrQg6fKUByKA9YE99Kbg",
+      "file": "263-1.jpg"
+    }
+  ],
+  "baseTitle": "Информатика ЕГЭ | itpy",
+  "title": "Информатика ЕГЭ | itpy",
+  "slug": "informatika-ege-itpy",
+  "hidden": false
+}

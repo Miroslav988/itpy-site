@@ -1,0 +1,602 @@
+{
+  "id": 997,
+  "rubric": "breakdown",
+  "description": "Все 5-буквенные слова, составленные из букв Б, К, Ф, Ц, записаны в алфавитном порядке и пронумерованы. Вот начало списка: 1. БББББ 2. ББББК 3. ББББФ 4. ББББЦ 5. БББКБ Запишите…",
+  "date": "2025-02-28",
+  "source": "https://t.me/informatika_kege_itpy/997",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/997",
+      "thumb": {
+        "src": "/blog-media/997-1.jpg",
+        "width": 848,
+        "height": 320
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Все 5-буквенные слова, составленные из букв Б, К, Ф, Ц, записаны"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "в алфавитном порядке и пронумерованы. Вот начало списка:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. БББББ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. ББББК"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. ББББФ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "4. ББББЦ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "5. БББКБ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Запишите слово, которое стоит на 486-м месте от начала списка."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примечание к разбору"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Разберем задачу 3 разными способами и каждый выберет, тот способ,который ему понравился."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ход решения номер",
+          "bold": true
+        },
+        {
+          "text": " 🚩"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = sorted('БКФЦ')\nprint(s)  # ['Б', 'К', 'Ф', 'Ц']\nn = 0\nfor a in s:\n    for b in s:\n        for c in s:\n            for d in s:\n                for e in s:\n                    slovo = a + b + c + d + e\n                    n += 1\n                    if n == 486:\n                        print(n, slovo)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "code",
+      "text": "s = sorted('БКФЦ')"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Создается список"
+          },
+          {
+            "text": " s,",
+            "code": true
+          },
+          {
+            "text": " содержащий отсортированные символы строки"
+          },
+          {
+            "text": " 'БКФЦ'.",
+            "code": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "print(s)  # ['Б', 'К', 'Ф', 'Ц']"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "Выводится список"
+          },
+          {
+            "text": " s ",
+            "code": true
+          },
+          {
+            "text": "для проверки."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "n = 0"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "Вводим счетчик"
+          },
+          {
+            "text": " n,",
+            "code": true
+          },
+          {
+            "text": " который будем использовать для подсчета количества сгенерированных слов."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for a in s:\n    for b in s:\n        for c in s:\n            for d in s:\n                for e in s:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "Перебираем все возможные комбинации из 5 символов, используя элементы списка"
+          },
+          {
+            "text": " s.",
+            "code": true
+          },
+          {
+            "text": " Каждый цикл отвечает за одну позицию в слове."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "slovo = a + b + c + d + e"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 5,
+      "items": [
+        [
+          {
+            "text": "Формируется слово"
+          },
+          {
+            "text": " slovo ",
+            "code": true
+          },
+          {
+            "text": "путем объединения символов"
+          },
+          {
+            "text": " a, b, c, d, e.",
+            "code": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "n += 1"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 6,
+      "items": [
+        [
+          {
+            "text": "Счетчик"
+          },
+          {
+            "text": " n ",
+            "code": true
+          },
+          {
+            "text": "увеличивается на 1 для каждой новой комбинации."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "if n == 486:\n    print(n, slovo)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 7,
+      "items": [
+        [
+          {
+            "text": "Если счетчик"
+          },
+          {
+            "text": " n ",
+            "code": true
+          },
+          {
+            "text": "достигает значения 486, выводится номер комбинации и само слово."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ход решения номер",
+          "bold": true
+        },
+        {
+          "text": " 🚩"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\nn = 0\nfor p in product(sorted('БКФЦ'), repeat=5):\n    slovo = ''.join(p)\n    n += 1\n    if n == 486:\n        print(n, slovo)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Импортируется модуль"
+          },
+          {
+            "text": " itertools,",
+            "code": true
+          },
+          {
+            "text": " который предоставляет функции для работы с комбинациями."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "n = 0"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "Вводим счетчик"
+          },
+          {
+            "text": " n ",
+            "code": true
+          },
+          {
+            "text": "для подсчета количества сгенерированных слов."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for p in product(sorted('БКФЦ'), repeat=5):"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "Используется функция"
+          },
+          {
+            "text": " product,",
+            "code": true
+          },
+          {
+            "text": " которая генерирует все возможные комбинации из символов"
+          },
+          {
+            "text": " 'Б', 'К', 'Ф', 'Ц' ",
+            "code": true
+          },
+          {
+            "text": "с длиной 5 ."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "slovo = ''.join(p)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "Каждый элемент"
+          },
+          {
+            "text": " p ",
+            "code": true
+          },
+          {
+            "text": "преобразуется в строку"
+          },
+          {
+            "text": " slovo ",
+            "code": true
+          },
+          {
+            "text": "с помощью метода"
+          },
+          {
+            "text": " join.",
+            "code": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "n += 1"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 5,
+      "items": [
+        [
+          {
+            "text": "Счетчик"
+          },
+          {
+            "text": " n ",
+            "code": true
+          },
+          {
+            "text": "увеличивается на 1 для каждой новой комбинации."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "if n == 486:\n    print(n, slovo)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 6,
+      "items": [
+        [
+          {
+            "text": "Если счетчик"
+          },
+          {
+            "text": " n ",
+            "code": true
+          },
+          {
+            "text": "достигает значения 486, выводится номер комбинации и само слово."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ход решения номер",
+          "bold": true
+        },
+        {
+          "text": " 🚩"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\nfor n, p in enumerate(product(sorted('БКФЦ'), repeat=5), 1):\n    slovo = ''.join(p)\n    if n == 486:\n        print(n, slovo)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Импортируется модуль"
+          },
+          {
+            "text": " itertools.",
+            "code": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for n, p in enumerate(product(sorted('БКФЦ'), repeat=5), 1):"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "Используем функцию"
+          },
+          {
+            "text": " enumerate,",
+            "code": true
+          },
+          {
+            "text": " которая добавляет счетчик"
+          },
+          {
+            "text": " n ",
+            "code": true
+          },
+          {
+            "text": "к каждому элементу, генерируемому функцией"
+          },
+          {
+            "text": " product.",
+            "code": true
+          },
+          {
+            "text": " Счетчик начинается с 1."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "slovo = ''.join(p)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "Каждый элемент"
+          },
+          {
+            "text": " p ",
+            "code": true
+          },
+          {
+            "text": " преобразуется в строку"
+          },
+          {
+            "text": " slovo ",
+            "code": true
+          },
+          {
+            "text": "с помощью метода"
+          },
+          {
+            "text": " join.",
+            "code": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "if n == 486:\n    print(n, slovo)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "Если счетчик"
+          },
+          {
+            "text": " n ",
+            "code": true
+          },
+          {
+            "text": "достигает значения 486, выводится номер комбинации и само слово."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/XQA3BE-qOg8Y7Ez-FOlRLS1RNs_0QYrM74sKOhmB0o7dmTNbcb8peOBXKgBQzrwES71o2-6zHkqvVLmhLaMhg20u8sBe5XxFfi0hwyYg09Bz4j5nd-opfFJgtFXJOL2gOCVErePeapxPuQSnBFQmTSe73CCKUrV5uQ1shOTUjM_hA5eUBaLt16Cc44pqKQ8DMLZc0hYsByYouIAwS2I8ZHF2F0J764v6RVFA7Ez0NxXWtsnOtRy6IkGP5Uo-lNezV84zp48mAteitTq47w15PeiBmGo1yMlSVw0rO3Dh2uVtc1KmjBU_w-H6nUO9Z9x_rpThqx29-WbuNG9hk3S-BQ",
+      "file": "997-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "3700",
+  "collection": "Решу ЕГЭ",
+  "meta": {
+    "source": "Решу ЕГЭ",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 3700",
+  "title": "Задание 8 ЕГЭ: разбор задачи 3700",
+  "slug": "zadanie-8-ege-razbor-zadachi-3700",
+  "hidden": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": 517,
+  "rubric": "python",
+  "description": "Важное свойство Python - возможность преобразования чисел в логические значения. В этом языке программирования все числа, кроме нуля, включая отрицательные, считаются истинными…",
+  "date": "2024-05-02",
+  "source": "https://t.me/informatika_kege_itpy/517",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/517",
+      "thumb": {
+        "src": "/blog-media/517-1.jpg",
+        "width": 720,
+        "height": 848
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Важное свойство Python - возможность преобразования чисел в логические значения. В этом языке программирования все числа, кроме нуля, включая отрицательные, считаются истинными (True). Ноль же интерпретируется как ложь (False). Таким образом, Python позволяет проводить логические операции "
+        },
+        {
+          "text": "and, or, not",
+          "code": true
+        },
+        {
+          "text": " над числами без проблем."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Логические операции с числами в Python выполняются в соответствии с таблицами истинности операторов, что облегчает понимание и работу с логическими выражениями в контексте чисел."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/uv_bLebCt6OMJlkCQuTmMLUWk_C21JFxs4KeJdD-h1t8mkPtGBTedgV9Ytqn9LBBo8h1vzZA3fLeASDPmImlQVw6H9uV4d82AYNu2NABNTvribagS5_sHwJDg2U4BdPD78zy5tw13fUIpvkGJUDR1_eGOGPf5YsMA0XipsjdtO6c-7EGOWMo3PDqBL4toIJ50W6Ho0WL_8lhZDv9xtFU609eUKUYD11T5vFcjBijmOXo1YttWFUnUIxKtLKuKg5iwLfjlCOVywOnYxbkWy653PoB4Nl8V20X8wTBNjPvdaUHWvc-9R1G2yDhsmHTOlgk5mIk7oBlooKdSUihc9HfCw",
+      "file": "517-1.jpg"
+    }
+  ],
+  "baseTitle": "Логические значения чисел",
+  "title": "Логические значения чисел",
+  "slug": "logicheskie-znacheniya-chisel",
+  "hidden": false
+}

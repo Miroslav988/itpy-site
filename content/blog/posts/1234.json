@@ -1,0 +1,47 @@
+{
+  "id": 1234,
+  "rubric": "video",
+  "description": "",
+  "date": "2026-01-15",
+  "source": "https://t.me/informatika_kege_itpy/1234",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в TikTok",
+          "href": "https://vm.tiktok.com/ZNdoXFfdk/",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в видео",
+          "href": "https://youtube.com/shorts/eSEp5MnkEbQ?si=kaT-eRTGHhKxTmoA",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/FCYcyH9OAvhg17v2zbQGPucIjxNFwVJdt3Wz3S5DwKfRUd7ZbK7-0wRk0SaR3eZ0WbklqFHg9WB9_Tfpr7FbK-u-_62LSlpTCzsKB5Jt4Y2PTocRU07cVPJlrcEhM1dDOMYQb5IAG3FPruHBxSHy5Z2geRFV-NWcb8RjxMmC48982hcjtlKdk63BoofWxohh4YKo8lnnkvNDted-epRIC3cnS9aSQrnBqKWQ2-eEU8fqj8LKR2KA9BwrePi2CxEIXf1UbtOL8BiiMRaOd5yD0PCIvnOov_jYNWO80WxkxypCJmtu95UKB7VF-uDnymK2zT48reDKdVtEmqw1w_1a9g",
+      "file": "1234-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://t.me/informatika_kege_itpy/1234",
+    "thumb": {
+      "src": "/blog-media/1234-1.jpg",
+      "width": 1408,
+      "height": 1877
+    }
+  },
+  "baseTitle": "Как скачать Pycharm без использования vpn",
+  "title": "Как скачать Pycharm без использования vpn",
+  "slug": "kak-skachat-pycharm-bez-ispolzovaniya-vpn",
+  "hidden": false
+}

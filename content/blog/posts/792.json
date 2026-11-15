@@ -1,0 +1,164 @@
+{
+  "id": 792,
+  "rubric": "breakdown",
+  "description": "Операнды арифметического выражения x1x_16 + x3x3_8 записаны в системах счисления с основанием 16 и 8. В записи чисел переменных x обозначена неизвестная цифра. Определите x, при…",
+  "date": "2024-08-19",
+  "source": "https://t.me/informatika_kege_itpy/792",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/792",
+      "thumb": {
+        "src": "/blog-media/792-1.jpg",
+        "width": 848,
+        "height": 448
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Операнды арифметического выражения x1x_16 + x3x3_8 записаны в системах счисления с основанием 16 и 8. В записи чисел переменных x обозначена неизвестная цифра. Определите x, при котором значение данного арифметического выражения является степенью двойки. В ответе укажите x."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Обратите внимание на строчку M = [2 ** x for x in range(0, 100)], здесь мы собираем список всех степеней двойки до 2**100."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "alphabet = sorted('1234567890QWERTYUIOPASDFGHJKLZXCVBNM')\nM = [2 ** x for x in range(0, 100)]\nfor x in alphabet[:8]:\n    a = int(f'{x}1{x}', 16)\n    b = int(f'{x}3{x}3', 8)\n    if a + b in M:\n        print(x)\n\n# Ответ: 5"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "alphabet = sorted('1234567890QWERTYUIOPASDFGHJKLZXCVBNM')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем отсортированный список символов из строки, содержащей цифры и заглавные буквы английского алфавита."
+          }
+        ],
+        [
+          {
+            "text": "M = [2 ** x for x in range(0, 100)]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список степеней двойки от 2^0 до 2^99 (всего 100 элементов)."
+          }
+        ],
+        [
+          {
+            "text": "for x in alphabet[:8]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проходим в цикле по первым 8 символам из отсортированного списка alphabet."
+          }
+        ],
+        [
+          {
+            "text": "a = int(f'{x}1{x}', 16)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Формируем строку вида 'x1x', где x - текущий символ из alphabet, и преобразуем её из шестнадцатеричной в десятичное число."
+          }
+        ],
+        [
+          {
+            "text": "b = int(f'{x}3{x}3', 8)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Формируем строку вида 'x3x3', где x - текущий символ из alphabet, и преобразуем её из восьмеричной в десятичное число."
+          }
+        ],
+        [
+          {
+            "text": "if a + b in M:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, входит ли сумма чисел a и b в список степеней двойки M."
+          }
+        ],
+        [
+          {
+            "text": "print(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, выводим на экран текущий символ x."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/USkUnf1NZEJ4I3VCvQFGpicHnK3wLIWL023UE8fjxXfDITNCByWHReMIad_nvRHNhR_Lmkxney3cO9cka-zELENUwKvX0uadOJHfC0PFT33FWCEgJjtZyCjVktvrlWZQbDIsmmfDKff78_Df1xEIm716ytd3uYkhxP0jjEUGlMjXdYyLyFlBUOVwziIGE3sEohnkF9KthPEv5Qb1sMpQv-92mBo6GbaEJK0XtDOGivxvl3b2ejUoIHqafeNJbQQsLWMRXN1W9pjX-PKjk2kLM70aEmhKBXkCBQM-lDPYoeyJg7MvKXlKtfvf-IAULouWaEo38eIGGymulLW1z_AORg",
+      "file": "792-1.jpg"
+    }
+  ],
+  "task": 14,
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "PRO100EGE Вариант №7",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи — PRO100EGE Вариант №7",
+  "title": "Задание 14 ЕГЭ: разбор задачи — PRO100EGE Вариант №7",
+  "slug": "zadanie-14-ege-razbor-zadachi-pro100ege-variant-7",
+  "hidden": false
+}

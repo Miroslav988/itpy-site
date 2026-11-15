@@ -1,0 +1,50 @@
+{
+  "id": 373,
+  "rubric": "breakdown",
+  "description": "Задание 9 ЕГЭ: разбор задачи 63025",
+  "date": "2024-02-15",
+  "source": "https://t.me/informatika_kege_itpy/373",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/373",
+      "thumb": {
+        "src": "/blog-media/373-1.jpg",
+        "width": 848,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/63025-9-cf9acdcfc7b044589621764d0fc97a09?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "count = 0\nfor s in open('9.txt'):\n    M = sorted([int(x) for x in s.split()])\n    if len(M) != len(set(M)):  # if M[-1] != M[-2]:\n        if M.count(M[-1]) == 1:\n            copied = [x for x in M if M.count(x) > 1]\n            if sum(copied) > M[-1]:\n                count += 1\nprint(count)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/QvNv9cX1av5Qy9kg0ac647YjZKVPcQPR1g2Rlhl7LVXfnIe-U-zirBjBrVkReAzpk8KinP7EGSHeIo8zdGz6syPEL3iBpvYRxqM7z9UM1sRNT_pEqaw6Fl_B8xZy5zt_dufKucxT7w7xfztV8sGGClHAAfo8GVJxO7fUP4o0zSWUqSpnP_d7H7cVPcCWoJwz3baFcH4-1CaFwyMY6yONQsTXeIK1t4kUkzyughSPCKUOF7aWuQdTvMD-FgQzNIN-PcCco426ILXP_jQUW4P9OMwQSkbiLTwX8xbhd_rtj751fWDGGWXISJ9kXgsulfpcbigSyjhjOGuXzXYIzkVvVw",
+      "file": "373-1.jpg"
+    }
+  ],
+  "task": 9,
+  "problem": "63025",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи 63025",
+  "title": "Задание 9 ЕГЭ: разбор задачи 63025",
+  "slug": "zadanie-9-ege-razbor-zadachi-63025",
+  "hidden": false
+}

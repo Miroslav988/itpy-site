@@ -1,0 +1,36 @@
+{
+  "id": 711,
+  "rubric": "breakdown",
+  "description": "Задание 13 ЕГЭ: разбор задачи",
+  "date": "2024-06-08",
+  "source": "https://t.me/informatika_kege_itpy/711",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/711-1.jpg",
+      "width": 800,
+      "height": 569,
+      "alt": "Задание 13 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\n\nnet = ip_network('106.184.0.0/255.255.240.0', 0)\ncnt = 0\nfor ip in net:\n    s = f'{ip:b}'\n    if s.count('1') % 3 == 0:\n        cnt += 1\nprint(cnt)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/FgruUEy-g8MohudLufKsEzIfj4CubS7pWLiB_4-4E-jBrwPhq_kH6_X9E1fHTJ2HJ4QD1mQ-Gm4Eu9PewwnqKwlwnBA8elwokef65H7prdGoyTWYVG0WS8f0YFL73ciAM9AWw3hSKJrzh7jEJ4-jhTP9HXIOmkePDQM3cDKt1QpiI6T7u82vE4jDUZoIzWoYAEyA4W2G3jR6Slukmj5OavRjIckneji7P68cLztb0tGrnoq61LMK15d9lXfFXHHcKB2jj9ZGWC3SOWqRRyd56lxxP3OH_HmLQGgdtwwk0hS_Pux4TDzl0PjFR-6-1uFIbTTEyeLACLBm3qg5v197AQ.jpg",
+      "file": "711-1.jpg"
+    }
+  ],
+  "task": 13,
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи",
+  "title": "Задание 13 ЕГЭ: разбор задачи (8 июня 2024)",
+  "slug": "zadanie-13-ege-razbor-zadachi-8-iyunya-2024",
+  "hidden": false
+}

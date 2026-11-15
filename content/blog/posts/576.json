@@ -1,0 +1,149 @@
+{
+  "id": 576,
+  "rubric": "breakdown",
+  "description": "У исполнителя есть две команды, которым присвоены номера: 1. Прибавить 1 2. Приписать справа двоичную запись остатка от деления на 5 Сколько существует программ, которые…",
+  "date": "2024-05-10",
+  "source": "https://t.me/informatika_kege_itpy/576",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/576",
+      "thumb": {
+        "src": "/blog-media/576-1.jpg",
+        "width": 848,
+        "height": 416
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "У исполнителя есть две команды, которым присвоены номера:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. Прибавить 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Приписать справа двоичную запись остатка от деления на 5"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько существует программ, которые преобразуют исходное число 1_2 в число 101000101_2 "
+        },
+        {
+          "text": "?",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b):\n    if a >= b:\n        return a == b\n    return F(a+1, b) + F(int(f'{a:b}' + f'{(a % 5):b}', 2), b)\n\nprint(F(1, int('101000101', 2)))\n\n# Ответ: 53669"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a, b):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявляется функция F с двумя параметрами a и b."
+          }
+        ],
+        [
+          {
+            "text": ". "
+          },
+          {
+            "text": "if a >= b:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется условие: если a больше или равно b, то возвращается результат сравнения a == b."
+          }
+        ],
+        [
+          {
+            "text": "return F(a+1, b) + F(int(f'{a:b}' + f'{(a % 5):b}', 2), b)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если a < b, функция вызывает себя рекурсивно два раза: с увеличенным на 1 значением a и с результатом вычисления значения, составленного из двоичного представления a и двоичного представления остатка от деления a на 5, преобразованных в число и переданных повторно в виде двоичной строки b."
+          }
+        ],
+        [
+          {
+            "text": "print(F(1, int('101000101', 2)))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызывается функция F с параметрами 1 и целым числом, полученным из двоичной строки '101000101'. Результат выводится на экран."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поставь лайк, если разбор оказался полезным 🥰❤️‍🔥😘👾"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/B_OOjydmJY7eX-FoOCSklm9MOosIItFV4ZSpmrXFpPKBOMrYWMNB0UFVpFh170HvdlsFYQHq4v31rPv_R8JRPBqCG2HzgXpaQy9PTqANY-4bGLdJIla8neZdnrZLsMJwDuVcI3uIDUP2T-jGrWONRxn4Ft6muRqeTjWbf079TkILoNb-G0JwRqthBbeTbkUl1PaQXchgkSC42NvmsFbqqVFUE46lAatEx3Rc9PuOUD855IMKEb1eBAR0BR_dDDGDx2exiJgInjd1RHAM75yjmMxr15w6SGuD-oxx3x1_BF4hU-GofD9XoSa8xQ4N3FEl4qKdwdcnWzYrNCB339DUbg",
+      "file": "576-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "13302",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М. Попков",
+    "level": "Сложный"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 13302",
+  "title": "Задание 23 ЕГЭ: разбор задачи 13302",
+  "slug": "zadanie-23-ege-razbor-zadachi-13302-576",
+  "hidden": true
+}

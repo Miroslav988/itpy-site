@@ -1,0 +1,62 @@
+{
+  "id": 45,
+  "rubric": "useful",
+  "description": "По фатку это интерактивный курс с элементами геймификации, доступный к прохождению для двух языков: Python и JavaScript. Вы выполняете задания, продвигаетесь по дереву прогрессии…",
+  "date": "2022-07-18",
+  "source": "https://t.me/informatika_kege_itpy/45",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/45-1.jpg",
+      "width": 800,
+      "height": 284,
+      "alt": "Для всех, кто овладел базовыми знаниями Python (под базовыми знаниями я…"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "По фатку это интерактивный курс с элементами "
+        },
+        {
+          "text": "геймификации",
+          "href": "https://www.unicraft.org/blog/7209/geymifikatsiya-v-obuchenii/#:~:text=%D0%A7%D1%82%D0%BE%20%D1%82%D0%B0%D0%BA%D0%BE%D0%B5%20%D0%B3%D0%B5%D0%B9%D0%BC"
+        },
+        {
+          "text": ", доступный к прохождению для двух языков: Python и JavaScript."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Вы выполняете задания, продвигаетесь по дереву прогрессии и параллельно соревнуетесь с тысячами других игроков, но рейтинг строится не по количеству общих очков, а по качеству и скорости выполнения той или иной программы/задачи."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Уровень программирования конечно же выше, чем на "
+        },
+        {
+          "text": "базовых бесплатных онлайн курсах Python",
+          "href": "https://stepik.org/course/58852/syllabus?auth=login"
+        },
+        {
+          "text": ", но и результат от таких тренировок куда превликательнее 👌"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/e6DfBbl4PS97FDFwumURV_6ZbUTDWrydhihiFzwDzzhVA8omF2jUT4M8ZsQissY97Lbtyk8LXhywyU6WKtud7feP-GxJOdBXS-oEPuMPCqbm5KqQIrlVhUgsdMvgkp3Ni5nP7Z-OILmShJg9rC2ywaWE70IeK5e6rtXtZN-efO64gfyy3wfFeg8tZuotkJuyt5BbEmn6GFjx6T-j1RTWbX5QTOy7ld-pn7kC6oBicGGR2Loc8SRW7dnBL2oH5gjeV8xTDOv0Hl34c50dvGfPfux4zfkdX0LZ1b8aopxTDMVyb8UXn1c7A5guwzzem9sqEEgdCNMo2dbnI0EidhFWJQ.jpg",
+      "file": "45-1.jpg"
+    }
+  ],
+  "baseTitle": "Для всех, кто овладел базовыми знаниями Python (под базовыми знаниями я…",
+  "title": "Для всех, кто овладел базовыми знаниями Python (под базовыми знаниями я…",
+  "slug": "dlya-vseh-kto-ovladel-bazovymi-znaniyami-python-pod-bazovymi",
+  "hidden": false
+}

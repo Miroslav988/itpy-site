@@ -1,0 +1,138 @@
+{
+  "id": 740,
+  "rubric": "python",
+  "description": "Строки представляют собой последовательность символов, заключенных в кавычки. Они являются одним из базовых типов данных и используются для хранения и манипуляции текстовой…",
+  "date": "2024-06-17",
+  "source": "https://t.me/informatika_kege_itpy/740",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/740",
+      "thumb": {
+        "src": "/blog-media/740-1.jpg",
+        "width": 848,
+        "height": 352
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Строки представляют собой последовательность символов, заключенных в кавычки. Они являются одним из базовых типов данных и используются для хранения и манипуляции текстовой информацией."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Что можно делать со строками в Python?",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "Сравнение строк:",
+          "code": true
+        },
+        {
+          "text": " Строки могут сравниваться между собой для определения равенства или порядка по алфавиту."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": "Конкатенация строк:",
+          "code": true
+        },
+        {
+          "text": " С помощью оператора + можно объединять строки в одну."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "Изменение строк: ",
+          "code": true
+        },
+        {
+          "text": "Строки в Python являются неизменяемыми, но можно создавать новые строки на основе существующих."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. "
+        },
+        {
+          "text": "Поиск подстроки:",
+          "code": true
+        },
+        {
+          "text": " Методы строк позволяют находить подстроки в других строках и многое другое."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примеры работы со строками"
+    },
+    {
+      "type": "code",
+      "text": "str1 = \"Hello\"\nstr2 = \"World\"\n\n# Конкатенация\nresult = str1 + \" \" + str2\nprint(result)\n\n# Сравнение строк\nif str1 == \"Hello\":\n    print(\"str1 равно Hello\")\n\n# Поиск подстроки\nif \"lo\" in str1:\n    print(\"lo найдено в str1\")"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Хотите узнать больше об операциях со строками в Python",
+          "bold": true
+        },
+        {
+          "text": "? "
+        },
+        {
+          "text": "Посетите нашу статью на Notion",
+          "href": "https://informatikakegeitpy.notion.site/str-Python-tpy-d24d4fe40fd64bc8913549c101b752bf?pvs=4",
+          "bold": true
+        },
+        {
+          "text": ",",
+          "href": "https://informatikakegeitpy.notion.site/str-Python-tpy-d24d4fe40fd64bc8913549c101b752bf?pvs=4"
+        },
+        {
+          "text": " в которой вы найдете подробные объяснения и примеры использования строк в Python."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/aeekoJS1zf6c49ilNoKwTegQ7BNK5cYj217hOPpMADvIe3sxrPxpGVnqnkI5rnz3BUdxF5dKjI-q3jDE5WT4v0_UcZreHaDjth85hHine1Q3GFNKHNQrhalmlmj6X83JyQCVlqo_IGp5mwbttLh3Ivv1y9EuM45qR_q7ViqsqPb_XzRvjz_GCQcKIOF-RkomnkH4-zxsXSvEATa1HdKe9rdMB5ufGWAEn4zZZHfQEKGIJi4bTo6fmDCKpe3Jqox1LPhpurqxGWEVN_EGr7SbD_7fOZi4fs653bpzAwwrKfpsFgKup9dnLm3UR14CIqnVWvDazx9H_mhsLXGC-7Od1g",
+      "file": "740-1.jpg"
+    }
+  ],
+  "baseTitle": "Строки (str) в Python: основы работы и применение",
+  "title": "Строки (str) в Python: основы работы и применение",
+  "slug": "stroki-str-v-python-osnovy-raboty-i-primenenie",
+  "hidden": false
+}

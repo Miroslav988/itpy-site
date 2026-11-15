@@ -1,0 +1,45 @@
+{
+  "id": 757,
+  "rubric": "breakdown",
+  "description": "Задание 14 ЕГЭ: разбор задачи",
+  "date": "2024-07-04",
+  "source": "https://t.me/informatika_kege_itpy/757",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/757-1.jpg",
+      "width": 800,
+      "height": 624,
+      "alt": "Задание 14 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения 1"
+    },
+    {
+      "type": "code",
+      "text": "def G(n, b):\n    r = ''\n    while n > 0:\n        r = str(n % b) + r\n        n //= b\n    return r\n\nR = []\nfor x in range(1, 2030+1):\n    num = 6**2030 + 6**100 - x\n    s = G(num, 6)\n    R.append([s.count('0'), x])\n\nprint(max(R))"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения 2"
+    },
+    {
+      "type": "code",
+      "text": "R = []\nfor x in range(1, 2030+1):\n    num = 6**2030 + 6**100 - x\n    s = ''\n    while num > 0:\n        s = str(num % 6) + s\n        num //= 6\n    R.append([s.count('0'), x])\n\nprint(max(R))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/jH6Kjx0zmoSvPzL70N2NWmL6rHnYDqEYBnOJnbo8BvIVV01gihAOchPrK-zEApBQNohs-C0bJGIvwozkAfqljll8QZ_ga78S_2INFgkU9CtNqKrTJi9dG9EODbl03qU2qUr_GW62N0jmSNtJJcscUO7HDjC9ydDMGVvMZfaZnng8NONaf_LLUhdzq_3D64bzCz510cLLxZC_ynnAZM4jnzUhM_V1D0TfTzHI1l4melrD7GomOLZ3AspcKXqz-Ej2bUn3jEoNJyhHxETYOFV_x0nvW4f50PVGcz88sNoEe9x1T6Bk05YQ8TaR4bIbeoRkHktFXWI_pSj7nHC7k9RxTg.jpg",
+      "file": "757-1.jpg"
+    }
+  ],
+  "task": 14,
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи",
+  "title": "Задание 14 ЕГЭ: разбор задачи (4 июля 2024)",
+  "slug": "zadanie-14-ege-razbor-zadachi-4-iyulya-2024",
+  "hidden": false
+}

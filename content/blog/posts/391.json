@@ -1,0 +1,92 @@
+{
+  "id": 391,
+  "rubric": "python",
+  "description": "Используется для создания всех возможных перестановок элементов. Рассмотрим несколько примеров:",
+  "date": "2024-03-02",
+  "source": "https://t.me/informatika_kege_itpy/391",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Используется для создания всех возможных перестановок элементов. Рассмотрим несколько примеров:"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Простейший пример использования функции"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import permutations\n\nnums = [1, 2, 3]\nperm = permutations(nums)\n\nfor i in list(perm):\n    print(i)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "На выходе мы получим"
+    },
+    {
+      "type": "code",
+      "text": "(1, 2, 3)\n(1, 3, 2)\n(2, 1, 3)\n(2, 3, 1)\n(3, 1, 2)\n(3, 2, 1)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Сгенерируем все возможные перестановки из слов"
+    },
+    {
+      "type": "code",
+      "text": "\nfrom itertools import permutations\n\nwords = ['hi', 'world', '!']\nperm = permutations(words)\n\nfor i in list(perm):\n    print(i)\nНа выходе мы получим:\n('hi', 'world', '!')\n('hi', '!', 'world')\n('world', 'hi', '!')\n('world', '!', 'hi')\n('!', 'hi', 'world')\n('!', 'world', 'hi')"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Можем задать дополнительный параметр "
+        },
+        {
+          "text": "permutations()",
+          "code": true
+        },
+        {
+          "text": ", который указывает, сколько элементов нужно взять для формирования каждого кортежа в результате:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import permutations\n\nnums = [1, 2, 3, 4]\nperm = permutations(nums, 2)\n\nfor i in list(perm):\n    print(i)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "На выходе мы получим"
+    },
+    {
+      "type": "code",
+      "text": "(1, 2)\n(1, 3)\n(1, 4)\n(2, 1)\n(2, 3)\n(2, 4)\n(3, 1)\n(3, 2)\n(3, 4)\n(4, 1)\n(4, 2)\n(4, 3)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таким образом, "
+        },
+        {
+          "text": "permutations()",
+          "code": true
+        },
+        {
+          "text": " представляет собой удобный инструмент для генерации всех возможных перестановок элементов."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Функция permutations() из библиотеки itertools в Python",
+  "title": "Функция permutations() из библиотеки itertools в Python",
+  "slug": "funktsiya-permutations-iz-biblioteki-itertools-v-python",
+  "hidden": false
+}

@@ -1,0 +1,67 @@
+{
+  "id": 293,
+  "rubric": "breakdown",
+  "description": "Основная сложность задачи заключается в том, чтобы эффективно определить натуральные числа в интервале [101 000 000; 102 000 000], у которых имеется ровно три различных чётных…",
+  "date": "2023-11-15",
+  "source": "https://t.me/informatika_kege_itpy/293",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/293",
+      "thumb": {
+        "src": "/blog-media/293-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/33527-25-c804f9a221be4811ac4eff5bb617687b?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основная сложность задачи заключается в том, чтобы эффективно определить натуральные числа в интервале "
+        },
+        {
+          "text": "[101 000 000; 102 000 000]",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ", у которых имеется ровно три различных чётных делителя, учитывая, что количество нечётных делителей может варьироваться. 👋"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Решение данной задачи требует тщательного алгоритмического подхода к поиску и проверке чисел с учетом указанных "
+        },
+        {
+          "text": "условий.",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Gu3JG1QtFLtSkYUpR8_vfFi30U5lvppo5i9xfvvkf8GLBdPzekL3wf3LqyYyolQFC5YOIWU8D8t3m_Kp_OSuEuKVMK1-fWtU5w_n3BZVdaKwoeat5MP2YaTw2HxGZk3W4AWnz5bzdLJ-4yo8vJthjob0uX1zi0-nzbqplj1KK79JscJH3opeHpZHGWbRaIcFVnEh4jI5yA64IHB2gme1m2tFP48ZDDgIKJSmJHkdJMOxLPsNh2RAO2ZkKQSWUy27Yo_aRPULDuSYXqhl1xt9Kzwt2OmGVGX2UFASwdFzrVPbg3HIy8uI6WPZhiXEUKLxgUjjDOOBru62Qi2r3WCdLQ",
+      "file": "293-1.jpg"
+    }
+  ],
+  "task": 25,
+  "problem": "33527",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 25 ЕГЭ: разбор задачи 33527",
+  "title": "Задание 25 ЕГЭ: разбор задачи 33527",
+  "slug": "zadanie-25-ege-razbor-zadachi-33527",
+  "hidden": false
+}

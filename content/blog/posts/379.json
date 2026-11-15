@@ -1,0 +1,72 @@
+{
+  "id": 379,
+  "rubric": "useful",
+  "description": "Какой из вариантов вернет значение False 🚩",
+  "date": "2024-02-18",
+  "source": "https://t.me/informatika_kege_itpy/379",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/379",
+      "thumb": {
+        "src": "/blog-media/379-1.jpg",
+        "width": 848,
+        "height": 512
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Какой из вариантов вернет значение False 🚩"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "print(any('a' in x for x in my_list))",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "print(all('' in x for x in my_list))",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "print(all(len(x) > 0 for x in my_list))",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "print(any(len(x) > 0 for x in my_list))",
+          "code": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/YOGReyYh0xtqDEslvxe-CdutdzmaA5ywdssYgR_Q0wUEySvd2vPL_3rKp2cmQdvQd7JHYPk48boy7BmABLesy12w5v-N6hhBcwHOgmWSPTCEnX146aEUXszzP8-To0k-tDDoifMX-SyExXuyxuCIY9UgM9zivQ38ggXSSAoaE4WF7CM-BT7Zd-hHsq7uhRnBSAj2M_zXEYp73bYPsOdBsH_s3dChTRAl-pFgEov5CLCRBAHXqp_34fTtK80U7EGlrcMnU8Ii7ArN4NxMXybwMO84uSrtojlc1Zisqf6A50rRYpdB2BqiSe73wpmubsOgufj92p0CRc9bAYV2X-SLpw",
+      "file": "379-1.jpg"
+    }
+  ],
+  "baseTitle": "Закрепим работу с функциями all() и any()",
+  "title": "Закрепим работу с функциями all() и any()",
+  "slug": "zakrepim-rabotu-s-funktsiyami-all-i-any",
+  "hidden": false
+}

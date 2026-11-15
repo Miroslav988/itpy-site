@@ -1,0 +1,72 @@
+{
+  "id": 306,
+  "rubric": "useful",
+  "description": "Недавно я открыл для себя удивительный сервис под названием Solvery, предназначенный для поиска менторов в различных областях IT-индустрии. Основная идея сервиса заключается в…",
+  "date": "2023-12-21",
+  "source": "https://t.me/informatika_kege_itpy/306",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/306",
+      "thumb": {
+        "src": "/blog-media/306-1.jpg",
+        "width": 848,
+        "height": 480
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Недавно я открыл для себя удивительный сервис под названием "
+        },
+        {
+          "text": "Solvery",
+          "href": "https://solvery.io/",
+          "bold": true
+        },
+        {
+          "text": ",",
+          "href": "https://solvery.io/"
+        },
+        {
+          "text": " предназначенный для поиска менторов в различных областях IT-индустрии. Основная идея сервиса заключается в том, чтобы помочь вам найти ментора, настоящего эксперта в вашей узкой области. Практически, это как общение с суперпрофессиональным репетитором."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Зачастую такие менторы - люди, прошедшие долгий и успешный путь в своей карьере, и они готовы поделиться своим опытом с новыми поколениями. Получение руководства от человека, который уже преуспел, может быть неоценимым опытом для студентов и начинающих специалистов."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Это не единственная подобная площадка, делюсь ссылкой на статью: "
+        },
+        {
+          "text": "\"5 площадок для поиска ментора в IT\"",
+          "href": "https://arc.net/l/quote/dakxkxhg",
+          "bold": true
+        },
+        {
+          "text": " 💻"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/fPEp9RxCQwG_Gwt15pt0JFCxDaIaTLRrgrSpsjcWuHQXgt35A4GCIRrMGwHmsC-68gRNk_HvbECoZQFVNjHaqJkFsxAdncsy-7RHb6Hvg_G3Es8F9XjpcY1v6wYWarYvvQ5B_BYp2GlMcRneoa5N5SKEoa5cQJJbGyc1YGmQ0WyAuwvS9ZnumKqbotzcs8taRsMLdWNG6g7sccF4UjhDAAM8SFgY8gPKQEA4iNHWCocNRo83JP8fQBX2dnvj_XMXoUzlIOSRa-ZX7jaKXiQCWl2z5hZRjwcZTVQCEQXS6wI-AzKABtn1YSEPvl9RN1Sm4JDj-JTDJJU83LoR-BUv7w",
+      "file": "306-1.jpg"
+    }
+  ],
+  "baseTitle": "Новый способ эффективного погружения в IT",
+  "title": "Новый способ эффективного погружения в IT",
+  "slug": "novyy-sposob-effektivnogo-pogruzheniya-v-it",
+  "hidden": false
+}

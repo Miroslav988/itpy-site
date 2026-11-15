@@ -1,0 +1,188 @@
+{
+  "id": 916,
+  "rubric": "breakdown",
+  "description": "Автомат обрабатывает натуральное число N (1≤N≤255) по следующему алгоритму: 1. Строится восьмибитная двоичная запись числа N. 2. Удаляются средние четыре цифры. 3. Полученное…",
+  "date": "2024-11-16",
+  "source": "https://t.me/informatika_kege_itpy/916",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/916",
+      "thumb": {
+        "src": "/blog-media/916-1.jpg",
+        "width": 848,
+        "height": 448
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Автомат обрабатывает натуральное число N (1≤N≤255) по следующему алгоритму:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. Строится восьмибитная двоичная запись числа N."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Удаляются средние четыре цифры."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. Полученное число переводится в десятичную запись и выводится на экран."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Каково наименьшее число, большее 130, которое после обработки автоматом даёт результат 10?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Интересная задачка из-за своего \"прикольного\" среза, ну и метод .zfill(8) не оставит равнодушными!)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "for n in range(130+1, 255+1):\n    s = f'{n:b}'.zfill(8)\n    s = s[:2] + s[-2:]\n    r = int(s, 2)\n    if r == 10:\n        print(n)\n        break\n\n# Ответ:  134"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "for n in range(130+1, 255+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Начинаем цикл с числами от 131 до 255 (включительно)."
+          }
+        ],
+        [
+          {
+            "text": "s = f'{n:b}'.zfill(8)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем число n в двоичную строку и дополняем её нулями слева до 8 символов."
+          }
+        ],
+        [
+          {
+            "text": "s = s[:2] + s[-2:]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Извлекаем первые две и последние две цифры двоичной строки и объединяем их."
+          }
+        ],
+        [
+          {
+            "text": "r = int(s, 2)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем получившуюся строку обратно в десятичное число."
+          }
+        ],
+        [
+          {
+            "text": "if r == 10:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, равен ли результат 10."
+          }
+        ],
+        [
+          {
+            "text": "print(n)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполнено, выводим значение n."
+          }
+        ],
+        [
+          {
+            "text": "break",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Завершаем выполнение цикла после нахождения первого подходящего числа."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/uHwIRJ1xkTypKh01nFn1CtApc38YSkyV0g41ChgCHCWlwOsL9cIQG5jt5WMWhz3zz4ozyzH1ZTZg02yEJ1xtsGjxNYDjNa0dCXTMhoTh9GLd16RbgFandcFXUY_N0aub5cYZi_fCSitrLQ_XbJHWxeU87CC9jgkxVu_sFppUhvHqyflCiZyrxwnf-EpmyONzYFGThEaFlzimgPF85U-6_GpFBO318MccIPtBlmB-77nQEIvksDAnyMcabocIWinfW75__EBogFsFpitjVKyTzGsfoN_mSDPrix1TvhkTU9s-AjA5LQNtwIGmWwTbkRETWDv2fqBpV5IELkC5LLP5oA",
+      "file": "916-1.jpg"
+    }
+  ],
+  "task": 5,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Кабанов А",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 5 ЕГЭ: разбор задачи — Кабанов А",
+  "title": "Задание 5 ЕГЭ: разбор задачи — Кабанов А",
+  "slug": "zadanie-5-ege-razbor-zadachi-kabanov-a",
+  "hidden": false
+}

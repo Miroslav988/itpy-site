@@ -1,0 +1,64 @@
+{
+  "id": 406,
+  "rubric": "breakdown",
+  "description": "Задание 9 ЕГЭ: разбор задачи 8554",
+  "date": "2024-03-15",
+  "source": "https://t.me/informatika_kege_itpy/406",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/406",
+      "thumb": {
+        "src": "/blog-media/406-1.jpg",
+        "width": 848,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/8554-9-1a942ec449c142d39c189888ac7eeb72?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('9.txt'):\n    M = [int(x) for x in s.split()]\n    if len([x for x in M if abs(x) % 10 == 3]) == 3:\n        A = [x for x in M if x > 0]\n        B = [x for x in M if x < 0]\n        if sum(A) ** 2 < sum(B) ** 2:\n            cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию: ",
+          "bold": true
+        },
+        {
+          "text": "9.txt",
+          "href": "https://kompege.ru/files/pjfBkV-tR.xlsx",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/u_GNJcb0ZsxZ6CJGFzLQnJIk1tlCHre2WjuyCpQh_J_nwxCa2G8GwQfrEiTdnLTLWNVzvL2yhEZUeVPllOjD2rEtHQkAhC-5X_I4a368MYaulHoV7Br4q2XkAPYzIqNDDLO2_Uop6KCLKTjsaVlWDmrUI50rXEEWTKcBrWBFl-ScB6xguXKTiDk9SKWiqnTOmA55t4VI6dhmL7qvIegHsBgL9RrvT8D1hnDGKMiPTwFNka7jZQBq_plc3EY7qtB5G5KYaJ12XcBRRW4GP7-htCE602s9zrCZUzBsmNVh2x9YAKvWbNCTuVQLI_Ieyaoqbz5Q9rQTXpKuwHoxPQNmvQ",
+      "file": "406-1.jpg"
+    }
+  ],
+  "task": 9,
+  "problem": "8554",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи 8554",
+  "title": "Задание 9 ЕГЭ: разбор задачи 8554",
+  "slug": "zadanie-9-ege-razbor-zadachi-8554",
+  "hidden": false
+}

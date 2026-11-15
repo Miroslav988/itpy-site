@@ -1,0 +1,98 @@
+{
+  "id": 389,
+  "rubric": "python",
+  "description": "В данном коде @lru_cache(None) используется для кэширования результатов функции f(n) с помощью декоратора lru_cache из встроенного в базовый Python модуля functools. Аргумент None…",
+  "date": "2024-02-28",
+  "source": "https://t.me/informatika_kege_itpy/389",
+  "blocks": [
+    {
+      "type": "code",
+      "text": "from functools import *\n\n@lru_cache(None)\ndef f(n):\n    if n < 3:\n        return 2\n    if n > 2 and n % 2 == 0:\n        return 2 * f(n-2) - f(n-1) + 2\n    if n > 2 and n % 2 != 0:\n        return 2 * f(n-1) + f(n-2) - 2\n\nprint(f(170))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В данном коде "
+        },
+        {
+          "text": "@lru_cache(None)",
+          "code": true
+        },
+        {
+          "text": " используется для кэширования результатов функции "
+        },
+        {
+          "text": "f(n)",
+          "code": true
+        },
+        {
+          "text": " с помощью декоратора "
+        },
+        {
+          "text": "lru_cache",
+          "code": true
+        },
+        {
+          "text": " из встроенного в базовый Python модуля "
+        },
+        {
+          "text": "functools",
+          "code": true
+        },
+        {
+          "text": ". Аргумент "
+        },
+        {
+          "text": "None",
+          "code": true
+        },
+        {
+          "text": " указывает, что размер кэша неограничен."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Кэширование функции позволяет избежать повторных вычислений для одних и тех же входных данных. При первом вызове функции "
+        },
+        {
+          "text": "f(n)",
+          "code": true
+        },
+        {
+          "text": " результат сохраняется в кэше. При последующих вызовах функции с тем же аргументом, результат будет возвращен из кэша, вместо повторного выполнения вычислений."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таким образом, в данном коде использование "
+        },
+        {
+          "text": "@lru_cache(None)",
+          "code": true
+        },
+        {
+          "text": " позволяет сэкономить время на вычислениях, так как функция "
+        },
+        {
+          "text": "f(n)",
+          "code": true
+        },
+        {
+          "text": " будет выполняться только один раз для каждого уникального аргумента."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Кэширование через функцию @lru_cache()",
+  "title": "Кэширование через функцию @lru_cache()",
+  "slug": "keshirovanie-cherez-funktsiyu-lru-cache",
+  "hidden": false
+}

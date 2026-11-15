@@ -1,0 +1,274 @@
+{
+  "id": 40,
+  "rubric": "breakdown",
+  "description": "(¬x ∧ y) ∨ (y ∧ z).",
+  "date": "2022-07-06",
+  "source": "https://t.me/informatika_kege_itpy/40",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/40-1.jpg",
+      "width": 800,
+      "height": 284,
+      "alt": "Задание 2 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "код примера: "
+        },
+        {
+          "text": "10403",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=10403"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Логическая функция F задаётся выражением"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(¬x ",
+          "italic": true
+        },
+        {
+          "text": "∧"
+        },
+        {
+          "text": " y) ",
+          "italic": true
+        },
+        {
+          "text": "∨"
+        },
+        {
+          "text": " (y ",
+          "italic": true
+        },
+        {
+          "text": "∧"
+        },
+        {
+          "text": " z).",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "На рисунке приведён фрагмент таблицы истинности функции F, содержащий все наборы аргументов, при которых функция F истинна."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите какому столбцу таблицы истинности функции F соответствует каждая из переменных x, y, z."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "# ? ? ? F"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# 0 1 0 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# 0 1 1 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# 1 1 1 1"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Найти"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе напишите буквы x, y, z в том порядке, в котором идут соответствующие им столбцы."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теория"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Читать подробнее",
+          "href": "http://mathprofi.ru/formuly_i_zakony_logiki.html"
+        },
+        {
+          "text": ".."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Как формулу математической логики перенести на язык Python:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# ¬z - (not(z)) отрицание"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# ∧ - and конъюнкция"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# ∨ - or дизъюнкция"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# → - <= импликация"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# ≡ - == тождество"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Приоритет операций:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "отрицание > конъюнкция > дизъюнкция > импликация",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полезные формулы Алгебры высказываний:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. A → B ≡ ¬A ",
+          "bold": true
+        },
+        {
+          "text": "∨"
+        },
+        {
+          "text": " B",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. A ∧"
+        },
+        {
+          "text": " B ≡ B ",
+          "bold": true
+        },
+        {
+          "text": "∧"
+        },
+        {
+          "text": " A",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. ¬(A ∨"
+        },
+        {
+          "text": " B) ≡ ¬A ",
+          "bold": true
+        },
+        {
+          "text": "∧"
+        },
+        {
+          "text": " ¬B",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Где A и B любые сколь угодно сложные формулы."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таким образом пременив эти преобразования к изначальной формуле, мы можем получить более простое выражение, которое в свою очередь будет удобно поместить в программу!"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/iJg4R5NbIdzuMn2o0aZReZYizGYT0hpgYkQpJrMziyKfrobGuqL9IwvdgORPiMIHj2SdhCwgvwwqlYxXjZoLqA8ZtH8ELJ1wpgaXtzwwguEr4qq7BzaAg-LUWsPaGcdhRTh_rZ-I5gN-IoprGGZWIPuxmC3nOieW-2CDpy6pRX88K9UGeRGO-lFjXiV1fzr2npjgx2MAxp1fW9BFakydn9w6ZLpFpNZZErawrc_5gXGvVnH_AI0U6xbmJuj6uJI2fMxTUeWzuG-ED1zDFzBfZmkCprignGUaaYJFt1hy6Q1xONkM5rj6qwZTvCX22g57ti4pFIqBN8XyhEsvwy6fyA.jpg",
+      "file": "40-1.jpg"
+    }
+  ],
+  "task": 2,
+  "baseTitle": "Задание 2 ЕГЭ: разбор задачи",
+  "title": "Задание 2 ЕГЭ: разбор задачи",
+  "slug": "zadanie-2-ege-razbor-zadachi-40",
+  "hidden": true
+}

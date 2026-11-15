@@ -1,0 +1,75 @@
+{
+  "id": 1221,
+  "rubric": "useful",
+  "description": "17 заданий - 70 баллов 21 задание - 80 баллов 25 заданий - 90 баллов",
+  "date": "2025-12-20",
+  "source": "https://t.me/informatika_kege_itpy/1221",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1221-1.jpg",
+      "width": 800,
+      "height": 716,
+      "alt": "Шкала перевода баллов ЕГЭ по информатике"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "17 заданий - "
+        },
+        {
+          "text": "70 баллов",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "21 задание - "
+        },
+        {
+          "text": "80 баллов",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "25 заданий - "
+        },
+        {
+          "text": "90 баллов",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Последние два номера дают по 2 первичных балла (за каждый ответ), суммарно за них можно получить 10 вторичных."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Забавный пример программки для перевода"
+    },
+    {
+      "type": "code",
+      "text": "while True:\n    s = int(input('Сколько первичных баллов ты планируешь набрать? \\n'))\n    if 1 <= s <= 29:\n        tab = [7, 14, 20, 27, 34, 40, 43, 46, 48, 51,\n               54, 56, 59, 62, 64, 67, 70, 72, 75, 78,\n               80, 83, 85, 88, 90, 93, 95, 98, 100]\n        print(f'Ты получишь: {tab[s - 1]} баллов! \\n')\n    else:\n        print('Выход из программы.')\n        exit()"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Mrfmw_fq-KKm_1UOyAF1VkU0ic6vG6v-tvS2SYnGp8d9cAEzrJa1MgDdPnEvlkSRVisI-3JnxnmEokfb2iBHgAZaoTY4dyywGvpWtoANZZ_RdvIoO2mP5sF-Xnpmk2YbGzBlTdvvzLH48pIOE3L4ny3oKkM5wW1vr85Nh_N2UJ60d3dlabgfgy-e2gAdhss9L5AWNL6ThY6k94rmVXp6WFDn90RkrTn2UehwxeBr2L59fgfSiceIv0Z6t6mPQ_ln21oQmp2aGB-uWZIKvzsSJv6-c4G_6cgSqpBkq_RPZu9_YE1hWv6rbpgM-xqyfCH8gzRBqyBY0KrLT7UxEK7vHw.jpg",
+      "file": "1221-1.jpg"
+    }
+  ],
+  "baseTitle": "Шкала перевода баллов ЕГЭ по информатике",
+  "title": "Шкала перевода баллов ЕГЭ по информатике",
+  "slug": "shkala-perevoda-ballov-ege-po-informatike",
+  "hidden": false
+}

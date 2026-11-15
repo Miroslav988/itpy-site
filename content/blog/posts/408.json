@@ -1,0 +1,117 @@
+{
+  "id": 408,
+  "rubric": "python",
+  "description": "forward(distance) Двигает черепаху вперед на заданное расстояние.",
+  "date": "2024-03-30",
+  "source": "https://t.me/informatika_kege_itpy/408",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "forward(distance)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Двигает черепаху вперед на заданное расстояние."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.forward(100)  #t.fd(100)\nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "backward(distance)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Двигает черепаху назад на заданное расстояние."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.backward(50)  #t.bk(50)\nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "right(angle)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Поворачивает черепаху направо на заданный угол."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.right(90)  #t.rt(45)\nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "left(angle)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Поворачивает черепаху налево на заданный угол."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.left(45)  #t.lt(45)\nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "circle(radius)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Рисует окружность с заданным радиусом."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.circle(50)\nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Эти примеры демонстрируют базовые функции библиотеки Turtle, которые помогают управлять черепахой."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Пять простейших функций из библиотеки Turtle в Python",
+  "title": "Пять простейших функций из библиотеки Turtle в Python",
+  "slug": "pyat-prosteyshih-funktsiy-iz-biblioteki-turtle-v-python",
+  "hidden": false
+}

@@ -1,0 +1,189 @@
+{
+  "id": 878,
+  "rubric": "breakdown",
+  "description": "Для какого наименьшего неотрицательного целого числа А формула ((x & 52 ≠ 0) /\\ (x & 36 = 0)) → ¬ (x & А = 0) тождественно истинна (т.е. принимает значение 1) при любом…",
+  "date": "2024-10-19",
+  "source": "https://t.me/informatika_kege_itpy/878",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/878",
+      "thumb": {
+        "src": "/blog-media/878-1.jpg",
+        "width": 848,
+        "height": 432
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Для какого наименьшего неотрицательного целого числа А формула"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "((x & 52 ≠ 0) /\\ (x & 36 = 0)) → ¬ (x & А = 0)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "тождественно истинна (т.е. принимает значение 1) при любом неотрицательном целом значении переменной х?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Под операцией m & n подразумевают побитовую конъюнкцию неотрицательных целых чисел m и n."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "То есть числа переводятся в двоичную систему и каждый их бит (с одинаковыми индексами) проводят через оперцию конъюнкции."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Так, например, 14 & 5 = 11102& 01012 = 01002 = 4."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(x, A):\n    return ((x & 52 != 0) and (x & 36 == 0)) <= (x & A != 0)\n\nR = []\nfor A in range(10000):\n    if all(F(x, A) for x in range(10000)):\n        R.append(A)\nprint(min(R))\n\n#Ответ: 16"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(x, A):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определяем функцию F, принимающую два параметра: x и A."
+          }
+        ],
+        [
+          {
+            "text": "return ((x & 52 != 0) and (x & 36 == 0)) <= (x & A != 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращаем результат логического выражения, которое проверяет битовые операции и условия для x."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем пустой список R, который будет содержать значения A, удовлетворяющие определенным условиям."
+          }
+        ],
+        [
+          {
+            "text": "for A in range(1000):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускаем цикл, перебирая значения A от 0 до 999 включительно."
+          }
+        ],
+        [
+          {
+            "text": "if all(F(x, A) for x in range(10000)):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, выполняется ли функция F для всех x от 0 до 9999 для текущего A."
+          }
+        ],
+        [
+          {
+            "text": "R.append(A)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие на предыдущей строке истинно, добавляем текущее значение A в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(min(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Находим и выводим минимальное значение из списка R."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Qi1VMnOJW3G4_ifBHW8ExDcXnHyAAtZ9WeL_wFz0cfff81ASgzF-YKWuGa0LKNNzoBPDLn4f9rMvCtwYoCiMO4CmUJVeiHbCwRfa4urCSIHK19k90uDSoontfsTov3WNwSE1O-0xxavkRgj9qxk0xisTJA5LhQvsxKZrkiYBKBNom_TN82XdtojM7Opa5vBiYT7xAn7tVkYC-FatMjIdLoSfxqgA8tSXfmsKqdci_gI-LWR6DKiwVTRgYbG03NqMNMJm0Dr6x5uWjwcUae-6kxwO0Ojs0q_B5_9HJaAzMAXhmlSE6Nu92T0YR45C5SiwJUMHKd-seSD9u4Go0k--fQ",
+      "file": "878-1.jpg"
+    }
+  ],
+  "task": 15,
+  "problem": "8503",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Апробация 17.05",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 15 ЕГЭ: разбор задачи 8503",
+  "title": "Задание 15 ЕГЭ: разбор задачи 8503",
+  "slug": "zadanie-15-ege-razbor-zadachi-8503",
+  "hidden": false
+}

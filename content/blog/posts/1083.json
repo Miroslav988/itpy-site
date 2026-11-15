@@ -1,0 +1,245 @@
+{
+  "id": 1083,
+  "rubric": "breakdown",
+  "description": "Товарищи, что по реакциям, я для кого стараюсь? 🥲",
+  "date": "2025-06-09",
+  "source": "https://t.me/informatika_kege_itpy/1083",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1083-1.jpg",
+      "width": 800,
+      "height": 673,
+      "alt": "Задание 27 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Товарищи, что по реакциям, я для кого стараюсь? 🥲"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Первое, что необходимо сделать в этой задаче — открыть файл в Excel и, следуя инструкции на картинке, построить точечную диаграмму. С её помощью мы определим, в какой из кластеров попадает каждая точка из файла 27_B.txt."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Затем переходим к распределению этих точек в коде (обращаю внимание, что в этом примере я рассматриваю только файл B, так как он более нагляден)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код программы"
+    },
+    {
+      "type": "code",
+      "text": "clustersB = [[], [], []]\n\nfor s in open('27_B.txt'):\n    s = s.replace(',', '.')\n    x, y = [float(i) for i in s.split()]\n    if x > 0 and y > 0:\n        clustersB[0].append([x, y])\n    elif x > 0 and y < 0:\n        clustersB[1].append([x, y])\n    else:\n        clustersB[2].append([x, y])"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "clustersB = [[], [], []]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список из трех пустых подсписков для хранения точек трех кластеров"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- clustersB[0] - первый кластер (первая четверть)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- clustersB[1] - второй кластер (четвертая четверть)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- clustersB[2] - третий кластер (вторая и третья четверти вместе)"
+          }
+        ],
+        [
+          {
+            "text": "for s in open('27_B.txt'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открываем файл '27_B.txt' для чтения и построчно обрабатываем его содержимое"
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(',', '.')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяем запятые на точки для корректного преобразования в float"
+          }
+        ],
+        [
+          {
+            "text": "x, y = [float(i) for i in s.split()]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разбиваем строку по пробелам и преобразуем части в числа с плавающей точкой"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "x - первая координата (абсцисса)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "y - вторая координата (ордината)"
+          }
+        ],
+        [
+          {
+            "text": "if x > 0 and y > 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Распределяем точку в один из кластеров в зависимости от координат:"
+          }
+        ],
+        [
+          {
+            "text": "clustersB[0].append([x, y])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если обе координаты положительные - точка в первой четверти (кластер 0)"
+          }
+        ],
+        [
+          {
+            "text": "elif x > 0 and y < 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если x положительный, а y отрицательный - точка в четвертой четверти (кластер 1)"
+          }
+        ],
+        [
+          {
+            "text": "clustersB[1].append([x, y])",
+            "code": true
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Все остальные точки (вторая и третья четверти) попадают в кластер 2"
+          }
+        ],
+        [
+          {
+            "text": "clustersB[2].append([x, y])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Сюда попадают случаи:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "x < 0 и y > 0 (вторая четверть)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "x < 0 и y < 0 (третья четверть)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "x > 0 и y = 0 (на оси X)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "x < 0 и y = 0 (на оси X)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "x = 0 (на оси Y, независимо от y)"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/MQr2NaZ87PDfJYYTqR6_HRpMF5TFCgJfN0RllgJX7UBsd_D98-G2p1UqLTzeXIg4DmlaTg2oVa2MyWQ_cSMNhZCeJXylx-Ae4pRA17fsF7nNGniWhfWoP38t3Yny4IW0tB1k8UzxH6di_10A5E6YDiGyA5bfl91kMTQSGJsZ-TJFJNX_G37LzqjtDXCSX0y2cP7PoLbOrKj2pMwq7WNKrESkDmdoyaMO-se6kSSiJbhFGf7mK5QO_4W_0Cd2SrtE0Ho0eAxaNHPZ8ZUx-HvXVdovTY13K1FBxRGctp0lChLyyDJHNKCZ9DNdm4FLZ0v7S9jTFPk9BJjN-o3YPweRcg.jpg",
+      "file": "1083-1.jpg"
+    }
+  ],
+  "task": 27,
+  "baseTitle": "Задание 27 ЕГЭ: разбор задачи",
+  "title": "Задание 27 ЕГЭ: разбор задачи (9 июня 2025)",
+  "slug": "zadanie-27-ege-razbor-zadachi-9-iyunya-2025",
+  "hidden": false
+}

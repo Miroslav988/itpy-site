@@ -1,0 +1,153 @@
+{
+  "id": 789,
+  "rubric": "breakdown",
+  "description": "Определите количество строк таблицы, в которых сумма наибольшего и наименьшего чисел меньше суммы двух оставшихся.",
+  "date": "2024-08-12",
+  "source": "https://t.me/informatika_kege_itpy/789",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/789",
+      "thumb": {
+        "src": "/blog-media/789-1.jpg",
+        "width": 848,
+        "height": 496
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество строк таблицы, в которых сумма наибольшего и наименьшего чисел меньше суммы двух оставшихся."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Для решения этого номера кодом необходимо конвертировать .xls файл в .txt, но на экзамене будет доступен .csv формат, который можно будет открыть сразу же без конвертации."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('9.txt'):\n    M = sorted([int(x) for x in s.split()])\n    # if M[0] + M[-1] < M[1] + M[2]:\n    # if max(M) + min(M) < sum(M) - max(M) - min(M):\n    if M[0] + M[-1] < M[1] + M[2]:\n        cnt += 1\nprint(cnt)\n\n# Ответ: 9997"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем переменную счётчика cnt для подсчета строк, которые удовлетворяют условию."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.txt'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открываем файл '9.txt' и построчно читаем его содержимое в цикле."
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(x) for x in s.split()])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разбиваем строку s на отдельные элементы, приводим их к целым числам и сортируем их, результат сохраняем в список M."
+          }
+        ],
+        [
+          {
+            "text": "if M[0] + M[-1] < M[1] + M[2]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем условие: сумма первого и последнего элементов списка меньше суммы второго и третьего элементов."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, увеличиваем счётчик cnt на 1."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим итоговое значение счётчика cnt, которое соответствует количеству строк, удовлетворяющих условию."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/RGT_B7oGcf2lsNiD1Xdjlre_vLGy4JPw2gAVdJmmlLcu9HbVW_3ggkEX52gQqZPhbPD8ITkHEdCTMUEUFlZzBKhrGrowrPJ9T9wbfMr1eZOJfJ6s9BTU_wmOENZWEIeCVfpJtyRCHCQroFvag5rtHlGL_0wgbDnxaY156FawZwvQHpiKXIm9iYJdRjYqBEabqJXtEf0x8HZtrA-WvkHRnIAAdiKV9Gc9YS9OoznXHZv5bv8Vk9I-WYbpgBB8qqLdM-r4BKO_vSjWdIuZB8DE1nD-ClO2yJ6LM6aYlgRakqeJ5jWkPy434_wTQ0OomApYOvwqVzcwVby767dbZW9uUg",
+      "file": "789-1.jpg"
+    }
+  ],
+  "task": 9,
+  "problem": "17672",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Пересдача 04.07.2024",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи 17672",
+  "title": "Задание 9 ЕГЭ: разбор задачи 17672",
+  "slug": "zadanie-9-ege-razbor-zadachi-17672",
+  "hidden": false
+}

@@ -1,0 +1,118 @@
+{
+  "id": 1247,
+  "rubric": "python",
+  "description": "return - оператор, который завершает выполнение функции и возвращает значение в место её вызова. ( он помогает получать результат работы функции и использовать его дальше )",
+  "date": "2026-01-18",
+  "source": "https://t.me/informatika_kege_itpy/1247",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "return",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - оператор, который завершает выполнение функции и возвращает значение в место её вызова. ( "
+        },
+        {
+          "text": "он помогает получать результат работы функции и использовать его дальше",
+          "italic": true
+        },
+        {
+          "text": " )"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Основные моменты"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "return",
+            "code": true
+          },
+          {
+            "text": " завершает выполнение функции."
+          }
+        ],
+        [
+          {
+            "text": "После "
+          },
+          {
+            "text": "return",
+            "code": true
+          },
+          {
+            "text": " функция возвращает указанное значение."
+          }
+        ],
+        [
+          {
+            "text": "Можно возвращать любое значение: число, строку, список, словарь, объект или вообще ничего ("
+          },
+          {
+            "text": "return None",
+            "code": true
+          },
+          {
+            "text": ")."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "def summ(a, b):\n    return a + b\n\nresult = summ(3, 5)\nprint(result)  # Вывод: 8"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Важно:",
+          "bold": true
+        },
+        {
+          "text": " если в функции не указать "
+        },
+        {
+          "text": "return",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ", она по умолчанию возвращает "
+        },
+        {
+          "text": "None",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Что такое return в Python?",
+  "title": "Что такое return в Python?",
+  "slug": "chto-takoe-return-v-python",
+  "hidden": false
+}

@@ -1,0 +1,37 @@
+{
+  "id": 495,
+  "rubric": "python",
+  "description": "Шпаргалка по генераторам списков",
+  "date": "2024-04-27",
+  "source": "https://t.me/informatika_kege_itpy/495",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/495",
+      "thumb": {
+        "src": "/blog-media/495-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Потыкайте этот пример тут"
+    },
+    {
+      "type": "code",
+      "text": "numbers = [3, 4, 2, 7, 2, 3, 8, 3, 1, 9]\nA = [x**2 for x in numbers if x % 2 == 0]\nprint(A)  # [16, 4, 4, 64]\n\nB = [x**2 if x % 2 == 0 else x ** 3 for x in numbers]\nprint(B)  # [27, 16, 4, 343, 4, 27, 64, 27, 1, 729]"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/hfo_Vl_KX0n36SXAsdLi7e5TWtKX63mrc8x1B8aozjpQQlc6Y8FYoUJfCxUit29hxA4Tl43ZKdnDTITVyWI2_2zjS-bYymroTTafUsxt3i92UgJXkjvxkQCIV-Lu3ZJ9svT7yj4ZjkGEi5Qq4Eb9ISEx82n8JOVxXwjM0A-0D0gjtN7_LYxc6orvV_g7F3jVMSPjEm87KKilNu4N3JDY774CPETcGa4nsAwb0Z7b8OJH0Rd3qlZ2_tBCzQpU8jBEbJIMhWtaFukyddbD4IIBLnNjFw8YVcObT-xMcnOICu5igxwSCTWqEqGmYs9SNlTmfBsfEw-Yp2NZ-Shb6UCRgg",
+      "file": "495-1.jpg"
+    }
+  ],
+  "baseTitle": "Шпаргалка по генераторам списков",
+  "title": "Шпаргалка по генераторам списков",
+  "slug": "shpargalka-po-generatoram-spiskov-495",
+  "hidden": true
+}

@@ -1,0 +1,36 @@
+{
+  "id": 764,
+  "rubric": "breakdown",
+  "description": "Задание 9 ЕГЭ: разбор задачи",
+  "date": "2024-07-04",
+  "source": "https://t.me/informatika_kege_itpy/764",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/764-1.jpg",
+      "width": 800,
+      "height": 463,
+      "alt": "Задание 9 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('9.csv'):\n    M = [int(x) for x in s.split(';')]\n    copied = [x for x in M if M.count(x) == 2]\n    not_copied = [x for x in M if M.count(x) == 1]\n    if len(copied) == 4 and len(not_copied) == 2:\n        if sum(copied) < sum(not_copied):\n            cnt += 1\nprint(cnt)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/KX-bBYcmz1ePoj06vD4lxSBXEvpWlp2al9r45OYEpXCnYNFez_D-ggJudCWYGvXdVsfPharROhd4ihPRDXCl6CmgBiDeImd75_rqfU5W_21v1XMGu4W4NetMl9ZBHmCGunj0EOl06mnMNMxc00PkROGibZ3HY2QBvg3k4XL58Hqc9uziTQTi3FP2wiyvffBeBRKQX7UDyH0tUg0eI4zr7WB9D8HjmfvmN63gQfkONuclgPHOE2KC4JKqJeGifTFnUh8wmlkGOFyVYHPrptAXaG_58o494sXJnVipygJn4tik6xxm3EzRBeJ8lcnvXKo8Uqkzor4OGexIAcPYjhVvOg.jpg",
+      "file": "764-1.jpg"
+    }
+  ],
+  "task": 9,
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи",
+  "title": "Задание 9 ЕГЭ: разбор задачи (4 июля 2024)",
+  "slug": "zadanie-9-ege-razbor-zadachi-4-iyulya-2024",
+  "hidden": false
+}

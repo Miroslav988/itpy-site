@@ -1,0 +1,85 @@
+{
+  "id": 479,
+  "rubric": "python",
+  "description": "Функция reversed() - это еще один полезный инструмент для работы с последовательностями данных, который позволяет изменить порядок элементов списка на противоположный.",
+  "date": "2024-04-25",
+  "source": "https://t.me/informatika_kege_itpy/479",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/479",
+      "thumb": {
+        "src": "/blog-media/479-1.jpg",
+        "width": 848,
+        "height": 560
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "reversed()",
+          "code": true
+        },
+        {
+          "text": " - это еще один полезный инструмент для работы с последовательностями данных, который позволяет изменить порядок элементов списка на противоположный."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Важно отметить, что функция "
+        },
+        {
+          "text": "reversed()",
+          "code": true
+        },
+        {
+          "text": " отличается от метода "
+        },
+        {
+          "text": ".reverse()",
+          "code": true
+        },
+        {
+          "text": ", который изменяет список на месте, тогда как функция "
+        },
+        {
+          "text": "reversed()",
+          "code": true
+        },
+        {
+          "text": " возвращает итератор, который представляет собой перевернутую версию исходной последовательности данных."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример использования функции reversed() в Python"
+    },
+    {
+      "type": "code",
+      "text": "# Создаем список элементов\nnumbers = [1, 2, 3, 4, 5]\n\n# Используем reversed() для переворота списка\nreversed_numbers = reversed(numbers)\n\n# Выводим элементы списка в обратном порядке\nprint(list(reversed_numbers))\n\n# Результат: \n# [5, 4, 3, 2, 1]"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Uz5R3ER1K04dy4GNGafibgGcDAEdy1F6dGOneBAmtsV1DX3ZWDp21ZRJnctXPNuset3bx3naQ3oPYVygvSd0cDBnk-XtKFXnKNZUyNlMfg6YxThYaOjRh_sotF5CbYIaphbSW6rTp8hZegvJAbOm7f1jL60XirMW-LPq1lYlYJ-Rjn4-yfJl1yTnxUPSs3lKzhvudRWBjfZQTFctBJTn8RD7aHPrkIqrTTe7DHaah1FvAxlJA1sfQQEyYaBRVriPCrew3ZFjGaReHa98ppswO7lbmz8jL0-1_pSbi2fumTAvu2xY0G9BJkV_9_JeIUxNM2QjEvDuCmQh20FyeTG-PA",
+      "file": "479-1.jpg"
+    }
+  ],
+  "baseTitle": "Небольшой пост про функцию reversed()",
+  "title": "Небольшой пост про функцию reversed()",
+  "slug": "nebolshoy-post-pro-funktsiyu-reversed",
+  "hidden": false
+}

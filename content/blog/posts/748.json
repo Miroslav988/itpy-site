@@ -1,0 +1,221 @@
+{
+  "id": 748,
+  "rubric": "breakdown",
+  "description": "Пусть М – сумма минимального и максимального натуральных делителей целого числа, не считая единицы и самого числа. Напишите программу, которая перебирает целые числа, большие 700…",
+  "date": "2024-06-21",
+  "source": "https://t.me/informatika_kege_itpy/748",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/748",
+      "thumb": {
+        "src": "/blog-media/748-1.jpg",
+        "width": 832,
+        "height": 848
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Пусть М – сумма минимального и максимального натуральных делителей целого числа, не считая единицы и самого числа."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Напишите программу, которая перебирает целые числа, большие 700 000, в порядке возрастания и ищет среди них такие, для которых М оканчивается на 4."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе запишите в первом столбце таблицы первые пять найденных чисел в порядке возрастания, а во втором столбце - соответствующие им значения М."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В данной задаче нас просят не учитывать единицы и само число, поэтому диапазон в for j in range(2, int(x ** 0.5) + 1): начинаем с 2."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Кстати про саму функцию divisors() уже был пост."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def divisors(x):\n    div = []\n    for j in range(2, int(x ** 0.5) + 1):\n        if x % j == 0:\n            div += [j, x // j]\n    return sorted(set(div))\n\n\nk = 0\nfor x in range(700_001, 10**10):\n    d = divisors(x)\n    if len(d) >= 2:\n        M = min(d) + max(d)\n        if abs(M) % 10 == 4:\n            print(x, M)\n            k += 1\n            if k == 5:\n                break\n\n# Ответ:\n# 700004 350004\n# 700009 41194\n# 700023 233344\n# 700024 350014\n# 700044 350024"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "k = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация переменной k, которая будет считать количество найденных чисел."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(700_001, 10**10):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл перебора чисел от 700001 до 10**10."
+          }
+        ],
+        [
+          {
+            "text": "d = divisors(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции divisors() для нахождения делителей числа x."
+          }
+        ],
+        [
+          {
+            "text": "if len(d) >= 2:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка наличия как минимум двух делителей."
+          }
+        ],
+        [
+          {
+            "text": "M = min(d) + max(d)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Нахождение суммы минимального и максимального делителя числа x."
+          }
+        ],
+        [
+          {
+            "text": "if abs(M) % 10 == 4:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: остаток от деления абсолютной величины суммы делителей M на 10 равен 4."
+          }
+        ],
+        [
+          {
+            "text": "print(x, M)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод числа x и суммы делителей M."
+          }
+        ],
+        [
+          {
+            "text": "k += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличение счетчика найденных чисел."
+          }
+        ],
+        [
+          {
+            "text": "if k == 5:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, достигнут ли лимит в 5 найденных чисел."
+          }
+        ],
+        [
+          {
+            "text": "break",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Прерывание цикла после нахождения 5 чисел."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/RpREqSM1E-cHCmDeSS4JyTCqGPsdl1w8TqF28-RfCcrRVH4EKjfxzzzIwG4X5pljytBAiUYT50MufunRPbz1HYHu0T2CGzZKy9b4IZHIPZvm8bbTq9KW505ZdRD_MqS0BJI9okF_s_bIJL5MskLd5LsaYxPv9X5Gt7nI-RtOMsiR9xr2H6LXEIrk_illzzfmWy6nd5GclA6IAtN10ISiFwJI_ix-YYxaE41sdx43mt1YvRJtmFaDKpGcrT1dEd7Sx_Xw5pST1M2vz0MYPYBy_i-QgpBTdhWqUautybxI_1W_COHYcHbRrDT3JYTJjNR8SZyTtzEbOm3I211CL2X6yQ",
+      "file": "748-1.jpg"
+    }
+  ],
+  "task": 25,
+  "problem": "17564",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 08.06.24",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 25 ЕГЭ: разбор задачи 17564",
+  "title": "Задание 25 ЕГЭ: разбор задачи 17564",
+  "slug": "zadanie-25-ege-razbor-zadachi-17564",
+  "hidden": false
+}

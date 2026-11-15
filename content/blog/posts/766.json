@@ -1,0 +1,75 @@
+{
+  "id": 766,
+  "rubric": "python",
+  "description": "Использование метода форматирования строк .format() в Python является широко распространенным способом работы со строками. Однако, с появлением f-строк (f-strings) в Python 3.6,…",
+  "date": "2024-07-08",
+  "source": "https://t.me/informatika_kege_itpy/766",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/766-1.jpg",
+      "width": 800,
+      "height": 254,
+      "alt": "Использования f-строк в python"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Использование метода форматирования строк "
+        },
+        {
+          "text": ".format()",
+          "code": true
+        },
+        {
+          "text": " в Python является широко распространенным способом работы со строками. Однако, с появлением "
+        },
+        {
+          "text": "f-строк (f-strings)",
+          "code": true
+        },
+        {
+          "text": " в Python 3.6, разработчики получили удобный и современный способ форматирования строк."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "f-строки позволяют встраивать значения переменных непосредственно в строку без необходимости использования метода "
+        },
+        {
+          "text": ".format()",
+          "code": true
+        },
+        {
+          "text": ". Это делает код более читаемым, компактным и удобным для использования."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "user = \"Андрей\"\naction = \"покупка\"\nlog_message = f'Пользователь {user} зашел на сайт и выполнил действие: {action}'\nprint(log_message)\n# Пользователь Андрей зашел на сайт и выполнил действие: покупка"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В данном коде мы использовали префикс f перед строкой, а затем в фигурных скобках указали переменные, которые хотим вставить в строку. Python автоматически подставит значения этих переменных при формировании строки."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/fP5yUZ-3FgIyc98zNZfuH0ChzM_7QkI5Kuh3SQWLEBcTumZ2rJ3-o59hs2MFLVbBsMM-6AgD1rh8hwJpKtF5gUt9DYk17Iz6SqKSx4FGqG-5SSqlGrV3dflkdMrVBy5jlS5diAan-a2_JV9XlBiB5oZrhaESZKSZ9wkNdh48PYz9sJLn1n57aR0Hp2Pp08s1E87nP3UwaWhDJ3Bqv4IBLcc-MCdYMHpGk_HDrNSmBXH1HnSK8HK-XE0eGGS6Km6WNAp4gfi0oeXawZqT0fbM4p2ePGB_X76Vu2165pNDouXghoqyuMp8JmQjwCZ64wkD6VWn3ySYrSvGffeI-Yy3QA.jpg",
+      "file": "766-1.jpg"
+    }
+  ],
+  "baseTitle": "Использования f-строк в python",
+  "title": "Использования f-строк в python (8 июля 2024)",
+  "slug": "ispolzovaniya-f-strok-v-python-8-iyulya-2024",
+  "hidden": false
+}

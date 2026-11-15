@@ -1,0 +1,60 @@
+{
+  "id": 108,
+  "rubric": "useful",
+  "description": "Можно ли приносить свою периферию? Какое ПО будет на компьютере? Технические требования к станциям на экзамене?",
+  "date": "2023-04-09",
+  "source": "https://t.me/informatika_kege_itpy/108",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/108",
+      "thumb": {
+        "src": "/blog-media/108-1.jpg",
+        "width": 848,
+        "height": 288
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Можно ли приносить свою периферию? Какое ПО будет на компьютере? Технические требования к станциям на экзамене?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "На эти и многие другие вопросы отвечает "
+        },
+        {
+          "text": "Алексей",
+          "href": "https://www.youtube.com/@kompege"
+        },
+        {
+          "text": " у себя на канале, обязательно к просмотру!"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть видео на канале Алексея Кабанова",
+          "href": "https://www.youtube.com/watch?v=a42xrykogp0"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/dOe45vMA9cbXBhTQx5DP2cmJH5TNn1CWrJuGUp04IIJ4R9fC0QWRMGYYjstfyGqCuQnhyMCBxFDohIesgp_tbmdRVM0oZNRcCv9fpF5wOvjRjI8l0UghJsHGGn4BeDvw0w2THNKbYNOQLH4QW7NJ8EiOdR8P0T1bldAZaT493j-CNf6xhEmovMWZKaKNK2u7vMQUulwGCSiCCYCten2b9XnSat5nqsVSZRnbZWEVVZi6uqrYOXnZTfLkwFcNkmxxPa59enWEfp5f1vReETt2nNwfHRj_exxOk5wlnXRLJqOpbMB-U8bjhgG7RFXB9uW1dUynAT_xFVFSdsfq49AFmw",
+      "file": "108-1.jpg"
+    }
+  ],
+  "baseTitle": "Как проводится компьютерный экзамен?",
+  "title": "Как проводится компьютерный экзамен?",
+  "slug": "kak-provoditsya-kompyuternyy-ekzamen",
+  "hidden": false
+}

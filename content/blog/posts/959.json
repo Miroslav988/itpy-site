@@ -1,0 +1,170 @@
+{
+  "id": 959,
+  "rubric": "breakdown",
+  "description": "Исполнитель преобразует число на экране. У исполнителя есть две команды: A. Прибавь 1 B. Умножить на 2 Сколько существует программ, которые преобразуют исходное число 1 в число 17…",
+  "date": "2024-12-18",
+  "source": "https://t.me/informatika_kege_itpy/959",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/959",
+      "thumb": {
+        "src": "/blog-media/959-1.jpg",
+        "width": 848,
+        "height": 704
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Исполнитель преобразует число на экране. У исполнителя есть две команды:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "A. Прибавь 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "B. Умножить на 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько существует программ, которые преобразуют исходное число 1 в число 17 и при этом траектория вычислений содержит не более 4 четных чисел?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "На картинке я прикрепил два своих решения одной и той же задачи, но позже заметил, что, несмотря на то что оба варианта дают правильный ответ, один из них неверный! А именно первый вариант является неправильным, так как в нем рассматриваются все цифры, а не числа. Правильным подходом будет разбить все числа с помощью c+' '+str(a), чтобы таким образом рассматривать лишь четные числа. Будьте внимательны!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b, c):\n    if a >= b:\n        M = [int(x) for x in c.split() if int(x) % 2 == 0]\n        return a == b and len(M) <= 4\n    return F(a+1, b, c+' '+str(a)) + F(a*2, b, c+' '+str(a))\n\n\nprint(F(1, 17, ''))\n\n# Ответ: 8"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a, b, c):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление функции F с тремя параметрами: a, b и c."
+          }
+        ],
+        [
+          {
+            "text": "if a >= b:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, если значение a больше или равно b."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(x) for x in c.split() if int(x) % 2 == 0]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание списка M, который содержит четные числа из строки c, преобразуя их в целые значения."
+          }
+        ],
+        [
+          {
+            "text": "return a == b and len(M) <= 4",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращение результата: True, если a равно b и количество четных чисел в M не превышает 4."
+          }
+        ],
+        [
+          {
+            "text": "return F(a+1, b, c+' '+str(a)) + F(a*2, b, c+' '+str(a))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Рекурсивный вызов функции F для двух случаев: увеличивая a на 1 и удваивая a, добавляя текущий a в строку c."
+          }
+        ],
+        [
+          {
+            "text": "print(F(1, 17, ''))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции F с параметрами 1, 17 и пустой строкой, вывод результата на экран."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/EyguTYhHm4mT4xhtjUZ64ww-JkhJB8GRu1O1N5y3JBzmNBiN-4zeKhxPZ7AStHd9I5Clx6uCfmNoo8oF8ar8CRR_CS0O9RyG3TKjJeKt-fKR7t_6oTeBmDPYIb8KTLGY-hKrk9WeUxuk5rI_I1HdoGRFpPjZMBIcVTYhv8GgpzXqjbE40YMQeGpyp0h3MOPCx9Kahx961dbaeuJet5oqvyppRCwR8tEfO0MBZwJ_4hAuZvuhVLsVg73u-otGWtjwXfPxuQ5iVAzssv8q4QGHt7naghjJwAobZHgn8vHMORvub9imOnPmIi1mtjQoqBhYlPWZJCsucwYb9xqRv09faw",
+      "file": "959-1.jpg"
+    }
+  ],
+  "task": 23,
+  "collection": "СтатГрад",
+  "meta": {
+    "source": "Статград",
+    "level": "Сложный"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи — Статград",
+  "title": "Задание 23 ЕГЭ: разбор задачи — Статград",
+  "slug": "zadanie-23-ege-razbor-zadachi-statgrad",
+  "hidden": false
+}

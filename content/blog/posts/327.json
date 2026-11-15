@@ -1,0 +1,59 @@
+{
+  "id": 327,
+  "rubric": "breakdown",
+  "description": "С каждым годом ЕГЭ все больше смещается в сторону программирования. Почти каждую задачу можно решить кодом, поэтому я публикую разбор второго номера с полным решением через код:",
+  "date": "2023-12-27",
+  "source": "https://t.me/informatika_kege_itpy/327",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/327",
+      "thumb": {
+        "src": "/blog-media/327-1.jpg",
+        "width": 848,
+        "height": 528
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/56502-2-e744a48102b347d69b0b3b48858159dd?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "С каждым годом ЕГЭ все больше смещается в сторону программирования. Почти каждую задачу можно решить кодом, поэтому я публикую разбор второго номера с полным решением "
+        },
+        {
+          "text": "через код",
+          "bold": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\n\ndef F(x, y, z, w):\n    return ((x <= y) or (z <= w)) and ((z == y) <= (w == x))\n\n\nfor a1, a2, a3, a4 in product([0, 1], repeat=4):\n    table = [(a1, 1, 0, a2), (0, 1, 0, 1), (a3, 1, 0, a4)]\n    if len(set(table)) == len(table):\n        for i in permutations('xyzw'):\n            if [F(**dict(zip(i, r))) for r in table] == [0, 0, 0]:\n                print(*i, sep='')"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/DuDiWcIa5I3-6vNEmZyPgIO04jCWTImR_jxwB410ApPpBIqCWP1KumXEq-wMU4tbe4bPo4K0Qdm4V70eIXaMAMzqJXTTnvynatJG3Gmh5igdDOUNC9uD1SaElvoOOTuM1Oujk-BH6SWkYN21msBVTad8DlV5GbTT3-kg4nFcM3kL0tMIiM0pHQR_aHcHz2VrD-JoTRRSxq14lglT_EGs7sMeSIClJn-YCXqMLeEmYtIWGS7IlW-6b6UwkBJhD7q--2FAprs1xknLLLTE19ehEY5LdWghijgAGH38XUh2syfJbcPFG43w9VtNEdrKdr43Ztl6PvzsBP5-2BFgcS8YrA",
+      "file": "327-1.jpg"
+    }
+  ],
+  "task": 2,
+  "problem": "56502",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 2 ЕГЭ: разбор задачи 56502",
+  "title": "Задание 2 ЕГЭ: разбор задачи 56502",
+  "slug": "zadanie-2-ege-razbor-zadachi-56502",
+  "hidden": false
+}

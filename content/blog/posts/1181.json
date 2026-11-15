@@ -1,0 +1,161 @@
+{
+  "id": 1181,
+  "rubric": "python",
+  "description": "- Это те типы, которые позволяют хранить и организовывать коллекции элементов.",
+  "date": "2025-10-05",
+  "source": "https://t.me/informatika_kege_itpy/1181",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- Это те типы, которые позволяют хранить и организовывать коллекции элементов."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Основные структуры данных в Python"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "list",
+          "bold": true
+        },
+        {
+          "text": " - это изменяемый упорядоченный список. Можно добавлять, удалять, менять элементы. Например:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "fruits = ['яблоко', 'банан', 'апельсин']",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " 📎"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "tuple",
+          "bold": true
+        },
+        {
+          "text": " - неизменяемая последовательность. Отлично подходит, когда нужно зафиксировать набор данных:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "coordinates = (10, 20)",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " 📎"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "set",
+          "bold": true
+        },
+        {
+          "text": " - множество уникальных элементов. Быстро искать, удалять дубликаты:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "unique_numbers = {1, 2, 3}",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " 📎"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "dict",
+          "bold": true
+        },
+        {
+          "text": " - словарь, отображение ключей на значения. Очень удобно для хранения пар \"ключ-значение\":"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "person = {'имя': 'Анна', 'возраст': 25}",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " 📎"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "frozenset",
+          "bold": true
+        },
+        {
+          "text": " - неизменяемое множество, его нельзя менять после создания. Используется там, где нужен \"жёсткий\" набор данных. "
+        },
+        {
+          "text": "frozenset([1, 2, 3, 4]) ➡️ frozenset({1, 2, 3, 4})",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "deque",
+          "bold": true
+        },
+        {
+          "text": " - двусторонняя очередь из модуля "
+        },
+        {
+          "text": "collections",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ". Быстро добавлять и удалять элементы с обоих концов:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "from collections import deque ⚙️ d = deque() ",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "- инициализировать элементами из любого итерируемого объекта (список, кортеж и т. д.).",
+          "italic": true
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Типы данных в Python, которые считаются структурами данных",
+  "title": "Типы данных в Python, которые считаются структурами данных",
+  "slug": "tipy-dannyh-v-python-kotorye-schitayutsya-strukturami-dannyh",
+  "hidden": false
+}

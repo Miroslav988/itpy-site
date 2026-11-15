@@ -1,0 +1,221 @@
+{
+  "id": 473,
+  "rubric": "breakdown",
+  "description": "Все четырёхбуквенные слова, составленные из букв А, Л, Г, О, Р, И, Т, М, записаны в алфавитном порядке и пронумерованы, начиная с 1. Начало списка выглядит так: 1. АААА 2. АААГ 3.…",
+  "date": "2024-04-23",
+  "source": "https://t.me/informatika_kege_itpy/473",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/473",
+      "thumb": {
+        "src": "/blog-media/473-1.jpg",
+        "width": 848,
+        "height": 560
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Все четырёхбуквенные слова, составленные из букв А, Л, Г, О, Р, И, Т, М, записаны в алфавитном порядке и пронумерованы, начиная с 1."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Начало списка выглядит так:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. АААА"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. АААГ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. АААИ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "4. АААЛ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Под каким номером в списке идёт первое слово, которое начинается с букв ИГ?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Функция sorted() позволяет легко получить алфавитный порядок. А оператор break позволяет остановиться на первом слове."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import product\nk = 0\nfor s in product(sorted('АЛГОРИТМ'), repeat=4):\n    word = ''.join(s)\n    k += 1\n    if word[:2] == 'ИГ':\n        print(k)\n        break"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import product",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируется функция product из модуля itertools, которая генерирует декартово произведение итерабельных объектов."
+          }
+        ],
+        [
+          {
+            "text": "k = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируется переменная k, которая будет использоваться для отслеживания количества итераций."
+          }
+        ],
+        [
+          {
+            "text": "for s in product(sorted('АЛГОРИТМ'), repeat=4):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается цикл for, в котором производится комбинация символов из отсортированной строки 'АЛГОРИТМ' с повторением в 4 раза."
+          }
+        ],
+        [
+          {
+            "text": "word = ''.join(s)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается строка word, объединяя символы из текущей комбинации s."
+          }
+        ],
+        [
+          {
+            "text": "k += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличивается счетчик k на 1 для подсчета количества итераций."
+          }
+        ],
+        [
+          {
+            "text": "if word[:2] == 'ИГ':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется, начинается ли текущее слово word с символов 'ИГ'."
+          }
+        ],
+        [
+          {
+            "text": "print(k)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, то выводится значение счетчика k."
+          }
+        ],
+        [
+          {
+            "text": "break",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Происходит прерывание цикла после печати значения счетчика для первого слова, начинающегося с 'ИГ'."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Альтернативное решение"
+    },
+    {
+      "type": "code",
+      "text": "s = sorted('АЛГОРИТМ')\nk = 0\nfor a in s:\n    for b in s:\n        for c in s:\n            for d in s:\n                word = a + b + c + d\n                k += 1\n                if word[:2] == 'ИГ':\n                    print(k)\n                    exit()"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/einv-MRPhohwEaG6r8HrooPxmbq3hGQgm1fpC20LVEElurdTc2i3pW2ooSq6abD2Zb9IrWLyQYLQxrrLTXBk92GcTjKmD6LPRcMx0Uxwu3hy9k8tQ5Tz_g91XJ-Orf7CKDYnKXi93esDNmEk_Lf-FK4J2pD50Mo-1txEPCZ6EoW-p-o3P6nTRgBVKONJImJDzWPev3ZzoXm5bi11eI2kkz4ID5686OuTjh9wCoQw1C22REIjuaESw5wrq62wlZyuOEaCICa-LkUwBfSe8MvJIC6ZWxQmIBvwBCDpcTLDWz-vU0lz0PtlBsptlt7wdsaid5CuxlksiHdWHqrTOC_0Eg",
+      "file": "473-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "15947",
+  "collection": "Решу ЕГЭ",
+  "meta": {
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 15947",
+  "title": "Задание 8 ЕГЭ: разбор задачи 15947",
+  "slug": "zadanie-8-ege-razbor-zadachi-15947",
+  "hidden": false
+}

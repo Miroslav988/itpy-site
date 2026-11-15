@@ -1,0 +1,36 @@
+{
+  "id": 763,
+  "rubric": "breakdown",
+  "description": "Задание 17 ЕГЭ: разбор задачи",
+  "date": "2024-07-04",
+  "source": "https://t.me/informatika_kege_itpy/763",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/763-1.jpg",
+      "width": 800,
+      "height": 524,
+      "alt": "Задание 17 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(x) for x in open('17.txt')]\nD = [x for x in M if x > 0]\nR = []\nfor i in range(len(M)-1):\n    x, y = M[i], M[i+1]\n    if x < 0 or y < 0:\n        if x + y % min(D) == 0:\n            R.append(x + y)\nprint(len(R), max(R))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/HQGit65OLwiPON1mmK8dar_NyupOTahDRYpaIvEg8XhKCN5MS_2qTwVi9bdphzXfNL6yhvWyU1jomaoipsvBqePsLP0Ay1pbHRLRvG1qHFnj-P1l5lnPkTupJn8ezH_vS3c_VonjIkGdAcNS5gr55fyMNfhrpSr8P3fG4MapTS6NK-C7vjm5jiYy1wr8F1XIG5JeQtF6CMg3ZZOPQfO0PAynS3TNJfI1iTO5ca4biz-BZbNk-FMb4sJYrmQSCS4ayHsFPkHfs7KZXfdqOA0ONv_sD1t8eoRZr59mN5fSWmPKNkeGlj7yPwae9a4lgkO-pEt1XZ_Z9LnZI56GarCAVg.jpg",
+      "file": "763-1.jpg"
+    }
+  ],
+  "task": 17,
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи",
+  "title": "Задание 17 ЕГЭ: разбор задачи (4 июля 2024)",
+  "slug": "zadanie-17-ege-razbor-zadachi-4-iyulya-2024",
+  "hidden": false
+}

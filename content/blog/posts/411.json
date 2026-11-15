@@ -1,0 +1,49 @@
+{
+  "id": 411,
+  "rubric": "breakdown",
+  "description": "Задание 6 ЕГЭ: разбор задачи 13843",
+  "date": "2024-04-02",
+  "source": "https://t.me/informatika_kege_itpy/411",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/411",
+      "thumb": {
+        "src": "/blog-media/411-1.jpg",
+        "width": 672,
+        "height": 848
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/13843-6-d4f3ca84367d4aaea6b55c3ba34d5496?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.tracer(0)\nt.left(90)\nm = 20\n\nt.up()\nfor _ in range(10):\n    t.right(120)\n    t.forward(12 * m)\nt.down()\nfor _ in range(7):\n    t.forward(7 * m)\n    t.right(90)\nfor _ in range(5):\n    t.right(60)\n    t.forward(20 * m)\n    t.right(30)\n\nt.up()\nfor x in range(-30, 30):\n    for y in range(-30, 30):\n        t.goto(x * m, y * m)\n        t.dot(2, 'red')\n\nt.done()"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/UVWTF0koBjAC_TqiFnl-xhzrpddYtvkOkplJbgvNdLeI9AqYTIqEGSZeaLDjbna-5ADbDveB9hp6YMlyJJgN0U4i9WLCmTANb6fd5RXlbYT2YyeLiHWqz6qrEx3JKAoutlvpipFoBqPVrACFYk9A-Bg3OSZANe0TkNRpv52N16G4yFzzjBCYkmbi5iBOP_SnHBKZtsK3uMvb-Q2qV9UBTOJKKa4pAEhCcky8c-InmBWj7IRIYixK5pEQ0-wJwVda3NI5_xL-ElQKjz-9tEYV7G9iAIcehHtHicIE7Ogr9J5g9RIp6m2CofqDucJ_M_YuHo0HeVrW7aWS1O1z9VaZgw",
+      "file": "411-1.jpg"
+    }
+  ],
+  "task": 6,
+  "problem": "13843",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 6 ЕГЭ: разбор задачи 13843",
+  "title": "Задание 6 ЕГЭ: разбор задачи 13843",
+  "slug": "zadanie-6-ege-razbor-zadachi-13843",
+  "hidden": false
+}

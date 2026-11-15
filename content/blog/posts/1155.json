@@ -1,0 +1,116 @@
+{
+  "id": 1155,
+  "rubric": "useful",
+  "description": "Да, это валидная и очень полезная конструкция! Блок else выполняется только если цикл завершился без использования break.",
+  "date": "2025-08-26",
+  "source": "https://t.me/informatika_kege_itpy/1155",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Да, это валидная и очень полезная конструкция!"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Блок "
+        },
+        {
+          "text": "else",
+          "bold": true
+        },
+        {
+          "text": " выполняется только если цикл завершился без использования "
+        },
+        {
+          "text": "break",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Почему это удобно?"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Например, при поиске элемента в списке:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- Если элемент найден — срабатывает "
+        },
+        {
+          "text": "break",
+          "bold": true
+        },
+        {
+          "text": ", и блок "
+        },
+        {
+          "text": "else",
+          "bold": true
+        },
+        {
+          "text": " пропускается."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- Если элемент не найден — цикл завершится нормально, и "
+        },
+        {
+          "text": "else",
+          "bold": true
+        },
+        {
+          "text": " выполнится, позволяя обработать ситуацию."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример с кодом"
+    },
+    {
+      "type": "code",
+      "text": "# Поиск элемента в списке\nnumbers = [1, 3, 5, 7, 9]\ntarget = 4\n\nfor num in numbers:\n    if num == target:\n        print(\"Элемент найден:\", target)\n        break\nelse:\n    print(\"Элемент не найден:\", target)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "В этом примере"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "- Если target есть в списке, мы его найдём и выйдем из цикла через break."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- Если target отсутствует, цикл завершится нормально, и сработает блок else, сообщая, что элемент не найден."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Можно ли использовать else после for или while в Python?",
+  "title": "Можно ли использовать else после for или while в Python? (26 августа 2025)",
+  "slug": "mozhno-li-ispolzovat-else-posle-for-ili-while-v-python-26",
+  "hidden": false
+}

@@ -1,0 +1,36 @@
+{
+  "id": 605,
+  "rubric": "python",
+  "description": "Данные функции встречаются при решении практически каждого (пайтон) номера ЕГЭ, но особенно будут полезны для номеров: 9 и 17.",
+  "date": "2024-05-15",
+  "source": "https://t.me/informatika_kege_itpy/605",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/605",
+      "thumb": {
+        "src": "/blog-media/605-1.jpg",
+        "width": 848,
+        "height": 736
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Данные функции встречаются при решении практически каждого (пайтон) номера ЕГЭ, но особенно будут полезны для номеров: 9 и 17."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/DFZ9RT2oAorNHd4D5ptV3Q7dBB5MUmtcgxiTrnnJwrXCKgtxppoZSgef4cjG30nwoFdM_pPRoYSPZF6-dB892Dsf5sBBCSGeWXk-DIs4tkA1zHRAeTg3s-X2ZxGsbesCbEOPiKLZg1saF59hItWvwvynlDc6e3mg_iTXVhGF8_k7oiIc4rx-JVd6FCjU8ZAjaooslVvxCV_R9EHDGj-5l0KwTNdGiuAgd5PeAwFnLHn6R6AR9gsf39y_rELdNw26ZYpoyaSpP9l_gVZxTuzNR5qM4DEhMeNLf1P0oi9Wxhp9eHdnRX7Qui4hEgoJz9M-7hBS2UzwsygRfvZkDrNyYQ",
+      "file": "605-1.jpg"
+    }
+  ],
+  "baseTitle": "Сохраняй шпаргалку по встроенным функциям в Python",
+  "title": "Сохраняй шпаргалку по встроенным функциям в Python",
+  "slug": "sohranyay-shpargalku-po-vstroennym-funktsiyam-v-python",
+  "hidden": false
+}

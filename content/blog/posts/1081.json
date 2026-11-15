@@ -1,0 +1,57 @@
+{
+  "id": 1081,
+  "rubric": "video",
+  "description": "",
+  "date": "2025-06-09",
+  "source": "https://t.me/informatika_kege_itpy/1081",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в TikTok",
+          "href": "https://vm.tiktok.com/ZNdSgTYK3/",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в видео",
+          "href": "https://youtube.com/shorts/XLBVV2PHNLQ?si=6W5hrdWTwkxcifsN",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в Instagram",
+          "href": "https://www.instagram.com/reel/DJdtMaVIMd-/?igsh=MWNhbzJtOXExbjJrbA==",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/IoaUNIA_K_ceUtPeHIJl4NIJufUl4nMJvWTRckKUzdSuXRPbsHEh5nJSqanBmDhPddzJ8sMW4dljtWfrOdJW3PY_DHOMdm4s8KxWwBDt9bVjM4wMypJcebSMLeoZyPyK_jxI2lTH89yV_XcVozSDrnqrAfGk8cJjb1f1CyTeMu-8bdvHpmiD8qCXy3KmOTDvINfQKvGrJej9J7HHE_jvgb-ImVEhfMkmeeU-oa9-V_k6gOgc8YMMcd2y1kev045R-2OpBoYSQX77iY0Ce3wuvTb2cHTntUqzaXbXy1FnB62qNnijpswudlaf46J4C6oLhogxESrfqkBLHmVV5JPoeg",
+      "file": "1081-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://t.me/informatika_kege_itpy/1081",
+    "thumb": {
+      "src": "/blog-media/1081-1.jpg",
+      "width": 720,
+      "height": 960
+    }
+  },
+  "baseTitle": "Почему на экзамене ЕГЭ вас просят сохранять все ваши файлики в одну папку",
+  "title": "Почему на экзамене ЕГЭ вас просят сохранять все ваши файлики в одну папку",
+  "slug": "pochemu-na-ekzamene-ege-vas-prosyat-sohranyat-vse-vashi",
+  "hidden": false
+}

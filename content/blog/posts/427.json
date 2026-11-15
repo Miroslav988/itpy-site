@@ -1,0 +1,96 @@
+{
+  "id": 427,
+  "rubric": "python",
+  "description": "Списки - один из наиболее распространенных типов данных в Python. Они представляют собой упорядоченные коллекции объектов, которые могут быть любого типа.",
+  "date": "2024-04-14",
+  "source": "https://t.me/informatika_kege_itpy/427",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/427",
+      "thumb": {
+        "src": "/blog-media/427-1.jpg",
+        "width": 848,
+        "height": 352
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Списки - один из наиболее распространенных типов данных в Python. Они представляют собой упорядоченные коллекции объектов, которые могут быть любого типа."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Списки в Python создаются с использованием квадратных скобок []. Вот пример создания списка с различными типами данных:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "my_list = [1, 2, \"Python\", 3.14, True]\nprint(my_list)  \n# Выведет: [1, 2, 'Python', 3.14, True]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Элементы списка нумеруются с нуля. Чтобы получить доступ к элементу списка, указывается его индекс в квадратных скобках:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "print(my_list[2])  # Обращаемся к элементу с индексом 2\n# Выведет: Python"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Можно изменить значение элемента списка, просто присвоив новое значение элементу по индексу:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "my_list[1] = 10\nprint(my_list)  \n# Выведет: [1, 10, 'Python', 3.14, True]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Списки поддерживают различные операции, такие как добавление элемента в конец списка (append), удаление элемента по значению (remove), удаление элемента по индексу (del), слияние списков (extend), и многие другие."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Более подробную информацию про работу с списками вы можете изучить в "
+        },
+        {
+          "text": "нашей статье на Notion",
+          "href": "https://informatikakegeitpy.notion.site/tpy-3021ffcdc37e4600a5e10148b2d13566?pvs=4",
+          "bold": true
+        },
+        {
+          "text": " ✏"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/VirgREPNgDYnXNl4rMleUxQBX-DJITWjEZ4gI6vTPd2LUBuNfPd0YoiZo_K2LHngnmVXfcnFDIvhlL_Gx0_tbrWsT-R-1y9jLFBMk-ZafJu4_phaj7mbayXhrBKN3SuXpaBZ8rxHCty33V0D7oTQ7wJQ-ORo_S1khxzUOUJ__D2UalcwXX9ABikNY2MtVvMviw9RNeJk7_6J4wdcIWt6Plmk_BRDLdVQzYFZnq7XjerMWeGhYzPbeI847250o0QirDtKc6zSD0kPciZ-063tcHHeMyaPavw9-8mTvTrAS9IbnK2YNwu4hRAd-UPVITBs1OjsNVze_8EB1-5-jiFyiw",
+      "file": "427-1.jpg"
+    }
+  ],
+  "baseTitle": "Списки, и как они устроены",
+  "title": "Списки, и как они устроены",
+  "slug": "spiski-i-kak-oni-ustroeny",
+  "hidden": false
+}

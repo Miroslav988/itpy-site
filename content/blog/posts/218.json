@@ -1,0 +1,63 @@
+{
+  "id": 218,
+  "rubric": "useful",
+  "description": "Видео: \"Какой язык программирования выбрать новичку\"",
+  "date": "2023-08-11",
+  "source": "https://t.me/informatika_kege_itpy/218",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/218",
+      "thumb": {
+        "src": "/blog-media/218-1.jpg",
+        "width": 848,
+        "height": 336
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Видео: "
+        },
+        {
+          "text": "\"Какой язык программирования выбрать новичку\"",
+          "href": "https://youtu.be/HMYbYXXDly4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Интересное ли получилось видео? Ставь:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- да, это супер интересно"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- ну такое, уже не актуально"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Y_13A5-u2c87Z_yx92mg1FJXvTbhxohmELcSh1j3dHZWuUHjQRluoJjHbNCMKjczNleIw8m9VM1pGcBVssvbST9h_rK6gtBeY5xH2TyPN0jwKIy5Ib7Ea9O8yVw16a3LoolCUQfh_h0LK2nuQeM7Bk8HVUjudJPigTewQwQi6LZy9JJQikJkTr7FQxKG2KEdwAOOwft2hDkAvSj-_dpMLdp96EKRkLYif8YOPR9WBk2_psN4YU8Z5UAeQkQLpJeq6qN9wDjzqp-FyQzeq4dn2RKDKcgapMeK5yOCFnZEXidyFLhhL0YUm4EZQnSxsSuw6jczun32ZNmR3_D-cXhYkA",
+      "file": "218-1.jpg"
+    }
+  ],
+  "meta": {
+    "source": "Александр Ильин про IT"
+  },
+  "baseTitle": "Интересное видео про языки программирования",
+  "title": "Интересное видео про языки программирования",
+  "slug": "interesnoe-video-pro-yazyki-programmirovaniya",
+  "hidden": false
+}

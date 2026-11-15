@@ -1,0 +1,156 @@
+{
+  "id": 412,
+  "rubric": "breakdown",
+  "description": "Задание 25 ЕГЭ: разбор задачи 7357",
+  "date": "2024-04-03",
+  "source": "https://t.me/informatika_kege_itpy/412",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/412",
+      "thumb": {
+        "src": "/blog-media/412-1.jpg",
+        "width": 848,
+        "height": 528
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from fnmatch import *\nR = []\nfor x in range(53191, 10**10, 53191):\n    if fnmatch(str(x), '?136*'):\n        if str(x)[0] in '02468' and str(x)[-1] in '13579':\n            R.append([x, x // 53191])\n\n\nfor i in range(-5, 0):\n    print(*R[i])"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду решения"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from fnmatch import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля fnmatch для работы с шаблонами и строками."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание пустого списка R, куда будут добавляться результаты."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(53191, 10**10, 53191):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл для перебора чисел от 53191 до 10**10 с шагом 53191."
+          }
+        ],
+        [
+          {
+            "text": "if fnmatch(str(x), '?136*'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, соответствует ли строковое представление числа x шаблону '?136*'."
+          }
+        ],
+        [
+          {
+            "text": "if str(x)[0] in '02468' and str(x)[-1] in '13579':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что первая цифра числа находится в диапазоне '02468', а последняя - в '13579'."
+          }
+        ],
+        [
+          {
+            "text": "R.append([x, x // 53191])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавление пары чисел [x, x // 53191] в список R."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(-5, 0):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл для вывода последних пяти элементов списка R."
+          }
+        ],
+        [
+          {
+            "text": "print(*R[i])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод списка элементов с индексами с -5 по -1."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/7357-25-1e5e666f1df64159b45fcb1e2eec2f31?pvs=4"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/soxdfbC-IEGcG8IrwyP58J70d5ClI2tOUEZ8atj9tcojWhPaxr75J6NGZErIa0fEe8q1Q1iYtCco2evEVj1LLW51aHqhybMNaomRON6j2mT9ZhKLKo9NTWA1N9WPZdzwttbMe04LgQJjceYicHJfuZAXHQODa8XU1iS21RGzBDfAOKGkbx2UtDX67jZEG48ghZr-d1aG6Zuxg5RkmXrAQLYjAFG1Te3BPD_fGesRic6FuTNWpG6uwrs5FPdcxjeJW24IoaPNIqEmtTgLN6A4ZyPD7KWpIRaT0ArJmsO3xoH7HUgNFL9nd9izb3w_5Nqtb_VdRWQxGwby2WDl_qxRjA",
+      "file": "412-1.jpg"
+    }
+  ],
+  "task": 25,
+  "problem": "7357",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 25 ЕГЭ: разбор задачи 7357",
+  "title": "Задание 25 ЕГЭ: разбор задачи 7357",
+  "slug": "zadanie-25-ege-razbor-zadachi-7357",
+  "hidden": false
+}

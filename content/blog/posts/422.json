@@ -1,0 +1,178 @@
+{
+  "id": 422,
+  "rubric": "breakdown",
+  "description": "Сеть, в которой содержится узел с IP-адресом 207.0.A.167, задана маской сети 255.255.255.192, где A - некоторое допустимое для записи IP-адреса число. Определите количество…",
+  "date": "2024-04-12",
+  "source": "https://t.me/informatika_kege_itpy/422",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/422",
+      "thumb": {
+        "src": "/blog-media/422-1.jpg",
+        "width": 848,
+        "height": 336
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Сеть, в которой содержится узел с IP-адресом 207.0.A.167, задана маской сети "
+        },
+        {
+          "text": "255.255.255.192",
+          "href": "http://255.255.255.192/"
+        },
+        {
+          "text": ", где A - некоторое допустимое для записи IP-адреса число. Определите количество значений A, для которых для всех IP-адресов этой сети в двоичной записи IP-адреса суммарное количество нулей в левых двух байтах больше суммарного количества нулей в правых двух байтах."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе укажите только число."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "По условию задачи требуется перебрать значения допустимого для формирования IP-адреса числа A. Поскольку на каждое число A отводится 1 байт (8 бит), допустимые числа находятся в диапазоне от 0 до 255 (в двоичной системе счисления - от 00000000 до 11111111).",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\ncnt = 0\nfor A in range(0, 255+1):\n    net = ip_network(f'207.0.{A}.167/255.255.255.192', 0)\n    if all(f'{ip:b}'[:16].count('0') > f'{ip:b}'[16:].count('0') for ip in net):\n        cnt += 1\nprint(cnt)\n\n# Ответ: 37"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from ipaddress import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля ipaddress для работы с IP-адресами и сетями."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация переменной cnt для подсчета количества IP-адресов, удовлетворяющих условиям."
+          }
+        ],
+        [
+          {
+            "text": "for A in range(0, 255+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл для перебора значения A от 0 до 255 включительно."
+          }
+        ],
+        [
+          {
+            "text": "net = ip_network(f'207.0.{A}.167/255.255.255.192', 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание объекта сети net с динамически формируемым IP-адресом, маской подсети и коррекцией префикса."
+          }
+        ],
+        [
+          {
+            "text": "if all(f'{ip:b}'[:16].count('0') > f'{ip:b}'[16:].count('0') for ip in net):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: количество нулей в первой половине бинарного представления IP-адреса больше чем во второй половине для всех IP-адресов в сети."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличиваем счетчик, если IP-адрес удовлетворяет условию."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод количества IP-адресов в созданных сетях, соответствующих условиям."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/fQYrN52kvGHcP09w1Wp97R-DT9S4uXeX0k7u6ROFxbYqUzst4bYgx87Cgyv07B7FAzLYHQbUuO-rjL8ZRQJDIrzFmgOelvRESkpzirS4pis9qFeh0DjzsgHkxfYLi9VpfAZ6CC3GC94X0JhFC8ZE3jhEBfDZ1-bF8OzTx7hdJkbWqk51fsZkvf5VE38WrY7Wcf-5cuNkRp_T0nNNp5v5mDpdOsaN-0IkLzsTVj3Pd1k0jTZNoLs7pMKOINpw7p9847FH4Lc8wj0CXiGaMCCNUAjiV2sEda-z0NGkhhh7z1dXStqlujLeRFlN0T8ADaLK_UZ_bm-ee8qPVxCcdl0F7w",
+      "file": "422-1.jpg"
+    }
+  ],
+  "task": 13,
+  "problem": "11835",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "(Л. Шастин)"
+  },
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи 11835",
+  "title": "Задание 13 ЕГЭ: разбор задачи 11835",
+  "slug": "zadanie-13-ege-razbor-zadachi-11835",
+  "hidden": false
+}

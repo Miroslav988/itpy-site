@@ -1,0 +1,279 @@
+{
+  "id": 600,
+  "rubric": "breakdown",
+  "description": "1. Вычесть 1 2. Вычесть 2 3. Извлечь корень Третья команда — извлекает из числа квадратный корень, если число является квадратом любого числа. Сколько различных результатов можно…",
+  "date": "2024-05-14",
+  "source": "https://t.me/informatika_kege_itpy/600",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/600",
+      "thumb": {
+        "src": "/blog-media/600-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "1. Вычесть 1",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Вычесть 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. Извлечь корень"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Третья команда — извлекает из числа квадратный корень, если число является квадратом любого числа."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько различных результатов можно получить из числа 113 в ходе программы, содержащей 17 команд?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Обратите внимание, что просят найти кол-во команд!",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from functools import *\nmy_set = set()\n\n@lru_cache(None)\ndef F(x, c):\n    if c == 17:\n        my_set.add(x)\n        return 0\n    if x > 0:\n        if round(x**0.5) == x**0.5:\n            return F(x - 1, c + 1) + F(x - 2, c + 1) + F(x ** 0.5, c + 1)\n    return F(x-1, c+1) + F(x-2, c+1)\n\n\nF(113, 0)\nprint(len(my_set))\n\n# Ответ: 6537515"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from functools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля."
+          }
+        ],
+        [
+          {
+            "text": "my_set = set()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание пустого множества my_set, которое будет использоваться для хранения уникальных значений."
+          }
+        ],
+        [
+          {
+            "text": "@lru_cache(None)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Декоратор для кеширования результатов выполнения функции. None означает, что будет использоваться неограниченный кеш."
+          }
+        ],
+        [
+          {
+            "text": "def F(x, c):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление функции F, которая принимает два аргумента: x и c."
+          }
+        ],
+        [
+          {
+            "text": "if c == 17:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если c равно 17."
+          }
+        ],
+        [
+          {
+            "text": "my_set.add(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавление значения x в множество my_set."
+          }
+        ],
+        [
+          {
+            "text": "return 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Конец выполнения функции для определенного значения c."
+          }
+        ],
+        [
+          {
+            "text": "if x > 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если x больше нуля."
+          }
+        ],
+        [
+          {
+            "text": "if round(x**0.5) == x**0.5:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если квадратный корень числа x является целым числом."
+          }
+        ],
+        [
+          {
+            "text": "return F(x - 1, c + 1) + F(x - 2, c + 1) + F(x ** 0.5, c + 1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Рекурсивный вызов функции с различными параметрами в зависимости от условий."
+          }
+        ],
+        [
+          {
+            "text": "return F(x-1, c+1) + F(x-2, c+1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Рекурсивный вызов функции F с измененными параметрами."
+          }
+        ],
+        [
+          {
+            "text": "F(113, 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции F с начальными значениями."
+          }
+        ],
+        [
+          {
+            "text": "print(len(my_set))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод количества уникальных элементов в множестве"
+          },
+          {
+            "text": ".",
+            "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Аудио мини-комментарий к коду решения оставлю в комментариях ",
+          "bold": true
+        },
+        {
+          "text": "👇👇👇"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/lIr45_bFDrSVr0uTfUVDaBhl6eR4YJiIcxhaTZM2wGZNE_B8fittBWhGndwk4wQVarPyTPq8kAbNrcYxchyXVt7z9FAmbBfuXQFMUSoylCYLlVw57tZoOKWyiCgv_qlNdMs501QxxytftyQW8K8lWNSr70C1aV6bXQRmD57zqR9ZV-QmlpZCujbGJcCFPTSsc-WbGgWSGY4s02-I18VzdHUHqMirl84mZYlQ4L5zEFKTelg1crP48TDGnAyZ7LMtG_hHFtZ_yTZJe1KQ1B8WB6Bgnkhc1BEUzEFkKNmPnDBF5Cce4Lv8cUs3-QuCSTZW7sLwmdGiGMk9AYB3W5sp1Q",
+      "file": "600-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "5091",
+  "collection": "К. Поляков",
+  "meta": {
+    "source": "А. Брейк",
+    "level": "Сложный"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 5091",
+  "title": "Задание 23 ЕГЭ: разбор задачи 5091",
+  "slug": "zadanie-23-ege-razbor-zadachi-5091",
+  "hidden": false
+}

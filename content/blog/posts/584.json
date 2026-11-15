@@ -1,0 +1,81 @@
+{
+  "id": 584,
+  "rubric": "python",
+  "description": "Аннотация типов - это специальная возможность в Python, которая позволяет указывать типы данных переменных, функций и методов в коде. Аннотации типов не влияют на выполнение…",
+  "date": "2024-05-11",
+  "source": "https://t.me/informatika_kege_itpy/584",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/584",
+      "thumb": {
+        "src": "/blog-media/584-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Аннотация типов - это специальная возможность в Python, которая позволяет указывать типы данных переменных, функций и методов в коде. Аннотации типов не влияют на выполнение программы и не обязательны для работы, но могут помочь улучшить читаемость кода, упростить отладку и сделать его более надежным."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "У аннотаций следующий варианты синтаксиса"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "имя_переменной : тип_данных",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. "
+        },
+        {
+          "text": "имя_переменной : тип_данных = значение",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. "
+        },
+        {
+          "text": "def my_function(arg: тип_данных) -> тип_возвращаемого_значения",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Хотя Python является динамически типизированным языком, аннотации типов могут быть полезными при разработке больших проектов или при работе в команде. Кроме того, аннотации типов могут быть использованы сторонними инструментами для статического анализа кода и автоматической проверки типов данных."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/P598b84ZtUKzSdR1vrdaTwNH0tfQYymew2FDt1ubV534vFKtoOJZ1yxrAk3l-Ai8G8VEVVLSMQYdpte6jd4ywN5Zu0qwI3Kq9RkSIFqC-cj8iZSEWeJUxfBPny0wgj4MhMPM_BYYfir55iRq51ch8w6GS5cZu5kKqRN3HRYgx04bAjjIgC2AUqK6VtiO8UT_EA3uOlV5Z-u_xlVzJObYRaC79Q4qUtf4cJdXWR2sa86v8NC3mIswIHxTevlGufgwDNkOx4iN4zppc41-O9_IomD3VDdUoySgdjz3sAPygWEkXBqxXqQTW2TPVEZp8bkDa4tKV9isHej8t2V42ueOpw",
+      "file": "584-1.jpg"
+    }
+  ],
+  "baseTitle": "Аннотация типов в Python",
+  "title": "Аннотация типов в Python",
+  "slug": "annotatsiya-tipov-v-python",
+  "hidden": false
+}

@@ -1,0 +1,237 @@
+{
+  "id": 772,
+  "rubric": "python",
+  "description": "Строки в Python – это один из самых важных типов данных. Они позволяют работать с текстовой информацией, и знание методов работы со строками существенно упростит решение задач на…",
+  "date": "2024-07-28",
+  "source": "https://t.me/informatika_kege_itpy/772",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Строки в Python – это один из самых важных типов данных. Они позволяют работать с текстовой информацией, и знание методов работы со строками существенно упростит решение задач на ЕГЭ."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "."
+          },
+          {
+            "text": "strip()",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Метод strip() удаляет пробелы (или другие символы) из начала и конца строки. Это полезно для очистки пользовательского ввода."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "text = \"  Привет, мир!  \"\ncleaned_text = text.strip()\nprint(cleaned_text) # \"Привет, мир!\""
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "."
+          },
+          {
+            "text": "lower() и .upper()",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Эти методы позволяют изменять регистр строки. lower() преобразует строку в нижний регистр, а upper() – в верхний."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "text = \"ПрIvEt\"\nprint(text.lower()) # \"привет\"\nprint(text.upper()) # \"ПРИВЕТ\""
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "."
+          },
+          {
+            "text": "replace()",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Метод replace(old, new, count) заменяет подстроку old на new в строке count раз."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "text = \"Я люблю Python!\"\nnew_text = text.replace(\"Python\", \"программирование\")\nprint(new_text) # \"Я люблю программирование!\""
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "."
+          },
+          {
+            "text": "split()",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Метод split(separator) разделяет строку на части по указанному разделителю. Если разделитель не указан, используется пробел."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "text = \"яблоко груша банан\"\nfruits = text.split() # по умолчанию разделяет по пробелам\nprint(fruits) # ['яблоко', 'груша', 'банан']"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 5,
+      "items": [
+        [
+          {
+            "text": "."
+          },
+          {
+            "text": "join()",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Метод join(iterable) соединяет элементы списка (или другого итерируемого объекта) в строку с указанным разделителем."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "fruits = ['яблоко', 'груша', 'банан']\nresult = ', '.join(fruits)\nprint(result) # \"яблоко, груша, банан\""
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 6,
+      "items": [
+        [
+          {
+            "text": "."
+          },
+          {
+            "text": "find()",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Метод find(substring) ищет подстроку в строке и возвращает индекс, с которого начинается первая встреча. Если подстрока не найдена, возвращает -1."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "text = \"Привет, мир!\"\nindex = text.find(\"мир\")\nprint(index) # 8"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 7,
+      "items": [
+        [
+          {
+            "text": "."
+          },
+          {
+            "text": "count()",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Метод count(substring) возвращает количество вхождений подстроки в строку."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "text = \"яблоко, груша, яблоко\"\ncount = text.count(\"яблоко\")\nprint(count) # 2"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 8,
+      "items": [
+        [
+          {
+            "text": "."
+          },
+          {
+            "text": "startswith() и .endswith()",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Эти методы проверяют, начинается ли строка с указанной подстроки или заканчивается ли ею."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "text = \"Привет, мир!\"\nprint(text.startswith(\"Привет\")) # True\nprint(text.endswith(\"мир!\"))   # True"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Практикуйтесь в использовании этих методов, чтобы запомнить синтаксис и логику работы с ними. Удачи в подготовке!"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Все методы строк в Python, которые понадобятся на ЕГЭ",
+  "title": "Все методы строк в Python, которые понадобятся на ЕГЭ",
+  "slug": "vse-metody-strok-v-python-kotorye-ponadobyatsya-na-ege",
+  "hidden": false
+}

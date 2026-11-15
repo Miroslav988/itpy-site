@@ -1,0 +1,52 @@
+{
+  "id": 331,
+  "rubric": "breakdown",
+  "description": "Интересная задача 25 номера с масками и поиском делителей, то есть объединяет в себе оба типа задач. Код решения:",
+  "date": "2024-01-16",
+  "source": "https://t.me/informatika_kege_itpy/331",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/331",
+      "thumb": {
+        "src": "/blog-media/331-1.jpg",
+        "width": 848,
+        "height": 800
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/6210-25-967ee6f2e8804ca09ea4b6301d807746?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Интересная задача 25 номера с масками и поиском делителей, то есть объединяет в себе оба типа задач. Код решения:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from fnmatch import *\n\n\ndef divisors(num):\n    div = []\n    for j in range(1, int(num**0.5)+1):\n        if num % j == 0:\n            div.append(j)\n            div.append(num // j)\n    return sorted(set(div))\n\n\nfor x in range(53, 10**7, 53):  \n    if fnmatch(str(x), '*2?2*'):  \n        if str(x) == str(x)[::-1]:  \n            d = divisors(x)\n            if len(d) > 30:  \n                print(x, sum(d))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/jy31FNql_jd5hnuvfFDpe9PtoYE18P-5iNZ5sjRffRefs4PrMq-3gYaWF8AKTItRjCkUxpOV4tufBNXqSnUDO_XCkGvd7zwFLTbMkEyTArqk7Iqar8XwKuNoF50NKg3-3SlAtBks5FOzRlnZpOSeQkTu4g9GzkiLFWhraocBqqdf4q-Yzr2qo3cWMBKFsWMMyQv7vHIBGcGTd3wusT64X_dgKROSpVEFJdRenWJHljum_2ZoCxKZkKL7FZTbOmXOv3DGR--x2jjZHRVqQr0BAIx_XOD9zWSx7ooHf_75SR2lgmCtnYXiw5-_1fnPpq8wiO8flzYg4fmVmh0E56cd4Q",
+      "file": "331-1.jpg"
+    }
+  ],
+  "task": 25,
+  "problem": "6210",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 25 ЕГЭ: разбор задачи 6210",
+  "title": "Задание 25 ЕГЭ: разбор задачи 6210",
+  "slug": "zadanie-25-ege-razbor-zadachi-6210",
+  "hidden": false
+}

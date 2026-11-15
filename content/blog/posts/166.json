@@ -1,0 +1,101 @@
+{
+  "id": 166,
+  "rubric": "useful",
+  "description": "Какой ответ может появиться на экране консоли? Выбирай верный emoji:",
+  "date": "2023-06-24",
+  "source": "https://t.me/informatika_kege_itpy/166",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/166",
+      "thumb": {
+        "src": "/blog-media/166-1.jpg",
+        "width": 848,
+        "height": 448
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Какой ответ может появиться на экране консоли?"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Выбирай верный"
+        },
+        {
+          "text": " emoji",
+          "italic": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "['2', '2', '4', '2'] ['1', '1', '3', '1', '1']",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "['2', '4'] ['1', '3']",
+          "code": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "['1', '3'] ['2', '4']",
+          "code": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "['1', '1', '3', '1', '1'] ['2', '2', '4', '2']",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Верным ответом будет:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "['2', '4'] ['1', '3']"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Получается, что эта функция может помочь сумму четных или нечетных чисел или проверять аналогические условия с цифрами и буквами строки."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/YjueuwFf1MgIrJk3e2fd_CEEdrQGYPjcbO9ejZ7Gc2GfWwzMjEnhg1sfwEB3xG_8Yc3FcalUyy80f2iOMnybVuZWvKP_PUGTzuQe-bsJh5loK5maE95gaalu4QBon3jeK9yLqvN96AXQZATVvar8D2dqZS2_JOb1_AKviqyPhjTwYK9OkCjcnbU9wVamyz4jd1q-ShnBc5cF54KQ4c46qbqwjU4BU2mzQ6XJXm4sPNJFbC58p5nZfGuB4epCQZSq5zhD_SfxVCHoXZHChpLb-kXPX36ZXzyr4_agnDd2VuiPW-sBvncUSUfCyIrq8zf6lOTFc04rC6g3l_yDCkCJkQ",
+      "file": "166-1.jpg"
+    }
+  ],
+  "baseTitle": "Интересный код, который мог пригодиться на экзамене",
+  "title": "Интересный код, который мог пригодиться на экзамене",
+  "slug": "interesnyy-kod-kotoryy-mog-prigoditsya-na-ekzamene",
+  "hidden": false
+}

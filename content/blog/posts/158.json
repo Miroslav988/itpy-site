@@ -1,0 +1,60 @@
+{
+  "id": 158,
+  "rubric": "useful",
+  "description": "Спасибо, всем за активность 🙏 Это было очень круто 🔥",
+  "date": "2023-06-17",
+  "source": "https://t.me/informatika_kege_itpy/158",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/158",
+      "thumb": {
+        "src": "/blog-media/158-1.jpg",
+        "width": 848,
+        "height": 320
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть запись. Часть 1.",
+          "href": "https://youtu.be/PxBGZpD-lnw"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть запись. Часть 2.",
+          "href": "https://youtu.be/i8bliD3-2Q8"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Спасибо, всем за активность 🙏"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Это было очень круто 🔥"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/agINcoD-yov8l-Kd1qxv8VT0T0mqjIivFjC31VOWa7kMOmIUCm7MREQIMZpGbSr7VOw2LwzbgPFxMeB8h9qL_UtcW2ICB6TWJeBz3Zu3Lgd5QzkT8xXKD2q-qr9qPTIWBm9YomDti-NrSwFmbVunhIFMSMI1K-QNUYohpVm-vXfYnBQoZ5mW4rvrV713vw6RhyH0nzGmHOtO2LRn1RxD_QHV8Sv9zMzV6iJCIDZoM9wFeXUXmwGrFqKNAvLpfNeN4nUfg3IqMrm7NVSG8XJKQ0Z-tuo7IM7vMaQtCNTDybh65jjXdJaTJkt7XgXhwfKVHSKxrMVK392I-WD6-o2vKw",
+      "file": "158-1.jpg"
+    }
+  ],
+  "baseTitle": "Запись с сегодняшнего стрима, повторение первых 25-ти номеров",
+  "title": "Запись с сегодняшнего стрима, повторение первых 25-ти номеров",
+  "slug": "zapis-s-segodnyashnego-strima-povtorenie-pervyh-25-ti",
+  "hidden": false
+}

@@ -1,0 +1,242 @@
+{
+  "id": 493,
+  "rubric": "breakdown",
+  "description": "Алгоритм принимает на вход натуральное число N и строит новое число R следующим образом: 1. Создается двоичная запись числа N. 2. Затем запись обрабатывается согласно следующим…",
+  "date": "2024-04-26",
+  "source": "https://t.me/informatika_kege_itpy/493",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/493",
+      "thumb": {
+        "src": "/blog-media/493-1.jpg",
+        "width": 848,
+        "height": 640
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Алгоритм принимает на вход натуральное число N и строит новое число R следующим образом:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. Создается двоичная запись числа N."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Затем запись обрабатывается согласно следующим правилам:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "а) Если N делится на 11, то к двоичной записи N "
+        },
+        {
+          "text": "справа добавляются все нули этой записи",
+          "bold": true
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "б) Если N не делится на 11, то к двоичной записи N "
+        },
+        {
+          "text": "слева добавляются все единицы этой записи",
+          "bold": true
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. Полученная запись представляет собой двоичную запись числа R."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите минимальное число N, после обработки которого алгоритмом получается число R, кратное 227."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "for n in range(1, 1000):\n    s = f'{n:b}'\n    if n % 11 == 0:\n        s += s.count('0') * '0'\n    else:\n        s = s.count('1') * '1' + s\n    r = int(s, 2)\n    if r % 227 == 0:\n        print(n)\n        break\n\nОтвет: 59"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "for n in range(1, 1000):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, в котором переменная n перебирает значения от 1 до 999 для рассмотрения чисел."
+          }
+        ],
+        [
+          {
+            "text": "s = f'{n:b}'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразование числа n в двоичную строку и сохранение ее в переменной s."
+          }
+        ],
+        [
+          {
+            "text": "if n % 11 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, делится ли число n на 11 без остатка."
+          }
+        ],
+        [
+          {
+            "text": "s += s.count('0') * '0'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если число n делится на 11, то в строку s добавляется количество нулей, равное количеству вхождений символа '0' в строку s."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В случае, если число n не делится на 11."
+          }
+        ],
+        [
+          {
+            "text": "s = s.count('1') * '1' + s",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "К строке s добавляется количество единиц, равное количеству вхождений символа '1' в строке s, сдвигая все символы вправо."
+          }
+        ],
+        [
+          {
+            "text": "r = int(s, 2)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразование двоичной строки s в целое число в переменной r."
+          }
+        ],
+        [
+          {
+            "text": "if r % 227 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, делится ли число r на 227 без остатка."
+          }
+        ],
+        [
+          {
+            "text": "print(n)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод числа n, которое удовлетворяет условиям задачи."
+          }
+        ],
+        [
+          {
+            "text": "break",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Прерывание цикла после вывода первого числа n, удовлетворяющего условиям, так как используется "
+          },
+          {
+            "text": "break.",
+            "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/cesVzl0bNc9fe02SdH0GWOabPu39ii-ToRtkWKyhDKz7b6OXaJfjqhGFaggv2ip0PXUOKzfszS7Xy7Mbe-gBkc6swxJitC7dOz9iKem8YQUfGsWPWJWW2P2yxgRkk6HNQrfRypxq_w-nlNSZGZUDFYqfZuKjzKZbxqoFNlAGNGMKPusK_2bnjmdMmBRV9whL4gF4uWuEbvdzdrvmiaCsvNP-3tW2UXxSYmMFoCavGFlibsxikBvPKOVmWj_KISLV1V-FXZcplki-PH3rKoJLPrvyxafmUbgXr4wGbDsV9bezgXK2cLJYe7spK7JasRj418jJRR7fNy0BJDDp27eujg",
+      "file": "493-1.jpg"
+    }
+  ],
+  "task": 5,
+  "problem": "7309",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М. Шагитов",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 5 ЕГЭ: разбор задачи 7309",
+  "title": "Задание 5 ЕГЭ: разбор задачи 7309",
+  "slug": "zadanie-5-ege-razbor-zadachi-7309",
+  "hidden": false
+}

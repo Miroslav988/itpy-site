@@ -1,0 +1,176 @@
+{
+  "id": 743,
+  "rubric": "breakdown",
+  "description": "Значение арифметического выражения 7**91 + 7**160 – х, где х – целое положительное число, не превышающее 2030, записали в 7-ричной системе счисления. Определите наибольшее…",
+  "date": "2024-06-18",
+  "source": "https://t.me/informatika_kege_itpy/743",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/743",
+      "thumb": {
+        "src": "/blog-media/743-1.jpg",
+        "width": 848,
+        "height": 560
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Значение арифметического выражения 7**91 + 7**160 – х, где х – целое положительное число, не превышающее 2030, записали в 7-ричной системе счисления. Определите наибольшее значение х, при котором в 7-ричной записи числа, являющегося значением данного арифметического выражения, содержится ровно 70 нулей."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "for x in range(2030+1):\n    n = 7**91 + 7**160 - x\n    M = []\n    while n > 0:\n        M.append(n % 7)\n        n //= 7\n    M.reverse()\n    if M.count(0) == 70:\n        print(x)\n\n# Ответ: 2029"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "for x in range(2030+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который перебирает числа от 0 до 2030 включительно и присваивает каждое число переменной x."
+          }
+        ],
+        [
+          {
+            "text": "n = 7**91 + 7**160 - x",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисление значения переменной n как суммы двух степеней числа 7 и значения x."
+          }
+        ],
+        [
+          {
+            "text": "M = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация списка M, который будет содержать цифры полученного числа n в семеричной системе счисления."
+          }
+        ],
+        [
+          {
+            "text": "while n > 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл while, который будет выполняться, пока значение n больше нуля."
+          }
+        ],
+        [
+          {
+            "text": "M.append(n % 7)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавление остатка от деления текущего значения n на 7 в список M."
+          }
+        ],
+        [
+          {
+            "text": "n //= 7",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Целочисленное деление n на 7 для перехода к следующей цифре в семеричной записи."
+          }
+        ],
+        [
+          {
+            "text": "M.reverse()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разворот списка M, чтобы получить корректный порядок цифр числа в семеричной системе."
+          }
+        ],
+        [
+          {
+            "text": "if M.count(0) == 70:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, содержит ли список M ровно 70 нулей."
+          }
+        ],
+        [
+          {
+            "text": "print(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод числа x, которое удовлетворяет условию с результатом семеричного представления числа n содержащего 70 нулей."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ayb2yvAjdU9Rix3qreglur0z1VpubhX9Nv3j-I1NigsHb4DE7BQBdxZ4-XpT71WAg44SMBUxnu2JAPwle6O9DCXoLtm0aeGGHGbv9aR5zO6Nl6lWsZulIwi4luet00YiAj9ODyZxaSMuRekcp4p-13qU7FqHOCuGOvmQCQBVMN-FvQNai0K-WztuvzoTodqIKWTzRwX-XGUNlqOqTt2GkIiiS6LtI7pWGnX7G00lZEtooLlsjd3fvUySmPIAF6LimQXttEOrwfWyKQqRcGezDOjj3kW-LpCKW35-xWQlK7-UBU6rW7h7DJRA-EMKvx477QlRi222Ucbz2n5vsK7bzQ",
+      "file": "743-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "17555",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 08.06.24",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 17555",
+  "title": "Задание 14 ЕГЭ: разбор задачи 17555",
+  "slug": "zadanie-14-ege-razbor-zadachi-17555",
+  "hidden": false
+}

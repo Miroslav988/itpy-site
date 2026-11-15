@@ -1,0 +1,69 @@
+{
+  "id": 368,
+  "rubric": "breakdown",
+  "description": "Задачка среднего уровня с сайта kompege.ru, основная сложность которой состоит в переборе системы счисления",
+  "date": "2024-02-12",
+  "source": "https://t.me/informatika_kege_itpy/368",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/368",
+      "thumb": {
+        "src": "/blog-media/368-1.jpg",
+        "width": 848,
+        "height": 368
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/8425-14-0a5c605c6d2a4192b135757800465f48?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Задачка среднего уровня с сайта "
+        },
+        {
+          "text": "kompege.ru,",
+          "href": "https://kompege.ru/"
+        },
+        {
+          "text": " основная сложность которой состоит в переборе системы "
+        },
+        {
+          "text": "счисления",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "ALPHABET = sorted('0123456789AQWERTYUIOPSDFGHJKLZXCVBNM')\nfor p in range(5, 36+1):\n    for x in ALPHABET[:p]:\n        for y in ALPHABET[:p]:\n            if int('32', p) * int('14', p) == int(f'{x}{y}2', p):\n                print(int(f'{y}{x}', p))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/VqEnzBItcKAqq2196bry-0RyL323SXCo_OVeXHwTrtMMKRdzrjmjZj9Ju_3SKHeY_ImVP23Pf0mIigR2QC7DHr6-T5Hw6wgZ7MyyG1rGdek4qAKv7lTxteJq9f5ZjBp_5H5CsEvm7zi9OFvuli_EHLat5l3uJRTmpygTN8RGtURI8foUHEM3YhRyZ9NQ8lqbmZAVaiGbhimAlUig16P2CH20PA3T1Xdp_Ce2ydeeYJg4Gnl4TfkQbjB9Gko6sN6YF2UznVjVhVFMmowQJHyEUd51jr4ADOteCFOkJg3iDCnLgAdTa_cFg8244vWoYFT1I_lg8baiI5tN3d5xUPkoqg",
+      "file": "368-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "8425",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 8425",
+  "title": "Задание 14 ЕГЭ: разбор задачи 8425",
+  "slug": "zadanie-14-ege-razbor-zadachi-8425",
+  "hidden": false
+}

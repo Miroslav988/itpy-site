@@ -1,0 +1,183 @@
+{
+  "id": 1118,
+  "rubric": "breakdown",
+  "description": "Текстовый файл состоит из символов, обозначающих буквы латинского алфавита A, В и С и цифры 1 и 8. Определите в прилагаемом файле максимальную длину подстроки, которая начинается…",
+  "date": "2025-06-21",
+  "source": "https://t.me/informatika_kege_itpy/1118",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1118-1.jpg",
+      "width": 800,
+      "height": 448,
+      "alt": "Задание 24 ЕГЭ: разбор задачи 14512"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Текстовый файл состоит из символов, обозначающих буквы латинского алфавита A, В и С и цифры 1 и 8."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите в прилагаемом файле максимальную длину подстроки, которая начинается и заканчивается на разные цифры, включает в себя равное количество букв B и C и не содержит других цифр, кроме первой и последней."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Для выполнения этого задания следует написать программу."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('0. files/24.txt').readline()\ns = s.replace('1', '1 1').replace('8', '8 8')\nmaxi = 0\nfor x in s.split():\n    if x.count('1') == 1:\n        if x.count('B') == x.count('C'):\n            maxi = max(maxi, len(x))\nprint(maxi)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 1315",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('0. files/24.txt').readline()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открываем файл '0. files/24.txt' и читаем первую строку, сохраняя её в переменную s"
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('1', '1 1').replace('8', '8 8')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяем каждый символ '1' на '1 1' и каждый символ '8' на '8 8', удваивая их и добавляя пробелы между ними"
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем переменную maxi для хранения максимальной длины подходящей строки"
+          }
+        ],
+        [
+          {
+            "text": "for x in s.split():",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разбиваем строку s на список подстрок по пробелам и начинаем перебирать каждую подстроку в цикле"
+          }
+        ],
+        [
+          {
+            "text": "if x.count('1') == 1:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что текущая подстрока x содержит ровно один символ '1'"
+          }
+        ],
+        [
+          {
+            "text": "if x.count('B') == x.count('C'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что количество символов 'B' равно количеству символов 'C' в текущей подстроке"
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(maxi, len(x))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если оба условия выше выполнены, обновляем maxi, сохраняя максимальное значение между текущим maxi и длиной подстроки x"
+          }
+        ],
+        [
+          {
+            "text": "print(maxi)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим максимальную длину подходящей подстроки, найденную в результате работы программы"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ff-34x8GDQTtP4rBuDGIAwsSfz9OfkM-J71ZTb_G0V_wCfgVAMuiiGal9R37CSwhHmCUxW3sRfqXozGnvQgD0KXrcW6HCkK8mf8vYq4z3rN5yKh093h-IsjcoswXSZ08VvU7LvsSTP8nSTCU4aVvn41h6RaEekdZxoYJM3AVeof2Yj9QC128ll5xdt5wxj1Msu-9CuEPUUwQNYdkIegh7FWb7Oxkz9Lz15fclaa7CbPTiA_3EdD75Xa8vXMHyuFh5yBzF5MZMXRefJFyPZLIWRYs8703geGBrovC3usRj8DcCwOLyxqan97RTkiuHYs9CpKv2Bhi0O_V4R2-rTRpBw.jpg",
+      "file": "1118-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "14512",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Л.Шастин",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 14512",
+  "title": "Задание 24 ЕГЭ: разбор задачи 14512",
+  "slug": "zadanie-24-ege-razbor-zadachi-14512",
+  "hidden": false
+}

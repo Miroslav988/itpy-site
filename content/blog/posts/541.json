@@ -1,0 +1,44 @@
+{
+  "id": 541,
+  "rubric": "python",
+  "description": "Это важная задача, которую можно решить различными способами. Один из подходов - использовать цикл для объединения элементов из разных списков в один новый список.",
+  "date": "2024-05-04",
+  "source": "https://t.me/informatika_kege_itpy/541",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/541",
+      "thumb": {
+        "src": "/blog-media/541-1.jpg",
+        "width": 848,
+        "height": 496
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Это важная задача, которую можно решить различными способами. Один из подходов - использовать цикл для объединения элементов из разных списков в один новый список."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Однако, если хочется упростить этот процесс и записать это все в одну строку, можно воспользоваться методом sum()."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/uJeWT-68KZjPtNg1uj3SW-Sa4NsPL0iexi6-uhwd4uc9CCGpQD5LaCTXhEoB5asw0UNNZqblBS_IjmVPmcd-HNShds4RLylQzfCOTJjex8yaFkTQJtgAddaNj2_3axi-8dlTU_ax4xJu7vNpnADZ8gwp1fPzojPBUjXqpXT4QOxFS-GIiDlnoSNqdFwSrRRjfXT86F_Qlm69VTEbW_4N1yqzusphGi59L_q9HzQW0S04-0NnqPZjDtVgQ8q947YW-UtOJSHixSyzQdZKoV-7hlsPGBHWPNY-FKfh5dmTxblrgLaFfGYMko326KJOcmkDCPXmZ9bF0DMxCzCbPiqrZw",
+      "file": "541-1.jpg"
+    }
+  ],
+  "baseTitle": "Объединение списков в один",
+  "title": "Объединение списков в один",
+  "slug": "obedinenie-spiskov-v-odin",
+  "hidden": false
+}

@@ -1,0 +1,36 @@
+{
+  "id": 706,
+  "rubric": "breakdown",
+  "description": "Задание 8 ЕГЭ: разбор задачи",
+  "date": "2024-06-08",
+  "source": "https://t.me/informatika_kege_itpy/706",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/706-1.jpg",
+      "width": 800,
+      "height": 303,
+      "alt": "Задание 8 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\ncnt = 0\nfor p in product('0123456789AB', repeat=6):\n    num = ''.join(p)\n    if num[0] != '0' and num.count('7') == 1:\n        if len([x for x in num if int(x, 12) > 9]) <= 3:\n            cnt += 1\nprint(cnt)\n\n# Ответ: 888669"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Zb_ZiRjb8Aok6UyC2LQYvkB7f8yKBjLBVvVeA2XCZohlO1XQcOPMN-NnD-xyIqLPSrCR7j89vYenJgUTOk07Mf9M8eMJNnR0RvUuc7Sdfh0ZJW0UxFHQw0ctU7Er3168Np8ZoG_DSkKzHvU2JjbAlL4vQ4V3jC9u_fy02RxIf3C_OizSVGVVoqSywA6dXuxojSBWRmWnIo5z7oiGe1tstsGrePqmvmKr0cMhZGnWo8KI2SEtVs-z5iYLclcLENHfhouMSwICRiKmNdfGyPBmTagq1cbKdTG7-IdefJuQ0SOzw6haOm5x8JxnxlGpLkHYKYA5Sa3ycFWmuJz_ROYInA.jpg",
+      "file": "706-1.jpg"
+    }
+  ],
+  "task": 8,
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи",
+  "title": "Задание 8 ЕГЭ: разбор задачи",
+  "slug": "zadanie-8-ege-razbor-zadachi-706",
+  "hidden": true
+}

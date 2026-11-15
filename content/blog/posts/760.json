@@ -1,0 +1,36 @@
+{
+  "id": 760,
+  "rubric": "breakdown",
+  "description": "Задание 7 ЕГЭ: разбор задачи",
+  "date": "2024-07-04",
+  "source": "https://t.me/informatika_kege_itpy/760",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/760-1.jpg",
+      "width": 800,
+      "height": 604,
+      "alt": "Задание 7 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "a = 2  # – Стерео\nb = 72000  # – Частота дискретизации\n# c = ? – Битовое разрешение\nt = 28 * 60 + 40  # – Общая длительность 17 треков\n\nbit_all = 14_680_064 * 380\nprint(bit_all)  # 5578424320 – бит\n\nbit = bit_all - 17 * 308 * 2**13  # – Кбайт перевожу в бит (для 17 треков)\n\nc = bit / (a * b * t)\nprint(c)  # 22.34952..."
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/MByS66HFrRQ1dd9QH47ICjIFAQbuDgnhwEg12Nlo3bKJDu1p2OpEZnE3eKmF2hVqHutuYizO7XvbROLI9mo9xRYHUn2MELXuoXd0ln0HI3TF5tQwT4kCu4wChklFmLhgttEUz0smXF0mc9lQCTFJ8jh4iMvsoxyn1Sa_rjY4m5CHyw0KKdpjsimsVBBDIWm4uHZMWPOlfFvy1Zi8E6S6M-lJ8cfqjT6PX5M49bdcznoBttcqPSUVCdDsgGHp4XRwg40rBsj3_T6HuiFgDDOgXKuxuyVdzWAL9OGWveje_wANsxp5vMfEPq5KOlpqpPJPI3-dxMWaHULHUnvhYD_mwg.jpg",
+      "file": "760-1.jpg"
+    }
+  ],
+  "task": 7,
+  "baseTitle": "Задание 7 ЕГЭ: разбор задачи",
+  "title": "Задание 7 ЕГЭ: разбор задачи (4 июля 2024)",
+  "slug": "zadanie-7-ege-razbor-zadachi-4-iyulya-2024",
+  "hidden": false
+}

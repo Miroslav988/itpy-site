@@ -1,0 +1,168 @@
+{
+  "id": 416,
+  "rubric": "breakdown",
+  "description": "По заданным IP-адресу узла и маске определите адрес сети. IP-адрес узла: 129.131.130.64 Маска: 255.255.192.0",
+  "date": "2024-04-05",
+  "source": "https://t.me/informatika_kege_itpy/416",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/416",
+      "thumb": {
+        "src": "/blog-media/416-1.jpg",
+        "width": 848,
+        "height": 576
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "По заданным IP-адресу узла и маске определите адрес сети."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "IP-адрес узла: "
+        },
+        {
+          "text": "129.131.130.64",
+          "href": "http://129.131.130.64/"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Маска: "
+        },
+        {
+          "text": "255.255.192.0",
+          "href": "http://255.255.192.0/"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Простейшая задача 13 номера с которой стоит начать изучение этих задач. Главная формула:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Адрес сети = Адрес узла & Маска сети"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "где & - это операция побитовой конъюнкции."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *  \nnet = ip_network('129.131.130.64/255.255.192.0', 0)\nprint(net)  # 129.131.128.0/18"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду решения"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from ipaddress import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля ipaddress для работы с сетевыми адресами."
+          }
+        ],
+        [
+          {
+            "text": "net = ip_network('129.131.130.64/255.255.192.0', 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание объекта сети net с заданным IP-адресом и маской подсети, причем последний аргумент указывает на коррекцию префикса."
+          }
+        ],
+        [
+          {
+            "text": "print(net)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод объекта сети net."
+          }
+        ],
+        [
+          {
+            "text": "# 129.131.128.0/18",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Комментарий, указывающий на правильность адресации объекта сети: IP-адрес "
+          },
+          {
+            "text": "129.131.128.0",
+            "href": "http://129.131.128.0/"
+          },
+          {
+            "text": " с маской "
+          },
+          {
+            "text": "/18.",
+            "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/nxTapGo7Z06MFik6aLS3ZwkzyiFHfT4YdssEq1_aX9WujoAA_IQOo_Pp_LSXPu21lv0w_t3fOgL_VTw4n00d3BTxIN-OkQgxG2SHEo2uhx4Z-S7H---cLTjfiS6igRHWLZJwGRgh8E1v7ylc8zUUFDo6Y8p43hZUwpX_5p-qZkoy-6wM8Y3FKuaa0rzAGIxZZXkZRhZqiT1I4TWUbkvriW2wCLS_0Gbme2JZupLY2g7igzRcQFWCLmGjWzHyHmPOKhFSfsJfj6f-vjV65_uzl9N9NgVY6SJQX9Iwoz_JIO1BTsJDe7ZrizlpW_-WjFFbt6P005ScBxcH8_1vQZul6A",
+      "file": "416-1.jpg"
+    }
+  ],
+  "task": 13,
+  "problem": "5911",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи 5911",
+  "title": "Задание 13 ЕГЭ: разбор задачи 5911",
+  "slug": "zadanie-13-ege-razbor-zadachi-5911",
+  "hidden": false
+}

@@ -11,8 +11,7 @@
     "start": "next start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint .",
-    "blog:import": "node scripts/import-dzen.mjs",
-    "blog:reshape": "node scripts/reshape-blog.mjs"
+    "blog:sync": "node scripts/telegram/sync.mjs"
   },
   "dependencies": {
     "next": "16.4.4",

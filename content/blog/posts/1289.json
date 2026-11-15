@@ -1,0 +1,123 @@
+{
+  "id": 1289,
+  "rubric": "python",
+  "description": "Если не хочется каждый раз вспоминать всё с нуля, можно держать под рукой вот такой шаблон.",
+  "date": "2026-04-06",
+  "source": "https://t.me/informatika_kege_itpy/1289",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Если не хочется каждый раз вспоминать всё с нуля, можно держать под рукой вот такой шаблон.",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from turtle import *\n\ntracer(0)\nk = 20\n\nleft(90)\nup()\ngoto(0, 0)\ndown()\n\nfor _ in range(10):\n    fd(12 * k)\n    rt(90)\n    fd(6 * k)\n    rt(90)\n\nup()\nfor x in range(-30, 31):\n    for y in range(-30, 31):\n        goto(x * k, y * k)\n        dot(3, 'red')\n\ndone()"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Что здесь важно"
+    },
+    {
+      "type": "code",
+      "text": "k = 20"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Это масштаб. Так рисунок получается крупнее и его удобнее смотреть."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "left(90)"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Иногда в условии исполнитель стартует вверх, а не вправо."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "up()\ndown()"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Позволяют управлять моментом, когда мы рисуем линию, а когда просто перемещаемся."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "x * k\ny * k"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Так удобно переносить целочисленные координаты на экран."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "dot(3, 'red')"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Ставим точки сетки и смотрим, какие попали внутрь фигуры, на границу или снаружи."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Главная мысль"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "быстро построить траекторию"
+          }
+        ],
+        [
+          {
+            "text": "увидеть форму фигуры"
+          }
+        ],
+        [
+          {
+            "text": "наглядно отметить точки"
+          }
+        ],
+        [
+          {
+            "text": "меньше ошибаться в подсчёте"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Мини-шпаргалка для 6 номера с Turtle",
+  "title": "Мини-шпаргалка для 6 номера с Turtle",
+  "slug": "mini-shpargalka-dlya-6-nomera-s-turtle",
+  "hidden": false
+}

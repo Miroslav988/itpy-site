@@ -1,0 +1,333 @@
+{
+  "id": 1048,
+  "rubric": "breakdown",
+  "description": "В файле электронной таблицы в каждой строке содержатся шесть натуральных чисел. Определите количество строк таблицы, для которых выполнены оба условия: в строке хотя бы одно число…",
+  "date": "2025-04-21",
+  "source": "https://t.me/informatika_kege_itpy/1048",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1048-1.jpg",
+      "width": 800,
+      "height": 597,
+      "alt": "Задание 9 ЕГЭ: разбор задачи — Рогов.А"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В файле электронной таблицы в каждой строке содержатся шесть натуральных чисел. Определите количество строк таблицы, для которых выполнены оба условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "в строке хотя бы одно число повторяется дважды (ровно 2 раза);"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "каждое из повторяющихся дважды (ровно 2 раза) чисел превышает каждое неповторяющееся."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Опасная задача потому что автор учитывает ситуацию, когда список uncopied пустой, что может вызывать ошибку при использовании функции max()."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('0. files/9.csv'):\n    M = sorted([int(x) for x in s.split(',')])\n    copied = [x for x in M if M.count(x) == 2]\n    uncopied = [x for x in M if M.count(x) == 1]\n    if len(copied) > 0:\n        if len(uncopied) == 0:\n            maxi = 0\n        else:\n            maxi = max(uncopied)\n        if min(copied) > maxi:\n            cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 665",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаём переменную-счётчик cnt и инициализируем её нулём."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Будет хранить количество строк, удовлетворяющих условию."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('0. files/9.csv'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открываем файл '0. files/9.csv' для чтения."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Циклом for перебираем каждую строку s из файла."
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(x) for x in s.split(',')])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разбиваем строку s по запятым с помощью s.split(',')."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Каждый элемент преобразуем в целое число int(x)."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Полученный список чисел сортируем по возрастанию sorted()."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Результат сохраняем в переменную M."
+          }
+        ],
+        [
+          {
+            "text": "copied = [x for x in M if M.count(x) == 2]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаём список copied с помощью генератора списка."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Включаем в него элементы x из M, которые встречаются ровно 2 раза (M.count(x) == 2)."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Это будут числа-дубликаты в текущей строке."
+          }
+        ],
+        [
+          {
+            "text": "uncopied = [x for x in M if M.count(x) == 1]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Аналогично создаём список uncopied."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Включаем элементы, которые встречаются только 1 раз (M.count(x) == 1)."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Это уникальные числа в текущей строке."
+          }
+        ],
+        [
+          {
+            "text": "if len(copied) > 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, есть ли в строке дубликаты (длина списка copied больше 0)."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Если нет, то пропускаем дальнейшие проверки для этой строки."
+          }
+        ],
+        [
+          {
+            "text": "if len(uncopied) == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, есть ли в строке уникальные числа."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Если уникальных чисел нет (uncopied пуст):"
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Устанавливаем maxi (максимальное уникальное число) в 0,"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- так как сравнивать будем с минимальным дубликатом."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если в строке есть уникальные числа:"
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(uncopied)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Находим максимальное число среди уникальных и сохраняем в maxi."
+          }
+        ],
+        [
+          {
+            "text": "if min(copied) > maxi:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем условие: минимальное число из дубликатов больше maxi."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Если условие выполняется:"
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличиваем счётчик подходящих строк на 1."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "После обработки всех строк выводим итоговое значение счётчика cnt."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ATR2N1PibHEukNguGX3Q1DL5Lw9DMx-hygg-rs2RJLOU8d1uefLghqnX5V-lS7lm0lHXNQHCErRQDXx3To1d0oES6I4qGFH6eQ6ucA4PLQk0wCPuCj-kPuD1vTbQPc7Nw06VfwYmkkwp2J2l0381Yz8l2SNAAFkwuv9K7HJjYhg4nZNg17V7rrDy9Q2pxPV8Zna20TZHs0nswcZtV5vMPPgC4PQ7jxmL0but6CHwbjUP18kIqfAHwQ5JtFR65Qxwixde6svKDtLPhlIQHUUz3pM4_LbWKh0mD-x_Qx_Vu53utmyf344UFlI2jo8cLV3hgjGduxnr1ew5y6WlBkP1cg.jpg",
+      "file": "1048-1.jpg"
+    }
+  ],
+  "task": 9,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Рогов.А",
+    "level": "Сложный"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи — Рогов.А",
+  "title": "Задание 9 ЕГЭ: разбор задачи — Рогов.А",
+  "slug": "zadanie-9-ege-razbor-zadachi-rogov-a",
+  "hidden": false
+}

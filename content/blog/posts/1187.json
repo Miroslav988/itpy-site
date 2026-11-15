@@ -1,0 +1,362 @@
+{
+  "id": 1187,
+  "rubric": "python",
+  "description": "*Необязательно, но достаточно полезно! - Обработка исключений, декораторы, алгоритмы (DBSCAN, K-means, Евклид), lambda-функции",
+  "date": "2025-10-11",
+  "source": "https://t.me/informatika_kege_itpy/1187",
+  "blocks": [
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Основы синтаксиса",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "переменные, операторы, функции, базовые типы данных",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Работа с данными и числами",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "арифметика, логика, побитовые операции, приведение типов",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Условные конструкции",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "if",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "elif",
+            "code": true
+          },
+          {
+            "text": ",",
+            "italic": true
+          },
+          {
+            "text": " else",
+            "code": true
+          },
+          {
+            "text": ", вложенные условия, тернарный оператор",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Циклы",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "for",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "while",
+            "code": true
+          },
+          {
+            "text": ", вложенные циклы, ",
+            "italic": true
+          },
+          {
+            "text": "break",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "continue",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "pass",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "else",
+            "code": true
+          }
+        ],
+        [
+          {
+            "text": "Строки",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- операции, методы, форматирование ("
+          },
+          {
+            "text": "f'",
+            "code": true
+          },
+          {
+            "text": "-строки, ",
+            "italic": true
+          },
+          {
+            "text": "format()",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "%",
+            "code": true
+          },
+          {
+            "text": "), срезы",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Списки и кортежи",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "методы, вложенные списки, особенности кортежей",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Словари и множества",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "отличия от списков, методы, практика",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Функции",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "объявление, вызов, ",
+            "italic": true
+          },
+          {
+            "text": "return",
+            "code": true
+          }
+        ],
+        [
+          {
+            "text": "Работа с файлами",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "чтение, запись, практика",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Генераторы и встроенные функции",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "map()",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "filter()",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "zip()",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "enumerate()",
+            "code": true
+          }
+        ],
+        [
+          {
+            "text": "Модули для ЕГЭ",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- "
+          },
+          {
+            "text": "itertools",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "math",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "random",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "ipaddress",
+            "code": true
+          },
+          {
+            "text": ", ",
+            "italic": true
+          },
+          {
+            "text": "fnmatch",
+            "code": true
+          },
+          {
+            "text": " и др.",
+            "italic": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "*"
+        },
+        {
+          "text": "Необязательно, но достаточно полезно!",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- "
+        },
+        {
+          "text": "Обработка исключений, декораторы, алгоритмы (DBSCAN, K-means, Евклид), lambda-функции",
+          "italic": true
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Краткий список тем, которые точно понадобятся на экзамене!)",
+  "title": "Краткий список тем, которые точно понадобятся на экзамене!)",
+  "slug": "kratkiy-spisok-tem-kotorye-tochno-ponadobyatsya-na-ekzamene",
+  "hidden": false
+}

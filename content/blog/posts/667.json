@@ -1,0 +1,314 @@
+{
+  "id": 667,
+  "rubric": "python",
+  "description": "Данный пост поможет вам быстро освоить базовые функции Python из списка. Пишите в комментарии, если я что-то забыл 👇",
+  "date": "2024-05-31",
+  "source": "https://t.me/informatika_kege_itpy/667",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Функции и их краткие описания с примерами"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "range(start, stop, step)",
+            "bold": true
+          },
+          {
+            "text": " - создает последовательность чисел от "
+          },
+          {
+            "text": "start",
+            "code": true
+          },
+          {
+            "text": " до "
+          },
+          {
+            "text": "stop-1",
+            "code": true
+          },
+          {
+            "text": " с указанным шагом "
+          },
+          {
+            "text": "step",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for i in range(1, 6, 2):\n    print(i)\n    # Выведет: 1, 3, 5"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "max(iterable)",
+            "bold": true
+          },
+          {
+            "text": " - находит максимальное значение в итерируемом объекте."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "nums = [5, 2, 8, 1, 9]\nprint(max(nums))\n# Выведет: 9"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "len(iterable)",
+            "bold": true
+          },
+          {
+            "text": " - возвращает длину итерируемого объекта (количество элементов)."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "fruits = [\"apple\", \"banana\", \"orange\"]\nprint(len(fruits))\n# Выведет: 3"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "sum(iterable)",
+            "bold": true
+          },
+          {
+            "text": " - возвращает сумму всех элементов в итерируемом объекте."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "numbers = [1, 2, 3, 4]\nprint(sum(numbers))\n# Выведет: 10"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 5,
+      "items": [
+        [
+          {
+            "text": "sorted(iterable)",
+            "bold": true
+          },
+          {
+            "text": " - возвращает отсортированный список элементов итерируемого объекта."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "nums = [5, 2, 8, 1, 9]\nsorted_nums = sorted(nums)\nprint(sorted_nums)\n# Выведет: [1, 2, 5, 8, 9]"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 6,
+      "items": [
+        [
+          {
+            "text": "open().readline()",
+            "bold": true
+          },
+          {
+            "text": " - открывает файл и возвращает первую строку из него."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "with open(\"file.txt\") as file:\nfirst_line = file.readline()\nprint(first_line)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 7,
+      "items": [
+        [
+          {
+            "text": "int(s, n)",
+            "bold": true
+          },
+          {
+            "text": " - преобразует строку "
+          },
+          {
+            "text": "s",
+            "code": true
+          },
+          {
+            "text": " в целое число в системе счисления "
+          },
+          {
+            "text": "n",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "binary_num = \"1010\"\ndecimal_num = int(binary_num, 2)\nprint(decimal_num)\n# Выведет: 10"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 8,
+      "items": [
+        [
+          {
+            "text": "str()",
+            "bold": true
+          },
+          {
+            "text": " - преобразует объект в строковое представление."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "number = 42\nstr_number = str(number)\nprint(str_number)\n# Выведет: \"42\""
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "all(iterable)",
+            "bold": true
+          },
+          {
+            "text": " - возвращает "
+          },
+          {
+            "text": "True",
+            "code": true
+          },
+          {
+            "text": ", если все элементы в итерируемом объекте истинные."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "bools = [True, True, False]\nprint(all(bools))\n# Выведет: False"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 10,
+      "items": [
+        [
+          {
+            "text": "any(iterable)",
+            "bold": true
+          },
+          {
+            "text": " - возвращает "
+          },
+          {
+            "text": "True",
+            "code": true
+          },
+          {
+            "text": ", если хотя бы один элемент в итерируемом объекте истинный."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "bools = [False, False, True]\nprint(any(bools))\n# Выведет: True"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 11,
+      "items": [
+        [
+          {
+            "text": "print(*objects)",
+            "bold": true
+          },
+          {
+            "text": " - выводит переданные объекты в консоль."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "name = \"Alice\"\nprint(\"Hello, \", name)\n# Выведет: Hello, Alice"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 12,
+      "items": [
+        [
+          {
+            "text": "map(function, iterable)",
+            "bold": true
+          },
+          {
+            "text": " - применяет функцию к каждому элементу итерируемого объекта."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "nums = [1, 2, 3]\nsquares = list(map(lambda x: x*x, nums))\nprint(squares)\n    # Выведет: [1, 4, 9]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Данный пост поможет вам быстро освоить базовые функции Python из списка. Пишите в комментарии, если я что-то забыл 👇"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Шпаргалка ЕГЭ | Базовые функции python",
+  "title": "Шпаргалка ЕГЭ | Базовые функции python",
+  "slug": "shpargalka-ege-bazovye-funktsii-python-667",
+  "hidden": true
+}

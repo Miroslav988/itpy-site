@@ -1,0 +1,166 @@
+{
+  "id": 1188,
+  "rubric": "breakdown",
+  "description": "У исполнителя есть три команды, которые обозначены латинскими буквами: A. Вычесть 1 B. Вычесть 2 C. Найти целую часть от деления на 3 Сколько существует программ, для которых при…",
+  "date": "2025-10-12",
+  "source": "https://t.me/informatika_kege_itpy/1188",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1188-1.jpg",
+      "width": 800,
+      "height": 389,
+      "alt": "Задание 23 ЕГЭ: разбор задачи 23205"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "У исполнителя есть три команды, которые обозначены латинскими буквами:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "A. Вычесть 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "B. Вычесть 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "C. Найти целую часть от деления на 3"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько существует программ, для которых при исходном числе 19 результатом является число 4, при этом траектория вычислений содержит число 6 и не содержит 13?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b):\n    if a <= b or a == 13:\n        return a == b\n    return F(a-1, b) + F(a-2, b) + F(a//3, b)\n\nprint(F(19, 6) * F(6, 4))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 212",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a, b):"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление рекурсивной функции F с двумя параметрами a и b"
+          }
+        ],
+        [
+          {
+            "text": "if a <= b or a == 13:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем условие остановки: если a ≤ b или a равно 13"
+          }
+        ],
+        [
+          {
+            "text": "return a == b"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выше выполнено, возвращаем True только если a равно b, иначе False"
+          }
+        ],
+        [
+          {
+            "text": "return F(a-1, b) + F(a-2, b) + F(a//3, b)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Рекурсивно вызываем функцию F для трех случаев: a-1, a-2 и a//3 (целочисленное деление)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "· Суммируем результаты всех трех вызовов"
+          }
+        ],
+        [
+          {
+            "text": "print(F(19, 6) * F(6, 4))"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляем произведение F(19, 6) и F(6, 4)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "· Выводим результат"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/sCfP9vt2PCOwNMjpSenKmhL_9pCZdZs9iOjzFfi_xJ6JWUAeclxblG2TfNp16JkHcOP-VyWzQ__EtuJLBGRZ5Ra3FKJDbi65OlqAvoWugkWFTK6vezme1hW5mebKHmYrMGuH3vKePmkbwMuNQIxGVmRtLt5pPxo3iXmYcY9ahkoP9197nKpcSPMhP2Bh2NNFzY0RTcdNFNTJ79q8WqGSO5VQBhvkKDpwjwmf33lfOtyKOqlgUvvAq9B6LilJ3D5wo0uKaF0tTgeCnCGe9_O8BVOS9rHny-PFhT737HR4HhfxpzGF3VFGplrvZHa48TvQo99XvgR9PjuUIvrmISlN5w.jpg",
+      "file": "1188-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "23205",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 10.06.25",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 23205",
+  "title": "Задание 23 ЕГЭ: разбор задачи 23205",
+  "slug": "zadanie-23-ege-razbor-zadachi-23205",
+  "hidden": false
+}

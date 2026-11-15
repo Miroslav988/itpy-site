@@ -1,0 +1,34 @@
+{
+  "id": 335,
+  "rubric": "useful",
+  "description": "Просто воспользуйтесь функцией поиска на канале, чтобы легко найти интересующую вас статью или разбор задачи 🌡",
+  "date": "2024-01-27",
+  "source": "https://t.me/informatika_kege_itpy/335",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/335-1.jpg",
+      "width": 486,
+      "height": 648,
+      "alt": "Дорогие подписчики и друзья!"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Просто воспользуйтесь функцией поиска на канале, чтобы легко найти интересующую вас статью или разбор задачи 🌡"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Jg9C2QaxuuCFQULmZG6bCJBY7P0T9ePkqpvtkq4GELHGZkvFuIFJyTv0hOfgF_zQYvwdy_aU8qo5dx6FfK1mTTIA-0XCq-5YHGVVXgbOEvpx-5zw1K5VDdoRDL2_enr2HpDpQpm74jD1xtCElcKA2WnxSdO00mw5v6-Ysy0ybV7lIFoQm5dFdVx9TPvmam9p15Mzt6jOjSTyt67QncZNDuEzg4jMkE6ZjwtVR5H5hepAGolSbAC53iPjyTx-Ql-3CdR7K3JrkIkjUHr-GUkWZiwWsF0dK8JZhRp14spFrK_fTDc4XOu5tP-mN_1pgRkWTDx6XGSKxhZ1nghuM9JBMg.jpg",
+      "file": "335-1.jpg"
+    }
+  ],
+  "baseTitle": "Дорогие подписчики и друзья!",
+  "title": "Дорогие подписчики и друзья!",
+  "slug": "dorogie-podpischiki-i-druzya",
+  "hidden": false
+}

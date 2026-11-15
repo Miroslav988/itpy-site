@@ -1,0 +1,211 @@
+{
+  "id": 791,
+  "rubric": "breakdown",
+  "description": "Сеть задана IP-адресом 115.192.0.0 и сетевой маской 255.192.0.0. Сколько в этой сети IP-адресов, для которых количество единиц в двоичной записи IP-адреса не кратно 3?",
+  "date": "2024-08-16",
+  "source": "https://t.me/informatika_kege_itpy/791",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/791",
+      "thumb": {
+        "src": "/blog-media/791-1.jpg",
+        "width": 848,
+        "height": 528
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Сеть задана IP-адресом "
+        },
+        {
+          "text": "115.192.0.0",
+          "href": "http://115.192.0.0/"
+        },
+        {
+          "text": " и сетевой маской "
+        },
+        {
+          "text": "255.192.0.0",
+          "href": "http://255.192.0.0/"
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько в этой сети IP-адресов, для которых количество единиц в двоичной записи IP-адреса не кратно 3?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Во всех ФИПИ вариантах/пробниках и на основном экзамене был представлен именно этот прототип, занятное наблюдение!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nnet = ip_network('115.192.0.0/255.192.0.0', 0)\ncnt = 0\nfor ip in net:\n    b_ip = f'{ip:b}'\n    if b_ip.count('1') % 3 != 0:\n        cnt += 1\nprint(cnt)\n\n# Ответ: 2796202"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from ipaddress import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируем все функции из модуля ipaddress для работы с IP адресами и сетями."
+          }
+        ],
+        [
+          {
+            "text": "net = ip_network('115.192.0.0/255.192.0.0', 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаём объект сети net, используя адрес сети '"
+          },
+          {
+            "text": "115.192.0.0",
+            "href": "http://115.192.0.0/"
+          },
+          {
+            "text": "' и маску подсети '"
+          },
+          {
+            "text": "255.192.0.0",
+            "href": "http://255.192.0.0/"
+          },
+          {
+            "text": "'. 0 указывает на IPv4-адрес."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем переменную счётчика cnt для подсчета IP-адресов, удовлетворяющих условию."
+          }
+        ],
+        [
+          {
+            "text": "for ip in net:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проходим в цикле по каждому IP-адресу в сети net."
+          }
+        ],
+        [
+          {
+            "text": "b_ip = f'{ip:b}'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем текущий IP-адрес в двоичное строковое представление и сохраняем его в переменную b_ip."
+          }
+        ],
+        [
+          {
+            "text": "if b_ip.count('1') % 3 != 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что количество единиц в двоичном представлении IP-адреса не кратно 3."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, увеличиваем счётчик cnt на 1."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим итоговое значение счётчика cnt, которое соответствует количеству подходящих IP-адресов."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/EVtqFM-GMRVDnglCP0RaNtKXSSyECccKu3j9SHZpwzyNfcfUV8LX2OfSPgGZruH5vXFUIxUZ-gsLnKsRF4zw6RO6VuzBvYy6p6fBCey1kkWQrrfH_SBIqCus1aaSAxNnK2eegyptywIbYhrEz33M99KfQivuiH6L7HvCYUGDYpcU_d_yirzaZ7GiK7F-KifVqpgUV5LsF_TLNJ8ZB_9QH6oaDeIS4oUFIvfCQeire6E56_tw4wW2gyVNWqA4ENoYc27-rOnGQQgTRmXqbjzgU_DlRLzRPZvNKaIto03gzQi_bNs47YgQPTNxHenb5-uToDsrnfV_EKAZVUuopb8SKw",
+      "file": "791-1.jpg"
+    }
+  ],
+  "task": 13,
+  "problem": "17676",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Пресдача 04.07.2024",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи 17676",
+  "title": "Задание 13 ЕГЭ: разбор задачи 17676",
+  "slug": "zadanie-13-ege-razbor-zadachi-17676",
+  "hidden": false
+}

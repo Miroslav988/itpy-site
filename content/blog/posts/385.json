@@ -1,0 +1,61 @@
+{
+  "id": 385,
+  "rubric": "breakdown",
+  "description": "Да 7 номер ЕГЭ принято считать полностью письменной задачей, но мы предлагаем воспользоваться Питоном в качестве калькулятор и решить интересную задачу с Решу ЕГЭ.",
+  "date": "2024-02-23",
+  "source": "https://t.me/informatika_kege_itpy/385",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/385",
+      "thumb": {
+        "src": "/blog-media/385-1.jpg",
+        "width": 848,
+        "height": 448
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/35981-7-25ddcd9008d04985a96ed1ac06217980?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Да 7 номер ЕГЭ принято считать полностью письменной задачей, но мы предлагаем воспользоваться Питоном в качестве калькулятор и решить интересную задачу с "
+        },
+        {
+          "text": "Решу ЕГЭ.",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=35981"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "I = (16 * 2 ** 23) / 32  \nI = I - (128 * 2**13)  \nI = I * 8  \ni = I / (2048 * 1536)\nColors = 2 ** i\nprint(f\"Цветов использовано в палитре: {Colors}\")"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/bdzTbORKvV_Pk_MAoSsd4Q_Lryu7Ng-z6T8Ts-p-iDcIs37Kaf0kfGvvHVunAQKBph5WUkrIpea2Iov-DG6w0u5XbhI5SYoQhBFm96D-3zHufY317awn4U51VggTaJre0aTIu9P3Z_pirXZUHsnRTXOfRF7lHwZLTWekgu9-8Plncy3p7VNmtVKHDtRAAf3LT_8VyDhYkK8C0cViDGO6rdHGPqG7byu3gHVtnzvdy5Y3AkLIKXygSQ5Gw6-2Do0GQpBJi9B4kLJC0ncewpFYaZXFxeYsvxurjJMFEVlXzFl735CEiICcSvXPITLjY2CDCIDzZv103snKDrI-SgSPWQ",
+      "file": "385-1.jpg"
+    }
+  ],
+  "task": 7,
+  "problem": "35981",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 7 ЕГЭ: разбор задачи 35981",
+  "title": "Задание 7 ЕГЭ: разбор задачи 35981",
+  "slug": "zadanie-7-ege-razbor-zadachi-35981",
+  "hidden": false
+}

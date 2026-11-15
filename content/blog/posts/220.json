@@ -1,0 +1,63 @@
+{
+  "id": 220,
+  "rubric": "video",
+  "description": "",
+  "date": "2023-08-12",
+  "source": "https://t.me/informatika_kege_itpy/220",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Публикуемся на "
+        },
+        {
+          "text": "видео Shorts",
+          "href": "https://youtube.com/shorts/0f_JulmitFg?feature=share"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пробуем себя в "
+        },
+        {
+          "text": "ВК Клипы",
+          "href": "https://vk.com/clip-221025268_456239021?c=0"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "С недавних пор появился "
+        },
+        {
+          "text": "TikTok",
+          "href": "https://vm.tiktok.com/ZGJgaUFcH/"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/HWyTS8QhN_-FZ_hRplKTPYvMJt3aBP1osJfcZefPbXTaVRcCmN2xhpk3S3HZv4jwOdWWYW8UcSk6LK-SwDcLwjvZ9CVm4xIUsW3uOMuTdQgype7IHThdO1LkJEpgazkTPG9jNUgZSLPKJSaSx-kJDPeHWDIEBsIn94g8umkB9XenABMoDVueWY8Lu7eoB02g1KG9kAmER-FTdFmYWisGmfMiGIIcZZvnMtHrTm9sb89MrGjseSHgx-fPqHmvaorgwMtz62YosTlBS4RjH3bwXoZmkORJknlzmckPRVH-adtLV8xQ1uL9ie3jpAJX3E9hj8AA3fZ1yiRh1dQjtlhXmw.jpg",
+      "file": "220-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://youtube.com/shorts/0f_JulmitFg?feature=share",
+    "thumb": {
+      "src": "/blog-media/220-1.jpg",
+      "width": 640,
+      "height": 360
+    }
+  },
+  "baseTitle": "Поддержите наши последним короткие видео",
+  "title": "Поддержите наши последним короткие видео",
+  "slug": "podderzhite-nashi-poslednim-korotkie-video",
+  "hidden": false
+}

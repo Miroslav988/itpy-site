@@ -1,0 +1,66 @@
+{
+  "id": 336,
+  "rubric": "breakdown",
+  "description": "Классная задача с сайта РЕШУ ЕГЭ, что-то аналогичное было в прошлом году на реальном экзамене!",
+  "date": "2024-01-29",
+  "source": "https://t.me/informatika_kege_itpy/336",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/336",
+      "thumb": {
+        "src": "/blog-media/336-1.jpg",
+        "width": 848,
+        "height": 496
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/59848-24-ab04fa9af87d42a5937d6adec8dd24d7?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Классная задача с сайта ",
+          "bold": true
+        },
+        {
+          "text": "РЕШУ ЕГЭ",
+          "href": "https://inf-ege.sdamgia.ru/?redir=1"
+        },
+        {
+          "text": ", что-то аналогичное было в прошлом году на реальном экзамене!",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\nbad = alphabet[24:]\ns = open('24.txt').readline()\nfor x in bad:\n    s = s.replace(x, ' ')\nprint(max([len(x) for x in s.split() if x[0] != '0']))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/lA37ujpD6P5HTUniYwfuLWX_fKHr00AAeJ1mRzC3n55o_MDiX7WJKlII8A7GnLUZ6rci2MTqGMIibGaql3lleLHMy2c-m_-y_RA0H4o6X3h3Nj6G7OgvSrKSo05O3ROpXnWzfAwFWBvwxr_hCsIPGP0Z0fWq2lrndyh1NEI0P_8GfiYu9A3aegO0fRzqPCdW0cy_mPZKIYtSYVZDxJ_BnXnJRDGb_9d8LllYehg3Wu5oAxNA-4YMrbIx65v2btLJ5dBe777PU368V7PAF4MIjmTl0D7ewGRu0yClmlMXUCMV5nul0324AgH4Hd2u-HppWwqLSHxkJJcyQ3R28XOpoA",
+      "file": "336-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "59848",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 59848",
+  "title": "Задание 24 ЕГЭ: разбор задачи 59848",
+  "slug": "zadanie-24-ege-razbor-zadachi-59848",
+  "hidden": false
+}

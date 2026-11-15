@@ -1,0 +1,70 @@
+{
+  "id": 134,
+  "rubric": "useful",
+  "description": "Правильный ответ ждет Вас здесь: Конечно же True, так как длины сеттеров будут равны.",
+  "date": "2023-05-29",
+  "source": "https://t.me/informatika_kege_itpy/134",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/134",
+      "thumb": {
+        "src": "/blog-media/134-1.jpg",
+        "width": 528,
+        "height": 304
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Какое значение может принимать данный код? Ставь верный emoji"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "True",
+          "code": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "None",
+          "code": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "False",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Правильный ответ ждет Вас здесь:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Конечно же True, так как длины сеттеров будут равны."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/rJGtpMnlKaaRPiqiEtwsJgP6jtpvK7WOWq7kYFbL6P5ZU2mFTP1ljYhWbiE2IaZgU7b_glmFUQ5VN4Bh4JzCM0PbpU4WvLsp5HYsx7aIb-A4EXBJ1LpdaDG5XkvXUo2LrQ64Z0Z5AjoDhFnPjs__f8P_w9434tiS1m3zea6Bk3Xf3uRospVNQpPoxY4dFH_LIKvtUhQG5x4_lXHwx7XWxlQShnjOTknlEpui37Vuzca4EbZUxWH_VmIiAKuCD9EC8a-ZLkh4i-rRRBKfANMfepDxbmTeKLCPiEyLc1namoSd3E61faE-bkiL44WdZ_9CKpnI3myZmx3DivXcYxrIjw",
+      "file": "134-1.jpg"
+    }
+  ],
+  "baseTitle": "Попробуем новый формат - \"мини викторина\"",
+  "title": "Попробуем новый формат - \"мини викторина\"",
+  "slug": "poprobuem-novyy-format-mini-viktorina",
+  "hidden": false
+}

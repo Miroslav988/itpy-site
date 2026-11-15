@@ -1,0 +1,58 @@
+{
+  "id": 154,
+  "rubric": "python",
+  "description": "А еще хочу поделиться шпаргалкой, которую составили мои студенты (pdf файл будет в комментариях) 👇",
+  "date": "2023-06-17",
+  "source": "https://t.me/informatika_kege_itpy/154",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/154",
+      "thumb": {
+        "src": "/blog-media/154-1.jpg",
+        "width": 848,
+        "height": 320
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "А еще хочу поделиться шпаргалкой, которую составили мои студенты (pdf файл будет в комментариях) 👇"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ловите шпаргалку для ЕГЭ по информатике 2023",
+          "href": "https://informatikakegeitpy.notion.site/1-25-9453ac16c23f4036bfd07ad12be295a5?pvs=4",
+          "bold": true
+        },
+        {
+          "text": ".",
+          "href": "https://informatikakegeitpy.notion.site/1-25-9453ac16c23f4036bfd07ad12be295a5?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Дайте знать, если вам зашло: ❤️‍🔥"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/DMfPulS77Cm8UIUB0x9sOB5JPeB5E8G75Q8MJHIidzBriRDfSuqsN3YnStdh771ulgS9y2IZpeOX1upWawzqbXAlPRKzIKA0RBhknVL0a9T0E_PsW83P2Ymk8wIeW4jAcxS65vhYF-7O05Vz2nxF5apj73NfXprKS5YL-j7MiVkyi2Td64J9qbXXZFzSxYmJey9KqLrLS44qMhv1h7i7blR3le_2RHIrgvdyB8DGaOUvpuPM6MW7lwsyaDPWu6po-N2xwBFQ6AXIjM8sMrxGGrlIUGmCPJN8oDX91cSNRNZfT357CGFFiZbRVtadwYhkZvKIs0p3WoKuY6a7yOUMDQ",
+      "file": "154-1.jpg"
+    }
+  ],
+  "baseTitle": "Сегодня в 11:00 по Москве проводим стрим",
+  "title": "Сегодня в 11:00 по Москве проводим стрим",
+  "slug": "segodnya-v-11-00-po-moskve-provodim-strim",
+  "hidden": false
+}

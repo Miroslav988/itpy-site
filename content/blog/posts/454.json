@@ -1,0 +1,254 @@
+{
+  "id": 454,
+  "rubric": "breakdown",
+  "description": "Определите наибольшее значение x, при котором значение выражения 3x75_80 + 14x0_80 кратно 17. Для найденного значения x вычислите частное от деления выражения на 17.",
+  "date": "2024-04-19",
+  "source": "https://t.me/informatika_kege_itpy/454",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/454",
+      "thumb": {
+        "src": "/blog-media/454-1.jpg",
+        "width": 848,
+        "height": 640
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите наибольшее значение x, при котором значение выражения 3x75_80 + 14x0_80 кратно 17. Для найденного значения x вычислите частное от деления выражения на 17."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Так как наша функция int(n, s) не работает с такими большими системами счисления, то придется написать свою."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def my_int(num: list, base: int):\n    r = 0\n    num.reverse()\n    for i in range(0, len(num)):\n        r += num[i] * base ** i\n    return r\n\nR = []\nfor x in range(0, 80):\n    A = my_int([3, x, 7, 5], 80) + my_int([1, 4, x, 0], 80)\n    if A % 17 == 0:\n        R.append(A // 17)\nprint(max(R))\n\n# Ответ: 146405"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def my_int(M: list, n: int):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Параметры: M (список чисел) и n (основание системы счисления)."
+          }
+        ],
+        [
+          {
+            "text": "r = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается переменная r, которая будет содержать итоговое значение."
+          }
+        ],
+        [
+          {
+            "text": "M.reverse()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инвертируется список M для удобного вычисления числа."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(0, len(M)):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается цикл for, перебирающий индексы элементов списка M."
+          }
+        ],
+        [
+          {
+            "text": "r += M[i] * n ** i",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "К итоговому значению r прибавляется произведение элемента списка M[i] на степень основания n в степени i."
+          }
+        ],
+        [
+          {
+            "text": "return r",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Функция возвращает значение r."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается пустой список R, куда будут добавляться результаты."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(0, 80):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается цикл for, перебирающий значения от 0 до 79 и присваивающий их переменной x."
+          }
+        ],
+        [
+          {
+            "text": "A = my_int([3, x, 7, 5], 80) + my_int([1, 4, x, 0], 80)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляется значение A, равное сумме результатов функции my_int для списков с основанием 80."
+          }
+        ],
+        [
+          {
+            "text": "if A % 17 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется, делится ли число A на 17."
+          }
+        ],
+        [
+          {
+            "text": "R.append(A // 17)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если число A делится на 17, результат целочисленного деления A на 17 добавляется в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводится наибольший элемент из списка "
+          },
+          {
+            "text": "R.",
+            "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Понравился пост? Поддержи реакцией"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "Обычный скучный лайк"
+          }
+        ],
+        [
+          {
+            "text": "Весит как 10 обычных лайков"
+          }
+        ],
+        [
+          {
+            "text": "Кандидат на самый лучший пост недели"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/M9jhCwonnU2aE5vNqhGMCvVc-Fr_CE-tmoFVIBeUrRMYoVb0lN2jQ_HbsBmJiosEJGTve89qlLH5Xnym_XFKPnrt9yIhOQjTLH8AyN77Wq5Gj7pLU20Dn4V9kLFYpoMs8PuQcHdWwt1qBhl_ArR8xnsW0fuZ53zxHCnDtOz4tZWhHNPxE5ZjQjJDNA16Sv2WvqyY2dpQwH3rrBsYmWcO4rNqI88HYAA7pdZTA4GAgqmZkRy7XtBEZpcdK8mMkHes7x7SLoUBVj1u5hoE8WrG4ij6-tFq63Mtjp1AW-OEgNxvSr9TTTAAwe40MAKBVcUDsb8pxBRguIO9HZ_s6vTSFg",
+      "file": "454-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "4937",
+  "collection": "КЕГЭ",
+  "meta": {
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 4937",
+  "title": "Задание 14 ЕГЭ: разбор задачи 4937",
+  "slug": "zadanie-14-ege-razbor-zadachi-4937",
+  "hidden": false
+}

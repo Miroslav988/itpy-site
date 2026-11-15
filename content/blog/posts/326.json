@@ -1,0 +1,45 @@
+{
+  "id": 326,
+  "rubric": "breakdown",
+  "description": "Задание 1 ЕГЭ: разбор задачи 58468",
+  "date": "2023-12-25",
+  "source": "https://t.me/informatika_kege_itpy/326",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/326",
+      "thumb": {
+        "src": "/blog-media/326-1.jpg",
+        "width": 848,
+        "height": 432
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/58468-1-15546d6493794ba4ab10de9d529ad971?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import permutations\n\ntable = '14 17 18 23 25 26 32 34 38 41 43 47 48 52 56 58 62 65 71 74 81 83 84 85'\ngraph = 'АБ БА АИ ИА ИБ БИ ИЖ ЖИ БЖ ЖБ БВ ВБ ВЖ ЖВ ВГ ГВ ЖЕ ЕЖ ЕГ ГЕ ДГ ГД ЕД ДЕ'\n\nfor per in permutations('АБВГДЖИЕ'):\n    new_table = table\n    for i in range(1, 8+1):\n        new_table = new_table.replace(str(i), per[i-1])\n    if set(new_table.split()) == set(graph.split()):\n        print('1 2 3 4 5 6 7 8')\n        print(*per)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/jqHbszFV4qJy51hMCoPUDLc79SDd6PB4Bts0TafzjF24V63IWOXCnk8KqoKfQHvysWQbzoFYkG5GZoqAA9OkmZimJ2Zpt550miODvAtwmGs_ZlQLcRQpeBK9Tmpk6skQjN90vOftE9R06P2pGJ7FCoAPF7narlqsorBhR__2VrqAP-0Fqa_MAfYng7ZfuzmMP0_2sFM0E9ecV8gqd5jKoFUGX6_tYbYtTcCcgfldJHUO1HyZGhzGmq3ZS3EzIeRvS8039jum5OR39OdN5bk7ReZ4TLcYdxBKVVxmMMFAgjoc1ha6K48qvncjkoyBQsBoIVqRio1q0VrU75LEXYRwPw",
+      "file": "326-1.jpg"
+    }
+  ],
+  "task": 1,
+  "problem": "58468",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 1 ЕГЭ: разбор задачи 58468",
+  "title": "Задание 1 ЕГЭ: разбор задачи 58468",
+  "slug": "zadanie-1-ege-razbor-zadachi-58468",
+  "hidden": false
+}

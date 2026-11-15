@@ -1,0 +1,237 @@
+{
+  "id": 817,
+  "rubric": "breakdown",
+  "description": "На вход алгоритма подаётся натуральное число N. Алгоритм строит по нему новое число R следующим образом. 1. Строится двоичная запись числа N. 2. Далее эта запись обрабатывается по…",
+  "date": "2024-08-30",
+  "source": "https://t.me/informatika_kege_itpy/817",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/817",
+      "thumb": {
+        "src": "/blog-media/817-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "На вход алгоритма подаётся натуральное число N. Алгоритм строит по нему новое число R следующим образом."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. Строится двоичная запись числа N."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Далее эта запись обрабатывается по следующему правилу:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "а) если число чётное, то к двоичной записи числа слева дописывается 10;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "б) если число нечётное, то к двоичной записи числа слева дописывается 1 и справа дописывается 01."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. Результат переводится в десятичную систему и выводится на экран."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Укажите максимальное число R, которое может быть результатом работы данного алгоритма, при условии, что N не больше 12."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Самый базовый номер из всех, которые можно придумать под пятую задачу. Нечего останавливаться, лучше потренируйте перевод в n-ю систему счисления."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "R = []\nfor n in range(1, 12+1):\n    s = f'{n:b}'\n    if n % 2 == 0:\n        s = '10' + s\n    else:\n        s = '1' + s + '01'\n    r = int(s, 2)\n    R.append(r)\nprint(max(R))\n\n# Ответ: 109"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем пустой список R для хранения результирующих чисел."
+          }
+        ],
+        [
+          {
+            "text": "for n in range(1, 12+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Итерируем по числам n от 1 до 12 включительно."
+          }
+        ],
+        [
+          {
+            "text": "s = f'{n:b}'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем текущее значение n в двоичную строку s."
+          }
+        ],
+        [
+          {
+            "text": "if n % 2 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, является ли текущее число n четным."
+          }
+        ],
+        [
+          {
+            "text": "s = '10' + s",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если n четное, добавляем '10' в начало строки s."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В противном случае, если n нечетное."
+          }
+        ],
+        [
+          {
+            "text": "s = '1' + s + '01'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавляем '1' в начало и '01' в конец строки s."
+          }
+        ],
+        [
+          {
+            "text": "r = int(s, 2)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем измененную строку s из двоичной системы в десятичное число и сохраняем его в r."
+          }
+        ],
+        [
+          {
+            "text": "R.append(r)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавляем полученное десятичное число r в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Печатаем максимальное значение из списка R."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/I3gftFxFE9PBvRtBGRbkUuPnsisaOUvxBr99CY6sf7kVlxE8hoMN2nMDu1nki_KK7ciizK0B38c8tbT0YcyiPPcpQWUiL1yRksQgI87nEdHyT_VtoVHin0BgSzE9NB-mbGh0o_Pyc6_t3Angahnb-rhuKn3BLjAqEkmbwPfKXYcbxNPSMYQXctiaerKxvbhamzBAsiD0dFj5VwKPlUBbDp8yIaRRc191_jN6TbFOa30FB1ddE__XRN7ZtsfMMFlfsrpZR4We7JmnWX2TVyiUK4wCVNBm_t1rkHvv7HAAQB9Vlk4ewsH1fwYu80Tdd1JnMPXLvCYEYEQIYxwOVv6jvw",
+      "file": "817-1.jpg"
+    }
+  ],
+  "task": 5,
+  "problem": "17859",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Демоверсия 2025",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 5 ЕГЭ: разбор задачи 17859",
+  "title": "Задание 5 ЕГЭ: разбор задачи 17859",
+  "slug": "zadanie-5-ege-razbor-zadachi-17859",
+  "hidden": false
+}

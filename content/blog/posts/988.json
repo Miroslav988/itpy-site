@@ -1,0 +1,171 @@
+{
+  "id": 988,
+  "rubric": "breakdown",
+  "description": "Текстовый файл состоит из символов A, B, C, D и E. Определите в прилагаемом файле максимальное количество идущих подряд символов, среди которых комбинация символов AB встречается…",
+  "date": "2025-02-18",
+  "source": "https://t.me/informatika_kege_itpy/988",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/988",
+      "thumb": {
+        "src": "/blog-media/988-1.jpg",
+        "width": 848,
+        "height": 448
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Текстовый файл состоит из символов A, B, C, D и E."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите в прилагаемом файле максимальное количество идущих подряд символов, среди которых комбинация символов AB встречается ровно 50 раз."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Важно после разбиения не забыть добавить по одному элементу справа и слева к строке r, так как мы удаляем пары символов, а отдельные символы должны оставить."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('0. files/24.txt').readline()\ns = s.split('AB')\nmaxi = 0\nfor i in range(len(s)-50):\n    r = 'B' + 'AB'.join(s[i:i+51]) + 'A'\n    maxi = max(maxi, len(r))\nprint(maxi)\n\n# Ответ: 10128"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('0. files/24.txt').readline()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Открываем файл '0. files/24.txt' и читаем первую строку."
+          }
+        ],
+        [
+          {
+            "text": "s = s.split('AB')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Разделяем строку на подстроки по разделителю 'AB' и сохраняем результат в список."
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Инициализируем переменную maxi, которая будет содержать максимальную длину найденной строки."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(s)-50):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Запускаем цикл, который будет проходить по индексам списка s от 0 до длины списка минус 50."
+          }
+        ],
+        [
+          {
+            "text": "r = 'B' + 'AB'.join(si:i+51) + 'A'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Формируем новую строку r, представляющую собой соединение элементов списка s от текущего индекса i до i+50 с добавлением 'B' в начале и 'A' в конце."
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(maxi, len(r))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Обновляем значение maxi, если длина текущей строки r больше предыдущего значения maxi."
+          }
+        ],
+        [
+          {
+            "text": "print(maxi)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Выводим максимальную длину строки, соответствующую заданным условиям."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/LtfQSmU2UFnG0C2dKGd8X_SIs0UohdGrsOGBDCUWtDseubWWxcAzu2qCrZdD5MEh8IQ4VWLdKbSJnJNKITcZBJWLwnnL2bJED-11TO07YBX---YBz43q6MgE5aWgDYuBzChpjXiY85OQXca96A98u7O-PyRF6_y5CUC1mq0kiK6bFGPuO47aI8EF72fwo58QOqitCazlW2U7cLwXAp9d5-CfVCdG2g9TQMRcHtRWuAflN90DCQukQTylC3gNuKnyBVn6k-1XJL4WExZbG5INGbXtAps8wuc5osYrEczGsZYsNFcWBIgGkloGou_LkScysOBwHN2SvjNeiy0SztqcyA",
+      "file": "988-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "13715",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "kompege.ru",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 13715",
+  "title": "Задание 24 ЕГЭ: разбор задачи 13715",
+  "slug": "zadanie-24-ege-razbor-zadachi-13715",
+  "hidden": false
+}

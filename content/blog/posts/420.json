@@ -1,0 +1,188 @@
+{
+  "id": 420,
+  "rubric": "breakdown",
+  "description": "Два узла, находящиеся в одной сети, имеют IP-адреса 121.171.5.70 и 121.171.5.107. Укажите наименьшее возможное количество адресов в этой сети.",
+  "date": "2024-04-07",
+  "source": "https://t.me/informatika_kege_itpy/420",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/420",
+      "thumb": {
+        "src": "/blog-media/420-1.jpg",
+        "width": 848,
+        "height": 560
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Два узла, находящиеся в одной сети, имеют IP-адреса "
+        },
+        {
+          "text": "121.171.5.70",
+          "href": "http://121.171.5.70/"
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "121.171.5.107",
+          "href": "http://121.171.5.107/"
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Укажите наименьшее возможное количество адресов в этой сети."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nR = []\nfor mask in range(32+1):\n    net1 = ip_network(f'121.171.5.70/{mask}', 0)\n    net2 = ip_network(f'121.171.5.107/{mask}', 0)\n    if net1 == net2:\n        R.append(net1.num_addresses)\nprint(min(R))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 64"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from ipaddress import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля ipaddress для работы с сетевыми адресами."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание пустого списка R, куда будут добавляться результаты."
+          }
+        ],
+        [
+          {
+            "text": "Цикл for mask in range(32+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Для перебора возможных значений маски сети от 0 до 32 (включительно)."
+          }
+        ],
+        [
+          {
+            "text": "net1 = ip_network(f'121.171.5.70/{mask}', 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание объекта сети net1 с заданным IP-адресом и переменной маской подсети, с коррекцией префикса."
+          }
+        ],
+        [
+          {
+            "text": "net2 = ip_network(f'121.171.5.107/{mask}', 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание объекта сети net2 с другим IP-адресом, но той же маской подсети."
+          }
+        ],
+        [
+          {
+            "text": "if net1 == net2:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Условие проверки, совпадают ли сети net1 и net2."
+          }
+        ],
+        [
+          {
+            "text": "R.append(net1.num_addresses)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавление количества адресов в сети net1 в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(min(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод минимального значения количества адресов среди всех сетей, для которых условие совпадения сетей выполнилось."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/VsrfgmME0hpFqXbJUfpSaNFeEdLAHhyzjDg7y_s3AkZqw4FNLUnfuqWEws_CQf81_j-HteiR61blDaX0RMCKyIEblMlxueIYiaXDd4n3zWgsZ6a_c9IbE0dIcG07mN4FxHq0jqsO5xjvK1msLnUb1DPpCdNvO5YQPUl8QMsWJyJS8pOAn37B8ka4TTeONEQ-v6LcDGjohyMgQxB8JnsxzP4VHN5S0ipgImIBJfyMX-wtZSJSrDRByI2X4VIwkgKa49bzRrIND7jbYzYRsJ9l3s8jcpfSSrc_1AoSnaMwDN_jHZP0KMl0gQ5kNV6xKJcvYe0vrhev9n4YtSmgdCVULA",
+      "file": "420-1.jpg"
+    }
+  ],
+  "task": 13,
+  "problem": "10783",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи 10783",
+  "title": "Задание 13 ЕГЭ: разбор задачи 10783",
+  "slug": "zadanie-13-ege-razbor-zadachi-10783",
+  "hidden": false
+}

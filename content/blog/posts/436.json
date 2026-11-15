@@ -1,0 +1,180 @@
+{
+  "id": 436,
+  "rubric": "breakdown",
+  "description": "В системе счисления с основанием p выполняется равенство 24x9_p + yxy3_p = x4y0_p. Буквами x и y обозначены некоторые цифры из алфавита системы счисления с основанием p.…",
+  "date": "2024-04-17",
+  "source": "https://t.me/informatika_kege_itpy/436",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/436",
+      "thumb": {
+        "src": "/blog-media/436-1.jpg",
+        "width": 848,
+        "height": 320
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В системе счисления с основанием p выполняется равенство 24x9_p + yxy3_p = x4y0_p. Буквами x и y обозначены некоторые цифры из алфавита системы счисления с основанием p. Определите значение числа xyy_p и запишите это значение в десятичной системе счисления."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Систему счисления p мы перебираем от 10 до 36, чтобы удовлетворять условиям нашей задачи (внутри выражения есть число 9) и для использования функции int().",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\nfor p in range(10, 36+1):\n    for x in alphabet[:p]:\n        for y in alphabet[:p]:\n            if int(f'24{x}9', p) + int(f'{y}{x}{y}3', p) == int(f'{x}4{y}0', p):\n                print(int(x+y+y, p))\n\n# Ответ: 1688"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается отсортированный список alphabet, содержащий цифры от 0 до 9 и буквы английского алфавита в верхнем регистре."
+          }
+        ],
+        [
+          {
+            "text": "for p in range(10, 36+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается внешний цикл for, перебирающий значения от 10 до 36 (включительно) и присваивающий их переменной p."
+          }
+        ],
+        [
+          {
+            "text": "for x in alphabet[:p]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается первый вложенный цикл for, который перебирает элементы alphabet до p-го индекса (не включительно) и присваивает их переменной x."
+          }
+        ],
+        [
+          {
+            "text": "for y in alphabet[:p]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается второй вложенный цикл for, который также перебирает элементы alphabet до p-го индекса (не включительно) и присваивает их переменной y."
+          }
+        ],
+        [
+          {
+            "text": "if int(f'24{x}9', p) + int(f'{y}{x}{y}3', p) == int(f'{x}4{y}0', p):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется условие, что сумма двух чисел, с основанием p, равна третьему числу."
+          }
+        ],
+        [
+          {
+            "text": "print(int(x+y+y, p))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, выводится результат, в десятичное число с основанием p."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Понравился пост? Поддержи реакцией"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "Обычный скучный лайк"
+          }
+        ],
+        [
+          {
+            "text": "Весит как 10 обычных лайков"
+          }
+        ],
+        [
+          {
+            "text": "Кандидат на самый лучший пост недели"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/YMblEmJiTSMNTflUZalWAU9HXSRykwBRgLrF728SaAeD2RLZTMKBxZ-dArkJRuWF8fZV3i0xyvea91jBdWFnPoHm8md7glBJKN0BRM9UCw7KN-1rWaJHj981AnVomdb1kehQfTvQHTOIoa3vmIE0aLstN5p1N7YSayOm0UkkibB9eByLWv7dCB7Oyi3ntRhIbc6FMnM7UwWD4mANZ4jzdSwzwQt8JJ1d7M7Fx0G4cbUvsG5izytJd0UYFLuXvMwkNMZJzhhjtvcLuePz5uIAsyjUXG8dl0Ypp86PW0gGMVQp7CrAU9jEcDqMixGWgx7owLyuRcJONRhgHG36SZaPaA",
+      "file": "436-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "13246",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "(М. Попков)",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 13246",
+  "title": "Задание 14 ЕГЭ: разбор задачи 13246",
+  "slug": "zadanie-14-ege-razbor-zadachi-13246",
+  "hidden": false
+}

@@ -1,0 +1,214 @@
+{
+  "id": 690,
+  "rubric": "breakdown",
+  "description": "Сеть задана IP-адресом 106.184.0.0 и сетевой маской 255.248.0.0. Сколько в этой сети IP-адресов, для которых количество единиц в двоичной записи IP-адреса не кратно 2?",
+  "date": "2024-06-07",
+  "source": "https://t.me/informatika_kege_itpy/690",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/690-1.jpg",
+      "width": 800,
+      "height": 446,
+      "alt": "Задание 13 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Сеть задана IP-адресом "
+        },
+        {
+          "text": "106.184.0.0",
+          "href": "http://106.184.0.0/"
+        },
+        {
+          "text": " и сетевой маской "
+        },
+        {
+          "text": "255.248.0.0",
+          "href": "http://255.248.0.0/"
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько в этой сети IP-адресов, для которых количество единиц в двоичной записи IP-адреса не кратно 2?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nnet = ip_network(\"106.184.0.0/255.248.0.0\", 0)\ncnt = 0\nfor ip in net:\n    if f'{ip:b}'.count('1') % 2 != 0:\n        cnt += 1\nprint(cnt)\n\n# Ответ: 262144"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "from ipaddress import *",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Импорт всех объектов из модуля `ipaddress`, который предоставляет классы для работы с IP-адресами и сетями."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": "net = ip_network(\"106.184.0.0/255.248.0.0\", 0)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Создание объекта сети IP с помощью функции `ip_network`, где указаны начальный IP-адрес \""
+        },
+        {
+          "text": "106.184.0.0",
+          "href": "http://106.184.0.0/"
+        },
+        {
+          "text": "\" и маска подсети \""
+        },
+        {
+          "text": "255.248.0.0",
+          "href": "http://255.248.0.0/"
+        },
+        {
+          "text": "\"."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "cnt = 0",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Инициализация переменной `cnt` для подсчета количества IP-адресов с определенным свойством."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "4. for ip in net"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Цикл `for`, который проходит по всем IP-адресам в созданной сети `net`."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "5. if f'{ip:b}'.count('1') % 2 != 0"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Проверка условия: если количество единиц в двоичном представлении IP-адреса `ip` нечетное."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6. "
+        },
+        {
+          "text": "cnt += 1",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Увеличение счетчика `cnt` на 1, если условие из предыдущей строки выполнено для текущего IP-адреса."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. "
+        },
+        {
+          "text": "print(cnt)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Вывод на экран количества IP-адресов, для которых количество единиц в двоичном представлении нечетное."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/JfXS6-Dgvu1WjFjCHbyaziNOR0ujIPiSj3u0wwViok_BXxTci2M_ubYG7JWKDRtk6FWd1rs7T3pHmkkLqLu3qR7loZXksuCkWJSUi2Es71TrUtGmLkTDaYUJ_k_hIvIDRzNqSGSm2oXqH4hGSQm2sqM9C_U6QNh6ayOBhZBRoxMBNBBmPS5CdyMhVmQChuD0WbvQ27CDQekbywp_eUkAvq_PFS6YhGE1DjvVNSGyl2DLoWG72THlvnd3uUB0Ye9_Viplwm9hajuoOo6Z4VetDAfHDVcFwPK6mJvuhQWOseTNj5OqAHuDlmX-FnzpwPRRM1BPSdCgTTXfZCIV8woxbQ.jpg",
+      "file": "690-1.jpg"
+    }
+  ],
+  "task": 13,
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи",
+  "title": "Задание 13 ЕГЭ: разбор задачи",
+  "slug": "zadanie-13-ege-razbor-zadachi",
+  "hidden": true
+}

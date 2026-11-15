@@ -1,0 +1,54 @@
+{
+  "id": 272,
+  "rubric": "breakdown",
+  "description": "Основная сложность задачи заключается в необходимости эффективно реализовать рекурсивный алгоритм для вычисления функции F(n), используя соотношения F(n) = n + 3 при n ≤ 2 и F(n)…",
+  "date": "2023-10-25",
+  "source": "https://t.me/informatika_kege_itpy/272",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/272",
+      "thumb": {
+        "src": "/blog-media/272-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/5874-16-abec592c41324b82beed613120c648fc?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основная сложность задачи заключается в необходимости эффективно реализовать рекурсивный алгоритм для вычисления функции F(n), используя соотношения F(n) = n + 3 при n ≤ 2 и F(n) = F(n - 1) + F(n - 2) при n > 2."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Для вычисления F(7) нужно выполнить несколько итераций, и это может потребовать значительного объема вычислительных ресурсов. 💻"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/aEltkLaQLqlPJvahQh7yOnC4pMOAV8xTsuA_n0CreluMcz-qgX62UgotdKJ7RTqurEzkrz5q5yErVjYWK2EOHVJEICQHgq7plsUwy5AnTH8sOwyD9lVRvazCobXLCd1Du6yrO8MHLksH9Lqo5pbaJZp19TpkVH3pzfIsFvH4TY1l9UuJpxDRvG2m_0lBybeh0JBHr4I_ttZop2Vps4pV1UrXZkEEazZezrDdJJOUM4btNJwk9IIcWtpSlKoRRwpvkZrB57jXqLIwxAuOHd22WzCm00KIrtIZqiNwpo08h1WFdfIEUfql--DftMquatJKSy9-O_g0qrZY0oiI7sZjDQ",
+      "file": "272-1.jpg"
+    }
+  ],
+  "task": 16,
+  "problem": "5874",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 16 ЕГЭ: разбор задачи 5874",
+  "title": "Задание 16 ЕГЭ: разбор задачи 5874",
+  "slug": "zadanie-16-ege-razbor-zadachi-5874",
+  "hidden": false
+}

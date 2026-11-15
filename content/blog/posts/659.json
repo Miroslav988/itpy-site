@@ -1,0 +1,201 @@
+{
+  "id": 659,
+  "rubric": "breakdown",
+  "description": "Операнды арифметического выражения записаны в системе счисления с основанием 21. 943697x21_21 – 2y9253_21 В записи чисел переменными x и y обозначены неизвестные цифра из алфавита…",
+  "date": "2024-05-29",
+  "source": "https://t.me/informatika_kege_itpy/659",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/659",
+      "thumb": {
+        "src": "/blog-media/659-1.jpg",
+        "width": 848,
+        "height": 432
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Операнды арифметического выражения записаны в системе счисления с основанием 21."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "943697x21_21 – 2y9253_21"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В записи чисел переменными x и y обозначены неизвестные цифра из алфавита 21-ричной системы счисления. Определите наибольшее значение разности (x – y), при котором значение данного арифметического выражения кратно 20. Для найденных x и y вычислите частное от деления значения арифметического выражения на 20."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "R = []\nalphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\nfor x in alphabet[:21]:\n    for y in alphabet[:21]:\n        A = int(f'943697{x}21', 21)\n        B = int(f'2{y}9253', 21)\n        if (A - B) % 20 == 0:\n            R.append([int(x, 21) - int(y, 21), (A - B) // 20])\nprint(max(R)[1])\n\n# Ответ: 17394273143"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание пустого списка R, в который будут добавляться результаты."
+          }
+        ],
+        [
+          {
+            "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Формирование отсортированного списка alphabet, содержащего цифры и латинские буквы."
+          }
+        ],
+        [
+          {
+            "text": "for x in alphabet[:21]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который проходит по первым 21 символу из списка alphabet."
+          }
+        ],
+        [
+          {
+            "text": "for y in alphabet[:21]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Еще один вложенный цикл for, который также проходит по первым 21 символу из списка alphabet."
+          }
+        ],
+        [
+          {
+            "text": "A = int(f'943697{x}21', 21)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Формирование числа A из строки, включающей '943697', символ x и '21'."
+          }
+        ],
+        [
+          {
+            "text": "B = int(f'2{y}9253', 21)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Аналогичное действие для переменной B, где формируется число из строки '2', символа y и '9253'."
+          }
+        ],
+        [
+          {
+            "text": "if (A - B) % 20 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Условие проверяет, делится ли разность A и B на 20 без остатка."
+          }
+        ],
+        [
+          {
+            "text": "R.append([int(x, 21) - int(y, 21), (A - B) // 20])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавление в список R кортежа, содержащего разность x и y, а также результат деления разности A и B на 20."
+          }
+        ],
+        [
+          {
+            "text": "print(max(R)[1])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод второго элемента максимального кортежа в списке R."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/AxoWRxq05MFyn0wiWrscA2VED-M_ktU637pveVLjiWQqCD_0GS4blam5zYCrgyYcvE96JbThhQ8xKFONRVYzoOnwyoZxhNXAHe659r-kTtp8cEuRaFMqgq6UASapOG39T56OYHKNOKk9SvO4HAf-6TUqxI3N6RPUNOCioME8X7wOxeXuqNPW3fioFCxvKqq0rA8KyRkHQee3bFQ3o4X1vhKGGp96AlRzKlepX5wt3R4XpXk4KULJhHNJbZizkqApxTO1WHYV7kTWrURWRqHZNmJXOt_U2AiJvJvytyrKVWouCZxBRV0waa3nGPRx9a5RHGgf0ezC7pn9YTukRzWc7A",
+      "file": "659-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "16261",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Е.Джобс",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 16261",
+  "title": "Задание 14 ЕГЭ: разбор задачи 16261",
+  "slug": "zadanie-14-ege-razbor-zadachi-16261",
+  "hidden": false
+}

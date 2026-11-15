@@ -11,7 +11,7 @@ export default function SiteFooter() {
         </div>
         <nav className="footer-col" aria-label="Связь">
           <p className="part-label">Связь</p>
-          <a href={links.telegramChannel} target="_blank" rel="noopener noreferrer">Telegram-канал ↗</a>
+          <a href={links.telegramChannel} target="_blank" rel="noopener noreferrer">Канал ↗</a>
           <a href={links.telegramPersonal} target="_blank" rel="noopener noreferrer">Написать Илье ↗</a>
         </nav>
         <nav className="footer-col" aria-label="Сайт">
@@ -24,6 +24,7 @@ export default function SiteFooter() {
           <p className="part-label">Документы</p>
           <a href={links.diploma} target="_blank" rel="noopener noreferrer">Диплом ↗</a>
           <a href={links.officialDocs} target="_blank" rel="noopener noreferrer">Работаю как ИП ↗</a>
+          <a href={links.license} target="_blank" rel="noopener noreferrer">Образовательная лицензия ↗</a>
         </nav>
       </div>
       <div className="container footer-bottom">

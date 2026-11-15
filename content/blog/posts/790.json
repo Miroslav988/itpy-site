@@ -1,0 +1,208 @@
+{
+  "id": 790,
+  "rubric": "breakdown",
+  "description": "Какая строка получится в результате применения приведённой ниже программы к строке, состоящей из 100 идущих подряд цифр 9? ПОКА нашлось (33333) ИЛИ нашлось (999) ЕСЛИ нашлось…",
+  "date": "2024-08-14",
+  "source": "https://t.me/informatika_kege_itpy/790",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/790",
+      "thumb": {
+        "src": "/blog-media/790-1.jpg",
+        "width": 848,
+        "height": 480
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Какая строка получится в результате применения приведённой ниже программы к строке, состоящей из 100 идущих подряд"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "цифр 9?"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ПОКА нашлось (33333) ИЛИ нашлось (999)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ЕСЛИ нашлось (33333)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ТО заменить (33333, 99)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ИНАЧЕ заменить (999, 3)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Задачи 12 номера можно назвать типовыми (не редкий случай для нашего экзамена), запомнить нужно только несколько основных вещей: 1) строка умноженная на число будет дублироваться 2) всегда пересоздаем строку s = s.replace() иначе строка не изменится 3) в методе .replace('a', 'b', 1) всегда ставим единичку - так как замены производятся последовательно."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = '9' * 100\nwhile '33333' in s or '999' in s:\n    if '33333' in s:\n        s = s.replace('33333', '99', 1)\n    else:\n        s = s.replace('999', '3', 1)\nprint(s)\n\n# Ответ: 333"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = '9' * 100",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем строку s, состоящую из 100 символов '9'."
+          }
+        ],
+        [
+          {
+            "text": "while '33333' in s or '999' in s:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускаем цикл, который будет продолжаться до тех пор, пока в строке s присутствует подстрока '33333' или '999'."
+          }
+        ],
+        [
+          {
+            "text": "if '33333' in s:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, присутствует ли в строке подстрока '33333'."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('33333', '99', 1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если '33333' присутствует, заменяем её на '99' (первая замена слева направо)."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если подстроки '33333' нет в строке, выполняется следующий блок кода."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('999', '3', 1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если '999' присутствует, заменяем её на '3' (первая замена слева направо)."
+          }
+        ],
+        [
+          {
+            "text": "print(s)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим итоговое значение строки s после завершения всех замен, когда условия больше не выполняются."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Наша Stepik подборкой задач ",
+          "href": "https://stepik.org/course/122969/promo",
+          "bold": true
+        },
+        {
+          "text": "😼"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/gZgF1vswzyy7vNh0q3o02R5_7IR1_J4zhJEjh17JQnFhiKPO8MnEDaapGebvjCC0-NmBUJ5ASkQ8zDA_QHV5XSteNIo2_NzAaOQSKdyP5OtPH1eQs08vUCNivdEWw3t7cCYCOcNDySIbxwOxNHi_ih4ufyal2dD6vGRtG9GszXogvAfwYDK5AhG7BcONxzbRfJ8FhZoPmV984ukQO8RfjF4A50WxVnQUA-AoDy_g9vJ3XE_KRHsBTpoHRexuGWWleqZ1x-nktsSVIs32p6pmpKP9ytqqnSfqRxlMyUAwjYdb5jBxSnANxooW55xHD0NbfDNoAIi_k5khabTtFjQCoQ",
+      "file": "790-1.jpg"
+    }
+  ],
+  "task": 12,
+  "problem": "17525",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 07.06.2024",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 12 ЕГЭ: разбор задачи 17525",
+  "title": "Задание 12 ЕГЭ: разбор задачи 17525",
+  "slug": "zadanie-12-ege-razbor-zadachi-17525",
+  "hidden": false
+}

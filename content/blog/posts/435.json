@@ -1,0 +1,66 @@
+{
+  "id": 435,
+  "rubric": "python",
+  "description": "Вычисление времени выполнения кода является важной задачей в программировании. Для этого можно использовать модуль time в Python, который позволяет измерять точное время…",
+  "date": "2024-04-16",
+  "source": "https://t.me/informatika_kege_itpy/435",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/435",
+      "thumb": {
+        "src": "/blog-media/435-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вычисление времени выполнения кода является важной задачей в программировании. Для этого можно использовать модуль time в Python, который позволяет измерять точное время выполнения программы."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В приведенном коде функция "
+        },
+        {
+          "text": "my_function",
+          "code": true
+        },
+        {
+          "text": " намеренно оставлена без реальной задачи для удобства демонстрации. Мы начинаем измерение времени выполнения с помощью "
+        },
+        {
+          "text": "time.time()",
+          "code": true
+        },
+        {
+          "text": " до выполнения программы и сразу после ее окончания. После чего мы вычисляем разницу между этими значениями, чтобы определить общее время выполнения программы."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Используя подобную методику, вы сможете наглядно увидеть, сколько времени требуется вашей программе на выполнение определенных участков кода. Этот подход особенно полезен при оптимизации производительности программы."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/pCOnTnGRIQdld1bOU1Efm5B31rE-Cw8UXbSIrORllewiZE0AODj05b9BYyWXMpYKrBVMMtLFsHzjY6o7sOb-XSLlr84JKc050YAa-u6mlbg987KFFNYAF_FiXpBP7sIRGCOxoaHDAFRWLeLb2e2GZLjehSz6EgqgfPw6Hzdc3DnWPWpyv-cSqko5Wg7RR_KeIXDT4LDlZBhPlp_3i5-K-ksPHpGMfHa0avVgsOW-DIjYLLA-IEJE61vCgx4_3CKcsP0iVkwwlx95y1WEAktK4VsskorkmvZqKLFS77sT0Tr58W_5lfd_Nt0qhXbcBfIP88b7AQZw2sJk24YaCce_rQ",
+      "file": "435-1.jpg"
+    }
+  ],
+  "baseTitle": "Определение Времени Выполнения программы в Python",
+  "title": "Определение Времени Выполнения программы в Python",
+  "slug": "opredelenie-vremeni-vypolneniya-programmy-v-python",
+  "hidden": false
+}

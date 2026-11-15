@@ -1,0 +1,55 @@
+{
+  "id": 394,
+  "rubric": "breakdown",
+  "description": "Задание 24 ЕГЭ: разбор задачи 8654",
+  "date": "2024-03-05",
+  "source": "https://t.me/informatika_kege_itpy/394",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/394",
+      "thumb": {
+        "src": "/blog-media/394-1.jpg",
+        "width": 848,
+        "height": 416
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/8654-24-1aeaaa9308fb49c1b7a9c409b1574e0d?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Закрепим изученную теорию, разберем пример 24 номера"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from fnmatch import fnmatch\nfrom itertools import product\n\ns = open('24.txt').readline()\nfor v in product('ABCDEFGHIJKLMNOPQRSTUVWXYZ', repeat=5):\n    slovo = ''.join(v)\n    if fnmatch(slovo, '?B??D'):  \n        s = s.replace(slovo, '**** ****')\nprint(max(len(x) for x in s.split()))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/K89Xrrn5hwXH_OSy6p8OnZIJECHxuck_HAgvmS0xhFpYkOz9LsdTr2CW0g_y2InNHemmzk0DlqT1l3kuDE5MpYMIPxu4pORk2HgvQkAbo0XeM-58yu4Ro3DdzokoK3-y-lHvW_YUSw9YaMjRtS-DMpP9pUk6B8CMq0IRU_gs1xcxQ-D-QEp54kKT-flWOTPiNfFVKjYkBmCszJywRSOYzxZNtajA0LHsWUbNDer-gjUjZmZbhJdY2l5KZQiixHcrZi-78rexnc4RIEAszQ-CtJxHlD80smeVJ3WQWHL_kqN-wX3Y1UtnayjLZx465yTGWIVBjmiUXq0n9qCrerV2TA",
+      "file": "394-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "8654",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 8654",
+  "title": "Задание 24 ЕГЭ: разбор задачи 8654",
+  "slug": "zadanie-24-ege-razbor-zadachi-8654",
+  "hidden": false
+}

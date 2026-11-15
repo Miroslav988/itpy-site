@@ -1,0 +1,172 @@
+{
+  "id": 1064,
+  "rubric": "breakdown",
+  "description": "Текстовый файл состоит из символов F, G, Q, R, S и W. Определите в прилагаемом файле максимальное количество идущих подряд символов, среди которых подстрока FSRQ встречается ровно…",
+  "date": "2025-05-12",
+  "source": "https://t.me/informatika_kege_itpy/1064",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1064-1.jpg",
+      "width": 800,
+      "height": 425,
+      "alt": "Задание 24 ЕГЭ: разбор задачи 19254"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Текстовый файл состоит из символов F, G, Q, R, S и W. Определите в прилагаемом файле максимальное количество идущих подряд символов, среди которых подстрока FSRQ встречается ровно 80 раз."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('0. files/24.txt').readline()\ns = s.split('FSRQ')\nmaxi = 0\nfor i in range(len(s)-80):\n    r = 'SRQ' + 'FSRQ'.join(s[i:i+81]) + 'FSR'\n    maxi = max(maxi, len(r))\nprint(maxi)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 2379",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('0. files/24.txt').readline()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открываем файл 24.txt из папки 0. files и читаем первую строку, сохраняя её в переменную s"
+          }
+        ],
+        [
+          {
+            "text": "s = s.split('FSRQ')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разбиваем строку s на список подстрок, используя разделитель 'FSRQ'"
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем переменную maxi для хранения максимальной длины найденной подстроки"
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(s)-80):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускаем цикл по индексам списка s, оставляя запас в 80 элементов для обработки последующих 81 элементов"
+          }
+        ],
+        [
+          {
+            "text": "r = 'SRQ' + 'FSRQ'.join(s[i:i+81]) + 'FSR'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Формируем строку r, соединяя 81 подстроку из списка s с разделителем 'FSRQ', добавляя префикс 'SRQ' и суффикс 'FSR'"
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(maxi, len(r))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Обновляем maxi, если длина строки r больше текущего значения maxi"
+          }
+        ],
+        [
+          {
+            "text": "print(maxi)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим максимальную найденную длину строки r"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/DOM2fxSAjgwezLbkcQLS4_dZ205eoEdG4WQD4OoBkv6yVntEZMCjKP7Z6vdRtU0zpfo5EeDQcPgG1wfkDlgBRAXwwCaWjGJlXO4zTTlKQU1lN1ZKOduplcEb4dgxOM4jKLOsmBaBXiPuQ_ibyHhZhx473pbqQ0rqGyKEgLXgLozHYOZ9uf5UYyMBcLT4TO3lAuFxNLWdqNUM-xW_2GjXhy9pHetv5EGkcKZZV9DSIjY9xlARQIptOOQFUvxDFl7mD_YC03Jjbx-XsIzYjsaxo0ZdUcibiFXS_gd2cC12BrUmqFmNoGN_xs9cn_dXiDrSMZypeI3Z1zdIUVyhwLwYvg.jpg",
+      "file": "1064-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "19254",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "ЕГКР",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 19254",
+  "title": "Задание 24 ЕГЭ: разбор задачи 19254",
+  "slug": "zadanie-24-ege-razbor-zadachi-19254",
+  "hidden": false
+}

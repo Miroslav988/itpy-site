@@ -1,0 +1,81 @@
+{
+  "id": 55,
+  "rubric": "breakdown",
+  "description": "Системы счисления и задачи, которые могут попасться на экзамене, идеально решаются через строки и списки, потому что они крайне похожи!",
+  "date": "2022-11-20",
+  "source": "https://t.me/informatika_kege_itpy/55",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "код примера: "
+        },
+        {
+          "text": "29662",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=29662"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Системы счисления и задачи, которые могут попасться на экзамене, идеально решаются через строки и списки, потому что они крайне похожи!"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Отличия списка от строк заключается в возможности изменения элемента строки путем вызова ее через индекс, например "
+        },
+        {
+          "text": "M[i] = 5",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В тоже время провернуть такой трюк со строкой (а также с кортежем tuple) мы не сможем, на скрипт "
+        },
+        {
+          "text": "s[i] = ‘5’",
+          "code": true
+        },
+        {
+          "text": " программа выведет ошибку:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "TypeError: 'str' object does not support item assignment",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ссылка на код github",
+          "href": "https://github.com/ilandroxxy/ilandroxy_bot/blob/main/ilandroxy_Bot/examples/Number_14_2022.py"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "task": 14,
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи",
+  "title": "Задание 14 ЕГЭ: разбор задачи (20 ноября 2022)",
+  "slug": "zadanie-14-ege-razbor-zadachi-20-noyabrya-2022",
+  "hidden": false
+}

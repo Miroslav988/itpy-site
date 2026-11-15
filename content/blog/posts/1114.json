@@ -1,0 +1,67 @@
+{
+  "id": 1114,
+  "rubric": "video",
+  "description": "",
+  "date": "2025-06-17",
+  "source": "https://t.me/informatika_kege_itpy/1114",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в TikTok",
+          "href": "https://vm.tiktok.com/ZNdAtF5oB/",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в видео",
+          "href": "https://youtube.com/shorts/GDg74iGCQSI?si=yj0y2D12NnjJRzyM",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в ДЗЕН",
+          "href": "https://dzen.ru/video/watch/6845d105ca1db06f0734aace",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в VK",
+          "href": "https://vk.com/clip-221025268_456239098?c=1",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/YJI4FB7MoHgs8_HHe29MvZAA0CVWa6-FQVLmy_2jrgtL1aG6ClmGj2OKI2MY5NV-91brfF_mINmaVBdn3TOHMfaVrwGRgZNV4Zj1r4GObzArsrirRTCUmSzuYJcxvb19mTconsrIta0_-R6X0z--SAKkprISJPYMbcgrNq7blbZ4kIBjmguUyDpb1iWxT6RUCrWqAKm_Ud-Y9v3pwCfshE3ZLWiTUR9lxmfgpd0E26cJt0kVeX1eAQxyTGTB2nBa8OFFxCTFa-jWIOuHKCBqgGUDgFMgcEmiDFZ8_KF5Znr_eWIo34lK36YajD8yKQgrGbCkjO1YABg_FtW0RiKHzg",
+      "file": "1114-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://t.me/informatika_kege_itpy/1114",
+    "thumb": {
+      "src": "/blog-media/1114-1.jpg",
+      "width": 464,
+      "height": 619
+    }
+  },
+  "baseTitle": "Три способа работы с системами счисления на ЕГЭ по Информатике",
+  "title": "Три способа работы с системами счисления на ЕГЭ по Информатике",
+  "slug": "tri-sposoba-raboty-s-sistemami-schisleniya-na-ege-po",
+  "hidden": false
+}

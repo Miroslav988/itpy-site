@@ -1,0 +1,114 @@
+{
+  "id": 57,
+  "rubric": "breakdown",
+  "description": "На канале будет три основные рубрики, а также дополнительные материалы про IT сферу и перспективные направления в ней. Посты выходят два раза в неделю: Среда, Воскресенье, чтобы…",
+  "date": "2022-11-21",
+  "source": "https://t.me/informatika_kege_itpy/57",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/57-1.jpg",
+      "width": 467,
+      "height": 623,
+      "alt": "Задание 1 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Навигация and Правила",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Основная идея канала"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "На канале будет три основные рубрики, а также дополнительные материалы про IT сферу и перспективные направления в ней. Посты выходят "
+        },
+        {
+          "text": "два раза в неделю: Среда, Воскресенье",
+          "bold": true
+        },
+        {
+          "text": ", чтобы вы не страдали от инфошума."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Рубрики"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. Практика решений задачек 1-27"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. Теория по языку Python и примеры, которые пригодятся при сдаче экзамена"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Навигация"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В профиле канала можно найти кнопки навигации по контенту, показывающие все записи по той или иной задаче, просто воспользуйтесь нужным номером 1-27 или рубрикой or ."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментирование"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В комментариях мы относимся уважительно к другим участникам канала. Этот инструмент предназначен для совместных обсуждений задач, поиска решений и ответов на вопросы."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Цель"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Давайте создавать полезное комьюнити вместе 👏"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/SqImv2KVrhDwRTT6zhPvWAX5odEiezuDVuAStIspmHuJc7mWYz7uW9WN32WizN0kx9LLxnf49a-Ke6Qi6GfPoltdji2iCk_jPYdnvtLkVSPlVMFPJMZSUUcK8EkBCWEftx6GKwQDB6mk7e8Ahr1o25j8nfVhdu0m0X3DArkog248RW8Bv3XWa0FaSNoliM6wQs3Rw9nZxK0tkDrMP2GpQCV4zBWdkD31z4HQzrHMzrS2xT27404q8ZbkvIhfN4t55AN-okgz1fVYDpOgtu2NlJbifLhyeaur61U0LzQRn5r9z3KtC0CU720OFR775VqeMYfPePBLfyAcM1asTuTR1A.jpg",
+      "file": "57-1.jpg"
+    }
+  ],
+  "task": 1,
+  "baseTitle": "Задание 1 ЕГЭ: разбор задачи",
+  "title": "Задание 1 ЕГЭ: разбор задачи",
+  "slug": "zadanie-1-ege-razbor-zadachi",
+  "hidden": false
+}

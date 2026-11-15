@@ -1,0 +1,37 @@
+{
+  "id": 1091,
+  "rubric": "breakdown",
+  "description": "Даны 9 буквы слова КОМПЬЮТЕР в алфавитном порядке и нужно найти код с нечетным номером, который не начинается на гласные буквы и содержит одну букву К.",
+  "date": "2025-06-10",
+  "source": "https://t.me/informatika_kege_itpy/1091",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Даны 9 буквы слова КОМПЬЮТЕР в алфавитном порядке и нужно найти код с нечетным номером, который не начинается на гласные буквы и содержит одну букву К."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\nn = 0\nfor p in product(sorted('КОМПЬЮТЕР'), repeat=6):\n    n += 1\n    word = ''.join(p)\n    if word[0] not in 'ОЮЕ':\n        if word.count('К') == 1:\n            if n % 2 != 0:\n                print(n)\n\n# Ответ: 472385"
+    }
+  ],
+  "media": [],
+  "task": 8,
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи",
+  "title": "Задание 8 ЕГЭ: разбор задачи",
+  "slug": "zadanie-8-ege-razbor-zadachi-1091",
+  "hidden": true
+}

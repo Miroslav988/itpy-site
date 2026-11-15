@@ -1,0 +1,193 @@
+{
+  "id": 931,
+  "rubric": "breakdown",
+  "description": "Определите максимальное количество идущих подряд пар символов AB или CB в прилагаемом файле. Искомая подпоследовательность должна состоять только из пар AB, или только из пар CB,…",
+  "date": "2024-12-06",
+  "source": "https://t.me/informatika_kege_itpy/931",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/931",
+      "thumb": {
+        "src": "/blog-media/931-1.jpg",
+        "width": 848,
+        "height": 480
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите максимальное количество идущих подряд пар символов AB или CB в прилагаемом файле."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Искомая подпоследовательность должна состоять только из пар AB, или только из пар CB, или только из пар AB и CB в произвольном порядке следования этих пар."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Этот номер очень удобно решается через замену всех \"лишних\" элементов."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('files/24.txt').readline()\ns = s.replace('AB', '*').replace('CB', '+')\n\nfor x in 'ABC':\n    s = s.replace(x, ' ')\n\nprint(max([len(x) for x in s.split()]))\nprint(len(max(s.split(), key=len)))\n\n# Ответ: 65"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('files/24.txt').readline()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открывает файл с именем 'files/24.txt' и читает первую строку из этого файла, затем сохраняет её в переменную s."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('AB', '*').replace('CB', '+')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяет все вхождения 'AB' в строке"
+          },
+          {
+            "text": " Усло",
+            "bold": true
+          },
+          {
+            "text": "на символ '*', затем заменяет все вхождения 'CB' на символ '+'."
+          }
+        ],
+        [
+          {
+            "text": "for x in 'ABC':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализирует цикл, который будет последовательно проходить через каждую букву в строке 'ABC'."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(x, ' ')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Для каждой буквы x в строке 'ABC', заменяет все её вхождения в строке"
+          },
+          {
+            "text": "Э24",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "А",
+            "italic": true
+          },
+          {
+            "text": "на пробелы."
+          }
+        ],
+        [
+          {
+            "text": "print(max([len(x) for x in s.split()]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разделяет строку s на части (слова), используя пробелы как разделители, затем вычисляет длину каждой части и выводит максимальную из них."
+          }
+        ],
+        [
+          {
+            "text": "print(len(max(s.split(), key=len)))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Так же, как предыдущая строка, разделяет строку s на части (слова), используя пробелы в качестве разделителей, и затем находит и выводит длину самой длинной части в строке."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Наша Stepik подборкой задач",
+          "href": "https://stepik.org/course/122969/promo",
+          "bold": true
+        },
+        {
+          "text": "😼"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/gj30nhDRDyk16XW2duqQz6Vyr8ivAGVHqrl4VZXfqMGOEjdeard2PEokDSKw5dojmBMwuRJ8WDmtMeT2cycB4gRX-7_JyQvQCpHH9Sl_QIRyiNohAy39q4RVwfU3RUmyW309vy9HebN5XrxNMdiskPJ2CeJHHZPKZ_2_LrBw__W-jczpC4z8VZZGWKFH_iOCL9aQ7dVoO7SK05cf4FtTclLv251hpIPDNQn-zCOHVbwAErGYWqy8FqjoTmKtisyrVfXACsaiS3rHNpeUflvfVJWde6RfcII0LQFOk1zsK7q5PRrX5Q8T8MeDLRrNr9P2NY5UOh3K9eVLC6lg21kdcQ",
+      "file": "931-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "45258",
+  "collection": "Решу ЕГЭ",
+  "meta": {
+    "source": "Решу ЕГЭ",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 45258",
+  "title": "Задание 24 ЕГЭ: разбор задачи 45258",
+  "slug": "zadanie-24-ege-razbor-zadachi-45258",
+  "hidden": false
+}

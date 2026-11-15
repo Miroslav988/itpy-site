@@ -1,0 +1,151 @@
+{
+  "id": 553,
+  "rubric": "breakdown",
+  "description": "Определите максимальную длину непрерывного фрагмента, который начинается и заканчивается одной и той же буквой из первой половины алфавита (от A до M) и не содержит эту букву…",
+  "date": "2024-05-06",
+  "source": "https://t.me/informatika_kege_itpy/553",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/553",
+      "thumb": {
+        "src": "/blog-media/553-1.jpg",
+        "width": 848,
+        "height": 480
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите максимальную длину непрерывного фрагмента, который начинается и заканчивается одной и той же буквой из первой половины алфавита (от A до M) и не содержит эту букву внутри."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline()\nmaxi = 0\nfor a in 'ABCDEFGHIJKLM':\n    s = s.replace(a, f'{a} {a}')\n    maxi = max(maxi, max([len(x) for x in s.split()]))\n    s = s.replace(f'{a} {a}', a)\n\nprint(maxi)\n\n# Ответ: 322"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Чтение строки из файла '24.txt' и присвоение её содержимого переменной s."
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация переменной maxi со значением 0, которая будет использоваться для хранения максимальной длины строки."
+          }
+        ],
+        [
+          {
+            "text": "for a in 'ABCDEFGHIJKLM':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Начало цикла по буквам из строки 'ABCDEFGHIJKLM'."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(a, f'{a} {a}')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Замена каждого вхождения буквы a в строке s на a a."
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(maxi, max([len(x) for x in s.split()]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Обновление переменной maxi, выбирая максимальное значение между текущим значением maxi и максимальной длиной слова из разделенной строки s."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(f'{a} {a}', a)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Восстановление оригинальной строки, заменяя a a на a."
+          }
+        ],
+        [
+          {
+            "text": "print(maxi)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод значения maxi, которое содержит максимальную длину слова после обработки всеми буквами из цикла."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/JviY7Dn-B5ShSOrwDqEJ4krVLcjB4eShMdjyhew2-ROQr44IPZFo2Z7dKTYgyBBXPQkPuFZlCvQeRpqRtT2ThKffNUyM2hG8-Xfac5EKyZ1V5A0Iy-GWk7dYuTNhuQnCiP8mvjt5q6waV711rovzYVXoUNR43cJLB1YpXqMPriif4-QeCo7CZ6IZqjcN5n7lQ6CcdXzSe5CE0LTJQp5SFq4-jT6KAVt13TdUuL6HM9VKVCvwmk1Ku6mnuW4_5dlpY0I-nizGpkEdQWQv5CMYGv2Fd1y8ZrCGe_j-hBZUcUeUJ6oDsPOw9tclsYNiH2KKijY2yZg0u5m4wGgwOa7A-w",
+      "file": "553-1.jpg"
+    }
+  ],
+  "task": 24,
+  "collection": "СтатГрад",
+  "meta": {
+    "source": "Статград",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи — Статград",
+  "title": "Задание 24 ЕГЭ: разбор задачи — Статград",
+  "slug": "zadanie-24-ege-razbor-zadachi-statgrad",
+  "hidden": false
+}

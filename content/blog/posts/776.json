@@ -1,0 +1,190 @@
+{
+  "id": 776,
+  "rubric": "breakdown",
+  "description": "Сеть задана IP-адресом 119.124.96.0 и маской сети 255.255.240.0. Сколько в этой сети IP-адресов, двоичная запись которых оканчивается на 0?",
+  "date": "2024-08-04",
+  "source": "https://t.me/informatika_kege_itpy/776",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/776",
+      "thumb": {
+        "src": "/blog-media/776-1.jpg",
+        "width": 848,
+        "height": 544
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Сеть задана IP-адресом "
+        },
+        {
+          "text": "119.124.96.0",
+          "href": "http://119.124.96.0/"
+        },
+        {
+          "text": " и маской сети "
+        },
+        {
+          "text": "255.255.240.0",
+          "href": "http://255.255.240.0/"
+        },
+        {
+          "text": ". Сколько в этой сети IP-адресов, двоичная запись которых оканчивается на 0?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nnet = ip_network('119.124.96.0/255.255.240.0', 0)\ncnt = 0\nfor ip in net:\n    s = f'{ip:b}'\n    # if s.endswith('0'):\n    if s[-1] == '0':\n        cnt += 1\nprint(cnt)\n\n# Ответ: 2048"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from ipaddress import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируем все классы и функции из модуля ipaddress, который обеспечивает удобную работу с IP-адресами и сетями"
+          }
+        ],
+        [
+          {
+            "text": "net = ip_network('119.124.96.0/255.255.240.0', 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем объект сети net с заданным IP-адресом и маской подсети, указываем, что это IPv4 сеть с использованием маски в десятичном формате"
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем счетчик cnt, который будет хранить количество IP-адресов, удовлетворяющих определенному условию"
+          }
+        ],
+        [
+          {
+            "text": "for ip in net:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Начинаем цикл, который перебирает каждый IP-адрес в заданной сети net"
+          }
+        ],
+        [
+          {
+            "text": "s = f'{ip:b}'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем текущий IP-адрес ip в двоичное строковое представление с помощью форматирования"
+          }
+        ],
+        [
+          {
+            "text": "# if s.endswith('0'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Cтарая версию проверки, тоже работает."
+          }
+        ],
+        [
+          {
+            "text": "if s[-1] == '0':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, оканчивается ли двоичная строка s на '0', то есть является ли последний бит нулем"
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличиваем счетчик cnt на единицу, если последний бит IP-адреса равен нулю"
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим количество IP-адресов в сети net, у которых последний бит равен нулю"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/jk7Y1xyHnWdGZXmo66rx3yQZBrbV_c636tIdT5gFTuA5J_4Cd6pwkete26TxDxsChLUaBqaRJPSKfY4W4U8WkAybIdNx4nYqAxLvPVnzgZhu-YI9yfKUb2Yp8olobqN22xtmXBYCRQUyE7difCv_G2PY5TSINvoGpaHEWSDXgREOw1ABNCaN3m5TmJ0DnN3YoueT1yHcFxFNUlXAnkc0jKlCvY9HE_zvZecCR5Eq0zQMTfrfgraiBm0eEV9WhDmu7po7wlm3nott8yclZSPSyEQ1W4NOVefS56pdWKnpiZs-xm4BBkGVnVwDvU05Wr4n_xZkALYZk89sKmI5pzjt2Q",
+      "file": "776-1.jpg"
+    }
+  ],
+  "task": 13,
+  "problem": "11777",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М. Ишимов",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи 11777",
+  "title": "Задание 13 ЕГЭ: разбор задачи 11777",
+  "slug": "zadanie-13-ege-razbor-zadachi-11777",
+  "hidden": false
+}

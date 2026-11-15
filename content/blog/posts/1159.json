@@ -1,0 +1,47 @@
+{
+  "id": 1159,
+  "rubric": "video",
+  "description": "",
+  "date": "2025-09-01",
+  "source": "https://t.me/informatika_kege_itpy/1159",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в TikTok",
+          "href": "https://vm.tiktok.com/ZNdVksS5a/",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в видео",
+          "href": "https://youtube.com/shorts/xyob4GNRa3I?si=GRuczlxgu5sc5yzg",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/BAImF0dyD7qO8Hbs6grnPP4Srd-gvKvrngsylQKxq9rs-82jbKrmVgpD7nZ-1rd_BLw5X-_lXcOrS8xgKqcgpN3L8XbF3MgkETMd8Cm94j-vY5ZU9Eo-yVuIDds2ABdQp0Yzp6HTh5hggykp9YHmO2x9AqXJEVzVWOmTZZuZBD5CI2WVW4il1-qE7nVr_uhebetlLO1wHfzsrDhRdtBvfTELXmgVQQ1DVvkKeHVsPSAZ8vk8KML8ZCvC2QWFwRdlpunm3zXFpzgd4pGnXmFr34TxdJ2UOKZU4h8jpQuedrPnDQXkCPgpxl4_-_vKhKLivg4yq1B4_93eiiPVRff4rg",
+      "file": "1159-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://t.me/informatika_kege_itpy/1159",
+    "thumb": {
+      "src": "/blog-media/1159-1.jpg",
+      "width": 720,
+      "height": 960
+    }
+  },
+  "baseTitle": "Пять лучших сборников ЕГЭ по информатике",
+  "title": "Пять лучших сборников ЕГЭ по информатике",
+  "slug": "pyat-luchshih-sbornikov-ege-po-informatike",
+  "hidden": false
+}

@@ -1,0 +1,246 @@
+{
+  "id": 1308,
+  "rubric": "python",
+  "description": "Это строка, содержащая числовые символы, из которых мы будем находить сумму:",
+  "date": "2026-04-21",
+  "source": "https://t.me/informatika_kege_itpy/1308",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1308-1.jpg",
+      "width": 800,
+      "height": 612,
+      "alt": "Несколько способов как найти значение суммы числовых значений цифр в строке"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Это строка, содержащая числовые символы, из которых мы будем находить сумму:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = '12345'"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Вариант 1:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "summa1 = 0\nfor x in s:\n    summa1 += int(x)\nprint(summa1)  # 15"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этом варианте мы используем цикл "
+        },
+        {
+          "text": "for",
+          "code": true
+        },
+        {
+          "text": ", чтобы пройти по каждому символу строки "
+        },
+        {
+          "text": "s",
+          "code": true
+        },
+        {
+          "text": ". Каждый символ преобразуем в число с помощью "
+        },
+        {
+          "text": "int(x)",
+          "code": true
+        },
+        {
+          "text": " и добавляем его к общей сумме "
+        },
+        {
+          "text": "summa1",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "Вариант 2:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "summa2 = 0\nfor i in range(0, 10):\n    summa2 += s.count(str(i)) * i\nprint(summa2)  # 15"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Здесь мы использовали метод "
+        },
+        {
+          "text": "count",
+          "code": true
+        },
+        {
+          "text": " для подсчета количества вхождений каждой цифры от 0 до 9 в строке "
+        },
+        {
+          "text": "s",
+          "code": true
+        },
+        {
+          "text": ". Умножаем количество вхождений на само число и добавляем к "
+        },
+        {
+          "text": "summa2",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "Вариант 3:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "summa3 = sum(map(int, s))\nprint(summa3)  # 15"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Этот способ применяет функцию map, чтобы преобразовать каждый символ строки s в число. Используя sum, мы находим сумму всех чисел. Это краткий и эффективный способ."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "Вариант 4:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "summa4 = sum([int(x) for x in s])\nprint(summa4)  # 15"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Здесь используется генератор списка для создания нового списка, где каждый элемент — это числовое значение символа из "
+        },
+        {
+          "text": "s",
+          "code": true
+        },
+        {
+          "text": ". Затем с помощью "
+        },
+        {
+          "text": "sum",
+          "code": true
+        },
+        {
+          "text": " находим сумму элементов списка."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Альтернативно, в этой версии можно добавить проверку "
+        },
+        {
+          "text": "if",
+          "code": true
+        },
+        {
+          "text": ", чтобы убедиться, что символы являются цифрами:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "summa4 = sum([int(x) for x in s if x.isdigit()])"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Это делает код более безопасным на случай, если в строке "
+        },
+        {
+          "text": "s",
+          "code": true
+        },
+        {
+          "text": " присутствуют нечисловые символы."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поделитесь этим постом с друзьями",
+          "bold": true
+        },
+        {
+          "text": ", чтобы все узнали о этих простых способах подсчета суммы чисел в строке💪💪"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/U0YPC4WrTYE8B2bzy9k0fdo-kO7kgD76Pr0SjgEIJXZ6w65rymvfitN0mxWFNZI2bDLQMUy9d7P9Upyh5epo916a3wQlTqzik6W52BmOdCZubWd4trkjxAvfRYsWUBjIVxVt3HGNIbvMyAe3AXckBiiB_2OznpJWHDIdv7Oa3WvRE9DEmVBMAU6rTLFHKGhqOEvhaMutZXZGpBmcCXKNRsUL_hTicLQ2hILjFIN4-pBBnY_7scWp-_nLsIo8BbYKdkqJQ2u0EqQCv2nPbu3ve46B8IE6k5k4A82K6TWEgdEKhZYw1kdTMdDYP2ZdZN1G7V2cxaDrBIVVEAfLyhcZfQ.jpg",
+      "file": "1308-1.jpg"
+    }
+  ],
+  "baseTitle": "Несколько способов как найти значение суммы числовых значений цифр в строке",
+  "title": "Несколько способов как найти значение суммы числовых значений цифр в строке",
+  "slug": "neskolko-sposobov-kak-nayti-znachenie-summy-chislovyh",
+  "hidden": false
+}

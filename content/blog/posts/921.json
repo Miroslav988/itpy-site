@@ -1,0 +1,276 @@
+{
+  "id": 921,
+  "rubric": "breakdown",
+  "description": "Катя составляет 5-буквенные слова из букв слова АПРЕЛЬ и упорядочивает их в обратном алфавитном порядке. Вот начало списка: 1. ЬЬЬЬЬ 2. ЬЬЬЬР 3. ЬЬЬЬП 4. ЬЬЬЬЛ 5. ЬЬЬЬЕ 6. ЬЬЬЬА…",
+  "date": "2024-11-23",
+  "source": "https://t.me/informatika_kege_itpy/921",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/921-1.jpg",
+      "width": 800,
+      "height": 634,
+      "alt": "Задание 8 ЕГЭ: разбор задачи — Джобс Е."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Катя составляет 5-буквенные слова из букв слова АПРЕЛЬ и упорядочивает их в обратном алфавитном порядке."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Вот начало списка:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. ЬЬЬЬЬ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. ЬЬЬЬР"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. ЬЬЬЬП"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "4. ЬЬЬЬЛ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "5. ЬЬЬЬЕ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "6. ЬЬЬЬА"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "7. ЬЬЬРЬ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько слов, оканчивающихся на Ь, запишет Катя, если заполнит список до 387 позиции?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\nn = 0\ncnt = 0\nfor p in product(sorted('АПРЕЛЬ', reverse=True), repeat=5):\n    word = ''.join(p)\n    n += 1\n\n    if word[-1] == 'Ь':\n        cnt += 1\n        print(word)\n\n    if n >= 387:\n        break\n\nprint(cnt)\n\n# Ответ: 65"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируются все функции и классы из модуля itertools, который предоставляет инструменты для создания итераторов."
+          }
+        ],
+        [
+          {
+            "text": "n = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируется переменная n для подсчета количества сгенерированных комбинаций."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируется переменная cnt для подсчета слов, заканчивающихся на букву 'Ь'."
+          }
+        ],
+        [
+          {
+            "text": "for p in product(sorted('АПРЕЛЬ', reverse=True), repeat=5):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается цикл for, который создает все возможные кортежи длиной 5 из букв слова 'АПРЕЛЬ', отсортированных в обратном порядке."
+          }
+        ],
+        [
+          {
+            "text": "word = ''.join(p)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Кортеж p преобразуется в строку word."
+          }
+        ],
+        [
+          {
+            "text": "n += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличивается счетчик n на 1, чтобы отслеживать количество проверенных слов."
+          }
+        ],
+        [
+          {
+            "text": "if word[-1] == 'Ь':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется, заканчивается ли слово word на букву 'Ь'."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличивается счетчик cnt, если слово заканчивается на 'Ь'."
+          }
+        ],
+        [
+          {
+            "text": "print(word)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводится слово, если оно заканчивается на 'Ь'."
+          }
+        ],
+        [
+          {
+            "text": "if n >= 387:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется, достигло ли количество проверенных слов значения 387."
+          }
+        ],
+        [
+          {
+            "text": "break",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Завершается цикл, если количество проверенных слов достигает 387."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводится общее число слов, заканчивающихся на 'Ь'."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Наша Stepik подборкой задач ",
+          "href": "https://stepik.org/course/122969/promo",
+          "bold": true
+        },
+        {
+          "text": "😼"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Z72TXpuasGQQYmEmi4l01wf3r1-lg9bJtZ6TP5qZmQ18w5j1m_3ev8jwbjQp9jnj1neWQfD8SEGJVljEP8J6ig310clMoOFROQSmGxqmS_NV3diHh7iKoDwPZKrkoJJpWhaCzogk6ObA8XrDrAKVsOlr62hZZpiX-d2thOBEmU96F3THvk4cNLqwLdjzfvLFXnOeTNU1GTPXIIPBLx4Qbm9vzhfOb5KAOvRDOiX5joHnyD69LMMbpoKiZcrQWZVLAh9jUb8eZ8P3-L1A_C9SUSvkNIxA_n5u70KWCvlwVW_Q5KsYzNRFZMzSFZmwPlGj44Ek9cL7jkMDL4JZ7J97kA.jpg",
+      "file": "921-1.jpg"
+    }
+  ],
+  "task": 8,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Джобс Е.",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи — Джобс Е.",
+  "title": "Задание 8 ЕГЭ: разбор задачи — Джобс Е. (23 ноября 2024)",
+  "slug": "zadanie-8-ege-razbor-zadachi-dzhobs-e-23-noyabrya-2024",
+  "hidden": false
+}

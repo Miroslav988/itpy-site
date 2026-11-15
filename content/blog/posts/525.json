@@ -1,0 +1,144 @@
+{
+  "id": 525,
+  "rubric": "breakdown",
+  "description": "При каком наименьшем целом A выражение ((y < 20) → (x > 70)) ∨ ¬((x < A) → (y > A)) окажется тождественно истинным при любых целых значениях x и y?",
+  "date": "2024-05-03",
+  "source": "https://t.me/informatika_kege_itpy/525",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/525",
+      "thumb": {
+        "src": "/blog-media/525-1.jpg",
+        "width": 848,
+        "height": 416
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "При каком наименьшем целом A выражение"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "((y < 20) → (x > 70)) ∨ ¬((x < A) → (y > A))"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "окажется тождественно истинным при любых целых значениях x и y?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(x, y, A):\n    return ((y < 20) <= (x > 70)) or (not((x < A) <= (y > A)))\n\nfor A in range(10000):\n    if all(F(x, y, A) for x in range(100) for y in range(100)):\n        print(A)\n        break\n        \n# Ответ: 71"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(x, y, A):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определение функции F, которая принимает три аргумента: x, y и A."
+          }
+        ],
+        [
+          {
+            "text": "return ((y < 20) <= (x > 70)) or (not((x < A) <= (y > A)))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Функция возвращает результат логического выражения, которое проверяет два условия и возвращает результат их логической операции or."
+          }
+        ],
+        [
+          {
+            "text": "for A in range(10000):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запуск цикла for, который перебирает значения A от 0 до 9999."
+          }
+        ],
+        [
+          {
+            "text": "if all(F(x, y, A) for x in range(100) for y in range(100)):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка: все результаты функции F(x, y, A) истинны для всех комбинаций значений x от 0 до 99 и y от 0 до 99."
+          }
+        ],
+        [
+          {
+            "text": "print(A)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод значения A, которое соответствует условиям задачи, после чего выполнение программы завершается с помощью оператора break."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/VkCIXoftNWNpc6ZJcMGDD5d2GXCozc57kIoNPPhfhCoLB59ogkxSC_525WF_dojkPUhirFFDwr8wS9hIQXAA7H0Rok4ZSF_nP3kdqjtirIdw45nq10Yfx0uQ8xzWY95Kq09ytU0Fz3OQ_Uo59KA7vQaQnH-1x4cGbhM4UE5618GKcoaBxAvcScVjK4wvKUddKlrdZYlq15aslEMTuh3b2mA4AzHSHfiji4cDIVWQajFYyjoZaGSXZubjr1C9JoA3VSqWKjA2MeyrTR32T5X3hhk8xj50xOScedQEhAx5s0YDhxQpYOA1MhKFsJgB86Fo1abVt-SKlEY8AfUAxBBN6w",
+      "file": "525-1.jpg"
+    }
+  ],
+  "task": 15,
+  "collection": "СтатГрад",
+  "meta": {
+    "source": "Статград",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 15 ЕГЭ: разбор задачи — Статград",
+  "title": "Задание 15 ЕГЭ: разбор задачи — Статград",
+  "slug": "zadanie-15-ege-razbor-zadachi-statgrad",
+  "hidden": false
+}

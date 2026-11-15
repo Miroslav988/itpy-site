@@ -1,0 +1,55 @@
+{
+  "id": 1160,
+  "rubric": "python",
+  "description": "Функция enumerate() в Python - позволяет одновременно проходить по итерируемому объекту и получать индекс каждого элемента - очень удобно и читаемо.",
+  "date": "2025-09-03",
+  "source": "https://t.me/informatika_kege_itpy/1160",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "enumerate()",
+          "code": true
+        },
+        {
+          "text": " в Python - позволяет одновременно проходить по итерируемому объекту и получать индекс каждого элемента - очень удобно и читаемо."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример использования"
+    },
+    {
+      "type": "code",
+      "text": "fruits = ['яблоко', 'банан', 'киви']\n\nfor index, fruit in enumerate(fruits):\n    print(f\"{index}: {fruit}\")"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вывод"
+    },
+    {
+      "type": "code",
+      "text": "0: яблоко\n1: банан\n2: киви"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Теперь мы можем работать с циклами ещё удобнее! 🚀"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Что такое enumerate() в Python и почему это удобно?",
+  "title": "Что такое enumerate() в Python и почему это удобно?",
+  "slug": "chto-takoe-enumerate-v-python-i-pochemu-eto-udobno",
+  "hidden": false
+}

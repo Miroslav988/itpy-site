@@ -1,0 +1,101 @@
+{
+  "id": 749,
+  "rubric": "python",
+  "description": "В Python импорт модулей - это важный аспект, который позволяет использовать функциональность, определенную в других файлах, в своем коде. Этот подход делает программирование более…",
+  "date": "2024-06-22",
+  "source": "https://t.me/informatika_kege_itpy/749",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/749",
+      "thumb": {
+        "src": "/blog-media/749-1.jpg",
+        "width": 848,
+        "height": 352
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В Python импорт модулей - это важный аспект, который позволяет использовать функциональность, определенную в других файлах, в своем коде. Этот подход делает программирование более организованным, уменьшает дублирование кода и упрощает совместную разработку."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При импорте модулей в Python вы можете использовать различные подходы, такие как:",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "1. Импорт всего модуля"
+    },
+    {
+      "type": "code",
+      "text": "import module_name"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2. Импорт конкретного объекта из модуля"
+    },
+    {
+      "type": "code",
+      "text": "from module_name import object_name"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "3. Импорт модуля с псевдонимом"
+    },
+    {
+      "type": "code",
+      "text": "import module_name as alias"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примеры использования импорта модулей"
+    },
+    {
+      "type": "code",
+      "text": "# Импорт модуля math\nimport math\nprint(math.sqrt(16))  # Выведет 4.0\n\n# Импорт функции randint из модуля random\nfrom random import randint\nprint(randint(1, 10))  # Выведет случайное число от 1 до 10\n\n# Импорт модуля datetime с псевдонимом dt\nimport datetime as dt\nprint(dt.datetime.now())  # Выведет текущую дату и время"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Подробнее о импорте модулей в Python вы можете прочитать "
+        },
+        {
+          "text": "в данной статье на Notion",
+          "href": "https://informatikakegeitpy.notion.site/Python-tpy-7faa22fbf60c441fb26bf7a1f76b2464?pvs=4",
+          "bold": true
+        },
+        {
+          "text": ",",
+          "href": "https://informatikakegeitpy.notion.site/Python-tpy-7faa22fbf60c441fb26bf7a1f76b2464?pvs=4"
+        },
+        {
+          "text": " а также следите за интересными материалами в моём канале."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ZItytjQ8FltGKUJBqH9deZAOn6BqlMs6VOlxCull9d4YOAqkdABLJIljhJl74-u6Ay8ngahNSMhZoO24EpTsjfENKQmomb1RG0YDYM429l_MA5ackk4MHXk245M2Cnavf3PUtzmkNApL9c9tBO5Cpc2h2OHL9-_LHdRRC2jt-GZ6dcTNyiQAVrgJDWFjbHl7klZaGSxUGfzhW_c3WTKl7sL_6U1EPTxdzdAFsCVbCA7DbxUqxEPPyOqGwZ7-vsqOw__4qFB3x10ZYuZuJAR6jPyVUo5v8Ti9xODSQiBbMM899BP75QuQoYaVVchohYkhmX86ScfW90pqANtZcFIvMw",
+      "file": "749-1.jpg"
+    }
+  ],
+  "baseTitle": "Импорт модулей в Python",
+  "title": "Импорт модулей в Python",
+  "slug": "import-moduley-v-python",
+  "hidden": false
+}

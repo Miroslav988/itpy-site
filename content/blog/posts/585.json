@@ -1,0 +1,26 @@
+{
+  "id": 585,
+  "rubric": "video",
+  "description": "",
+  "date": "2024-05-11",
+  "source": "https://t.me/informatika_kege_itpy/585",
+  "blocks": [],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/hvZHy7K2dwd7c0Z34nGo5VSUdOx6Gm7X4WYCfT2zNMX0LR8YFVNn9YWT3OYskoXKVOhs_C9gqZbEAW4QrKoDrbs_mUoOrGAFYdRvlQwjt_B4soLL9JtUXhbF5cwmZtxcq-jQYSDYD7hwdvn6cnE2xRuCYDB5mXVwVnZJkevo5kApEulAyVR9_8xNIgvTafS1CXTlEpQ-OHq2JnF0bPbrcT1kjodVbf196fbKDrWLw90g0AHZ_fgJemI44FEiLehRPiVg6EOeosRYXlhr2a_k93vyjBo5daMqGtFos5wTvQBOVxJedUSauzJRXU-nnMHzzZkckuBIptYUT0IdnjDy1g.jpg",
+      "file": "585-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://youtube.com/shorts/5knFwcRqvoc?si=T0eMG3k1dS-4w-Jj",
+    "thumb": {
+      "src": "/blog-media/585-1.jpg",
+      "width": 640,
+      "height": 360
+    }
+  },
+  "baseTitle": "Сумма цифр строки в Python",
+  "title": "Сумма цифр строки в Python",
+  "slug": "summa-tsifr-stroki-v-python",
+  "hidden": false
+}

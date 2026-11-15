@@ -1,0 +1,126 @@
+{
+  "id": 1253,
+  "rubric": "useful",
+  "description": "С запозданием, но хотя бы так! Запускаем новый формат постов на этом канале - дайджест актуальных новостей.",
+  "date": "2026-02-05",
+  "source": "https://t.me/informatika_kege_itpy/1253",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "С",
+          "bold": true
+        },
+        {
+          "text": " запозданием, но хотя бы так! Запускаем новый формат постов на этом канале - дайджест актуальных новостей."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Собрал для вас ключевые материалы месяца"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Вышел вариант Статград от 27.01",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Статград 27.01.26 вариант 1",
+          "href": "https://disk.yandex.ru/i/vixdXzmtK3ZqhA",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Скачать файлы и ответы",
+          "href": "https://disk.yandex.ru/d/i9tg7eJxlxOPfg",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Статград 27.01.26 вариант 2",
+          "href": "https://disk.yandex.ru/i/p1_jpoG32GlsYg",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Скачать файлы и ответы",
+          "href": "https://disk.yandex.ru/d/HiJyTHQ65yTjLw",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "Подготовка рабочего места",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если начинаете готовиться сейчас, то займитесь этим в первую очередь",
+            "bold": true,
+            "italic": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": " 🙂",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "Полезные шпаргалки и разборы",
+            "bold": true
+          }
+        ],
+        [
+          {
+            "text": "Обновление базы вариантов",
+            "bold": true
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Дайджест за январь",
+  "title": "Дайджест за январь",
+  "slug": "daydzhest-za-yanvar",
+  "hidden": false
+}

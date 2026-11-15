@@ -1,0 +1,177 @@
+{
+  "id": 875,
+  "rubric": "breakdown",
+  "description": "Для какого наибольшего натурального числа А логическое выражение ¬ДЕЛ(x, А) → (ДЕЛ(x, 28) → ¬ДЕЛ(x, 49)) истинно (т.е. принимает значение 1) при любом натуральном значении…",
+  "date": "2024-10-18",
+  "source": "https://t.me/informatika_kege_itpy/875",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/875",
+      "thumb": {
+        "src": "/blog-media/875-1.jpg",
+        "width": 848,
+        "height": 448
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Для какого наибольшего натурального числа А логическое выражение"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "¬ДЕЛ(x, А) → (ДЕЛ(x, 28) → ¬ДЕЛ(x, 49))"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "истинно (т.е. принимает значение 1) при любом натуральном значении переменной х?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Очень хорошая задачка, так как мы можем заменить функцию ДЕЛ на запись x % A == 0, таким образом можем избегать использование логического оператора not."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(x, A):\n    return (x % A != 0) <= ((x % 28 == 0) <= (x % 49 != 0))\n\nR = []\nfor A in range(1, 10000):\n    if all(F(x, A) for x in range(1, 10000)):\n        R.append(A)\nprint(max(R))\n\n# Ответ: 196"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(x, A):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определяем функцию F, принимающую два аргумента: x и A."
+          }
+        ],
+        [
+          {
+            "text": "return (x % A != 0) <= ((x % 28 == 0) <= (x % 49 != 0))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращаем результаты логического выражения, сравнивая значения остатков от деления x на A, 28 и 49 с использованием логических операторов."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем пустой список R, который будет содержать все значения A, удовлетворяющие определенному условию."
+          }
+        ],
+        [
+          {
+            "text": "for A in range(1, 10000):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускаем цикл по всем целым числам A от 1 до 9999 включительно."
+          }
+        ],
+        [
+          {
+            "text": "if all(F(x, A) for x in range(1, 10000)):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, выполняется ли функция F для всех целых чисел x от 1 до 9999 для текущего A."
+          }
+        ],
+        [
+          {
+            "text": "R.append(A)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие на предыдущей строке истинно, добавляем значение A в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Находим и выводим максимальное значение из списка R."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/lDrRVgkU4tN0CXGfgL7aAq5kkz1SmM-ho6kzyePrBV1eUNOlX2Z7aMFVYz_Q8dqXdsYYauz4r3ZbQf3SdTDacjKf6bx1Vc46Gn1BVpHw_w49yjXTEffOJnHdD-zXuJFPR0rmqgdX6FH9_NUlIP7PkRjIP11W3FzQBseFdVu4qSPg5sSSce4XQgC1tpyYGtylldArqCWqI_XnJuK9wFA_GUNPeLJ1yDqgSwlgymtP5HNxPURSc_apygzDfOKbJ78laf4KzVU4nfqdvg-WcPow-f_DztiuNauM_TllXte9vVj1nwouImkcFr6sKlN3JkMYVOwXDk8vd5eV1a5bpFoh3Q",
+      "file": "875-1.jpg"
+    }
+  ],
+  "task": 15,
+  "problem": "16381",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "ЕГКР 27.04.24",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 15 ЕГЭ: разбор задачи 16381",
+  "title": "Задание 15 ЕГЭ: разбор задачи 16381",
+  "slug": "zadanie-15-ege-razbor-zadachi-16381",
+  "hidden": false
+}

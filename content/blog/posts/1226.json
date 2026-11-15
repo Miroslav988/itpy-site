@@ -1,0 +1,158 @@
+{
+  "id": 1226,
+  "rubric": "python",
+  "description": "Еще немножечко про строки str 👇",
+  "date": "2025-12-27",
+  "source": "https://t.me/informatika_kege_itpy/1226",
+  "blocks": [
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Еще немножечко про строки str 👇"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".split()",
+          "code": true
+        },
+        {
+          "text": " -- разделитель текста",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Превращает строку в список, разбивая её по указанному разделителю. Если разделитель не задан -- использует пробелы. Можно указать максимальное количество разбиений."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "text = \"Python JavaScript C++\"\nprint(text.split())  # ['Python', 'JavaScript', 'C++']\n\ndate = \"2025-12-27\"\nprint(date.split('-'))  # ['2025', '12', '27']"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".strip()",
+          "code": true
+        },
+        {
+          "text": " -- чистка по краям",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Возвращает копию строки, удаляя указанные символы с обоих концов. Без аргумента убирает пробелы, табуляции и переносы строк. Также есть"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": ".lstrip()",
+          "bold": true,
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "(только слева) и"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": ".rstrip()",
+          "bold": true,
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "(только справа)."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "text = \"   Hello World!   \\n\"\nprint(text.strip())  # \"Hello World!\"\n\ntext2 = \"###Python###\"\nprint(text2.strip('#'))  # \"Python\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".replace()",
+          "code": true
+        },
+        {
+          "text": " -- замена содержимого",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Создаёт новую строку, заменяя все вхождения одной подстроки на другую. Третий параметр (необязательный) ограничивает количество замен."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "text = \"I love Java\"\nprint(text.replace(\"Java\", \"Python\"))  # \"I love Python\"\n\ntext2 = \"a b a c a d\"\nprint(text2.replace(\"a\", \"x\", 2))  # \"x b x c a d\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".join()",
+          "code": true
+        },
+        {
+          "text": " -- сборщик строк",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Объединяет элементы последовательности (списка, кортежа) в одну строку, вставляя между ними строку-разделитель, у которой вызван метод."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "langs = [\"Python\", \"JS\", \"C++\"]\nprint(\", \".join(langs))  # \"Python, JS, C++\""
+    }
+  ],
+  "media": [],
+  "baseTitle": "Основные методы строк в python, полезные для ЕГЭ",
+  "title": "Основные методы строк в python, полезные для ЕГЭ",
+  "slug": "osnovnye-metody-strok-v-python-poleznye-dlya-ege",
+  "hidden": false
+}

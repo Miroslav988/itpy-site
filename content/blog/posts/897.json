@@ -1,0 +1,153 @@
+{
+  "id": 897,
+  "rubric": "breakdown",
+  "description": "Значение арифметического выражения: 3**2000 + 3**10 − х, где х – натуральное число, записали в троичной системе счисления. Определите наименьшее значение x, при котором троичная…",
+  "date": "2024-10-28",
+  "source": "https://t.me/informatika_kege_itpy/897",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/897",
+      "thumb": {
+        "src": "/blog-media/897-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Значение арифметического выражения: 3**2000 + 3**10 − х, где х – натуральное число, записали в троичной системе счисления. Определите наименьшее значение x, при котором троичная запись значения данного выражения содержит 2000 цифр «2»."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Данный прототип появился на экзамене в 2024 году, не считаю его сложным, всего-то нужно добавить две строчки!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def convert(n, b):\n    r = ''\n    while n > 0:\n        r += str(n % b)\n        n //= b\n    return r[::-1]\n\n\nfor x in range(60000, 0, -1):\n    n = 3**2000 + 3**10 - x\n    r = convert(n, 3)\n    if r.count('2') == 2000:\n        print(x)\n        break\n\n#Ответ: 59050"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "for x in range(60000, 0, -1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускаем цикл, перебирая значения x от 60000 до 1 (включительно), уменьшая x на 1 на каждой итерации."
+          }
+        ],
+        [
+          {
+            "text": "n = 3**2000 + 3**10 - x",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляем n как сумму 3 в степени 2000 и 3 в степени 10, затем вычитаем текущее значение x."
+          }
+        ],
+        [
+          {
+            "text": "r = convert(n, 3)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем число n в представление в системе счисления с основанием 3 и сохраняем результат в переменную r."
+          }
+        ],
+        [
+          {
+            "text": "if r.count('2') == 2000:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, содержится ли в строке r ровно 2000 символов '2'."
+          }
+        ],
+        [
+          {
+            "text": "print(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие истинно, выводим текущее значение x."
+          }
+        ],
+        [
+          {
+            "text": "break",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Прерываем цикл, так как нужное значение x найдено."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/o0r_NzlfButPD0bDWw0UftZvDhB1WSE7MD3z49Rq0V3k-owe6JgnbU_zqa2Hbg9r1IkiQGVlbT_If0FQxkgeuuir2C-K20Z8dad8L4zHjJL5ER8gQNWlvavG46yBd04Ih-laAHrZHff6meHK4KiQh7kKyjXCIDMhEd4l2oBoRnVfDtC0nm3PfIJR0uyz2BYEqhI_oqr0CNPzhDPN85THrGN9U2IiaC4-HaGTCx-p4oPo32QnNs6lRuIq2RjKslKSOMe_B5am_B__v5UedmvXdn_CYIfI-g04UN7B5VnXPwJNn0k5LiCMCpYJyU6lJH9kdW3fdtynoxINm1yJO6mfig",
+      "file": "897-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "18169",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "(К. Багдасарян)",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 18169",
+  "title": "Задание 14 ЕГЭ: разбор задачи 18169",
+  "slug": "zadanie-14-ege-razbor-zadachi-18169",
+  "hidden": false
+}

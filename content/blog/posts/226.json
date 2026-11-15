@@ -1,0 +1,36 @@
+{
+  "id": 226,
+  "rubric": "useful",
+  "description": "Вопрос: Какой метод в словаре Python используется для получения значения по ключу, и возвращает значение по умолчанию, если ключ не найден?",
+  "date": "2023-08-16",
+  "source": "https://t.me/informatika_kege_itpy/226",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/226",
+      "thumb": {
+        "src": "/blog-media/226-1.jpg",
+        "width": 848,
+        "height": 528
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вопрос: Какой метод в словаре Python используется для получения значения по ключу, и возвращает значение по умолчанию, если ключ не найден?"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/N_zIztR35gRymEh0rUaMY7Rxu3yJGMZR2YS69sj9MuXV-IXABaUpsKi9iqWw96was9CN2TzBQWkMJqGVIb5FyaVs4atsb3B895LyuMGGAi2EcOYeEJo2PapWR_w_4GQIL8-GkOmYgE80S_c4IvKhMBItf9Ekp7q23myvR0pPH9_RHK9NBankZ2F1hIKgqND2EP0vR-WeKJZo76xAfRmfxeUDdl4vYXE4S-57Odwt8BCplMtBeBOI46E0aUIW3SuUjx6Z3l53gS_SxJ4XUxntWYNEEytxY1KM4eD0iBjj9ASQ8g39UUsg8XRN_qL1GTIvOiVf-1HUdw1E4jlOfGDphA",
+      "file": "226-1.jpg"
+    }
+  ],
+  "baseTitle": "Давайте решим задачку с питоновскими словарями",
+  "title": "Давайте решим задачку с питоновскими словарями",
+  "slug": "davayte-reshim-zadachku-s-pitonovskimi-slovaryami",
+  "hidden": false
+}

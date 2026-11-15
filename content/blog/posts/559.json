@@ -1,0 +1,149 @@
+{
+  "id": 559,
+  "rubric": "breakdown",
+  "description": "Найдите все натуральные числа, не превышающие 10**9, которые соответствуют маске 4*64*9?7 и при этом без остатка делятся на 9117. В ответе запишите все найденные числа в порядке…",
+  "date": "2024-05-07",
+  "source": "https://t.me/informatika_kege_itpy/559",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/559",
+      "thumb": {
+        "src": "/blog-media/559-1.jpg",
+        "width": 848,
+        "height": 400
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Найдите все натуральные числа, не превышающие 10**9, которые"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "соответствуют маске 4*64*9?7 и при этом без остатка делятся на 9117."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе запишите все найденные числа в порядке возрастания."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from fnmatch import *\nfor x in range(9117, 10**9, 9117):\n    if fnmatch(str(x), '4*64*9?7'):\n        print(x)\n\n# Ответ:\n# 464967\n# 41764977\n# 406444977\n# 436439907\n# 464337927\n# 464884947"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from fnmatch import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля fnmatch, который предоставляет возможность использовать шаблоны для сравнения строк."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(9117, 10**9, 9117):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for для переменной x в диапазоне от 9117 до 10^9 с шагом 9117."
+          }
+        ],
+        [
+          {
+            "text": "if fnmatch(str(x), '4*64*9?7'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если строковое представление числа x соответствует шаблону '4*64*9?7' с помощью функции fnmatch."
+          }
+        ],
+        [
+          {
+            "text": "print(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод числа x, которое удовлетворяет условию проверки шаблона."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таким образом, приведенный код ищет числа в заданном диапазоне, которые соответствуют шаблону '4*64*9?7', где символ "
+        },
+        {
+          "text": "*",
+          "code": true
+        },
+        {
+          "text": " означает любую последовательность символов, а символ "
+        },
+        {
+          "text": "?",
+          "code": true
+        },
+        {
+          "text": " означает любой одиночный символ."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/mwau31w_UODRHvkLOzMpufMFFZ0YU4iAfRYOIK94Tpl5C4E4dgluohjor28WMIZhJjdxnfkxzVpEutwGyaVOzJllaasGi8onQv6SihCkwOtB-WF65_LpYtatwooy9GwHbV_1PuSUQ8fkcfE2h4oILOjsBn6xGjaRuhrNdUV761ugN_3SWrWT0o_3RwSYxsQZtSycnqMCh4WMQTepZ4Ml2WiRj2PDrqQBqT_RgduJ-oMG3gZ9AvSotvheLObfpyIJ98ziTuXUci5KavZDlLrS8F_g123uAeBmCXc4RbfKCtW7VCQcApx-eRhhmZ-4eGz__A55KjkwuL95k1IvrI9zcw",
+      "file": "559-1.jpg"
+    }
+  ],
+  "task": 25,
+  "collection": "СтатГрад",
+  "meta": {
+    "source": "Статград",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 25 ЕГЭ: разбор задачи — Статград",
+  "title": "Задание 25 ЕГЭ: разбор задачи — Статград",
+  "slug": "zadanie-25-ege-razbor-zadachi-statgrad",
+  "hidden": false
+}

@@ -1,0 +1,171 @@
+{
+  "id": 571,
+  "rubric": "breakdown",
+  "description": "У Троечки есть две команды: 1. Вычесть 3 2. Умножить на -3 Сколько различных отрицательных результатов можно получить из исходного числа 333 в ходе исполнения программы,…",
+  "date": "2024-05-09",
+  "source": "https://t.me/informatika_kege_itpy/571",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/571",
+      "thumb": {
+        "src": "/blog-media/571-1.jpg",
+        "width": 848,
+        "height": 672
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "У Троечки есть две команды:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. Вычесть 3"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Умножить на -3"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько различных отрицательных результатов можно получить из исходного числа 333 в ходе исполнения программы, содержащей ровно 13 команд?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Для решения этого номера необходимо создать глобальный список или множество, чтобы собрать все подходящие числа."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "my_set = set()\n\ndef F(a, k):\n    if k == 13:\n        my_set.add(a)\n        return 0\n    return F(a - 3, k+1) + F(a * -3, k+1)\n\nF(333, 0)\n\nprint(len([x for x in my_set if x < 0]))\n\n# Ответ: 2224"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "my_set = set()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается пустое множество my_set, которое будет использоваться для хранения уникальных значений."
+          }
+        ],
+        [
+          {
+            "text": "def F(a, k):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявляется функция F с двумя параметрами a и k."
+          }
+        ],
+        [
+          {
+            "text": "if k == 13:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется условие: если k равно 13, то текущее значение a добавляется в множество my_set, и функция возвращает 0."
+          }
+        ],
+        [
+          {
+            "text": "return F(a - 3, k+1) + F(a * -3, k+1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Функция вызывает себя рекурсивно дважды, уменьшая a на 3 и умножая его на -3, а также увеличивая k на 1. Результаты обоих вызовов складываются и возвращаются."
+          }
+        ],
+        [
+          {
+            "text": "F(333, 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызывается функция F с аргументами 333 и 0, запуская процесс рекурсивного вычисления."
+          }
+        ],
+        [
+          {
+            "text": "print(len([x for x in my_set if x < 0]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводится длина списка, содержащего элементы из my_set, которые меньше 0."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/tgZfU-GKr4ykoINlU1y4Uj0Zwi22s8_3jjvEt6lJE1JH3OpoyS5M1kzsSxCD4hBIoyQe4jI-kX4bgMr2-v1kAMpH1Yo48c4zWAvGjKTpURxO0AvNvjEnyyLyRZdfZkR5hkiVSeIDloL3te98ow_r4OD5kEvU85jtWhiZxPWIRKmnR4-vTB5B6iKM5SDWHPilbkttBikjGC68kutqvvlLr6dfy_bM-MwYq0DTXuv2lNZpQThv47zcfmvsxa--4iKpUhZenJhG-K-CiuFREzpNbWkcwmu3U6u8CjTumnSSZ4hTk4FXygsRvbOyQzslx0DB5KxmxBCr7_MfUPuScX0o1g",
+      "file": "571-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "6635",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Пробник ИМЦ СПб 2023",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 6635",
+  "title": "Задание 23 ЕГЭ: разбор задачи 6635",
+  "slug": "zadanie-23-ege-razbor-zadachi-6635",
+  "hidden": false
+}

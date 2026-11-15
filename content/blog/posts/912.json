@@ -1,0 +1,201 @@
+{
+  "id": 912,
+  "rubric": "breakdown",
+  "description": "Определите количество троек последовательности, сумма цифр элементов которых равна минимальному положительному элементу последовательности, оканчивающемуся на 4. В ответе запишите…",
+  "date": "2024-11-12",
+  "source": "https://t.me/informatika_kege_itpy/912",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/912",
+      "thumb": {
+        "src": "/blog-media/912-1.jpg",
+        "width": 848,
+        "height": 464
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество троек последовательности, сумма цифр элементов которых равна минимальному положительному элементу последовательности, оканчивающемуся на 4. В ответе запишите количество найденных троек, затем максимальную из сумм элементов таких троек."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В этой задачи я слеиваю все числа тройки в одну общую строчку и изящно избавляюсь от знака \"минус\"."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(x) for x in open('files/17.txt')]\nD = [x for x in M if x > 0 and x % 10 == 4]\nR = []\nfor i in range(len(M)-2):\n    # x, y, z = M[i], M[i+1], M[i+2]\n    x, y, z = M[i:i+3]\n    S = ''.join([str(p) for p in (x, y, z)])\n    summa = sum(int(x) for x in S if x.isdigit())\n    if summa == min(D):\n        R.append(x + y + z)\nprint(len(R), max(R))\n\n# Ответ: 11 180738"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "M = [int(x) for x in open('files/17.txt')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Читаем файл '17.txt', преобразуем каждую строку в целое число и сохраняем в список M."
+          }
+        ],
+        [
+          {
+            "text": "D = [x for x in M if x > 0 and x % 10 == 4]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список D, содержащий только положительные числа из M, оканчивающиеся на 4."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем пустой список R, который будет хранить результаты."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(M)-2):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускаем цикл по индексу i от 0 до длины списка M минус 2, чтобы иметь возможность брать группы из трех чисел."
+          }
+        ],
+        [
+          {
+            "text": "x, y, z = M[i:i+3]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявляем переменные x, y, z как три последовательных элемента списка M, начиная с индекса i."
+          }
+        ],
+        [
+          {
+            "text": "S = ''.join([str(p) for p in (x, y, z)])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Конвертируем x, y, z в строки и объединяем их в одну строку S."
+          }
+        ],
+        [
+          {
+            "text": "summa = sum(int(x) for x in S if x.isdigit())",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляем сумму всех цифр в строке S и сохраняем её в переменной summa."
+          }
+        ],
+        [
+          {
+            "text": "if summa == min(D):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, равна ли сумма summa минимальному значению в списке D."
+          }
+        ],
+        [
+          {
+            "text": "R.append(x + y + z)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, добавляем сумму x, y и z в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(len(R), max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим количество найденных сумм в R и максимальное значение из R."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/pZDOu5N92wZosCcIvh73ovVxyrJkjQGDtXS9VVuPOQ3PQBswmlXATGjbaNKq37QE30tD0idR1XLkqWR_YwKi6V2tZS8HTLktGlKiPhLlPVpAiFj6CfcY1ZdE12Fh-XHxtgDaBkveXTQNOXXImjL-D8weN36I_38m25fV_nWecsUv6DNoOahKF7Fc0WAq5QMK1fcVm2l5_b-8ocrSBUwd--fRwVLnaTk2ALBvJDDL5FbNEEXzkGYkQKa0kJTjLRdUFRA86LM0b5-xZsSLK30Ayf4TPgdjGT-TazbqvjPHPHrnbvopAYSNII6q8rZFHoPk9yB4XMF-B1sCwSBEve1iaQ",
+      "file": "912-1.jpg"
+    }
+  ],
+  "task": 17,
+  "problem": "18176",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "(Д. Бахтиев)",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи 18176",
+  "title": "Задание 17 ЕГЭ: разбор задачи 18176",
+  "slug": "zadanie-17-ege-razbor-zadachi-18176-912",
+  "hidden": true
+}

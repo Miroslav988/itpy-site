@@ -1,0 +1,246 @@
+{
+  "id": 1205,
+  "rubric": "python",
+  "description": "Убирает знак -- важно для длины числа и модульных операций.",
+  "date": "2025-11-21",
+  "source": "https://t.me/informatika_kege_itpy/1205",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "max()",
+          "code": true
+        },
+        {
+          "text": " | ",
+          "bold": true
+        },
+        {
+          "text": "min()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Поиск максимального или минимального числа."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "print(max(12, 5), min(12, 5))  \n# 12 5\n\nnums = [4, 17, -3, 9]\nprint(max(nums), min(nums))  \n# 17 -3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "str()",
+          "code": true
+        },
+        {
+          "text": " |",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "int()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Переход между строкой и числом."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = str(19803)\nn = int(s) - 1\nprint(n)  # 19802"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "abs()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Убирает знак -- важно для длины числа и модульных операций."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "n = -1234\nlen(str(abs(n)))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "sqrt()",
+          "code": true
+        },
+        {
+          "text": " | ",
+          "bold": true
+        },
+        {
+          "text": "x**0.5",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Корень -- иногда нужен в проверках (в 17-м редко, но бывает)."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "form math import sqrt\nprint(x**0.5, sqrt(x))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "gcd(a, b)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "НОД -- полезно при задачах, где условие связано с делителями."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from math import gcd"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "floor()",
+          "code": true
+        },
+        {
+          "text": " |",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ceil()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Округление вниз|вверх (редко в 17-м, но иногда встречается)."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from math import floor, ceil"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "int(a, b)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Перевод числа из системы счисления b в десятичную."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "int(\"1011\", 2)  # 11"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Полезные лайфхаки"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сумма цифр",
+          "bold": true,
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "sum(int(x) for x in str(n))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Последняя цифра и “обрезание” числа",
+          "bold": true,
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "n % 10     # последняя цифра\nn // 10    # без последней цифры"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Перебор троек/пар через zip()",
+          "bold": true,
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for a, b, c in zip(a, a[1:], a[2:]): ...\nfor a, b in zip(a, a[2:]): ..."
+    }
+  ],
+  "media": [],
+  "baseTitle": "Мини-шпаргалка по нужным функциям для 17-го задания ЕГЭ",
+  "title": "Мини-шпаргалка по нужным функциям для 17-го задания ЕГЭ",
+  "slug": "mini-shpargalka-po-nuzhnym-funktsiyam-dlya-17-go-zadaniya-1205",
+  "hidden": true
+}

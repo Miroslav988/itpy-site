@@ -1,0 +1,52 @@
+{
+  "id": 569,
+  "rubric": "useful",
+  "description": "Преимущество нашего сборника в том, что здесь предусмотрен встроенный форум с решениями, где каждый желающий может оставить свой вариант для той или иной задачи.",
+  "date": "2024-05-08",
+  "source": "https://t.me/informatika_kege_itpy/569",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/569",
+      "thumb": {
+        "src": "/blog-media/569-1.jpg",
+        "width": 720,
+        "height": 960
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Преимущество нашего сборника в том, что здесь предусмотрен встроенный форум с решениями, где каждый желающий может оставить свой вариант для той или иной задачи."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Таким образом можно найти подсказку, исправить опечатку в своем коде, или найти вдохновение в чужом решении, чтобы написать более оптимальный код 💻"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Я настоятельно призываю вас делиться своими вариантами решений, даже если в задаче просто просят \"оставить ответ\" 🫡"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/hL4yd3wqUndOtqk_TXcRmkpMtiGUOvr4-oxNg4lhxBZHhze2snBjTsyP7SwmJnr1191GqE8G_MLEs9COavANBC8zD0KfW8I_H9TyeCuaZHzsPgPxDEtJE1RJwZXr0Sceg3YICBIWlRhljWC63efFBW3sy7Lz-1Vs42dUfsqnZwOUaV4LD5qGvQQZWkemFZvb8Q8o5xayYKwKFr0BUOgPrwE05AewAkvY1ch2M36yThIkylcXPGdW-Vrl0xGr9L9g1Ui9fy30GsAxbzNNdrjxDBIpyOmnzcGSepDwDDwo1ycDbB1arLdwX-FIxFoMul0LWvoIhGnGJgIlg2ZLLie4ZQ",
+      "file": "569-1.jpg"
+    }
+  ],
+  "baseTitle": "Подборка задач для подготовки к ЕГЭ по информатике 2024 | itpy",
+  "title": "Подборка задач для подготовки к ЕГЭ по информатике 2024 | itpy",
+  "slug": "podborka-zadach-dlya-podgotovki-k-ege-po-informatike-2024",
+  "hidden": false
+}

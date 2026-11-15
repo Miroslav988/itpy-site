@@ -1,0 +1,66 @@
+{
+  "id": 262,
+  "rubric": "breakdown",
+  "description": "Основная сложность задания заключается в том, что нужно выполнить следующий ряд условий: – минимальное число не повторяется; – среди остальных чисел строки есть повторяющиеся; –…",
+  "date": "2023-10-17",
+  "source": "https://t.me/informatika_kege_itpy/262",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/262",
+      "thumb": {
+        "src": "/blog-media/262-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/10910-9-f313d98112a74b2c8c7c2fe3070244a3?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основная сложность задания заключается в том, что нужно выполнить следующий ряд условий:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– минимальное число не повторяется;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– среди остальных чисел строки есть повторяющиеся;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– сумма максимального и минимального чисел строки меньше, чем сумма повторяющихся чисел."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/fS4WAjSuDS8FS8jLN4wX2WSLPqMbMayhkSK1-Y2Sfn_vy3bNsqOtbnuY47BDg7bfgi4F_sjyN8nje1g_wV2j1sYwpfXeYN5uPYDbj4xSApoSBDncRGoHcUodONY1v4AzvbEZvnfguK3iNMHqhAU4hRrQZMP_I-I99HhQrGVLoee-P1swGlNnauDg0Du1bsUWWm1DOoIbyEjgh0TH1NW8pI163ozPnM-i77pghKkzMe8cpYhT9eJNLraEOKSD5oIcL-OnmBuENmtBBUzj3Zm-JzIztgAVkumhCB9JMXrDBpO57jZkedz-saBjnyiVTp8nAoGXN_MQTkLYBvDGuQe9nA",
+      "file": "262-1.jpg"
+    }
+  ],
+  "task": 9,
+  "problem": "10910",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи 10910",
+  "title": "Задание 9 ЕГЭ: разбор задачи 10910",
+  "slug": "zadanie-9-ege-razbor-zadachi-10910",
+  "hidden": false
+}

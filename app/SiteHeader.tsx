@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useEffect, useId, useRef } from "react";
 import { BookingButton } from "./booking/Booking";
 import { links, teacher } from "./content";
-import { categories } from "./courses/catalog";
+import { shownCategories } from "./courses/catalog";
 
 type Page = "home" | "courses" | "blog";
-type SiteHeaderProps = { active: Page };
+// No active item on pages outside the main menu, such as the 404.
+type SiteHeaderProps = { active?: Page };
 
 const pages: Array<{ id: Page; href: string; label: string }> = [
   { id: "home", href: "/", label: "Занятия со мной" },
@@ -26,7 +27,7 @@ const sectionLinks: Record<Page, Array<{ href: string; label: string }>> = {
     { href: "#trial", label: "Пробное занятие" },
   ],
   courses: [
-    ...categories.map((category) => ({ href: `#${category.id}`, label: category.title })),
+    ...shownCategories.map((category) => ({ href: `#${category.id}`, label: category.title })),
     { href: "#help", label: "Занятия со мной" },
   ],
   blog: [],
@@ -56,7 +57,8 @@ export default function SiteHeader({ active }: SiteHeaderProps) {
     };
   }, []);
 
-  const menuLabel = { home: "Разделы главной страницы", courses: "Разделы каталога курсов", blog: "Меню сайта" }[active];
+  const menuLabel = active === "home" ? "Разделы главной страницы" : active === "courses" ? "Разделы каталога курсов" : "Меню сайта";
+  const sections = active ? sectionLinks[active] : [];
 
   return (
     <>
@@ -88,8 +90,8 @@ export default function SiteHeader({ active }: SiteHeaderProps) {
                 <span className="nav-label">{page.label}</span>
               </Link>
             ))}
-            <a href={links.telegramPersonal} target="_blank" rel="noopener noreferrer">
-              <span className="nav-label">Telegram</span> <span aria-hidden="true">↗</span>
+            <a href={links.telegramChannel} target="_blank" rel="noopener noreferrer">
+              <span className="nav-label">Канал</span> <span aria-hidden="true">↗</span>
             </a>
           </nav>
 
@@ -109,11 +111,11 @@ export default function SiteHeader({ active }: SiteHeaderProps) {
                       <span className="nav-label">{page.label}</span>
                     </Link>
                   ))}
-                  <a href={links.telegramPersonal} target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+                  <a href={links.telegramChannel} target="_blank" rel="noopener noreferrer">Канал ↗</a>
                 </div>
-                {sectionLinks[active].length > 0 && (
+                {sections.length > 0 && (
                   <ol className="header-menu-sections">
-                    {sectionLinks[active].map((section) => (
+                    {sections.map((section) => (
                       <li key={section.href}>
                         <a href={section.href} onClick={closeMenu}>{section.label}</a>
                       </li>

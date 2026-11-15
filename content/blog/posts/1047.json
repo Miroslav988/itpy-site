@@ -1,0 +1,186 @@
+{
+  "id": 1047,
+  "rubric": "breakdown",
+  "description": "Определите наибольший номер строки таблицы, для чисел которой выполнены оба условия: – числа в строке расположены в порядке неубывания; – в строке есть повторяющиеся числа с…",
+  "date": "2025-04-20",
+  "source": "https://t.me/informatika_kege_itpy/1047",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/1047",
+      "thumb": {
+        "src": "/blog-media/1047-1.jpg",
+        "width": 848,
+        "height": 320
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите наибольший номер строки таблицы, для чисел которой выполнены оба условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– числа в строке расположены в порядке неубывания;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– в строке есть повторяющиеся числа с чётной суммой цифр."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "R = []\nfor n, s in enumerate(open('9.csv'), 1):\n    M = [int(x) for x in s.split(';')]\n    if M == sorted(M):\n        if any(M.count(x) > 1 and sum(map(int, str(x))) % 2 == 0 for x in M):\n            R.append(n)\nprint(max(R))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 6937",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаём пустой список R для хранения номеров строк, которые будут соответствовать условиям."
+          }
+        ],
+        [
+          {
+            "text": "for n, s in enumerate(open('9.csv'), 1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Начинаем цикл по каждой строке файла 9.csv, считывая одновременно её содержание s и устанавливая номер строки n, начиная с 1."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(x) for x in s.split(';')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем строку s, разделённую по символу ;, в список целых чисел M."
+          }
+        ],
+        [
+          {
+            "text": "if M == sorted(M):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, является ли список M отсортированным по возрастанию."
+          }
+        ],
+        [
+          {
+            "text": "if any(M.count(x) > 1 and sum(map(int, str(x))) % 2 == 0 for x in M):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, есть ли в списке M повторяющиеся элементы x, сумма цифр которых чётная."
+          }
+        ],
+        [
+          {
+            "text": "R.append(n)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавляем номер строки n в список R, если выполняются условия выше."
+          }
+        ],
+        [
+          {
+            "text": "print(max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим максимальный номер строки из списка R, соответствующий требуемым условиям."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Tx0yzCBhClCjx104oT2gAu-OsXrvLTXoRoMGsfzePhTKvG7fXVMvzpiHiiGCuCo6yseM1_0JAPw2HcX9DFuDXCz-8k0_5mVgaaWfzFpke1vAW2jRt1NOq3muvXIBG2QEv37BdaY3VfzUuQKeXFrACRuP0DY9cwNhNbzQp_cetHQZ0jHT_9A5C_npzgiYUfm7mlKyI_pMJWVxaWgROi4BMZlfeXvQlcDY_EKdVl_oLylE4UoCcZ_XobcdYTYBWAoe0334W-9heIlwuEoCeJ22s9rn6Yir2MPqXAeR0r8e7OJhNJivrqtTD1MPSbXe5ay3fYYnlDGj8WVAmw2FY65Bqg",
+      "file": "1047-1.jpg"
+    }
+  ],
+  "task": 9,
+  "problem": "18258",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Л. Шастин",
+    "level": "Сложный"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи 18258",
+  "title": "Задание 9 ЕГЭ: разбор задачи 18258",
+  "slug": "zadanie-9-ege-razbor-zadachi-18258-1047",
+  "hidden": true
+}

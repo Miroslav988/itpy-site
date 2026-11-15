@@ -1,0 +1,163 @@
+{
+  "id": 1193,
+  "rubric": "python",
+  "description": "Вы когда-нибудь сталкивались с задачей - найти позицию элемента в списке или строке? Тогда метод .index() - то что вам нужно)",
+  "date": "2025-10-17",
+  "source": "https://t.me/informatika_kege_itpy/1193",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вы когда-нибудь сталкивались с задачей - найти позицию элемента в списке или строке? Тогда метод "
+        },
+        {
+          "text": ".index()",
+          "code": true
+        },
+        {
+          "text": " - то что вам нужно)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Что делает ",
+          "bold": true
+        },
+        {
+          "text": ".index()",
+          "code": true
+        },
+        {
+          "text": "?",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Он возвращает индекс первого вхождения указанного элемента в последовательность (список, строку, кортеж)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример"
+    },
+    {
+      "type": "code",
+      "text": "fruits = ['киви', 'банан', 'груша', 'банан', 'виноград']\npos = fruits.index('банан')\nprint(pos)  # Выведет: 1"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "- "
+        },
+        {
+          "text": ".index()",
+          "code": true
+        },
+        {
+          "text": " ищет "
+        },
+        {
+          "text": "'банан'",
+          "code": true
+        },
+        {
+          "text": " и возвращает его первую позицию - "
+        },
+        {
+          "text": "1",
+          "code": true
+        },
+        {
+          "text": " (учитывая, что нумерация с "
+        },
+        {
+          "text": "0",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ")."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Важно:",
+          "bold": true
+        },
+        {
+          "text": " если элемента в последовательности нет - "
+        },
+        {
+          "text": ".index()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " вызовет ошибку "
+        },
+        {
+          "text": "ValueError",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Чтобы избежать этого, можно воспользоваться оператором "
+        },
+        {
+          "text": "in",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " для проверки, на наличие элемента."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Совет:",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Для поиска всех вхождений элемента — используйте цикл или генератор, а "
+        },
+        {
+          "text": ".index()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " отлично подходит для быстрого определения первой позиции."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Метод.index() в Python",
+  "title": "Метод.index() в Python",
+  "slug": "metod-index-v-python",
+  "hidden": false
+}

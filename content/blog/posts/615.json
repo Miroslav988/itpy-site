@@ -1,0 +1,26 @@
+{
+  "id": 615,
+  "rubric": "video",
+  "description": "",
+  "date": "2024-05-17",
+  "source": "https://t.me/informatika_kege_itpy/615",
+  "blocks": [],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/bAJqFZDIzqHXlThsxj6TSTAN9n-gDkVDOqyJ1WfgbuHvHQgbYhSvy3FGXx6Fg70cPVPRKKebzCIOn-4zKAvLRi3KOndC61CVpJct5LkxCiV5GdrlHL_zJh1ulAx2l5Iyw3XgvRXPn-yahj7ZMOoSE92IzYNzTquKKwJ7FlQAfH44wD9o0c1tO7Mz5KCsHEDxljWXHjyaUOKnBL1dopeoOdQMImYAZzfsIK86_FmIWI734CjYPAeuekcxEda9Ze_qE3ZGbnMt-3UvV3_c32pS1VvCj9eLsyvovJbedkSWUqbBYM4WS8to19CLd4eu6aEeD7VuzrzU6q91oNdD9rVXmw.jpg",
+      "file": "615-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://youtube.com/shorts/dEEpATMzVaM?si=c3aUpxnFpHqAYs01",
+    "thumb": {
+      "src": "/blog-media/615-1.jpg",
+      "width": 640,
+      "height": 360
+    }
+  },
+  "baseTitle": "Номера 5, 8, 12 ЕГЭ Сумма цифр строки в Python часть 2",
+  "title": "Номера 5, 8, 12 ЕГЭ Сумма цифр строки в Python часть 2",
+  "slug": "nomera-5-8-12-ege-summa-tsifr-stroki-v-python-chast-2",
+  "hidden": false
+}

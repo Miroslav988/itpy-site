@@ -1,0 +1,204 @@
+{
+  "id": 612,
+  "rubric": "breakdown",
+  "description": "Определите количество строк таблицы, для чисел которых выполнены оба условия: - в строке есть ровно одно число, которое повторяется дважды, и пять чисел без повторений; -…",
+  "date": "2024-05-16",
+  "source": "https://t.me/informatika_kege_itpy/612",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/612",
+      "thumb": {
+        "src": "/blog-media/612-1.jpg",
+        "width": 848,
+        "height": 560
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество строк таблицы, для чисел которых выполнены оба условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- в строке есть ровно одно число, которое повторяется дважды, и пять чисел без повторений;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- произведение трёх наименьших среди неповторяющихся чисел строки больше квадрата повторяющегося числа."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from math import prod\ncnt = 0\nfor s in open('9.txt'):\n    M = [int(x) for x in s.split()]\n    copied = [x for x in M if M.count(x) == 2]\n    not_copied = [x for x in M if M.count(x) == 1]\n    if len(copied) == 2 and len(not_copied) == 5:\n        if prod(sorted(not_copied)[:3]) > prod(copied):\n            cnt += 1\nprint(cnt)\n\n# Ответ: 1671305"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from math import prod",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт функции prod из модуля math, которая вычисляет произведение элементов итерируемого объекта."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация переменной cnt для подсчета количества выполненных условий."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.txt'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который проходит по каждой строке из файла \"9.txt\"."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(x) for x in s.split()]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание списка M, содержащего целочисленные значения, полученные разделением строки s."
+          }
+        ],
+        [
+          {
+            "text": "copied = [x for x in M if M.count(x) == 2]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Фильтрация списка M, чтобы получить только элементы, которые встречаются дважды."
+          }
+        ],
+        [
+          {
+            "text": "not_copied = [x for x in M if M.count(x) == 1]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Фильтрация списка M, чтобы получить только элементы, которые встречаются один раз."
+          }
+        ],
+        [
+          {
+            "text": "if len(copied) == 2 and len(not_copied) == 5:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если в списке copied содержится два элемента, а в списке not_copied пять элементов."
+          }
+        ],
+        [
+          {
+            "text": "if prod(sorted(not_copied)[:3]) > prod(copied):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: произведение трех наименьших элементов из отсортированного списка not_copied больше произведения элементов из списка copied."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличение счетчика cnt на 1, если выполнены все условия."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод результата."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/St9jl5b3Cme7EiQvZoPVjn2G5BJOws-BVFtDWgtil45nJmUuBZKBN1xSC0o1OuskD_z-DCcOPD_UpcxbR4lUvr2eVn0GreeHhD6mYWpQvPqj9Ibvw94T4wsKVc0rB-xEUI2d6RJvWPdDlh0NdyqQ0eX6nWBZIElIgl9QdNjpZoUEwdVaIHbSnZiBURm-4YKhHC-Whs3GIPTnG9eEWuQ2OtQRttLnuSA0H16Oj3SrADRwWiBJxk0CIkpEVe7Ss-NFPPITEk_KRsmrQm0lz7mfoSCJfPQiowijaUe9OpLIl5GH5E0vBBhfjY5A5qK4oQO_cSIbjCAk3GOH7VEjM04_sg",
+      "file": "612-1.jpg"
+    }
+  ],
+  "task": 9,
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "ЕГКР 27.04",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи — ЕГКР 27.04",
+  "title": "Задание 9 ЕГЭ: разбор задачи — ЕГКР 27.04",
+  "slug": "zadanie-9-ege-razbor-zadachi-egkr-27-04",
+  "hidden": false
+}

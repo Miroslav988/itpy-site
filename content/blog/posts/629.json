@@ -1,0 +1,193 @@
+{
+  "id": 629,
+  "rubric": "breakdown",
+  "description": "Элементами множеств А, P и Q являются натуральные числа, причём P = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20} и Q = { 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 }. Известно, что выражение…",
+  "date": "2024-05-20",
+  "source": "https://t.me/informatika_kege_itpy/629",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/629",
+      "thumb": {
+        "src": "/blog-media/629-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Элементами множеств А, P и Q являются натуральные числа, причём P = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20} и Q = { 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 }."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Известно, что выражение ((x ∈ A) → (x ∈ P)) ∧ (¬(x ∈ Q) → ¬(x ∈ A)) истинно при любом значении переменной х. Определите наибольшее возможное количество элементов множества A."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "a = set(range(0, 1000))\n\ndef F(x):\n    P = x in {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}\n    Q = x in {3, 6, 9, 12, 15, 18, 21, 24, 27, 30}\n    A = x in a\n    # ((x ∈ A) → (x ∈ P)) ∧ (¬(x ∈ Q) → ¬(x ∈ A))\n    return (A <= P) and ((not Q) <= (not A))\n\n\nfor x in range(0, 10000):\n    if F(x) == False:\n        a.remove(x)\nprint(len(a))\n\n# Ответ: 3"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "a = set(range(0, 1000))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание множества a, содержащего числа от 0 до 999."
+          }
+        ],
+        [
+          {
+            "text": "def F(x):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление функции F с аргументом x."
+          }
+        ],
+        [
+          {
+            "text": "P = x in {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, принадлежит ли x множеству {2, 4, 6, 8, 10, 12, 14, 16, 18, 20} и сохранение результата в переменную P."
+          }
+        ],
+        [
+          {
+            "text": "Q = x in {3, 6, 9, 12, 15, 18, 21, 24, 27, 30}",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, принадлежит ли x множеству {3, 6, 9, 12, 15, 18, 21, 24, 27, 30} и сохранение результата в переменную Q."
+          }
+        ],
+        [
+          {
+            "text": "A = x in a",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, принадлежит ли x множеству a (от 0 до 999) и сохранение результата в переменную A."
+          }
+        ],
+        [
+          {
+            "text": "return (A <= P) and ((not Q) <= (not A))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращение результата логического выражения: (A <= P) and ((not Q) <= (not A))."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(0, 10000):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который перебирает значения x от 0 до 9999."
+          }
+        ],
+        [
+          {
+            "text": "if F(x) == False:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если результат функции F для значения x равен False."
+          }
+        ],
+        [
+          {
+            "text": "a.remove(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Удаление значения x из множества a."
+          }
+        ],
+        [
+          {
+            "text": "print(len(a))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод длины множества a после выполнения цикла."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/vmTEX4Y-bjwCBjII9dl-HOL37vwuddNfdedj6ncERztmMQRdGzJHjzMT8fV0xpkC27NXJgxg0amS9GS0HUX7h47ucYWrAe0XIU74lfCsolCSaPZZs0h2OOv9CVJBoYSKulwX--V3VusXbV_SXa5swZSiahj928ylowfLv2yRRic6uLJsYUOQd_F1QWuK9lpvPhBMPzQN5bjjRgpF3N2zBRao5RIhMKddo7d5d3_wllnd-bcjI2POYDRjTt1A99_GdMtYy8H9AwCrUpzKV5VceB8J7WOiIxyEem9iZmFRs3KkK3TfEQ9LUBBadThrnmFcMjHp97h_ZPp2c5QJHu7otQ",
+      "file": "629-1.jpg"
+    }
+  ],
+  "task": 15,
+  "problem": "12924",
+  "collection": "КЕГЭ",
+  "meta": {
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 15 ЕГЭ: разбор задачи 12924",
+  "title": "Задание 15 ЕГЭ: разбор задачи 12924",
+  "slug": "zadanie-15-ege-razbor-zadachi-12924",
+  "hidden": false
+}

@@ -1,0 +1,109 @@
+{
+  "id": 1189,
+  "rubric": "python",
+  "description": "Многие думают, что создание очень большого диапазона - это много памяти. Но в Python всё иначе! 👩‍💻",
+  "date": "2025-10-13",
+  "source": "https://t.me/informatika_kege_itpy/1189",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Многие думают, что создание очень большого диапазона - это много памяти. ",
+          "italic": true
+        },
+        {
+          "text": "Но в"
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "Python",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": true
+        },
+        {
+          "text": "всё иначе! 👩‍💻"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "range()",
+          "code": true
+        },
+        {
+          "text": " хранит только начальное, конечное значения и шаг."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Он "
+        },
+        {
+          "text": "не создает список всех чисел сразу",
+          "bold": true
+        },
+        {
+          "text": ", а генерирует числа по мере необходимости!"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При вызове ",
+          "bold": true
+        },
+        {
+          "text": "range(10**9)",
+          "code": true
+        },
+        {
+          "text": " в памяти хранится лишь небольшая информация:",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- старт (по умолчанию 0)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- финиш (10^9)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- шаг (по умолчанию 1)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "А это ведь совсем немного данных!"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Почему range(10**9) почти не занимает памяти?",
+  "title": "Почему range(10**9) почти не занимает памяти?",
+  "slug": "pochemu-range-10-9-pochti-ne-zanimaet-pamyati",
+  "hidden": false
+}

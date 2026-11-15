@@ -1,0 +1,214 @@
+{
+  "id": 1284,
+  "rubric": "breakdown",
+  "description": "Текстовый файл состоит из символов, обозначающих заглавные буквы латинского алфавита и цифры от 0 до 9 включительно. Определите в прилагаемом файле максимальное количество идущих…",
+  "date": "2026-04-02",
+  "source": "https://t.me/informatika_kege_itpy/1284",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1284-1.jpg",
+      "width": 800,
+      "height": 347,
+      "alt": "Задание 24 ЕГЭ: разбор задачи 10724"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Недавно мне попалась очень интересная задача. Она, конечно, несложная — маловероятно, что настолько простую дадут в этом году на экзамене. Но в ней есть один нюанс: те самые «незначащие нули», с которыми здесь придётся реально побороться."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Текстовый файл состоит из символов, обозначающих заглавные буквы латинского алфавита и цифры от 0 до 9 включительно. Определите в прилагаемом файле максимальное количество идущих подряд символов, которые могут представлять запись числа в шестнадцатеричной системе счисления."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примечание"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Цифры, числовое значение которых превышает 9, обозначены латинскими буквами, начиная с буквы А."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Числа с незначащими нулями в ответ брать не следует."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\ns = open('files/24.txt').readline()\nfor x in alp[16:]:\n    s = s.replace(x, ' ')\nprint(max([len(hex(int(x, 16))[2:]) for x in s.split()]))\n\nprint(hex(int('000ABC', 16))[2:])"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ:",
+          "bold": true
+        },
+        {
+          "text": " 21"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "alp = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаём отсортированный список символов: цифры и заглавные латинские буквы."
+          }
+        ],
+        [
+          {
+            "text": "s = open('files/24.txt').readline()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Считываем первую строку из файла "
+          },
+          {
+            "text": "24.txt",
+            "code": true
+          },
+          {
+            "text": " в переменную "
+          },
+          {
+            "text": "s",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "for x in alp[16:]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Перебираем все символы алфавита, начиная с 17-го элемента списка "
+          },
+          {
+            "text": "alp",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(x, ' ')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяем каждый такой символ на пробел, чтобы разделить строку на нужные фрагменты."
+          }
+        ],
+        [
+          {
+            "text": "print(max([len(hex(int(x, 16))[2:]) for x in s.split()]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Для каждого фрагмента переводим число из 16-ричной системы, снова записываем его в 16-ричной и берём максимальную длину."
+          }
+        ],
+        [
+          {
+            "text": "print(hex(int('000ABC', 16))[2:])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Показываем, что при переводе числа из 16-ричной системы ведущие нули исчезают."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Если есть идеи по решению — напишите в комментариях, буду рад обсудить."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "И не забудьте поставить ☺️это очень поддерживает качество публикаций и мою мотивацию 🙏"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/dYc6gZnf1eF4xB7VylQ1EqkLEy_WOW90PNZo-FOX_pYDGyV32O-PIuYJJ05iOWLWU60YUH6XGqlWXGMowyqIznnsKV_9mXMB08SIokSs_3H-co-RAaeHDqdWetmd-rsMZL7bBABnEe67E3Tb0lPiX9_Z9VfC2xTk_eCXHBh_gF9sdqyXxNxJT26po4iUFcVdcy8Hx8uOQ75oFXqqgPA3vpigXe7BNgWLiNyG3PlJAhRMN1d-r3fdct98dVnAkpLEETKaH3ThdP_c09OzocO5VaqeCT4d4BxKkK65WIPk3fgDXCBK7DrAd6vMEznx9EVLNS6yBImuf8FYG2O6pL-Tew.jpg",
+      "file": "1284-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "10724",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "PRO100 ЕГЭ",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 10724",
+  "title": "Задание 24 ЕГЭ: разбор задачи 10724",
+  "slug": "zadanie-24-ege-razbor-zadachi-10724",
+  "hidden": false
+}

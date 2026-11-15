@@ -1,0 +1,66 @@
+{
+  "id": 214,
+  "rubric": "breakdown",
+  "description": "Задача с основной волны 2023 года, уровень сложности базовый, взята с сайта kompege.ru.",
+  "date": "2023-08-07",
+  "source": "https://t.me/informatika_kege_itpy/214",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/214",
+      "thumb": {
+        "src": "/blog-media/214-1.jpg",
+        "width": 816,
+        "height": 512
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/9843-22-7a40b7be336e4cc496ddf6ef32ee19a8?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Задача с основной волны 2023 года, уровень сложности базовый, взята с сайта "
+        },
+        {
+          "text": "kompege.ru.",
+          "href": "https://kompege.ru/task"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Да, решить такую \"базовую\" задачу можно руками за каких-то 3-5 минут, но мы рассматриваем более ёмкое решение через функцию "
+        },
+        {
+          "text": "ВПР,",
+          "href": "https://skillbox.ru/media/management/kak-sdelat-vpr-v-excel-poshagovaya-instruktsiya-so-skrinshotami/"
+        },
+        {
+          "text": " которое точно приведет Вас к правильному решению 📚"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/EGPxYllXys5chhlnuitTpi6fibVdGcDh3S3BB4K9z7-yo__w9uiVP2mmSTNmke7W5rEuDRkfGP0BA8ILodcAUz4XpMfATekQ1ChrVgj4gDfE-CPG0mDuV49rZF1MXDlwnMNpESyF0VaZuWXZENv-tRhpQFef3eYkSBhdH8UUYznJJbM_NZQfl4len5WKAht02AoV4tSkloqMUI79wL8pYci4n1-oiHN98HQ-gJKeLT7qJGqyk3m3b3KeKheMZAHNA8hL8il6Zdya9M6K_oeoYWzuwSx5MIUVZEwb5YtEgwh_p2wsT3Gl9vOBftHQ1RrN5Knq7t5-dZSK-jyw1PXGvw",
+      "file": "214-1.jpg"
+    }
+  ],
+  "task": 22,
+  "problem": "9843",
+  "baseTitle": "Задание 22 ЕГЭ: разбор задачи 9843",
+  "title": "Задание 22 ЕГЭ: разбор задачи 9843",
+  "slug": "zadanie-22-ege-razbor-zadachi-9843",
+  "hidden": false
+}

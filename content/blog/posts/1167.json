@@ -1,0 +1,189 @@
+{
+  "id": 1167,
+  "rubric": "breakdown",
+  "description": "У исполнителя имеются две команды, которые обозначены латинскими буквами: A. Вычти 2 B. Если число чётное, раздели на 2, иначе вычти 3 Программа для исполнителя – это…",
+  "date": "2025-09-13",
+  "source": "https://t.me/informatika_kege_itpy/1167",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1167-1.jpg",
+      "width": 800,
+      "height": 384,
+      "alt": "Задание 23 ЕГЭ: разбор задачи 19784"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "У исполнителя имеются две команды, которые обозначены латинскими буквами:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "A. Вычти 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "B. Если число чётное, раздели на 2, иначе вычти 3"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Программа для исполнителя – это последовательность команд. Сколько существует программ, которые преобразуют исходное число 98 в число 1 и при этом траектория вычислений не содержит число 28?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b):\n    if a < b or a == 28:\n        return 0\n    if a == b:\n        return 1\n    else:\n        return F(a-2, b) + F(a // 2 if a % 2 == 0 else a - 3, b)\n\nprint(F(98, 1))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 12318",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a, b):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление функции F с двумя параметрами a и b."
+          }
+        ],
+        [
+          {
+            "text": "if a < b or a == 28:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условий: если a меньше b ИЛИ a равно 28."
+          }
+        ],
+        [
+          {
+            "text": "return 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращает 0, если выполнилось условие выше."
+          }
+        ],
+        [
+          {
+            "text": "if a == b:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, если a равно b."
+          }
+        ],
+        [
+          {
+            "text": "return 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращает 1, если a равно b."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если ни одно из предыдущих условий не выполнилось."
+          }
+        ],
+        [
+          {
+            "text": "return F(a-2, b) + F(a // 2 if a % 2 == 0 else a - 3, b)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Рекурсивный вызов функции F с разными аргументами"
+          }
+        ],
+        [
+          {
+            "text": "print(F(98, 1))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции F с аргументами 98 и 1, и вывод результата."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ckI6e5efMVwal1yl2C62JY8EKdOdGT-VFHKeheu9MdmZfyhljPKIUYEfsaCRkulV3GI2q0D5ymJlgQiSgW_kc8b77bxxA49MSnyjgGkYif_8hOM08YlAWJH1SMOXUyuD0-HiQ5UvLk3MzcW9QnBx6rmfM8B14khBzVmekG-3sYdEeZBJ5qfp0ACFAdApjT0rVYuHWxbrfexRMgYhZTy0mcR5kS49ewktpFwKVSSZ4e3wn3OaZpvdswggeakLjlOMkhCEbt9vtc7ivUw4eNOBxOiCoaPpnMhdSK2YmCLaf3bjGEArXcl8FA3iFfcQLUBBWEsEpiCBn13uj-fFiE8W2A.jpg",
+      "file": "1167-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "19784",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "kompege.ru",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 19784",
+  "title": "Задание 23 ЕГЭ: разбор задачи 19784",
+  "slug": "zadanie-23-ege-razbor-zadachi-19784",
+  "hidden": false
+}

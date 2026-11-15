@@ -1,0 +1,54 @@
+{
+  "id": 713,
+  "rubric": "breakdown",
+  "description": "Задание 8 ЕГЭ: разбор задачи",
+  "date": "2024-06-08",
+  "source": "https://t.me/informatika_kege_itpy/713",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/713-1.jpg",
+      "width": 800,
+      "height": 651,
+      "alt": "Задание 8 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения 1"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\nnum = 0\nfor p in product(sorted('ФОКУС'), repeat=5):\n    word = ''.join(p)\n    num += 1\n    if word.count('Ф') == 0 and word.count('У') == 2:\n        print(num)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения 2"
+    },
+    {
+      "type": "code",
+      "text": "s = 'КСОУФ'\nnum = 0\nfor a in s:\n    for b in s:\n        for c in s:\n            for d in s:\n                for e in s:\n                    word = a + b + c + d + e\n                    num += 1\n                    if word.count('Ф') == 0 and word.count('У') == 2:\n                        print(num)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения 3"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import product\n\nnum = 0\nfor num, p in enumerate(product(sorted('ФОКУС'), repeat=5), 1):\n    word = ''.join(p)\n    if word.count('Ф') == 0 and word.count('У') == 2:\n        result = num\n\nprint(result)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ksNKFnMRDXba8M9njtGo1HTWMG2B7xH4MKx_t2Na4sY0eO-Vnq8r3Aawo5J4xwsFW0sLHAQaxsck-Lxhpr-neSEg2BDIQQK1iNGBf4uL4Rcml0v82ZCjeFJZUAXZMkFrrIDJzVQILI6dJ57hYURa0hEth3qQo0M4zCEPupBTVLtfMRsxClNAbE-rnhOXDddza0lVHKZQsehFybI9oQJDApZCRPMJyaVB0SW0s-jch7nIU-obDHMcAu5r5uxQzRaJ5hiQPLE-4tiz8I2LywO6ambzjd1FKgJQubjymZkBSkygjAc-vxYvLOflRhTefC367rd7C4I2RXQV2Hl2fn5-Ag.jpg",
+      "file": "713-1.jpg"
+    }
+  ],
+  "task": 8,
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи",
+  "title": "Задание 8 ЕГЭ: разбор задачи",
+  "slug": "zadanie-8-ege-razbor-zadachi-713",
+  "hidden": true
+}

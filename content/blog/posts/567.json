@@ -1,0 +1,239 @@
+{
+  "id": 567,
+  "rubric": "breakdown",
+  "description": "У исполнителя есть три команды: A. Прибавить последнюю цифру B. Добавить остаток от деления на 68 C. Возвести в квадрат Если после выполнения команды получается такое же число, то…",
+  "date": "2024-05-08",
+  "source": "https://t.me/informatika_kege_itpy/567",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/567",
+      "thumb": {
+        "src": "/blog-media/567-1.jpg",
+        "width": 848,
+        "height": 752
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "У исполнителя есть три команды:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "A. Прибавить последнюю цифру"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "B. Добавить остаток от деления на 68"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "C. Возвести в квадрат"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Если после выполнения команды получается такое же число, то команду нельзя применять к этому числу."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько существует программ, для которых при исходном числе 2 результатом является число 680, при этом траектория вычислений содержит число 68 и не содержит числа 100?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from functools import *\n@lru_cache(None)\ndef F(a, b):\n    if a >= b or a == 100:\n        return a == b\n    R = []\n    if a % 10 != 0:\n        R.append(F(a + a % 10, b))\n    if a % 68 != 0:\n        R.append(F(a + a % 68, b))\n    R.append(F(a ** 2, b))\n    return sum(R)\n\nprint(F(2, 68) * F(68, 680))\n\n# Ответ: 47997789947424"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from functools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируются все функции из модуля functools."
+          }
+        ],
+        [
+          {
+            "text": "@lru_cache(None)",
+            "code": true
+          }
+        ],
+        [
+          {
+            "text": "def F(a, b):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявляется функция F с параметрами a и b."
+          }
+        ],
+        [
+          {
+            "text": "if a >= b or a == 100:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется условие: если a больше или равно b, или a равно 100, то функция возвращает True."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается пустой список R, в который будут добавляться результаты вычислений."
+          }
+        ],
+        [
+          {
+            "text": "if a % 10 != 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если остаток от деления a на 10 не равен 0."
+          }
+        ],
+        [
+          {
+            "text": "R.append(F(a + a % 10, b))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавляется результат вызова F с аргументом a + a % 10 и b."
+          }
+        ],
+        [
+          {
+            "text": "if a % 68 != 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если остаток от деления a на 68 не равен 0."
+          }
+        ],
+        [
+          {
+            "text": "R.append(F(a + a % 68, b))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавляется результат вызова F с аргументом a + a % 68 и b."
+          }
+        ],
+        [
+          {
+            "text": "R.append(F(a ** 2, b))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавляется результат вызова F с аргументом a в квадрате и b."
+          }
+        ],
+        [
+          {
+            "text": "return sum(R)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Функция возвращает сумму всех элементов в списке."
+          }
+        ],
+        [
+          {
+            "text": ". "
+          },
+          {
+            "text": "print(F(2, 68) * F(68, 680))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводится произведение результатов вызовов F с аргументами (2, 68) и (68, 680)."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/i52kaXPWEGKq5QQXGFsDpojYNDZ3j7qp_FGn0vusTxbE48GJMmR--UZ7J3yE_ZhuNSt0f_dwNC1PGXnZhcSugJ4FPpMbDkku6BbkiH_Z8hRrCg2EO4tQbvNP-ttd_TycN8HUyxPCbM6pe2QU0otrag3XAmhsjKWFyAHKDuSIdOh0Uzcmu-yCUOl6eIbEmKX8hePh652q7fsp7pjM13AS4RhXxSegga4khEseiWc4kzrzaGlk8lUevvQ22w9lb28ctpm57_IUFF1Kz0TX9paft8xZ2hpL2dpCew6gLmOmqVJdHy7DH_2UMIC-qJ2fFzEMWEDYSeZBXEN8hgD2k357sQ",
+      "file": "567-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "11953",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "PRO100 ЕГЭ",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 11953",
+  "title": "Задание 23 ЕГЭ: разбор задачи 11953",
+  "slug": "zadanie-23-ege-razbor-zadachi-11953-567",
+  "hidden": true
+}

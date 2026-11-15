@@ -1,0 +1,146 @@
+{
+  "id": 1168,
+  "rubric": "python",
+  "description": "Это обычный способ создания списков через цикл for, но более лаконичный и читаемый.",
+  "date": "2025-09-15",
+  "source": "https://t.me/informatika_kege_itpy/1168",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1168-1.jpg",
+      "width": 800,
+      "height": 516,
+      "alt": "Генераторы списков в Python"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Это обычный способ создания списков через цикл "
+        },
+        {
+          "text": "for",
+          "code": true
+        },
+        {
+          "text": ", но более лаконичный и читаемый."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Обычный способ"
+    },
+    {
+      "type": "code",
+      "text": "res = []\nfor i in range(10):\n    if i % 2 == 0:\n        res.append(i ** 2)\nprint(res) # [0, 4, 16, 36, 64]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Через генератором списков"
+    },
+    {
+      "type": "code",
+      "text": "res = [i ** 2 for i in range(10) if i % 2 == 0]\nprint(res) # [0, 4, 16, 36, 64]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Синтаксис"
+    },
+    {
+      "type": "code",
+      "text": "[выражение for переменная in последовательность if условие]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Читается как"
+    },
+    {
+      "type": "code",
+      "text": "«Добавь выражение в список для каждого элемента, если выполняется условие»"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примеры для ЕГЭ"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Все нечётные числа от 1 до 20"
+    },
+    {
+      "type": "code",
+      "text": "[x for x in range(1, 21) if x % 2 != 0]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Строки в верхнем регистре"
+    },
+    {
+      "type": "code",
+      "text": "[s.upper() for s in ['питон', 'егэ', 'код']]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Цифры от 0 до 9, кроме 3 и 7"
+    },
+    {
+      "type": "code",
+      "text": "[x for x in range(10) if x not in (3, 7)]"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Когда использовать?",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "для компактного создания списков"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "когда нужна фильтрация (if)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "при преобразовании значений"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Важно: генераторы не заменяют циклы везде. Но для быстрого и чистого кода они очень полезны."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/XHRw_ehO7dkzPi_6K-7cPIZKyMQeqiZ7td30w0Shl6QdvNdfEWzrWpLDRCgxQuCz8SQdlhxOPrFjvT9Sv55jGRvGtaidNVfXPzSyvY2jwyrK1Nw-VwHy9xk1zhq3KolC0BnKbgnXGj5LrvRESSmHg3Y41jZ7syJtBqGV6Uqzw3uub3YB6vQVEPGn1L4W-UvySx0JX7useP0y_9ZtflIFCtidk2b9zY9JD4dgRxhhUDCx4TqTi5RdhETDdwiLDXA6HKAe4wem_3gqSIMd5mTwl9hG7QDDOam5KCIu9ufrCn3UQJE1_jYspzW_34TksapCQlVyE3Si8Nv1dQf0dMwdtw.jpg",
+      "file": "1168-1.jpg"
+    }
+  ],
+  "baseTitle": "Генераторы списков в Python",
+  "title": "Генераторы списков в Python",
+  "slug": "generatory-spiskov-v-python-1168",
+  "hidden": true
+}

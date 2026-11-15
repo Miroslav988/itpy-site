@@ -1,0 +1,65 @@
+{
+  "id": 302,
+  "rubric": "breakdown",
+  "description": "Основная сложность задачи заключается в определении наибольшего целого неотрицательного числа A, при котором выражение (2x + 3y < 30) ∨ (x + y ≥ A) истинно для всех целых…",
+  "date": "2023-12-15",
+  "source": "https://t.me/informatika_kege_itpy/302",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/302",
+      "thumb": {
+        "src": "/blog-media/302-1.jpg",
+        "width": 848,
+        "height": 480
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/16447-15-bf6dee74b54a405882b60cf393df4ce4?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основная сложность задачи заключается в определении наибольшего целого неотрицательного числа A, при котором выражение "
+        },
+        {
+          "text": "(2x + 3y < 30) ∨ (x + y ≥ A)",
+          "code": true
+        },
+        {
+          "text": " истинно для всех целых неотрицательных x и y 🎓"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения задачи"
+    },
+    {
+      "type": "code",
+      "text": "def F(x, y, A):\n    return((2*x + 3*y) < 30) or ((x + y) >= A)\n\nR = []\nfor A in range(0, 100):\n    if all(F(x, y, A) for x in range(0, 100) for y in range(0, 100)):\n        R.append(A)\nprint(max(R))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/VmDheP44XVAdxRacvxjDANcCj8SoouvTi7H2HjqXUth0PeMf_nXch2WyTEaZ5Vd0-q-iGfTMoffvPEtWnJl-u2IPJTIRpBiIR5nE_CSlKZkJuE2P3JrVR7hdpKzP9TM_WjrZTtRZdcWSvzSzqhPB0H3aI6Ygv0fxIPLus5oo27QABe40v1oOW5-m-5k8qmbz5CwitjVwT9i7N61FzHqESVvMRmChUc_WEBoqf1UC3GNbYSsBl4VwScfRdadP78qdQsbSOyQK_ACQ-RFRhjrpgY4iXYLtByf3QqOTEoaVPH9Xo7sNHIOiWwPC5e5Faw6unFcabzFEqvtgK7sp3uXaSQ",
+      "file": "302-1.jpg"
+    }
+  ],
+  "task": 15,
+  "problem": "16447",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 15 ЕГЭ: разбор задачи 16447",
+  "title": "Задание 15 ЕГЭ: разбор задачи 16447",
+  "slug": "zadanie-15-ege-razbor-zadachi-16447",
+  "hidden": false
+}

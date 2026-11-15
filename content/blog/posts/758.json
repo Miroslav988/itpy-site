@@ -1,0 +1,36 @@
+{
+  "id": 758,
+  "rubric": "breakdown",
+  "description": "Задание 25 ЕГЭ: разбор задачи",
+  "date": "2024-07-04",
+  "source": "https://t.me/informatika_kege_itpy/758",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/758-1.jpg",
+      "width": 800,
+      "height": 756,
+      "alt": "Задание 25 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def divisors(x):\n    div = []\n    for j in range(1, int(x**0.5)+1):\n        if x % j == 0:\n            div += [j, x // j]\n    return sorted(set(div))\n\n\ncnt = 0\nfor x in range(600_000+1, 10**10):\n    d = [j for j in divisors(x) if j % 10 == 7 and j != 7 and j != x]\n    if len(d) > 0:\n        print(x, min(d))\n        cnt += 1\n        if cnt == 5:\n            break"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/QWtcVL8OlfhEjsQtxhygAgwxcD-FwbWNwoDGDjLNhT-nopIsyBNwfTYm6ZhspqUQ_v2ePr5JBdqR2fSWm_Lb7HOtG_2R2CkaorIIi9bYBHVne3qc-LATmmPvXTfi4ndr3vZsA6IFENnd5NpNehCm4a_d4E5CCgRwV8mXr4LHRRctNVwojrYpq90mo9vYVFqzmoB2K-oNGfUBWvjLxkv-Fhnf0IkgGO-4HQHj7Yujser4zTW9RvhGFPn4MCSMx7iGuOzpDqKwDLSv2A1E9wFQjBv-Rl9rInklFRBIaDmUV4Kx8ncB3pTF-NVSnABQKQY5hV5wdSgFOrx23FBVYN-X4A.jpg",
+      "file": "758-1.jpg"
+    }
+  ],
+  "task": 25,
+  "baseTitle": "Задание 25 ЕГЭ: разбор задачи",
+  "title": "Задание 25 ЕГЭ: разбор задачи",
+  "slug": "zadanie-25-ege-razbor-zadachi",
+  "hidden": true
+}

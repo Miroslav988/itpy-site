@@ -1,0 +1,73 @@
+{
+  "id": 395,
+  "rubric": "breakdown",
+  "description": "Количество единиц в маске подсети указывает, сколько битов адреса IP отведено для сети, а оставшиеся биты - для узлов. Для вычисления количества возможных значений маски подсети…",
+  "date": "2024-03-06",
+  "source": "https://t.me/informatika_kege_itpy/395",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/395",
+      "thumb": {
+        "src": "/blog-media/395-1.jpg",
+        "width": 848,
+        "height": 640
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/10581-13-b31b31e8b7c84de78a9e3166fb968882?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nfor mask in range(32+1):\n    net = ip_network(f'175.122.80.13/{mask}', 0) \n    print(net)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Для решения необходимо знать"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Количество единиц в маске подсети указывает, сколько битов адреса IP отведено для сети, а оставшиеся биты - для узлов."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Для вычисления количества возможных значений маски подсети можно использовать следующую формулу: 2**n - "
+        },
+        {
+          "text": "2",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/PQMCwg6LR8eG5aFfooHIx4lGrSn_CBkNChYH0qCuaUhgFY_CZrkdSuKoEZSLJ3AUI7h-QBR4DTKMbYPtNYAiibC0rP02xqOFci8kf0i2QkB4aJbsNWdtmkjOo1yXhNtzkBdnkZpwTnJmrKC5h2oGyjTak3d8UOREGTT_qgnxuaKRxJX179L1ARtoMFaw01b2mIRdcU7ZtPSQc_gABK_oDyMr0VCYuVIM6od0zZrb3riPvvQ_S7vKUQ8IQSXABM6B59HnRGVVYSKdlVnObcm2ZBS90rtMMi-8LBIfzVGHgxfuzqTjjBLey_LZz5z3BK56k6bm-6qUPPjvMlOHFvdxdA",
+      "file": "395-1.jpg"
+    }
+  ],
+  "task": 13,
+  "problem": "10581",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи 10581",
+  "title": "Задание 13 ЕГЭ: разбор задачи 10581",
+  "slug": "zadanie-13-ege-razbor-zadachi-10581",
+  "hidden": false
+}

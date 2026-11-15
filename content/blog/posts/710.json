@@ -1,0 +1,36 @@
+{
+  "id": 710,
+  "rubric": "breakdown",
+  "description": "Задание 15 ЕГЭ: разбор задачи",
+  "date": "2024-06-08",
+  "source": "https://t.me/informatika_kege_itpy/710",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/710-1.jpg",
+      "width": 800,
+      "height": 520,
+      "alt": "Задание 15 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(x, A):\n    B = 70 <= x <= 90\n    return (x % A == 0) or (B <= (x % 27 != 0))\n\nfor A in range(1, 1000):\n    if all(F(x, A) for x in range(1, 10000)):\n        print(A)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/PNwTAQ0eYgGjoC66y8zZp_RP-Kd7sV2gOPshO6PZlgOeFHfL0UHfVNEw5N9Nuauy1UFK-sBlnoeMcB9gpxlNGaxHb2WhY-QkWRrLs10lsWqDA_Zai49E-7fZan2hc5_t_Syhqs-DHxgyzm8yIDkJmRZL0UB56O_9VqMOnOgIDc80a7Qoj0hzWN2JAWr4VtOsUAARnsh9VnrW6NLZyPHm-SlTn0_u7KqU3JxClVrDC9LD4jhOVorMOK6P28qDwjBrGCUtR7hrtJqkWQSmez1_jOm1YN7T9XW3ozISPL71toBmnHbd2o-HAp1mrpkJUo9m0LuuovwQClafNAAAFF_uaA.jpg",
+      "file": "710-1.jpg"
+    }
+  ],
+  "task": 15,
+  "baseTitle": "Задание 15 ЕГЭ: разбор задачи",
+  "title": "Задание 15 ЕГЭ: разбор задачи",
+  "slug": "zadanie-15-ege-razbor-zadachi-710",
+  "hidden": true
+}

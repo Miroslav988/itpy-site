@@ -1,0 +1,47 @@
+{
+  "id": 468,
+  "rubric": "useful",
+  "description": "Вы, как будущие IT-специалисты, так или иначе будете изучать элементы высшей математики в университете или колледже. Такие дисциплины, как: математический анализ, линейная…",
+  "date": "2024-04-21",
+  "source": "https://t.me/informatika_kege_itpy/468",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вы, как будущие IT-специалисты, так или иначе будете изучать элементы высшей математики в университете или колледже. Такие дисциплины, как: математический анализ, линейная алгебра, дискретная математика, дифференциальные уравнения и другие, будут входить в вашу программу обучения."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Возможно, у вас, так же как и у меня в школе, сейчас напряженные отношения с этим предметом, но поверьте мне - высшая математика намного интереснее, чем школьная! Хочу поделиться с вами полезным видео от "
+        },
+        {
+          "text": "Редакции:",
+          "href": "https://www.youtube.com/redirect?event=channel_header&amp;redir_token=QUFFLUhqbTFBSmQ2UThyeVM5TmFnWGFBelg4dTZGZ3dVQXxBQ3Jtc0tuTHhTWVBjZHJOMlFjRWs3MjR2Q25GT2txSGpUNjNmT0JMQTJSS29iaWk1UGxqUUdhcWZzcVhlMWRMODVYdDNiMjhSZ2pFa2hLampaNDgwRy03MU1jWWNWZGpUdzhXR2V5bURUZU1PdnFwc1locnNLYw&amp;q=https%3A%2F%2Ft.me%2Fredakciya_nauka"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть видео",
+          "href": "https://youtu.be/lvpvltRzUU8?si=AVpBVATCNjO7IS3N",
+          "bold": true
+        },
+        {
+          "text": " 📺"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Редакция Наука: \"Ты живешь БЛАГОДАРЯ МАТЕМАТИКЕ\"",
+  "title": "Редакция Наука: \"Ты живешь БЛАГОДАРЯ МАТЕМАТИКЕ\"",
+  "slug": "redaktsiya-nauka-ty-zhivesh-blagodarya-matematike",
+  "hidden": false
+}

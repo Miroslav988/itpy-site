@@ -1,0 +1,178 @@
+{
+  "id": 439,
+  "rubric": "breakdown",
+  "description": "Дано арифметическое выражение 5xyC_16 + 8xx7_y. Определите, сколько различных значений может принимать выражение при всех возможных x и y.",
+  "date": "2024-04-18",
+  "source": "https://t.me/informatika_kege_itpy/439",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/439",
+      "thumb": {
+        "src": "/blog-media/439-1.jpg",
+        "width": 848,
+        "height": 480
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Дано арифметическое выражение 5xyC_16 + 8xx7_y. Определите, сколько различных значений может принимать выражение при всех возможных x и y."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Обратите внимание, что y является как переменной в 16-ой системе счисления, так и системой счисления в правом числе. Таким образом наш диапазон для y будет начинаться с 9 (так как в правом числе есть 8ка) и заканчиваться 16 (не включая).",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "ALPHABET = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\nmy_set = set()\nfor y in range(9, 16):\n    for x in ALPHABET[:y]:\n        A = int(f'5{x}{ALPHABET[y]}C', 16)\n        B = int(f'8{x}{x}7', y)\n        my_set.add(A+B)\nprint(len(my_set))\n\n# Ответ: 84"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "ALPHABET = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается отсортированный список ALPHABET, содержащий цифры от 0 до 9 и буквы английского алфавита в верхнем регистре."
+          }
+        ],
+        [
+          {
+            "text": "my_set = set()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается пустое множество my_set, в которое будут добавляться уникальные результаты."
+          }
+        ],
+        [
+          {
+            "text": "for y in range(9, 16):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается внешний цикл for, перебирающий значения от 9 до 15 (не включительно) и присваивающий их переменной y."
+          }
+        ],
+        [
+          {
+            "text": "for x in ALPHABET[:y]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается вложенный цикл for, перебирающий элементы из списка ALPHABET до y-го индекса (не включительно) и присваивающий их переменной x."
+          }
+        ],
+        [
+          {
+            "text": "A = int(f'5{x}{ALPHABET[y]}C', 16)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается переменная A, в которую записывается число, представленное строкой с основанием 16, составленное из символов '5', x, ALPHABET[y] и 'C'."
+          }
+        ],
+        [
+          {
+            "text": "B = int(f'8{x}{x}7', y)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается переменная B, в которую записывается число, представленное строкой с основанием y, составленное из символов '8', x, x и '7'."
+          }
+        ],
+        [
+          {
+            "text": "my_set.add(A+B)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Сумма чисел A и B добавляется в множество my_set."
+          }
+        ],
+        [
+          {
+            "text": "print(len(my_set))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводится длина множества my_set, которая представляет количество уникальных результатов."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/BOMqoZAhUMpgiS7tFAi5Yz3H8M1-Xk9rOo317nXC6wkTlHHN_Mt9v0BVq4XbhP-wOyWBNZ5Q-q7p1TQzDO195bQqxQgsr8927WjPyctc4KsnvVoCr5mMQ77SPJzfZJRf8YruFTYFeSJ5nAGYfGpCA-1DvC2xBvNdahNM_ta8yTy-KXLkBFchh3PrRSdNgy6B2FSWVUqryTR_vsL8bgXPQGghni-Nibc9IB11MGYixUsatQTW3bP3elTi_r1bABBWFtflUkw3kbnWgwNEzGXqE9Kz9GLT--YZj-MOVZ_xqPin_3DT4IAA8YAwytmfQbRFXeIQnJKFj2fTlAnrAvjaqw",
+      "file": "439-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "5895",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "(А. Игнатюк)",
+    "level": "Сложный"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 5895",
+  "title": "Задание 14 ЕГЭ: разбор задачи 5895",
+  "slug": "zadanie-14-ege-razbor-zadachi-5895",
+  "hidden": false
+}

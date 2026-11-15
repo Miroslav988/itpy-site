@@ -1,0 +1,194 @@
+{
+  "id": 1055,
+  "rubric": "breakdown",
+  "description": "Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел. Определите количество строк таблицы, содержащих числа, для которых выполнены оба условия: в…",
+  "date": "2025-04-24",
+  "source": "https://t.me/informatika_kege_itpy/1055",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1055-1.jpg",
+      "width": 800,
+      "height": 371,
+      "alt": "Задание 9 ЕГЭ: разбор задачи — ФИПИ"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел. Определите количество строк таблицы, содержащих числа, для которых выполнены оба условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "в строке только одно число повторяется трижды, остальные числа различны;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "утроенный квадрат повторяющегося числа строки больше суммы квадратов её неповторяющихся чисел."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('0. files/9.csv'):\n    M = [int(x) for x in s.split(';')]\n    copied = [x for x in M if M.count(x) == 3]\n    uncopied = [x for x in M if M.count(x) == 1]\n    if len(copied) == 3 and len(uncopied) == 3:\n        if (copied[0] ** 2) * 3 > (sum([x**2 for x in uncopied])):\n            cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 245",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Инициализируем счетчик, который будет подсчитывать количество строк с нужными условиями"
+          }
+        ],
+        [
+          {
+            "text": "for s in open('0. files/9.csv'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Открываем файл и построчно считываем его содержимое в переменную s"
+          }
+        ],
+        [
+          {
+            "text": "M = [int(x) for x in s.split(';')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Разделяем строку по символу ';', преобразуем элементы в целые числа и создаем список M"
+          }
+        ],
+        [
+          {
+            "text": "copied = [x for x in M if M.count(x) == 3]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Создаем список copied из элементов, которые встречаются в M ровно 3 раза (повторяющиеся элементы)"
+          }
+        ],
+        [
+          {
+            "text": "uncopied = [x for x in M if M.count(x) == 1]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Создаем список uncopied из элементов, которые встречаются в M ровно 1 раз (уникальные элементы)"
+          }
+        ],
+        [
+          {
+            "text": "if len(copied) == 3 and len(uncopied) == 3:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Проверяем, что у нас ровно 3 повторяющихся элемента и 3 уникальных элемента"
+          }
+        ],
+        [
+          {
+            "text": "if (copied[0] ** 2) * 3 > (sum([x**2 for x in uncopied])):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Проверяем условие: квадрат первого повторяющегося элемента, умноженный на 3, больше суммы квадратов всех уникальных элементов"
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Если оба условия выполняются, увеличиваем счетчик на 1"
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "# Выводим итоговое значение счетчика"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/tieo0kB0u71_FraAAonSG1ucWBOBIxWnnvB-_sPfALecQvSSdYn8t1s1D7dQNp9_oRUF3BEOZGCKm5vI26xIGCsVO3BHciNUl5eNpxWT9wgyKm3fdrJUdYLfj5KX2xV0syFTuEydy--YAHeJXZ2VYWHnwR7hJyN2XKo2Ny4WGsvZXnWcvw89kDxKCugXxcpS26i1iJUD-lbZy_1kHeEpTeQDurfBcMdRV_vzSsCPdX_bRR3vXv-uXnSD1unu1zdGtV5OKKtMjoi_3L-kYNWC8OY0_0XbldokOL45sckP73kvc6G3aInclC33_UK1lina_DVggRhN-p3rhKbAGPZXtw.jpg",
+      "file": "1055-1.jpg"
+    }
+  ],
+  "task": 9,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "ФИПИ",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи — ФИПИ",
+  "title": "Задание 9 ЕГЭ: разбор задачи — ФИПИ",
+  "slug": "zadanie-9-ege-razbor-zadachi-fipi",
+  "hidden": false
+}

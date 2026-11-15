@@ -1,0 +1,184 @@
+{
+  "id": 1070,
+  "rubric": "breakdown",
+  "description": "Марина собирает восьмибуквенные слова из букв своего имени. Все буквы могут многократно повторяться. На каком месте окажется имя МАРИАННА в отсортированном по алфавиту списке…",
+  "date": "2025-06-03",
+  "source": "https://t.me/informatika_kege_itpy/1070",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1070-1.jpg",
+      "width": 800,
+      "height": 352,
+      "alt": "Задание 8 ЕГЭ: разбор задачи 7029"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Марина собирает восьмибуквенные слова из букв своего имени. Все буквы могут многократно повторяться. На каком месте окажется имя МАРИАННА в отсортированном по алфавиту списке сгенерированных слов? Нумерация начинается с 1."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\n\nfor n, p in enumerate(product(sorted('МАРИН'), repeat=8), 1):\n    word = ''.join(p)\n    if word == 'МАРИАННА':\n        print(n)\n        break"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 169466",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля itertools, включая функцию product, которая будет использоваться для генерации декартова произведения"
+          }
+        ],
+        [
+          {
+            "text": "for n, p in enumerate(product(sorted('МАРИН'), repeat=8), 1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запуск цикла, где:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• sorted('МАРИН') сортирует символы строки 'МАРИН' в алфавитном порядке (['А', 'И', 'М', 'Н', 'Р'])"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• product(..., repeat=8) генерирует все возможные комбинации длины 8 из этих символов"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• enumerate(..., 1) нумерует каждую комбинацию, начиная с 1"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• n хранит номер текущей комбинации, p — саму комбинацию в виде кортежа символов"
+          }
+        ],
+        [
+          {
+            "text": "word = ''.join(p)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразует кортеж символов p в строку word"
+          }
+        ],
+        [
+          {
+            "text": "if word == 'МАРИАННА':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, совпадает ли текущая комбинация word с искомым словом 'МАРИАННА'"
+          }
+        ],
+        [
+          {
+            "text": "print(n)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, выводит номер комбинации n"
+          }
+        ],
+        [
+          {
+            "text": "break",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Прерывает цикл после нахождения нужного слова"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/CUzvOMnCOCN7MP49jRC1alKlCE-7kZUlQwI9nVYEcjT2Px6Cp40F98ZZ8pfkT8NN_FIF0fuEQjxKzgQhltDDufM0ZmJou64Ts1PsjQDEoq72-VYyN7A6PQN2jBbpTXc5aUu658XW2Xg9O6GSOFFVFPR7m6QUfWP6LCtb_t5iptkl5ij2hgdi0Q8PuPVEKS5gBS9dreHGJJezkph2WSvVlKo6qs6lMmpQHB1Subz6UxfCGGZhFIY8Gu7lug45wfs4OdCr-p8XU53xAc9ZuDHJiKqalpP-wVVpsGZ8TJswQnC75ZDdXgwGgTidpnGw7sz0GBfwAYOj6U320zcXpxLNWg.jpg",
+      "file": "1070-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "7029",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "А.Богданов",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 7029",
+  "title": "Задание 8 ЕГЭ: разбор задачи 7029",
+  "slug": "zadanie-8-ege-razbor-zadachi-7029",
+  "hidden": false
+}

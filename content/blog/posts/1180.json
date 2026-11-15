@@ -1,0 +1,185 @@
+{
+  "id": 1180,
+  "rubric": "breakdown",
+  "description": "Определите количество строк таблицы, содержащих числа, для которых выполнены все условия: 1. Четыре числа строки можно разбить на две пары чисел с равными суммами 2. Максимальное…",
+  "date": "2025-10-04",
+  "source": "https://t.me/informatika_kege_itpy/1180",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1180-1.jpg",
+      "width": 800,
+      "height": 334,
+      "alt": "Задание 9 ЕГЭ: разбор задачи — Яндекс учебник"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество строк таблицы, содержащих числа, для которых выполнены все условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. Четыре числа строки можно разбить на две пары чисел с равными суммами"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Максимальное число строки меньше суммы трёх оставшихся чисел сумма чисел в строке чётна"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import permutations\ncnt = 0\nfor s in open('0. files/9.csv'):\n    M = [int(x) for x in s.split(';')]\n    if sum(M) % 2 == 0:\n        if max(M) < sum(M) - max(M):\n            if any(p[0] + p[1] == p[2] + p[3] for p in permutations(M)):\n                cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 139",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import permutations"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируем функцию permutations для генерации всех перестановок"
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем счетчик и инициализируем его нулем"
+          }
+        ],
+        [
+          {
+            "text": "for s in open('0. files/9.csv'):"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открываем файл '9.csv' и построчно читаем его"
+          }
+        ],
+        [
+          {
+            "text": "M = [int(x) for x in s.split(';')]"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разбиваем строку по символу ';' и преобразуем каждый элемент в целое число"
+          }
+        ],
+        [
+          {
+            "text": "if sum(M) % 2 == 0:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что сумма всех чисел в строке четная"
+          }
+        ],
+        [
+          {
+            "text": "if max(M) < sum(M) - max(M):"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что максимальное число меньше суммы всех остальных чисел"
+          }
+        ],
+        [
+          {
+            "text": "if any(p[0] + p[1] == p[2] + p[3] for p in permutations(M)):"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, существует ли такая перестановка 4 чисел, где сумма первых двух равна сумме последних двух"
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если все три условия выполнены, увеличиваем счетчик на 1"
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим итоговое количество строк, удовлетворяющих всем условиям"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/HgsK8EjpiL34Or7mAyFSsNiblXEXwYX73cthU2g0cKCmG2Q4-4yd6q6gkLJipOf3fWkcYIARiIXDs9htbG_li5W3qzcq46LbPUY0OM-L2gDG1JMtBPCNY-tQHCRImAatFi1QWB1qm8O9CREuIhU66gBbX8QqKiqeN-VkMucPvfY-o8zO4ooERDidAlGJLNNcmVvFcIn3XJYqc1Ml2BjTsUvM0GNHCiX_oNoAyuEB9KtLpyCoGnojji7zVtHGxltPmgRohVJ9C0zCjuSdZ8ghsFk_c2wvRtzVw07Eb47eY6V3GORwqNGAo6VXFomEiuTQtdLhB48ejVqujPFov1Q_rg.jpg",
+      "file": "1180-1.jpg"
+    }
+  ],
+  "task": 9,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Яндекс учебник",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи — Яндекс учебник",
+  "title": "Задание 9 ЕГЭ: разбор задачи — Яндекс учебник",
+  "slug": "zadanie-9-ege-razbor-zadachi-yandeks-uchebnik",
+  "hidden": false
+}

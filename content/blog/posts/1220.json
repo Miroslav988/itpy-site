@@ -1,0 +1,459 @@
+{
+  "id": 1220,
+  "rubric": "breakdown",
+  "description": "Алгоритм вычисления функций F(n) и G(n), где n - целое число, задан следующими соотношениями: F(n) = F(n−4)+3580, если n ≥ 19; F(n) = 6×(G(n−7)−36), если n < 19; G(n) = n/20+28,…",
+  "date": "2025-12-18",
+  "source": "https://t.me/informatika_kege_itpy/1220",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1220-1.jpg",
+      "width": 788,
+      "height": 800,
+      "alt": "Задание 16 ЕГЭ: разбор задачи 25355"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Алгоритм вычисления функций F(n) и G(n), где n - целое число, задан следующими соотношениями:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(n) = F(n−4)+3580, если n ≥ 19;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(n) = 6×(G(n−7)−36), если n < 19;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "G(n) = n/20+28, если n ≥ 248045;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "G(n) = G(n+9)−4, если n < 248045."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Чему равно значение функции F(673)?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Такую задачу не получится решить просто импортируя sys.setrecursionlimit(), поэтому можно решать через списки, либо же через КЭШИРОВАНИЕ."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from functools import *\n\ndef F(n):\n    if n >= 19:\n        return F(n - 4) + 3580\n    else:\n        return 6 * (G(n - 7) - 36)\n\n@lru_cache()\ndef G(n):\n    if n >= 248045:\n        return n / 20 + 28\n    else:\n        return G(n + 9) - 4\n\nfor i in range(248045, 0, -1):\n    G(i)\n\nprint(F(673))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "47",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from functools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируем инструменты из "
+          },
+          {
+            "text": "functools",
+            "code": true
+          },
+          {
+            "text": " (в т.ч. "
+          },
+          {
+            "text": "lru_cache",
+            "code": true
+          },
+          {
+            "text": ")."
+          }
+        ],
+        [
+          {
+            "text": "def F(n):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определяем функцию "
+          },
+          {
+            "text": "F",
+            "code": true
+          },
+          {
+            "text": ", принимает целое число "
+          },
+          {
+            "text": "n",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if n >= 19:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем ветку для больших "
+          },
+          {
+            "text": "n",
+            "code": true
+          },
+          {
+            "text": " (база/переход для рекурсии в "
+          },
+          {
+            "text": "F",
+            "code": true
+          },
+          {
+            "text": ")."
+          }
+        ],
+        [
+          {
+            "text": "return F(n - 4) + 3580",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Рекурсивно уменьшаем "
+          },
+          {
+            "text": "n",
+            "code": true
+          },
+          {
+            "text": " на 4 и прибавляем 3580 к результату."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Ветка для случая, когда "
+          },
+          {
+            "text": "n < 19",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return 6 * (G(n - 7) - 36)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызываем "
+          },
+          {
+            "text": "G(n-7)",
+            "code": true
+          },
+          {
+            "text": ", вычитаем 36, умножаем итог на 6 и возвращаем."
+          }
+        ],
+        [
+          {
+            "text": "@lru_cache()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Включаем кэширование результатов "
+          },
+          {
+            "text": "G(n)",
+            "code": true
+          },
+          {
+            "text": ", чтобы ускорить повторные вызовы."
+          }
+        ],
+        [
+          {
+            "text": "def G(n):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определяем функцию "
+          },
+          {
+            "text": "G",
+            "code": true
+          },
+          {
+            "text": ", принимает целое число "
+          },
+          {
+            "text": "n",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "if n >= 248045:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем базовый случай: при больших "
+          },
+          {
+            "text": "n",
+            "code": true
+          },
+          {
+            "text": " рекурсия в "
+          },
+          {
+            "text": "G",
+            "code": true
+          },
+          {
+            "text": " останавливается."
+          }
+        ],
+        [
+          {
+            "text": "return n / 20 + 28",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращаем значение по формуле для базового случая "
+          },
+          {
+            "text": "G",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Ветка для случая, когда "
+          },
+          {
+            "text": "n < 248045",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "return G(n + 9) - 4",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Рекурсивно увеличиваем "
+          },
+          {
+            "text": "n",
+            "code": true
+          },
+          {
+            "text": " на 9 и вычитаем 4 из результата."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(248045, 0, -1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл перебирает "
+          },
+          {
+            "text": "i",
+            "code": true
+          },
+          {
+            "text": " от 248045 до 1 с шагом -1."
+          }
+        ],
+        [
+          {
+            "text": "G(i)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заполняем кэш значениями "
+          },
+          {
+            "text": "G(i)",
+            "code": true
+          },
+          {
+            "text": " для всех "
+          },
+          {
+            "text": "i",
+            "code": true
+          },
+          {
+            "text": " в этом диапазоне."
+          }
+        ],
+        [
+          {
+            "text": "print(F(673))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляем "
+          },
+          {
+            "text": "F(673)",
+            "code": true
+          },
+          {
+            "text": " (внутри будет использоваться "
+          },
+          {
+            "text": "G",
+            "code": true
+          },
+          {
+            "text": ") и выводим результат."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/jRj77_-MMcIhtldAi_-rKBHqjL30hs3GZxm_zaUW_2qoh4cWOg6Jw_lQ5bCYBxNq8YAoho1YP31fLACH9b_U8cL2SkiH7VUg77GPhhNNODaMvKvbfT2mQh3FPJZBrwp6maeKofLAdsiXh3_Vr9jQi85xJsDz37U80slKlGn00p_4iCPYoV7XwqaSZazXwPcDhKxQeEtXZer5pGyiGAtgGbNY9pl5cRHhzYSrFJBZU4Q-C3OZpX32iJkYg0RFw8cV2MnefmnryvxDFtQJ2ghfFPS12luhK9pgm8qgIzaY98CV_p2mgpy0Vx-_HuYM8KP6B-BAf6BbJtUVU3oKEylRFw.jpg",
+      "file": "1220-1.jpg"
+    }
+  ],
+  "task": 16,
+  "problem": "25355",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "ЕГКР 13.12.20",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 16 ЕГЭ: разбор задачи 25355",
+  "title": "Задание 16 ЕГЭ: разбор задачи 25355",
+  "slug": "zadanie-16-ege-razbor-zadachi-25355",
+  "hidden": false
+}

@@ -1,0 +1,191 @@
+{
+  "id": 510,
+  "rubric": "breakdown",
+  "description": "Определите количество семизначных чисел, записанных в восьмеричной системе счисления, запись которых содержит ровно две чётные цифры, и при этом никакая нечётная цифра не стоит…",
+  "date": "2024-04-29",
+  "source": "https://t.me/informatika_kege_itpy/510",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/510-1.jpg",
+      "width": 800,
+      "height": 267,
+      "alt": "Задание 8 ЕГЭ: разбор задачи 11827"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество семизначных чисел, записанных в восьмеричной системе счисления, запись которых содержит ровно две чётные цифры, и при этом никакая нечётная цифра не стоит рядом с цифрой 7."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Список четных чисел можно найти вот так: chet = [x for x in num if x in '02468']"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import product\ncnt = 0\nfor per in product('01234567', repeat=7):\n    num = ''.join(per)\n    if num[0] != '0':\n        if len([x for x in num if x in '02468']) == 2:\n            if all(pair not in num for pair in '71 17 37 73 57 75 77'.split()):\n                cnt += 1\nprint(cnt)\n\n# Ответ: 95904"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import product",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт функции product из модуля itertools, которая создает все возможные комбинации длиной n из указанных элементов."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация переменной cnt для подсчета количества чисел, удовлетворяющих условиям задачи."
+          }
+        ],
+        [
+          {
+            "text": "for per in product('01234567', repeat=7):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, в котором перебираются все комбинации длиной 7 из цифр от 0 до 7."
+          }
+        ],
+        [
+          {
+            "text": "num = ''.join(per)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание строки num путем объединения элементов из текущей комбинации per."
+          }
+        ],
+        [
+          {
+            "text": "if num[0] != '0':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что первая цифра числа не равна 0."
+          }
+        ],
+        [
+          {
+            "text": "if len([x for x in num if x in '02468']) == 2:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что число содержит ровно 2 из цифр '02468'."
+          }
+        ],
+        [
+          {
+            "text": "if all(pair not in num for pair in '71 17 37 73 57 75 77'.split()):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что число не содержит никаких из заданных комбинаций цифр '71', '17', '37', '73', '57', '75', '77'."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличение счетчика cnt на 1, если число удовлетворяет всем условиям."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод количества чисел, удовлетворяющих заданным "
+          },
+          {
+            "text": "условиям.",
+            "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/CLuUrUKDsrZ-gMXEaiJZGRCnzWNkz7L7GYQ4xj55nirjLw-MldCU1IUKXCM9Y4IhsS_6MsrHsyMcX7i3WSIkFeuNLytjpgf9BOHKppnyaayOxKbeS6UpjVsd368R0sxKRc-YxYHuejk4GRgISiLcxk1J3vFJ3Iycc-Lb4n5Fhi1jXA4jsiSyW6h1hEcyHkdb_SvqRh-i7vtxhe2ld1cI65HhVeIqCE4Xc-Zm06j0rIUKD6BcjwmBYjF_VG8GdyPhfC4KrURDxsCgJsz9IIjbl6JbtuVcenIMoLTvHf6_8B3xfhRHiXB-VcGTznX2aZ__PxsMSuKX7_SgbZvlZ6Vw6Q.jpg",
+      "file": "510-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "11827",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "(Л. Шастин)",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 11827",
+  "title": "Задание 8 ЕГЭ: разбор задачи 11827",
+  "slug": "zadanie-8-ege-razbor-zadachi-11827-510",
+  "hidden": true
+}

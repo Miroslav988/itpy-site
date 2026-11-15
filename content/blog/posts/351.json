@@ -1,0 +1,82 @@
+{
+  "id": 351,
+  "rubric": "python",
+  "description": "Срезы в Python представляют собой мощный механизм для извлечения подстрок, подсписков или любых других подпоследовательностей из итерируемых объектов.",
+  "date": "2024-02-08",
+  "source": "https://t.me/informatika_kege_itpy/351",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/351",
+      "thumb": {
+        "src": "/blog-media/351-1.jpg",
+        "width": 848,
+        "height": 352
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Срезы в Python представляют собой мощный механизм для извлечения подстрок, подсписков или любых других подпоследовательностей из итерируемых объектов."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Синтаксис срезов включает в себя указание начального и конечного индексов, а также опциональный шаг (step):"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "срез = объект[начальный_индекс:конечный_индекс:шаг]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примеры срезов для списков"
+    },
+    {
+      "type": "code",
+      "text": "my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\n# Извлечение подсписка с индексами 2-5 (не включая 5)\nsubset1 = my_list[2:5]\nprint(subset1)  # Вывод: [3, 4, 5]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примеры срезов для строк"
+    },
+    {
+      "type": "code",
+      "text": "my_string = \"Hello, World!\"\n\n# Извлечение подстроки с индексами 7-12 (не включая 12)\nsubstring1 = my_string[7:12]\nprint(substring1)  # Вывод: \"World\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Более подробную информацию про срезы вы можете изучить в "
+        },
+        {
+          "text": "нашей статье на Notion",
+          "href": "https://informatikakegeitpy.notion.site/tpy-03ba437f04944cc49e212edd1ad782ac?pvs=4",
+          "bold": true
+        },
+        {
+          "text": " ✏"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/pajvXnfSu3PKi5zM4bIrN7b0LFiVQ-Sq6nFGpw8oy_mJ7vDqja1KXAtmTX0q7AlDtYePynV0fX_C2z55CFjNnmQXsQme7l9sfqfgnForuRv6LBUycyPHlLHwfEgokgYfmtMbVewrETux2I1u0yrI0KxG3l0UzG3x5d7icj7zfzW1qdoBxa__mhnIFjodqRJWnuyqWt3llk6P8D6KuWG4mb-8NTMcEzcKXiTdPdsVnOO0Nq_28ElPSGZibxLSdf0k7fiw_atsMG0O8ekjaPFwhzHA6Re-opwqJqiAFhqhlIoNTInoT5opwjgzh92hNf2c0Vj-696_igRlr3kPq1TwMw",
+      "file": "351-1.jpg"
+    }
+  ],
+  "baseTitle": "Срезы, что это такое и где могут пригодиться на ЕГЭ",
+  "title": "Срезы, что это такое и где могут пригодиться на ЕГЭ",
+  "slug": "srezy-chto-eto-takoe-i-gde-mogut-prigoditsya-na-ege",
+  "hidden": false
+}

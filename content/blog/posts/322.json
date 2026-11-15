@@ -1,0 +1,80 @@
+{
+  "id": 322,
+  "rubric": "breakdown",
+  "description": "Задача с сайта kompege.ru базового уровня сложности с интересным условием: \"Определите максимальное количество идущих подряд троек символов вида двузначное число + буква\".",
+  "date": "2023-12-23",
+  "source": "https://t.me/informatika_kege_itpy/322",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/322",
+      "thumb": {
+        "src": "/blog-media/322-1.jpg",
+        "width": 848,
+        "height": 368
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/4643-24-d47ce4efcec64dd19e2334ed4ac8da9a?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Задача с сайта "
+        },
+        {
+          "text": "kompege.ru",
+          "href": "https://kompege.ru/"
+        },
+        {
+          "text": " базового уровня сложности с интересным условием:"
+        },
+        {
+          "text": " \"Определите максимальное количество идущих подряд троек символов вида двузначное число + буква\"",
+          "italic": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Еще один вариант решения этой задачи через re.sub()"
+    },
+    {
+      "type": "code",
+      "text": "import re\ns = open('24.txt').readline()\ns = re.sub(r'B', 'A', s)\ns = re.sub(r'2', '1', s)\ns = re.sub(r'11A', '*', s)\ns = re.sub(r'A', ' ', s)\ns = re.sub(r'1', ' ', s)\nprint(max([len(i) for i in s.split()]))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Эта функция в Python используется для замены подстрок в строке с использованием регулярных выражений."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/isgF7n1gfjdVZY5JjufF1IkwQUkz0mmAu1itnkfs5A6CS68LwbQf3G85qRgUjlrAZFGT4KxsWGETFwQNcfgXDfS_n2eNeBnZKxSRYCtD2hnEUYwoMbi4RKt6nNerZ9eRhAFuNjJqKzMBaG7BkpIwPRGO_uUi5Kqeu4TQPgW4dF3UVjPfpyfy-dO9d6ED8v7XKo_HIOMKUY_k5-GUVo3MM1HoF5KphBBqYcLMHwOwAXxI_3E8W7UkF1tPT2xQXBjomGl4EjczQLxFiQ4iFBGYuqvXSy01S1rkI9HeUIF3D3X6e_7InAc_BrbQ9M39-JaZJPLCsz9zmwcIzwlhcXMhow",
+      "file": "322-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "4643",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 4643",
+  "title": "Задание 24 ЕГЭ: разбор задачи 4643",
+  "slug": "zadanie-24-ege-razbor-zadachi-4643",
+  "hidden": false
+}

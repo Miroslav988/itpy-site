@@ -1,0 +1,103 @@
+{
+  "id": 1171,
+  "rubric": "python",
+  "description": "is - это оператор идентичности, он проверяет, ссылаются ли переменные на один и тот же объект в памяти. А == - оператор равенства, сравнивает значения.",
+  "date": "2025-09-24",
+  "source": "https://t.me/informatika_kege_itpy/1171",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "is",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - это оператор идентичности, он проверяет, ссылаются ли переменные на один и тот же объект в памяти. А "
+        },
+        {
+          "text": "==",
+          "bold": true
+        },
+        {
+          "text": " - оператор равенства, сравнивает значения."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Для небольших чисел и коротких строк "
+        },
+        {
+          "text": "Python",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " часто использует кэш, поэтому "
+        },
+        {
+          "text": "is",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " может иногда возвращать "
+        },
+        {
+          "text": "True",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Но для больших чисел или длинных строк это не гарантировано - объекты могут быть разными."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример с кодом"
+    },
+    {
+      "type": "code",
+      "text": "a = 256\nb = 256\nprint(a is b)  # True (кэш)\n\nx = \"hello\"\ny = \"hello\"\nprint(x is y)  # True (кэш)\n\na = 1000\nb = 1000\nprint(a is b)  # False (разные объекты)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Используйте "
+        },
+        {
+          "text": "==",
+          "code": true
+        },
+        {
+          "text": " для сравнения значений, "
+        },
+        {
+          "text": "is",
+          "code": true
+        },
+        {
+          "text": " - только чтобы проверить, ссылаются ли переменные на один объект!"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Почему нельзя использовать is для сравнения строк и чисел в Python?",
+  "title": "Почему нельзя использовать is для сравнения строк и чисел в Python?",
+  "slug": "pochemu-nelzya-ispolzovat-is-dlya-sravneniya-strok-i-chisel",
+  "hidden": false
+}

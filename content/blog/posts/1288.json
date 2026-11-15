@@ -1,0 +1,248 @@
+{
+  "id": 1288,
+  "rubric": "python",
+  "description": "Вот команды, которые особенно полезны в задачах ЕГЭ, когда нужно не просто нарисовать линию, а аккуратно работать с точками и рисунком:",
+  "date": "2026-04-05",
+  "source": "https://t.me/informatika_kege_itpy/1288",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вот команды, которые особенно полезны в задачах ЕГЭ, когда нужно не просто нарисовать линию, а аккуратно работать с точками и рисунком",
+          "italic": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "up()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Поднять перо -- черепаха двигается, но линию не рисует"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "up()\ngoto(100, 50)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "down()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Опустить перо -- теперь снова рисуем"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "down()\nfd(80)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "dot(size, color)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Поставить точку"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "dot(4, 'red')"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "screensize(w, h)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличить холст, если рисунок большой"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "screensize(2000, 2000)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 5,
+      "items": [
+        [
+          {
+            "text": "tracer(0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Убрать анимацию и сильно ускорить построение"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "tracer(0)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 6,
+      "items": [
+        [
+          {
+            "text": "done()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Оставить окно открытым после завершения программы"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "done()"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Почему это важно именно для 6 номера"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "up()",
+            "code": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "помогает не рисовать лишние линии",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "dot()",
+            "code": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "позволяет отмечать точки с целыми координатами",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "tracer(0)",
+            "code": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "ускоряет работу, когда точек много",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "screensize()",
+            "code": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "спасает, если фигура получилась слишком большой",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "done()",
+            "code": true
+          },
+          {
+            "text": " "
+          },
+          {
+            "text": "даёт спокойно посмотреть на результат",
+            "italic": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример"
+    },
+    {
+      "type": "code",
+      "text": "from turtle import *\n\ntracer(0)\nscreensize(2000, 2000)\n\nup()\ngoto(-100, -100)\ndown()\n\nfor _ in range(4):\n    fd(200)\n    rt(90)\n\nup()\nfor x in range(-4, 5):\n    for y in range(-4, 5):\n        goto(x * 20, y * 20)\n        dot(3, 'red')\n\ndone()"
+    }
+  ],
+  "media": [],
+  "baseTitle": "Управление положением черепахи и экраном в Turtle",
+  "title": "Управление положением черепахи и экраном в Turtle",
+  "slug": "upravlenie-polozheniem-cherepahi-i-ekranom-v-turtle",
+  "hidden": false
+}

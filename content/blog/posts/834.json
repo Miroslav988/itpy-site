@@ -1,0 +1,200 @@
+{
+  "id": 834,
+  "rubric": "breakdown",
+  "description": "Определите количество строк таблицы, содержащих числа, для которых выполнены оба условия: – в строке только одно число повторяется трижды, остальные числа различны; – квадрат…",
+  "date": "2024-09-12",
+  "source": "https://t.me/informatika_kege_itpy/834",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/834",
+      "thumb": {
+        "src": "/blog-media/834-1.jpg",
+        "width": 848,
+        "height": 560
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество строк таблицы, содержащих числа, для которых выполнены оба условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– в строке только одно число повторяется трижды, остальные числа различны;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– квадрат суммы всех повторяющихся чисел строки больше квадрата суммы всех её неповторяющихся чисел."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Запоминайте способ создания генератора списков copied, чтобы можно было решать такие прототипы 9 номера на ура!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('9.csv'):\n    M = [int(x) for x in s.split(';')]\n    copied = [x for x in M if M.count(x) == 3]\n    nor_copied = [x for x in M if M.count(x) == 1]\n    if len(copied) == 3 and len(nor_copied) == 3:\n        if sum(copied)  2 > sum(nor_copied)  2:\n            cnt += 1\nprint(cnt)\n\n# Ответ: 273"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "cnt = 0"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем счетчик cnt, который будет подсчитывать количество строк, удовлетворяющих заданным условиям."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.csv'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открываем файл '9.csv' для чтения и перебираем каждую строку файла поочередно."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(x) for x in s.split(';')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разделяем строку s на элементы по разделителю ';', преобразуем их в целые числа и сохраняем в списке M."
+          }
+        ],
+        [
+          {
+            "text": "copied = [x for x in M if M.count(x) == 3]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список copied, включающий элементы списка M, которые встречаются ровно 3 раза."
+          }
+        ],
+        [
+          {
+            "text": "nor_copied = [x for x in M if M.count(x) == 1]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список nor_copied, включающий элементы списка M, которые встречаются ровно 1 раз."
+          }
+        ],
+        [
+          {
+            "text": "if len(copied) == 3 and len(nor_copied) == 3:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что в списке copied ровно 3 элемента, и в списке nor_copied также ровно 3 элемента."
+          }
+        ],
+        [
+          {
+            "text": "if sum(copied) 2 > sum(nor_copied) 2:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Сравниваем квадраты суммы элементов списка copied и квадрат суммы элементов списка nor_copied."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличиваем счетчик cnt на 1, если выполняются предыдущие условия."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим значение счетчика cnt, которое содержит количество строк, удовлетворяющих условиям."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/dwUOPbIZWzwX1kcKErXyxgUbV-7Gg91vvWiRIKCB9usnzvplJPhk73WBKf5Jy5H6HuF0pejMoJDtLQAb0FPiA-mkcdN0kK9jI0mkJrWGl5jufay1m-4KtbQEUMievySWaGkq_6RweuJjaMOZi1akEGXquvdMtwHHdyKapeXaBUlQp-acKh2gRoxAR8wObzJVN7TdVN-6to9M0PH1eLcw4gg9Qfnywc0X1inReDcoZkYkFUUmfzzH6YHWT46aUWoLaspAPv_XPCD9VJZaDuNArocvEvIxoKpQNg07nSFfnF__GOctcOXkQ_zC1Vh0VwjdpnraOpfCDftw1qRzfHw_WQ",
+      "file": "834-1.jpg"
+    }
+  ],
+  "task": 9,
+  "problem": "17863",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Демоверсия 2025",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи 17863",
+  "title": "Задание 9 ЕГЭ: разбор задачи 17863",
+  "slug": "zadanie-9-ege-razbor-zadachi-17863",
+  "hidden": false
+}

@@ -1,0 +1,42 @@
+{
+  "id": 118,
+  "rubric": "useful",
+  "description": "Можно ли приносить свою периферию? Какое ПО будет на компьютере? Технические требования к станциям на экзамене? Краткая выжимка.",
+  "date": "2023-04-28",
+  "source": "https://t.me/informatika_kege_itpy/118",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/118",
+      "thumb": {
+        "src": "/blog-media/118-1.jpg",
+        "width": 848,
+        "height": 288
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Можно ли приносить свою периферию? Какое ПО будет на компьютере? Технические требования к станциям на экзамене?"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Краткая выжимка."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ugOm4mbo_3cgN40W-_MxS8NjUcqHHZj-7VtxAzS5zzbek-3fgqKEYQoU8N_pfpABGuqp6hvyWMZiF3Z3KAI6FcPKRNnRJ2pseeMwieD_S3LL-zxNhOGDtTf8AAblqrnqgNrn-NJTZNQMRqPwDAKpzoACPXhayeGkLimUW47FUvBvJOEFhZANBtIdoIw7iRloTPp8_2V5awAWIHfHMbPw6SCc2NAAgJ3Ks9aOrcdpieOI6G2UJHKPmBed-k8T_Jz6y36vA4S7CIS43Grsz-7uM6Mbqtv_SKPnzEJ0Lf0JB0aUJKkeDL4z52M166cXufav7qbenSpSXAhVDhciMo00KA",
+      "file": "118-1.jpg"
+    }
+  ],
+  "baseTitle": "Как проводится КЕГЭ - компьютерный экзамен?",
+  "title": "Как проводится КЕГЭ - компьютерный экзамен?",
+  "slug": "kak-provoditsya-kege-kompyuternyy-ekzamen",
+  "hidden": false
+}

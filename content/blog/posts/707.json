@@ -1,0 +1,73 @@
+{
+  "id": 707,
+  "rubric": "breakdown",
+  "description": "Найдем вес переданного пакета: 1 474 560 бит * 280 с = 412 876 800 бит Найдет количество бит, необходимых для кодирования одного пикселя: 2^13 = 8192. (13 бит) Найдем количество…",
+  "date": "2024-06-08",
+  "source": "https://t.me/informatika_kege_itpy/707",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/707-1.jpg",
+      "width": 800,
+      "height": 423,
+      "alt": "Задание 7 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "bit_all = 1_475_560 * 280\npixels = 1024 * 960\ni = 13\nbit = bit_all / (pixels * i)\nprint(bit)\n\n# 32.3296 -> 32"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Решение руками"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Найдем вес переданного пакета: 1 474 560 бит * 280 с = 412 876 800 бит"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Найдет количество бит, необходимых для кодирования одного пикселя: 2^13 = 8192. (13 бит)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Найдем количество снимков: 412 876 800 / (1024 * 960 * 13) ~ 32.307"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Округляем в нижнюю сторону, получаем 32 снимка."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Ответ: 32"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/qDa9FoGrQmRMUgeXUF11ZgsuhWU_fofDfIYNZN5LLCta4Fs3nMbmb129JKTB0beFPHix9mzu1gQF-zc4rY4QStIRBE2-VJJ_bCglrQRrGSJmDFTJseH9DA005wUMM_ZAGH8NCadIVHhXuECDWsecy5aXT-CuAH_S9OlM2ScI84gHPis7JnmVnbF1jOAlSQz2FUzWg-jdhZVe4BedrFvNx18Eo4CnmbPq6gkpcsjruhr8n9PTBPun4nV_D5ppkxeBHU0XZftY-HVufYm0dBCqBMaW4gE64g2MRnuRQDJ9rNcz3fCRcJOTDwmcvInJAAL8BrPdDNz4rn5OzR2FWVEHQA.jpg",
+      "file": "707-1.jpg"
+    }
+  ],
+  "task": 7,
+  "baseTitle": "Задание 7 ЕГЭ: разбор задачи",
+  "title": "Задание 7 ЕГЭ: разбор задачи (8 июня 2024)",
+  "slug": "zadanie-7-ege-razbor-zadachi-8-iyunya-2024",
+  "hidden": false
+}

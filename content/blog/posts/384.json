@@ -1,0 +1,68 @@
+{
+  "id": 384,
+  "rubric": "breakdown",
+  "description": "Задачка 12 номера с сайте Решу ЕГЭ. Интересна она благодаря условию: \"После выполнения программы получилась строка, содержащая только двойки\".",
+  "date": "2024-02-22",
+  "source": "https://t.me/informatika_kege_itpy/384",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/384",
+      "thumb": {
+        "src": "/blog-media/384-1.jpg",
+        "width": 848,
+        "height": 512
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/39241-12-59d2fed0292d4105afbb5036f86369ad?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Задачка 12 номера с сайте "
+        },
+        {
+          "text": "Решу ЕГЭ.",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=39241"
+        },
+        {
+          "text": " Интересна она благодаря условию: \"После выполнения программы получилась строка, содержащая только "
+        },
+        {
+          "text": "двойки\".",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "for n in range(201, 1000):\n    s = '1' * n\n    while '111' in s or '222' in s:\n        s = s.replace('111', '22', 1)\n        s = s.replace('222', '1', 1)\n    if len(s) == s.count('2'):\n        print(n)\n        break"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/M1nXqZDS7r_tt4zQVNuo4EO0I1mqBk9vHOppXgO1v-OrRndp7TBx1mCnVW4uqaNSJWrMdd7-NFrWw_FmWBB0ZcEzv7VGo91G2XrPogleusqDIYhgMUfRJdrbSTPZxFI3YCXSkfqJZl35x3YtUQAxeQ-jWu6nQ9F1y5NE0yKxGWmUDoOQRVIyHJPM7Tv14JuQQhtUzGL_IPSp5o9SHWPlB0EBxsB4P3m_HuK67WNV_Hd6uSXe8e2ugCoi3mnw0Lnwfce8HUekqucOg8Gq39vKSvvf9HInJfHSvHhDfZ0hBPThGe5PD1q0M4LZ2lZMb0OfbQk0H394bS9zGcyE74mKcQ",
+      "file": "384-1.jpg"
+    }
+  ],
+  "task": 12,
+  "problem": "39241",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 12 ЕГЭ: разбор задачи 39241",
+  "title": "Задание 12 ЕГЭ: разбор задачи 39241",
+  "slug": "zadanie-12-ege-razbor-zadachi-39241",
+  "hidden": false
+}

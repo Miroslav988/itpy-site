@@ -1,0 +1,79 @@
+{
+  "id": 403,
+  "rubric": "breakdown",
+  "description": "Давайте повторим решение 17 номера на этом интересном примере с сайта kompege.ru.",
+  "date": "2024-03-12",
+  "source": "https://t.me/informatika_kege_itpy/403",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/403",
+      "thumb": {
+        "src": "/blog-media/403-1.jpg",
+        "width": 848,
+        "height": 560
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/2491-17-ccf658feba91474c971398db239e7c71?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Давайте повторим решение 17 номера на этом интересном примере с сайта "
+        },
+        {
+          "text": "kompege.ru",
+          "href": "http://kompege.ru/"
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(x) for x in open('17.txt')]\navg = sum(M) / len(M)\nR = []\nfor i in range(len(M)-2):\n    x, y, z = M[i], M[i+1], M[i+2]\n    if x < avg or y < avg or z < avg:\n        if all('9' in str(a) for a in [x, y, z]):\n            R.append(x + y + z)\nprint(len(R), max(R))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию: ",
+          "bold": true
+        },
+        {
+          "text": "17.txt",
+          "href": "https://kompege.ru/files/por0Suw97.txt",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/JoyTdWHOpqF9E8g7i4qndr0Pcx7IbnuIaGxs8yLamVwV8MAr81gS2I0_6NCNTgVFBelZbqaDDZWeccMhs7g8XACR8itU1Y91PpZY5hQv9vRmZy9kZmtSE5HEQ2tRKfo03iyiSr8FFPMh1L6aRFwmcsk3zni67OHoy9HQKDCuitI5jqgfFfRm0xfhb3VCYdlQlGSvE2bQaQeslKiV-zJeTO6iay5iZnJxYJs88l_eQkGTxRAMG2BA4J0Frmr3OQRIFnnlaMDMWSbU-qc2GEtBp9Pt412sAuPxZfgZbzx0XKYxK7I880TrnwWE_AgVMea4Q01EhmCaHBcYbKEny3-82A",
+      "file": "403-1.jpg"
+    }
+  ],
+  "task": 17,
+  "problem": "2491",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи 2491",
+  "title": "Задание 17 ЕГЭ: разбор задачи 2491",
+  "slug": "zadanie-17-ege-razbor-zadachi-2491",
+  "hidden": false
+}

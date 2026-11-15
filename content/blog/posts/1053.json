@@ -1,0 +1,142 @@
+{
+  "id": 1053,
+  "rubric": "python",
+  "description": "При работе со строками часто возникает задача: определить, к какой категории символов относится тот или иной символ — цифра ли это, буква, знак пунктуации и т.д.",
+  "date": "2025-04-23",
+  "source": "https://t.me/informatika_kege_itpy/1053",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1053-1.jpg",
+      "width": 800,
+      "height": 439,
+      "alt": "Строковые константы модуля string в Python"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При работе со строками часто возникает задача: определить, к какой категории символов относится тот или иной символ — цифра ли это, буква, знак пунктуации и т.д."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Помимо методов "
+        },
+        {
+          "text": "isdigit()",
+          "code": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "isalpha()",
+          "code": true
+        },
+        {
+          "text": ", использования Unicode (ord()) и регулярных выражений, Python предлагает более удобный способ — строковые константы встроенного модуля "
+        },
+        {
+          "text": "string",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примеры полезных констант"
+    },
+    {
+      "type": "code",
+      "text": "import string\n\nprint(string.digits)         \n# Цифры: 0123456789\n\nprint(string.ascii_letters)  \n# Все английские буквы: abc...XYZ\n\nprint(string.ascii_lowercase)  \n# Только строчные: abc...\n\nprint(string.ascii_uppercase)  \n# Только заглавные: ABC...\n\nprint(string.punctuation)    \n# Знаки препинания: !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Эти готовые строки особенно полезны, когда"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Нужно фильтровать или валидировать ввод"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Писать генераторы случайных паролей"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Проверять состав строки без использования регулярных выражений"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример использования — фильтрация букв"
+    },
+    {
+      "type": "code",
+      "text": "s = \"Hello123!\"\nletters_only = [ch for ch in s if ch in string.ascii_letters]\nprint(letters_only)  # ['H', 'e', 'l', 'l', 'o']"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Кроме вышеупомянутых, модуль string содержит и другие полезные объекты, включая "
+        },
+        {
+          "text": "string.whitespace",
+          "code": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "string.printable",
+          "code": true
+        },
+        {
+          "text": " и даже шаблонные классы для форматирования."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Подробнее в официальной документации"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "docs.python.org/3/library/string.html",
+          "href": "http://docs.python.org/3/library/string.html"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/u2KFRi5yX8Ho6IVhnRmv23foacV4Lzvn8bzh0u1aiu2ygbSPvEawGT2HjrVTI8LFYMeNyl1nzyOoNVT92ri6rRHSWAXSGFDNPRhXxd8336rG2i1XgD9dDjBTHeJOC5U4Jc8SrdBfHrFsYzMZpHLoTnoQJhkLUCU-gJ9rUVGFy3nqTdQHKXTgQ4GYRDQqU6laY4u9m6UQ5cpcuUfHm2GO452DZ8V0Az0WzV5Nh-LFC4Wi83ZrEOXBmkH54LSUHm6AGf0hI8Sk5Fa-XCM7Fg_111nD-LBu6iOHQv6QS2wD-mKkwa2QDAMttpp659r4BuEjnb-KsHYTP9fMeX8GviAGeQ.jpg",
+      "file": "1053-1.jpg"
+    }
+  ],
+  "baseTitle": "Строковые константы модуля string в Python",
+  "title": "Строковые константы модуля string в Python",
+  "slug": "strokovye-konstanty-modulya-string-v-python",
+  "hidden": false
+}

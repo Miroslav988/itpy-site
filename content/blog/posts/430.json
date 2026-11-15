@@ -1,0 +1,161 @@
+{
+  "id": 430,
+  "rubric": "breakdown",
+  "description": "Значение выражения 4**34 + 5 * 4**22 + 4**13 + 2 * 4**9 + 82 записали в системе счисления с основанием 16. Сколько разных цифр встречается в этой записи?",
+  "date": "2024-04-15",
+  "source": "https://t.me/informatika_kege_itpy/430",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/430",
+      "thumb": {
+        "src": "/blog-media/430-1.jpg",
+        "width": 848,
+        "height": 624
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Значение выражения 4**34 + 5 * 4**22 + 4**13 + 2 * 4**9 + 82 записали в системе счисления с основанием 16. Сколько разных цифр встречается в этой записи?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Функция hex() является встроенной функцией в Python, которая используется для преобразования целого числа в строку, содержащую его шестнадцатеричное представление."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения 1"
+    },
+    {
+      "type": "code",
+      "text": "print(len(set(hex(4**34 + 5*4**22 + 4**13 + 2*4**9 + 82)[2:])))"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения 2"
+    },
+    {
+      "type": "code",
+      "text": "x = 4**34 + 5*4**22 + 4**13 + 2*4**9 + 82\ns = []\nwhile x > 0:\n    s.append(x % 16)\n    x //= 16\nprint(len(set(s)))\n\n# Ответ: 6"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "x = 4**34 + 5*4**22 + 4**13 + 2*4**9 + 82",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В этой строке расчитывается значение переменной x с помощью сложных математических операций."
+          }
+        ],
+        [
+          {
+            "text": "s = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается пустой список s, который будет использоваться для хранения результатов вычислений."
+          }
+        ],
+        [
+          {
+            "text": "while x > 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается цикл while, который будет выполняться до тех пор, пока переменная x больше нуля."
+          }
+        ],
+        [
+          {
+            "text": "s.append(x % 16)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавляется остаток от деления переменной x на 16 в список s. Это делается для перевода числа в шестнадцатеричную систему счисления."
+          }
+        ],
+        [
+          {
+            "text": "x //= 16",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Значение переменной x делится на 16 с использованием целочисленного деления, чтобы продолжить процесс перевода числа в шестнадцатеричную систему."
+          }
+        ],
+        [
+          {
+            "text": "print(len(set(s)))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводится длина множества уникальных значений списка s, что позволяет определить количество различных цифр, используемых в представлении числа x в шестнадцатеричной системе."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/BDiLPD-4HaRW0rx31ne__tRjk6QBdTD6AGwgQaFq8GrmnFb9BIGqObXtTMciSrAfYsxa_gt9Ai5PgFXJ_884lJB7H0bVvZ78_2izi1RC8hKde_Lm4Q8Wz_78u9i2vh6zxe-cc5hXOd6o3JDdvNHwybxqGM4_Bo_QeKhOM9lL_lGSSBO7BzrhFnSCVh9Tw1artef7VF9mksvPAs6ZAI6MR6i4AIa3VJVuhhHwqOYcEJmrcIyHKtcKgKaxXHqC4PRU_HD5jyKeNRYnCYgqLrfpEXlDqheOrnLVZyH_jPGWe-D0QklNqIAmuNbrKOn15SeIsPnvNFGyhpqnr0F2qkcvXg",
+      "file": "430-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "39243",
+  "collection": "Решу ЕГЭ",
+  "meta": {
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 39243",
+  "title": "Задание 14 ЕГЭ: разбор задачи 39243",
+  "slug": "zadanie-14-ege-razbor-zadachi-39243",
+  "hidden": false
+}

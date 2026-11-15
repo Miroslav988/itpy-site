@@ -1,0 +1,176 @@
+{
+  "id": 494,
+  "rubric": "breakdown",
+  "description": "Сколько существует девятеричных пятизначных чисел, содержащих в своей записи ровно одну цифру 5, в которых никакие две одинаковые цифры не стоят рядом?",
+  "date": "2024-04-27",
+  "source": "https://t.me/informatika_kege_itpy/494",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/494",
+      "thumb": {
+        "src": "/blog-media/494-1.jpg",
+        "width": 848,
+        "height": 496
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Сколько существует девятеричных пятизначных чисел, содержащих в своей записи ровно одну цифру 5, в которых никакие две одинаковые цифры не стоят рядом?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Для задач с цифрами важно помнить, что никакое число не может начинаться с 0. Поэтому добавляем условие: \"if x[0] > 0:\""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import product\n\ncnt = 0\nfor x in product(range(9), repeat=5):\n    if x[0] > 0:\n        if x.count(5) == 1:\n            if all(x[i] != x[i + 1] for i in range(4)):\n                cnt += 1\nprint(cnt)\n\n# Ответ: 13377"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import product",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируется функция product из модуля itertools, которая генерирует декартово произведение итерируемых объектов."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируется переменная cnt, которая будет использоваться для подсчета количества значений, удовлетворяющих заданным условиям."
+          }
+        ],
+        [
+          {
+            "text": "for x in product(range(9), repeat=5):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается цикл for, в котором генерируются все возможные пятерки чисел от 0 до 8."
+          }
+        ],
+        [
+          {
+            "text": "if x[0] > 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется, что первое число в пятерке больше 0."
+          }
+        ],
+        [
+          {
+            "text": "if x.count(5) == 1:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется, что число 5 встречается в пятерке ровно один раз."
+          }
+        ],
+        [
+          {
+            "text": "if all(x[i] != x[i + 1] for i in range(4)):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется, что все числа в пятерке попарно не равны друг другу, кроме последнего и предпоследнего чисел."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если пятерка чисел удовлетворяет всем условиям, увеличивается счетчик cnt на 1."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводится результат: количество пятерок чисел, удовлетворяющих заданным условиям."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/fy0d1ieMMK4igq_h_3AzpWPvFjjr82uzpOdKRM30kasQmJV8Vvl_xfwzFvWVFgFPhQIm6GzTES90cLDkSPfPSulpi81wMk4iaN7TUrNqfhjYhFws5_uDQgRXBbqcZASXuCqRynngi94awRkIRtKfxf0MNcO1bD8mMYoi8g25Rj2e15lGlDlAjr9ja3rloMABy7k0QtB6mcb3wkpd_5sbNBjd1LTmK_6FCJdAtupJ0phxLnjcazaVmey5Icnb0tOADWpBsqMrilQbdkLf8O8xZa4UmLxy4bNW2uCXNMeMV0TW4j73V3hJCZl2J6vfNptUL8evN_Zkzr9rqD-OI4Qqhg",
+      "file": "494-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "12240",
+  "collection": "КЕГЭ",
+  "meta": {
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 12240",
+  "title": "Задание 8 ЕГЭ: разбор задачи 12240",
+  "slug": "zadanie-8-ege-razbor-zadachi-12240",
+  "hidden": false
+}

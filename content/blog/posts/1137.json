@@ -1,0 +1,67 @@
+{
+  "id": 1137,
+  "rubric": "video",
+  "description": "",
+  "date": "2025-07-07",
+  "source": "https://t.me/informatika_kege_itpy/1137",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в TikTok",
+          "href": "https://vm.tiktok.com/ZNdAGT636/",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в видео",
+          "href": "https://youtube.com/shorts/XAyUydCMrpA?si=AY2nJrW43Jdn1PIN",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в ДЗЕН",
+          "href": "https://dzen.ru/shorts/6845ce076bc49e3472121c19?share_to=link",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в VK",
+          "href": "https://vk.com/clip-221025268_456239103?c=1",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/fUR8URB63SuKkFpSq0xe-O6o3S3tJIQpJ-aMdOxHYrPWrKMwOcqfl5EDvBV2gd3ZT3ulgRl5NJ-bR9KPyLylUb7T22B9h3Jd00aQtheZRou0AxpTLMzc2nVB26SxaUCUNrhyY-JPzWJihLBwEUOE7thWQYhd897kbPcSHDRbdeWLGqU17vXqowNAFtqy7n9uBzAnbwR4U8c4QlUv-5nwhIMwdNgbVSUI524ft1T98VRSqeICjRExxWv4YsYlmRG7FQzv9MRnCJF4ZJsoiJMcXc-DVFMrtAbR62PWmEPMGUTPCP_nBGiH6Qx-9nm8REo5yY1DucHUVx-124O2LRnFbQ",
+      "file": "1137-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://t.me/informatika_kege_itpy/1137",
+    "thumb": {
+      "src": "/blog-media/1137-1.jpg",
+      "width": 464,
+      "height": 619
+    }
+  },
+  "baseTitle": "ТОП 5 самых простых номеров на информатике по-моему мнению",
+  "title": "ТОП 5 самых простых номеров на информатике по-моему мнению",
+  "slug": "top-5-samyh-prostyh-nomerov-na-informatike-po-moemu-mneniyu",
+  "hidden": false
+}

@@ -1,0 +1,192 @@
+{
+  "id": 737,
+  "rubric": "breakdown",
+  "description": "Определите количество строк таблицы, содержащих числа, для которых выполнены оба условия: – наибольшее из четырёх чисел меньше суммы трёх других; – среди четырёх чисел есть только…",
+  "date": "2024-06-12",
+  "source": "https://t.me/informatika_kege_itpy/737",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/737",
+      "thumb": {
+        "src": "/blog-media/737-1.jpg",
+        "width": 848,
+        "height": 464
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество строк таблицы, содержащих числа, для которых выполнены оба условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– наибольшее из четырёх чисел меньше суммы трёх других;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– среди четырёх чисел есть только одна пара равных чисел."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "На ",
+          "bold": true
+        },
+        {
+          "text": "kompege.ru",
+          "href": "http://kompege.ru/",
+          "bold": true
+        },
+        {
+          "text": " появился вариант с заданиями к ЕГЭ 2024, ",
+          "bold": true
+        },
+        {
+          "text": "ссылка тут.",
+          "href": "https://kompege.ru/variant?kim=25056868",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('9.csv'):\n    M = sorted([int(x) for x in s.split(';')])\n    if M[-1] < sum(M[:3]):\n        if len(set(M)) == 3:\n            cnt += 1\nprint(cnt)\n\n# Ответ: 147"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация переменной cnt с начальным значением 0 для подсчёта подходящих ситуаций."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.csv'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который проходит по каждой строке в файле '9.csv'."
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(x) for x in s.split(';')])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание списка M из целочисленных значений, полученных путём разделения строки s по символу ';' и последующей сортировки этих чисел."
+          }
+        ],
+        [
+          {
+            "text": "if M[-1] < sum(M[:3]):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если наибольшее из четырёх чисел меньше суммы трёх других чисел."
+          }
+        ],
+        [
+          {
+            "text": "if len(set(M)) == 3:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если количество уникальных элементов в списке M равно 3, что означает, что есть только одна пара равных чисел."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличение счётчика cnt на 1, если обе проверки выше выполняются."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод общего количества ситуаций, которые удовлетворяют заданным условиям."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/XfXrxKBCL_Ynr1B4QFwxgtc6VnU0ttmMQk1955D1L2uWqZWS-MJS-0JbFyQ-sFrnS6UUdkvM05kLBtPj1RtlSpUExtRD7exyIniGRQo1SC-LFEC42K-AhByTR-Xv8-0xWDbrpsypLRJQzs9p_Qs7iiCf11kBcpm_ClKyb7ycLw3bx4tqC1ZWpXgIShozwqVD2uczGlj88GigaopcLAwqLDgUtZU3w12D53NJ1W3yOJFP8fmNTZFu-Vl7abac_7Y15ayFx3NFSziLPYUp2g7uROLwbhXUb1hA0ehP63ClYr6Gl7pZopWLIyusQ553-AUqujoQ3F3cxZ0X-dfSdrTz2Q",
+      "file": "737-1.jpg"
+    }
+  ],
+  "task": 9,
+  "problem": "17522",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 07.06.24",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи 17522",
+  "title": "Задание 9 ЕГЭ: разбор задачи 17522",
+  "slug": "zadanie-9-ege-razbor-zadachi-17522",
+  "hidden": false
+}

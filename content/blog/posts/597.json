@@ -1,0 +1,120 @@
+{
+  "id": 597,
+  "rubric": "useful",
+  "description": "Ссылка на вариант: Шастин вариант 6⃣",
+  "date": "2024-05-13",
+  "source": "https://t.me/informatika_kege_itpy/597",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/597-1.jpg",
+      "width": 738,
+      "height": 717,
+      "alt": "Один из подписчиков спросил меня, стоит ли решать авторские варианты, если до…"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ссылка на вариант:",
+          "bold": true
+        },
+        {
+          "text": " Шастин вариант ",
+          "href": "https://kompege.ru/variant?kim=25044384",
+          "bold": true
+        },
+        {
+          "text": "6⃣"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Так же оставлю тут ссылку на полный разбор от автора: "
+        },
+        {
+          "text": "ссылка на видео",
+          "href": "https://youtu.be/A8HJbTajxVE",
+          "bold": true
+        },
+        {
+          "text": " 📱"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Особенно хочется отметить номера"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "- забавное условие с \"поменять местами элементы\""
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- ситуация с фигурами может запутать"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- лайтовый, но просто кайфовый прототип"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- чётность всех соседних различна"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- интересное условие с пропущенным числом в маске"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- интересная задача с p-ой системой счисления"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- проверить сумму цифр строки у элементов тройки"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- классная задача с угловыми клетками"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- хардовый уровень на подумать"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/DZJyuBek8tXB4QEiEP6RGiXsK-BmuRU12nVDNqKbfqjh8TRgPYCma7X_d8oQaH7d4KneUx4D-7999rQtZ5HyMSMFdcDpSFO6KO9rxPvbioaBPnN-PIdPpn2Hx5L8MmTZ0IN-haP5tF5_l7ogU6kvaNJHhrxf9HtoCuG-IYqW3spPuVR_VFl7VfD_ax5G1OF8rhHpIrT-W1vaQV4OeqnMHArJ9av_HDYVk-2O27_QAvpU2auppaNZwARIHfa5-f6B7IYNfWLJTAXsg7SXUj5hGBW-KyoXWl1MILRfftzW5P6c2_5uHgnq79J593JtCCpAk1_9XBtmUrn1fi_4npJdtw.jpg",
+      "file": "597-1.jpg"
+    }
+  ],
+  "baseTitle": "Один из подписчиков спросил меня, стоит ли решать авторские варианты, если до…",
+  "title": "Один из подписчиков спросил меня, стоит ли решать авторские варианты, если до…",
+  "slug": "odin-iz-podpischikov-sprosil-menya-stoit-li-reshat-avtorskie",
+  "hidden": false
+}

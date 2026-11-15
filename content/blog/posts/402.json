@@ -1,0 +1,64 @@
+{
+  "id": 402,
+  "rubric": "breakdown",
+  "description": "Задание 24 ЕГЭ: разбор задачи 60266",
+  "date": "2024-03-12",
+  "source": "https://t.me/informatika_kege_itpy/402",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/402",
+      "thumb": {
+        "src": "/blog-media/402-1.jpg",
+        "width": 848,
+        "height": 432
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/60266-24-ff32fa5caf3d40f8acebf854a90ee7a7?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline().split('T')\nmaxi = 0\nfor i in range(len(s)-100):\n    r = 'T'.join(s[i:i+101])\n    maxi = max(maxi, len(r))\nprint(maxi)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию: ",
+          "bold": true
+        },
+        {
+          "text": "24.txt",
+          "href": "https://ege.sdamgia.ru/get_file?id=142062",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/bPLIXVludjQGTtz8CvBrEd8BiiX-r5GPTnMeWWgZ8rhYLLIPFAVgVaFEeBLDPPwSsdlEhHNDJ5k5YdZvmQxFxOdX7poebO5_3dYJmFmAAbgA1IUOst6Cugqzr2RLzYzXsaO1IfxvDn2WpSFSZYHWXijNY2g5m9dQRsRLG2oxQGOjbqCRTuiYbmTOZV5foftcaRQVZVAiC_ErnSObU0uK75XqVV36hGJe-8NYmHbF4YGjpezH4VL4jj4e9KznA73cbKjM6Wbdu_jT2lIZeVBVzwWt_15kux_t3LdYrLV2WCzgkPmTWXgNVQdruE-u6RvICfM_21c0j4MecS2tqkYJTw",
+      "file": "402-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "60266",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 60266",
+  "title": "Задание 24 ЕГЭ: разбор задачи 60266",
+  "slug": "zadanie-24-ege-razbor-zadachi-60266",
+  "hidden": false
+}
