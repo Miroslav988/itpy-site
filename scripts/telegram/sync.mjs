@@ -24,8 +24,26 @@ const formatDate = (date) => {
   return `${day} ${months[month - 1]} ${year}`;
 };
 
+// Where Telegram is blocked, TELEGRAM_PROXY sends these requests (and only these) through the
+// HTTP proxy of a VPN client, e.g. http://127.0.0.1:10809. The rest of the site stays direct.
+let proxied;
+async function proxiedFetch() {
+  const proxy = process.env.TELEGRAM_PROXY;
+  if (!proxy) return fetch;
+  if (!proxied) {
+    const { ProxyAgent, fetch: undiciFetch } = await import("undici");
+    const dispatcher = new ProxyAgent(proxy);
+    proxied = (url, options) => undiciFetch(url, { ...options, dispatcher });
+  }
+  return proxied;
+}
+
 async function fetchText(url) {
-  const response = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (compatible; itpy-blog-sync)" } });
+  const fetchFn = await proxiedFetch();
+  const response = await fetchFn(url, {
+    headers: { "user-agent": "Mozilla/5.0 (compatible; itpy-blog-sync)" },
+    signal: AbortSignal.timeout(30_000),
+  });
   if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
   return response;
 }
@@ -126,12 +144,16 @@ export async function syncChannel({ dir = blogDir(), all = false, log = console.
       if (previous) {
         articles.delete(post.id);
         await rm(join(postsDir, `${post.id}.json`), { force: true });
+        for (const { file } of previous.media ?? []) await rm(join(mediaDir, file), { force: true });
         removed++;
       }
       continue;
     }
     const { title, ...rest } = shaped;
-    articles.set(post.id, { ...rest, baseTitle: title, title, slug: previous?.slug });
+    // Telegram signs picture addresses anew on every read. A picture already on disk keeps the
+    // address it was fetched from, so an unchanged post is not rewritten on every run.
+    const media = rest.media.map((item) => previous?.media?.find((old) => old.file === item.file && existsSync(join(mediaDir, old.file))) ?? item);
+    articles.set(post.id, { ...rest, media, baseTitle: title, title, slug: previous?.slug });
   }
 
   finalize(articles);
@@ -166,27 +188,37 @@ export async function syncChannel({ dir = blogDir(), all = false, log = console.
   return { read: seen.size, added, updated, removed, visible };
 }
 
-// Runs inside the site: first a minute after start, then every BLOG_SYNC_MINUTES (30 by default).
+// Runs inside the site: a minute after start, then once a day at BLOG_SYNC_TIME (the server's
+// local time, 04:00 by default). A failed run, e.g. with the VPN client down, is retried an hour later.
 let timer;
 export function startBlogSync({ log = console.log } = {}) {
   if (timer) return;
-  const minutes = Number(process.env.BLOG_SYNC_MINUTES) || 30;
-  let running = false;
+  const time = (process.env.BLOG_SYNC_TIME ?? "").match(/^(\d{1,2}):(\d{2})$/);
+  const [hour, minute] = time ? [Number(time[1]), Number(time[2])] : [4, 0];
+  const untilDaily = () => {
+    const next = new Date();
+    next.setHours(hour, minute, 0, 0);
+    if (next.getTime() <= Date.now()) next.setDate(next.getDate() + 1);
+    return next.getTime() - Date.now();
+  };
+  const schedule = (delay) => {
+    timer = setTimeout(run, delay);
+    timer.unref();
+  };
   const run = async () => {
-    if (running) return;
-    running = true;
+    let failed = false;
     try {
       const result = await syncChannel({ log });
       if (result.added || result.updated || result.removed) log(`blog sync: ${JSON.stringify(result)}`);
     } catch (error) {
-      log(`blog sync failed: ${error.message}`);
-    } finally {
-      running = false;
+      failed = true;
+      // fetch() hides the network error in `cause` (e.g. ECONNREFUSED when the VPN proxy is down).
+      const cause = error.cause?.code ?? error.cause?.message;
+      log(`blog sync failed: ${error.message}${cause ? ` (${cause})` : ""}`);
     }
+    schedule(failed ? Math.min(60 * 60_000, untilDaily()) : untilDaily());
   };
-  setTimeout(run, 60_000).unref();
-  timer = setInterval(run, minutes * 60_000);
-  timer.unref();
+  schedule(60_000);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {

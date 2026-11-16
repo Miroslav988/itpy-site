@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Caveat, Onest } from "next/font/google";
 import { BookingProvider } from "./booking/Booking";
+import CookieConsent from "./CookieConsent";
 import { siteOrigin } from "./site";
 import "./globals.css";
 
@@ -60,6 +61,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${onest.variable} ${caveat.variable}`}>
         <BookingProvider>{children}</BookingProvider>
+        <CookieConsent />
       </body>
     </html>
   );

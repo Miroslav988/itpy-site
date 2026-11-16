@@ -57,7 +57,7 @@ export function personSchema(origin: string) {
       credentialCategory: "Бакалавриат",
       name: "Информатика и вычислительная техника",
     },
-    sameAs: [links.telegramPersonal, links.telegramChannel, links.dzen, links.youtube, links.vk, links.avito],
+    sameAs: [links.telegramPersonal, links.telegramChannel, links.youtube, links.vk, links.avito],
   };
 }
 

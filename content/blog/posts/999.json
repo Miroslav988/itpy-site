@@ -393,7 +393,7 @@
   ],
   "media": [
     {
-      "url": "https://cdn4.telesco.pe/file/SZBChISUQLBw1kDaj2DCV8i-WZxQHcj7TBKkmPMX5oZpMfSQgs1x3vPFuo_75ul00-_7Ilc3CrqHQx1G8e-RYZKR2SWdOpT_soMEfs4U-tecddc8d8dNUqwdKoW2eB5EeZ4Cw8HM0lZJhYKIDCBeVfngdhuwy_YghArNkxqYK03gGdJjq3psE0ZlmcsszFrUPTs8hMnJ3pE31Z62zPNfvJRHINvB_-o-iyIREJfMpLqbt6M5QpQvDw8HYRw__Y_W6OZDW7aGP2aVC7dDPPqCz7QKOxa4vJera5Eu-oI2Ti2EqNqhmghp0FkiAdNFpFk4oRXz7iZbFrQpcpBzDbuypg.jpg",
+      "url": "https://cdn4.telesco.pe/file/iON9hS6yEFZ9bEKpU3w6ItDflg2jifbVNPqMC8oCqCJHnCFLsrXhcKrpODKKU2QrCwcnEwhtwDUWieRkvtwXlP3uiTBqmYO1_ttb-R9aW11yhBNW2eQyRPyJkDyWQtm-BqAoa9ugUmrfPWOBJ0dmdEFdZ6f2llRsGGFiA8zrAIPASuMkQfpNcqpgpr-6wghT5foc6WFUqQSJjRFhm0JnRZpIDN5uUKUEmOnZEIIhvhuNq7ekdyffv1rxvbXpAQilsP494_8GQ-B36cd-IipQWpZ15S9S_o9zOHPooPWBHDr-uxUOkzrqg9UN9cAaofBm-SFnVeorYV4tjP8QZrY-3A.jpg",
       "file": "999-1.jpg"
     }
   ],
@@ -406,6 +406,6 @@
   },
   "baseTitle": "Задание 8 ЕГЭ: разбор задачи 11616",
   "title": "Задание 8 ЕГЭ: разбор задачи 11616",
-  "slug": "zadanie-8-ege-razbor-zadachi-11616-999",
-  "hidden": true
+  "hidden": false,
+  "slug": "zadanie-8-ege-razbor-zadachi-11616"
 }

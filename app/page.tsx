@@ -250,12 +250,7 @@ export default async function Home() {
                     <p className="env-role">{item.role}</p>
                     <h3>{item.name}</h3>
                   </div>
-                  {item.text && <p>{item.text}</p>}
-                  {item.points && (
-                    <ul className="env-points">
-                      {item.points.map((point) => <li key={point}><Check />{point}</li>)}
-                    </ul>
-                  )}
+                  {item.text.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                   {item.link.external ? (
                     <a href={item.link.href} target="_blank" rel="noopener noreferrer">{item.link.label}</a>
                   ) : (

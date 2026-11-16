@@ -32,9 +32,10 @@ const collections = {
 
 // Lines that only point back to the channel, its chat or bots: the site does not repeat them.
 const PROMO = /t\.me\/|telegram|телеграм|@ilandroxx?y|@\w+_bot|чатик|информатика егэ\s*\||кидайте свои вопросы|вся теория для егэ в одном месте|читать статью в notion|please open telegram|view in telegram|подписывайтесь|разбор на любую задачу можно найти|кнопка назад к меню/i;
+// The site does not mention Dzen at all ("Смотреть в ДЗЕН", "поддержите наш проект в дзене").
+const DZEN = /дзен|дзэн|dzen\.ru|zen\.yandex/i;
 
 const HASHTAG = /#[\p{L}\p{N}_]+/gu;
-const HAS_HASHTAG = /#[\p{L}\p{N}_]+/u;
 // "#ЕГЭ17-го задания": a task tag used as a word keeps its number when hashtags are dropped.
 // The site names platforms generically ("Смотреть на YouTube" → "Смотреть видео").
 const generic = (text) =>
@@ -44,8 +45,9 @@ const generic = (text) =>
     .replace(/Смотреть\s+на (?:YouTube|ютубе?)/gi, "Смотреть видео")
     .replace(/\bYouTube\b/g, "видео");
 const unhash = (text) => text.replace(/#(?:ЕГЭ)?(\d{1,2})(?=-)/giu, "$1").replace(HASHTAG, "");
-const KEYCAPS = /^((?:[0-9#*]\uFE0F?\u20E3|\u{1F51F})+)\s*/u;
-const DECOR = /^(?:\p{Extended_Pictographic}|\p{Regional_Indicator}|\uFE0F|\u200D|[\u2190-\u21FF\u2B00-\u2BFF\u2700-\u27BF]|\s)+/u;
+const KEYCAPS = /^((?:[0-9]\uFE0F?\u20E3|\u{1F51F})+)\s*/u;
+// "*\u20E3" and "#\u20E3" are keycaps too, but only decoration.
+const DECOR = /^(?:\p{Extended_Pictographic}|\p{Regional_Indicator}|[#*]\uFE0F?\u20E3|\uFE0F|\u200D|[\u2190-\u21FF\u2B00-\u2BFF\u2700-\u27BF]|\s)+/u;
 
 // --- HTML of the post text → lines of inline parts ---------------------------------------
 
@@ -83,7 +85,10 @@ function inlines(html) {
 }
 
 const textOf = (parts) => parts.map((part) => part.text).join("");
-const lineHasPromo = (parts) => PROMO.test(parts.map((part) => `${part.text} ${part.href ?? ""}`).join(" "));
+const lineHasPromo = (parts) => {
+  const text = parts.map((part) => `${part.text} ${part.href ?? ""}`).join(" ");
+  return PROMO.test(text) || DZEN.test(text);
+};
 
 function trimParts(parts) {
   const result = parts.map((part) => ({ ...part }));
@@ -173,10 +178,22 @@ function toBlocks(items) {
 const isNumbered = (line) => /^\uE001\d+\uE001$/.test(line[0]?.text ?? "");
 const unnumber = (line) => line.filter((part, index) => index > 0 || !isNumbered([part]));
 
+// "1⃣ code ↵ what it does ↵ 2⃣ code ↵ …" with no empty lines between items: every numbered
+// line starts its own item, as if the items were separate paragraphs.
+function splitNumbered(block) {
+  if (block.type !== "paragraph" || !block.lines.slice(1).some(isNumbered)) return [block];
+  const groups = [];
+  for (const line of block.lines) {
+    if (isNumbered(line) || !groups.length) groups.push([line]);
+    else groups.at(-1).push(line);
+  }
+  return groups.map((lines) => ({ type: "paragraph", lines }));
+}
+
 // Headings ("Условие задачи:"), numbered explanations ("1⃣ code ↵ what it does") and bullet lists.
 function finish(rawBlocks) {
   const blocks = [];
-  for (const block of rawBlocks) {
+  for (const block of rawBlocks.flatMap(splitNumbered)) {
     if (block.type === "code") {
       blocks.push(block);
       continue;
@@ -264,15 +281,21 @@ function cleanTitle(text) {
 
 const taskRange = (tasks) => (tasks.length > 1 ? `${tasks[0]}–${tasks.at(-1)}` : String(tasks[0]));
 
+// Rubric hashtags: a task number (#ЕГЭ16, or #16 in older posts) or one of these.
+const RUBRIC_TAGS = { tpy: "python", useful: "useful", news: "news", новости: "news", view: "video" };
+const taskOf = (tag) => {
+  const task = Number(tag.match(/^(?:егэ)?(\d{1,2})$/)?.[1]);
+  return task >= 1 && task <= 27 ? task : undefined;
+};
+const isRubricTag = (tag) => Boolean(taskOf(tag) || RUBRIC_TAGS[tag]);
+
 // The rubric of a post comes from its hashtags; posts without one of these stay out of the blog.
 export function rubricOf(tags, text, headerTags = new Set()) {
   if (tags.has("реклама") || tags.has("хэштеги") || tags.has("хэштег")) return undefined;
-  const tasks = [...tags].map((tag) => Number(tag.match(/^(?:егэ)?(\d{1,2})$/)?.[1])).filter((n) => n >= 1 && n <= 27);
-  if (tasks.length && /разбор|услови/i.test(text)) return "breakdown";
+  if ([...tags].some(taskOf) && /разбор|услови/i.test(text)) return "breakdown";
   // When a post carries several rubric tags, the one in its header line wins.
-  const byTag = { tpy: "python", useful: "useful", news: "news", новости: "news", view: "video" };
-  const own = Object.keys(byTag).find((tag) => headerTags.has(tag)) ?? Object.keys(byTag).find((tag) => tags.has(tag));
-  return own ? byTag[own] : undefined;
+  const own = Object.keys(RUBRIC_TAGS).find((tag) => headerTags.has(tag)) ?? Object.keys(RUBRIC_TAGS).find((tag) => tags.has(tag));
+  return own ? RUBRIC_TAGS[own] : undefined;
 }
 
 // Returns the article, or undefined when the post is not for the blog.
@@ -282,11 +305,14 @@ export function shapePost(post, channel) {
   const allText = decode(post.html.replace(/<br\s*\/?>/g, "\n").replace(/<[^>]+>/g, ""));
   const tags = new Set([...allText.matchAll(HASHTAG)].map(([tag]) => tag.slice(1).toLowerCase()));
 
-  // The header is the first line (or quote) that carries hashtags; its words give the title.
-  const headerIndex = items.findIndex((item) => (item.kind === "line" && HAS_HASHTAG.test(textOf(item.parts))) || (item.kind === "quote" && item.lines.some((line) => HAS_HASHTAG.test(textOf(line)))));
-  const header = headerIndex >= 0 ? items[headerIndex] : items.find((item) => item.kind === "line");
-  const headerText = header ? (header.kind === "quote" ? header.lines.map(textOf).join(" ") : textOf(header.parts)) : "";
-  const rubric = rubricOf(tags, allText, new Set([...headerText.matchAll(HASHTAG)].map(([tag]) => tag.slice(1).toLowerCase())));
+  // The header is the post's first line with words (or a quote at the very top) and gives the
+  // title. By the format (docs/telegram-posts.md) it carries the rubric hashtag; a post that
+  // opens with anything else, e.g. an introduction with the hashtag further down, stays out.
+  const header = items.find((item) => item.kind === "code" || item.kind === "quote" || (item.kind === "line" && /[\p{L}\p{N}]/u.test(textOf(item.parts))));
+  const headerText = header?.kind === "quote" ? header.lines.map(textOf).join(" ") : header?.kind === "line" ? textOf(header.parts) : "";
+  const headerTags = new Set([...headerText.matchAll(HASHTAG)].map(([tag]) => tag.slice(1).toLowerCase()));
+  if (![...headerTags].some(isRubricTag)) return undefined;
+  const rubric = rubricOf(tags, allText, headerTags);
   if (!rubric) return undefined;
   const body = items.filter((item) => item !== header);
 

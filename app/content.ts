@@ -6,7 +6,6 @@ import type { IconName } from "./ui";
 export const links = {
   telegramPersonal: "https://t.me/ilandroxxy",
   telegramChannel: "https://t.me/informatika_kege_itpy",
-  dzen: "https://dzen.ru/informatika_kege_itpy",
   planerka: "https://planerka.app/ilandroxy/first-lesson",
   // Where «Получить запись урока» leads. The channel until Ilia gives the post or bot link.
   freeLesson: "https://t.me/informatika_kege_itpy",
@@ -20,11 +19,11 @@ export const links = {
   officialDocs: "/media/teacher-official.webp",
 };
 
+// The booking page shown in the dialog (app/booking/Booking.tsx).
 export const planerkaEmbed = {
-  url: "https://planerka.app/meet",
+  origin: "https://planerka.app",
   user: "ilandroxy",
   event: "first-lesson",
-  script: "https://planerka.app/meet/assets/external/embed.js",
 };
 
 export const teacher = {
@@ -141,22 +140,22 @@ export const environment: Array<{
   name: string;
   role: string;
   icon: IconName;
-  text?: string;
-  points?: string[];
+  // Paragraphs of the card; no bullets, so the three cards read alike.
+  text: string[];
   link: { href: string; label: string; external: boolean };
 }> = [
   {
     name: "Видеоконференция",
     role: "Занятия и вебинары",
     icon: "video",
-    text: "Все занятия проходят по видеосвязи с записью — можно присутствовать онлайн или смотреть в удобное время.",
+    text: ["Все занятия проходят по видеосвязи с записью — можно присутствовать онлайн или смотреть в удобное время."],
     link: { href: "/#formats", label: "Посмотреть форматы →", external: false },
   },
   {
     name: "Мессенджер",
     role: "Канал и поддержка",
     icon: "message",
-    points: [
+    text: [
       "Канал с конспектами, полезными материалами и новостями",
       "Бот куратора — помощь с домашними заданиями и ответы на вопросы между занятиями",
     ],
@@ -166,7 +165,7 @@ export const environment: Array<{
     name: "Stepik",
     role: "Практика и курсы",
     icon: "layers",
-    points: [
+    text: [
       "Домашние задания с автоматической проверкой для учеников занятий",
       "Бесплатные и платные курсы: видеоуроки, текстовые объяснения и практика по темам ЕГЭ",
     ],

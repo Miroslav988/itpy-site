@@ -179,6 +179,31 @@ test("answers unknown addresses with a real 404 page that is not indexed", async
   }
 });
 
+test("publishes the legal documents and links them from every page", async () => {
+  const pages = {
+    "/offer": [/Публичная оферта/, /2 000 рублей за одно Занятие/, /ОГРНИП 324547600178946/, /Мессенджер: \+7 913 468-35-34/],
+    "/privacy": [/Политика обработки персональных данных/, /3\.4\. Файлы cookie и аналитика сайта/, /href="mailto:ilyand98@mail\.ru"/],
+    "/consent": [/Согласие на обработку персональных данных/, /<li>фамилия, имя, отчество;<\/li>/],
+    "/booking-consent": [/при записи на пробное занятие/, /ООО «ДИПВОЙС»/],
+  };
+  for (const [path, patterns] of Object.entries(pages)) {
+    const response = await request(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    for (const pattern of patterns) assert.match(html, pattern, `${path}: ${pattern}`);
+    assert.doesNotMatch(html, /Мессенждер|Платёжные реквизиты:/, path);
+  }
+
+  const home = await (await request("/")).text();
+  for (const path of ["/offer", "/privacy", "/consent"]) assert.match(home, new RegExp(`href="${path}"`), `footer links ${path}`);
+  assert.doesNotMatch(home, /cookie-banner|Настройки cookie/, "no cookie banner without an analytics counter");
+  const environment = home.match(/id="environment".*?id="posts"/s)[0];
+  assert.doesNotMatch(environment, /class="check"/, "the platform cards have no bullets");
+
+  const sitemap = await (await request("/sitemap.xml")).text();
+  assert.match(sitemap, /\/offer<\/loc>/);
+});
+
 test("serves llms.txt and lets AI crawlers in", async () => {
   const forwarded = { "x-forwarded-host": "itpy.example", "x-forwarded-proto": "https" };
 

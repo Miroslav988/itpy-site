@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { links } from "./content";
+import { CookieSettingsButton } from "./CookieConsent";
+import { consent, offer, privacy } from "./legal/documents";
 
 export default function SiteFooter() {
   return (
@@ -29,6 +31,12 @@ export default function SiteFooter() {
       </div>
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} ITPY</span>
+        <nav className="footer-legal" aria-label="Правовая информация">
+          <Link href={offer.path}>Публичная оферта</Link>
+          <Link href={privacy.path}>Политика обработки персональных данных</Link>
+          <Link href={consent.path}>Согласие на обработку данных</Link>
+          <CookieSettingsButton />
+        </nav>
         <a href="#top">Наверх ↑</a>
       </div>
     </footer>

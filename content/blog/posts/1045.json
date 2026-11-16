@@ -272,7 +272,7 @@
   ],
   "media": [
     {
-      "url": "https://cdn4.telesco.pe/file/hRzmkWOtdOsca_QZp5ZRN9Th679RV1aJ9-8gPB2oWXlVEKA48u23iBJvL1Q7U0didcLym69Ijq_EW1Rqo5TO2tgQEGykLX4Ahio5K8GkA3JsOG8qmU7_ClQR9wyaAwDHvqEEm31w56281kvoc4a68l9ZuDkklux8AXXi2OBcpMcKIw3WKTM1FBBK5Y_bMIUJgOOv2OZhzhrqRyK7tCA_ikll0ro8bqtWxqN1fjS0D_wIS3VJ-ctEOGSTmQjVKzctiJRmkt1iuM61lsQsWAbG4EfzzGP8lSO89TiOudmX0lDilvQ-Ueo9VYzPGSIJuwPlA9RhqqjJJfMNbuUrxfXHRA.jpg",
+      "url": "https://cdn4.telesco.pe/file/MLhfoUtGTsYCplhhd8mpz3lpscYHiz0Bx7_H3b6vfYNf5oHQMPwTnzm7skpZhKslczH088jd-vDykZ1__zcqKsmZKikk13dSxpJ4lNHqPot95Lyr01HV400oEUK8ut3PxH94mZRHkNQ6YCw_AfM46yErxq10qrkmCvibekT4PtDpXp6oEHiis4o1noR92U6NqKR_6fNpvMT2ptpkufkn_6oJbfn2nvg_z13tafL-uvmYmOl7jkiFND-RZZB80jfZpRA6yL1dRegTq-j7_6enuKxC_qFUYUR7FAERkDeVTJhirm4t9SEcOFxVP_LaWejuXXYhNn53Ig0988E6fV_oNw.jpg",
       "file": "1045-1.jpg"
     }
   ],
@@ -285,6 +285,6 @@
   },
   "baseTitle": "Задание 25 ЕГЭ: разбор задачи 21422",
   "title": "Задание 25 ЕГЭ: разбор задачи 21422",
-  "slug": "zadanie-25-ege-razbor-zadachi-21422-1045",
-  "hidden": true
+  "hidden": false,
+  "slug": "zadanie-25-ege-razbor-zadachi-21422"
 }

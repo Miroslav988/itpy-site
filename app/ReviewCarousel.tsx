@@ -9,7 +9,7 @@ export default function ReviewCarousel() {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const touchStartX = useRef<number | null>(null);
   const stageTouchX = useRef<number | null>(null);
-  // Index 1, as in the mockup: Вячеслав in the centre.
+  // Starts on the second review, so both neighbours are visible.
   const [active, setActive] = useState(1);
   const [selected, setSelected] = useState<number | null>(null);
   const [zoomed, setZoomed] = useState(false);

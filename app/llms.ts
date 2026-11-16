@@ -29,7 +29,6 @@ const contacts = (origin: string) => [
   `- [Записаться на бесплатное пробное занятие](${links.planerka})`,
   `- [Написать Илье](${links.telegramPersonal})`,
   `- [Канал](${links.telegramChannel})`,
-  `- [Канал на Дзене](${links.dzen})`,
   `- [Видеоблог](${links.youtube})`,
   `- [VK](${links.vk})`,
   `- [Отзывы на Авито](${links.avito})`,
@@ -75,7 +74,7 @@ ${list(format.rows.map((row) => `${row.label}: ${row.value}`))}
 - Стоимость: ${format.price}${format.priceNote ? ` ${format.priceNote}` : ""}.
 `);
 
-  const environmentLines = environment.map((item) => `- ${item.name} (${item.role.toLowerCase()}): ${item.text ?? `${item.points?.join("; ")}.`}`);
+  const environmentLines = environment.map((item) => `- ${item.name} (${item.role.toLowerCase()}): ${item.text.map((line) => (/[.!?]$/.test(line) ? line : `${line}.`)).join(" ")}`);
   const courseLines = courses.map((course) => `- [${course.title}](${stepikUrl(course)}) — ${course.price ?? "цена на странице курса"}. ${course.description} ${course.audience}`);
   const taskArticles = taskNumbers().map((task) => `### Задание ${task}\n\n${inTask(task).map((post) => `- [${post.title}](${origin}/blog/${post.slug})`).join("\n")}\n`);
   const notes = (rubric: Rubric) => inRubric(rubric).map((post) => `- [${post.title}](${origin}/blog/${post.slug})`).join("\n");
