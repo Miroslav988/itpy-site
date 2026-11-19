@@ -1,8 +1,9 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
-// Articles live in content/blog/*.json, written by scripts/import-dzen.mjs.
-// Every article is reduced to these few block types, so all of them share one style.
+// Articles come from the channel: scripts/telegram/sync.mjs stores them in content/blog/posts,
+// and the running site refreshes them on a timer (instrumentation.ts). Every post is reduced to
+// these few block types, so all of them share one style.
 
 export type Inline = {
   text: string;
@@ -13,59 +14,130 @@ export type Inline = {
   href?: string;
 };
 
+export type Picture = { src: string; width: number; height: number };
+
 export type Block =
   | { type: "paragraph"; content: Inline[] }
   | { type: "heading"; level: 2 | 3; text: string }
-  | { type: "list"; ordered: boolean; items: Inline[][] }
+  | { type: "list"; ordered: boolean; start?: number; items: Inline[][] }
   | { type: "quote"; content: Inline[] }
   | { type: "code"; text: string }
   | { type: "image"; src: string; width: number; height: number; alt: string; caption?: string }
+  | { type: "video"; href: string; thumb: Picture }
   | { type: "divider" };
 
+// The channel's hashtags decide the rubric: #ЕГЭ1–27 with "Разбор" → breakdown, #tpy → python,
+// #useful → useful, #news → news, #view → video (docs/telegram-posts.md). The key order is the
+// order of the blog tabs; a rubric without posts gets no tab.
+export type Rubric = "breakdown" | "python" | "useful" | "news" | "video";
+
+export const rubrics: Record<Rubric, { label: string; badge: string; heading: string; title: string; lead: string }> = {
+  breakdown: {
+    label: "Разборы ЕГЭ",
+    badge: "Разбор ЕГЭ",
+    heading: "Разборы заданий",
+    title: "Разборы заданий ЕГЭ по информатике",
+    lead: "Условие, решение на Python и комментарии к коду — по номерам заданий.",
+  },
+  python: {
+    label: "Теория Python",
+    badge: "Теория Python",
+    heading: "Python-шпаргалки",
+    title: "Python-шпаргалки для ЕГЭ по информатике",
+    lead: "Короткие заметки о функциях, библиотеках и приёмах, которые пригодятся на экзамене.",
+  },
+  useful: {
+    label: "Полезное о ЕГЭ",
+    badge: "Полезное о ЕГЭ",
+    heading: "Полезные материалы",
+    title: "Полезное к ЕГЭ по информатике: варианты и подборки",
+    lead: "Официальные варианты с файлами, дайджесты и подборки материалов.",
+  },
+  news: {
+    label: "Новости",
+    badge: "Новости ЕГЭ",
+    heading: "Новости ЕГЭ",
+    title: "Новости ЕГЭ по информатике",
+    lead: "Изменения в экзамене и важные объявления.",
+  },
+  video: {
+    label: "Видео",
+    badge: "Видео",
+    heading: "Видео о ЕГЭ",
+    title: "Видео о ЕГЭ по информатике",
+    lead: "Короткие ролики с разборами и советами.",
+  },
+};
+
 export type Post = {
+  id: number;
   slug: string;
+  rubric: Rubric;
   title: string;
   description: string;
   date: string;
-  cover?: { src: string; width: number; height: number };
-  // ЕГЭ task number for task breakdowns (from "#ЕГЭ5" in the Dzen title).
+  // ЕГЭ task number of a breakdown; tasks lists all of them when a post covers several (19–21).
   task?: number;
-  meta?: { source?: string; sourceHref?: string; level?: string };
-  // Button text from a "Пробное: …" line in the article; see ctaText().
-  cta?: string;
-  // The original Dzen URL; absent for articles written directly for the site.
-  source?: string;
-  // Drafts are labelled on the page, kept out of the sitemap and marked noindex.
-  draft?: boolean;
-  // Hidden articles (reposts, text-less posts, manual picks) get no page at all.
+  tasks?: number[];
+  problem?: string;
+  // Where the task comes from: КЕГЭ, Яндекс, СтатГрад… (by hashtag) and the "Автор:" line.
+  collection?: string;
+  meta?: { source?: string; level?: string };
+  // The post in the channel.
+  source: string;
+  video?: { href: string; thumb?: Picture };
+  // Reposts of an article stay stored but get no page.
   hidden?: boolean;
-  originalTitle?: string;
   blocks: Block[];
 };
 
-const blogDir = join(process.cwd(), "content/blog");
+const postsDir = join(process.env.BLOG_DIR ?? join(process.cwd(), "content/blog"), "posts");
+let cache: { stamp: number; posts: Post[] } | undefined;
 
-export const posts: Post[] = readdirSync(blogDir)
-  .filter((file) => file.endsWith(".json"))
-  .map((file) => JSON.parse(readFileSync(join(blogDir, file), "utf8")) as Post)
-  .filter((post) => !post.hidden)
-  .sort((a, b) => b.date.localeCompare(a.date));
-
-export function findPost(slug: string) {
-  return posts.find((post) => post.slug === slug);
+// Re-reads the folder only when the sync has written to it (new files change its mtime).
+export function getPosts(): Post[] {
+  let stamp: number;
+  try {
+    stamp = statSync(postsDir).mtimeMs;
+  } catch {
+    return [];
+  }
+  if (cache?.stamp !== stamp) {
+    const posts = readdirSync(postsDir)
+      .filter((file) => file.endsWith(".json"))
+      .map((file) => JSON.parse(readFileSync(join(postsDir, file), "utf8")) as Post)
+      .filter((post) => !post.hidden)
+      .sort((a, b) => b.date.localeCompare(a.date) || b.id - a.id);
+    cache = { stamp, posts };
+  }
+  return cache.posts;
 }
 
-// A task breakdown that explains its code line by line ("Комментарии к коду" with at least
-// eight lines), preferring the basic level: the FAQ points readers who memorise templates here.
-export function commentedBreakdown() {
-  const commented = (post: Post) =>
-    Boolean(post.task) && post.blocks.some((block) => block.type === "list" && block.items.filter((item) => item[0]?.code).length >= 8);
-  return posts.find((post) => commented(post) && post.meta?.level === "Базовый") ?? posts.find(commented);
+// Videos have no page of their own: their cards lead straight to the video.
+export function findPost(slug: string) {
+  return getPosts().find((post) => post.slug === slug && post.rubric !== "video");
+}
+
+export const hasPage = (post: Post) => post.rubric !== "video";
+
+// The card text, unless it only repeats the title or is a list of numbers (answers of a variant).
+export function cardText(post: Post) {
+  const text = post.description?.trim();
+  if (!text || text.startsWith(post.title) || post.title.startsWith(text)) return undefined;
+  const digits = text.replace(/[^0-9]/g, "").length;
+  return digits > text.replace(/\s/g, "").length / 2 ? undefined : text;
+}
+
+export const rubricsWithPosts = () => (Object.keys(rubrics) as Rubric[]).filter((rubric) => getPosts().some((post) => post.rubric === rubric));
+
+export function taskLabel(post: Post) {
+  if (!post.task) return undefined;
+  return post.tasks && post.tasks.length > 1 ? `${post.tasks[0]}–${post.tasks.at(-1)}` : String(post.task);
 }
 
 export function ctaText(post: Post) {
-  if (post.cta) return post.cta;
-  if (post.task) return `Задание ${post.task} вызывает трудности? Разберём его вместе на бесплатном пробном занятии.`;
+  if (post.rubric === "breakdown" && post.task) return `Задание ${taskLabel(post)} вызывает трудности? Разберём его вместе на бесплатном пробном занятии.`;
+  if (post.rubric === "python") return "Хочешь уверенно писать код на ЕГЭ? Начнём с бесплатного пробного занятия.";
   return "Хочешь разобраться в ЕГЭ вместе? Начнём с бесплатного пробного занятия.";
 }
 
@@ -76,6 +148,7 @@ export function readingMinutes(post: Post) {
     if (block.type === "paragraph" || block.type === "quote") return sum + wordsIn(block.content);
     if (block.type === "list") return sum + block.items.reduce((total, item) => total + wordsIn(item), 0);
     if (block.type === "heading") return sum + block.text.split(/\s+/).length;
+    if (block.type === "code") return sum + block.text.split(/\s+/).length / 2;
     return sum;
   }, 0);
   return Math.max(1, Math.round(words / 180));

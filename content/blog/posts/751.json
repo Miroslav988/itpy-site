@@ -1,0 +1,218 @@
+{
+  "id": 751,
+  "rubric": "breakdown",
+  "description": "На числовой прямой даны два отрезка: P=[15;40] и Q=[21;63]. Укажите наименьшую возможную длину такого отрезка A, для которого логическое выражение (x∈P)→(((x∈Q)∧¬(x∈A))→¬(x∈P))…",
+  "date": "2024-06-24",
+  "source": "https://t.me/informatika_kege_itpy/751",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/751",
+      "thumb": {
+        "src": "/blog-media/751-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "На числовой прямой даны два отрезка: P=[15;40] и Q=[21;63]."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Укажите наименьшую возможную длину такого отрезка A, для которого логическое выражение (x∈P)→(((x∈Q)∧¬(x∈A))→¬(x∈P)) истинно (т.е. принимает значение 1) при любом значении переменной х."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(x, a1, a2):\n    P = 15 <= x <= 40\n    Q = 21 <= x <= 63\n    A = a1 <= x <= a2\n    return P <= ((Q and (not A)) <= (not P))\n\nR = []\nM = [x / 4 for x in range(5 * 4, 80 * 4)]\nfor a1 in M:\n    for a2 in M:\n        if all(F(x, a1, a2) for x in M):\n            R.append(a2 - a1)\nprint(round(min(R)))\n\n# Ответ: 19"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(x, a1, a2):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определение функции F с параметрами x, a1 и a2."
+          }
+        ],
+        [
+          {
+            "text": "P = 15 <= x <= 40",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия нахождения x в интервале от 15 до 40."
+          }
+        ],
+        [
+          {
+            "text": "Q = 21 <= x <= 63",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия нахождения x в интервале от 21 до 63."
+          }
+        ],
+        [
+          {
+            "text": "A = a1 <= x <= a2",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия нахождения x в интервале между a1 и a2."
+          }
+        ],
+        [
+          {
+            "text": "return P <= ((Q and (not A)) <= (not P))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращение результата выражения, описывающего взаимосвязь между P, Q, и A."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация пустого списка R, в который будут сохраняться значения."
+          }
+        ],
+        [
+          {
+            "text": "M = [x / 4 for x in range(5 * 4, 80 * 4)]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание списка M с числами, равными x / 4, где x изменяется от 20 до 320 с шагом 1."
+          }
+        ],
+        [
+          {
+            "text": "for a1 in M:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл перебора значений из списка M для переменной a1."
+          }
+        ],
+        [
+          {
+            "text": "for a2 in M:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вложенный цикл перебора значений из списка M для переменной a2."
+          }
+        ],
+        [
+          {
+            "text": "if all(F(x, a1, a2) for x in M):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия с помощью функции F для всех значений x из списка M."
+          }
+        ],
+        [
+          {
+            "text": "R.append(a2 - a1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавление разности a2 - a1 в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(round(min(R)))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод минимального значения из списка R после округления."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/kcDCFob8fli2LcSPwx6Ktry8bt8WjCJOvw_t9jaopEVVvwPl8_t-e5uM7XhGpm1JuyUDjE_wons5rFu2sbvUxiDzixM6ZPTtLcB4p9FX6X6Oa7_uInhV-lpfL4fzIBGzgrBtWeqITCjHpqWL7HE8TX1gJbOlz-qMZECVv0UJBSxpWyLMLuNC9qdM2nVWkNXNczDPQuzZ8RJTCJ_sWa-ET2XQM6ANJ_aozprtzfGwQ3YI-0JoKoPtUvoA1iQaR1aI9bI__kwS6TEgdkfk9D3hS2GCheU4P-HKNg1vKqsLWCw1C_nT2kd3YD5hZ7S_N7howrx0N2qycvhFxK229lH0Gg",
+      "file": "751-1.jpg"
+    }
+  ],
+  "task": 15,
+  "problem": "17528",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 07.06.24",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 15 ЕГЭ: разбор задачи 17528",
+  "title": "Задание 15 ЕГЭ: разбор задачи 17528",
+  "slug": "zadanie-15-ege-razbor-zadachi-17528",
+  "hidden": false
+}

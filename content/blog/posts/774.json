@@ -1,0 +1,165 @@
+{
+  "id": 774,
+  "rubric": "breakdown",
+  "description": "У исполнителя есть три команды, которым присвоены номера: A. Прибавить 2 B. Прибавить 3 C. Умножить на 2 Сколько существует программ, для которых при исходном числе 3 результатом…",
+  "date": "2024-08-02",
+  "source": "https://t.me/informatika_kege_itpy/774",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/774",
+      "thumb": {
+        "src": "/blog-media/774-1.jpg",
+        "width": 848,
+        "height": 304
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "У исполнителя есть три команды, которым присвоены номера:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "A. Прибавить 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "B. Прибавить 3"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "C. Умножить на 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько существует программ, для которых при исходном числе 3 результатом является число 20, а последняя в них команда - A или С?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В данной задачи для исследования порядка команд мы передаем строчный аргумент С, который принимает номера каждой новой команды. Таким образом мы можем проверить последнюю команду на условие."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a,b, c: str):\n    if a >= b:\n        return a == b and c[-1] != 'B'\n    return F(a + 2, b, c + 'A') + F(a + 3, b, c + 'B') + F(a*2, b, c + 'C')\n\nprint(F(3,20,''))\n\n# Ответ: 60"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a,b, c: str):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление функции F с тремя параметрами: числовыми параметрами a, b и строковым параметром c"
+          }
+        ],
+        [
+          {
+            "text": "if a >= b:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, если значение a больше или равно значению b"
+          }
+        ],
+        [
+          {
+            "text": "return a == b and c[-1] != 'B'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращаем результат логического выражения, которое проверяет, что a равно b и последняя буква строки c не равна 'B'"
+          }
+        ],
+        [
+          {
+            "text": "return F(a + 2, b, c + 'A') + F(a + 3, b, c + 'B') + F(a*2, b, c + 'C')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В противном случае возвращаем сумму результатов рекурсивных вызовов функции F с измененными параметрами: добавляем к a значения 2, 3 и умножаем его на 2, а к строке c добавляем 'A', 'B' и 'C' соответственно"
+          }
+        ],
+        [
+          {
+            "text": "print(F(3,20,''))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызываем функцию F с начальными аргументами 3, 20 и пустой строкой, затем выводим результат вызова"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/gJCfm299zKMgo7nEO5uwOi3mB_Qfv4dGTq3Yf12l9_wMTutKzxvIx8rKwlF-U8oc5hZX07mD7YsS4vP213yTD0k1epYE2A2cBEBFenOPNgZz58kMZUPwUulfPzKMqpNB6stn5ggdoOLZZGQoN9R11Tgu2PGvFAi-FMxHhqRYaQBFYQWSCTr0R-fEMEaVNGKm58gNlEO8t_jd3BFtyhcguQ3l2pXm6YYmsGJqAA-krdDz0VsXXlHoPvcbE6fTcKFkaAXk4YiZFhogNXofIQ2z93Til9N03vpB0FmQRbf1kZOYUJN1tZP4t1oH4mcVRQz5bFT3Zg3dutL5S4C3ryIDjQ",
+      "file": "774-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "13830",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Л. Шастин",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 13830",
+  "title": "Задание 23 ЕГЭ: разбор задачи 13830",
+  "slug": "zadanie-23-ege-razbor-zadachi-13830",
+  "hidden": false
+}

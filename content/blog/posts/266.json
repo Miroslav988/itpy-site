@@ -1,0 +1,60 @@
+{
+  "id": 266,
+  "rubric": "breakdown",
+  "description": "Основная сложность задачи заключается в том, что значение выражения записано в системе счисления с основанием 6. Это означает, что мы имеем дело с шестью различными цифрами: 0, 1,…",
+  "date": "2023-10-19",
+  "source": "https://t.me/informatika_kege_itpy/266",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/266",
+      "thumb": {
+        "src": "/blog-media/266-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/40989-14-787d2ed4d94847e28e21df8baad919af?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основная сложность задачи заключается в том, что значение выражения записано в системе счисления с основанием 6."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Это означает, что мы имеем дело с шестью различными цифрами: 0, 1, 2, 3, 4 и 5."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "При определении количества значащих нулей в этой записи необходимо учитывать, что нули, находящиеся между ненулевыми цифрами, влияют на числовое значение выражения. 🧠"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/D_vckWhytCdqul99AOU-GerWzQurJQFk7eXBn6js-y6CQLm20H-f3bDZq3bp0ExmFZW0PPY_8wOxg_l9tQJyzZmL-kNmyxUZzV6cvb9gmFXZBaE9YrvphwVYoYy9RQ7_wnPOhkcPMxAoXWnQAxSooMrp7cxeslbnudksOBuh4rBuhgHj_jcV3p6uI6QhIC6QITLqBZMsIq-Js4xZqSkqi2mJhE3g4Gjb5ybw3fNtqYtCQ1Kb9dR_Mm-S5ejo9en8N4-yV9Hhut4UrasiD5aLb5lb3fxjl2GE5zpqpkh0DTZwAzdin4i4Qvta4w1dcpDXkJ6wgCZfaSE9oJtWPWEIFg",
+      "file": "266-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "40989",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 40989",
+  "title": "Задание 14 ЕГЭ: разбор задачи 40989",
+  "slug": "zadanie-14-ege-razbor-zadachi-40989",
+  "hidden": false
+}

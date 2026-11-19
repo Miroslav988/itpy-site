@@ -1,0 +1,171 @@
+{
+  "id": 973,
+  "rubric": "video",
+  "description": "Качество записи конечно оставляет желать лучшего, поэтому на видео выкладывать не планирую.. но все равно интересно какие впечатления оставил вам веб! Пройдите короткий опрос под…",
+  "date": "2024-12-23",
+  "source": "https://t.me/informatika_kege_itpy/973",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Качество записи конечно оставляет желать лучшего, поэтому на видео выкладывать не планирую.. но все равно интересно какие впечатления оставил вам веб! Пройдите короткий опрос под этим постом 👇"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Тут будут полезные таймкоды"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "07:36 - Разбираем общее условие для 19-21 номера, на что стоит обратить внимание"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "№ 18370 (Уровень: Базовый)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "на одну кучу (положительный ход, решение Excel)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "13:15 – Разбираем 19 номер"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "28:15 – Разбираем 20 номер"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "37:21 – Разбираем 21 номер"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "№ 17875 Демоверсия 2025 (Уровень: Базовый)",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "на одну кучу (отрицательный ход, решение LibreOffice)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "50:20 – Разбираем 19 номер"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "58:46 – Разбираем 20 номер"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1:04:40 – Разбираем 21 номер"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "№ 18199 (Уровень: Базовый",
+          "bold": true
+        },
+        {
+          "text": ")"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "на две кучи (положительный ход, решение Excel)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1:11:15 – Разбираем 19 номер"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1:25:10 – Разбираем 20 номер"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1:33:11 – Разбираем 21 номер"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/pHm0NaArT1RpQTqETv97lefbY4gt6k75HbF92WAzj-mXFpzP3kA-qD-dTamEmmlvYfMpFVX0WB0GCxyb5xPZHD0VxgcMHOo0DXWbuSUlOAy4YQnRvuOhjlHlwgb12CZH1QJmwR1CD0lg5GqPnQEP4exQx_LjlU4fwgv_D75uE5_XPtyA9aNid1DSyAMNdXu1tzi2_u0GCnq3fnTT0n-zysCXxF8qVQYGdahf7VBTAaC2hf1DN4fdkUktuPcFB-R2fjx9JlAWD6or9DZyj7lLo6knuPaJgpF-ZUE7deuiC8uUpEuRboox0a-f5AQv4A6yXfFTVNCjXApyYexcHCmnlA",
+      "file": "973-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://t.me/informatika_kege_itpy/973",
+    "thumb": {
+      "src": "/blog-media/973-1.jpg",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "baseTitle": "Запись вчерашнего вебинара по Теории игр, решение через excel",
+  "title": "Запись вчерашнего вебинара по Теории игр, решение через excel",
+  "slug": "zapis-vcherashnego-vebinara-po-teorii-igr-reshenie-cherez",
+  "hidden": false
+}

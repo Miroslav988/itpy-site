@@ -1,0 +1,181 @@
+{
+  "id": 665,
+  "rubric": "breakdown",
+  "description": "Напишите программу, которая ищет среди целых чисел, принадлежащих числовому отрезку [326496; 649632], числа, у которых количество четных делителей равно количеству нечетных…",
+  "date": "2024-05-31",
+  "source": "https://t.me/informatika_kege_itpy/665",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/665",
+      "thumb": {
+        "src": "/blog-media/665-1.jpg",
+        "width": 848,
+        "height": 704
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Напишите программу, которая ищет среди целых чисел, принадлежащих числовому отрезку [326496; 649632], числа, у которых количество четных делителей равно количеству нечетных делителей. При этом в каждой из таких групп делителей не менее 70 элементов. Для каждого найденного числа запишите само число и минимальный делитель, больший 1000."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def Divisors(x):\n    div = []\n    for j in range(1, int(x ** 0.5) + 1):\n        if x % j == 0:\n            div += [j, x // j]\n    return sorted(set(div))\n\n\nfor x in range(326496, 649632+1):\n    d = Divisors(x)\n    chet = [a for a in d if a % 2 == 0]\n    nechet = [a for a in d if a % 2 != 0]\n    if len(chet) == len(nechet):\n        if len(chet) >= 70 and len(nechet) >= 70:\n            print(x, min([a for a in d if a > 1000]))\n            \n# Ответ: 315"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def Divisors(x):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Функцию Divisors() комментировать не буду, опишу её постом ниже."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(326496, 649632+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который перебирает числа в диапазоне от 326496 до 649632 включительно."
+          }
+        ],
+        [
+          {
+            "text": "d = Divisors(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции Divisors(x), которая возвращает список делителей числа x."
+          }
+        ],
+        [
+          {
+            "text": "chet = [a for a in d if a % 2 == 0]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Формирование списка chet, содержащего только четные делители числа x."
+          }
+        ],
+        [
+          {
+            "text": "nechet = [a for a in d if a % 2 != 0]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Формирование списка nechet, содержащего только нечетные делители числа x."
+          }
+        ],
+        [
+          {
+            "text": "if len(chet) == len(nechet):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, равны ли длины списков четных и нечетных делителей числа x."
+          }
+        ],
+        [
+          {
+            "text": "if len(chet) >= 70 and len(nechet) >= 70:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, имеют ли списки четных и нечетных делителей числа x по крайней мере по 70 элементов."
+          }
+        ],
+        [
+          {
+            "text": "print(x, min([a for a in d if a > 1000]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод числа x вместе с минимальным делителем, превышающим "
+          },
+          {
+            "text": "1000.",
+            "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ELkavtyiJO7_m8drbOX9ceLFYZjVzqW070QVHfEzpUa7s5DYEi9yyVJaczp5ZlvGzC8hJ29-km8PFcp9o46bNnRxLcsOCw0cIquuiw09vNTc3Kcp83Zma6sBhK_WfDVerClxobXOczBGhIPSgVMvhh_Tbgk4IJDQ7auTNK_Ii1c0t9_Lo9CTJUSnc2K0e-P7mBibgOLynUkjlUMY8zDZIJNFaagiHxqG4uzMy1hPr4fTH2vM7rlhP27JOeGyV5irDlPgmfbZgfQ4eq6jRK-99fDyzhouLMQHj_qgy6iB_m9JmH8br6p5Eqf4uKRbazx6wAO99dv_z27vqxn0pQc2_g",
+      "file": "665-1.jpg"
+    }
+  ],
+  "task": 25,
+  "problem": "315",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Е.Джобс",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 25 ЕГЭ: разбор задачи 315",
+  "title": "Задание 25 ЕГЭ: разбор задачи 315",
+  "slug": "zadanie-25-ege-razbor-zadachi-315",
+  "hidden": false
+}

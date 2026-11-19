@@ -1,0 +1,74 @@
+{
+  "id": 577,
+  "rubric": "python",
+  "description": "Кортежи - это упорядоченные неизменяемые коллекции элементов. В отличие от списков, кортежи создаются с помощью круглых скобок, а не квадратных. Они могут содержать элементы…",
+  "date": "2024-05-10",
+  "source": "https://t.me/informatika_kege_itpy/577",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/577",
+      "thumb": {
+        "src": "/blog-media/577-1.jpg",
+        "width": 848,
+        "height": 640
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Кортежи - это упорядоченные неизменяемые коллекции элементов. В отличие от списков, кортежи создаются с помощью круглых скобок, а не квадратных. Они могут содержать элементы различных типов данных и обычно используются для группировки данных, которые не должны изменяться."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для создания кортежа в Python используются круглые скобки, например: "
+        },
+        {
+          "text": "my_tuple = (1, 'hello', True)",
+          "code": true
+        },
+        {
+          "text": ". Кортежи позволяют обращаться к элементам по индексу, подобно спискам, но они не поддерживают операции изменения элементов после создания."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Также существует операция распаковки кортежей, которая позволяет присваивать значения элементам кортежа напрямую в переменные: "
+        },
+        {
+          "text": "a, b, c = my_tuple",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Использование кортежей в Python удобно, когда требуется группировать данные, которые не должны быть изменяемыми."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/tJbVebFfNU3sPye_u5H4iI2eE3Zpq53G9bTXAToQmU667DUj6rW3bctdKcs0YpFvV1cGWcQIDhBlafeYsoSFxKlS2-CKsTkrsvbFs6qjrXSGc7RVXqTYyrf09PkfusaqFvgezkSrzMQsIc5S4RSoLa6RtLlRADPLTxyFMAPzkujla7NTHXRcrlTH6wq25mzXeJegKWfBpv2JAfINDxNHI1WrBuFlIKqWOdYJRHtEtVK_lmuIKO1DLts1lTCh0bVejyj-5yaz8q3d-g70wLs1x1yJQBTQjtTh-iCSxvRz14QLHg3lNG3M9d_3wCzjX3uwE1HjubHnLDTaEYDzbfd_nQ",
+      "file": "577-1.jpg"
+    }
+  ],
+  "baseTitle": "Кортежи tuple() в Python",
+  "title": "Кортежи tuple() в Python",
+  "slug": "kortezhi-tuple-v-python",
+  "hidden": false
+}

@@ -1,0 +1,64 @@
+{
+  "id": 405,
+  "rubric": "breakdown",
+  "description": "Задание 24 ЕГЭ: разбор задачи 7891",
+  "date": "2024-03-14",
+  "source": "https://t.me/informatika_kege_itpy/405",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/405",
+      "thumb": {
+        "src": "/blog-media/405-1.jpg",
+        "width": 848,
+        "height": 640
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/7891-24-599996ca1c9e42c08fe1cb736181536a?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from string import *\nalphabet = digits + ascii_uppercase\nprint(alphabet)  \n\ns = open('24.txt').readline()\nmaxi = 0\nfor a in alphabet:\n    s = s.replace(f'{a}', f'{a} {a}')\n    if maxi < max([len(x) for x in s.split()]):\n        maxi = max([len(x) for x in s.split()])\n        print(a, maxi)\n    s = s.replace(f'{a} {a}', f'{a}')\nprint(maxi)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию: ",
+          "bold": true
+        },
+        {
+          "text": "24.txt",
+          "href": "https://kompege.ru/files/mcsGxbAFm.txt",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/bUKTpriE-SajLSYzWPYOekBcD-m6206ixX7BsNdB4LpZlNxdnhF1tRPEoecpukIziJCU1DWooJlS28vIHgNRpoZe2TTDZUzDGHZh4o0yV9wSogUd7YZ7bNNpBQwX80SfUNw-lRR5zHSBa84K7EH86I1NbdrVfHB10X8AQKK-G_X451NmPTBDiQ2ZPsJQBzU9h6PXnunMD1jaZEngYym-bR4bbedfVb1SMg1UPsG-9RKcVeJlmChv3DfuMPsaOrCWfmaAtY2TbMU3UKnYEYoXCYTn3ydv87_d4wxk8ZI6-WUGL73Upf-gByuT7QpjrfMgGPv0yt8M_98IKP_MDdKydA",
+      "file": "405-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "7891",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 7891",
+  "title": "Задание 24 ЕГЭ: разбор задачи 7891",
+  "slug": "zadanie-24-ege-razbor-zadachi-7891",
+  "hidden": false
+}

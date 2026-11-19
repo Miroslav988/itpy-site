@@ -1,0 +1,72 @@
+{
+  "id": 380,
+  "rubric": "breakdown",
+  "description": "Заметили, что задачи 15 номера с отрезками вызывают сложности у студентов. Однако, РЕШУ ЕГЭ не рекомендует использовать метод перебора для их решения, что является категорически…",
+  "date": "2024-02-19",
+  "source": "https://t.me/informatika_kege_itpy/380",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/380",
+      "thumb": {
+        "src": "/blog-media/380-1.jpg",
+        "width": 848,
+        "height": 768
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/34537-15-8d0a06dfd74c4807b896396c73d3532c?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Заметили, что задачи 15 номера с отрезками вызывают сложности у студентов. Однако, РЕШУ ЕГЭ не рекомендует использовать метод перебора для их решения, что является категорически неверным. Мы представляем универсальный вариант решения, который может быть полезен.😼"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В рамках обсуждения также рассмотрим задачу, в которой используется функция "
+        },
+        {
+          "text": "all()",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(x, a1, a2):\n    P = 10 <= x <= 15\n    Q = 10 <= x <= 20\n    R = 5 <= x <= 15\n    A = a1 <= x <= a2\n    return (A <= P) == (Q <= R)\n\n\nR = []\nM = [x / 4 for x in range(5 * 4, 20 * 4)]\nfor a1 in M:\n    for a2 in M:\n        if all(F(x, a1, a2) for x in M):\n            R.append(a2 - a1)\n\nprint(min(R))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/cxIYVyT5YfwYGMqlvhJHVfXsggz8CdZM6-4Yazflr13XCA8G0hrXr0fv3sGtzk0sx48IjsEC2qYPt4FSghuqKcNxuDnUctgXvvVwXbxDx_QcLZ1wlD5_xoEy0T8VjzoplPSmi8BLmpzFG__a4f6dKR-OZpKVAHHRVt3h7d0IyrTjVejBeE436DJtDFsbvXGFoFVfymoyvst-f3zMUFGp4bp0iND-hOBoRhk90fMjHGGx73jDWfryX4O11OIATXvc8_J5k-wjeKkc1tJxk0ogEgSjqXiwvpOfUaiX4vRACMHAyedrWM9VEi2adz5BKyorlDystuvcpP7D1vrAebb0Og",
+      "file": "380-1.jpg"
+    }
+  ],
+  "task": 15,
+  "problem": "34537",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 15 ЕГЭ: разбор задачи 34537",
+  "title": "Задание 15 ЕГЭ: разбор задачи 34537",
+  "slug": "zadanie-15-ege-razbor-zadachi-34537",
+  "hidden": false
+}

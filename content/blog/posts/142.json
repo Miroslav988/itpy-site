@@ -1,0 +1,42 @@
+{
+  "id": 142,
+  "rubric": "useful",
+  "description": "Да, задания на Решу ЕГЭ, КЕГЭ и в других сборниках делают независимые авторы. Поэтому неудивительно, что иногда можно встретить опечатку или откровенный косяк. Но искать такие…",
+  "date": "2023-06-08",
+  "source": "https://t.me/informatika_kege_itpy/142",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/142-1.jpg",
+      "width": 753,
+      "height": 530,
+      "alt": "Бывают ли ошибки в заданиях на РЕШУ ЕГЭ и КЕГЭ"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Да, задания на Решу ЕГЭ, КЕГЭ и в других сборниках делают независимые авторы. Поэтому неудивительно, что иногда можно встретить опечатку или откровенный косяк. Но искать такие ошибки самостоятельно может быть сложно, поэтому вот золотое правило: если задача не поддается решению в течение 10-15 минут, смело отправьте ее своему репетитору. Такой подход может оказаться гораздо эффективнее 🤔."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "P.S. Для записи на мои групповые и индивидуальные уроки, используйте закрепленную кнопочку ☝️"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/hWWwm9eRil29X_mfd2_xcExAzehzaswuRrkeXO79zJT08oIzxalZ7I9z2QWx4TUEBt2tfa6lt4Uz_qdDV4albcw7AQ5xEyRv_fn_dh2T_5d13IK6nvLrU_l7Iupcrk5BRCbtV_Y8o_D9vpNFS6v5N86iPR00fZKLAxnd3jhKMvYLaMWofDNJnVvfoeYo4soVaKg3WGmExJ1-LMZrPZzOARN_aHX2UFpa8emlCns1wla2UT2Qi3ZXq1av0ppnHtkIsblY-z401Vw37qY8Nn0ZN7e19Lt8lgcaoHTyQKEWQVRAwiwOb5PP6OJCQdxyRafpgPNzifq0xq5lD1SyagPXZw.jpg",
+      "file": "142-1.jpg"
+    }
+  ],
+  "baseTitle": "Бывают ли ошибки в заданиях на РЕШУ ЕГЭ и КЕГЭ",
+  "title": "Бывают ли ошибки в заданиях на РЕШУ ЕГЭ и КЕГЭ",
+  "slug": "byvayut-li-oshibki-v-zadaniyah-na-reshu-ege-i-kege",
+  "hidden": false
+}

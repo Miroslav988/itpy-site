@@ -1,0 +1,81 @@
+{
+  "id": 488,
+  "rubric": "python",
+  "description": "Срезы (slices) - это мощный инструмент в Python, позволяющий извлекать подотрезки данных из последовательностей, таких как списки, строки и кортежи.",
+  "date": "2024-04-26",
+  "source": "https://t.me/informatika_kege_itpy/488",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/488",
+      "thumb": {
+        "src": "/blog-media/488-1.jpg",
+        "width": 848,
+        "height": 672
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Срезы (slices) - это мощный инструмент в Python, позволяющий извлекать подотрезки данных из последовательностей, таких как списки, строки и кортежи."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Синтаксис срезов в Python"
+    },
+    {
+      "type": "code",
+      "text": "sequence[начало:конец:шаг]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "начало",
+          "code": true
+        },
+        {
+          "text": " - индекс элемента, с которого начинается срез (включительно)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "конец",
+          "code": true
+        },
+        {
+          "text": " - индекс элемента, на котором срез заканчивается (не включительно)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "шаг",
+          "code": true
+        },
+        {
+          "text": " - опциональный параметр, определяющий, какие элементы будут выбраны (по умолчанию шаг равен 1)."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Ulise5Zp2fiI5H85cNVWebPDt0vl9-Mong1BOrVGffbkGRI93-JE663mJf5IrfARWyRPNu9qgDEVvCUOm1SCg0OUYSX8vSx1L7NZIOMqz7qHmaW7u7aE7r3EOQKKjTbKVt65w7dOICPtwic4nc7c6m9EZ3jcNTeDLnHWTI969Dwh_oDL6UijfnXa07j8ablyrSdpWAh9DIq7aODhJkfjBZaws-8ymHcRSJuI3PWlwoCyBPMsJmPVy4jOqhEnpPi-y6r-rg1wUX85mKOWOt8mayihUXHWrt6yDQ4tQuW-coZ5SkpA8L8_ZjMxuonrnlkeBO3f023_Y_ZEDz_gwfxYaA",
+      "file": "488-1.jpg"
+    }
+  ],
+  "baseTitle": "Повторяем срезы в Python",
+  "title": "Повторяем срезы в Python (26 апреля 2024)",
+  "slug": "povtoryaem-srezy-v-python-26-aprelya-2024",
+  "hidden": false
+}

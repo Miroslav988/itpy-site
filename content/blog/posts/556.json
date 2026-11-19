@@ -1,0 +1,53 @@
+{
+  "id": 556,
+  "rubric": "python",
+  "description": "Обработка исключений играет важную роль в программировании, так как ошибки могут привести к непредсказуемым последствиям и прерыванию работы скрипта.",
+  "date": "2024-05-06",
+  "source": "https://t.me/informatika_kege_itpy/556",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/556",
+      "thumb": {
+        "src": "/blog-media/556-1.jpg",
+        "width": 848,
+        "height": 560
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Обработка исключений играет важную роль в программировании, так как ошибки могут привести к непредсказуемым последствиям и прерыванию работы скрипта."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Одним из способов обработки исключений в Python является конструкция try-except. Она позволяет выполнить определенный код в блоке try, и если во время его выполнения возникает ошибка, перехватить и обработать эту ошибку в блоке except."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример использования конструкции try-except"
+    },
+    {
+      "type": "code",
+      "text": "try:\n    # уязвимая функция\nexcept Exception as e:\n    print(f\"Произошла ошибка: {e}\")\n    # код обработки ошибки"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/EGAyNzv5aUgki76k0ZxgI-Hhsld8ZbCuTVknYuFBvNxWmALEGVdpSimc5swnPmxPAmDENlmkfp18xibIrPUyjH52CEAHRhosrYmr7D0CMX6SUVPEGCaKTe95biKd98X86lJSzEl6nFzKfgs8ABDZ0hhEmmqPPBGTAR_qD9g-EQdMzZWsMHKfJh0HBmMCVgeseAVZOZCKqS4vBMhTfhmyMxCigBod-XBWPTH31jHvUjjag8CnIKztHF4liASm5AeiMVS6rOAqAHyQ9xjUa8OM2yEUPQpYgCsg3KWYUADwbK6wJJjmR0370U8a41pFbENQbIyNPQ5GJReThNl-y_zpHg",
+      "file": "556-1.jpg"
+    }
+  ],
+  "baseTitle": "Обработка исключений",
+  "title": "Обработка исключений",
+  "slug": "obrabotka-isklyucheniy",
+  "hidden": false
+}

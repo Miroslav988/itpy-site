@@ -1,0 +1,72 @@
+{
+  "id": 388,
+  "rubric": "breakdown",
+  "description": "В следующем посте добавлю пару слов про функцию @lru_cache() с аргументом None 👇",
+  "date": "2024-02-27",
+  "source": "https://t.me/informatika_kege_itpy/388",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/388",
+      "thumb": {
+        "src": "/blog-media/388-1.jpg",
+        "width": 848,
+        "height": 704
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/10718-16-574950ec735c4c51adf059859c65c1c5?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from functools import *\n\n@lru_cache(None)\ndef f(n):\n    if n < 3:\n        return 2\n    if n > 2 and n % 2 == 0:\n        return 2 * f(n-2) - f(n-1) + 2\n    if n > 2 and n % 2 != 0:\n        return 2 * f(n-1) + f(n-2) - 2\n\nprint(f(170))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В следующем посте добавлю пару слов про функцию "
+        },
+        {
+          "text": "@lru_cache()",
+          "code": true
+        },
+        {
+          "text": " с аргументом "
+        },
+        {
+          "text": "None",
+          "code": true
+        },
+        {
+          "text": " 👇"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/SmXZIGKVar3XKofTQ6ONDGbhB_0VPRQxQtYPoOMb_IDJB2TsMN93Xxq-9Y8hbAY757gwaqTT-hky9QaaBaMgyfKPTNEeyltxv-VPYgnoCVh-1aIbnKz0vNtBqgGyRizlBU6_F3zj9fuVy0kwj8_o_QMjB79t4NsIwi-ujCWCIprv3Kk2-YWdZTrDpshi4FRlRAjlZMeTKTmSBIskhP60QtiowH16Doq1MpbkCLOTG2eUqp1FjYY5Zw6DCstunkOLtCRVFy_6QJltkx8F2jd-1MLJBQ1tS6m-xZpA9Jy5hQKhBNehpBIE0MDvo2dUbmWPU2pkZLAT5tom8rUQF7YZSA",
+      "file": "388-1.jpg"
+    }
+  ],
+  "task": 16,
+  "problem": "10718",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 16 ЕГЭ: разбор задачи 10718",
+  "title": "Задание 16 ЕГЭ: разбор задачи 10718",
+  "slug": "zadanie-16-ege-razbor-zadachi-10718",
+  "hidden": false
+}

@@ -1,0 +1,50 @@
+{
+  "id": 292,
+  "rubric": "breakdown",
+  "description": "Задание 14 ЕГЭ: разбор задачи 48386",
+  "date": "2023-11-12",
+  "source": "https://t.me/informatika_kege_itpy/292",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/292",
+      "thumb": {
+        "src": "/blog-media/292-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/48386-14-81720fb83ee242d3a481a33cbcf9d067?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Более компактное решение"
+    },
+    {
+      "type": "code",
+      "text": "for x in '0123456789abcde':\n    for y in '0123456789abcde':\n        r = int(f'90{x}4{y}', 15) + int(f'91{x}{y}2', 16)\n        if r % 56 == 0:\n            print(r // 56)\n            exit()"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Sp0T_CVHrY6-l6dX9C7mIUuLEn5f71JcNKvDDrUso4K-dzR3fb0rSFzPkJ2vlUqca66-sWknQZpLtTmhBfQNFwqdvodx8Sja-2rOj3LkGf_iY4ELtCAjfMpmZD7VuLUrc7v5QBWmmNUpyFxfro2GEyQ5BnGsUpSdUZYrrP_8G9UkgvnXk3fJyTTsL-GZ3MGD038OtYzE4n_ewW74tjFlDS57FYEfJuXl7W-PPb0BUhH6262NulvDVDvacWHhvoeAhjNl16AiLhA7rvsTGWDmWSsaoE7DnJ1fa2T7UsN9KjXEOAqNZSG2ByrZ1FcIY9dS-aBO20FQOA7bt9ONjBkmBA",
+      "file": "292-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "48386",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 48386",
+  "title": "Задание 14 ЕГЭ: разбор задачи 48386",
+  "slug": "zadanie-14-ege-razbor-zadachi-48386",
+  "hidden": false
+}

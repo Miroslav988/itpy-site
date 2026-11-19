@@ -1,0 +1,42 @@
+{
+  "id": 242,
+  "rubric": "python",
+  "description": "Множества set() в Python представляют собой уникальные коллекции, которые автоматически удаляют дублирующиеся элементы. Они не только обеспечивают эффективное удаление дубликатов,…",
+  "date": "2023-09-16",
+  "source": "https://t.me/informatika_kege_itpy/242",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/242",
+      "thumb": {
+        "src": "/blog-media/242-1.jpg",
+        "width": 848,
+        "height": 368
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Множества set() в Python представляют собой уникальные коллекции, которые автоматически удаляют дублирующиеся элементы."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Они не только обеспечивают эффективное удаление дубликатов, но и позволяют выполнять операции над множествами, что делает их важным инструментом для работы"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/kHDbiRetgIiu7CqBxda5iKrZzOK_pWNefDPVPWN2_aUk02u70R4wHtagol87vBZFn4GQmNaanlJvfiFMIiu05Th5bp2BNSjFAwnIIVpT-oQJj97CmTH9cmuYxxxV3ole9nz-0GwKPvfS8_xyj9ozPUrgNvB9Z51R17pTtC7mx8D3Oc8O4E-qEsmV8hLLho4q9H8M3Gjg4vn7pcLuE7clyAQJQCTY2hvzh24ufYgvryTC7bEaUAIJ2iiQRHbw2CxUMDTihMu8-PmV_xZfRf-s6SI9fztMGMeLJExyK_9TbG8E-nr-dj_vFWU5fJNI6RYlaU4duWH8is5yeuLbb26JuQ",
+      "file": "242-1.jpg"
+    }
+  ],
+  "baseTitle": "Множества set в Python",
+  "title": "Множества set в Python",
+  "slug": "mnozhestva-set-v-python",
+  "hidden": false
+}

@@ -1,0 +1,44 @@
+{
+  "id": 550,
+  "rubric": "useful",
+  "description": "Мы с Lizzerd решили сделать эту рубрику постоянной и заливать такие коротенькие видосы для вас каждое воскресенье!",
+  "date": "2024-05-05",
+  "source": "https://t.me/informatika_kege_itpy/550",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/550",
+      "thumb": {
+        "src": "/blog-media/550-1.jpg",
+        "width": 720,
+        "height": 960
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Мы с "
+        },
+        {
+          "text": "Lizzerd",
+          "href": "https://vt.tiktok.com/ZSFpupUjP/",
+          "bold": true
+        },
+        {
+          "text": " решили сделать эту рубрику постоянной и заливать такие коротенькие видосы для вас каждое воскресенье!"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/t2UJx_ctwQjtbGW_lFdTFrRqoy7mc5MZ4UNcvprHdXQwG0HH65t4wxp5dKgfZMmOlC9ekW-a4wIJiZjRIpfQAX2SJpPAPQ9BggHUYznobLaEWMpG0hZMMxaLsCcojVZ19aHXB5u1Cn0qGR9vkjnyfWKzrgYosTv5KTFNuYzLfZUQ7quC2NNJqpoIcN7Ni7tjRuItBj6y7grtX8pciZTfKHJ5Tu13nLg4i8DgD-ejx12nXlcO-kVqgzUR3fhFJtwle7I_kN04B1BzhkBHQJap9jNV3w_JuGL0dPjNuS2eLos6jdGbtbWCibE4DcDf3Z0v3KpH9PT5oMIUIgWEsv4yzA",
+      "file": "550-1.jpg"
+    }
+  ],
+  "baseTitle": "Реферальные ссылки для канала/группы",
+  "title": "Реферальные ссылки для канала/группы",
+  "slug": "referalnye-ssylki-dlya-kanala-gruppy",
+  "hidden": false
+}

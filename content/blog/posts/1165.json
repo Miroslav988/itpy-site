@@ -1,0 +1,212 @@
+{
+  "id": 1165,
+  "rubric": "breakdown",
+  "description": "ПОКА нашлось (44) ИЛИ нашлось (9299) ИЛИ нашлось (49) заменить (49, 944) заменить (44, 2) заменить (9299, 4) На вход приведённой выше программе поступает строка, которая…",
+  "date": "2025-09-09",
+  "source": "https://t.me/informatika_kege_itpy/1165",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1165-1.jpg",
+      "width": 800,
+      "height": 508,
+      "alt": "Задание 12 ЕГЭ: разбор задачи — Яндекс Учебник"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "ПОКА нашлось (44) ИЛИ нашлось (9299) ИЛИ нашлось (49)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "заменить (49, 944)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "заменить (44, 2)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "заменить (9299, 4)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "На вход приведённой выше программе поступает строка, которая начинается с цифры «4», а затем содержит n цифр «9» (3<n<1 000)."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите, сколько различных строк может получиться в результате её работы."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "my_set = set()\nfor n in range(4, 1000):\n    s = '4' + '9' * n\n\n    while '44' in s or '9299' in s or '49' in s:\n        s = s.replace('49', '944', 1)\n        s = s.replace('44', '2', 1)\n        s = s.replace('9299', '4', 1)\n    my_set.add(s)\nprint(len(my_set))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 3",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "my_set = set()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание пустого множества my_set для хранения уникальных строк"
+          }
+        ],
+        [
+          {
+            "text": "for n in range(4, 1000):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл по значениям n от 4 до 999 включительно"
+          }
+        ],
+        [
+          {
+            "text": "s = '4' + '9' * n",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание строки, состоящей из цифры '4' и n цифр '9' (например, при n=4: '49999')"
+          }
+        ],
+        [
+          {
+            "text": "while '44' in s or '9299' in s or '49' in s:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл выполняется, пока в строке есть хотя бы одна из подстрок: '44', '9299' или '49'"
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('49', '944', 1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Замена первой найденной подстроки '49' на '944'"
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('44', '2', 1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Замена первой найденной подстроки '44' на '2'"
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('9299', '4', 1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Замена первой найденной подстроки '9299' на '4'"
+          }
+        ],
+        [
+          {
+            "text": "my_set.add(s)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавление полученной строки в множество (автоматически исключает дубликаты)"
+          }
+        ],
+        [
+          {
+            "text": "print(len(my_set))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод количества уникальных строк в множестве"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/c-hJUTiZPIN4diugMXWkaZafXDY-xpQd2KRU4aRMgzYR7T6U8RI4n3b5kIXDzZLyv0AENuuTVUZUZDUTa5ZMOXwIrl4nDWYDOwaDrkKfrU_6uT3RLwu3MJ7kob3UCxcnlwxpZ3GX1Tg1UbfU5Xv_DjkqGiUId1hJmkHsvk_HSg9kcKb4NEQQ_t4ER9qzDo-_A8uIYs4nn9wd5aT_7JOXfoALaI27YwHvqbBUZWA2bTlXh7DOgywE2NeIgn3HAEK-419fTXUowEmFdu1YYZtpXubg4OSyh5LKqYvPzt6SiwZ6UfxfjE2-9zHnsi1czMk-6LyAS4EXvZTywuPg-Mr5Lg.jpg",
+      "file": "1165-1.jpg"
+    }
+  ],
+  "task": 12,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Яндекс Учебник",
+    "level": "Простой"
+  },
+  "baseTitle": "Задание 12 ЕГЭ: разбор задачи — Яндекс Учебник",
+  "title": "Задание 12 ЕГЭ: разбор задачи — Яндекс Учебник",
+  "slug": "zadanie-12-ege-razbor-zadachi-yandeks-uchebnik",
+  "hidden": false
+}

@@ -1,0 +1,365 @@
+{
+  "id": 46,
+  "rubric": "python",
+  "description": "Арифметические действия это основа, так как любые математические вычисления требуют знаний правильного синтаксиса языка. В Python арифметические действия очень просто…",
+  "date": "2022-07-19",
+  "source": "https://t.me/informatika_kege_itpy/46",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/46-1.jpg",
+      "width": 800,
+      "height": 284,
+      "alt": "Арифметические действия"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Читать подробнее",
+          "href": "https://ru.code-basics.com/languages/python/lessons/basic"
+        },
+        {
+          "text": ".."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вступление"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Арифметические действия это основа, так как любые математические вычисления требуют знаний правильного синтаксиса языка."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В Python арифметические действия очень просто интегрированы, ими удобно пользоваться. Но конечно же есть свои нюансы."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Разберем по пунктам каждое действие ☝️"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теория"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сложение, умножение и отрицание самые беспроблемные действия, они не имеют подводных камней и с ними приятно работать."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В то время как операция деления разбивается аж на 3 разных команды:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "A / B",
+          "italic": true
+        },
+        {
+          "text": " - вещественное деление (деление с дробями)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "A // B",
+          "italic": true
+        },
+        {
+          "text": " - целочисленное деление (возвращает только целую часть без округления)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "A % B",
+          "italic": true
+        },
+        {
+          "text": " - деление с остатком (возвращает остаток от деления, причем от дробной формы)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Так же полезным действием является возведение в степень, что позволяет избежать использования математической библиотеки "
+        },
+        {
+          "text": "import math",
+          "href": "https://pythonworld.ru/moduli/modul-math.html"
+        },
+        {
+          "text": ":"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(A ** ",
+          "italic": true
+        },
+        {
+          "text": "B) - возвели "
+        },
+        {
+          "text": "A ",
+          "italic": true
+        },
+        {
+          "text": "в степень "
+        },
+        {
+          "text": "B",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(A ** (1/2))",
+          "italic": true
+        },
+        {
+          "text": " - пример взятия квадратного корня ("
+        },
+        {
+          "text": "свойства степеней",
+          "href": "https://www.algebraclass.ru/svojstva-stepenej/"
+        },
+        {
+          "text": ")"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "На практике:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "A = 7",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "B = 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. Сложение"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(A + B)"
+        },
+        {
+          "text": " # 9",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. Вычитание"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(A - ",
+          "italic": true
+        },
+        {
+          "text": "B)"
+        },
+        {
+          "text": " # 5",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. Умножение"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(A * ",
+          "italic": true
+        },
+        {
+          "text": "B)"
+        },
+        {
+          "text": " # 14",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. Деление вещественное"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(A / ",
+          "italic": true
+        },
+        {
+          "text": "B)"
+        },
+        {
+          "text": " # 3.5",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. Деление целочисленное"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(A // ",
+          "italic": true
+        },
+        {
+          "text": "B)"
+        },
+        {
+          "text": " # 3",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6. Деление с остатком"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(A % ",
+          "italic": true
+        },
+        {
+          "text": "B)"
+        },
+        {
+          "text": " # 1",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. Возведение в степень"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(A ** ",
+          "italic": true
+        },
+        {
+          "text": "B)"
+        },
+        {
+          "text": " # 49",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(2 ** 4) # 16"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8. Взятие корня от переменной"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(16 ** (1 / 2)) # 4.0",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(27 ** (1 / 3)) # 3.0"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/VB6ACE4qYE-qOQfp8nDZ5vEoaez5RnEY8sWyNf_a-3VTOaOomZBnyG7tbNZhL1RdGrrqSxcZGCzZSlnyG16WLRuvh9KzUhAnvtRbO4vjGDOl1zr4-DPwkwA7ii-BcjsdMLjReshGadGEGUnhPXiB6luld08bfoqrCRSu3LD17jfGuwQbc8dOmDSVbqORh309Rp1zXXsGNMrtj1q0t4JbylY3MkdPEbOuaOvLM_jWLSLkVf5MlU_m9AxfWfASAe9TZ7Q0t5s74rEcBoRU2AjFfxaMhuJpMoIw5skPLyGgghXHA5Jde8xOGoBGWgVHDDU4rZ6mfjGCqQozAAwGerXPCw.jpg",
+      "file": "46-1.jpg"
+    }
+  ],
+  "baseTitle": "Арифметические действия",
+  "title": "Арифметические действия",
+  "slug": "arifmeticheskie-deystviya",
+  "hidden": false
+}

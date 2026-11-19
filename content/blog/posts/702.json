@@ -1,0 +1,200 @@
+{
+  "id": 702,
+  "rubric": "breakdown",
+  "description": "Текстовый файл состоит из заглавных букв латинского алфавита А, B, C, D, E и F. Определите максимальное количество идущих подряд символов в прилагаемом файле, среди которых пара…",
+  "date": "2024-06-07",
+  "source": "https://t.me/informatika_kege_itpy/702",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/702-1.jpg",
+      "width": 800,
+      "height": 444,
+      "alt": "Задание 24 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Текстовый файл состоит из заглавных букв латинского алфавита А, B, C, D, E и F.",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите максимальное количество идущих подряд символов в прилагаемом файле, среди которых пара символов DE (в указанном порядке) встречается не более 240 раз."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Для выполнения этого задания следует написать программу."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline()\ns = s.replace('DE', 'D E').split()\nmaxi = -1\nfor i in range(len(s)):\n    r = ''.join(s[i:i+241])\n    maxi = max(maxi, len(r))\nprint(maxi)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "s = open('24.txt').readline()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Чтение строки из файла '24.txt' и сохранение этой строки в переменной `s`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": "s = s.replace('DE', 'D E').split()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Замена подстроки 'DE' на 'D E' в строке `s` с последующим разделением строки на список слов."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "maxi = -1",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Инициализация переменной `maxi` c начальным значением -1 для хранения максимальной длины подстроки."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "4. for i in range(len(s))"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Цикл `for`, который проходит по индексам элементов в списке `s`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. "
+        },
+        {
+          "text": "r = ''.join(s[i:i+241])",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Создание строки `r`, объединив элементы списка `s` от индекса `i` до индекса `i+241`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6. "
+        },
+        {
+          "text": "maxi = max(maxi, len(r))",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Обновление переменной `maxi` значением, равным максимуму между текущим значением `maxi` и длиной строки `r`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. "
+        },
+        {
+          "text": "print(maxi)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Вывод наибольшей длины строки `r` из всех подстрок в переменной `s`."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/e7gGiUXa1Jrz5uN8G7FyONYwi0zmM4Vn4u-u9xr4_QYhqFHGNW-Bp0hVFnwX30rudrj01Jqxm9Oikz0rE4H6_Cug6OQuuNFdIXsbI19WDH5ZMthHk7a2bvLF-KINvP8yf4Chx56ifXiwGn4x42v_IuPDEJ4YETEHPA0y4ywbYqi68Lq8ld3Q6V0dnpgpOLTxF9PTAgnzvh9ZQMpsFIHEQpF-Wvc4XQx0pye3Whg7gbLObIvqMyAL4HfBMTl618p6XTSYSArHy8x9L8NePu_yrekZwa_LyQ7-9LkDKzKRo339sgPkHUO1OdjexLqu0cQmXVf2Dj2RIT4ZlG7pDt71uQ.jpg",
+      "file": "702-1.jpg"
+    }
+  ],
+  "task": 24,
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи",
+  "title": "Задание 24 ЕГЭ: разбор задачи",
+  "slug": "zadanie-24-ege-razbor-zadachi-702",
+  "hidden": true
+}

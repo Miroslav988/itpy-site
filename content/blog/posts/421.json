@@ -1,0 +1,208 @@
+{
+  "id": 421,
+  "rubric": "breakdown",
+  "description": "Сеть задана IP-адресом 203.111.195.0 и маской сети 255.255.240.0. Сколько в этой сети IP-адресов, в двоичной записи которых количество нулей кратно трём, а также содержатся три…",
+  "date": "2024-04-11",
+  "source": "https://t.me/informatika_kege_itpy/421",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/421",
+      "thumb": {
+        "src": "/blog-media/421-1.jpg",
+        "width": 848,
+        "height": 560
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Сеть задана IP-адресом "
+        },
+        {
+          "text": "203.111.195.0",
+          "href": "http://203.111.195.0/"
+        },
+        {
+          "text": " и маской сети "
+        },
+        {
+          "text": "255.255.240.0",
+          "href": "http://255.255.240.0/"
+        },
+        {
+          "text": ". Сколько в этой сети IP-адресов, в двоичной записи которых количество нулей кратно трём, а также содержатся три подряд идущие единицы и три подряд идущих нуля одновременно?"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе укажите только число."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "После того, как мы определили адрес сети с помощью функции ip_network, мы можем перебрать все IP-адреса в этой сети с помощью обычного цикла for ip in net."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nnet = ip_network('203.111.195.0/255.255.240.0', 0)\ncnt = 0\nfor ip in net:\n    s = f'{ip:b}'\n    if s.count('0') % 3 == 0:\n        if '111' in s and '000' in s:\n            cnt += 1\nprint(cnt)\n\n# Ответ: 1043"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from ipaddress import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля ipaddress для работы с сетевыми адресами."
+          }
+        ],
+        [
+          {
+            "text": "net = ip_network('203.111.195.0/255.255.240.0', 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание объекта сети net с заданным IP-адресом и маской подсети, с коррекцией префикса."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация счетчика cnt для подсчета количества IP-адресов, удовлетворяющих условиям."
+          }
+        ],
+        [
+          {
+            "text": "Цикл for ip in net:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Для перебора всех IP-адресов в сети net."
+          }
+        ],
+        [
+          {
+            "text": "s = f'{ip:b}'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Перевод IP-адреса в бинарное представление и сохранение в строковую переменную s."
+          }
+        ],
+        [
+          {
+            "text": "if s.count('0') % 3 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: количество нулей в бинарном представлении делится на 3 без остатка."
+          }
+        ],
+        [
+          {
+            "text": "if '111' in s and '000' in s:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Дополнительная проверка наличия подстрок '111' и '000' в бинарном представлении."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличение счетчика, если IP-адрес удовлетворяет обоим условиям."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод общего количества IP-адресов, которые соответствуют условиям."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/HvU0flLp6bwUXU3KVpV9xOvaWTb7R59HKT6r-E6Az11BqcPlp405eQ0yXyu7wcK4QSIrl2hXv888Q9OgSvPqw3tv-swaJnfa1QtMJDFTav5x0neI6XP22Plyidlrq8jEfj98pXAF4PWBpe6pNpS_crRKFJ582rr_m0EaabSd55LSM75L42vvkfH-Ov_UtiWN7N9mEi2Bn_WntHwXswHvjcvNtdnrLTHzncwPdip62f9i78UbcqPj-obAWBEAiMoze7XFAWTahKSbUdg2NxdwzXfyNA1CAy1Mys8iH9agPvKs5eD8RcPuDu8L6K6nLG5BTJ2sty0-m410MB4wpbv4fw",
+      "file": "421-1.jpg"
+    }
+  ],
+  "task": 13,
+  "problem": "12947",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "(C. Горбачёв)"
+  },
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи 12947",
+  "title": "Задание 13 ЕГЭ: разбор задачи 12947",
+  "slug": "zadanie-13-ege-razbor-zadachi-12947",
+  "hidden": false
+}

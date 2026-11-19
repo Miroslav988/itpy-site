@@ -1,0 +1,220 @@
+{
+  "id": 649,
+  "rubric": "breakdown",
+  "description": "Текстовый файл состоит из символов T, U, V, W, X, Y и Z. Определите в прилагаемом файле максимальную длину подстроки, состоящую из пар символов XX, YY или ZZ в произвольном…",
+  "date": "2024-05-25",
+  "source": "https://t.me/informatika_kege_itpy/649",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/649",
+      "thumb": {
+        "src": "/blog-media/649-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Текстовый файл состоит из символов T, U, V, W, X, Y и Z."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите в прилагаемом файле максимальную длину подстроки, состоящую из пар символов XX, YY или ZZ в произвольном порядке, при этом ни одна пара не должна повторяться два раза подряд."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline()\nfor a in 'TUVW':\n    s = s.replace(a, ' ')\nfor a in 'XYZ':\n    while a*4 in s:\n        s = s.replace(a*4, f'{a*2} {a*2}')\n    while a*3 in s:\n        s = s.replace(a*3, f'{a*2} {a*2}')\nprint(max([len(x) for x in s.split()]))\nprint(max(map(len, s.split())))\n\n# Ответ: 52"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Чтение первой строки из файла \"24.txt\" и сохранение ее содержимого в переменную s."
+          }
+        ],
+        [
+          {
+            "text": "for a in 'TUVW':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл, который перебирает символы 'T', 'U', 'V', 'W' для замены их на пробел в строке s."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(a, ' ')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Замена каждого символа 'T', 'U', 'V', 'W' на пробел в строке s."
+          }
+        ],
+        [
+          {
+            "text": "for a in 'XYZ':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл, который перебирает символы 'X', 'Y', 'Z' для выполнения дополнительных преобразований в строке s."
+          }
+        ],
+        [
+          {
+            "text": "while a*4 in s:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Пока последовательность из 4 символов a присутствует в строке s."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(a*4, f'{a*2} {a*2}')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Замена последовательности из 4 символов a на строку, состоящую из 2 символов a, пробела и еще 2 символов a."
+          }
+        ],
+        [
+          {
+            "text": "while a*3 in s:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Пока последовательность из 3 символов a присутствует в строке s."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(a*3, f'{a*2} {a*2}')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Замена последовательности из 3 символов a на строку, состоящую из 2 символов a, пробела и еще 2 символов a."
+          }
+        ],
+        [
+          {
+            "text": "print(max([len(x) for x in s.split()]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод максимальной длины слова после разделения строки s по пробелам и определения максимальной длины с помощью List Comprehension."
+          }
+        ],
+        [
+          {
+            "text": "print(max(map(len, s.split())))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Еще одна аналогичная запись."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поддержать автора: boosty",
+          "href": "https://boosty.to/informatika_kege_itpy/donate",
+          "bold": true
+        },
+        {
+          "text": " 💵"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/o589dOdia6wMaE2sT8Zvo-0tb0pOVZT_bx3f7HTnQn-zDWaK3mcNKwGMO1S0PUIbt7e3ZkuUsLv8cP4NK3RzWFuRtVLZyCUMtHxE8JSNWgyrUAa6WOu8goJpwnYpda9AkF8OKfTgl-s7gTL_5xLOLC7cHQ6oUg2mgOOVKlFqAhiHQRR63wwwes2PMiSCIObLPJ9J5T6sqOK3FMQOs6dGeZL_y0anb6TSrIQtxoyy9HGO522HIZgSi31pzaoL1MJ9KHqZ77q_BUKWQuETC2BOXw5WypCVuVvTgsGninmYnF8SogJQ-SvSJO5_JMAyXV7T1SDwIaKXZPmNpgSw_8FhGw",
+      "file": "649-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "16269",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Е. Джобс",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 16269",
+  "title": "Задание 24 ЕГЭ: разбор задачи 16269",
+  "slug": "zadanie-24-ege-razbor-zadachi-16269",
+  "hidden": false
+}

@@ -1,0 +1,62 @@
+{
+  "id": 297,
+  "rubric": "breakdown",
+  "description": "Основная сложность задачи заключается в том, что для построения нового числа R необходимо выполнять последовательные операции с двоичной записью исходного числа N, при этом…",
+  "date": "2023-11-28",
+  "source": "https://t.me/informatika_kege_itpy/297",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/297",
+      "thumb": {
+        "src": "/blog-media/297-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/1729-554-5-0e8b29cf095c404691b576191cf667bc?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основная сложность задачи заключается в том, что для построения нового числа R необходимо выполнять последовательные операции с двоичной записью исходного числа N, при этом учитывая остатки от деления сумм цифр на 2."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Результатом является двоичная запись числа R, и требуется определить, сколько уникальных чисел R попадает в заданный диапазон "
+        },
+        {
+          "text": "[20; 50]",
+          "code": true
+        },
+        {
+          "text": " 🧠"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/qPW0fjIWLARFqqK8GHohZ22XX06D867xEeiM7iHPc4nG7R38aYANPHV0l-SCjrl6z4hKfu1LVDd73PAhuv9P_KtvAa5AKRYR6OWFC6Z-UnKkrC2znR4uItxnFzUnOR1_mEtr4alUoWHowgQY3DxJnr2s29qjhHc-6AvJqheIqLeK3nBO8123s-n3MBC7qAORRETZrCoQic_aZBd3TcQDjx7pLvJS_XqF-NT3W-X1l5y8g9Wz44NVvf6efp966cA3-AIUZPxoLu0Bx46pu9DitrxLM_3sBp-0-_kNd2XXdw-8cyN08Np3iMMeA3_qpZn9HqSqt3Ua41x3PGJ6ppENvA",
+      "file": "297-1.jpg"
+    }
+  ],
+  "task": 5,
+  "problem": "554",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 5 ЕГЭ: разбор задачи 554",
+  "title": "Задание 5 ЕГЭ: разбор задачи 554",
+  "slug": "zadanie-5-ege-razbor-zadachi-554",
+  "hidden": false
+}

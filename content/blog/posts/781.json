@@ -1,0 +1,102 @@
+{
+  "id": 781,
+  "rubric": "python",
+  "description": "Множества в Python поддерживают множество операций, таких как объединение, пересечение, разность и симметрическая разность. Давайте рассмотрим их подробнее.",
+  "date": "2024-08-08",
+  "source": "https://t.me/informatika_kege_itpy/781",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Множества в Python поддерживают множество операций, таких как объединение, пересечение, разность и симметрическая разность. Давайте рассмотрим их подробнее."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Объединение множеств"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Объединение возвращает множество, содержащее все элементы обоих множеств."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "set1 = {1, 2, 3}\nset2 = {3, 4, 5}\nunion_set = set1.union(set2)\nprint(union_set) # {1, 2, 3, 4, 5}"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пересечение множеств"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Пересечение возвращает множество, содержащее только общие элементы обоих множеств."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "intersection_set = set1.intersection(set2)\nprint(intersection_set) # {3}"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Разность множеств"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Разность возвращает множество, содержащее элементы, которые есть в первом множестве, но отсутствуют во втором."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "difference_set = set1.difference(set2)\nprint(difference_set) # {1, 2}"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Симметрическая разность множеств"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Симметрическая разность возвращает множество, содержащее элементы, которые присутствуют в одном из множеств, но не в обоих."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "symmetric_difference_set = set1.symmetric_difference(set2)\nprint(symmetric_difference_set) # {1, 2, 4, 5}"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Эти операции помогают эффективно работать с множествами и управлять уникальными данными."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Основные операции с множествами в Python",
+  "title": "Основные операции с множествами в Python",
+  "slug": "osnovnye-operatsii-s-mnozhestvami-v-python",
+  "hidden": false
+}

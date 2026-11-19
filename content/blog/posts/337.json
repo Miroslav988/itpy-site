@@ -1,0 +1,66 @@
+{
+  "id": 337,
+  "rubric": "useful",
+  "description": "Недавно я наткнулся на базовое, но интересное условие с сайта kompege.ru (номер задачи 8954). Стало интересно, какой вариант решения вы используете чаще всего!",
+  "date": "2024-01-31",
+  "source": "https://t.me/informatika_kege_itpy/337",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/337",
+      "thumb": {
+        "src": "/blog-media/337-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Недавно я наткнулся на базовое, но интересное условие с сайта "
+        },
+        {
+          "text": "kompege.ru",
+          "href": "http://kompege.ru/"
+        },
+        {
+          "text": " (номер задачи "
+        },
+        {
+          "text": "8954",
+          "code": true
+        },
+        {
+          "text": "). Стало интересно, какой вариант решения вы используете чаще всего!"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Условие: ",
+          "bold": true
+        },
+        {
+          "text": "\"Найдите количество пар, в которых только одно число кратно 7\"",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/LQJiAEYnVqJHqoEc-bEg5i-3QJsb9vwupSTI3NYADm6pUeZYgj_pD7DIxzpdiSQ0hgYcLdUQXOV4OlG02r73dcwF_7PbLKY9MwuSBJYun-45_N_-_9Qj9BF7O8AIlrWuFTxp7J--vtIBzHPh5b7efoKTR4n0cTKqgyzujRKIl0aDUBXwbK_G5DOC-4Q5FyDvucomMfpYczOEljnqWzpElr6U7k8ylHobuVZTsPdiX8Vp-tW45Uwaq4qtZwr6BD9uKNeWY91cahYF3NkAtpLAtltqT3bTaxLiTnVYSCyarTvpy1nmzGo2S_1mzZjJXjbPy9k9fn-hpyPog4J4PuAbvw",
+      "file": "337-1.jpg"
+    }
+  ],
+  "baseTitle": "Вопрос: Как записать это условие",
+  "title": "Вопрос: Как записать это условие",
+  "slug": "vopros-kak-zapisat-eto-uslovie",
+  "hidden": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": 976,
+  "rubric": "python",
+  "description": "Обработка исключений играет важную роль в программировании, так как ошибки могут привести к непредсказуемым последствиям и прерыванию работы скрипта.",
+  "date": "2024-12-24",
+  "source": "https://t.me/informatika_kege_itpy/976",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/976",
+      "thumb": {
+        "src": "/blog-media/976-1.jpg",
+        "width": 816,
+        "height": 848
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Обработка исключений играет важную роль в программировании, так как ошибки могут привести к непредсказуемым последствиям и прерыванию работы скрипта."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Одним из способов обработки исключений в Python является конструкция try-except. Она позволяет выполнить определенный код в блоке try, и если во время его выполнения возникает ошибка, перехватить и обработать эту ошибку в блоке except."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример использования"
+    },
+    {
+      "type": "code",
+      "text": "try:\n    # уязвимая функция\nexcept Exception as e:\n    print(f\"Произошла ошибка: {e}\")\n    # код обработки ошибки"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Inamg5CK-ZpIqip8IhCsdEZMM5TKuc_zM8LL29d3_gMenTTxpU_gUsrUz7O3sASV32oDnwlZE0RaX8muUAbIrCV-kiARdr7CtqxR-ba9-xWQu_5fOmqq7MT2oCRTGjJXElkuGRsD-x8jAP6JrMEJlc5f_0IndPfritcw8dL63vQx_Y4Hxnfl8x16EPgYoCORU5H5IRzMa-v5QmYzVvLxhKj86IVokujYPsdsiOkrEQVGKd-yFV7TIrUbF8K7SNxVqLImBJHcM9hYi78ougVA4jjfFX744JIUvES7Rt_Th01gSORTTfJxvj91a_JObG0keMSZ4hcV8PXWo3JIsi_o9w",
+      "file": "976-1.jpg"
+    }
+  ],
+  "baseTitle": "Обработка исключений через try/except",
+  "title": "Обработка исключений через try/except",
+  "slug": "obrabotka-isklyucheniy-cherez-try-except",
+  "hidden": false
+}

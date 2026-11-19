@@ -1,0 +1,94 @@
+{
+  "id": 305,
+  "rubric": "breakdown",
+  "description": "Обратите своё внимание на этот 9 номер с сайта kompege.ru",
+  "date": "2023-12-19",
+  "source": "https://t.me/informatika_kege_itpy/305",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/305",
+      "thumb": {
+        "src": "/blog-media/305-1.jpg",
+        "width": 848,
+        "height": 432
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/5664-9-27b4fdd450dc4b82926f9c9a376bbc7c?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Обратите своё внимание на этот 9 номер с "
+        },
+        {
+          "text": "сайта kompege.ru",
+          "href": "https://kompege.ru/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Несмотря на его базовый уровень, условие этой задачи не оставит вас равнодушными:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В каждой строке таблицы есть три натуральных числа, и ваша задача – найти количество строк, где хотя бы одно произведение двух чисел заканчивается на 4.",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Прикладываю предложенное мною решение, в котором использована библиотека "
+        },
+        {
+          "text": "itertools",
+          "code": true
+        },
+        {
+          "text": " и функция "
+        },
+        {
+          "text": "permutations",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import permutations\ncount = 0\nfor s in open('9.txt'):\n    M = [int(i) for i in s.split()]\n    if any((A[0] * A[1]) % 10 == 4 for A in permutations(M, 2)):\n        count += 1\nprint(count)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/JDjJ1rvndfmZ1VdrT9NdBVheN__T9g6ibb9aUM_Dg3A4i2SJ3GTUgTU_7NI_lAvyySN4vDQng00bSr4Rcor5rxYhkVIG8OYkMFL7M6zIBN4SlLQLr6LznOR0thkVtrclB1QRXctOBBRaij4x99BSoQ5y-UvV9hAMW-dq03JuePHtckMqPJ_6-FMJlBDqixlRzJXru1s_Ys3A71yVxQO1gAEHT7vFgDIIFMCEdWlxgvtqD1hH6HxYt1hO-sxPkkrZEBVrD0UAj7lVjnps9kt8kn2Kr5MB0bDFVEtQfRQ3-nLr9b-mRyzXC6A52kTYZs65Rtv757qqHdS7z04Vtnr45A",
+      "file": "305-1.jpg"
+    }
+  ],
+  "task": 9,
+  "problem": "5664",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи 5664",
+  "title": "Задание 9 ЕГЭ: разбор задачи 5664",
+  "slug": "zadanie-9-ege-razbor-zadachi-5664",
+  "hidden": false
+}

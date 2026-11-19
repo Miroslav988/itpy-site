@@ -1,0 +1,202 @@
+{
+  "id": 1058,
+  "rubric": "breakdown",
+  "description": "Полина составляет слова, переставляя буквы в слове ПАЙТОН. Сколько слов может составить Полина, если известно, что сумма порядковых номеров гласных букв, в каждом из них, равна 6?…",
+  "date": "2025-04-27",
+  "source": "https://t.me/informatika_kege_itpy/1058",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1058-1.jpg",
+      "width": 800,
+      "height": 597,
+      "alt": "Задание 8 ЕГЭ: разбор задачи 11201"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Полина составляет слова, переставляя буквы в слове ПАЙТОН. Сколько слов может составить Полина, если известно, что сумма порядковых номеров гласных букв, в каждом из них, равна 6? Буквы нумеруются слева направо, начиная с единицы."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\ncnt = 0\nfor p in permutations('ПАЙТОН'):\n    word = ''.join(p)\n    summa = word.index('А')+1 + word.index('О')+1\n    if summa == 6:\n        cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 96",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируется модуль itertools для работы с перестановками (permutations)."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается счетчик cnt, который будет считать количество подходящих перестановок."
+          }
+        ],
+        [
+          {
+            "text": "for p in permutations('ПАЙТОН'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл перебирает все возможные перестановки букв в слове 'ПАЙТОН'."
+          }
+        ],
+        [
+          {
+            "text": "word = ''.join(p)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Каждая перестановка p (это кортеж букв) объединяется в строку word."
+          }
+        ],
+        [
+          {
+            "text": "summa = word.index('А')+1 + word.index('О')+1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "word.index('А') возвращает индекс буквы 'А' в строке (начиная с 0)."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- +1 добавляется, чтобы считать позицию с 1 (как в обычном порядке)."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- Аналогично для буквы 'О'."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- summa — это сумма позиций букв 'А' и 'О' в текущей перестановке."
+          }
+        ],
+        [
+          {
+            "text": "if summa == 6:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется, равна ли сумма позиций 'А' и 'О' 6."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполнено (summa == 6), счетчик увеличивается на 1."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В конце выводится общее количество подходящих перестановок."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/XnlDHyc1bYgb7ZWX8voUwGEtGVcfQpIP2dlTnypXEtJXko2ZL_bxGKRQExywI4JRoj-dtGbmhr2ZtKqtyRwxeY5mOBHPPbh0e8wbdkNxlUthssmJhp82FeGHkMygicLw_ktVx5DBGDYO0U6HpvLRNSdL17jZqGhfUchwCmBMeZ2j5-FK2W7TmPH2FQOur8VfD-jLy4Pav_ZR300xRu9DvJHCZXUX718cfAQAOrAaRFSJRwYdSDX4MfSpSWx5wRmSDQk9H2UrUc7BsRoKmntw_OigtYyRcnMJIfwkRlVRo7p4T_UeFXtEV1TRGylQG7qk7XXNUT9v6sYu-iZghsdu1w.jpg",
+      "file": "1058-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "11201",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "С.Якунин",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 11201",
+  "title": "Задание 8 ЕГЭ: разбор задачи 11201",
+  "slug": "zadanie-8-ege-razbor-zadachi-11201",
+  "hidden": false
+}

@@ -1,0 +1,44 @@
+{
+  "id": 428,
+  "rubric": "python",
+  "description": "Если у вас нет полного понимания того, как работает функция enumerate в Python, то давайте разберемся вместе. Метод enumerate() добавляет счетчик к элементам итерируемого объекта…",
+  "date": "2024-04-14",
+  "source": "https://t.me/informatika_kege_itpy/428",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/428",
+      "thumb": {
+        "src": "/blog-media/428-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Если у вас нет полного понимания того, как работает функция enumerate в Python, то давайте разберемся вместе. Метод enumerate() добавляет счетчик к элементам итерируемого объекта и возвращает объект типа enumerate. Этот объект содержит пары значений: индекс элемента и сам элемент из исходного списка."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Одним из главных преимуществ использования метода enumerate является возможность преобразования объектов типа enumerate в список или кортеж с помощью методов list() и tuple() соответственно. Это облегчает работу с индексами элементов списка и упрощает процесс перебора элементов в цикле."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/UPOdhNuBURuRJrUrFJ8QLNSKtaHJvB40p66mSJijE7BhrrMhATrZM2osPCDPecPpTJy7EZHtn2CU5hycmyOkGYLczPhnA8iwgWtUyFFDbD45Se3hCjOEDgFugP28SWlvIOjKQJShmBUd5auc8nYdrxzHlzHpX_E_SKX6B47JmJXeGJxXB4b888b4jby1wbecFMQ3uchGl1i6DJ5iLNZfxu6xy59LBmD-u6ZS0MA1qkG53TrqYCCqk28rdA_7ijj_8mRmNz4sedK6ic5WZaQltwju2lHabhFlz2R7NvF_WEiDYeUg604sZNhBMHywlJYUmzvNAAeoyosihLFaHXSnzA",
+      "file": "428-1.jpg"
+    }
+  ],
+  "baseTitle": "Итерация по списку в Python с помощью метода Enumerate",
+  "title": "Итерация по списку в Python с помощью метода Enumerate",
+  "slug": "iteratsiya-po-spisku-v-python-s-pomoschyu-metoda-enumerate-428",
+  "hidden": true
+}

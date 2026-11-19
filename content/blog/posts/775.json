@@ -1,0 +1,134 @@
+{
+  "id": 775,
+  "rubric": "breakdown",
+  "description": "Определите в прилагаемом файле максимальное количество идущих подряд символов, среди которых никакая гласная буква не стоит раньше согласной. Примечание. Гласные буквы латинского…",
+  "date": "2024-08-03",
+  "source": "https://t.me/informatika_kege_itpy/775",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/775",
+      "thumb": {
+        "src": "/blog-media/775-1.jpg",
+        "width": 848,
+        "height": 368
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите в прилагаемом файле максимальное количество идущих подряд символов, среди которых никакая гласная буква не стоит раньше согласной."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Примечание. Гласные буквы латинского алфавита: A, E, I, O, U, Y."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline()\nfor x in 'AEIOUY':\n    s = s.replace(x, '* ')\nprint(max([len(x) for x in s.split()]))\n\n# Ответ: 9052"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Считываем первую строку из файла '24.txt' и сохраняем ее в переменную s"
+          }
+        ],
+        [
+          {
+            "text": "for x in 'AEIOUY':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Начинаем цикл, который будет поочередно обрабатывать каждую букву из строки 'AEIOUY'"
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace(x, '* ')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяем каждую гласную букву x в строке s на комбинацию символов '* '"
+          }
+        ],
+        [
+          {
+            "text": "print(max([len(x) for x in s.split()]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разбиваем строку s по пробелам, находим длину каждого полученного фрагмента и выводим максимальную длину этих фрагментов"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/SvdJE0op4ByuXP2izVW_r70PLrSSV2SO1ujPfnFfd1bSxeGgoUkFe7jCVw4iur7oIk1CsWzVI-2_nJrDz_5zkkFmTIa_mD-XVlOYsfIrTkXoSG4cl3wPJaZV_6LqMZYH4N15EQvpYsOsiUrBo7MvOqG25vQ-lKpsRKZ20fpjoNcsIqLjh9dND3h4XwNS6d7TsUeaoYcFBxF9SF6gAPQW-fBVtvbLwjsowCn2BgExpQOfex9UYhzaP0v9nF4uKGvxl3Is94FY25d2AiYsP3G9D_x9LuB-vLa-pA8kFX5BsP2RLyZFM_WOlksu0oKgT9rHWSLqrrqulQxfCIngaCnHsg",
+      "file": "775-1.jpg"
+    }
+  ],
+  "task": 24,
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Л. Шастин, Вариант 7 (2024)",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи — Л. Шастин, Вариант 7 (2024)",
+  "title": "Задание 24 ЕГЭ: разбор задачи — Л. Шастин, Вариант 7 (2024)",
+  "slug": "zadanie-24-ege-razbor-zadachi-l-shastin-variant-7-2024",
+  "hidden": false
+}

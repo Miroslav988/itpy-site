@@ -1,0 +1,177 @@
+{
+  "id": 1119,
+  "rubric": "breakdown",
+  "description": "Определите количество пар элементов последовательности, в которых хотя бы одно число кратно минимальному двузначному значению последовательности, которое кратно сумме своих цифр.…",
+  "date": "2025-06-22",
+  "source": "https://t.me/informatika_kege_itpy/1119",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1119-1.jpg",
+      "width": 800,
+      "height": 299,
+      "alt": "Задание 17 ЕГЭ: разбор задачи 16264"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество пар элементов последовательности, в которых хотя бы одно число кратно минимальному двузначному значению последовательности, которое кратно сумме своих цифр."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Гарантируется, что в последовательности есть хотя бы одно двузначное число, соответствующее условию. В ответе запишите количество найденных пар чисел, затем максимальную из сумм элементов таких пар. В данной задаче под парой подразумевается два идущих подряд элемента последовательности."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(x) for x in open('0. files/17.txt')]\nD = [x for x in M if len(str(abs(x))) == 2 and x % sum(map(int, str(x))) == 0]\nR = []\nfor i in range(len(M) - 1):\n    x, y = M[i], M[i + 1]\n    if (x % min(D) == 0) + (y % min(D) == 0) >= 1:\n        R.append(x + y)\nprint(len(R), max(R))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 537 19247",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "M = [int(x) for x in open('0. files/17.txt')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Читает файл '0. files/17.txt', преобразует каждую строку в целое число и сохраняет в список M"
+          }
+        ],
+        [
+          {
+            "text": "D = [x for x in M if len(str(abs(x))) == 2 and x % sum(map(int, str(x))) == 0]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создает список D из чисел M, у которых ровно две цифры (учитывая модуль) и которые делятся на сумму своих цифр"
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализирует пустой список R для хранения сумм подходящих пар"
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(M) - 1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл по индексам списка M (кроме последнего элемента, чтобы не выйти за границы)"
+          }
+        ],
+        [
+          {
+            "text": "x, y = M[i], M[i + 1]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Берет текущий элемент x и следующий y из списка M"
+          }
+        ],
+        [
+          {
+            "text": "if (x % min(D) == 0) + (y % min(D) == 0) >= 1:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, что хотя бы одно из чисел x или y делится на минимальное число из списка D"
+          }
+        ],
+        [
+          {
+            "text": "R.append(x + y)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, добавляет сумму x и y в список R"
+          }
+        ],
+        [
+          {
+            "text": "print(len(R), max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводит количество найденных пар и максимальную сумму из списка R"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/BeYGdKS1ZJWVuvjPWkbk0AfSbtycn7b3cXTvPMGo1HSgz7KQwlrYjI2-0aJC2SlCt_2HMESnkxDXUXQxhhW0oO67FAf0fGB6aXxnSyX9r0B0zE3Z8IuKNC_0Tn0N906rDuCaWLqG9LiLnCz4kK9p_fpIh3E362T6KW4nbdf3K-OLfr-5ZMuSTri0Gp86GfxRwd94zchn5q5i6VLGiqqGZr6Q1cj8LsZ_3_OjhgSD_PE5pVKr4FBkDfY7YBHAnK59w0zPGDtT1cjfWeTHYNkWsd6mdzXcQEfUnCwnQdQoQLcAYAIOHQ6YQ9cpD_6qAi6MK6yvS0YEgvi7lEIaUtoNbg.jpg",
+      "file": "1119-1.jpg"
+    }
+  ],
+  "task": 17,
+  "problem": "16264",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Е.Джобс",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи 16264",
+  "title": "Задание 17 ЕГЭ: разбор задачи 16264",
+  "slug": "zadanie-17-ege-razbor-zadachi-16264",
+  "hidden": false
+}

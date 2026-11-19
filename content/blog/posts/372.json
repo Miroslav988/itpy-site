@@ -1,0 +1,147 @@
+{
+  "id": 372,
+  "rubric": "python",
+  "description": "Python предлагает разнообразные контрольные операторы, которые помогают управлять потоком выполнения программы. Давайте рассмотрим пять ключевых операторов: continue, break, exit,…",
+  "date": "2024-02-14",
+  "source": "https://t.me/informatika_kege_itpy/372",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Python предлагает разнообразные контрольные операторы, которые помогают управлять потоком выполнения программы. Давайте рассмотрим пять ключевых операторов: continue, break, exit, yield и pass, и узнаем, как они используются в Python."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "CONTINUE"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Оператор "
+        },
+        {
+          "text": "continue",
+          "code": true
+        },
+        {
+          "text": " используется в циклах для перехода к следующей итерации, пропуская текущую итерацию. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for i in range(5):\n    if i == 2:\n        continue\n    print(i, end=' ')  # Вывод: 0 1 3 4"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "BREAK"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Оператор "
+        },
+        {
+          "text": "break",
+          "code": true
+        },
+        {
+          "text": " используется для прерывания выполнения цикла (только в котором мы находимся), когда выполняется определенное условие. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for i in range(5):\n    if i == 3:\n        break\n    print(i, end=' ')  # Вывод: 0 1 2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "EXIT"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "exit()",
+          "code": true
+        },
+        {
+          "text": " используется для выхода из программы или интерпретатора Python. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "answer = input(\"Хотите выйти из программы? (yes/no): \")\nif answer == 'yes':\n    exit()\nelse:\n    print(\"Программа продолжает работу.\")"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "YIELD"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Оператор "
+        },
+        {
+          "text": "yield",
+          "code": true
+        },
+        {
+          "text": " используется в генераторах для возврата значений последовательно, без завершения функции. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "def my_generator():\n    for i in range(5):\n        yield i\n\ngen = my_generator()\nfor item in gen:\n    print(item, end=' ')  # Вывод: 0 1 2 3 4"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "PASS"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Оператор "
+        },
+        {
+          "text": "pass",
+          "code": true
+        },
+        {
+          "text": " не делает ничего. Он используется в тех местах, где синтаксически требуется оператор, но никаких действий выполнять не нужно. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "x = 5\nif x < 0:\n    pass  # Временно оставляем этот блок пустым\nelse:\n    print(\"x не отрицательное число\")"
+    }
+  ],
+  "media": [],
+  "baseTitle": "Освоение контрольных операторов в Python: continue, break, exit, yield и pass",
+  "title": "Освоение контрольных операторов в Python: continue, break, exit, yield и pass",
+  "slug": "osvoenie-kontrolnyh-operatorov-v-python-continue-break-exit",
+  "hidden": false
+}

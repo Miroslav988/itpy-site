@@ -1,0 +1,282 @@
+{
+  "id": 692,
+  "rubric": "breakdown",
+  "description": "На вход алгоритма подаётся натуральное число N. Алгоритм строит по нему новое число R следующим образом. 1. Строится двоичная запись числа N. 2. Далее эта запись обрабатывается по…",
+  "date": "2024-06-07",
+  "source": "https://t.me/informatika_kege_itpy/692",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/692-1.jpg",
+      "width": 800,
+      "height": 574,
+      "alt": "Задание 5 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "На вход алгоритма подаётся натуральное число N. Алгоритм строит по нему новое число R следующим образом."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. Строится двоичная запись числа N."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Далее эта запись обрабатывается по следующему правилу:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "а] Если сумма цифр двоичной записи числа четная, то к этой записи справа дописывается 0, и затем два левых разряда двоичной записи заменяются на 10."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "б) Если сумма цифр двоичной записи числа нечетная, то к этой записи справа дописывается 1, а затем два левых разряда двоичной записи заменяются на 11. Полученная таким образом запись является двоичной записью искомого числа R."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. Результат переводится в десятичную систему и выводится на экран."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Укажите максимальное число N, после обработки которого с помощью этого алгоритма получается число R, меньшее 20."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "R = []\nfor n in range(2000):\n    s = bin(n)[2:]\n    if s.count('1') % 2 == 0:\n        s = '10' + s[2:] + '0'\n    else:\n        s = '11' + s[2:] + '1'\n    r = int(s, 2)\n    if r < 20:\n        R.append(n)\nprint(max(R))\n\n# Ответ: 12"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "R = []",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Создание пустого списка `R`, в который будут добавляться значения."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2. for n in range(2000)"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Цикл `for`, который проходит по значениям от 0 до 1999."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "s = bin(n)[2:]",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Преобразование числа `n` в двоичное представление и сохранение его в переменной `s`, исключая первые два символа, которые обозначают приставку \"0b\"."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "4. if s.count('1') % 2 == 0"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Проверка условия: если количество единиц в строке `s` делится на 2 без остатка."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. "
+        },
+        {
+          "text": "s = '10' + s[2:] + '0'",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Изменение строки `s`, добавляя приставку \"10\" в начало и \"0\" в конец исходной строки `s`, начиная с третьего символа."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "6. else"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Выполняется, если условие в пункте 4 не выполнено."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. "
+        },
+        {
+          "text": "s = '11' + s[2:] + '1'",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Изменение строки `s`, добавляя приставку \"11\" в начало и \"1\" в конец исходной строки `s`, начиная с третьего символа."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8. "
+        },
+        {
+          "text": "r = int(s, 2)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Преобразование строки `s` из двоичного представления в целое число и сохранение результата в переменной `r`."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "9. if r < 20"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Проверка условия: если значение `r` меньше 20."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "10. "
+        },
+        {
+          "text": "R.append(n)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Добавление значения `n` в список `R`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "11. "
+        },
+        {
+          "text": "print(max(R))",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Вывод на экран максимального значения из списка `R`."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/E5pI-qAur19TY_8D44-xLYZJ5SWBvGj-r8zZazmOCn9NmGDxM2vFWRlAizXMkOUcnW12F6CqVSpq42FK_D9PrU5_fukZwek686L_hNYSaAzvI428zmnECnq7kdfO86Lxes_pPPB50GpqPAJsfSItsd7N2X37F9WTot2-3WQzcsjVifE79W7gySsO0S-cs4xAASiiCmWBTaCiHRiECmHMislQLHbmDGEu-hps5e2AIpO_qHzj2U5r-IyzHkcQEP7tFAFIz6hA1Byt8M9wYyPnPaqI-xebBezhE8icv1dJFpv_xbCZegYxvOGnzIioKyGiB0RWFY-ZAJjoqXEsFSodZg.jpg",
+      "file": "692-1.jpg"
+    }
+  ],
+  "task": 5,
+  "baseTitle": "Задание 5 ЕГЭ: разбор задачи",
+  "title": "Задание 5 ЕГЭ: разбор задачи",
+  "slug": "zadanie-5-ege-razbor-zadachi",
+  "hidden": true
+}

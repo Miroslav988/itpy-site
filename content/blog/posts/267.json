@@ -1,0 +1,76 @@
+{
+  "id": 267,
+  "rubric": "breakdown",
+  "description": "Основная сложность задачи заключается в том, что Аня должна соблюдать несколько ограничений при составлении 5-буквенных слов:",
+  "date": "2023-10-21",
+  "source": "https://t.me/informatika_kege_itpy/267",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/267",
+      "thumb": {
+        "src": "/blog-media/267-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/6479-8-064ec61d70be455a93e35a6fe703a2c5?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основная сложность задачи заключается в том, что Аня должна соблюдать несколько ограничений при составлении 5-буквенных слов:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. Буква \"Р\" не может быть на первом или последнем месте."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. Две гласные буквы не могут идти рядом."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. Каждая буква из множества {К, А, Р, П, Ы} должна встречаться ровно один раз."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Необходимо найти количество слов, которые соответствуют этим условиям."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/HbapzR7jB9XG3lDQHJV4QdVJHEno1r9c__hxwlAjviRUM6Ous8D7TguzkhXC0ezia27ULPzvf-CCRAKA46PNRNNgyPgBoz2NfSzIFNfyfTMBk-nXCllcaXhZaG3UrnlsEeEClgXgcQjcY4YLpzvuOpr5ksdiLpIqhQb3IhVfW_yv1fnr2LE797yEvHJQGHS-Tku0ZR7lq1_8Nqd27mzQiEDJc-2bM3dYHadHVE0yyAs4QrnkDojbqS7nItqw4JPypF5v7-yqlPse7LoTX-dgFHBVwfcYtml1lvxiflbTgG7I3dJW5Ntnt8c8ZcA3JqDaZHGxHRPGqhZin92Ppr6Q7g",
+      "file": "267-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "6479",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 6479",
+  "title": "Задание 8 ЕГЭ: разбор задачи 6479",
+  "slug": "zadanie-8-ege-razbor-zadachi-6479-267",
+  "hidden": true
+}

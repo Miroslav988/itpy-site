@@ -1,0 +1,150 @@
+{
+  "id": 1224,
+  "rubric": "python",
+  "description": "В Python строки сравниваются лексикографически (по алфавиту), символ за символом, слева направо, пока не найдётся различие.",
+  "date": "2025-12-25",
+  "source": "https://t.me/informatika_kege_itpy/1224",
+  "blocks": [
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В "
+        },
+        {
+          "text": "Python",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " строки сравниваются "
+        },
+        {
+          "text": "лексикографически",
+          "bold": true
+        },
+        {
+          "text": " (по алфавиту), символ за символом, слева направо, пока не найдётся различие."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Базовые правила"
+    },
+    {
+      "type": "code",
+      "text": "print(\"abc\" < \"abd\")    # True - 'c' < 'd'\nprint(\"apple\" < \"banana\")  # True - 'a' < 'b'\nprint(\"abc\" < \"abcd\")   # True - вторая строка длиннее при одинаковом начале"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Регистр имеет значение"
+    },
+    {
+      "type": "code",
+      "text": "print(\"A\" < \"a\")        # True - заглавные буквы идут перед строчными\nprint(\"Python\" < \"python\")  # True"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Сравнение с числами:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "# print(\"10\" < 5)       # ОШИБКА TypeError - нельзя сравнивать строку с числом\nprint(\"10\" < \"5\")       # True - сравнивается первый символ '1' < '5'"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Порядок символов основан на Unicode"
+    },
+    {
+      "type": "code",
+      "text": "print(\"ё\" > \"е\")        # True - буква 'ё' в Unicode идёт после 'е'\nprint(\"💻\" > \"A\")       # True - эмодзи имеют большие коды"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Длина тоже учитывается"
+    },
+    {
+      "type": "code",
+      "text": "print(\"abc\" == \"abc\")   # True - полное совпадение\nprint(\"abc\" < \"abcd\")   # True - одинаковое начало, но вторая длиннее"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Для сравнения без учёта регистра"
+    },
+    {
+      "type": "code",
+      "text": "print(\"Python\".lower() == \"python\".lower())  # True"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Важно:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "==",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " проверяет точное равенство, а "
+        },
+        {
+          "text": "<",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": ">",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "<=",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": ">= ",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "работают по алфавитному порядку."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Сравнение строк в Python",
+  "title": "Сравнение строк в Python",
+  "slug": "sravnenie-strok-v-python",
+  "hidden": false
+}

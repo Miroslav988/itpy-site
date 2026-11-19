@@ -1,0 +1,58 @@
+{
+  "id": 962,
+  "rubric": "python",
+  "description": "Если у вас нет полного понимания того, как работает функция enumerate в Python, то давайте разберемся вместе. Метод enumerate() добавляет счетчик к элементам итерируемого объекта…",
+  "date": "2024-12-19",
+  "source": "https://t.me/informatika_kege_itpy/962",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/962",
+      "thumb": {
+        "src": "/blog-media/962-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Если у вас нет полного понимания того, как работает функция enumerate в Python, то давайте разберемся вместе. Метод enumerate() добавляет счетчик к элементам итерируемого объекта и возвращает объект типа enumerate. Этот объект содержит пары значений: индекс элемента и сам элемент из исходного списка."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Одним из главных преимуществ использования метода enumerate является возможность преобразования объектов типа enumerate в список или кортеж с помощью методов "
+        },
+        {
+          "text": "list()",
+          "code": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "tuple()",
+          "code": true
+        },
+        {
+          "text": " соответственно. Это облегчает работу с индексами элементов списка и упрощает процесс перебора элементов в цикле."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/OoYmV8igUW9oxDXDaL27sgzHw9a-NRpZKigLgte4aeDTCq9Sm5daxMedoLSY9GX833Adeaetao1MBY7dW-FSaeVug09u-NZCTUEHqnpnOnXFHiqxpti_mSMj32j470d-icPbVZnApOEa_F7Zdm4AqSbPvoVXiRJdeJ2xwQAvbbVqdyndhXpb_HmijDopJ3w215y9CJS4bVs57rcY3LATi1DZGbs9GmoAxEogGkxajVFRhI8qo-hXcChQxKX5s9BFPmXAYVrYx3vjFOSyb-7uWShR2V3EbtuoIT5Wqa9ZCvc56UpQxPL6fQJTSgl1em4AIFXoahTB90sI4wTxKA564g",
+      "file": "962-1.jpg"
+    }
+  ],
+  "baseTitle": "Итерация по списку в Python с помощью метода Enumerate",
+  "title": "Итерация по списку в Python с помощью метода Enumerate",
+  "slug": "iteratsiya-po-spisku-v-python-s-pomoschyu-metoda-enumerate",
+  "hidden": false
+}

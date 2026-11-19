@@ -1,0 +1,72 @@
+{
+  "id": 1157,
+  "rubric": "python",
+  "description": "Когда у тебя есть несколько списков, кортежей или других итерируемых объектов, и нужно пройти по ним, будто это один большой список — itertools.chain делает это просто и…",
+  "date": "2025-08-30",
+  "source": "https://t.me/informatika_kege_itpy/1157",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Когда у тебя есть несколько списков, кортежей или других итерируемых объектов, и нужно пройти по ним, будто это один большой список — "
+        },
+        {
+          "text": "itertools.chain",
+          "code": true
+        },
+        {
+          "text": " делает это просто и эффективно, без создания дополнительных промежуточных структур."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Почему это круто?",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "itertools.chain позволяет объединять итерируемые объекты \"на лету\", экономя память и ускоряя обработку больших наборов данных. Особенно полезно, когда работаешь с объемными файлами или потоками данных."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример использования"
+    },
+    {
+      "type": "code",
+      "text": "import itertools\n\nlist1 = [1, 2, 3]\nlist2 = ('a', 'b', 'c')\nlist3 = range(10, 13)\n\n# Объединяем без создания новых списков\nfor item in itertools.chain(list1, list2, list3):\n    print(item, end=' ')"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вывод"
+    },
+    {
+      "type": "code",
+      "text": "1 2 3 a b c 10 11 12"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Теперь ты можешь обходить все эти коллекции как один поток, не тратя лишнюю память 🚀"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Объединение итерируемых объектов с помощью itertools.chain",
+  "title": "Объединение итерируемых объектов с помощью itertools.chain",
+  "slug": "obedinenie-iteriruemyh-obektov-s-pomoschyu-itertools-chain",
+  "hidden": false
+}

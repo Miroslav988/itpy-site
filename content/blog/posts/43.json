@@ -1,0 +1,125 @@
+{
+  "id": 43,
+  "rubric": "breakdown",
+  "description": "(y → z) ∧ ¬((y ∨ w) → (z ∧ x)).",
+  "date": "2022-07-09",
+  "source": "https://t.me/informatika_kege_itpy/43",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/43-1.jpg",
+      "width": 800,
+      "height": 284,
+      "alt": "Задание 2 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "код задания: "
+        },
+        {
+          "text": "35891",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=35891"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Логическая функция F задаётся выражением"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "(y → z) ∧ ¬((y ∨ w) → (z ∧ x))."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "На рисунке приведён частично заполненный фрагмент таблицы истинности функции F, содержащий неповторяющиеся строки."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Определите какому столбцу таблицы истинности функции F соответствует каждая из переменных x, y, z, w."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "# ? ? ? ? F"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# 1 1 * 1 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# * 1 1 * 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "# 1 1 * * 1"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Найти"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В ответе напишите буквы x, y, z, w в том порядке, в котором идут соответствующие им столбцы."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примечание"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Внимательно изучите всю теорию представленную в «Разбор номера », используйте ХЕШТЕГ для навигации и поиска нужного разбора."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/H98Lofn3Tmd79ztTjH0JL_AhsingnoimVdVNG55cqtBNqwVP70cyTQcvozbz-6x-M0iwzDt7Zi0TVEKpF0FaW6btdxejZsy1iL9sqJtWw0fkXCgE5jl0wLVPxw-as4sHXV3wjL5ErPJw8Naq1l5KpMuHAIdr25w7j5cd_k_oUHocHj1dqwgh5Kj8teHYZuk2u3czzHpPW7ERILDi3RsPo2BNIdwbh4ApuMGxzZfXgFP9x_g3PdHOKIudQCLb5Zs2SG-0aETQaJmKQA7wlQKFsT62PsWOIg_45Q9GLDq0gWUWJ1WQt2BoDB8DDNG8zwZ__s_7Swog0uUzMRwovMxRBg.jpg",
+      "file": "43-1.jpg"
+    }
+  ],
+  "task": 2,
+  "baseTitle": "Задание 2 ЕГЭ: разбор задачи",
+  "title": "Задание 2 ЕГЭ: разбор задачи",
+  "slug": "zadanie-2-ege-razbor-zadachi",
+  "hidden": false
+}

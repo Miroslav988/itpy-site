@@ -1,0 +1,238 @@
+{
+  "id": 917,
+  "rubric": "python",
+  "description": "Метод .append() используется для добавления элемента в конец списка. Пример:",
+  "date": "2024-11-18",
+  "source": "https://t.me/informatika_kege_itpy/917",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".APPEND",
+          "bold": true
+        },
+        {
+          "text": "()"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": ".append()",
+          "code": true
+        },
+        {
+          "text": " используется для добавления элемента в конец списка. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "my_list = [1, 2, 3]\nmy_list.append(4)\nmy_list.append(5)\nprint(my_list)  # Вывод: [1, 2, 3, 4, 5]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Можно реализовать через конкатенацию (склеивание) списков"
+    },
+    {
+      "type": "code",
+      "text": "my_list = [1, 2, 3]\nmy_list = [0] + my_list + [4, 5]\nprint(my_list)  # Вывод: [0, 1, 2, 3, 4, 5]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".REVERSE()",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": ".reverse()",
+          "code": true
+        },
+        {
+          "text": " изменяет порядок элементов в списке на обратный. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "my_list = [1, 2, 3, 4]\nmy_list.reverse()\nprint(my_list)  # Вывод: [4, 3, 2, 1]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Можно записать по другому через срез"
+    },
+    {
+      "type": "code",
+      "text": "my_list = [1, 2, 3, 4]\nmy_list = my_list[::-1]\nprint(my_list)  # Вывод: [4, 3, 2, 1]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".COUNT()",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": ".count()",
+          "code": true
+        },
+        {
+          "text": " возвращает количество вхождений заданного элемента в список. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "my_list = [1, 2, 2, 3, 4, 2]\nprint(my_list.count(2))  # Вывод: 3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".REMOVE()",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод ."
+        },
+        {
+          "text": "remove()",
+          "code": true
+        },
+        {
+          "text": " удаляет первое вхождение указанного элемента из списка. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "my_list = [1, 2, 3, 2, 4]\nmy_list.remove(2)  # Первая найденная двойка\nprint(my_list)  # Вывод: [1, 3, 2, 4]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Можно удалить элемент через его индекс используя del"
+    },
+    {
+      "type": "code",
+      "text": "my_list = [1, 2, 3, 2, 4]\ndel my_list[1]  # Индекс удаляемого элемента\nprint(my_list)  # Вывод: [1, 3, 2, 4]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".INDEX()",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": ".index()",
+          "code": true
+        },
+        {
+          "text": " возвращает индекс первого вхождения заданного элемента в списке. Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "my_list = [1, 2, 3, 2, 4]\nprint(my_list.index(2))  # Вывод: 1"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".SORT()",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": ".sort()",
+          "code": true
+        },
+        {
+          "text": " сортирует элементы списка по возрастанию (по умолчанию) или в обратном порядке, если передан аргумент "
+        },
+        {
+          "text": "reverse=True",
+          "code": true
+        },
+        {
+          "text": ". Пример:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "my_list = [4, 1, 3, 2]\nmy_list.sort()\nprint(my_list)  # Вывод: [1, 2, 3, 4]\n\nmy_list.sort(reverse=True)\nprint(my_list)  # Вывод: [4, 3, 2, 1]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Скажу честно я не любитель этого метода, считаю, что удобнее будет использовать функцию "
+        },
+        {
+          "text": "sorted()",
+          "code": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "my_list = [4, 1, 3, 2]\nmy_list = sorted(my_list)\nprint(my_list)  # Вывод: [1, 2, 3, 4]\n\nmy_list = sorted(my_list, reverse=True)\nprint(my_list)  # Вывод: [4, 3, 2, 1]"
+    }
+  ],
+  "media": [],
+  "baseTitle": "Все методы списков в Python, которые понадобятся на ЕГЭ",
+  "title": "Все методы списков в Python, которые понадобятся на ЕГЭ",
+  "slug": "vse-metody-spiskov-v-python-kotorye-ponadobyatsya-na-ege",
+  "hidden": false
+}

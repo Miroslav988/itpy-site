@@ -1,0 +1,219 @@
+{
+  "id": 616,
+  "rubric": "breakdown",
+  "description": "Дана программа для исполнителя Редактор: ПОКА нашлось(21) заменить (21, 6) Исходная строка содержит десять единиц и некоторое количество двоек, других цифр нет, точный порядок…",
+  "date": "2024-05-18",
+  "source": "https://t.me/informatika_kege_itpy/616",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/616",
+      "thumb": {
+        "src": "/blog-media/616-1.jpg",
+        "width": 848,
+        "height": 672
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Дана программа для исполнителя Редактор:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ПОКА нашлось(21)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "заменить (21, 6)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Исходная строка содержит десять единиц и некоторое количество двоек, других цифр нет, точный порядок расположения единиц и двоек неизвестен. После выполнения программы получилась строка с суммой цифр 50. Какое наименьшее количество двоек могло быть в исходной строке?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Опишу в следующем посте*",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\n\nfor n in range(1, 10):\n    for s in product('12', repeat=10+n):\n        if s.count('1') == 10:\n            s = ''.join(s)\n\n            while '21' in s:\n                s = s.replace('21', '6', 1)\n            if sum(map(int, s)) == 50:\n                print(n)\n                exit()\n\n# Ответ: 8"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля itertools."
+          }
+        ],
+        [
+          {
+            "text": "for n in range(1, 10):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который проходит по значениям n от 1 до 9 включительно."
+          }
+        ],
+        [
+          {
+            "text": "for s in product('12', repeat=10+n):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вложенный цикл for, который поочередно формирует кортежи из повторений символов '1' и '2', накопленных 10+n раз, и сохраняет их в переменную s."
+          }
+        ],
+        [
+          {
+            "text": "if s.count('1') == 10:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если символ '1' встречается в строке s 10 раз."
+          }
+        ],
+        [
+          {
+            "text": "s = ''.join(s)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразование кортежа в строку s."
+          }
+        ],
+        [
+          {
+            "text": "while '21' in s:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл while, который будет продолжаться до тех пор, пока в строке s присутствует подстрока '21'."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('21', '6', 1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Замена первого вхождения подстроки '21' на символ '6' в строке s."
+          }
+        ],
+        [
+          {
+            "text": "if sum(map(int, s)) == 50:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если сумма цифр в строке s, преобразованных в целые числа, равна 50."
+          }
+        ],
+        [
+          {
+            "text": "print(n)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод значения переменной n."
+          }
+        ],
+        [
+          {
+            "text": "exit()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Завершение выполнения программы."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/m1KM3wpZYolSzzliZETPOXXgz6rdl5_ApMRN6kWdbojGWsw_3Ma5XGnZKneiHRvSmbHjVDTkcldDJlhB859OoCmImFFdb2UjA-YPEgGVCrpFGttItV5aQdFtLw41Y39AQSMhxhIQqKMYHrLj-cBd0Qel1YC2ebkZZ1HBuXAKLWGI30uJI7opfb_tZkYFG8JiqVgjVOvKuQXrWAO_YJFEIvQiJyGRKvnN6ro77dt1xLXevt7MOFt_9W3FvcAW__A12r-2f4pxatnZhhPjJ-j7JDiVvCZi3vFnN1dbh_96LW4McmW0k6SvYvHjq0B3YlFA0ZDMM8nZoA_-VLHFkITtzQ",
+      "file": "616-1.jpg"
+    }
+  ],
+  "task": 12,
+  "problem": "2110",
+  "collection": "К. Поляков",
+  "meta": {
+    "level": "Сложный"
+  },
+  "baseTitle": "Задание 12 ЕГЭ: разбор задачи 2110",
+  "title": "Задание 12 ЕГЭ: разбор задачи 2110",
+  "slug": "zadanie-12-ege-razbor-zadachi-2110",
+  "hidden": false
+}

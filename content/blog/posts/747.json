@@ -1,0 +1,208 @@
+{
+  "id": 747,
+  "rubric": "python",
+  "description": "В мире математики делители числа имеют важное значение, и в Python можно легко создать функцию, которая найдет все делители данного числа. Давайте рассмотрим функцию divisors(x):",
+  "date": "2024-06-20",
+  "source": "https://t.me/informatika_kege_itpy/747",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/747",
+      "thumb": {
+        "src": "/blog-media/747-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В мире математики делители числа имеют важное значение, и в Python можно легко создать функцию, которая найдет все делители данного числа. Давайте рассмотрим функцию divisors(x):"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "def divisors(x):\n    div = []\n    for j in range(1, int(x ** 0.5) + 1):\n        if x % j == 0:\n            div += [j, x // j]\n    return sorted(set(div))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Как работает функция divisors(x)?",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Функция "
+          },
+          {
+            "text": "divisors(x)",
+            "code": true
+          },
+          {
+            "text": " принимает один аргумент "
+          },
+          {
+            "text": "x",
+            "code": true
+          },
+          {
+            "text": ", который является целым числом, для которого мы ищем делители."
+          }
+        ],
+        [
+          {
+            "text": "В цикле for от 1 до "
+          },
+          {
+            "text": "int(x ** 0.5) + 1",
+            "code": true
+          },
+          {
+            "text": " проходимся по всем числам от 1 до квадратного корня из "
+          },
+          {
+            "text": "x",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Если число "
+          },
+          {
+            "text": "j",
+            "code": true
+          },
+          {
+            "text": " является делителем "
+          },
+          {
+            "text": "x",
+            "code": true
+          },
+          {
+            "text": " (то есть "
+          },
+          {
+            "text": "x % j == 0",
+            "code": true
+          },
+          {
+            "text": "), то мы добавляем "
+          },
+          {
+            "text": "j",
+            "code": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "x // j",
+            "code": true
+          },
+          {
+            "text": " в список делителей "
+          },
+          {
+            "text": "div",
+            "code": true
+          },
+          {
+            "text": ", так как "
+          },
+          {
+            "text": "x // j",
+            "code": true
+          },
+          {
+            "text": " это сомножитель числа "
+          },
+          {
+            "text": "j",
+            "code": true
+          },
+          {
+            "text": "."
+          }
+        ],
+        [
+          {
+            "text": "Наконец, мы преобразуем список делителей во множество для устранения повторяющихся значений, затем сортируем его и возвращаем результат."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример использования функции"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вызов "
+        },
+        {
+          "text": "divisors(24)",
+          "code": true
+        },
+        {
+          "text": " вернет "
+        },
+        {
+          "text": "[1, 2, 3, 4, 6, 8, 12, 24]",
+          "code": true
+        },
+        {
+          "text": ", так как делители числа 24 - это все числа от 1 до 24, которые делят это число без остатка."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вызов "
+        },
+        {
+          "text": "divisors(16)",
+          "code": true
+        },
+        {
+          "text": " вернет "
+        },
+        {
+          "text": "[1, 2, 4, 8, 16]",
+          "code": true
+        },
+        {
+          "text": ", поскольку делители числа 16 - это числа, которые можно поделить на 16, начиная с 1 и заканчивая самим 16."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/oDVLUs5IXUirLnXcy_-JW8Zr6A2mgpm1SDQACe-9k9xgytxjSNhphfqJxdyD2b2ZF23DWjoEW70fFyGridNm6Z_e0qJd9je_acD8ztrI4YgunscIXuAK7rfr2DmM9WdAIMP4_tewPa_nJYhvADFSBPXfpokIPfTeG3EbNKwbxKIVEKuqvT_FYTa9F83dP2KMB9_wZkl94vhiSVwHqDbO_aVGWh-VmCPAd6_YqWP_3zxxtC5KkWyL54RYBrHapbsi3fXsNtKpmhUb3yVoSXSEh2ZYvyALIeUwhNIRbQwbabzx0P0rsP1nYbIZjTL-lFungPjzCAAaaM8I5tZyiSGqbg",
+      "file": "747-1.jpg"
+    }
+  ],
+  "baseTitle": "Поиск делителей числа в Python: функция и примеры использования",
+  "title": "Поиск делителей числа в Python: функция и примеры использования",
+  "slug": "poisk-deliteley-chisla-v-python-funktsiya-i-primery",
+  "hidden": false
+}

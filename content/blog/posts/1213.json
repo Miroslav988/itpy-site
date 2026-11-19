@@ -1,0 +1,177 @@
+{
+  "id": 1213,
+  "rubric": "python",
+  "description": "Иногда при решении задач ЕГЭ (например 8 номера) учащиеся подключают модули с помощью записи:",
+  "date": "2025-11-29",
+  "source": "https://t.me/informatika_kege_itpy/1213",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Иногда при решении задач ЕГЭ",
+          "italic": true
+        },
+        {
+          "text": " (например 8 номера)"
+        },
+        {
+          "text": " учащиеся подключают модули с помощью записи:",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Однако это может привести к конфликту имён и ошибкам в программе",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Рассмотрим пример"
+    },
+    {
+      "type": "code",
+      "text": "count = 0\nfrom itertools import *\nfor p in permutations('abc'):\n    count += 1\n    print(count, p)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Результат"
+    },
+    {
+      "type": "code",
+      "text": "TypeError: unsupported operand type(s) for +=: 'type' and 'int'"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Почему же так получается?",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Причина в том, что в модуле "
+        },
+        {
+          "text": "itertools",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " уже существует объект с именем "
+        },
+        {
+          "text": "count",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ", и при импорте через "
+        },
+        {
+          "text": "*",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " он "
+        },
+        {
+          "text": "перезаписывает",
+          "bold": true
+        },
+        {
+          "text": " нашу переменную "
+        },
+        {
+          "text": "count",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В итоге переменная становится функцией, и операция"
+        },
+        {
+          "text": " += 1",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " вызывает ошибку."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Как рекомендуется делать, чтобы такого не происходило"
+    },
+    {
+      "type": "code",
+      "text": "count = 0\nfrom itertools import permutations\n\nfor p in permutations('abc'):\n    count += 1\n    print(count, p)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вывод программы"
+    },
+    {
+      "type": "code",
+      "text": "1 ('a', 'b', 'c')\n2 ('a', 'c', 'b')\n3 ('b', 'a', 'c')\n4 ('b', 'c', 'a')\n5 ('c', 'a', 'b')\n6 ('c', 'b', 'a')"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "теперь конфликт имен не возникает, так как мы импортировали, только то, что нам нужно, и "
+        },
+        {
+          "text": "count",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - это все так же наша переменная."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Напоминаю, что ещё больше полезного контента по образованию и саморазвитию вы найдёте на каналах моих коллег, которые я собрал для вас в одну папку 👇👇👇"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Конфликт имён при использовании import *",
+  "title": "Конфликт имён при использовании import *",
+  "slug": "konflikt-imen-pri-ispolzovanii-import",
+  "hidden": false
+}

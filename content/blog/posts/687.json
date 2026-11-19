@@ -1,0 +1,194 @@
+{
+  "id": 687,
+  "rubric": "breakdown",
+  "description": "Определите количество 9-тиричных б-тизначных чисел, которые не начинаются с нечетных цифр, не оканчиваются цифрами 2 или 3, содержат не менее двух цифр 1",
+  "date": "2024-06-07",
+  "source": "https://t.me/informatika_kege_itpy/687",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/687-1.jpg",
+      "width": 800,
+      "height": 436,
+      "alt": "Задание 8 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество 9-тиричных б-тизначных чисел, которые не начинаются с нечетных цифр, не оканчиваются цифрами 2 или 3, содержат не менее двух цифр 1",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\ncnt = 0\nfor x in product('012345678', repeat=6):\n    num = ''.join(x)\n    if num[0] != \"0\" and num[0]  not in '1357':\n        if num[-1] not in '23' and num.count('1') >= 2:\n            cnt += 1\nprint(cnt)\n\n# Ответ: 19868"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "from itertools import *",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Импорт модуля `itertools`, который предоставляет функции для работы с итераторами."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": "cnt = 0",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Инициализация переменной `cnt` с начальным значением 0, которая будет использоваться для подсчета условий, удовлетворяющих заданным критериям."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "3. for x in product('012345678', repeat=6)"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Цикл `for`, в котором переменная `x` принимает все возможные комбинации длиной 6 из элементов '012345678', сгенерированные с помощью функции `product` из модуля `itertools`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. "
+        },
+        {
+          "text": "num = ''.join(x)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Создание строки `num`, объединяя элементы кортежа `x` в одну строку."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "5. if num[0] != \"0\" and num[0] not in '1357'"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Проверка условия: первая цифра числа `num` не равна \"0\" и не содержится в строке '1357'."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "6. if num[-1] not in '23' and num.count('1') >= 2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Дополнительная проверка: последняя цифра числа `num` не содержится в строке '23' и количество цифр '1' в числе `num` больше или равно 2."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7. "
+        },
+        {
+          "text": "cnt += 1",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Увеличение значения переменной `cnt` на 1 в случае, если число `num` удовлетворяет всем условиям."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8. "
+        },
+        {
+          "text": "print(cnt)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Вывод на экран значения переменной `cnt`, которая содержит количество чисел `num`, удовлетворяющих заданным условиям."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/adZ4mi2kMRte8CceTIZO0SE_Qfc0YV4vnSyR1VX1jR-g2uhN3Gkr9SzMpg8G7nnb_j3jpzN1XSD6iU-9Xlaqe1pZ1EH0W_wkWuJThmLdF50I7YJSWPWp8mzIlXcqho7UJtXFo-1E1YA_iy5i1RpAsVp1oH0gFPG7itDOFNE8zYtsfD7CubleOVgHKHVvyOYjXcynAzPgSiNDDEWE1rtxDxHxFMSuEu9ADpdVULNEpL0iW_R6JPc9LNzFlp_Exjrbi9SO7o3HJXmQzzyULq2CZuttKBGp1zYAm_F8DjtjLWZVUiHQq-8HdRIpMj9ct9Wpsmu389TtcvYARTRQi8TCWQ.jpg",
+      "file": "687-1.jpg"
+    }
+  ],
+  "task": 8,
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи",
+  "title": "Задание 8 ЕГЭ: разбор задачи",
+  "slug": "zadanie-8-ege-razbor-zadachi",
+  "hidden": true
+}

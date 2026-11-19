@@ -1,0 +1,36 @@
+{
+  "id": 761,
+  "rubric": "breakdown",
+  "description": "Задание 16 ЕГЭ: разбор задачи",
+  "date": "2024-07-04",
+  "source": "https://t.me/informatika_kege_itpy/761",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/761-1.jpg",
+      "width": 800,
+      "height": 616,
+      "alt": "Задание 16 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "import sys\nsys.setrecursionlimit(10000)\n\ndef F(n):\n    if n == 1:\n        return 1\n    if n > 1:\n        return (n - 1) * F(n - 1)\n\nprint((2*F(2024) - F(2023)) / F(2022))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/viQSPigZVIpIYOWIouGfyfcFXR6HT6gfhJXsjuSJ7S_QSIrO_xE0R4lWMwGFMWkIlMJ7K2dCADZURoXcaFO8IsM6OZc6nLhBHjpZs_SK6V-WsOBmkYpe2g4gUOXw9g3D22zGnd9LVVjT0dijht3yLQEV5iCThDbld3Uf8ThnwnIkwe5OxnRdWVmkP8z9faiUyogQU8SXBxGjfSjfpGS-VnUxTNNnJX7IZmDqxx4sEr3kQtMUAax0FJyJDKj2cRSv-ZoufEEIvWcpzOyZI4kjE973f43tFlj5Y15DcnqGsVgSeohRXzyRXXxB3LUyuORscQSwtseLMDGRwstRlqxUtQ.jpg",
+      "file": "761-1.jpg"
+    }
+  ],
+  "task": 16,
+  "baseTitle": "Задание 16 ЕГЭ: разбор задачи",
+  "title": "Задание 16 ЕГЭ: разбор задачи",
+  "slug": "zadanie-16-ege-razbor-zadachi",
+  "hidden": false
+}

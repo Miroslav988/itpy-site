@@ -1,0 +1,100 @@
+{
+  "id": 288,
+  "rubric": "useful",
+  "description": "В этой задаче мы представляем вам код, который скрывает в себе волшебство чисел Фибоначчи, а также силу рекурсии. На первый взгляд, это может показаться простым заданием, но…",
+  "date": "2023-11-06",
+  "source": "https://t.me/informatika_kege_itpy/288",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/288",
+      "thumb": {
+        "src": "/blog-media/288-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этой задаче мы представляем вам код, который скрывает в себе волшебство чисел Фибоначчи, а также силу рекурсии."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "На первый взгляд, это может показаться простым заданием, но красота этой задачи кроется в том, как она использует рекурсивный подход для вычисления последовательности Фибоначчи."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Суть задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Выше представлен код, который определяет функцию "
+        },
+        {
+          "text": "fib(n)",
+          "code": true
+        },
+        {
+          "text": ", рекурсивно вычисляющую n-ное число в последовательности Фибоначчи."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В этой последовательности каждое число равно сумме двух предыдущих чисел: 0, 1, 1, 2, 3, 5, 8, и так далее."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ваш Задача"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Необходимо понять что будет выведено на экран после выполнения этого кода, вызывающего "
+        },
+        {
+          "text": "fib(10)",
+          "code": true
+        },
+        {
+          "text": "?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Примечание:",
+          "bold": true
+        },
+        {
+          "text": " Рекурсивное вычисление Фибоначчи может быть забавным и вдохновляющим способом изучения рекурсии в программировании. Наслаждайтесь этим увлекательным вызовом!"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/WbDYoS2JgLOH7u2Hb00SZG0-DYBwWygzhFneIcQWy_2A3pZ3zw_bF9QEoB3QE7F4vmO6ZewTp_pmkjkpGalrlGpyh1IPzzJZPFwhKEtQ8LO74NFZjJjBixqWi14XQ0P1uyTj4iE-v4uZa-DsdvCtrV3QAMSluasxjSipF3Mdki6Dmr6eXARlhgXnQXgiXP3B9plwnDT1_lnFwb6xAsU-LePf2Sg4LfPFCgXy8h3H1XNLYs5O9TsEKhvmQRfZOYrXEiJ9k5Cv1eN__QsLxSbaJOVNp-39VsZ-L1Ob4MWoyEMsuibFMw9LoOnEacLAYUvKG-mPR7oBUKTMX43CL-3ldg",
+      "file": "288-1.jpg"
+    }
+  ],
+  "baseTitle": "Давайте проведем небольшую викторину!",
+  "title": "Давайте проведем небольшую викторину!",
+  "slug": "davayte-provedem-nebolshuyu-viktorinu",
+  "hidden": false
+}

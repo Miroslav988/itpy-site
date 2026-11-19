@@ -1,0 +1,186 @@
+{
+  "id": 979,
+  "rubric": "breakdown",
+  "description": "Определите количество пар элементов последовательности, сумма которых превосходит каждую из сумм соседних пар, при этом все три суммы являются положительными. В ответе запишите…",
+  "date": "2025-01-04",
+  "source": "https://t.me/informatika_kege_itpy/979",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/979-1.jpg",
+      "width": 800,
+      "height": 447,
+      "alt": "Задание 17 ЕГЭ: разбор задачи — Яндекс Учебник"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество пар элементов последовательности, сумма которых превосходит каждую из сумм соседних пар, при этом все три суммы являются положительными."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе запишите количество найденных пар чисел, затем минимальное из произведений элементов таких пар."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В данной задаче под парой подразумевается два идущих подряд элемента последовательности. Под соседними парами подразумеваются четыре идущих подряд элемента последовательности."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Интересный пример, так как нам приходится рассматривать не только пару/тройку символов, как в основных задачах, но сразу 6-ку символов!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(s) for s in open('files/17.txt')]\nR = []\nfor i in range(len(M)-5):\n    x, y, z, w, r, t = M[i:i+6]\n    if (z + w) > (x + y) and (z + w) > (r + t):\n        if z + w > 0 and x + y > 0 and r + t > 0:\n            R.append(z * w)\nprint(len(R), min(R))\n\n# Ответ: 610 -123157359"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "M = [int(s) for s in open('files/17.txt')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открывает файл 'files/17.txt', читает его и преобразует каждую строку в целое число, создавая список M."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создает пустой список R для хранения результатов, которые удовлетворяют условиям."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(M)-5):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускает цикл по элементам списка M, при этом гарантируется, что для каждой итерации хватит шести элементов."
+          }
+        ],
+        [
+          {
+            "text": "x, y, z, w, r, t = M[i:i+6]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Извлекает шесть подряд идущих элементов из списка M, начиная с позиции i, и присваивает их переменным x, y, z, w, r и t."
+          }
+        ],
+        [
+          {
+            "text": "if (z + w) > (x + y) and (z + w) > (r + t):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, что сумма z и w больше суммы x и y, а также больше суммы r и t."
+          }
+        ],
+        [
+          {
+            "text": "if z + w > 0 and x + y > 0 and r + t > 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Дополнительно проверяет, что каждая из сумм z + w, x + y и r + t больше нуля."
+          }
+        ],
+        [
+          {
+            "text": "R.append(z * w)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условия выполнены, добавляет произведение z и w в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(len(R), min(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводит количество элементов в списке R и минимальное значение из этого списка."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/V86myDwDE3fOWm7Nt7RhwljEuIjwyNzF4Udfu0q1LVeb9SAcD2RNj4k0VeoeILE2lE_4tKI5OGHVrAB2Oge_PZoRWqIHrgS9cLSiPUQ8i3RQvuPhTTVEZEJweF8kwRpJRvO2WO9lSzi8Oe-U2fl9S7KlRQBbpttaIi2Q8CLCpPZ_emmWEUBvCFF-yvghHKo4c-Mn-IWr1DsAtuKilby5zcCNZ9xPhaijF-G3P2nr1OWabdOX5QEo12XhwLps-JQngbEDklS7la_oFGGpjw8w5z1a9wzaS7SCdU4iWsqODctFt0V3KQfwUMV1voel4fUQ51ED2aJ4sDrJoIve_9duzQ.jpg",
+      "file": "979-1.jpg"
+    }
+  ],
+  "task": 17,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Яндекс Учебник",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи — Яндекс Учебник",
+  "title": "Задание 17 ЕГЭ: разбор задачи — Яндекс Учебник",
+  "slug": "zadanie-17-ege-razbor-zadachi-yandeks-uchebnik-979",
+  "hidden": true
+}

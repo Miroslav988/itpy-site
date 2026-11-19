@@ -1,0 +1,42 @@
+{
+  "id": 286,
+  "rubric": "python",
+  "description": "Работа с файлами в Python - это важный аспект программирования, позволяющий читать, записывать и обрабатывать данные в файлах. В данной статье мы рассмотрим основные методы и…",
+  "date": "2023-11-05",
+  "source": "https://t.me/informatika_kege_itpy/286",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/286",
+      "thumb": {
+        "src": "/blog-media/286-1.jpg",
+        "width": 848,
+        "height": 368
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Работа с файлами в Python - это важный аспект программирования, позволяющий читать, записывать и обрабатывать данные в файлах."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В данной статье мы рассмотрим основные методы и приемы, которые помогут вам в ваших работах."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/DNc55JXNujrzDPUuOwcu1QEfZDzUE79A1qZr4YwQE_HGLt10R7NSkLaBLMONMOb3tiUGBka5RfZa2WskD7IvbDlYNDr6xkcsy0uLHyt1ZHLHk0UsK0ANc_fxZognyStRgP4hA9YFnmlgYT0TTCXL3SdVTzVynrVGd6-EebH0CrLW7IOykCU2rpVhm3hZgIo48DbWdkc1y1XouyvRxiIVp8dvcKh2UJIc_8w9-qJAMJVFjzWxww0xmAT17VMtEBkVL-2LiFAnXVZJXME_B4xdSA9keTYG3gLG1FT9uZK3iispOIcTe0EMtqdXq1yzCV4SuYslTZx7FIyUfAJ6bJOTVg",
+      "file": "286-1.jpg"
+    }
+  ],
+  "baseTitle": "Работа с файлами Python",
+  "title": "Работа с файлами Python",
+  "slug": "rabota-s-faylami-python-286",
+  "hidden": true
+}

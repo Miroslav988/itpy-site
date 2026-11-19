@@ -1,0 +1,39 @@
+{
+  "id": 642,
+  "rubric": "python",
+  "description": "Благодарю вас за активность! Не удержался и решил опубликовать эту шпаргалку уже сегодня 🫶",
+  "date": "2024-05-23",
+  "source": "https://t.me/informatika_kege_itpy/642",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Благодарю вас за активность!",
+          "bold": true
+        },
+        {
+          "text": " Не удержался и решил опубликовать эту шпаргалку уже сегодня 🫶"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поддержать автора: boosty",
+          "href": "https://boosty.to/informatika_kege_itpy/donate",
+          "bold": true
+        },
+        {
+          "text": " 💵"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Мини-шпаргалка дляномера",
+  "title": "Мини-шпаргалка дляномера",
+  "slug": "mini-shpargalka-dlyanomera",
+  "hidden": false
+}

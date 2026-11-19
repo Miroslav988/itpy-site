@@ -1,0 +1,222 @@
+{
+  "id": 1161,
+  "rubric": "breakdown",
+  "description": "В файле содержится последовательность целых чисел, каждое из которых находится в диапазоне от -20000 до 20 000. Определите количество пар элементов последовательности, сумма…",
+  "date": "2025-09-05",
+  "source": "https://t.me/informatika_kege_itpy/1161",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1161-1.jpg",
+      "width": 800,
+      "height": 442,
+      "alt": "Задание 17 ЕГЭ: разбор задачи — Яндекс Учебник"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В файле содержится последовательность целых чисел, каждое из которых находится в диапазоне от -20000 до"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "20 000. Определите количество пар элементов последовательности, сумма которых превосходит каждую из сумм соседних пар, при этом все три суммы являются положительными."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе запишите количество найденных пар чисел, затем минимальное из произведений элементов таких пар."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В данной задаче под парой подразумевается два идущих подряд элемента последовательности. Под соседними парами подразумеваются четыре идущих подряд элемента последовательности."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Например, в последовательности 1 2 3 4 5 6 у пары (3, 4) соседние пары (1, 2) и (5, 6)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(s) for s in open('17.txt')]\nR = []\nfor i in range(len(M)-5):\n    x, y, z, w, r, t = M[i:i+6]\n    if (z + w) > (x + y) and (z + w) > (r + t):\n        if z + w > 0 and x + y > 0 and r + t > 0:\n            R.append(z * w)\nprint(len(R), min(R))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 610 -123157359",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы для решения задачи:",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "17.txt",
+          "href": "https://education.yandex.ru/ege/task/6488e44b-c19d-41be-a53f-3877c2d12728"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "M = [int(s) for s in open('17.txt')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Читаем файл 17.txt, преобразуем каждую строку в целое число и сохраняем в список M."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем пустой список R для хранения результатов."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(M)-5):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл по индексам списка M с шагом 1, останавливаясь за 5 элементов до конца (чтобы хватило элементов для среза)."
+          }
+        ],
+        [
+          {
+            "text": "x, y, z, w, r, t = M[i:i+6]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Берем срез из 6 последовательных элементов и распаковываем их в переменные x, y, z, w, r, t."
+          }
+        ],
+        [
+          {
+            "text": "if (z + w) > (x + y) and (z + w) > (r + t):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что сумма третьего и четвертого элементов (`z + w`) больше суммы:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- первых двух элементов (`x + y`)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- последних двух элементов (`r + t`)"
+          }
+        ],
+        [
+          {
+            "text": "if z + w > 0 and x + y > 0 and r + t > 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Дополнительная проверка, что все три суммы положительные."
+          }
+        ],
+        [
+          {
+            "text": "R.append(z * w)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если оба условия выполнены, добавляем произведение z * w в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(len(R), min(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим количество найденных подходящих комбинаций и минимальное значение среди произведений z * w."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/t1rFmywWwhWKfLIA4ejyymI4Y0gK3Tjbn2jCyktXEIVnsTwlSKbDVTU0cIBRSaIegA3-F30a3tJhrtW2wHkJcJeAAcxaahrZEmWcXGop-meKc8NOT4lZFgv6MguHxrqPaL4nB2P0T9Y4Do7wxdyCUWgLEWMqQSgdNzD_glo3stq-QAFXB-NPefKLg_kvFH20owEgNlh8sb6jvejKIvW4Iay075ofY-BeCWaWmURuAZ57Cx6ChhWsSuyijjv2wUHGn4jxUD-mwVCG24vRYxoDgjzCIpSy-IFaqb5f-5T_lU3HOlrIzbKEPkptxEV9serXxN8J_6NYAkzk1CTCchHPSA.jpg",
+      "file": "1161-1.jpg"
+    }
+  ],
+  "task": 17,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Яндекс Учебник",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи — Яндекс Учебник",
+  "title": "Задание 17 ЕГЭ: разбор задачи — Яндекс Учебник",
+  "slug": "zadanie-17-ege-razbor-zadachi-yandeks-uchebnik",
+  "hidden": false
+}

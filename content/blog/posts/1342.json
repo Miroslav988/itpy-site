@@ -1,0 +1,45 @@
+{
+  "id": 1342,
+  "rubric": "breakdown",
+  "description": "Задание 5 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "date": "2026-06-18",
+  "source": "https://t.me/informatika_kege_itpy/1342",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1342-1.jpg",
+      "width": 800,
+      "height": 627,
+      "alt": "Задание 5 ЕГЭ: разбор варианта Дальнего Востока 2026"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "for n in range(1, 1000):\n    n2 = f'{n:b}'\n    n2 += str(n2.count('1') % 2)\n    n2 += str(n2.count('1') % 2)\n    r = int(n2, 2)\n    if r > 253:\n        print(n)\n        break"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 64",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/XEB2jusoa69rVZVeSIKB1D7NIzRE_ofcuGIojhhwlVw6hWtN7dfKXUxgVe_f1ENKzD7hr4TEYehNh5aEXwex-x4cZHqbXHZWZvgQAf8wDi4aw4jfpT2D69Hgvlpd5dFwvH6qSjqjTNiLLfOWiEq5AdLA-urN0Z6xU6uiZleWjdD_-QpBqsgsUF7DZ-NQfSG-47ZhiEgt0PiQJ98WlJ4vlMrr2CYd6q9zrzRbedTbg2YVFKgqBzAgIT82-9m3YxrKZ9wE2g2Fqn6jZ_l5ujKqJoMYhs2THRnkvKmVk_lwF1UWbDf0X6gXUqKc8C0kFs_7HDp4C5ZO0c2tZV5oHptnZw.jpg",
+      "file": "1342-1.jpg"
+    }
+  ],
+  "task": 5,
+  "baseTitle": "Задание 5 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "title": "Задание 5 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "slug": "zadanie-5-ege-razbor-varianta-dalnego-vostoka-2026",
+  "hidden": false
+}

@@ -1,0 +1,82 @@
+{
+  "id": 339,
+  "rubric": "python",
+  "description": "В Python генератор списков - это компактный способ создания списков с использованием выражений в одну строку. Такие генераторы позволяют создавать списки с минимальным количеством…",
+  "date": "2024-02-01",
+  "source": "https://t.me/informatika_kege_itpy/339",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/339",
+      "thumb": {
+        "src": "/blog-media/339-1.jpg",
+        "width": 848,
+        "height": 352
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В Python генератор списков - это компактный способ создания списков с использованием выражений в одну строку. Такие генераторы позволяют создавать списки с минимальным количеством кода, что делает его более читаемым и эффективным. Синтаксис генератора списка включает выражение, цикл и (при необходимости) условие."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "# Создание списка квадратов четных чисел от 0 до 9\neven_squares = [x**2 for x in range(10) if x % 2 == 0]\n\n# Вывод результатов\nprint(even_squares)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В этом примере "
+        },
+        {
+          "text": "if x % 2 == 0",
+          "code": true
+        },
+        {
+          "text": " добавляет в список только квадраты четных чисел, создавая список "
+        },
+        {
+          "text": "[0, 4, 16, 36, 64]",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Более подробную информацию про генераторы списков вы можете изучить в "
+        },
+        {
+          "text": "нашей статье на Notion",
+          "href": "https://informatikakegeitpy.notion.site/Python-tpy-0f2f42d730094afb85cfbb8fac2fcc97?pvs=4",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "✏"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/vtC8wwtAHTdrBZzRBBFnf5TrdE0NQgqAbkXgh5FpBd2WOCuLxRFObCfXzn7oRt-b9MKUUKGPaJ43wuQzT_sNmct9ypjhW5cKBxEyGLzKbcDD1uimEI7V1zZTiup_KyA1Ogvgu-vY1wsh9RJfUrbE2_3ZtFSMpgVJ5zDtjbk5aoYr8zHx4bfbiNsZh984RyJztZR9jt5_5NyagAQKqQZQMJpwWynWgWKXKBfQt95m13nXHKz8I9YQPYDKovSh1pwXPQfM_o2czows3i_XBx34s-npX11aT0jjcNBOrZwKJopmvhSBz687vrqsJAKlZUQwoCNfI5X2miz0X-bGzZmRiw",
+      "file": "339-1.jpg"
+    }
+  ],
+  "baseTitle": "Генераторы списков (списочные выражения) для ЕГЭ",
+  "title": "Генераторы списков (списочные выражения) для ЕГЭ",
+  "slug": "generatory-spiskov-spisochnye-vyrazheniya-dlya-ege",
+  "hidden": false
+}

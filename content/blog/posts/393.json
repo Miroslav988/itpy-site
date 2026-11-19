@@ -1,0 +1,101 @@
+{
+  "id": 393,
+  "rubric": "python",
+  "description": "Используется для создания декартова произведения последовательностей. Давайте рассмотрим несколько примеров использования этой функции:",
+  "date": "2024-03-04",
+  "source": "https://t.me/informatika_kege_itpy/393",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Используется для создания декартова произведения последовательностей. Давайте рассмотрим несколько примеров использования этой функции:"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Простейший пример использования функции product"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import product\n\nseq1 = [1, 2]\nseq2 = ['a', 'b']\nresult = list(product(seq1, seq2))\nprint(result)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Результат выполнения данного кода будет"
+    },
+    {
+      "type": "code",
+      "text": "[(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Создание декартова произведения последовательности с самой собой"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import product\n\nseq = ['a', 'b', 'c']\nresult = list(product(seq, repeat=2))\nprint(result)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Результат выполнения данного кода"
+    },
+    {
+      "type": "code",
+      "text": "[('a', 'a'), ('a', 'b'), ('a', 'c'), ('b', 'a'), ('b', 'b'), ('b', 'c'), ('c', 'a'), ('c', 'b'), ('c', 'c')]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример с использованием декартова произведения для работы с буквами в слове:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import product\n\nword = 'bat'\nresult = product(word, repeat=2)\nfor item in result:\n    print(item)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Результат выполнения данного кода будет"
+    },
+    {
+      "type": "code",
+      "text": "('b', 'b')\n('b', 'a')\n('b', 't')\n('a', 'b')\n('a', 'a')\n('a', 't')\n('t', 'b')\n('t', 'a')\n('t', 't')"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "product",
+          "code": true
+        },
+        {
+          "text": " из библиотеки "
+        },
+        {
+          "text": "itertools",
+          "code": true
+        },
+        {
+          "text": " является мощным инструментом для создания всех возможных комбинаций элементов последовательностей."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Функция product из библиотеки itertools в Python",
+  "title": "Функция product из библиотеки itertools в Python",
+  "slug": "funktsiya-product-iz-biblioteki-itertools-v-python",
+  "hidden": false
+}

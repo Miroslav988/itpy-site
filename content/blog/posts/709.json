@@ -1,0 +1,45 @@
+{
+  "id": 709,
+  "rubric": "breakdown",
+  "description": "Задание 13 ЕГЭ: разбор задачи",
+  "date": "2024-06-08",
+  "source": "https://t.me/informatika_kege_itpy/709",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/709-1.jpg",
+      "width": 800,
+      "height": 566,
+      "alt": "Задание 13 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения 1"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nfor mask in range(32+1):\n    net = ip_network(f'170.155.137.181/{mask}', 0)\n    if str(net) == f'170.155.136.0/{mask}':\n        print(net.netmask)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения 2"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nmaxi = []\nfor mask in range(32+1):\n    net = ip_network(f'170.155.137.181/{mask}', 0)\n    if str(net) == f'170.155.136.0/{mask}':\n        maxi.append(int(str(net.netmask).split('.')[2]))\n\nprint(max(maxi))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/WNUI_8ZWajLV7V_144pRQvVbohKY7ZDQs5LCQmyFhepowbP_aSgGsfY7uyFPYLNcD1mf5sulKs39io-oUs7GzO3X2jBgswxljAhEDrOy4tBq_IfNgYkTndLabcEDW4lqw7BDbU8h7iqBpaapIIRj7zM-jCVT8Z1MKbjKayVFM45uCSDq0prMkDD-ev4bnCcZcOZdHL9q99sH_RhMD1ucxU-9wieteQAfajESsRSAdQoPIzM0jZ964oLFZj0cNCkDOfN5YBFXpji3dUu753qCGLYlEMg0Go-oeoGs1zvMX13G3Vnn5hYY63fUz-j108O8tnQr-DBWoub4Z_i3OeVwHw.jpg",
+      "file": "709-1.jpg"
+    }
+  ],
+  "task": 13,
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи",
+  "title": "Задание 13 ЕГЭ: разбор задачи",
+  "slug": "zadanie-13-ege-razbor-zadachi-709",
+  "hidden": true
+}

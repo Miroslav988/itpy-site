@@ -57,7 +57,7 @@ export function personSchema(origin: string) {
       credentialCategory: "Бакалавриат",
       name: "Информатика и вычислительная техника",
     },
-    sameAs: [links.telegramPersonal, links.telegramChannel, links.dzen],
+    sameAs: [links.telegramPersonal, links.telegramChannel, links.youtube, links.vk, links.avito],
   };
 }
 
@@ -103,7 +103,7 @@ export function faqSchema(origin: string) {
     mainEntity: faqs.map((item) => ({
       "@type": "Question",
       name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
+      acceptedAnswer: { "@type": "Answer", text: item.a.join("\n\n") },
     })),
   };
 }
@@ -153,11 +153,10 @@ export function articleSchema(origin: string, post: Post) {
     inLanguage: "ru",
     url,
     mainEntityOfPage: url,
-    image: `${origin}${(post.cover ?? defaultImage).src}`,
+    image: `${origin}${(post.blocks.find((block) => block.type === "image") ?? defaultImage).src}`,
     author: personRef(origin),
     publisher: personRef(origin),
-    about: post.task ? `Задание ${post.task} ЕГЭ по информатике` : "ЕГЭ по информатике",
+    about: post.task ? `Задание ${post.task} ЕГЭ по информатике` : post.rubric === "python" ? "Python для ЕГЭ по информатике" : "ЕГЭ по информатике",
     educationalLevel: post.meta?.level,
-    isBasedOn: post.source,
   };
 }

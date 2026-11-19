@@ -12,7 +12,8 @@ let server;
 
 before(async () => {
   const nextBin = fileURLToPath(new URL("../node_modules/next/dist/bin/next", import.meta.url));
-  server = spawn(process.execPath, [nextBin, "start", "-p", String(port)], { cwd: root, stdio: "ignore" });
+  // BLOG_SYNC=off: the tests must not fetch the channel or write to content/blog.
+  server = spawn(process.execPath, [nextBin, "start", "-p", String(port)], { cwd: root, stdio: "ignore", env: { ...process.env, BLOG_SYNC: "off" } });
   for (let attempt = 0; attempt < 150; attempt++) {
     try {
       await fetch(origin);
@@ -48,11 +49,16 @@ test("home page follows the spec's content rules", async () => {
   const html = await (await request("/")).text();
   assert.doesNotMatch(html, /ОГЭ/, "ОГЭ is out of the main offer");
   assert.doesNotMatch(html, />\s*999\s*</, "no placeholder figures");
-  assert.doesNotMatch(html, /90\+/, "no unconfirmed 90+ claim");
+  // The FAQ is Ilia's approved text («90+ … возможно, но балл зависит от ученика»); elsewhere no such claim.
+  const outsideFaq = html.replace(/<script[^>]*>.*?<\/script>/gs, "").replace(/id="faq".*?id="trial"/s, "");
+  assert.doesNotMatch(outsideFaq, /90\+/, "no unconfirmed 90+ claim");
+  assert.equal((html.match(/class="faq-question"/g) ?? []).length, 30, "all 30 FAQ answers are in the HTML");
   assert.doesNotMatch(html, /[Нн]абор (на [^<]* )?открыт/, "no permanent «набор открыт»");
   assert.match(html, /Парные занятия/);
   assert.match(html, /Вебинары/);
   assert.match(html, /2 000 ₽/);
+  // Platforms are named generically: «видеосвязь», «канал», «видеоблог».
+  assert.doesNotMatch(html.replace(/https?:\/\/\S+?"/g, '"'), /Zoom|Telegram|Телеграм|YouTube/i, "no platform names");
 });
 
 test("server-renders the course catalog with Stepik links", async () => {
@@ -61,7 +67,10 @@ test("server-renders the course catalog with Stepik links", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Курсы по Python и ЕГЭ на Stepik — ITPY<\/title>/);
-  assert.match(html, /Оплата и обучение проходят на Stepik/);
+  assert.match(html, /Каталог на Stepik/);
+  assert.match(html, /оплата на Stepik/, "paid cards say where the payment happens");
+  // Drafts (no Stepik page yet) stay off the page.
+  assert.doesNotMatch(html, /Курс по заданию 27/);
   for (const courseId of [203477, 122969, 282248]) {
     assert.match(html, new RegExp(`https://stepik\\.org/course/${courseId}/info`));
   }
@@ -74,19 +83,47 @@ test("renders the blog index and every imported article", async () => {
   assert.match(html, /<title>Блог о ЕГЭ по информатике — ITPY<\/title>/);
   assert.match(html, /<a[^>]*aria-current="page"[^>]*><span class="nav-label">Блог</);
 
-  const blogDir = new URL("../content/blog/", import.meta.url);
+  const blogDir = new URL("../content/blog/posts/", import.meta.url);
   for (const file of (await readdir(blogDir)).filter((name) => name.endsWith(".json"))) {
     const post = JSON.parse(await readFile(new URL(file, blogDir), "utf8"));
     const page = await request(`/blog/${post.slug}`);
-    if (post.hidden) {
-      assert.equal(page.status, 404, `hidden ${post.slug}`);
+    // Reposts and videos have no page: video cards open the video itself.
+    if (post.hidden || post.rubric === "video") {
+      assert.equal(page.status, 404, `no page for ${post.slug}`);
       continue;
     }
     assert.equal(page.status, 200, post.slug);
-    assert.match(await page.text(), /<h1 id="post-title">/, post.slug);
+    const article = await page.text();
+    assert.match(article, /<h1 id="post-title">/, post.slug);
+    assert.doesNotMatch(article, /[Тт]елеграм|Telegram|подписывайтесь/, `channel promo in ${post.slug}`);
   }
 
   assert.equal((await request("/blog/no-such-article")).status, 404);
+});
+
+test("shows each channel rubric with its own cards and serves post pictures", async () => {
+  for (const [rubric, cardClass] of [["breakdown", "post-band-breakdown"], ["python", "post-band-python"], ["useful", "post-band-useful"], ["video", "post-band-video"]]) {
+    const html = await (await request(`/blog?rubric=${rubric}`)).text();
+    assert.match(html, new RegExp(`class="[^"]*${cardClass}`), rubric);
+    assert.match(html, /<a[^>]*aria-current="page"[^>]*>/, rubric);
+  }
+  const breakdowns = await (await request("/blog?rubric=breakdown")).text();
+  assert.match(breakdowns, /aria-label="Номер задания ЕГЭ"/);
+  // «Показать ещё» opens the next page with the earlier cards still above.
+  const firstPage = (breakdowns.match(/class="post-card /g) ?? []).length;
+  const secondPage = await (await request("/blog?rubric=breakdown&page=2")).text();
+  assert.equal((secondPage.match(/class="post-card /g) ?? []).length, firstPage * 2);
+  assert.match(secondPage, /<li id="more">/);
+  assert.match(secondPage, /noindex/);
+  // A rubric without posts gets no tab.
+  assert.doesNotMatch(breakdowns, /rubric=news/);
+
+  const blogDir = new URL("../content/blog/media/", import.meta.url);
+  const [picture] = (await readdir(blogDir)).filter((name) => name.endsWith(".jpg"));
+  const response = await request(`/blog-media/${picture}`);
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("content-type"), "image/jpeg");
+  assert.equal((await request("/blog-media/..%2Fstate.json")).status, 404);
 });
 
 test("serves robots.txt and sitemap.xml for the request host", async () => {
@@ -129,6 +166,42 @@ test("describes pages to search engines with canonical URLs and JSON-LD", async 
   const slug = sitemap.match(/\/blog\/([a-z0-9-]+)<\/loc>/)[1];
   const article = await (await request(`/blog/${slug}`, forwarded)).text();
   assert.equal(jsonLd(article).find((node) => node["@type"] === "TechArticle").url, `https://itpy.example/blog/${slug}`);
+});
+
+test("answers unknown addresses with a real 404 page that is not indexed", async () => {
+  for (const path of ["/no-such-page", "/blog/no-such-article", "/courses/no-such-course"]) {
+    const response = await request(path);
+    assert.equal(response.status, 404, path);
+    const html = await response.text();
+    assert.match(html, /Страница не найдена — ITPY/, path);
+    assert.match(html, /<meta name="robots" content="noindex/, path);
+    assert.doesNotMatch(html, /rel="canonical"/, path);
+  }
+});
+
+test("publishes the legal documents and links them from every page", async () => {
+  const pages = {
+    "/offer": [/Публичная оферта/, /2 000 рублей за одно Занятие/, /ОГРНИП 324547600178946/, /Мессенджер: \+7 913 468-35-34/],
+    "/privacy": [/Политика обработки персональных данных/, /3\.4\. Файлы cookie и аналитика сайта/, /href="mailto:ilyand98@mail\.ru"/],
+    "/consent": [/Согласие на обработку персональных данных/, /<li>фамилия, имя, отчество;<\/li>/],
+    "/booking-consent": [/при записи на пробное занятие/, /ООО «ДИПВОЙС»/],
+  };
+  for (const [path, patterns] of Object.entries(pages)) {
+    const response = await request(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    for (const pattern of patterns) assert.match(html, pattern, `${path}: ${pattern}`);
+    assert.doesNotMatch(html, /Мессенждер|Платёжные реквизиты:/, path);
+  }
+
+  const home = await (await request("/")).text();
+  for (const path of ["/offer", "/privacy", "/consent"]) assert.match(home, new RegExp(`href="${path}"`), `footer links ${path}`);
+  assert.doesNotMatch(home, /cookie-banner|Настройки cookie/, "no cookie banner without an analytics counter");
+  const environment = home.match(/id="environment".*?id="posts"/s)[0];
+  assert.doesNotMatch(environment, /class="check"/, "the platform cards have no bullets");
+
+  const sitemap = await (await request("/sitemap.xml")).text();
+  assert.match(sitemap, /\/offer<\/loc>/);
 });
 
 test("serves llms.txt and lets AI crawlers in", async () => {

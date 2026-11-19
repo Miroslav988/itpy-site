@@ -1,0 +1,57 @@
+{
+  "id": 1125,
+  "rubric": "video",
+  "description": "",
+  "date": "2025-06-26",
+  "source": "https://t.me/informatika_kege_itpy/1125",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в TikTok",
+          "href": "https://vm.tiktok.com/ZNdAGEPEh/",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в видео",
+          "href": "https://youtube.com/shorts/_lkOHNolmcI?si=DMOQsgct2kerMuUO",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотреть в VK",
+          "href": "https://vk.com/clip-221025268_456239109?c=1",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/SQlPdMg1PEbJQfgJlfP8rskauqw_3ifGoiQ8cnlW80CSDXOgIXgxiGWTqIr06TZEtvzv2xQIT3lBxSwIY2s1kVRekQWKT9USxMz8qjZNWgNV5Dl4fw91vu_0cWhweMsvZ9O-MwPZAz01NgklmTJ1i4xusfbe_r5hrpYXVXbzujwyImxg9n6_vDchgP40kqtMu2XNRmOEzddP4QFqAhR7LC--_IehXMViraZCzU9vCnX8LLkrRd5zhmR1Eurozp7AtAIcePQ1vQSYWPPMI5C14cC2o2fcdUY5RNBUNly1U5Zj3MsTqgdzseuAlmMaNiYiYqHrCy3QUWaZQABxvMjzgw",
+      "file": "1125-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://t.me/informatika_kege_itpy/1125",
+    "thumb": {
+      "src": "/blog-media/1125-1.jpg",
+      "width": 464,
+      "height": 619
+    }
+  },
+  "baseTitle": "Перечислим все темы языка python, которые необходимы нам на ЕГЭ",
+  "title": "Перечислим все темы языка python, которые необходимы нам на ЕГЭ",
+  "slug": "perechislim-vse-temy-yazyka-python-kotorye-neobhodimy-nam-na",
+  "hidden": false
+}

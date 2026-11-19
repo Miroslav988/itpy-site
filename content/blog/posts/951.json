@@ -1,0 +1,238 @@
+{
+  "id": 951,
+  "rubric": "useful",
+  "description": "Почему примерный? Потому что все зависит от вашего региона, но в общих чертах список выглядит так:",
+  "date": "2024-12-11",
+  "source": "https://t.me/informatika_kege_itpy/951",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Почему примерный? Потому что все зависит от вашего региона, но в общих чертах список выглядит так:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Программное обеспечение «Блокнот»:",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "стандартный Блокнот (Notepad Windows)"
+          }
+        ],
+        [
+          {
+            "text": "Текстовые процессоры:",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "LibreOffice Writer"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Microsoft Office Word"
+          }
+        ],
+        [
+          {
+            "text": "Электронные таблицы:",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "LibreOffice Calc"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Microsoft Office Excel"
+          }
+        ],
+        [
+          {
+            "text": "Калькуляторы:",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Стандартный калькулятор Windows"
+          }
+        ],
+        [
+          {
+            "text": "Среды программирования",
+            "bold": true
+          },
+          {
+            "text": ":"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Python (Пайтон)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Python >2.7"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Python >3.5"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• PyCharm-community-2019.2.3"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Pascal (Паскаль)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• PascalABC.Net"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Turbo Pascal"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Basic (Бейсик)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Microsoft Small Basic"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• QBasic"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Java (Ява)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Java"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• IntelliJ IDEA Community Edition"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "C, C++, C# (Си / Си++ / СиШарп)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Code::Blocks + mingw"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Microsoft Visual Studio Community"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• C++, C#"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Dev C++"
+          }
+        ],
+        [
+          {
+            "text": "Дополнительное программное обеспечение",
+            "bold": true
+          },
+          {
+            "text": ":"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Архиватор 7zip"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Microsoft .NET Framework v4.7.1"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Unreal Commander"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "• Abobe Acrobat Reader DC"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Публикую примерный список программ, который вы можете использовать на экзамене",
+  "title": "Публикую примерный список программ, который вы можете использовать на экзамене",
+  "slug": "publikuyu-primernyy-spisok-programm-kotoryy-vy-mozhete",
+  "hidden": false
+}

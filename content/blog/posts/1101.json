@@ -1,0 +1,49 @@
+{
+  "id": 1101,
+  "rubric": "breakdown",
+  "description": "Напишите программу, которая перебирает целые числа, бльшие 2 900 000, в порядке возрастания и ищет среди них такие, которые: имеют ровно два различных натуральных делителя, кроме…",
+  "date": "2025-06-10",
+  "source": "https://t.me/informatika_kege_itpy/1101",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Напишите программу, которая перебирает целые числа, бльшие 2 900 000, в порядке возрастания и ищет среди них такие, которые:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "имеют ровно два различных натуральных делителя, кроме единицы и самого числа, то есть представляют собой произведение двух различных простых чисел, ﻿﻿оба простых множителя содержат в своей записи ровно одну цифру О."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе укажите первые пять таких чисел в порядке возрастания. Во втором столбце таблицы для каждого числа укажите его наибольший простой делитель."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def divisors(x):\n    div = []\n    for j in range(2, int(x**0.5)+1):\n        if x % j == 0:\n            div += [j, x // j]\n    return sorted(set(div))\n\ndef Prost(x):\n    if x == 1:\n        return False\n    for i in range(2, int(x**0.5)+1):\n        if x % i == 0:\n            return False\n    return True\n\ncnt = 0\nfor x in range(2_900_000, 10**10):\n    div = divisors(x)\n    if len(div) == 2 and Prost(div[0]) and Prost(div[1]):\n        if str(div[0]).count('0') == 1 and str(div[1]).count('0') == 1:\n            print(x, max(div))\n            cnt += 1\n            if cnt == 5:\n                break"
+    }
+  ],
+  "media": [],
+  "task": 25,
+  "baseTitle": "Задание 25 ЕГЭ: разбор задачи",
+  "title": "Задание 25 ЕГЭ: разбор задачи (10 июня 2025)",
+  "slug": "zadanie-25-ege-razbor-zadachi-10-iyunya-2025",
+  "hidden": false
+}

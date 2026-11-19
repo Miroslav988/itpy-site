@@ -1,0 +1,36 @@
+{
+  "id": 712,
+  "rubric": "breakdown",
+  "description": "Задание 17 ЕГЭ: разбор задачи",
+  "date": "2024-06-08",
+  "source": "https://t.me/informatika_kege_itpy/712",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/712-1.jpg",
+      "width": 800,
+      "height": 587,
+      "alt": "Задание 17 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(x) for x in open('17.txt')]\nD = [x for x in M if x % 32 == 0]\nR = []\nfor i in range(len(M)-1):\n    x, y = M[i], M[i+1]\n    if x < 0 or y < 0:\n        if (x + y) < len(D):\n            R.append(x + y)\nprint(len(R), max(R))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/SnpsLZWMUErQtY6WPAAfkJspSTHw5j0KaBOJNnXvJj7JJzg4M_LAGYP74soRGGm6qQPUzOcJkyEl1j-ElQEsXHE7ZBdOMszT2hNeXLC57dlw-SaLpvc6ayB7xCvapivH6ARtz_H59_zRCxavcn9z0xeTtTakm4EjJFkna4p43QV25jfgfjCQjOQQjsfgAcFl0t-NJa1mW-NjhJV40ZM8f6iYZv2bZ4H-ZFhLzFJvLM1VUzusbqYimqHrfOJAe-l89QS1bv0JJXfjca49aB6W1-ADGDpGuv5WRLVIvPE-QZTM0S46kN8urQbjR1m1FFKy2LlX7iXsMJhOTxjtOstq-A.jpg",
+      "file": "712-1.jpg"
+    }
+  ],
+  "task": 17,
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи",
+  "title": "Задание 17 ЕГЭ: разбор задачи",
+  "slug": "zadanie-17-ege-razbor-zadachi",
+  "hidden": true
+}

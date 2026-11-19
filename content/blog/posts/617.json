@@ -1,0 +1,74 @@
+{
+  "id": 617,
+  "rubric": "useful",
+  "description": "В таких случаях нам необходимо воспользоваться библиотекой itertools и обязательно методом product, так как permutations не подойдет из-за объемного перебора (слишком долго…",
+  "date": "2024-05-18",
+  "source": "https://t.me/informatika_kege_itpy/617",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/617",
+      "thumb": {
+        "src": "/blog-media/617-1.jpg",
+        "width": 704,
+        "height": 592
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В таких случаях нам необходимо воспользоваться библиотекой"
+        },
+        {
+          "text": " itertools",
+          "code": true
+        },
+        {
+          "text": " и обязательно методом"
+        },
+        {
+          "text": " product",
+          "code": true
+        },
+        {
+          "text": ", так как "
+        },
+        {
+          "text": "permutations",
+          "code": true
+        },
+        {
+          "text": " не подойдет из-за объемного перебора (слишком долго работает)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код должен начинаться примерно вот так"
+    },
+    {
+      "type": "code",
+      "text": "for n in range(1, 10):\n    for s in product('12', repeat=10+n):\n        if s.count('1') == 10:\n            s = ''.join(s)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Хотя вероятность появления прототипа крайне мала, рекомендуется решать такие задачи в первую очередь аналитически"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/gCTxGblcCalwOcfR2uViSG9cJhX4YVyO94Trld7AAHz4BHrKy3n8IFrURk7Wb42u26RTzFZaGsDxk6FLshSiggT5s62TTG-MFtMsa8G_UKBTQMlcjNqN7wvjTrJhr3tbnRFGgSE-Z0044sfLsgWdDP7RHSekfNeU6iXMhPH8NlFYgm1EXVYiB1F0gN0JqSh1ms932gpB9bv-Ltifn4i3sNcTHPb8OoAXdX0qt-An68SwK5yyzFt0vwcdW7Sb9r3Zw1htDutYT-MC84clR2QLza58F7GDUme7oodr1bp2GbbKyxN1t4pJMGuYqf0oz0RMiOpYlpoM2nCc3HXBrSJAAg",
+      "file": "617-1.jpg"
+    }
+  ],
+  "baseTitle": "Отвечаю на вопрос подписчика",
+  "title": "Отвечаю на вопрос подписчика",
+  "slug": "otvechayu-na-vopros-podpischika",
+  "hidden": false
+}

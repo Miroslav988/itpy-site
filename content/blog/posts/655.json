@@ -1,0 +1,238 @@
+{
+  "id": 655,
+  "rubric": "breakdown",
+  "description": "Найдите последние семь цифр суммы F(2020) + F(2200).",
+  "date": "2024-05-27",
+  "source": "https://t.me/informatika_kege_itpy/655",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/655",
+      "thumb": {
+        "src": "/blog-media/655-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Найдите последние семь цифр суммы F(2020) + F(2200)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from functools import *\n@lru_cache(None)\ndef F(n):\n    if n < 2025:\n        return n**2\n    if 2025 <= n < 2050:\n        return 2 * F(n-1) - F(n-2) + n\n    if 2050 <= n <= 2100:\n        return F(n-1) + 2 * F(n-2) + 3 * F(n-3)\n    if n > 2100:\n        return 2 * F(n-1) + F(n-2) + n\n\nprint(str(F(2020) + F(2200))[-7:])\n\nОтвет: 5098903"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from functools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля functools."
+          }
+        ],
+        [
+          {
+            "text": "@lru_cache(None)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Декоратор, который кэширует результаты выполнения функции F, чтобы избежать повторных вычислений."
+          }
+        ],
+        [
+          {
+            "text": "def F(n):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определение функции F с одним параметром n."
+          }
+        ],
+        [
+          {
+            "text": "if n < 2025:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если n меньше 2025."
+          }
+        ],
+        [
+          {
+            "text": "return n**2",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат квадрата числа n, если условие из пункта 4 истинно."
+          }
+        ],
+        [
+          {
+            "text": "if 2025 <= n < 2050:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если n больше либо равно 2025 и меньше 2050."
+          }
+        ],
+        [
+          {
+            "text": "return 2 * F(n-1) - F(n-2) + n",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат значения, вычисленного по формуле, если условие из пункта 6 истинно."
+          }
+        ],
+        [
+          {
+            "text": "if 2050 <= n <= 2100:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если n от 2050 до 2100 включительно."
+          }
+        ],
+        [
+          {
+            "text": "return F(n-1) + 2 * F(n-2) + 3 * F(n-3)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат значения, вычисленного по формуле, если условие из пункта 8 истинно."
+          }
+        ],
+        [
+          {
+            "text": "if n > 2100:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если n больше 2100."
+          }
+        ],
+        [
+          {
+            "text": "return 2 * F(n-1) + F(n-2) + n",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат значения, вычисленного по формуле, если условие из пункта 10 истинно."
+          }
+        ],
+        [
+          {
+            "text": "print(str(F(2020) + F(2200))[-7:])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции F с аргументами 2020 и 2200, вычисление их суммы, преобразование в строку, взятие последних семи символов и вывод результата."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поддержать автора: boosty",
+          "href": "https://boosty.to/informatika_kege_itpy/donate",
+          "bold": true
+        },
+        {
+          "text": " 💵"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Rtfx1VGumyH8RgdBmoUZGr5c_imCDEOOKLO1gxKOSajaB2RRU8FreM7CYg1JcdRv7G-biTdG2M833aWoEkZsVEJb-1nRjSXa7Kllz-YD_DNV6FXrOb9u6tgMS8PvOklG4y1S2r-RoxNYJ-u_5dXrwXK931OcJlxTfvlg2wUa-pBuBXcVfdOYjHsf23QowUQ8EBjB4hERx_FOoVNq5aJeKkc1Ol5Q1lvZ2fM_sDWS4mOa195SOv6ecopPDEHzabwcwUbsbUo_Z6H-RQD-CQGCxbXDykWh3zLyPuVlzqKXalMi_y_iUlBIiW3MK-qgZpOQFGtpqFgf07ZICUxgoBt7Yw",
+      "file": "655-1.jpg"
+    }
+  ],
+  "task": 16,
+  "problem": "7655",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М. Шагитов",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 16 ЕГЭ: разбор задачи 7655",
+  "title": "Задание 16 ЕГЭ: разбор задачи 7655",
+  "slug": "zadanie-16-ege-razbor-zadachi-7655-655",
+  "hidden": true
+}

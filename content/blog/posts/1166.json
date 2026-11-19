@@ -1,0 +1,94 @@
+{
+  "id": 1166,
+  "rubric": "useful",
+  "description": "Объявление: функция внутри функции, которая запоминает переменные из внешней области",
+  "date": "2025-09-11",
+  "source": "https://t.me/informatika_kege_itpy/1166",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Объявление: функция внутри функции, которая запоминает переменные из внешней области"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример: создание счетчика",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "def create_counter():\n    count = 0  # Внутреннее состояние\n    def counter():\n        nonlocal count\n        count += 1\n        print(\"Текущий счет:\", count)\n    return counter"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Использование созданного счетчика",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "my_counter = create_counter()\nmy_counter()  # Текущий счет: 1\nmy_counter()  # Текущий счет: 2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Что происходит?",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Каждый вызов my_counter() увеличивает внутренний счетчик, который \"запомнен\" внутри функции. Это и есть замыкание!"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Зачем это нужно?",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "- Хранить состояние между вызовами"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- Создавать \"приватные\" переменные"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- Сделать код более модульным и безопасным"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Что такое замыкание в Python?",
+  "title": "Что такое замыкание в Python?",
+  "slug": "chto-takoe-zamykanie-v-python",
+  "hidden": false
+}

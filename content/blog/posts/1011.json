@@ -1,0 +1,112 @@
+{
+  "id": 1011,
+  "rubric": "python",
+  "description": "При подготовке к ЕГЭ по информатике важно уметь работать с различными системами счисления для таких номеров как 5 и 14. Сегодня разберем универсальную функцию на Python, которая…",
+  "date": "2025-03-14",
+  "source": "https://t.me/informatika_kege_itpy/1011",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/1011",
+      "thumb": {
+        "src": "/blog-media/1011-1.jpg",
+        "width": 848,
+        "height": 736
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При подготовке к ЕГЭ по информатике важно уметь работать с различными системами счисления для таких номеров как 5 и 14. Сегодня разберем универсальную функцию на Python, которая позволяет перевести число из десятичной системы счисления в любую другую (от 2 до 36)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "1. Импортируем необходимые символы"
+    },
+    {
+      "type": "code",
+      "text": "from string import *"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Здесь используются модули digits и ascii_uppercase, чтобы задать доступные символы для различных систем счисления."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2. Образуем строку alphabet"
+    },
+    {
+      "type": "code",
+      "text": "alphabet = digits + ascii_uppercase"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Эта строка содержит все символы, используемые в системах счисления: цифры от 0 до 9 и заглавные английские буквы от A до Z."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "3. Основная функция convert"
+    },
+    {
+      "type": "code",
+      "text": "def convert(n, b):\n    r = ''\n    while n > 0:\n        r += alphabet[n % b]\n        n //= b\n    return r[::-1]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция convert принимает два параметра: число n в десятичной системе и основание b, в которое его нужно перевести. Внутри цикла проводится деление числа n на основание b с остатком, который используется для получения соответствующего символа из alphabet. Собранные символы переворачиваются в обратном порядке для получения правильного представления числа в новой системе."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "4. Примеры использования"
+    },
+    {
+      "type": "code",
+      "text": "n = 15552\nprint(convert(n, 2))  # Перевод в двоичную систему\nprint(convert(n, 8))  # Перевод в восьмеричную систему\nprint(convert(n, 16)) # Перевод в шестнадцатеричную систему\nprint(convert(n, 3))  # Перевод в троичную систему"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Эти примеры показывают, как использовать функцию для перевода числа 15552 в различные системы счисления."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Более короткий вариант написания этой функции оставлю в комментариях к этому посту, не стесняйтесь ставить реакции на этот пост 🔥"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/nDCguQEM1P_D2mJkVUJJSorBxyxZkXJvnd-oe33n_IQC54DnNSkWyNGxtmwmNKzQOETZ7K9AMOrsiMryw53XJq_OEVcfgaVIbI2ao3GsrRD-NrTFJ9BF45L4R7e0wdYGKF9S7UUai9EtPwnOGjPlixv6AixJu2n-GA-4s7w22Ge5pZYkEYWfVCNZYJjoRdKW6dhEP9gxCY8P6O3fKypyHmYDp0axwzdQ-YOarcIiz2Y9jxioKdIKpmiG_OqW7oYty-Vl290uAHcxYmE-M2cLI7rsXM6yZzU3yGOpSFyVQEtTYQGzTYI8IHfbm4W9iQV5HA6ULUqzajtD69PM5leDBA",
+      "file": "1011-1.jpg"
+    }
+  ],
+  "baseTitle": "Универсальная функция перевода числа из 10-ой системы счисления в b-ую",
+  "title": "Универсальная функция перевода числа из 10-ой системы счисления в b-ую",
+  "slug": "universalnaya-funktsiya-perevoda-chisla-iz-10-oy-sistemy-1011",
+  "hidden": true
+}

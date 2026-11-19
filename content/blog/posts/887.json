@@ -1,0 +1,77 @@
+{
+  "id": 887,
+  "rubric": "useful",
+  "description": "Проверь свои знания и узнай, сможешь ли ты правильно ответить на вопрос: \"Что выведет этот код?\"",
+  "date": "2024-10-23",
+  "source": "https://t.me/informatika_kege_itpy/887",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Проверь свои знания и узнай, сможешь ли ты правильно ответить на вопрос: \"Что выведет этот код?\""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Вопрос",
+          "bold": true
+        },
+        {
+          "text": " 🚩"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "def add_number(num, nums=[]):\n    nums.append(num)\n    return nums\n\nprint(add_number(5))\nprint(add_number(10))"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Варианты ответов"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "[5], [10]"
+          }
+        ],
+        [
+          {
+            "text": "[5], [5, 10]"
+          }
+        ],
+        [
+          {
+            "text": "[10], [10]"
+          }
+        ],
+        [
+          {
+            "text": "[10], [5, 10]"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Правильные ответы опубликую в крайнем посте 🔜"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Викторина по Python",
+  "title": "Викторина по Python",
+  "slug": "viktorina-po-python",
+  "hidden": false
+}

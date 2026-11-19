@@ -1,0 +1,45 @@
+{
+  "id": 114,
+  "rubric": "video",
+  "description": "",
+  "date": "2023-04-22",
+  "source": "https://t.me/informatika_kege_itpy/114",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Запись вебинара на видео",
+          "href": "https://youtu.be/eiDLWO63sJs"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Конспект с решенеим задач",
+          "href": "https://github.com/ilandroxxy/ilandroxy_bot/blob/main/ilandroxy_Bot/Webinars/21.04.23.py"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ELa5Fi1lBPQhHOVV-U2IHSTHqrW-g73iCll75ZclbnIzc18T2uq8tireHdKKFX9J5c2qavnMyXFRfAWxfeothIn-VOEKyJm6SoKBfRMMlfnjI8ZauqEVAMfrN7sxjCqFZ-hJzVqvYIKOs45macgTP6NWzKkG2LNBs0JFWNt5UIEJFp0-gkJenpcD04U9Y64euYMYrbkFAAzIqacdQtME_72sTSzHo4HfVvUYlMDafB0Khr7_DvCgU_xJQAS3hOObTETQAkr4kTis1z9Tm50v_NDBk75-SL-QZSJnlu1wYVfEotfkcj8di1rtiJveuTrO9NAh49DzpaXdtYe5q7KxUA",
+      "file": "114-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://t.me/informatika_kege_itpy/114",
+    "thumb": {
+      "src": "/blog-media/114-1.jpg",
+      "width": 848,
+      "height": 464
+    }
+  },
+  "baseTitle": "Вебинар от 21.04.2023, решение 9, 17, 24 .txt номеров",
+  "title": "Вебинар от 21.04.2023, решение 9, 17, 24 .txt номеров",
+  "slug": "vebinar-ot-21-04-2023-reshenie-9-17-24-txt-nomerov",
+  "hidden": false
+}

@@ -1,0 +1,213 @@
+{
+  "id": 432,
+  "rubric": "breakdown",
+  "description": "Операнды арифметического выражения записаны в системах счисления с основаниями 13 и 18: 8x78y_13 + 79xy7_18 Определите значения x и y, при которых значение данного выражения будет…",
+  "date": "2024-04-16",
+  "source": "https://t.me/informatika_kege_itpy/432",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/432",
+      "thumb": {
+        "src": "/blog-media/432-1.jpg",
+        "width": 848,
+        "height": 512
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Операнды арифметического выражения записаны в системах счисления с основаниями 13 и 18:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "8x78y_13 + 79xy7_18"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите значения x и y, при которых значение данного выражения будет наименьшим и кратно 9. Для найденных значений x и y вычислите частное от деления."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Строчку alphbet можно записать иначе:",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "from string import *"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "alphabet = digits + ascii_uppercase"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\nR = []\nfor x in alphabet[:13]:\n    for y in alphabet[:13]:\n        A = int(f'8{x}78{y}', 13)\n        B = int(f'79{x}{y}7', 18)\n        if (A + B) % 9 == 0:\n            R.append((A + B) // 9)\nprint(min(R))\n\n# Ответ: 113024"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается отсортированный список alphabet, содержащий цифры от 0 до 9 и буквы английского алфавита в верхнем регистре."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается пустой список R, в который будут добавляться результаты, удовлетворяющие условию задачи."
+          }
+        ],
+        [
+          {
+            "text": "for x in alphabet[:13]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается цикл for, перебирающий элементы alphabet до 13-го (не включительно) и присваивающий их переменной x."
+          }
+        ],
+        [
+          {
+            "text": "for y in alphabet[:13]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускается вложенный цикл for, перебирающий элементы alphabet до 13-го (не включительно) и присваивающий их переменной y."
+          }
+        ],
+        [
+          {
+            "text": "A = int(f'8{x}78{y}', 13)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Формируется число A, которое получается из конкатенации строк, представляющих числа в строке, и преобразуется в десятичное число по основанию 13."
+          }
+        ],
+        [
+          {
+            "text": "B = int(f'79{x}{y}7', 18)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Формируется число B, которое получается аналогично число A, но преобразуется в десятичное число по основанию 18."
+          }
+        ],
+        [
+          {
+            "text": "if (A + B) % 9 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется условие, что сумма чисел A и B делится на 9 без остатка."
+          }
+        ],
+        [
+          {
+            "text": "R.append((A + B) // 9)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, результат деления суммы A и B на 9 добавляется в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(min(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводится минимальное значение из списка R, которое является ответом на задачу."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/CVafJ4O1LBwZ9ijGjLdTkS3DgSANYWFOBOkHgL0GGuQDq5x4Fko4Fy4ZMzvQ7lVfoKvuavogcsvoQchHVGoWYPjBaWW2TsLLAzys3B8a4AlwLtMuBoOewNeXqIeTo4CF_veHwcIhd79tuxa4nBkd40qzWTltAJehNA3qmNOie4cmrd1fcJRnNJtc-rPoKAV8vR_vgeH0Qm3lLAu7w-cLbU43yGqx4aI4JFIfcNMXMJD-F0w23qcJXxpVKWCw4u26blHJeRi5cCulK80udvFlHAQD7EfXpEXkuTZHatHiO7ARExP70ZrQ8azBVXv4k8jMHOhKRCiQD1dJsgmlrjAsLg",
+      "file": "432-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "48385",
+  "collection": "Решу ЕГЭ",
+  "meta": {
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 48385",
+  "title": "Задание 14 ЕГЭ: разбор задачи 48385",
+  "slug": "zadanie-14-ege-razbor-zadachi-48385",
+  "hidden": false
+}

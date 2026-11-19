@@ -1,0 +1,101 @@
+{
+  "id": 1185,
+  "rubric": "python",
+  "description": "Для этого всего то нужно воспользоваться функцией dist, которая входит в стандартную библиотеку math.",
+  "date": "2025-10-09",
+  "source": "https://t.me/informatika_kege_itpy/1185",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для этого всего то нужно воспользоваться функцией "
+        },
+        {
+          "text": "dist",
+          "code": true
+        },
+        {
+          "text": ", которая входит в стандартную библиотеку "
+        },
+        {
+          "text": "math",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В контексте 27 задачи ЕГЭ, особенно полезная вещь!!)",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример с кодом"
+    },
+    {
+      "type": "code",
+      "text": "import math\n\npoint1 = (x1, y1)\npoint2 = (x2, y2)\n\ndistance = math.dist(point1, point2)\nprint(distance)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Преимущества"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "Простая и удобная в использовании."
+          }
+        ],
+        [
+          {
+            "text": "Работает для точек в 2D, 3D и более измерениях."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Обратите внимание"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "math.dist() ",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "доступна только в "
+        },
+        {
+          "text": "Python 3.8",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " и новее."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "А вы знали, что в Python можно посчитать Евклидово расстояние между двумя…",
+  "title": "А вы знали, что в Python можно посчитать Евклидово расстояние между двумя…",
+  "slug": "a-vy-znali-chto-v-python-mozhno-poschitat-evklidovo",
+  "hidden": false
+}

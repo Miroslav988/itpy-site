@@ -1,0 +1,250 @@
+{
+  "id": 1209,
+  "rubric": "breakdown",
+  "description": "Все шестибуквенные слова, составленные из букв Т, Е, О, Р, И, Я, записаны в алфавитном порядке и пронумерованы. Вот начало списка: 1. EEEEEE 2. ЕЕЕЕЕИ 3. EEEEEO 4. EEEEEP 5.…",
+  "date": "2025-11-27",
+  "source": "https://t.me/informatika_kege_itpy/1209",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1209-1.jpg",
+      "width": 800,
+      "height": 516,
+      "alt": "Задание 8 ЕГЭ: разбор задачи 23192"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Все шестибуквенные слова, составленные из букв Т, Е, О, Р, И, Я, записаны в алфавитном порядке и пронумерованы."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Вот начало списка:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. EEEEEE"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. ЕЕЕЕЕИ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. EEEEEO"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "4. EEEEEP"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "5. EEEEET"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "6. ЕЕЕЕЕЯ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите, под каким номером в этом списке стоит последнее слово с нечётным номером, которое не начинается с букв Р, Т или Я и при этом содержит в своей записи не менее двух букв И."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Примечание. Слово - последовательность идущих подряд букв, не обязательно осмысленная."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\nn = 0\nR = []\nfor x in product(sorted(\"ТЕОРИЯ\"), repeat=6):\n    slovo = \"\".join(x)\n    n += 1\n    if n % 2 != 0:\n        if slovo[0] not in \"РТЯ\":\n            if slovo.count(\"И\") >= 2:\n                R.append(n)\nprint(max(R))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 23159",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируем все функции из модуля itertools для работы с комбинаторикой"
+          }
+        ],
+        [
+          {
+            "text": "n = 0"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем счетчик n нулем. Он будет хранить порядковый номер каждого слова"
+          }
+        ],
+        [
+          {
+            "text": "R = []"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем пустой список R для хранения номеров слов, удовлетворяющих условиям"
+          }
+        ],
+        [
+          {
+            "text": "for x in product(sorted(\"ТЕОРИЯ\"), repeat=6):"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Генерируем все возможные комбинации из 6 букв, используя отсортированный алфавит \"ТЕОРИЯ\""
+          }
+        ],
+        [
+          {
+            "text": "slovo = \"\".join(x)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем кортеж букв x в строку (составляем слово из 6 букв)"
+          }
+        ],
+        [
+          {
+            "text": "n += 1"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличиваем счетчик слов на 1 (текущий номер слова)"
+          }
+        ],
+        [
+          {
+            "text": "if n % 2 != 0:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, является ли номер слова нечетным"
+          }
+        ],
+        [
+          {
+            "text": "if slovo[0] not in \"РТЯ\":"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что первая буква слова НЕ Р, НЕ Т и НЕ Я"
+          }
+        ],
+        [
+          {
+            "text": "if slovo.count(\"И\") >= 2:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что буква \"И\" встречается в слове 2 или более раз"
+          }
+        ],
+        [
+          {
+            "text": "R.append(n)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если все условия выполнены, добавляем номер слова в список R"
+          }
+        ],
+        [
+          {
+            "text": "print(max(R))"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим максимальный номер из всех найденных подходящих слов"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/BxZqPNFm47oZ-2emH7k-0bq-lBy0ldKVZuiMV_QMm6o_cAzX34-0uRNad0F37qWVPhr2ly8GI8SGOUMXy6kU6CLZBkaof6toir5fxxB6XtrfVHRF1IY7-SuPTGDoiwVrZIB-ThiqjjTfBVJSKXLH8Fe02uecgQIi83UUuX_iToA8CUS36mPAx_AvUGtJpFFBPV8vROxVu6E13pMpGXCrN7rU5Z_wwlRnV9gmDidomjhUUl5T-iLn7RGuoiE0Gx286mLNSI1gf8A6XBFg5jdzemXGZtQTLRCTdMHS01F2F0VPXtMb4HFIrkVPVQ5trhiAP7UEM_OcqE5olNCQsXbG0g.jpg",
+      "file": "1209-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "23192",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 10.06.25",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 23192",
+  "title": "Задание 8 ЕГЭ: разбор задачи 23192",
+  "slug": "zadanie-8-ege-razbor-zadachi-23192",
+  "hidden": false
+}

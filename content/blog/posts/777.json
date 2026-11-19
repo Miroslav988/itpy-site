@@ -1,0 +1,188 @@
+{
+  "id": 777,
+  "rubric": "breakdown",
+  "description": "Автомат обрабатывает натуральное число N (0≤N≤255) по следующему алгоритму: 1) Строится восьми битная двоичная запись числа N. 2) Удаляются средние 4 цифры. 3) Полученное число…",
+  "date": "2024-08-05",
+  "source": "https://t.me/informatika_kege_itpy/777",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/777",
+      "thumb": {
+        "src": "/blog-media/777-1.jpg",
+        "width": 848,
+        "height": 528
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Автомат обрабатывает натуральное число N (0≤N≤255) по следующему алгоритму:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1) Строится восьми битная двоичная запись числа N."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2) Удаляются средние 4 цифры."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3) Полученное число переводится в десятичную запись и выводится на экран."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Какое наибольшее число, меньшее 110, после обработки автоматом даёт результат 7?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "R = []\nfor n in range(0, 255+1):\n    s = f'{n:b}'.zfill(8)\n    s = s[:2] + s[-2:]\n    r = int(s, 2)\n    if n < 110 and r == 7:\n        R.append(n)\nprint(max(R))\n\n# Ответ: 107"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем пустой список для хранения подходящих чисел"
+          }
+        ],
+        [
+          {
+            "text": "for n in range(0, 255+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Начинаем цикл, перебираем числа от 0 до 255 включительно"
+          }
+        ],
+        [
+          {
+            "text": "s = f'{n:b}'.zfill(8)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Переводим текущее число n в двоичную строку, дополняя нулями до 8 бит (в формате строки)"
+          }
+        ],
+        [
+          {
+            "text": "s = s[:2] + s[-2:]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Оставляем только первые две и последние две цифры двоичного представления"
+          }
+        ],
+        [
+          {
+            "text": "r = int(s, 2)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем полученную строку обратно в целое число в десятичной системе счисления"
+          }
+        ],
+        [
+          {
+            "text": "if n < 110 and r == 7:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, если число меньше 110 и преобразованное число равно 7"
+          }
+        ],
+        [
+          {
+            "text": "R.append(n)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавляем число в список R, если оно соответствует условиям"
+          }
+        ],
+        [
+          {
+            "text": "print(max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим наибольшее число из списка R"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/eKeW6MvO8EWq_MoWU-CDdvw555KZeYaDe-fWZK4EjqQh6Qbbm_Yx4XN0Uw3joyEIG7BgjCi_Z3rRbTMlYPtPkTp9alQXTqrqb0ZbUP0ONLdLVs2-cu0MtEeTk0c90oLGSYI-df1wKDmE79E_-kxnMcwDLqAByZz5MS9BeDRcT4SXoEVlcW7sfb296eSn887RURNrZ4La9TwczUQsjkqbcd5BNCyVPhdx8Ob5QsVVKsY_P66gO1n0OcghMj4_UtKF6sXmyqI0Dmf28n88Wbw_HrrLAjkuWbO1qEbgPnCqusITbwCaRwoMAC4eUhOeY0CbZC2c05xP8i7fnXvrTrS02w",
+      "file": "777-1.jpg"
+    }
+  ],
+  "task": 5,
+  "problem": "688",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Е.Джобс",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 5 ЕГЭ: разбор задачи 688",
+  "title": "Задание 5 ЕГЭ: разбор задачи 688",
+  "slug": "zadanie-5-ege-razbor-zadachi-688",
+  "hidden": false
+}

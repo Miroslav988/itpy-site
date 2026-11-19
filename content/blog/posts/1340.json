@@ -1,0 +1,45 @@
+{
+  "id": 1340,
+  "rubric": "breakdown",
+  "description": "Задание 8 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "date": "2026-06-18",
+  "source": "https://t.me/informatika_kege_itpy/1340",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1340-1.jpg",
+      "width": 800,
+      "height": 475,
+      "alt": "Задание 8 ЕГЭ: разбор варианта Дальнего Востока 2026"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\n\ncnt = 0\nfor x in product('012345678', repeat=5):\n    s = ''.join(x)\n    if s[0] != '0' and s.count('3') == 2:\n        for x in '357':\n            s = s.replace(x, '1')\n        if ('12' not in s) and ('21' not in s):\n            cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 3352",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/FZKgu9YyqD-_XP2YDPAFaSGvpT5_bXhwniERZAPSyTvSnmYN6pcYQgPI8GHgBYaCVSmZTsgr__otM64kPDnFVg4OghXL3612E76TrkfzjJaPwhatp4JKOYbyYcsrzozWpF7fTC9_esSaYcc8jd3BNTvaxj-29GQEteMcgT6viAutSyWjPdlZQUvcjZDW4e7g8Onpy-KFV-I-Ub9_WzpGjAcN4Itt78xjZihepX5MaCKvQhyAJnvc0tdY9k4L_2IpbeloDvXvgfREDAnyn2HsJfYsP_y_QpmMPYeI03j7veEzCJmsM42dWFzQGqfDc-Ct46mAoUmJlnP43mD6RCbuHA.jpg",
+      "file": "1340-1.jpg"
+    }
+  ],
+  "task": 8,
+  "baseTitle": "Задание 8 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "title": "Задание 8 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "slug": "zadanie-8-ege-razbor-varianta-dalnego-vostoka-2026",
+  "hidden": false
+}

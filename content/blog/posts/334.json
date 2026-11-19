@@ -1,0 +1,66 @@
+{
+  "id": 334,
+  "rubric": "breakdown",
+  "description": "Давно у нас не было шестого номера, поэтому вот код решения шестого номера через библиотеку turtle и функцию tracer(0):",
+  "date": "2024-01-25",
+  "source": "https://t.me/informatika_kege_itpy/334",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/334",
+      "thumb": {
+        "src": "/blog-media/334-1.jpg",
+        "width": 848,
+        "height": 704
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/47407-6-55148184d5904ac9bf164d5434f08636?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Давно у нас не было шестого номера, поэтому вот код решения шестого номера через библиотеку "
+        },
+        {
+          "text": "turtle",
+          "code": true
+        },
+        {
+          "text": " и функцию "
+        },
+        {
+          "text": "tracer(0)",
+          "code": true
+        },
+        {
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.tracer(0)\nt.left(90)\nl = 30\n\nfor _ in range(4):\n    t.forward(8*l)\n    t.right(90)\n\nt.color('green')\nfor _ in range(3):\n    t.forward(12 * l)\n    t.right(120)\n\nt.up()\nfor x in range(-30, 30):\n    for y in range(-30, 30):\n        t.goto(x * l, y * l)\n        t.dot(2, 'red')\n\nt.done()"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/DP0da40nbUS9ZXvKCeb-eFjJ7YanPZRP9gr1SEySjp8MbJvxlUTgXqjptQSsynRAVxw-wK79wCWGaA0wsshZKjCO5sO6YNQekkuEjwZb3DigGzB354LPkBJRMey87WDVRBVueiP2en07jkHf-G4DEoz29144HQYIIvvOpIvZa9WhQX5FikPGlB-FSgxWoMicwDcJW4xkl3_Ev8oNemoXFcV25azo-qK3HW2RiAOkqV96qsgndTcFRf05W_ROt7hXgnMrQH_mWscw15rcV3axRZQTUGE5V0LHtHszgsbYFLSN4m3RnZy8UhmNRQOLaCTZJSNg7Gx8ykgPgAJEeVadhw",
+      "file": "334-1.jpg"
+    }
+  ],
+  "task": 6,
+  "problem": "47407",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 6 ЕГЭ: разбор задачи 47407",
+  "title": "Задание 6 ЕГЭ: разбор задачи 47407",
+  "slug": "zadanie-6-ege-razbor-zadachi-47407",
+  "hidden": false
+}

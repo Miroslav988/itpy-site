@@ -1,0 +1,75 @@
+{
+  "id": 348,
+  "rubric": "breakdown",
+  "description": "Задача 8 номера с сайта kompege.ru автор: М. Ишимов Простенькая и нативно понятная задачка базового уровня, зато удобно и наглядно видно, как работать с ней через itertools.",
+  "date": "2024-02-06",
+  "source": "https://t.me/informatika_kege_itpy/348",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/348",
+      "thumb": {
+        "src": "/blog-media/348-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/5626-8-19ddb684d46e4588845ce5dfb82e0a17?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Задача 8 номера с сайта "
+        },
+        {
+          "text": "kompege.ru",
+          "href": "https://kompege.ru/"
+        },
+        {
+          "text": " автор: ",
+          "bold": true
+        },
+        {
+          "text": "М. Ишимов",
+          "href": "https://vk.com/inf.kege"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Простенькая и нативно понятная задачка базового уровня, зато удобно и наглядно видно, как работать с ней через itertools."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "import itertools\ncount = 0\nfor s in itertools.product('01234567', repeat=5):\n    slovo = ''.join(s)\n    if slovo[0] != '0':\n        if slovo[0] not in '1357':\n            if slovo[-1] not in '26':\n                if slovo.count('7') <= 2:\n                    count += 1\nprint(count)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/mMIB_OhjsfYHuyvmz6-ZjGBvwIury7Y-PjQ1hbWPfcbicJ6v_Iwhuu4_x40V9g23dFIbL0wcxc9hnjdtQfLBJWmupq0ZpjqpJD_Sg87qzcPPcOxXMiSlemS85JW2Zh6fXQOAVyctiujscwvGBdfUoy5thFykOGHMMykMdGGFj12PybnYp8_uRCKjYpx0o6U-4gDv6JleJEIIK6v6eeB8lpQMmwzZOvWp5oEkdcXQ6XanJsUfivhgyQjfPIJLfxEkcwpvV4cSM7mfY6vhNjyCTMHXijLXRy7DifI4UHJPdHjKcuINOfV6kdqGS5rm4F7u-1cV4pSXSdbh2m6kMJO4Og",
+      "file": "348-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "5626",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 5626",
+  "title": "Задание 8 ЕГЭ: разбор задачи 5626",
+  "slug": "zadanie-8-ege-razbor-zadachi-5626",
+  "hidden": false
+}

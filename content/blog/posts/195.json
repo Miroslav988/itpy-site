@@ -1,0 +1,85 @@
+{
+  "id": 195,
+  "rubric": "useful",
+  "description": "Есть ли интерес у аудитории читать подобного рода статьи на полезные темы от других авторов?",
+  "date": "2023-07-27",
+  "source": "https://t.me/informatika_kege_itpy/195",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/195",
+      "thumb": {
+        "src": "/blog-media/195-1.jpg",
+        "width": 848,
+        "height": 336
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Статья: "
+        },
+        {
+          "text": "\"Машинное обучение для людей\"",
+          "href": "https://vas3k.blog/blog/machine_learning/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Есть ли интерес у аудитории читать подобного рода статьи на полезные темы от других авторов?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Помогите нам определиться, ставь:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- да, это супер интересно"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- ну такое, засоряет эфир"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- просто лайкну, потому что могу"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Если кому-то интересно разразиться тирадой на тему \"Chat GPT бесполезная игрушка\", то ждем вас в комментариях 👇"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/szb1T5Rnom7PK14Z58zBKyBhzLmd0UwLZvyESW7urX6ySSNQMt56H6q3J3gXy7ppBz4ZI1gCF1STIH7wlrrTxn0F9_jzJdUw2PxthB4k2kmd3KrUAIc0SYVNzd8bNARN1mOrWGutHN5bUxDlv0f7wY46uyFjOAHgBrvpbmWBS5rLmeFaMtqiM8BmqynkA8KSEZBWBixyUjlE4EbxFEueSqex6_qXbXvsj3GSzkqJGjprgWa3d-9XPsnbTJlTYyrfkx6ZFm1qu7QpmdMmRaVei5swiXrDSqsFFPU1fNm4LRbTI00w7mU_E6CmCELj8WKyPKBMo0C8_NI_kdbOiuV_sA",
+      "file": "195-1.jpg"
+    }
+  ],
+  "meta": {
+    "source": "Вастрик (Василий Зубарев)"
+  },
+  "baseTitle": "Интересная статья про машинное обучение",
+  "title": "Интересная статья про машинное обучение",
+  "slug": "interesnaya-statya-pro-mashinnoe-obuchenie",
+  "hidden": false
+}

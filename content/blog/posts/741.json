@@ -1,0 +1,202 @@
+{
+  "id": 741,
+  "rubric": "breakdown",
+  "description": "Алгоритм вычисления значения функции F(n), где n – натуральное число, задан следующими соотношениями: F(n)=1 при n=1; F(n)=2×n×F(n–1), если n>1. Чему равно значение выражения…",
+  "date": "2024-06-17",
+  "source": "https://t.me/informatika_kege_itpy/741",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/741",
+      "thumb": {
+        "src": "/blog-media/741-1.jpg",
+        "width": 848,
+        "height": 544
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Алгоритм вычисления значения функции"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(n), где n – натуральное число, задан следующими соотношениями:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(n)=1 при n=1;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(n)=2×n×F(n–1), если n>1."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Чему равно значение выражения (F(2024)/16−F(2023))/F(2022)?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В этом номере на ЕГЭ 2024 попадалась ошибка: \"OverflowError: integer division result too large for a float\", исправить её можно было заменой действий \"/\" на \"//\".",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "import sys\nsys.setrecursionlimit(10000)\n\ndef F(n):\n    if n == 1:\n        return 1\n    if n > 1:\n        return 2 * n * F(n-1)\n\nprint((F(2024) // 16 - F(2023)) / F(2022))\n\n# Ответ: 1019592"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import sys",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт модуля sys, который обеспечивает доступ к некоторым переменным и функциям, относящимся к Python и его среде."
+          }
+        ],
+        [
+          {
+            "text": "sys.setrecursionlimit(10000)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Установка максимальной глубины рекурсии в 10000 для данной программы. Это предотвращает ошибку \"RecursionError: maximum recursion depth exceeded\", которая может возникнуть при слишком глубокой рекурсии."
+          }
+        ],
+        [
+          {
+            "text": "def F(n):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определение функции F с аргументом n."
+          }
+        ],
+        [
+          {
+            "text": "if n == 1:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Условие проверки, равно ли значение n единице."
+          }
+        ],
+        [
+          {
+            "text": "return 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращение значения 1, если условие n == 1 истинно."
+          }
+        ],
+        [
+          {
+            "text": "if n > 1:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Условие проверки, больше ли значение n единицы."
+          }
+        ],
+        [
+          {
+            "text": "return 2 * n * F(n-1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Рекурсивный вызов функции F с аргументом n-1 в случае, если n > 1. Функция возвращает удвоенное произведение n на результат вызова F(n-1)."
+          }
+        ],
+        [
+          {
+            "text": "print((F(2024) // 16 - F(2023)) / F(2022))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функций F с аргументами 2024, 2023, и 2022, выполнение арифметических операций и вывод результата выражения."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/pXkeia5nLNrDsz7K_7wAqVUZKrl9YWACupRxsLeKyTSYttkWHI3-QesFZPDYwwkmgP3_IF0_1pqbbylsDVktQMj5Q-yNCsYfEPRrbfzNKcw215PHYmv4nPgm1AfNJi3dyqOKzdjTC3JBlDxiz9cSwbwCOh18VD7CeIY-_db2pvpl4-ste9SGJGDnkyXj97_o7y0EoKLvu_tJAmviXbe8YHEQ0TAzTWFgUvAOrHvvO8MMKCO1LCZx9Q2kojEgFIJ3TdzII-MnRnQFHkRd2YifCFFTU7-tnJslFxy5cwpdXJnneOI5ciqF81LKa5MOQGzAfig65_plkldHd22UU5qWkA",
+      "file": "741-1.jpg"
+    }
+  ],
+  "task": 16,
+  "problem": "17557",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 08.06.24",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 16 ЕГЭ: разбор задачи 17557",
+  "title": "Задание 16 ЕГЭ: разбор задачи 17557",
+  "slug": "zadanie-16-ege-razbor-zadachi-17557",
+  "hidden": false
+}

@@ -1,0 +1,64 @@
+{
+  "id": 401,
+  "rubric": "breakdown",
+  "description": "Задание 24 ЕГЭ: разбор задачи 59794",
+  "date": "2024-03-11",
+  "source": "https://t.me/informatika_kege_itpy/401",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/401",
+      "thumb": {
+        "src": "/blog-media/401-1.jpg",
+        "width": 848,
+        "height": 464
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/59794-24-b1946621c2d1457d909029a8c2201eaf?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline()\ns = s.split('U')\nmini = 999999\nfor i in range(len(s)-108):\n    r = 'U'.join(s[i:i+109])\n    mini = min(mini, len(r))\nprint(mini + 2)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы к заданию: ",
+          "bold": true
+        },
+        {
+          "text": "24.txt",
+          "href": "https://inf-ege.sdamgia.ru/get_file?id=140108",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/UZN-pqI7w34dTzkRFTYrC_J8qXo4naQE_DG9OIwWN6xe4BIznAa2h_wqpX81VClA4pyAckJit6wHn3sdCSM5viKMNMmtf4YFUc9rcqjMOr4lRUWNkt0DDYDeJHKWvn9fcfuZILSNqJ4muw9GMghlUm4iU3tlueiBnjEZiKPSaBbuOfC00LMcSAPOrCmfYZdKZMd3NIFxv_5R6cVAr-tlsJR1zW5d0Q5yNjTPrD2F-gyMTmyTdip4OyfcSVBqlit6S9Z7xYm24Uiuzoo4Q5jiw8I51YP6mUJkV0srg0B7IqNLNB4C2S6cKXJlGqmuIq2Vqhbo001yRwpY8Dp5BcpJnA",
+      "file": "401-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "59794",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 59794",
+  "title": "Задание 24 ЕГЭ: разбор задачи 59794",
+  "slug": "zadanie-24-ege-razbor-zadachi-59794",
+  "hidden": false
+}

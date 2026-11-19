@@ -1,0 +1,226 @@
+{
+  "id": 1059,
+  "rubric": "breakdown",
+  "description": "Исполнитель преобразует число на экране. У исполнителя есть две команды, которые обозначены латинскими буквами: А. Вычесть 2 В. Если число четное, Разделить на 2, Иначе Вычесть 7…",
+  "date": "2025-04-28",
+  "source": "https://t.me/informatika_kege_itpy/1059",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1059-1.jpg",
+      "width": 800,
+      "height": 459,
+      "alt": "Задание 23 ЕГЭ: разбор задачи 19712"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Исполнитель преобразует число на экране. У исполнителя есть две команды, которые обозначены латинскими буквами:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "А. Вычесть 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В. Если число четное, Разделить на 2, Иначе Вычесть 7"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько существует программ, для которых при исходном числе 40 результатом является число 1 и при этом никакая команда не повторяется более двух раз подряд?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b, s):\n    if a <= b:\n        return a == b and 'AAA' not in s and 'BBB' not in s\n    h = [F(a-2, b, s+'A')]\n    if a % 2 == 0:\n        h += [F(a/2, b, s+'B')]\n    else:\n        h += [F(a-7, b, s+'B')]\n    return sum(h)\n\nprint(F(40, 1, ''))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 16",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a, b, s):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление функции F с тремя параметрами: a (начальное число), b (целевое число), s (строка с последовательностью действий)."
+          }
+        ],
+        [
+          {
+            "text": "if a <= b:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, если текущее число a меньше или равно целевому числу b."
+          }
+        ],
+        [
+          {
+            "text": "return a == b and 'AAA' not in s and 'BBB' not in s",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращает True только если a равно b и в строке s нет подстрок 'AAA' и 'BBB', иначе False."
+          }
+        ],
+        [
+          {
+            "text": "h = [F(a-2, b, s+'A')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создает список h с результатом рекурсивного вызова функции, где a уменьшается на 2, а к строке s добавляется 'A'."
+          }
+        ],
+        [
+          {
+            "text": "if a % 2 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, четное ли число a."
+          }
+        ],
+        [
+          {
+            "text": "h += [F(a/2, b, s+'B')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если a четное, добавляет в список h результат рекурсивного вызова функции, где a делится на 2, а к строке s добавляется 'B'."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если a нечетное."
+          }
+        ],
+        [
+          {
+            "text": "h += [F(a-7, b, s+'B')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавляет в список h результат рекурсивного вызова функции, где a уменьшается на 7, а к строке s добавляется 'B'."
+          }
+        ],
+        [
+          {
+            "text": "return sum(h)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращает сумму элементов списка h (в данном случае True и False интерпретируются как 1 и 0)."
+          }
+        ],
+        [
+          {
+            "text": "print(F(40, 1, ''))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции с начальными значениями a = 40, b = 1, s = '' и вывод результата."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/OV_j0ChhiZRARaDe-mLrj8lXMcSycn5j2P7EvwEkr5ZSNP8VIHkqi-wCs87Pru4upkjSAuhKulQreMfzlNVoq5PkxfK6XEFsAcp_x06q7du5QN-JzX3CTKD-UgPi9EALMUafXNupWYw2CJCeLMhGnjRKOWQU2LXe5Q9J4RTbo2_UJI1V2CRg_UOcMilBE6yJGGbZPfFNx5UvrC18qsUVe7TInQes2UXp0NaCtm0HkE6R488MHA1mqaxTQvHB3zcVsZ6aZg2X9LWa9dCoabd_DOVWeJ8Tcyf8bX-A1hjirhXqDO4xiN11f0R-vybaIzvvyfXhAwCljMfnrqpXSZZOzw.jpg",
+      "file": "1059-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "19712",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М.Попков",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 19712",
+  "title": "Задание 23 ЕГЭ: разбор задачи 19712",
+  "slug": "zadanie-23-ege-razbor-zadachi-19712",
+  "hidden": false
+}

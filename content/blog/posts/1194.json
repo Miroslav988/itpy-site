@@ -1,0 +1,152 @@
+{
+  "id": 1194,
+  "rubric": "breakdown",
+  "description": "На предприятии каждой изготовленной детали присваивают серийный номер, состоящий из 172 символов. В базе данных каждый серийный номер занимает одинаковое и минимально возможное…",
+  "date": "2025-10-18",
+  "source": "https://t.me/informatika_kege_itpy/1194",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1194-1.jpg",
+      "width": 800,
+      "height": 351,
+      "alt": "Задание 11 ЕГЭ: разбор задачи 23195"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "На предприятии каждой изготовленной детали присваивают серийный номер, состоящий из 172 символов. В базе данных каждый серийный номер занимает одинаковое и минимально возможное число байт. При этом используется посимвольное кодирование серийных номеров, все символы кодируются одинаковым и минимально возможным числом бит. Известно, что для хранения 356 984 серийных номеров потребовалось не менее 54 Мбайт памяти. Определите минимально возможную мощность алфавита, используемого для записи серийных номеров. В ответе запишите только целое число."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from math import *\nfor alf in range(1, 10000):\n    bit = ceil(log2(alf))\n    byte = ceil(172 * bit / 8)\n    if 356984 * byte >= 54 * 1024 * 1024:\n        print(alf)\n        break"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 129",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from math import *"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируем все функции из модуля math, включая log2 и ceil"
+          }
+        ],
+        [
+          {
+            "text": "for alf in range(1, 10000):"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Перебираем значения alf от 1 до 9999 (ищем минимальное подходящее значение)"
+          }
+        ],
+        [
+          {
+            "text": "bit = ceil(log2(alf))"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляем минимальное количество бит, необходимое для кодирования одного символа алфавита размером alf"
+          }
+        ],
+        [
+          {
+            "text": "byte = ceil(172 * bit / 8)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляем размер одного пароля в байтах: 172 символа × бит на символ ÷ 8 бит в байте"
+          }
+        ],
+        [
+          {
+            "text": "if 356984 * byte >= 54 * 1024 * 1024:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что общий размер 356984 паролей превышает или равен 54 МБ (54 × 1024 × 1024 байт)"
+          }
+        ],
+        [
+          {
+            "text": "print(alf)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим найденное значение размера алфавита"
+          }
+        ],
+        [
+          {
+            "text": "break"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Прерываем цикл после нахождения первого подходящего значения (минимального alf)"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/JGS5PLwLQpBCjRdyBl5tlEhbmSbt6343Dru8Gbz_nR_ZeAhW_1O8UkH-vr7IIrkkg5i_hQkxna6UurA1q64CTRbCqCxxk8wpk6QpANuHSWhdrRVbGQQ4hPEMLlaMkVhYbut-8qdOJ1bYinVGBeH8j--Wq5827ujoewFJxXprnjDa98DKY6UGqYkNm-PFWdLxkqDwA4_OF897ff-RgXm6ikJl6xmywoT4KE9ym5Hq3jGxHN7ByokD4vXK0-nus_J62F2igYejVufv9fACrmPj1lWeq4vf4c4WtQ-2AgMppe-9-ACweWTPFx0oLF7CAwHRk_LjVMvoAz6PXaZtrPVzDg.jpg",
+      "file": "1194-1.jpg"
+    }
+  ],
+  "task": 11,
+  "problem": "23195",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 10.06.25",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 11 ЕГЭ: разбор задачи 23195",
+  "title": "Задание 11 ЕГЭ: разбор задачи 23195",
+  "slug": "zadanie-11-ege-razbor-zadachi-23195",
+  "hidden": false
+}

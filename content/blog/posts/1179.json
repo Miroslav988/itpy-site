@@ -1,0 +1,124 @@
+{
+  "id": 1179,
+  "rubric": "python",
+  "description": "Примеры кодов для задач 9, 17, 24, 26, 27 из ЕГЭ:",
+  "date": "2025-10-03",
+  "source": "https://t.me/informatika_kege_itpy/1179",
+  "blocks": [
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Примеры кодов для задач 9, 17, 24, 26, 27 из ЕГЭ:"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        []
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for M in open('9.txt'):\n    M = [int(i) for i in M.split()]\n    print(M)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Читаем файл построчно, каждую строку разбиваем на числа и сразу печатаем.",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 17,
+      "items": [
+        []
+      ]
+    },
+    {
+      "type": "code",
+      "text": "M = [int(i) for i in open('17.txt')]\nprint(M)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Читаем все строки файла и превращаем в список чисел.",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 24,
+      "items": [
+        []
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Считываем только первую строку файла."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 26,
+      "items": [
+        []
+      ]
+    },
+    {
+      "type": "code",
+      "text": "ans = []\nfor M in open('26.txt'):\n    M = [int(i) for i in M.split()]\n    ans.append(M)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сохраняем каждую строку как список чисел, а потом собираем всё в общий список."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 27,
+      "items": [
+        []
+      ]
+    },
+    {
+      "type": "code",
+      "text": "f = open('27.А.txt').readlines()[1:]\nfor M in f:\n    M = [float(i.replace(',','.')) for i in M.split()]\n    x, y = M[0], M[1]\n    print(x, y)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пропускаем первую строку, заменяем запятые на точки и превращаем в числа с плавающей точкой.",
+          "italic": true
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Как открывать файлы в Python на ЕГЭ?",
+  "title": "Как открывать файлы в Python на ЕГЭ?",
+  "slug": "kak-otkryvat-fayly-v-python-na-ege",
+  "hidden": false
+}

@@ -1,0 +1,64 @@
+{
+  "id": 390,
+  "rubric": "breakdown",
+  "description": "Интересный 23 номер с дополнительным условием отсутствия в траектории набора команд 'BACA'.",
+  "date": "2024-02-29",
+  "source": "https://t.me/informatika_kege_itpy/390",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/390",
+      "thumb": {
+        "src": "/blog-media/390-1.jpg",
+        "width": 848,
+        "height": 416
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/7011-23-663a5c421ab14ea08a31c1e4d11a22d6?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Интересный 23 номер с дополнительным условием отсутствия в траектории набора команд "
+        },
+        {
+          "text": "'BACA",
+          "code": true
+        },
+        {
+          "text": "'."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b, s: str):\n    if a >= b or a == 28:\n        return a == b and 'BACA' not in s\n    return F(a+2, b, s+'A') + F(a+3, b, s+'B') + F(a*2, b, s+'C')\n\n\nprint(F(2, 40, ''))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/bzJs8gQugZIovhnOp6QIg3_ncB7kNVGbre5U40iOMvVzz-8nP7oO3ALyKNNKI9YdDmgJBBm56xcDBKxHMGN2ZnwR9QpeZwYKDvPpEAPR9WWswQ--N3QsUy03dXCofnyOSLO8oINcUQIlAmbxOlxfliGKSzPiTP3_fTl6_N7q_pCFN0jbrNSw-RjWNhc-TPl7xkeD2rOza25gFiitYt9TwmCesH_LWpn3FnykpLKcnW9NSd5lEiF7anPXCC5f6EpVmFynHM254cu0UIuoXPgfcQxneKix42aj1QdtO-MJh9jmmJZg5Bu4A3E3JRKNF7TmYQclWuyb9DVitV2ZTFOKFg",
+      "file": "390-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "7011",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 7011",
+  "title": "Задание 23 ЕГЭ: разбор задачи 7011",
+  "slug": "zadanie-23-ege-razbor-zadachi-7011",
+  "hidden": false
+}

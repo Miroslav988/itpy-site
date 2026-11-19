@@ -1,0 +1,71 @@
+{
+  "id": 470,
+  "rubric": "python",
+  "description": "Функция permutation() позволяет вычислить перестановки элементов. Пример кода на Python:",
+  "date": "2024-04-22",
+  "source": "https://t.me/informatika_kege_itpy/470",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/470",
+      "thumb": {
+        "src": "/blog-media/470-1.jpg",
+        "width": 848,
+        "height": 800
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "permutation() ",
+          "code": true
+        },
+        {
+          "text": "позволяет вычислить перестановки элементов. Пример кода на Python:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import permutations\n\n# Создаем список элементов\nelements = [1, 2, 3]\n\n# Вычисляем все перестановки элементов\nperms = permutations(elements)\n\n# Выводим все перестановки\nfor perm in perms:\n    print(perm)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "product()",
+          "code": true
+        },
+        {
+          "text": " вычисляет декартово произведение двух и более итераций. Пример кода на Python с использованием этой функции:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import product\n\n# Создаем два списка элементов для произведения\nlist1 = [1, 2]\nlist2 = ['a', 'b']\n\n# Вычисляем декартово произведение элементов\nresult = list(product(list1, list2))\n\n# Выводим результат\nprint(result)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Примеры с использованием этих функций на ЕГЭ были тут"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/lqK5cltsQMxoNnNs4DA00xmbfnUBbitvke2noEXBbrWNaPBD1XXSbg6W4l0UckMsGS9YkM5KgaSP8z7Nv50VYqhMTMlljYWmxBNFo3JocGZauvmiyRqrZPTqtHRKyZh-R3dgjlfrkWZq0solw0aK_kUQ_KiQklMmliVEIOhtqkjcpNFMHNcdXmpDSX_1Pf4QK6r7pb10EQNluQSGriFQtxzsdcTfJs4hfghwId2uyXvMKmGDxrCxRRE_cqm7NQn2aN-69jkZwqudnUy3kZf7j6XydApaHbdXmrFP30GVzOAKZOXelpXyZzyyM0fsEB1p9yk8qWhaS3T1xTdEX-MGnQ",
+      "file": "470-1.jpg"
+    }
+  ],
+  "baseTitle": "Вспомним полезные функции из библиотеки itertools",
+  "title": "Вспомним полезные функции из библиотеки itertools",
+  "slug": "vspomnim-poleznye-funktsii-iz-biblioteki-itertools",
+  "hidden": false
+}

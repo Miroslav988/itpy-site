@@ -1,0 +1,50 @@
+{
+  "id": 276,
+  "rubric": "breakdown",
+  "description": "Задание 23 ЕГЭ: разбор задачи 11261",
+  "date": "2023-10-29",
+  "source": "https://t.me/informatika_kege_itpy/276",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/276",
+      "thumb": {
+        "src": "/blog-media/276-1.jpg",
+        "width": 848,
+        "height": 512
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/11261-23-b8bdb7696a6e4888b4fd09d45077da85?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Есть более компактное решение"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b):\n    if a >= b or a == 16:\n        return a == b\n    return F(a + 2, b) + F(a * 3, b) + F(a * 2, b)\n\nprint(F(13, 45))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/uS5R25LA5klI7Ikvg12cbDwjKQHZyqpg95ZqPpsqzxFo9jvuFzpEEb9EBSymFiV2hDFTPWMWcF-gnCPn9fychbCok3ltkkIY_7OKhCBVfQAukZ3CZKHzlH90ps-vb5A2uUksAzfvNLpXOun2_VARMfKbfgPG_5IXxDyrYVZq7bIBeHGlew61FW7qqRIyeYwCy8qdg3smAgQUeqBG05rAaBmnz_WUxvWD1PyewAnVNmUFByQ4mQ9pkNk-2zqCj0xLWEI2gNeYJMfmKXiDIGr1IUP5XRuicoW7NtarIjvqyKt7E2YokuOgu13foGYXMLPAKKkJoJZXnayjBuJBNUE8eQ",
+      "file": "276-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "11261",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 11261",
+  "title": "Задание 23 ЕГЭ: разбор задачи 11261",
+  "slug": "zadanie-23-ege-razbor-zadachi-11261",
+  "hidden": false
+}

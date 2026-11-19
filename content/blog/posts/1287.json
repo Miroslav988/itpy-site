@@ -1,0 +1,269 @@
+{
+  "id": 1287,
+  "rubric": "python",
+  "description": "Если вы только начинаете разбираться с черепашкой, вот 5 команд, которых уже хватает для первых рисунков и базовых заготовок.",
+  "date": "2026-04-04",
+  "source": "https://t.me/informatika_kege_itpy/1287",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Если вы только начинаете разбираться с черепашкой, вот 5 команд, которых уже хватает для первых рисунков и базовых заготовок.",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Подключение библиотеки"
+    },
+    {
+      "type": "code",
+      "text": "from turtle import *"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "fd(n)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Идти вперёд на "
+          },
+          {
+            "text": "n",
+            "code": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "fd(100)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "bk(n)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Идти назад на "
+          },
+          {
+            "text": "n",
+            "code": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "bk(50)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "rt(a)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Повернуться направо на "
+          },
+          {
+            "text": "a",
+            "code": true
+          },
+          {
+            "text": " градусов"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "rt(90)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "lt(a)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Повернуться налево на "
+          },
+          {
+            "text": "a",
+            "code": true
+          },
+          {
+            "text": " градусов"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "lt(45)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 5,
+      "items": [
+        [
+          {
+            "text": "goto(x, y)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Перейти в точку с координатами "
+          },
+          {
+            "text": "(x, y)",
+            "code": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "goto(120, -40)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример"
+    },
+    {
+      "type": "code",
+      "text": "from turtle import *\n\nfd(100)\nrt(90)\nfd(100)\nlt(90)\ngoto(0, 0)\n\ndone()"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Что важно понять"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "fd",
+            "code": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "bk",
+            "code": true
+          },
+          {
+            "text": " отвечают за движение"
+          }
+        ],
+        [
+          {
+            "text": "rt",
+            "code": true
+          },
+          {
+            "text": " и "
+          },
+          {
+            "text": "lt",
+            "code": true
+          },
+          {
+            "text": " отвечают за поворот"
+          }
+        ],
+        [
+          {
+            "text": "goto",
+            "code": true
+          },
+          {
+            "text": " помогает сразу оказаться в нужной точке"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "То есть почти любая фигура в "
+        },
+        {
+          "text": "turtle",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " собирается из двух вещей:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• "
+        },
+        {
+          "text": "движение",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "• "
+        },
+        {
+          "text": "поворот",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "5 простейших функций из библиотеки Turtle в Python",
+  "title": "5 простейших функций из библиотеки Turtle в Python",
+  "slug": "5-prosteyshih-funktsiy-iz-biblioteki-turtle-v-python",
+  "hidden": false
+}

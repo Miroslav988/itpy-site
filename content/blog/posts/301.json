@@ -1,0 +1,62 @@
+{
+  "id": 301,
+  "rubric": "breakdown",
+  "description": "Такое преобразование работает почти для каждого 23-го номера, хотя по факту мы просто избавляемся от лишних 3-ех строк!",
+  "date": "2023-12-11",
+  "source": "https://t.me/informatika_kege_itpy/301",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/301",
+      "thumb": {
+        "src": "/blog-media/301-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/11483-23-fb1dc232fa5140b4bc698d0c4dcd16e9?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Есть более компактное решение"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b):\n    if a >= b:\n        return a == b\n    return F(a+1, b) + F(a+3, b) + F(a*3, b)\n    \nprint(F(3, 9) * F(9, 27) * F(27, 31))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Такое преобразование работает почти для каждого 23-го номера, хотя по факту мы просто избавляемся от лишних 3-ех "
+        },
+        {
+          "text": "строк!",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/gBvtiNhymSvJjPS_XVbdoj8FfG5rY7tSgRg4mzDTm3AffjF2zlO51IOi1g061oQEvyNZffDSySNJFUE67l5v9-XCbH90SW95vPbBCRLtNnVuIMVRAW9SPqz4gZIFXuVyr-zD9Tu9O3rNiv8qwSq5RDCHuGdtDKwc1I0Cgsoj9NrIDAuDT7x7ubpTcmGOoV_3GPNwn85reGymU3Mw3A2af9iCfNm3wGuvDCE8y9LBH8zNBp93ZBJfjjW4bMbhNAPYCjux33_66VL6nzDKDpTHnv7DtsfYNDUyYIgVGytEywZ3T94yBB_qEgD7kQzy0VmvoL8n163zBFMReZgxKK9hfw",
+      "file": "301-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "11483",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 11483",
+  "title": "Задание 23 ЕГЭ: разбор задачи 11483",
+  "slug": "zadanie-23-ege-razbor-zadachi-11483",
+  "hidden": false
+}

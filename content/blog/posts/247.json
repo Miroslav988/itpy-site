@@ -1,0 +1,63 @@
+{
+  "id": 247,
+  "rubric": "useful",
+  "description": "Видео: Что такое API за 30 секунд",
+  "date": "2023-09-23",
+  "source": "https://t.me/informatika_kege_itpy/247",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/247",
+      "thumb": {
+        "src": "/blog-media/247-1.jpg",
+        "width": 816,
+        "height": 368
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Видео: "
+        },
+        {
+          "text": "Что такое API за 30 секунд",
+          "href": "https://www.youtube.com/shorts/bJt_jpVuZec"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полезно-ли было видео? Ставь:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- Да, определенно, абсолютно!!!"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- Ну такое, не особо актуально"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/EczUdRM7pePZ7kTQsfNtHv69cnO2xA6_ZK-n5cAJfCFuaRpR14CZdRalZrgUsHtZ5zg_yM7BeetlG4vo_-ixQWTkKCCc3FtgmEFPDDerw_ByMVfyRdioH6i37__ffoJ86XwU-lHG7VOUJRZg2Up-QQvvw4C6_nR63QLZPU5zpUS8C56nl16KzXyVzEvQMjhcD2K3-FTcESIp44aW7yYr7bDcQ0ackxZFNeTDCZF7QUmTGcg2EnMPXGkq_knei4R0jvVRDsDGFSG149aW9l49-sFKwUGD9CR9IWBmV7o7y1ExGL4zDWsHmgjXsAsisPVGND8xe4TDvy4pwu63UbIJ1Q",
+      "file": "247-1.jpg"
+    }
+  ],
+  "meta": {
+    "source": "Алексей Печерица"
+  },
+  "baseTitle": "Интересное, а главное короткое видео про API",
+  "title": "Интересное, а главное короткое видео про API",
+  "slug": "interesnoe-a-glavnoe-korotkoe-video-pro-api",
+  "hidden": false
+}

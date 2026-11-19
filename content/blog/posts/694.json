@@ -1,0 +1,178 @@
+{
+  "id": 694,
+  "rubric": "breakdown",
+  "description": "Дано арифметическое выражение: 123XAB_31 + 3CEX321_31 Переменная х в каждом числе обозначает неизвестную цифру 31-ричной системы счисления. Необходимо найти наибольшее возможное…",
+  "date": "2024-06-07",
+  "source": "https://t.me/informatika_kege_itpy/694",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/694-1.jpg",
+      "width": 800,
+      "height": 369,
+      "alt": "Задание 14 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Дано арифметическое выражение:",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "123XAB_31 + 3CEX321_31"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Переменная х в каждом числе обозначает неизвестную цифру 31-ричной системы счисления. Необходимо найти наибольшее возможное значение х, при котором значение данной суммы кратно 17. В ответе необходимо указать частное от деления значения данной суммы на 17 в десятичной системе счисления. Основание системы счисления указывать не "
+        },
+        {
+          "text": "нужно.",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\nfor x in alphabet[:31]:\n    A = int(f'123{x}AB', 31)\n    B = int(f'3CE{x}321', 31)\n    if (A + B) % 17 == 0:\n        print((A + B) // 17)\n\n# Ответ: 179431046"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Создание отсортированного списка `alphabet`, содержащего символы цифр и заглавных латинских букв."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2. for x in alphabet[:31]"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Цикл `for`, который перебирает первые 31 элемент из списка `alphabet`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "A = int(f'123{x}AB', 31)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Преобразование строки `f'123{x}AB'` в число в системе счисления 31 и сохранение этого числа в переменной `A`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. "
+        },
+        {
+          "text": "B = int(f'3CE{x}321', 31)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Преобразование строки `f'3CE{x}321'` в число в системе счисления 31 и сохранение этого числа в переменной `B`."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "5. if (A + B) % 17 == 0"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Проверка условия: если сумма чисел `A` и `B` делится на 17 без остатка."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6. "
+        },
+        {
+          "text": "print((A + B) // 17)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Вывод на экран частного от деления суммы чисел `A` и `B` на 17."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/WG-B-5eV6_Y_H9DAPzTX9cEJK3UWLjx1gsqdHlFUoTSEVefw4qVQ-Osp3lgzg9HmcF-gVpJ36a4n5ktux7CGO4iNcBPEIyWeAlvaK94_F51eeP7JfZwRCh84YOftDdnb81QpOqJ4pGTE6JLyiq4ZVnOr67KIf_hXE6u70VpgdHUldwI-njALZerSJKT43svdzUuke9GlQDuZsPqaGYLtNdpvV2TDPIJ2imFgk0f_4vsaqTbzon1HmMwr4omu9c4jAAERLOh2HOPpKBKF8U6OrwD15U5Tnu2B0leXGzqYLW-xhnXSSkNaZ79EQ1MLx8zAJwvQ3_hpJdVbiwwpWnkaWg.jpg",
+      "file": "694-1.jpg"
+    }
+  ],
+  "task": 14,
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи",
+  "title": "Задание 14 ЕГЭ: разбор задачи",
+  "slug": "zadanie-14-ege-razbor-zadachi-694",
+  "hidden": true
+}

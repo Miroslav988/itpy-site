@@ -1,0 +1,235 @@
+{
+  "id": 1005,
+  "rubric": "breakdown",
+  "description": "Откройте файл электронной таблицы, содержащей в каждой строке семь натуральных чисел. Определите сумму чисел всех строк таблицы, для которых выполнены оба условия: – в строке есть…",
+  "date": "2025-03-06",
+  "source": "https://t.me/informatika_kege_itpy/1005",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/1005",
+      "thumb": {
+        "src": "/blog-media/1005-1.jpg",
+        "width": 848,
+        "height": 336
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Откройте файл электронной таблицы, содержащей в каждой строке семь натуральных чисел. Определите сумму чисел всех строк таблицы, для которых выполнены оба условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– в строке есть только одно число, которое повторяется трижды, и только два числа, каждое из которых повторяется дважды;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "– четыре наименьших числа строки можно разбить на две пары чисел с нечётными суммами."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе запишите полученное число."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите "
+        },
+        {
+          "text": "сумму чисел",
+          "bold": true
+        },
+        {
+          "text": " всех строк таблицы"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\nsumma = 0\nfor s in open('9.txt'):\n    M = sorted([int(x) for x in s.split()])\n    copied_2 = [x for x in M if M.count(x) == 2]\n    copied_3 = [x for x in M if M.count(x) == 3]\n    if len(copied_3) == 3 and len(copied_2) == 4:\n        if any(sum(p[:2]) % 2 != 0 and sum(p[2:]) % 2 != 0 for p in permutations(M[:4])):\n            summa += sum(M)\nprint(summa)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 4675",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируется модуль itertools."
+          }
+        ],
+        [
+          {
+            "text": "summa = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается переменная summa."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.txt'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В цикле for происходит построчное чтение файла. Каждая строка файла сохраняется в переменную s."
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(x) for x in s.split()])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Строка s разбивается на список строк с помощью метода split(). Каждая строка преобразуется в целое число с помощью int(x). Полученный список чисел сортируется и сохраняется в переменную M."
+          }
+        ],
+        [
+          {
+            "text": "copied_2 = [x for x in M if M.count(x) == 2]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается список copied_2, который содержит элементы из списка M, встречающиеся ровно два раза."
+          }
+        ],
+        [
+          {
+            "text": "copied_3 = [x for x in M if M.count(x) == 3]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается список copied_3, который содержит элементы из списка M, встречающиеся ровно три раза."
+          }
+        ],
+        [
+          {
+            "text": "if len(copied_3) == 3 and len(copied_2) == 4:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется условие: если длина списка copied_3 равна 3 и длина списка copied_2 равна 4 ."
+          }
+        ],
+        [
+          {
+            "text": "if any(sum(p[:2]) % 2 != 0 and sum(p[2:]) % 2 != 0 for p in permutations(M[:4])):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Генерируются все возможные перестановки первых четырех элементов списка M . Для каждой перестановки p проверяется, является ли сумма первых двух элементов нечетной и сумма последних двух элементов также нечетной."
+          }
+        ],
+        [
+          {
+            "text": "summa += sum(M)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Сумма всех элементов списка M добавляется к переменной summa."
+          }
+        ],
+        [
+          {
+            "text": "print(summa)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводится значение переменной summa."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/cPSBhqBP651PcxP4sGnwf-jmp77J4qAX1LTqG8s8Wjk7nMXGI32aBjHobyXi6yK4pzg4SBy6lGpds1bQOkF9hO67dz0D8mrZrPGJwD94amQC3PVTU1cHorfjJvW0R3CjQuXMq0l41yQp33HP3CK7tRrxrgCNm3QCWtZNrpWHoMsMFKXOzYdC0HNxkA29LTPqWKE7gn_IJ8Mdn9Gk5dA2LRXkiR4nbK23NRd7ECBqH7d5nQmvXVEinaShraMS_voNJ7qK-2D9IQ0g9KzRzXt1d4YzXOELKnoKO2kWRSesIeZcO2EfaTx_T0IjJpeiidZ3P5eXw5QsKzl76hpoxctUpw",
+      "file": "1005-1.jpg"
+    }
+  ],
+  "task": 9,
+  "problem": "11228",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М.Ишимов",
+    "level": "Сложный"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи 11228",
+  "title": "Задание 9 ЕГЭ: разбор задачи 11228",
+  "slug": "zadanie-9-ege-razbor-zadachi-11228",
+  "hidden": false
+}

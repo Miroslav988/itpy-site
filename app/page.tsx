@@ -4,14 +4,13 @@ import SiteFooter from "./SiteFooter";
 import ReviewCarousel from "./ReviewCarousel";
 import { BookingButton } from "./booking/Booking";
 import { Check, Icon, PenUnderline, SectionHead, Sparks } from "./ui";
-import { aboutFacts, environment, faqs, features, formats, heroFacts, heroFormats, links, pairsNote, steps, teacher } from "./content";
-import PostCard from "./blog/PostCard";
-import { commentedBreakdown, posts } from "./blog/posts";
+import { Drawing, Strokes } from "./illustrations";
+import FaqList from "./FaqList";
+import { aboutFacts, environment, featuredBreakdowns, features, formats, heroFacts, heroFormats, links, pairsNote, steps, teacher, trialLesson } from "./content";
+import { getPosts } from "./blog/posts";
 import { JsonLd, faqSchema, pageMetadata, personSchema, servicesSchema, websiteSchema } from "./seo";
 import { siteOrigin } from "./site";
 
-const latestPosts = posts.filter((post) => !post.draft).slice(0, 3);
-const commentedExample = commentedBreakdown();
 
 export const metadata = pageMetadata({
   path: "/",
@@ -20,8 +19,17 @@ export const metadata = pageMetadata({
     "Онлайн-подготовка к ЕГЭ по информатике с Ильёй Андриановым: занятия в паре, вебинары и курсы на Stepik. Разборы заданий на Python, бесплатное пробное занятие.",
 });
 
+// "Базовый" → "Сложность: базовая", as on the example cards.
+const levelWord = (level: string) => ({ Базовый: "базовая", Средний: "средняя", Средней: "средняя", Сложный: "высокая" })[level] ?? level.toLowerCase();
+
 export default async function Home() {
   const origin = await siteOrigin();
+  // The blog grows while the site runs, so the examples are read per request (posts.ts caches the files).
+  const breakdowns = getPosts().filter((post) => post.rubric === "breakdown");
+  const examples = featuredBreakdowns.flatMap(({ task, problem, picture }) => {
+    const post = breakdowns.find((item) => item.problem === problem) ?? breakdowns.find((item) => item.task === task);
+    return post ? [{ post, picture }] : [];
+  });
 
   return (
     <>
@@ -176,16 +184,14 @@ export default async function Home() {
               lead={
                 <>
                   Реальные отзывы от учеников и родителей на моём профиле{" "}
-                  {links.avito ? <a href={links.avito} target="_blank" rel="noopener noreferrer"><strong>Авито</strong></a> : <strong>Авито</strong>}.
+                  <a href={links.avito} target="_blank" rel="noopener noreferrer"><strong>Авито</strong></a>.
                 </>
               }
             />
             <ReviewCarousel />
-            {links.avito && (
-              <div className="section-more reviews-more">
-                <a className="btn btn-ink btn-lg" href={links.avito} target="_blank" rel="noopener noreferrer">Посмотреть все отзывы на Авито <span aria-hidden="true">↗</span></a>
-              </div>
-            )}
+            <div className="section-more reviews-more">
+              <a className="btn btn-ink btn-lg" href={links.avito} target="_blank" rel="noopener noreferrer">Посмотреть все отзывы на Авито <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </section>
 
@@ -195,7 +201,10 @@ export default async function Home() {
               <img src={teacher.portrait.src} alt={`${teacher.name} за рабочим столом`} width={teacher.portrait.width} height={teacher.portrait.height} loading="lazy" decoding="async" />
               <figcaption>
                 <span className="polaroid-nick">Мой ник — <mark>@ilandroxxy</mark></span>
-                <span className="polaroid-social">Ищите меня в соцсетях:<br />YouTube · VK · TikTok</span>
+                <span className="polaroid-social">
+                  Ищите меня в соцсетях:<br />
+                  <a href={links.youtube} target="_blank" rel="noopener noreferrer">Видеоблог</a> · <a href={links.vk} target="_blank" rel="noopener noreferrer">VK</a> · TikTok
+                </span>
               </figcaption>
             </figure>
             <div className="about-copy">
@@ -237,16 +246,11 @@ export default async function Home() {
               {environment.map((item) => (
                 <li className="env-card" key={item.name}>
                   <div className="env-head">
-                    <img src={item.icon} alt="" width={40} height={40} loading="lazy" />
+                    <span className="feature-icon"><Icon name={item.icon} /></span>
                     <p className="env-role">{item.role}</p>
                     <h3>{item.name}</h3>
                   </div>
-                  {item.text && <p>{item.text}</p>}
-                  {item.points && (
-                    <ul className="env-points">
-                      {item.points.map((point) => <li key={point}><Check />{point}</li>)}
-                    </ul>
-                  )}
+                  {item.text.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                   {item.link.external ? (
                     <a href={item.link.href} target="_blank" rel="noopener noreferrer">{item.link.label}</a>
                   ) : (
@@ -258,56 +262,80 @@ export default async function Home() {
           </div>
         </section>
 
-        {latestPosts.length > 0 && (
-          <section className="section" id="posts" aria-labelledby="posts-title">
-            <div className="container">
-              <SectionHead
-                id="posts-title"
-                part="Часть 6 · Разборы заданий"
-                title="Так я объясняю задачи ЕГЭ"
-                lead={<>Подробные разборы заданий ЕГЭ: от условия до готового решения. Объясняю <strong>логику</strong>, показываю <strong>способы решения</strong> и разбираю <strong>сложные моменты</strong>.</>}
-              />
-              <ul className="post-grid">
-                {latestPosts.map((post) => (
-                  <li key={post.slug}><PostCard post={post} /></li>
-                ))}
-              </ul>
-              <div className="section-more">
-                <Link className="btn btn-outline" href="/blog">Все разборы <span aria-hidden="true">→</span></Link>
+        <section className="section" id="posts" aria-labelledby="posts-title">
+          <div className="container">
+            <p className="part-label">Часть 6 · Знакомство с преподавателем</p>
+            <h2 className="lesson-title" id="posts-title">
+              Посмотрите, как я объясняю <span className="lime-stroke">задачи ЕГЭ<Strokes /></span>
+            </h2>
+            <p className="lesson-lead">Один урок расскажет о моём подходе больше, чем десятки описаний. Посмотрите разбор и оцените формат обучения.</p>
+
+            <div className="lesson">
+              <a className="lesson-video" href={trialLesson.href} target="_blank" rel="noopener noreferrer" aria-label="Смотреть пробный урок">
+                <img src={teacher.cutout.src} alt="" width={teacher.cutout.width} height={teacher.cutout.height} loading="lazy" decoding="async" />
+                <span className="lesson-board" aria-hidden="true">
+                  <span className="lesson-board-number">№ 25</span>
+                  <span className="lesson-board-code">for i in range(N):<br />&nbsp;&nbsp;if ...:<br />&nbsp;&nbsp;&nbsp;&nbsp;...</span>
+                </span>
+                <span className="lesson-play" aria-hidden="true"><Icon name="play" /></span>
+              </a>
+              <div className="lesson-about">
+                <h3><span>Пробный урок</span></h3>
+                <ul className="lesson-points">
+                  {trialLesson.points.map((point) => <li key={point}><span className="tick" aria-hidden="true" />{point}</li>)}
+                </ul>
+                <a className="btn btn-ink btn-lg" href={trialLesson.href} target="_blank" rel="noopener noreferrer">Смотреть урок <span aria-hidden="true">↗</span></a>
               </div>
+              <p className="lesson-note">
+                <Icon name="info" className="icon lesson-note-icon" />
+                <strong>{trialLesson.note}</strong>
+                <Strokes className="lesson-note-strokes" />
+              </p>
             </div>
-          </section>
-        )}
+
+            {examples.length > 0 && (
+              <>
+                <p className="part-label examples-label">Примеры разборов заданий</p>
+                <ul className="examples">
+                  {examples.map(({ post, picture }) => (
+                    <li key={post.slug}>
+                      <Link className="example" href={`/blog/${post.slug}`}>
+                        <span className="example-task">
+                          <span className="example-label">Задание ЕГЭ</span>
+                          <span className="example-number">№ {post.task}</span>
+                          {post.meta?.level && <span className="example-level">Сложность: {levelWord(post.meta.level)}</span>}
+                          <Drawing name={picture} className="example-pic" />
+                          <Strokes className="example-strokes" />
+                        </span>
+                        <span className="example-body">
+                          <strong>Разбор задачи {post.problem}</strong>
+                          <span className="example-more">Читать <span aria-hidden="true">→</span></span>
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </div>
+        </section>
 
         <section className="section section-white" id="faq" aria-labelledby="faq-title">
           <div className="container faq-grid">
             <div className="faq-side">
               <p className="part-label">Часть 7 · Вопросы</p>
-              <h2 id="faq-title">Часто спрашивают</h2>
+              <h2 id="faq-title">Часто <span className="faq-highlight">спрашивают<Strokes /></span></h2>
+              <p className="faq-lead">Ответы на главные вопросы о подготовке к ЕГЭ по информатике.</p>
               <div className="faq-contact">
-                <strong>Не нашли свой вопрос?</strong>
-                <p>Напишите в Telegram — отвечу лично.</p>
-                <a className="btn btn-outline" href={links.telegramPersonal} target="_blank" rel="noopener noreferrer">Написать Илье <span aria-hidden="true">↗</span></a>
+                <span className="faq-contact-pic"><Drawing name="chats" /><Strokes /></span>
+                <div>
+                  <strong>Не нашли свой вопрос?</strong>
+                  <p>Напишите мне — отвечу лично.</p>
+                </div>
+                <a className="btn btn-lime btn-lg" href={links.telegramPersonal} target="_blank" rel="noopener noreferrer">Написать Илье <span aria-hidden="true">→</span></a>
               </div>
             </div>
-            <div className="faq-list">
-              {faqs.map((item, index) => (
-                <details key={item.q} open={index === 0}>
-                  <summary>
-                    <span className="faq-number" aria-hidden="true">{index + 1}</span>
-                    <span className="faq-question">{item.q}</span>
-                    <span className="faq-sign" aria-hidden="true" />
-                  </summary>
-                  <p>{item.a}</p>
-                  {item.showsCommentedExample && commentedExample && (
-                    <p className="faq-example">
-                      Как это выглядит — в разборе{" "}
-                      <Link href={`/blog/${commentedExample.slug}`}>«{commentedExample.title}»</Link>: каждая строка кода объяснена отдельно.
-                    </p>
-                  )}
-                </details>
-              ))}
-            </div>
+            <FaqList />
           </div>
         </section>
 

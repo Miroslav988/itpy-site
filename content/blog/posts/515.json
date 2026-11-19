@@ -1,0 +1,154 @@
+{
+  "id": 515,
+  "rubric": "breakdown",
+  "description": "Числа AB267D1_p и F024A89_p записаны в системе счисления с основанием p. При каком минимальном p сумма этих чисел будет делиться на p–1?",
+  "date": "2024-05-01",
+  "source": "https://t.me/informatika_kege_itpy/515",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/515",
+      "thumb": {
+        "src": "/blog-media/515-1.jpg",
+        "width": 848,
+        "height": 528
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Числа AB267D1_p и F024A89_p записаны в системе счисления с основанием p."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "При каком минимальном p сумма этих чисел будет делиться на p–1?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Так как функция int(num, base) работает только в диапазоне от 2 до 36, то нам приходится написать свою универсальную функцию my_int(), изучите её и используйте в сложных "
+        },
+        {
+          "text": "задачах.",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def my_int(num, base):\n    return sum(x*base**i for i, x in enumerate(num[::-1]))\n\n\nfor p in range(16, 100):\n    A = my_int([10, 11, 2, 6, 7, 13, 1], p)\n    B = my_int([15, 0, 2, 4, 10, 8, 9], p)\n    if (A + B) % (p-1) == 0:\n        print(p)\n        break\n\n# Ответ: 50"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def my_int(num, base):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определение функции my_int, которая принимает список чисел num и основание base."
+          }
+        ],
+        [
+          {
+            "text": "return sum(x*base**i for i, x in enumerate(num[::-1]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Функция возвращает сумму произведений элементов списка num на соответствующие степени base."
+          }
+        ],
+        [
+          {
+            "text": "for p in range(16, 100):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запуск цикла for, который перебирает числа от 16 до 99 и использует их в качестве p."
+          }
+        ],
+        [
+          {
+            "text": "if (my_int([10, 11, 2, 6, 7, 13, 1], p) + my_int([15, 0, 2, 4, 10, 8, 9], p)) % (p-1) == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: сумма результатов функции my_int для двух списков их модуль по отношению к p-1 равен нулю."
+          }
+        ],
+        [
+          {
+            "text": "print(p)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод числа p, которое удовлетворяет условиям, после чего программа завершает работу, используя оператор "
+          },
+          {
+            "text": "break.",
+            "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/WKo5SC909Ewl2MIojeJmoi2Jlf4EMK3oGUSsALEBsetukz4abWXemSQPdFvpeldmizFsti31awLsbirsyNf10KjA9qmQqEAmIpftQMY7tNFpcWFqQXDsKswHsQKAxJTlK8S2GsmJxqKCLA3VyvyL4E1-C8L10_5l6kx2pS03gNQ7tGbnk1yFrHVYEc-FZF6peU3JrpNTHNNf0Uic8FdE75nKW50zrKPokHl6Hqle1xuqs9zZV6GUzQhxy1tEAh2mJazs7dXK-J21iar5i3gO3JVC_Ev0R3i9Hibr-06zh4hyiteQRnwQD0D4Lo5f42xxq3Hcv6USvBC7oiih3_4IaA",
+      "file": "515-1.jpg"
+    }
+  ],
+  "task": 14,
+  "collection": "СтатГрад",
+  "meta": {
+    "source": "Статград",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи — Статград",
+  "title": "Задание 14 ЕГЭ: разбор задачи — Статград",
+  "slug": "zadanie-14-ege-razbor-zadachi-statgrad",
+  "hidden": false
+}

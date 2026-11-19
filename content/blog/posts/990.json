@@ -1,0 +1,194 @@
+{
+  "id": 990,
+  "rubric": "breakdown",
+  "description": "Текстовый файл состоит из символов A, C, D, F и O. Определите максимальное количество идущих подряд символов, среди которых не более 5 пар вида согласная + гласная в прилагаемом…",
+  "date": "2025-02-22",
+  "source": "https://t.me/informatika_kege_itpy/990",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/990",
+      "thumb": {
+        "src": "/blog-media/990-1.jpg",
+        "width": 848,
+        "height": 528
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Текстовый файл состоит из символов A, C, D, F и O."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите максимальное количество идущих подряд символов, среди которых не более 5 пар вида согласная + гласная в прилагаемом файле."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Чуть более сложная версия прошлой задачи."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('0. files/24.txt').readline()\ns = s.replace('C', 'D').replace('F', 'D')\ns = s.replace('O', 'A')\ns = s.split('DA')\nmaxi = 0\nfor i in range(len(s)-5):\n    r = 'A' + 'DA'.join(s[i:i+6]) + 'D'\n    maxi = max(maxi, len(r))\nprint(maxi)\n\nОтвет: 27"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открываем файл '0. files/24.txt' и читаем первую строку."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('C', 'D').replace('F', 'D')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяем символы 'C' и 'F' на 'D' во всей строке."
+          }
+        ],
+        [
+          {
+            "text": "s = s.replace('O', 'A')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяем символ 'O' на 'A' во всей строке."
+          }
+        ],
+        [
+          {
+            "text": "s = s.split('DA')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разделяем строку на подстроки по разделителю 'DA' и сохраняем результат в список."
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем переменную maxi для хранения максимальной длины найденной строки."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(s)-5):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускаем цикл по индексам списка s от 0 до длины списка минус 5."
+          }
+        ],
+        [
+          {
+            "text": "r = 'A' + 'DA'.join(si:i+6) + 'D'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Формируем новую строку r, соединяя элементы списка s от текущего индекса i до i+5 с добавлением 'A' в начале и 'D' в конце."
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(maxi, len(r))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Обновляем значение maxi, если длина текущей строки r больше предыдущего значения maxi."
+          }
+        ],
+        [
+          {
+            "text": "print(maxi)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим максимальную длину строки, соответствующую условиям задачи."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/O-rdZa_-B-LdAS_OQVf14n1kVzHeiMhXVJqxcApZ_nVeunCk_-xd-tM-91T7D8CjV62SKi4o1ZPM-ZFHFCd6d4NDObgTr2fFWCZvlX0nJB8FE5fRelcaJfnpyM8oI55P5F-SJVPwpvtGueslzqzZZ5zYyDZtEMqGrPrugjBXYf6AI645NN0FR148LlRLdLDQrlT20CXDDfjGspCrUTLgtyI6Rz2_AD8isuX8ZVmxhyAhEIoH170ii-eO2LCJbmFPjuOiu9mYEGnfu2LSB6kavlzL8t4IR2juQu1mzd03mjFwZckeOsyMEXye-q-QkdhHhG6FiR4PpuqocgIzEKbShA",
+      "file": "990-1.jpg"
+    }
+  ],
+  "task": 24,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Шастин Л",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи — Шастин Л",
+  "title": "Задание 24 ЕГЭ: разбор задачи — Шастин Л",
+  "slug": "zadanie-24-ege-razbor-zadachi-shastin-l",
+  "hidden": false
+}

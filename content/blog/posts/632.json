@@ -1,0 +1,179 @@
+{
+  "id": 632,
+  "rubric": "python",
+  "description": "Вторая ускоряет вычисления через использование кэширования:",
+  "date": "2024-05-20",
+  "source": "https://t.me/informatika_kege_itpy/632",
+  "blocks": [
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Библиотека черепашки для решения 6 номера кодом:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\n\nt.tracer(0)\n\nt.fd(10)  # t.bk(10)\nt.rt(90)  # t.lt(90)\n\nt.up()\nt.down()\n\nx, y = 0, 0\nt.goto(x, y)\nt.dot(2, 'red')\n\nt.done()"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "Библиотека itertools для решения 1, 8, 9, 12, 24 номеров кодом:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import product\nfrom itertools import permutations\n\ncombinations = list(product([1, 2, 3], repeat=2))\nfor combination in combinations:\n    print(combination)\n\nperms = list(permutations(\"abc\"))\nfor perm in perms:\n    print(''.join(perm))"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "Библиотека ipaddress для решения нового 13 номера:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nnet = ip_network('адрес узла/маска', 0)\nprint(net, net.netmask, net.num_addresses)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "Две библиотеки для решения 16 номера:",
+            "bold": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Одна увеличивает глубину рекурсии:"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import sys\nsys.setrecursionlimit(10000)"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Вторая ускоряет вычисления через использование кэширования:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from functools import *\n@lru_cache(None)\ndef F(n):"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 5,
+      "items": [
+        [
+          {
+            "text": "Библиотека fnmatch для решения 25 номера с масками:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from fnmatch import fnmatch\nif fnmatch('123', '*?3'):\n    pass"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 6,
+      "items": [
+        [
+          {
+            "text": "Библиотека string хранит в себе много полезных элементов:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import string\nalphabet = string.ascii_uppercase\nprint(alphabet)  # ABCDEFGHIJKLMNOPQRSTUVWXYZ\n\nprint(string.punctuation)\n# !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 7,
+      "items": [
+        [
+          {
+            "text": "Библиотека math хранит в себе много полезных математических функций:",
+            "bold": true
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import math as m\nprint(m.sqrt(16))\nprint(m.ceil(7/2))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Теперь у вас есть знания о необходимых библиотеках, чтобы успешно справиться с заданиями ЕГЭ по информатике! 🚀"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поставьте котика 🥰😘 за оперативность 😅"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поддержать автора: boosty",
+          "href": "https://boosty.to/informatika_kege_itpy/donate",
+          "bold": true
+        },
+        {
+          "text": " 💵"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Список полезных библиотек для успешной сдачи ЕГЭ по информатике!",
+  "title": "Список полезных библиотек для успешной сдачи ЕГЭ по информатике!",
+  "slug": "spisok-poleznyh-bibliotek-dlya-uspeshnoy-sdachi-ege-po",
+  "hidden": false
+}

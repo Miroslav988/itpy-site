@@ -1,0 +1,88 @@
+{
+  "id": 1324,
+  "rubric": "useful",
+  "description": "Публичные варианты месяца и где их брать",
+  "date": "2026-05-04",
+  "source": "https://t.me/informatika_kege_itpy/1324",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Публичные варианты месяца и где их брать",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "( теперь именно ",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "там",
+          "href": "https://stepik.org/course/282248/syllabus",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " будут появляться публичные варианты",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " )",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Серия постов по библиотеке ",
+          "bold": true
+        },
+        {
+          "text": "turtle",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Теория и Python-инструменты",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Шпаргалка для решения 24 номера",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полезное",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Дайджест за апрель",
+  "title": "Дайджест за апрель",
+  "slug": "daydzhest-za-aprel",
+  "hidden": false
+}

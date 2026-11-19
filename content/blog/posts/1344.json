@@ -1,0 +1,36 @@
+{
+  "id": 1344,
+  "rubric": "breakdown",
+  "description": "Задание 9 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "date": "2026-06-18",
+  "source": "https://t.me/informatika_kege_itpy/1344",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1344-1.jpg",
+      "width": 800,
+      "height": 431,
+      "alt": "Задание 9 ЕГЭ: разбор варианта Дальнего Востока 2026"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('9'):\n   M = [int(x) for x in s.split()]\n   copied3 = [x for x in M if M.count(x) == 3]\n   copied2 = [x for x in M if M.count(x) == 2]\n   copied1 = [x for x in M if M.count(x) == 1]\n   if len(copied3) == 3 and len(copied2) == 2 and len(copied1) == 2:\n       if max(copied2 + copied3) < max(copied1):\n           cnt += 1\nprint(cnt)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/XQc6qcrm_rvKMq4INiA-AbyfxmkOCjX_yym39LciDVOakqLrvWVQ-CkoI3Prel1CRJqKo8pDlQnIjO_oXonMirMHx-fyqgN6DX6QZKvjuEMcUHLVGCVF29Qxi8RA2eMPKrcycx8vp5BM_rUB_YUw270nZBWTGZAHa1N_G9Xoxati6W9ECUjB6e7oNBYYJxDfgWj11FB_lYnGr3pTQprsTyHur3aQMjDauMVk4WCObk7C0jDTi78nxIlGcQtalGFMIpU2bzbZ1hubhosF59o8TYnEqRygcAbTxHY8hA2j39fs9N1kITwjX3O3s9Fq6Bo24lhnPTFecxDBllUlA6xoyQ.jpg",
+      "file": "1344-1.jpg"
+    }
+  ],
+  "task": 9,
+  "baseTitle": "Задание 9 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "title": "Задание 9 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "slug": "zadanie-9-ege-razbor-varianta-dalnego-vostoka-2026",
+  "hidden": false
+}

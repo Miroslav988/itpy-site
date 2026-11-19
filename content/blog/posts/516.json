@@ -1,0 +1,211 @@
+{
+  "id": 516,
+  "rubric": "breakdown",
+  "description": "Логическая функция F задаётся выражением: ((x ∨ y) → (y ∧ w)) ≡ ¬ ((y ∧ z) → (w ∨ x)) Дан частично заполненный фрагмент, содержащий неповторяющиеся строки таблицы истинности…",
+  "date": "2024-05-02",
+  "source": "https://t.me/informatika_kege_itpy/516",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/516",
+      "thumb": {
+        "src": "/blog-media/516-1.jpg",
+        "width": 848,
+        "height": 496
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Логическая функция F задаётся выражением:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "((x ∨ y) → (y ∧ w)) ≡ ¬ ((y ∧ z) → (w ∨ x))"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Дан частично заполненный фрагмент, содержащий неповторяющиеся"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "строки таблицы истинности функции F."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1 1 _ 1 | 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "0 _ 0 0 | 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "0 0 1 1 | 1"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\n\ndef F(x, y, z, w):\n    return ((x or y) <= (y and w)) == (not((y and z) <= (w or x)))\n\n\nfor a1, a2 in product([0, 1], repeat=2):\n    table = [(1, 1, a1, 1), (0, a2, 0, 0), (0, 0, 1, 1)]\n    if len(set(table)) == len(table):\n        for i in permutations('xyzw'):\n            if [F(**dict(zip(i, r))) for r in table] == [1, 1, 1]:\n                print(*i, sep='')\n\n# Ответ: zywx"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт функций из модуля itertools, который предоставляет различные инструменты для работы с итерациями."
+          }
+        ],
+        [
+          {
+            "text": "def F(x, y, z, w):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определение функции F с параметрами x, y, z, w."
+          }
+        ],
+        [
+          {
+            "text": "return ((x or y) <= (y and w)) == (not((y and z) <= (w or x)))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращение результата выражения, которое сравнивает логические операции с параметрами функции."
+          }
+        ],
+        [
+          {
+            "text": "for a1, a2 in product([0, 1], repeat=2):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл, в котором перебираются все возможные комбинации пар из 0 и 1."
+          }
+        ],
+        [
+          {
+            "text": "table = [(1, 1, a1, 1), (0, a2, 0, 0), (0, 0, 1, 1)]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание списка table с кортежами чисел 0 и 1, используемыми в качестве аргументов функции."
+          }
+        ],
+        [
+          {
+            "text": "if len(set(table)) == len(table):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия, что все элементы в table уникальны."
+          }
+        ],
+        [
+          {
+            "text": "for i in permutations('xyzw'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл, который перебирает все перестановки символов 'xyzw'."
+          }
+        ],
+        [
+          {
+            "text": "if [F(**dict(zip(i, r))) for r in table] == [1, 1, 1]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия, что результаты функции F для каждого элемента из table равны [1, 1, 1]."
+          }
+        ],
+        [
+          {
+            "text": "print(*i, sep='')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод комбинации символов i без разделителя на экран."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/mAwI0AN-f26nZOZKR1Ndcu39eF5O5Hslit7_KZboW5iItkmdqhWWqp7vtm3UNpE6CQcA0MAzFzF4-QjEK6vVYEpx52UDOT4kqMBT9FB--Z6y5Q-6-3XAPihQMU3Ln6WVoensG2ZG2-k_2XffKJOLXchNHJeSl-bmdvyWiuXYk282YIc5_Ci1Cvn5DinQOT692Y73KdjdL6xMDgbRE-yMVo3UZ73SNS6NTWF6puraQv1AJOfE2MhPJ8YqOoQUDgJ7vWn64t8AulzXyJO5vToVTY_Iek0qze8Wn7AJRsadhr8NysSXGRCKG7APsVsVwaELuRTS7VOpM5UJmaEmwOJ46w",
+      "file": "516-1.jpg"
+    }
+  ],
+  "task": 2,
+  "collection": "СтатГрад",
+  "meta": {
+    "source": "Статград",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 2 ЕГЭ: разбор задачи — Статград",
+  "title": "Задание 2 ЕГЭ: разбор задачи — Статград",
+  "slug": "zadanie-2-ege-razbor-zadachi-statgrad",
+  "hidden": false
+}

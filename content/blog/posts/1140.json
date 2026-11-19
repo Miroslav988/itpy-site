@@ -1,0 +1,78 @@
+{
+  "id": 1140,
+  "rubric": "useful",
+  "description": "1 бит 1 байт = 8 бит 1 Кбайт = 2¹⁰ байт = 1024 байт 1 Мбайт = 2¹⁰ Кбайт = 1024 Кбайт 1 Гбайт = 2¹⁰ Мбайт = 1024 Мбайт 1 Тбайт = 2¹⁰ Гбайт = 1024 Гбайт 1 Пбайт = 2¹⁰ Тбайт = 1024…",
+  "date": "2025-07-11",
+  "source": "https://t.me/informatika_kege_itpy/1140",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1140-1.jpg",
+      "width": 800,
+      "height": 552,
+      "alt": "Сегодня запоминаем единицы измерения объемов информации"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "1 бит"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1 байт = 8 бит"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1 Кбайт = 2¹⁰ байт = 1024 байт"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1 Мбайт = 2¹⁰ Кбайт = 1024 Кбайт"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1 Гбайт = 2¹⁰ Мбайт = 1024 Мбайт"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1 Тбайт = 2¹⁰ Гбайт = 1024 Гбайт"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1 Пбайт = 2¹⁰ Тбайт = 1024 Тбайт"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Смотрите и запоминайте, если в будущем не хотите получать глупых ошибок в 7 и 11 номерах."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/PY6lxbln6g2IqwA-nMehF2NPUfva_V5B--AhEJyVNrwXDJcESw8RW3qIOEAGaMkDedfqd2J-7JTqzChwtndxTNbb-pZZ6YN2RaLUiB5SkdzqQh6s0QDlWCI1tMuLgPRC3kva7tRIDailvrRg7bV5jim1ANbvybo0ooQfPnSriTwjSQKPdqPJKZSWmUp8IEk1xJlsUZK8nFb1snpK9hbx2L-gF20uxfkkvdjDrw5lLr9Fq3H8FvhJVput8k5aR5_yniVLyQ5c9m7cl-GXxN60Rdq355RQZHYfgrEcWncJRN1c89pfwnpkriBicT4fFy0Z3jqwH4xVNQXfyWbw0jNL9Q.jpg",
+      "file": "1140-1.jpg"
+    }
+  ],
+  "baseTitle": "Сегодня запоминаем единицы измерения объемов информации",
+  "title": "Сегодня запоминаем единицы измерения объемов информации",
+  "slug": "segodnya-zapominaem-edinitsy-izmereniya-obemov-informatsii",
+  "hidden": false
+}

@@ -1,0 +1,159 @@
+{
+  "id": 1115,
+  "rubric": "breakdown",
+  "description": "В некоторых системах счисления, для записи оснований которых используются целочисленные переменные p<37 и s<35, выполняется равенство: R4_(p−1)+B0_(s+2)+ T3NK4_p = 23593399_10.…",
+  "date": "2025-06-18",
+  "source": "https://t.me/informatika_kege_itpy/1115",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1115-1.jpg",
+      "width": 800,
+      "height": 431,
+      "alt": "Задание 15 ЕГЭ: разбор задачи 18265"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В некоторых системах счисления, для записи оснований которых используются целочисленные переменные p<37 и s<35, выполняется равенство: R4_(p−1)+B0_(s+2)+ T3NK4_p = 23593399_10. Определите произведение подходящих значений p и s и укажите его в ответе в десятичной системе счисления."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "for p in range(30, 37):\n    for s in range(10, 35):\n        A = int(f'R4', p-1)\n        B = int(f'B0', s+2)\n        C = int(f'T3NK4', p)\n        if (A + B + C) == 23593399:\n            print(p * s)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 780",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "for p in range(30, 37):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл, перебирающий значения p от 30 до 36 (включительно)"
+          }
+        ],
+        [
+          {
+            "text": "for s in range(10, 35):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вложенный цикл, перебирающий значения s от 10 до 34 (включительно)"
+          }
+        ],
+        [
+          {
+            "text": "A = int(f'R4', p-1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразует строку 'R4' в число, интерпретируя её как число в системе счисления с основанием p-1"
+          }
+        ],
+        [
+          {
+            "text": "B = int(f'B0', s+2)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразует строку 'B0' в число, интерпретируя её как число в системе счисления с основанием s+2"
+          }
+        ],
+        [
+          {
+            "text": "C = int(f'T3NK4', p)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразует строку 'T3NK4' в число, интерпретируя её как число в системе счисления с основанием p"
+          }
+        ],
+        [
+          {
+            "text": "if (A + B + C) == 23593399:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, равна ли сумма чисел A, B и C значению 23593399"
+          }
+        ],
+        [
+          {
+            "text": "print(p * s)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, выводит произведение p и s"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ON0AlXjvfe5gKS9WlUC5PWq65XpUrNKtTu8RPpXkg1H4H5tpqgjwjkteiaMhjxn3BBenFVlexSw6ACDUarTyV9b3pHygQHv_TDDaxzGKY2RnCCXULXR6y1dKXhwBOTp0R1USR-V4anz_PhiaIn2MaBlKXXtmDXbyAsu6tuykOOJ8sevFjrralqx9xorJrxHpEgcVyeqNucd5D-yXdON5t33_GtZ2xQGWvI7bT5nUO0nRIaj2Em6hK96k666m7vSHvxVzTehJPGZw6TknjZQD3kXITJuHjB1FnfTkaouawzAXK4d24kGa0vAtvPlmjb37D1tMLo-J8XVJwpd_2sMrLQ.jpg",
+      "file": "1115-1.jpg"
+    }
+  ],
+  "task": 15,
+  "problem": "18265",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Л.Шастин",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 15 ЕГЭ: разбор задачи 18265",
+  "title": "Задание 15 ЕГЭ: разбор задачи 18265",
+  "slug": "zadanie-15-ege-razbor-zadachi-18265",
+  "hidden": false
+}

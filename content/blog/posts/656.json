@@ -1,0 +1,67 @@
+{
+  "id": 656,
+  "rubric": "python",
+  "description": "Несколько способов как найти значение суммы числовых значений цифр в строке",
+  "date": "2024-05-27",
+  "source": "https://t.me/informatika_kege_itpy/656",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример строки"
+    },
+    {
+      "type": "code",
+      "text": "s = '3721893721'"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вариант 1"
+    },
+    {
+      "type": "code",
+      "text": "summa1 = 0\nfor x in s:\n    summa1 += int(x)\nprint(summa1)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вариант 2"
+    },
+    {
+      "type": "code",
+      "text": "summa2 = 0\nfor i in range(0, 10):\n    summa2 += s.count(str(i)) * i\nprint(summa2)"
+    },
+    {
+      "type": "code",
+      "text": "# или: summa2 = s.count('1') + s.count('2') * 2 + ..."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вариант 3"
+    },
+    {
+      "type": "code",
+      "text": "summa3 = sum(map(int, s))\nprint(summa3)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вариант 4"
+    },
+    {
+      "type": "code",
+      "text": "summa4 = sum([int(x) for x in s])\nprint(summa4)"
+    },
+    {
+      "type": "code",
+      "text": "# или: summa4 = sum([int(x) for x in s if x.isdigit()])"
+    }
+  ],
+  "media": [],
+  "baseTitle": "Несколько способов как найти значение суммы числовых значений цифр в строке",
+  "title": "Несколько способов как найти значение суммы числовых значений цифр в строке",
+  "slug": "neskolko-sposobov-kak-nayti-znachenie-summy-chislovyh-656",
+  "hidden": true
+}

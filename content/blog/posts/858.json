@@ -1,0 +1,153 @@
+{
+  "id": 858,
+  "rubric": "breakdown",
+  "description": "Дано выражение: 98897x21_19 + 2x923_19 В записи чисел переменной x обозначена неизвестная цифра из алфавита 19-ричной системы счисления. Определите наибольшее значение x, при…",
+  "date": "2024-09-26",
+  "source": "https://t.me/informatika_kege_itpy/858",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/858",
+      "thumb": {
+        "src": "/blog-media/858-1.jpg",
+        "width": 848,
+        "height": 400
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Дано выражение: 98897x21_19 + 2x923_19",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В записи чисел переменной x обозначена неизвестная цифра из алфавита 19-ричной системы счисления. Определите наибольшее значение x, при котором значение данного арифметического выражения кратно 18."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Для найденного x вычислите частное от деления значения арифметического выражения на 18."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\nfor x in alphabet[:19]:\n    A = int(f'98897{x}21', 19)\n    B = int(f'2{x}923', 19)\n    if (A + B) % 18 == 0:\n        print((A + B) // 18)\n\n# Ответ: 469034148"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем упорядоченный список символов, содержащий цифры и буквы алфавита."
+          }
+        ],
+        [
+          {
+            "text": "for x in alphabet[:19]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Запускаем цикл по первым 19 символам из отсортированного алфавита."
+          }
+        ],
+        [
+          {
+            "text": "A = int(f'98897{x}21', 19)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем строку, состоящую из фиксированной последовательности '98897', текущего символа x и '21', в целое число с основанием 19."
+          }
+        ],
+        [
+          {
+            "text": "B = int(f'2{x}923', 19)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем строку, состоящую из '2', текущего символа x и '923', в целое число с основанием 19."
+          }
+        ],
+        [
+          {
+            "text": "if (A + B) % 18 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, делится ли сумма A и B на 18 без остатка."
+          }
+        ],
+        [
+          {
+            "text": "print((A + B) // 18)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполнено, выводим целую часть результата деления суммы A и B на 18."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/I933lvJ9bSTJKztqarb21cpEQLvcG-NFIcBqBvUCSmgoslNpF5N2dlc7-FKE1JvgFqEShaNHnlz6kkd8LBFoaOLSlZh0xqYt9VtZFmYhFCXvJz-JYCt8PJG031G1vflGuqJLuFNi1vaV8Wdxw4pnk5fqy1UUEGiQI6r3aHpscawZ4MP1UqREgD6zSiYpR9hXkhVVgGwcoEeK5m9aGQkMwgNawFhDZQn4e0EJev-b3bgKAMuw6HCHrkcckbcxdfXwzi5ATljKEDRuVELP7vgoBFp07xCgXiXtzlx6ECytFwLGDoZRz9PpvV2dcud0sZDt1J-jEkzdJgUj_kHZcRamsA",
+      "file": "858-1.jpg"
+    }
+  ],
+  "task": 14,
+  "problem": "17868",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Демоверсия 2025",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи 17868",
+  "title": "Задание 14 ЕГЭ: разбор задачи 17868",
+  "slug": "zadanie-14-ege-razbor-zadachi-17868",
+  "hidden": false
+}

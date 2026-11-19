@@ -1,0 +1,70 @@
+{
+  "id": 160,
+  "rubric": "useful",
+  "description": "Ребят, я знаю, что вы много работали весь этот год и готовились к этому экзамену. Не сдавайтесь сейчас! Не думайте об ошибках, которые вы сделали в прошлом. Соберитесь с духом и…",
+  "date": "2023-06-19",
+  "source": "https://t.me/informatika_kege_itpy/160",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/160",
+      "thumb": {
+        "src": "/blog-media/160-1.jpg",
+        "width": 640,
+        "height": 848
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Напутствие"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ребят, я знаю, что вы много работали весь этот год и готовились к этому экзамену. Не сдавайтесь сейчас! Не думайте об ошибках, которые вы сделали в прошлом. Соберитесь с духом и сфокусируйтесь на задаче. Я верю в вас и знаю, что вы можете справиться со всем, что будет у вас на пути. Удачи на экзамене!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Для всех, у кого завтра экзамен - вот несколько полезных ссылок"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "Решаю задачи с ДВ,",
+          "href": "https://informatikakegeitpy.notion.site/24562c9715fc4ec7afd705967dfa960e?pvs=4"
+        },
+        {
+          "text": " файл обновляется постепенно."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "P.S. Никакие коты не пострадали при съемке.",
+          "italic": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/jovhnGc_JXNenwn1pqKgQ14BLHiTtGJDrZgbOx__lkzq8WogfG8v4p4N4AB1PL2oCi6P5UqppDztTi_DmKxVePWqwDy0zYA5gKvhXeE1KHjpxKk8Kzp_X4Fcq5FvVh1rNHBvH9BLITwVHmeHJoFnm6T8sHnYHIBlvonv_OfLWPSlZsqEP-ATZPmhx0fEsWun6QAUwMtbec4WRYDPJYBNu4cDRPwVGh-QOfPsbMTtlvEacu4b4sd05rQNv7t4VAPU6VYdzpK0CNp2lqQshIUrivjhciJXrbby0EKwcmzZID5tB2N-k_2Fzlm-j3ZHmAbZe90qowcdlw8J7Zg0RvgHIA",
+      "file": "160-1.jpg"
+    }
+  ],
+  "baseTitle": "Пару часов до экзамена",
+  "title": "Пару часов до экзамена",
+  "slug": "paru-chasov-do-ekzamena",
+  "hidden": false
+}

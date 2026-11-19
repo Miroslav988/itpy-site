@@ -1,0 +1,161 @@
+{
+  "id": 418,
+  "rubric": "breakdown",
+  "description": "Для узла с IP-адресом 224.128.112.142 адрес сети равен 224.128.96.0. Чему равен третий слева байт маски? Ответ запишите в виде десятичного числа.",
+  "date": "2024-04-06",
+  "source": "https://t.me/informatika_kege_itpy/418",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/418",
+      "thumb": {
+        "src": "/blog-media/418-1.jpg",
+        "width": 848,
+        "height": 432
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Для узла с IP-адресом "
+        },
+        {
+          "text": "224.128.112.142",
+          "href": "http://224.128.112.142/"
+        },
+        {
+          "text": " адрес сети равен "
+        },
+        {
+          "text": "224.128.96.0",
+          "href": "http://224.128.96.0/"
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Чему равен третий слева байт маски? Ответ запишите в виде десятичного числа."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Маска сети имеет длину 32 бита и вид 1111..000 (сначала единицы, потом нули). Поэтому мы можем перебрать ее значения через for mask in "
+        },
+        {
+          "text": "range(32+1):",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\nfor mask in range(32+1):\n    net = ip_network(f'224.128.112.142/{mask}', 0)\n    if str(net) == f'224.128.96.0/{mask}':\n        print(str(net.netmask).split('.')[2])"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from ipaddress import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля ipaddress для работы с сетевыми адресами."
+          }
+        ],
+        [
+          {
+            "text": "Цикл for mask in range(32+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Для перебора возможных значений маски сети от 0 до 32 (включительно)."
+          }
+        ],
+        [
+          {
+            "text": "net = ip_network(f'224.128.112.142/{mask}', 0)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание объекта сети net с заданным IP-адресом и переменной маской подсети, где последний аргумент указывает на коррекцию префикса."
+          }
+        ],
+        [
+          {
+            "text": "if str(net) == f'224.128.96.0/{mask}':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Условие проверки соответствия адреса сети определенному значению."
+          }
+        ],
+        [
+          {
+            "text": "print(str(net.netmask).split('.')[2])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод третьего октета маски подсети из объекта сети net, если условие выполнено."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/e6n8yucT4gWUj2foQsfNX0_q--xiAwsOnQzt8S6rE1_mmdeet9jjvsrXafW5efIAnTkXW6aNpv9bKcGqifpSPRwFAyRpEPgT0KRE_vErxWse6Ahl4qXFaA1ui3CbvhDT5-12GPTiK2EswBOOxygbQyCozAVbw6kx0Q30zBNS5xrTk8qJh9NvSZDWovsZ3iToRlcm2FSnHDc-HzQ9ZoWKH0xY3mbX8U_GcGNB0tF65_ID-RMas0rThRoQaKjXIhLKgyR2_MMCHFVhTIlidIMnQg5_uGOezrv4s0j-MuoXXS770Z3GRY_amMY6iVPHM3bztSd26Itfzp3lUHSbZxnTOg",
+      "file": "418-1.jpg"
+    }
+  ],
+  "task": 13,
+  "problem": "7696",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 13 ЕГЭ: разбор задачи 7696",
+  "title": "Задание 13 ЕГЭ: разбор задачи 7696",
+  "slug": "zadanie-13-ege-razbor-zadachi-7696",
+  "hidden": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": 735,
+  "rubric": "python",
+  "description": "Hе секрет, что в Python существует множество инструментов для работы с итераторами и последовательностями.",
+  "date": "2024-06-11",
+  "source": "https://t.me/informatika_kege_itpy/735",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/735-1.jpg",
+      "width": 800,
+      "height": 461,
+      "alt": "Итератор среза с помощью itertools.islice в Python"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Hе секрет, что в Python существует множество инструментов для работы с итераторами и последовательностями."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Один из таких инструментов - метод itertools.islice, который позволяет создавать объект islice для получения среза элементов из итератора."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вот пример использования itertools.islice"
+    },
+    {
+      "type": "code",
+      "text": "import itertools\n\ns = itertools.islice(range(50), 10, 20)\nfor val in s:\n  print(val)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При выполнении этого кода мы создаем объект s, который представляет собой срез элементов от индекса 10 до индекса 20 в итерируемом объекте range(50). При итерации по объекту s будут выводиться элементы с индексами от 10 до 19 (исключительно)."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/jrOoZObWui0FRq-xEGdSrKO_yf5GXfmaAnQfG0tbTyDZ_goQYJlxBDl4fZfJgB33ObIbsdi_dv3iNYi9CI9-7yUqlxKHH8-UZLpo8Nyg3J7lz0SQrWRi4qK4dg5FDu5mdJNTLB1YWD-xZBmKbEKqWRC815-7YNooNxsunSH3ZCVSEYz65UBJHmaEqMADqCwqlH4NMiYufaCFg2L92rF9-srcMjY6JeqxghTeQTerO9e-dTeBGVJ8JruJ3DPOrXtxv61HPadBYkUI5JhZt4vJV1EIDHC5TMLhGwgJKKUmhiSG9d8jbsCN9DXZwYawjS5iDDmUvl0v8FKAo9wYObyUjw.jpg",
+      "file": "735-1.jpg"
+    }
+  ],
+  "baseTitle": "Итератор среза с помощью itertools.islice в Python",
+  "title": "Итератор среза с помощью itertools.islice в Python",
+  "slug": "iterator-sreza-s-pomoschyu-itertools-islice-v-python",
+  "hidden": false
+}

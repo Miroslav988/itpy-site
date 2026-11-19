@@ -1,0 +1,45 @@
+{
+  "id": 1341,
+  "rubric": "breakdown",
+  "description": "Задание 13 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "date": "2026-06-18",
+  "source": "https://t.me/informatika_kege_itpy/1341",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1341-1.jpg",
+      "width": 800,
+      "height": 496,
+      "alt": "Задание 13 ЕГЭ: разбор варианта Дальнего Востока 2026"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import *\n\nn = ip_network('102.162.200.51/255.255.255.0', 0)\nprint(n[-2]) # 102.162.200.254\nprint(102 + 162 + 200 + 254)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 718",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/uI22WYRRNudHaayY788iD7hWOdq5PGH7XenxM2oulJmJhfZ4jyHpW8kax3T2DBCSB48WV9AZf7Pke7AfBLoo6yygwcPLUu9nW9cMyY0vxLjH1_RTfHn3ep8NJWwNp0v0mRQrmRhGC68pwOoPaerIrWbDxqCBGqcoUfqaStxOcmGRFEo5hb-f2wQPbDLuEDXtUHxTYsykeOiiHaODh0Wi_y_c06pA4td6gOmXKPHryV3BXdj2x6kGT4lHEJunKEO90PjnGaq6fLYFL-P_dcUxGubJNZNsfL-SuNEXzxNh8NxDwgdTZlBd75QiBbeU4NvgoctfEqp9y3sunWKivaUOqg.jpg",
+      "file": "1341-1.jpg"
+    }
+  ],
+  "task": 13,
+  "baseTitle": "Задание 13 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "title": "Задание 13 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "slug": "zadanie-13-ege-razbor-varianta-dalnego-vostoka-2026",
+  "hidden": false
+}

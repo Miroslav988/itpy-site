@@ -1,0 +1,74 @@
+{
+  "id": 1339,
+  "rubric": "breakdown",
+  "description": "7513309 123169 7514761 16301 7514789 46103 7517219 12263 7518367 4621",
+  "date": "2026-06-18",
+  "source": "https://t.me/informatika_kege_itpy/1339",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1339-1.jpg",
+      "width": 800,
+      "height": 551,
+      "alt": "Задание 25 ЕГЭ: разбор варианта Дальнего Востока 2026"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def divisors(n):\n    d = []\n    for j in range(2, int(n**0.5)+1):\n        if n % j == 0:\n            d += [j, n//j]\n    return sorted(set(d))\n\n\ncnt = 0\nfrom itertools import permutations\nfor n in range(7_513_049, 10**10):\n    d = [j for j in divisors(n) if len(divisors(j)) == 0 and str(j).count('1') > 0 and str(j).count('6') == 1]\n    if len(d) > 0:\n        for p in permutations(d, r=2):\n            if p[0] * p[1] == n:\n                print(n, max(p))\n                cnt += 1\n                break\n        if cnt == 5:\n            break"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "7513309 123169",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "7514761 16301"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "7514789 46103"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "7517219 12263"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "7518367 4621"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/tx5kE6IN8Ub4u2js3bizRn_V3gwSkchQ9Iuw4o5TsUcMPzJuS1LHQSuzF5giJj_EjgXAq-KW4a5qQD00axIku_AVn4NQL9vTriv_r3tfuKIFuLtWts2y8q1d70zq0Iwht00E6uPU319-uOrDdfDaC4q7Ir2kkLDLbV76twvBz9EwVbShX7SujjuGXebRn1UzqUCClGN9Wo02yEmg9IkBtKwMXfmKdaAl8c7E6ieOu55LFLLwCxdjpZ5-u9xgzMrqa3hyZSu0raptSg8aIf8NWxm76V1ZLX_RLVTBYxg4a4WBQtfQf4Y27hVJB55eutUQWGOzPUPx0kHFWtcjwecEMg.jpg",
+      "file": "1339-1.jpg"
+    }
+  ],
+  "task": 25,
+  "baseTitle": "Задание 25 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "title": "Задание 25 ЕГЭ: разбор варианта Дальнего Востока 2026",
+  "slug": "zadanie-25-ege-razbor-varianta-dalnego-vostoka-2026",
+  "hidden": false
+}

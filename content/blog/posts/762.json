@@ -1,0 +1,36 @@
+{
+  "id": 762,
+  "rubric": "breakdown",
+  "description": "Задание 23 ЕГЭ: разбор задачи",
+  "date": "2024-07-04",
+  "source": "https://t.me/informatika_kege_itpy/762",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/762-1.jpg",
+      "width": 800,
+      "height": 543,
+      "alt": "Задание 23 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b):\n    if a >= b:\n        return a == b\n    return F(a+1, b) + F(a+2, b) + F(a+3, b)\n\nprint(F(3, 9) * F(9, 13))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/T84CgBuXHMYhYqmEf8H2TJSnk_69hfj-KwPuorRYswleNEHDuYAONvfisAuGj9iWFgNH01vJ6FK7cpkuBzQHvMtlEBt3fNGPwoUN09VvYc9GAveMMAnlK3qgyevA-dAZSArWvwyE5uU838g5zmHzmbzPUhDlKSGXBTFLua_0oAHrwfDF7neoZdwzjb6Sq847TbZizT0Ffz3CTT7hbhKjcpesmpc8gKL9_J0_BPi4JgVZDxjzOiEdp0o0yiu_TB-D5S-RZcpPb_Obso1Sehg2junuw87jO1BwL3TCUTPx3npr7Iy1lKFZDOozmzb08iNmGnszv2CVhJVg0whbVpwiDA.jpg",
+      "file": "762-1.jpg"
+    }
+  ],
+  "task": 23,
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи",
+  "title": "Задание 23 ЕГЭ: разбор задачи",
+  "slug": "zadanie-23-ege-razbor-zadachi",
+  "hidden": false
+}

@@ -1,0 +1,116 @@
+{
+  "id": 1143,
+  "rubric": "python",
+  "description": "Код становится короче. Сразу видно, какие переменные подставляются. Можно вставлять даже выражения:",
+  "date": "2025-07-13",
+  "source": "https://t.me/informatika_kege_itpy/1143",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1143-1.jpg",
+      "width": 800,
+      "height": 649,
+      "alt": "Использования f-строк в python"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Если раньше для подстановки переменных в строку мы писали"
+    },
+    {
+      "type": "code",
+      "text": "\"Привет, {}!\".format(name)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "то теперь с f-строками можно проще"
+    },
+    {
+      "type": "code",
+      "text": "name = \"Андрей\"\nprint(f\"Привет, {name}!\") # Привет, Андрей!"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Почему f-строки удобны"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Код становится короче."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сразу видно, какие переменные подставляются."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Можно вставлять даже выражения:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "a = 5\nb = 3\nprint(f\"{a} + {b} = {a + b}\") # 5 + 3 = 8"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример"
+    },
+    {
+      "type": "code",
+      "text": "user = \"Андрей\"\naction = \"покупка\"\n\nlog = f\"Пользователь {user} зашел на сайт и выполнил действие: {action}\"\nprint(log) # Пользователь Андрей зашел на сайт и выполнил действие: покупка"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Запомни"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Чтобы использовать "
+        },
+        {
+          "text": "f-строку",
+          "code": true
+        },
+        {
+          "text": ", ставь "
+        },
+        {
+          "text": "f",
+          "code": true
+        },
+        {
+          "text": " перед кавычками и указывай переменные в "
+        },
+        {
+          "text": "{}",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/lTBaRCMu9Vj620Q9GFe60-tCOoPn8c_04dCtUUXG5V1Ct7oGRqouUrRr070ZzfUVSxwSFQRFazC9AmpKJVe4QsVYwtSZ1ympsmPrxwX-GMgmfnpIWUpyrTCirhyVMyOSkklJgQ7YioIY4yDTbgmc0Nnz88S9LhLx3bHADa9e03aKpu16JwCX-iSFJ9GtZWZIqdnYQbPQzK-P8mFJlxG74CEJ0wEerj-KBQV4jy3583Hl0U1xkg4Gn4R_FoamHEbhXkSSKpce1fJ1Y5mhsRVxJCEKcrlAZcMJ7XN8Wk60UNTxriBHKDQAh__8GOOSZHld6b5XTCa1ZjIeGnsZobdETg.jpg",
+      "file": "1143-1.jpg"
+    }
+  ],
+  "baseTitle": "Использования f-строк в python",
+  "title": "Использования f-строк в python (13 июля 2025)",
+  "slug": "ispolzovaniya-f-strok-v-python-13-iyulya-2025",
+  "hidden": false
+}

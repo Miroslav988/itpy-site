@@ -1,0 +1,93 @@
+{
+  "id": 399,
+  "rubric": "python",
+  "description": "Работа с файлами в Python - это важный аспект программирования, позволяющий читать, записывать и обрабатывать данные в файлах. В данной статье мы рассмотрим основные методы и…",
+  "date": "2024-03-10",
+  "source": "https://t.me/informatika_kege_itpy/399",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/399",
+      "thumb": {
+        "src": "/blog-media/399-1.jpg",
+        "width": 848,
+        "height": 352
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Работа с файлами в Python - это важный аспект программирования, позволяющий читать, записывать и обрабатывать данные в файлах."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В данной статье мы рассмотрим основные методы и приемы, которые помогут вам в ваших работах."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "А в следующем посту рассмотрим несколько примеров открытия файлов с ЕГЭ."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Открытие файла"
+    },
+    {
+      "type": "code",
+      "text": "file = open(\"example.txt\", \"r\")  # Открываем файл example.txt на чтение"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Чтение содержимого файла"
+    },
+    {
+      "type": "code",
+      "text": "content = file.read()\nprint(content)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Построчное чтение файла"
+    },
+    {
+      "type": "code",
+      "text": "file = open(\"example.txt\", \"r\")  # Открытие файла для чтения\n\nfor line in file:\n    print(line.strip())\n\nfile.close()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Более подробную информацию про работу с файлами вы можете изучить в "
+        },
+        {
+          "text": "нашей статье на Notion",
+          "href": "https://informatikakegeitpy.notion.site/Python-tpy-39c31664302346aba6399f6495075209?pvs=4",
+          "bold": true
+        },
+        {
+          "text": " ✏"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/pQsMiKJ7__8lzRZ4U2K6Dx4_5JSN0enJu9eTgyRQoxSEOLdL6PYU4eIRVY4dnoMHWAGgBfFiBGMHVz3RAvW9EwdlHIDhCKdWQ7S-mp2FZ6sZGI7ZVwufOn8uEzu7KB6yB4cwIM0G8nFfy5tRB_kkGT-_cNgeA3cZbuNw6d05pmgo8BEtyI37LiwViry4KeW33aaWm0Sdgsv6CXZUqVcIsUgHkpaVShAkM5nARGWjj1JyBinIzfP2VUB01VL7zqjMWhGt2CR1OqxeRQNNmc5zEda8_LTiURDdq2PsiYg23TNSIsE4zpdOGAigfP668mIM5lX66yZRZxQveAGJD_EthA",
+      "file": "399-1.jpg"
+    }
+  ],
+  "baseTitle": "Работа с файлами Python",
+  "title": "Работа с файлами Python",
+  "slug": "rabota-s-faylami-python-399",
+  "hidden": true
+}

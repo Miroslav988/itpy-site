@@ -1,0 +1,525 @@
+{
+  "id": 1210,
+  "rubric": "useful",
+  "description": "По свежей статистике - больше половины пользователей в СНГ уже так или иначе используют нейросети: кто-то делает с их помощью учёбу, кто-то генерит мемы и ничего больше..",
+  "date": "2025-11-28",
+  "source": "https://t.me/informatika_kege_itpy/1210",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1210-1.jpg",
+      "width": 800,
+      "height": 800,
+      "alt": "Большая подборка сервисов на базе искусственного интеллекта"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "По свежей статистике - больше половины пользователей в СНГ уже так или иначе используют нейросети: кто-то делает с их помощью учёбу, кто-то генерит мемы и ничего больше.."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Сервисы",
+          "bold": true
+        },
+        {
+          "text": " которые возьмут на себя рутину учёбы и работы: от домашних заданий, рефератов и презентаций до отчётов, конспектов и даже дипломных проектов 👨‍💻"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Claude",
+          "href": "https://claude.ai/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "— создание текстов и ответов, анализ информации;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Perplexity AI",
+          "href": "https://www.perplexity.ai/",
+          "bold": true
+        },
+        {
+          "text": " — поиск и суммаризация информации, ответы;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Gamma / Tome",
+          "href": "https://gamma.app/ru",
+          "bold": true
+        },
+        {
+          "text": " — генерация презентаций и отчетов;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "MindMap AI",
+          "href": "https://mindmapai.app/",
+          "bold": true
+        },
+        {
+          "text": " — создание интеллектуальных карт и идей;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "PDF.ai",
+          "href": "https://pdf.ai/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "— анализ PDF, извлечение информации, ответы;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ChatPDF ",
+          "href": "https://www.chatpdf.com/ru",
+          "bold": true
+        },
+        {
+          "text": "— чат с PDF-документами, понимание текста;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "QuillBot",
+          "href": "https://quillbot.com/",
+          "bold": true
+        },
+        {
+          "text": " — перефразирование текстов, упрощение предложений;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Grammarly",
+          "href": "https://www.grammarly.com/",
+          "bold": true
+        },
+        {
+          "text": " — проверка орфографии, грамматики, стиля;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "LanguageTool",
+          "href": "https://languagetool.org/ru",
+          "bold": true
+        },
+        {
+          "text": " — многоязычная проверка орфографии;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "WordyBot ",
+          "href": "https://wordybot.ai/",
+          "bold": true
+        },
+        {
+          "text": "— генерация учебных и академических текстов с ссылками;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Notion AI",
+          "href": "https://www.notion.com/product/ai",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "— организация заметок, автоматизация текста;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "StudyflowAI ",
+          "href": "https://studyflow.ai/",
+          "bold": true
+        },
+        {
+          "text": "— помощь с домашкой, разбор вопросов, структурирование;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Explainpaper",
+          "href": "https://www.explainpaper.com/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "— объяснение сложных научных статей;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Study24.ai",
+          "href": "https://study24.ai/",
+          "bold": true
+        },
+        {
+          "text": " — создание шпаргалок и конспектов;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "TutorAI / TuranAI",
+          "href": "https://tutorai.me/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "— виртуальный репетитор, подготовка;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "School Assistant AI",
+          "href": "https://www.atlas.org/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "— генерация учебных материалов;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Wisdolia",
+          "href": "https://waildworld.com/ru/tools/wisdolia",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "— создание карточек для запоминания;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Slides AI",
+          "href": "https://www.slidesai.io/ru",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "— автоматическая генерация презентаций;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Canva Magic Studio",
+          "href": "https://www.canva.com/magic/",
+          "bold": true
+        },
+        {
+          "text": " — визуальный контент, презентации и дизайн;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Scribbr",
+          "href": "https://www.scribbr.com/",
+          "bold": true
+        },
+        {
+          "text": " — проверка уникальности и плагиата;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ReText",
+          "href": "https://retext.ai/ru",
+          "bold": true
+        },
+        {
+          "text": " — генерация академических текстов;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "RoboGPT",
+          "href": "https://robogpt.co/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "— генерация дипломных и курсовых работ;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Chad AI",
+          "href": "https://chadgpt.ru/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "href": "https://chadgpt.ru/"
+        },
+        {
+          "text": "— генерация учебных материалов, эссе;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "CopyMonkey",
+          "href": "https://copymonkey.app/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "href": "https://copymonkey.app/"
+        },
+        {
+          "text": "— генерация текстов и отчетов;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "NeuroTexter",
+          "href": "https://neuro-texter.ru/",
+          "bold": true
+        },
+        {
+          "text": " — создание академических текстов;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Davinchi ",
+          "href": "https://www.blackmagicdesign.com/ua/products/davinciresolve",
+          "bold": true
+        },
+        {
+          "text": "— бесплатная генерация дипломных работ;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "GigaChat",
+          "href": "https://giga.chat/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "href": "https://giga.chat/"
+        },
+        {
+          "text": "– формирует структурированные научные тексты;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "AiWriteArt",
+          "href": "https://aiwriteart.com/",
+          "bold": true
+        },
+        {
+          "text": " – генерация и редактирование текстов;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Zaochnik GPT",
+          "href": "http://zaochnik-com.com/zaochnik-gpt/",
+          "bold": true
+        },
+        {
+          "text": " – создание дипломов и отчетов;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "StudyAI",
+          "href": "https://studyaitool.com/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "href": "https://studyaitool.com/"
+        },
+        {
+          "text": "— помощь с домашними заданиями;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "EssayBot",
+          "href": "https://essaysbot.com/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "— автоматическая генерация эссе на английском;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "NeuralText ",
+          "href": "https://neuraltext.com/",
+          "bold": true
+        },
+        {
+          "text": "— генерация текстов, идей и контента для учебы и проектов;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "texthandler",
+          "href": "https://ru.texthandler.com/text-tools/letter-case-converter/",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "href": "https://ru.texthandler.com/text-tools/letter-case-converter/"
+        },
+        {
+          "text": "— быстрое форматирование текста;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Nana Banana",
+          "href": "https://nanabanana.ai/ru",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "href": "https://nanabanana.ai/ru"
+        },
+        {
+          "text": "— продвинутый генератор и редактор изображений."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "да, ",
+            "italic": true,
+            "bold": true
+          },
+          {
+            "text": "регулярно - это часть работы/учёбы",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "нет, ",
+            "italic": true,
+            "bold": true
+          },
+          {
+            "text": "вообще не пользуюсь",
+            "italic": true
+          }
+        ],
+        [
+          {
+            "text": "редко",
+            "italic": true,
+            "bold": true
+          },
+          {
+            "text": ", больше экспериментирую",
+            "italic": true
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/lLfMBY0-9JPPfG66x9j-YhS5dQv-mJo_lAIA6mNA6tuVdaGiXsmoKwzXK8bS9UOiPRZTLEK59uwtU5g_7g1ByazF9mQ4M24nGagF1RQsCfZfb1cj_LU-suLh_HCD8YgfwjzV4h5Ah-ctZU5GFDUBCxii97QBUD5EKTR0YWS1DYKNf46hq09pZO-38zjuADB2civFRFFAYR3DR6b62qbpkJpbcyxOc2Hw2zHeDMpJFqO7xvJV2j0dyVuW3n5hW6rjd6MYt-zrblyPuGKHsM6HRu840aRK2fOnugeSov7nNHCh9vnawzVwGPiaEH8Xa9T1ECgzwqjwbbbT6B3PUbL9eg.jpg",
+      "file": "1210-1.jpg"
+    }
+  ],
+  "baseTitle": "Большая подборка сервисов на базе искусственного интеллекта",
+  "title": "Большая подборка сервисов на базе искусственного интеллекта",
+  "slug": "bolshaya-podborka-servisov-na-baze-iskusstvennogo-intellekta",
+  "hidden": false
+}

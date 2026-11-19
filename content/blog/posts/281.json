@@ -1,0 +1,52 @@
+{
+  "id": 281,
+  "rubric": "breakdown",
+  "description": "Основная сложность задачи заключается в нахождении минимального значения n (больше 100), при котором строка, состоящая из n цифр 5, после применения алгоритма, превратится в…",
+  "date": "2023-10-31",
+  "source": "https://t.me/informatika_kege_itpy/281",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/281",
+      "thumb": {
+        "src": "/blog-media/281-1.jpg",
+        "width": 816,
+        "height": 544
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основная сложность задачи заключается в нахождении минимального значения n (больше 100), при котором строка, состоящая из n цифр 5, после применения алгоритма, превратится в строку \"15\"."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for n in range(100+1, 1000):\n    s = '5' * n\n    while '555' in s or '11' in s or '2' in s:\n        if '555' in s:\n            s = s.replace('555', '1', 1)\n        if '11' in s:\n            s = s.replace('11', '25', 1)\n        if '2' in s:\n            s = s.replace('2', '5', 1)\n    if s == '15':\n        print(n)\n        break"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/q0WnDB_Q3hYN2eWnNLiyjsRkCNTdWBi79Kv1GoVmLqFKUxCOS38ltHU9w_NKZAOWhvt7TxBwO1F5_b_Szsggr0OO55W4S186B5h2qFID0rTdqjuNqGFoC-wj4mXkVPd5BVRPOTelBxvXeVjyynCzN3D7JADv8FMCyflieETHsw6NCA98aDoihAzSlPmTH9GLRZ-lioYJCCidLJU3Ac07464V6FY1gs_2i65Nuiv-W_PVXCBzxZSc5vniJFWKKiJ7jsHNY1QMFHYvTTTWnzUNuTucdGO4GvPIxd4vLkTo7vvw1M5ANkR1Qt_xL3cwlYaVBi3xIOOBs01tWcFkZhhiTg",
+      "file": "281-1.jpg"
+    }
+  ],
+  "task": 12,
+  "problem": "9542",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 12 ЕГЭ: разбор задачи 9542",
+  "title": "Задание 12 ЕГЭ: разбор задачи 9542",
+  "slug": "zadanie-12-ege-razbor-zadachi-9542",
+  "hidden": false
+}

@@ -1,0 +1,241 @@
+{
+  "id": 952,
+  "rubric": "breakdown",
+  "description": "Снежная Королева создала волшебную функцию F(n), которая помогает ей вычислять силу зимы. Эта функция определяется следующим образом: F(n)=n−1, при n⩽3; F(n)=F(n−2)+n/2−F(n−4),…",
+  "date": "2024-12-12",
+  "source": "https://t.me/informatika_kege_itpy/952",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/952",
+      "thumb": {
+        "src": "/blog-media/952-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Снежная Королева создала волшебную функцию F(n), которая помогает ей вычислять силу зимы. Эта функция определяется следующим образом:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(n)=n−1, при n⩽3;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(n)=F(n−2)+n/2−F(n−4), если n>3 и n чётно;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(n)=F(n−1)×n+F(n−2), если n>3 и n нечётно,"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Королева решила узнать, насколько велика сила зимы в её королевстве. Для этого вычислите значение выражения: F(4952)+2×F(4958)+F(4964)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "import sys\nfrom functools import *\nsys.setrecursionlimit(10000)\n\n@lru_cache(None)\ndef F(n):\n    if n <= 3:\n        return n - 1\n    if n > 3 and n % 2 == 0:\n        return F(n - 2) + n/2 - F(n - 4)\n    if n > 3 and n % 2 != 0:\n        return F(n - 1) * n + F(n - 2)\n\nprint(F(4952) + 2 * F(4958) + F(4964))\n\n# Ответ: 9920"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "import sys",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортирует модуль sys, который предоставляет доступ к параметрам и функциям Python-интерпретатора."
+          }
+        ],
+        [
+          {
+            "text": "from functools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортирует все функции из модуля functools, чтобы использовать их в коде, включая lru_cache."
+          }
+        ],
+        [
+          {
+            "text": "sys.setrecursionlimit(10000)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Устанавливает максимальную глубину стека рекурсии на 10,000, что полезно для обеспечения работы программы без переполнения стека при глубокой рекурсии."
+          }
+        ],
+        [
+          {
+            "text": "@lru_cache(None)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Использует декоратор lru_cache для автоматического кеширования результатов вызовов функции F, чтобы уменьшить количество повторных вычислений."
+          }
+        ],
+        [
+          {
+            "text": "def F(n):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определяет рекурсивную функцию F, которая принимает одно целое число n и возвращает результат вычислений на основе n."
+          }
+        ],
+        [
+          {
+            "text": "if n <= 3:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, является ли n меньше или равным 3."
+          }
+        ],
+        [
+          {
+            "text": "return n - 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращает n - 1, если условие n <= 3 истинно; это базовый случай функции."
+          }
+        ],
+        [
+          {
+            "text": "if n > 3 and n % 2 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, больше ли n 3 и является ли оно четным числом."
+          }
+        ],
+        [
+          {
+            "text": "return F(n - 2) + n/2 - F(n - 4)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Для четного n, возвращает результат выражения, включающего рекурсивные вызовы функции F с параметрами n-2 и n-4, вычитая из суммы половину n."
+          }
+        ],
+        [
+          {
+            "text": "if n > 3 and n % 2 != 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяет, больше ли n 3 и является ли оно нечетным числом."
+          }
+        ],
+        [
+          {
+            "text": "return F(n - 1) * n + F(n - 2)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Для нечетного n, возвращает произведение F(n - 1) и n, добавив F(n - 2)."
+          }
+        ],
+        [
+          {
+            "text": "print(F(4952) + 2 * F(4958) + F(4964))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляет и печатает сумму выражения, включающего F(4952), удвоенное значение F(4958) и F(4964)."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/SyE33ziB4baZWKAIYlrMFOCGWNm6fCwTcRf8DNH4NxYLURMoxdgo3JDUNP0fG63hS_aCxOSrLOr0gd-bMSGoRPvh6cbzO97bNUH6fVqKg4elcsyBb_n9pvk-poVVFtGYz_0uqyJ7yA94_TVTmMJIb2Ug1B0DFlTq-IZK54-c14D53ucHGDa9jek2lJ6w7jyy8inoxJsbWF4vmfM7NpbotOE9VQgdjwQk8rjVRc_botE1LPKCEklstDh4ojAIs60tFNogOMDJCn4xYDQh5atvSy-GkoOpMiqHU6kb2PpJBqXQqiPNCvHa8Nr8_5SbYOAE5RmrizT4Wogy0toE0pE5bg",
+      "file": "952-1.jpg"
+    }
+  ],
+  "task": 16,
+  "problem": "18931",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М. Попков",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 16 ЕГЭ: разбор задачи 18931",
+  "title": "Задание 16 ЕГЭ: разбор задачи 18931",
+  "slug": "zadanie-16-ege-razbor-zadachi-18931",
+  "hidden": false
+}

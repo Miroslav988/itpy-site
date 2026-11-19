@@ -1,0 +1,241 @@
+{
+  "id": 1173,
+  "rubric": "breakdown",
+  "description": "Назовём нетривиальным делителем натурального числа его делитель, не равный единице и самому числу. Найдите все натуральные числа, принадлежащие отрезку [106732567; 152673836] и…",
+  "date": "2025-09-26",
+  "source": "https://t.me/informatika_kege_itpy/1173",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1173-1.jpg",
+      "width": 800,
+      "height": 650,
+      "alt": "Задание 25 ЕГЭ: разбор задачи — Джобс Е."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Назовём нетривиальным делителем натурального числа его делитель, не равный единице и самому числу. Найдите все натуральные числа, принадлежащие отрезку [106732567; 152673836] и имеющие ровно три нетривиальных делителя. Для каждого найденного числа запишите в ответе само число и его наибольший нетривиальный делитель. Найденные числа расположите в порядке возрастания."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Например, для числа 2018 имеем следующие делители 2 и 1009. Поэтому результатом (не принимая во внимание количества делителей) будет пара чисел 2018 1009."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def divisors(x):\n    div = []\n    for j in range(2, int(x**0.5)+1):\n        if x % j == 0:\n            div.append(j)\n            div.append(x // j)\n    return sorted(set(div))\n\n\nfor x in range(106732567, 152673836+1):\n    if (x**0.5).is_integer():\n        d = divisors(x)\n        if len(d) == 3:\n            print(x, max(d))"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "112550881 1092727",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "131079601 1225043"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "141158161 1295029"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def divisors(x):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление функции divisors, которая принимает число x и возвращает его делители."
+          }
+        ],
+        [
+          {
+            "text": "div = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание пустого списка div для хранения делителей."
+          }
+        ],
+        [
+          {
+            "text": "for j in range(2, int(x**0.5)+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл по возможным делителям от 2 до квадратного корня из x (включительно)."
+          }
+        ],
+        [
+          {
+            "text": "if x % j == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, делится ли x на j без остатка."
+          }
+        ],
+        [
+          {
+            "text": "div.append(j)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если j - делитель, добавляем его в список."
+          }
+        ],
+        [
+          {
+            "text": "div.append(x // j)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавляем парный делитель (x разделить на j)."
+          }
+        ],
+        [
+          {
+            "text": "return sorted(set(div))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращаем отсортированный список уникальных делителей."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(106732567, 152673836+1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Основной цикл по числам от 106732567 до 152673836 включительно."
+          }
+        ],
+        [
+          {
+            "text": "if (x**0.5).is_integer():",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, является ли x полным квадратом (квадратный корень - целое число)."
+          }
+        ],
+        [
+          {
+            "text": "d = divisors(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если x - полный квадрат, находим все его делители."
+          }
+        ],
+        [
+          {
+            "text": "if len(d) == 3:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что у числа ровно 3 делителя (не считая 1 и само число)."
+          }
+        ],
+        [
+          {
+            "text": "print(x, max(d))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполняется, выводим число и его наибольший делитель."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/hKB-tNhLlwbqTOWlg6Syd5PAD6ARws1qlzI39XuDGETPKxm_DdsQWsyHPrknb8FG9_vLstPtPu20NP9hdgQVXF_6XFandU-pVDFk4rfL9g9evF3xi7WsO-urHHGHSXuuAAdMpqHMKnSAwv6CR7mB9zbDrEOo68UGeAdKuybBHQWF6MQb4UmgrJEGFSLMSE1N7hsXd_5QaJlS-7LuOMUYOwpKzwB6brBvqLyK90_ykf9l9pVBSegkNTihg-w6bbx_sPWj51ZK0BdD-oOYd0PKEQS9ZjEKHX8aGt2nDcOBtN0OLS838B9M94HpK2AajG-0eVno_TIu9f_k7B_TNqNbhw.jpg",
+      "file": "1173-1.jpg"
+    }
+  ],
+  "task": 25,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Джобс Е.",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 25 ЕГЭ: разбор задачи — Джобс Е.",
+  "title": "Задание 25 ЕГЭ: разбор задачи — Джобс Е.",
+  "slug": "zadanie-25-ege-razbor-zadachi-dzhobs-e",
+  "hidden": false
+}

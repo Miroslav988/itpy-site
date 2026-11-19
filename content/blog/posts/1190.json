@@ -1,0 +1,192 @@
+{
+  "id": 1190,
+  "rubric": "breakdown",
+  "description": "Определите количество пар последовательности, в которых только один из элементов является трёхзначным числом, a сумма элементов пары кратна минимальному трёхзначному элементу…",
+  "date": "2025-10-14",
+  "source": "https://t.me/informatika_kege_itpy/1190",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1190-1.jpg",
+      "width": 800,
+      "height": 514,
+      "alt": "Задание 17 ЕГЭ: разбор задачи 23201"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество пар последовательности, в которых только один из элементов является трёхзначным числом, a сумма элементов пары кратна минимальному трёхзначному элементу последовательности, оканчивающемуся на 7. В ответе запишите количество найденных пар, затем минимальную из сумм элементов таких пар. В данной задаче под парой подразумевается два идущих подряд элемента последовательности."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(x) for x in open('17.txt')]\nA = [x for x in M if len(str(abs(x))) == 3]\nB = [x for x in A if abs(x) % 10 == 7]\nR = []\nfor i in range(len(M)-1):\n    x, y = M[i], M[i+1]\n    if (x in A) + (y in A) == 1:\n        if (x + y) % min(B) == 0:\n            R.append(x + y)\nprint(len(R), min(R))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 9",
+          "bold": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "107",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "M = [int(x) for x in open('17.txt')]"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Читаем файл '17.txt', преобразуем каждую строку в целое число и создаем список M"
+          }
+        ],
+        [
+          {
+            "text": "A = [x for x in M if len(str(abs(x))) == 3]"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список A из чисел M, которые являются трехзначными (учитываем модуль для отрицательных)"
+          }
+        ],
+        [
+          {
+            "text": "B = [x for x in A if abs(x) % 10 == 7]"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список B из чисел A, которые оканчиваются на 7 (учитываем модуль для отрицательных)"
+          }
+        ],
+        [
+          {
+            "text": "R = []"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем пустой список R для хранения сумм пар, удовлетворяющих условиям"
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(M)-1):"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Перебираем индексы i от 0 до предпоследнего элемента списка M"
+          }
+        ],
+        [
+          {
+            "text": "x, y = M[i], M[i+1]"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Присваиваем x текущий элемент M[i], y - следующий элемент M[i+1]"
+          }
+        ],
+        [
+          {
+            "text": "if (x in A) + (y in A) == 1:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что только один из двух элементов (x или y) является трехзначным числом"
+          }
+        ],
+        [
+          {
+            "text": "if (x + y) % min(B) == 0:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что сумма пары x+y делится нацело на минимальное число из списка B"
+          }
+        ],
+        [
+          {
+            "text": "R.append(x + y)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если оба условия выполнены, добавляем сумму пары в список R"
+          }
+        ],
+        [
+          {
+            "text": "print(len(R), min(R))"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим количество найденных пар и минимальную сумму среди этих пар"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/b7yPt2VBbYiewdVfF4PODkLdYBRJVFuUaW3E1fsFqATFyaIkMuIn1m1ivaPEeJjb_KIAKH8V8PCh1FTmVuPIomXiGMe28uTYZy0GO22zBeqcG-MRYEilpFpo0B8QQ6KzOxGqjREmjOhv18SaTdI1dnUNk_C00RMYEn2kRBtFmuQCZetson-SPur0_V8IkBLoW5vZ7mnmPZdF9aAGhgrJtFqFDi6bu0boEYXp52_fPcDT49tKsxPV5wfmIVXrgeCP-RRGgHxlXOyfjsyiIjTUeVtQA3AcWcxC2LAazpL8AMRLDXnCzfoQ9qg_pTF4tHgsX8htVBscmbrPFK_OO95usw.jpg",
+      "file": "1190-1.jpg"
+    }
+  ],
+  "task": 17,
+  "problem": "23201",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 10.06.25",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи 23201",
+  "title": "Задание 17 ЕГЭ: разбор задачи 23201",
+  "slug": "zadanie-17-ege-razbor-zadachi-23201",
+  "hidden": false
+}

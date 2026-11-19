@@ -1,0 +1,194 @@
+{
+  "id": 1124,
+  "rubric": "breakdown",
+  "description": "Определите количество строк таблицы, для чисел которых выполнены оба условия: - в строке есть ровно одно число, которое повторяется дважды, а остальные числа различны; -…",
+  "date": "2025-06-25",
+  "source": "https://t.me/informatika_kege_itpy/1124",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1124-1.jpg",
+      "width": 800,
+      "height": 356,
+      "alt": "Задание 9 ЕГЭ: разбор задачи — Yandex учебник"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество строк таблицы, для чисел которых выполнены оба условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- в строке есть ровно одно число, которое повторяется дважды, а остальные числа различны;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "- максимальное число строки повторяется столько же раз, сколько и минимальное."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('0. files/9.csv'):\n    M = [int(x) for x in s.split(';')]\n    copied2 = [x for x in M if M.count(x) == 2]\n    uncopied = [x for x in M if M.count(x) == 1]\n    if len(copied2) == 2 and len(uncopied) == 5:\n        if M.count(max(M)) == M.count(min(M)):\n            cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 349",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем счётчик, который будет считать строки, удовлетворяющие условиям задачи."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('0. files/9.csv'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Построчно читаем файл '0. files/9.csv'; каждая строка — это строка s."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(x) for x in s.split(';')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразуем строку в список целых чисел, разделяя элементы по символу ';'."
+          }
+        ],
+        [
+          {
+            "text": "copied2 = [x for x in M if M.count(x) == 2]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаём список чисел, которые встречаются ровно дважды."
+          }
+        ],
+        [
+          {
+            "text": "uncopied = [x for x in M if M.count(x) == 1]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаём список чисел, которые встречаются только один раз."
+          }
+        ],
+        [
+          {
+            "text": "if len(copied2) == 2 and len(uncopied) == 5:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что два различных числа встречаются по два раза, а пять других — по одному разу."
+          }
+        ],
+        [
+          {
+            "text": "if M.count(max(M)) == M.count(min(M)):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что максимальное и минимальное значения в строке встречаются одинаковое количество раз."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если оба условия выполнены, увеличиваем счётчик подходящих строк на 1."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим количество строк, удовлетворяющих условиям задачи."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/LQZYx8TrBpgonMG6RkB8jw8jq-OeNGB0MfFpoYrjDwZkTjOqy36Vwp8dHWj0xLs0EAiaSVDjkx5jlG_DJh81eVfMUnhrRMsYRMzqp0mipPDSObR4cUkTHaPoK2tb-0eVOWY_EJ9gatJVHIID5hPzXioiKfkkkhodSPLeK36r5K0RAZfncOg9D1iDv8h5mbx-Jyf5Er8RpIAwCu3vBUDBnAHEa3FjZXndKXWJJonQnqZSC6CiMwT84JB1vFIptewoW2OgQP4rh4UvnDWbBHzUyvsS1PEg9KVOHGjR4ug1QWkLW1v0vHkc5TM0-29h6p1P2Gl0Zq2xh_GIceumle1UyA.jpg",
+      "file": "1124-1.jpg"
+    }
+  ],
+  "task": 9,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Yandex учебник",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи — Yandex учебник",
+  "title": "Задание 9 ЕГЭ: разбор задачи — Yandex учебник",
+  "slug": "zadanie-9-ege-razbor-zadachi-yandex-uchebnik",
+  "hidden": false
+}

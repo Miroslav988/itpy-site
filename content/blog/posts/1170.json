@@ -1,0 +1,214 @@
+{
+  "id": 1170,
+  "rubric": "breakdown",
+  "description": "Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел. Определите количество строк таблицы, для которых выполняются все условия: в строке три числа…",
+  "date": "2025-09-17",
+  "source": "https://t.me/informatika_kege_itpy/1170",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1170-1.jpg",
+      "width": 800,
+      "height": 480,
+      "alt": "Задание 9 ЕГЭ: разбор задачи — Богданов А"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Откройте файл электронной таблицы, содержащей в каждой строке шесть натуральных чисел. Определите количество строк таблицы, для которых выполняются все условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "в строке три числа повторяются ровно два раза;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "эти три числа образуют стороны прямоугольного треугольника."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе запишите одно число."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('9.csv'):\n    M = [int(x) for x in s.split(',')]\n    copied_2 = [x for x in M if M.count(x) == 2]\n    if len(copied_2) == 6:\n        a, b, c = sorted(set(copied_2))\n        if a**2 + b**2 == c**2:\n            cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 148",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы для решения задачи: ",
+          "bold": true
+        },
+        {
+          "text": "9.csv",
+          "href": "https://education.yandex.ru/ege/task/82c97d22-18da-44ce-aafa-9e25f9e55301",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем счетчик cnt и инициализируем его нулем. Он будет считать количество строк, удовлетворяющих условиям."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('9.csv'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открываем файл 9.csv и построчно читаем его. Каждая строка сохраняется в переменную s."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(x) for x in s.split(',')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разбиваем строку s по запятым, преобразуем каждый элемент в целое число и сохраняем в список M."
+          }
+        ],
+        [
+          {
+            "text": "copied_2 = [x for x in M if M.count(x) == 2]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список copied_2, содержащий элементы из M, которые встречаются ровно 2 раза."
+          }
+        ],
+        [
+          {
+            "text": "if len(copied_2) == 6:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, что в списке copied_2 ровно 6 элементов (то есть 3 пары одинаковых чисел)."
+          }
+        ],
+        [
+          {
+            "text": "a, b, c = sorted(set(copied_2))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Удаляем дубликаты из copied_2 (оставляем уникальные значения), сортируем их и присваиваем переменным a, b, c."
+          }
+        ],
+        [
+          {
+            "text": "if a**2 + b**2 == c**2:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, выполняется ли теорема Пифагора для полученных чисел (являются ли они пифагоровой тройкой)."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если все условия выполнены, увеличиваем счетчик cnt на 1."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "После обработки всех строк выводим значение счетчика cnt."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/X2S5tfGNbN8nmlKhB9zkmY8UFyzqe1L07ZpD-edrzOAWJayH7i4AtXY3DeM-K0VmTqmtRFHY6Lm9p79EMAlYguA4P67XJ9mn8h89RNuniaQHxxf7wqlbEUC1upSOH4pfdSetmeUVlIaf0LYW9Z2Qsl0TypR3e866zqukJ0VwesEgnm1QBsRSGH6XIBiLfqhE2PFIZM6QTKKN34-KhdOkrZSF1XQtEcBngq6XcpNunsiNEV1mDM6MFAJncS8wyWGNReocOnQgLZBSH48VKEkRxgUNBt3JQginnr1Ujv59LFIVD1rxLtzsaRBpNcvhSMlYmlhksCzcTVZ2gEzvnXDxvg.jpg",
+      "file": "1170-1.jpg"
+    }
+  ],
+  "task": 9,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Богданов А",
+    "level": "Сложный"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи — Богданов А",
+  "title": "Задание 9 ЕГЭ: разбор задачи — Богданов А",
+  "slug": "zadanie-9-ege-razbor-zadachi-bogdanov-a",
+  "hidden": false
+}

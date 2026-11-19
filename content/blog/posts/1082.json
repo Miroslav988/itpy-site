@@ -1,0 +1,196 @@
+{
+  "id": 1082,
+  "rubric": "breakdown",
+  "description": "В файле A хранятся данные о звёздах двух кластеров. В файле B хранятся данные о звёздах трёх кластеров. Для каждого файла определите координаты центра каждого кластера. Затем…",
+  "date": "2025-06-09",
+  "source": "https://t.me/informatika_kege_itpy/1082",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1082-1.jpg",
+      "width": 512,
+      "height": 683,
+      "alt": "Задание 27 ЕГЭ: разбор задачи — Досрочная волна 2025"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Задача 21425 "
+        },
+        {
+          "text": " по информатике",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "PS: Для начала просто внимательно прочитайте условие задачи и сравните его с оригиналом! Также публикую код решения, но пока без комментариев - они будут добавлены постами ниже."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Продолжение разбора 27 номера будет в нескольких постах ниже",
+          "bold": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В файле A хранятся данные о звёздах двух кластеров. В файле B хранятся данные о звёздах трёх кластеров."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Для каждого файла определите координаты центра каждого кластера. Затем вычислите четыре числа:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. PxA – среднее арифметическое абсцисс центров кластеров файла А."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. PyA – среднее арифметическое ординат центров кластеров файла А."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. PxB – среднее арифметическое абсцисс центров кластеров файла B."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "4. PyB – среднее арифметическое ординат центров кластеров файла B."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе запишите четыре числа: в первой строке сначала целую часть произведения PxA * 10000, затем целую часть произведения Py*10000 для файла А, во второй строке – аналогичные данные для файла B."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "При этом будем называть центром кластера точку этого кластера, сумма расстояний от которой до всех остальных точек кластера минимальна."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "А расстояние между двумя точками на плоскости между точками A(x1, y1) и B(x2, y2) вычисляется по формуле: d(A,B)= ((x2 - x1)**2 + (y2 - y1)**2)**0.5"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from math import dist\nclustersA = [[], []]\nclustersB = [[], [], []]\n\nfor s in open('27_A.txt'):\n    s = s.replace(',', '.')\n    x, y = [float(i) for i in s.split()]\n    if y > 0:\n        clustersA[0].append([x, y])\n    else:\n        clustersA[1].append([x, y])\n\n\nfor s in open('27_B.txt'):\n    s = s.replace(',', '.')\n    x, y = [float(i) for i in s.split()]\n    if x > 0 and y > 0:\n        clustersB[0].append([x, y])\n    elif x > 0 and y < 0:\n        clustersB[1].append([x, y])\n    else:\n        clustersB[2].append([x, y])\n\n\ndef center(cl):\n    R = []\n    for p in cl:\n        summa=sum(dist(p, g) for g in cl)\n        R.append([summa,p])\n    return min(R)[1]\n\n\ncentersA = [center(cl) for cl in clustersA]\npxA = sum(x for x, y in centersA) / 2 * 10000\npyA = sum(y for x, y in centersA) / 2 * 10000\nprint(int(pxA), int(pyA))\n\ncentersB = [center(cl) for cl in clustersB]\npxB = sum(x for x, y in centersB) / 3 * 10000\npyB = sum(y for x, y in centersB) / 3 * 10000\nprint(int(pxB), int(pyB))"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ответ"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "167990 73043"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "122627 29105"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файлы для решения задачи:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "27_A.xlsx",
+          "href": "https://kompege.ru/files/vXbqN8qLI.xlsx"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "27_A.txt",
+          "href": "https://kompege.ru/files/Z0jceVu98.txt"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "27_B.xlsx",
+          "href": "https://kompege.ru/files/3jyOX3uyP.xlsx"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "27_B.txt",
+          "href": "https://kompege.ru/files/hrTvnpVrQ.txt"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ssg8DynlxuT7JkZZCn2wQJE3dmD6TYv2ryaL9AtLAFHZN7Q26TVTX5loCb0QBV675eU2zKF8VcANF6mBo1wtGBd-boRXQbEcBHveURQhtzbnPLn4GTTGRLYKd_BCJJ3dNoqFwq1xt6KvVVkWB7ICLmPJ_vtWqZnDBizOBcWGdB-HjpksD7ohiVTCJ03pV33GICPA5qT3L3DYNl1Fpl9FcvDTfRazjkb5TmAjbAhL27YDnfIZzItg90q3OId4j7koor2w0YzdzwGkiCLS1Mc2NWugMHRc812Y-NGpi9aYtAcXaWbFEiHvpEUQdKQp0mZ1SGxN9CYX-t5BMeuI3gk9rw.jpg",
+      "file": "1082-1.jpg"
+    }
+  ],
+  "task": 27,
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Досрочная волна 2025",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 27 ЕГЭ: разбор задачи — Досрочная волна 2025",
+  "title": "Задание 27 ЕГЭ: разбор задачи — Досрочная волна 2025",
+  "slug": "zadanie-27-ege-razbor-zadachi-dosrochnaya-volna-2025",
+  "hidden": false
+}

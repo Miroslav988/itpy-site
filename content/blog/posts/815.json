@@ -1,0 +1,202 @@
+{
+  "id": 815,
+  "rubric": "breakdown",
+  "description": "Миша заполнял таблицу истинности логической функции F=((w→y)→x)∨¬z, но успел заполнить лишь фрагмент из трёх различных её строк, даже не указав, какому столбцу таблицы…",
+  "date": "2024-08-29",
+  "source": "https://t.me/informatika_kege_itpy/815",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/815",
+      "thumb": {
+        "src": "/blog-media/815-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Миша заполнял таблицу истинности логической функции F=((w→y)→x)∨¬z, но успел заполнить лишь фрагмент из трёх различных её строк, даже не указав, какому столбцу таблицы соответствует каждая из переменных w, x, y, z."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Базовой код, позволяет третий год подряд решать 2 номер ЕГЭ без особых проблем."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\n\ndef F(x, y, z, w):\n    return ((w <= y) <= x) or (not z)\n\n\nfor a1, a2, a3, a4, a5, a6, a7 in product([0, 1], repeat=7):\n    table = [(a1, a2, 1, a3), (a4, 0, a5, a6), (a7, 1, 0, 0)]\n    if len(set(table)) == len(table):\n        for i in permutations('xyzw'):\n            if [F(**dict(zip(i, r))) for r in table] == [0, 0, 0]:\n                print(*i, sep='')\n\n# Ответ: zywx"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируем все функции из модуля itertools, который предоставляет инструменты для работы с итерациями, включая произведение и перестановки."
+          }
+        ],
+        [
+          {
+            "text": "def F(x, y, z, w):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определяем функцию F, которая принимает четыре аргумента x, y, z и w."
+          }
+        ],
+        [
+          {
+            "text": "return ((w <= y) <= x) or (not z)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращаем результат логического выражения, которое проверяет две условия: первое - сравнение w и y, затем с x, и второе - отрицание z."
+          }
+        ],
+        [
+          {
+            "text": "for a1, a2, a3, a4, a5, a6, a7 in product([0, 1], repeat=7):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Генерируем все возможные комбинации из 7 бит (0 и 1) и проходим по ним, присваивая значения переменным a1 до a7."
+          }
+        ],
+        [
+          {
+            "text": "table = [(a1, a2, 1, a3), (a4, 0, a5, a6), (a7, 1, 0, 0)]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список table, состоящий из трех кортежей. Первый кортеж состоит из a1, a2, 1 и a3, второй - из a4, 0, a5 и a6, третий - из a7, 1, 0 и 0."
+          }
+        ],
+        [
+          {
+            "text": "if len(set(table)) == len(table):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, все ли кортежи в table уникальны, сравнивая длину множества уникальных элементов и длину самого списка table."
+          }
+        ],
+        [
+          {
+            "text": "for i in permutations('xyzw'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проходим по всем перестановкам строк 'xyzw', присваивая текущую перестановку переменной i."
+          }
+        ],
+        [
+          {
+            "text": "if [F(**dict(zip(i, r))) for r in table] == [0, 0, 0]:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем список, применяя функцию F к каждой строке table с использованием текущей перестановки i. Мы создаем словарь с парами (ключ, значение) с помощью zip и распаковываем его в функцию F. Сравниваем результат с списком [0, 0, 0], который обозначает, что все результаты функции F должны быть нулем."
+          }
+        ],
+        [
+          {
+            "text": "print(*i, sep='')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполнено, печатаем текущую перестановку i, разделяя элементы пробелами."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Наша Stepik подборкой задач ",
+          "href": "https://stepik.org/course/122969/promo",
+          "bold": true
+        },
+        {
+          "text": "😼"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/ALcDr0dNkP4uaHXlVpmirZ_0c5Yh0qS-wFwAuClnUEifxQpne6Hb9BkibBrpfzmBZA1sMmeQx6MSJTBtmE-BQOai_GdIljKYoUMszo8Db2NjJzTlAyxSjmGvL6_XLoK9IAe2Qhhg1KblfUQz1wc4fk4Sj0BGV1pmibCPc3r7DJJSIzxsdBnsHsNtDIfynHfduFAzLVsWkhHdZKQc4kAIrgenpGhWRFMiK-5bJyIphC-OCR65CfE2GmQnGx3Uyr3k1L1LBjvWSC14LSiVky2lEq7HQYbOLI4PoWxQpxZITNj3XwDjJcDGciH9rfHS3F5_IFxpSN8TWUGI8X6XyBw0GQ",
+      "file": "815-1.jpg"
+    }
+  ],
+  "task": 2,
+  "problem": "17856",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Демоверсия 2025",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 2 ЕГЭ: разбор задачи 17856",
+  "title": "Задание 2 ЕГЭ: разбор задачи 17856",
+  "slug": "zadanie-2-ege-razbor-zadachi-17856",
+  "hidden": false
+}

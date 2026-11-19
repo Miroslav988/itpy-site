@@ -1,0 +1,215 @@
+{
+  "id": 638,
+  "rubric": "breakdown",
+  "description": "В прилагаемом файле определите максимальное количество символов в непрерывной подпоследовательности, состоящей из идущих подряд групп символов KLMN в указанном порядке, при этом в…",
+  "date": "2024-05-23",
+  "source": "https://t.me/informatika_kege_itpy/638",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/638",
+      "thumb": {
+        "src": "/blog-media/638-1.jpg",
+        "width": 848,
+        "height": 576
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В прилагаемом файле определите максимальное количество символов в непрерывной подпоследовательности, состоящей из идущих подряд групп символов KLMN в указанном порядке, при этом в начале и в конце искомой последовательности группа символов KLMN может быть неполной."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Файл оставлю в комментариях 👇",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline()\ncount = 3\nmaxi = 0\nfor i in range(len(s)-3):\n    if s[i:i+4] in ('KLMN', 'LMNK', 'MNKL', 'NKLM'):\n        count += 1\n        maxi = max(maxi, count)\n    else:\n        count = 3\nprint(maxi)\n\n# Ответ: 182"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "s = open('24.txt').readline()",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Чтение строки из файла \"24.txt\" и сохранение ее в переменную s."
+          }
+        ],
+        [
+          {
+            "text": "count = 3",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация переменной count со значением 3, которая будет использоваться для подсчета последовательности."
+          }
+        ],
+        [
+          {
+            "text": "maxi = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация переменной maxi со значением 0, которая будет хранить максимальное количество найденных последовательностей."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(s)-3):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл, перебирающий индексы от 0 до len(s)-4 для итерации по всем четверным подстрокам строки s."
+          }
+        ],
+        [
+          {
+            "text": "if s[i:i+4] in ('KLMN', 'LMNK', 'MNKL', 'NKLM'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, содержится ли текущая четверная подстрока строки s в заданных последовательностях 'KLMN', 'LMNK', 'MNKL' или 'NKLM'."
+          }
+        ],
+        [
+          {
+            "text": "count += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличение значения переменной count на 1, если найдена подходящая четверная последовательность."
+          }
+        ],
+        [
+          {
+            "text": "maxi = max(maxi, count)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Обновление значения переменной maxi на максимальное из текущего значения и count."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В случае, если текущая четверная подстрока не соответствует заданным последовательностям:"
+          }
+        ],
+        [
+          {
+            "text": "count = 3",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Сброс значения переменной count до 3 для начала подсчета заново."
+          }
+        ],
+        [
+          {
+            "text": "print(maxi)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод максимального количества найденных последовательностей заданного типа в строке s после завершения цикла."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поддержать автора: boosty",
+          "href": "https://boosty.to/informatika_kege_itpy/donate",
+          "bold": true
+        },
+        {
+          "text": " 💵"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/OhZ7REGXrD1iF9Q4pMp5N2ShePc3gW1wgyNIeeU6FoZayFv74RTs3DQtspx8MfGMtU4Di22KSkae7wP6xzLhmAQk5-RvhFqi2Nrg19wUTENDVDqTjMztytevVX8sn-H1AW1SbgJn77KTQ8nHP5kXm7Rp8rJghA9V8o9ziDAVzE8IW6hdYmCnP1_eMMC3v3dgwkAaggt1qURSpjudGnj5zZIFdjW2o7pupZ6d625V3CccjxhUV6wgjhNJDfFKrIMhaU4EWtNGIrjQ8jHONLD8AAth1KRCUJh70VOU1WtNbpvyUde3P6uEPa5qDcLHCjcrFBSxa62Bvmci8uK1cjafJw",
+      "file": "638-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "16388",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "ЕГКР 27.04.24",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 16388",
+  "title": "Задание 24 ЕГЭ: разбор задачи 16388",
+  "slug": "zadanie-24-ege-razbor-zadachi-16388",
+  "hidden": false
+}

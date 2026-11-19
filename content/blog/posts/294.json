@@ -1,0 +1,48 @@
+{
+  "id": 294,
+  "rubric": "python",
+  "description": "В мире программирования существуют настоящие стратегии - условные операторы if, else и elif, которые направляют поток кода по заданным тропам. Логические операторы and и or…",
+  "date": "2023-11-18",
+  "source": "https://t.me/informatika_kege_itpy/294",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/294",
+      "thumb": {
+        "src": "/blog-media/294-1.jpg",
+        "width": 848,
+        "height": 368
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В мире программирования существуют настоящие стратегии - условные операторы if, else и elif, которые направляют поток кода по заданным тропам. Логические операторы and и or действуют как ключи к более глубоким проверкам, делая код более гибким и разнообразным."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Погрузимся в детали и узнаем, как эти инструменты придают вашему коду интригу и эффективность."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "С любовью, команда itpy ✨"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/UN0ruR2dsHblXYVzrmaWewo4wo2utvL3_raP6qIP0pzEqB8aCKn4XxlMzeFRZG2lI1P1Kq8l3skvPH49FYwoBk6O-OXAb6r8uTFqNhrGUoAGPQWVIplCTOPA48oLU8MTmrP-fSjv2VtipHVALHhFY7T4L0J6F6gPX56leoLOK7HGnzgo7wX6TWf7GkOQeibVQhOiYGuGOA6A63ytUs7kq6q3lLfgmaSsaMLFDNRpgZBlCdkOeuoSkc21tHIGvKez5eoUvoTCl9tpyjSGsmRKlwfhTWorRdZ_tkKnrfoMqQGOe4XzJh8QKFX7uYZkBj5hAID7LT4oLGErMD52M3ABig",
+      "file": "294-1.jpg"
+    }
+  ],
+  "baseTitle": "Условные операторы if, else, elif а также логические операторы and и or",
+  "title": "Условные операторы if, else, elif а также логические операторы and и or",
+  "slug": "uslovnye-operatory-if-else-elif-a-takzhe-logicheskie",
+  "hidden": false
+}

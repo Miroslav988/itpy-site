@@ -1,0 +1,225 @@
+{
+  "id": 693,
+  "rubric": "breakdown",
+  "description": "Значение арифметического выражения 3**100 - х, где х - целое положительное число, не превышающее 2030, записали в троичной системе счисления. Определите наименьшее значение х, при…",
+  "date": "2024-06-07",
+  "source": "https://t.me/informatika_kege_itpy/693",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/693-1.jpg",
+      "width": 800,
+      "height": 506,
+      "alt": "Задание 14 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Значение арифметического выражения 3**100 - х, где х - целое положительное число, не превышающее 2030, записали в троичной системе счисления."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите наименьшее значение х, при котором в троичной записи числа, являющегося значением данного арифметического выражения, содержится ровно два нуля."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответе запишите число в десятичной системе счисления."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": " \nfor x in range(1, 2030):\n    n = 3**100 - x\n    R = []\n    while n > 0:\n        R = [n % 3] + R\n        n //= 3\n    if R.count(0) == 2:\n        print(x)\n        break\n\n# Ответ: 9"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "1. for x in range(1, 2030)"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Цикл `for`, который проходит по значениям `x` от 1 до 2029."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "2. "
+        },
+        {
+          "text": "n = 3**100 - x",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Вычисление значения `n` как разности между `3` в степени `100` и `x`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "R = []",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Создание пустого списка `R`, который будет содержать цифры в троичной системе счисления."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "4. while n > 0"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Цикл `while`, который выполняется до тех пор, пока `n` больше нуля."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. "
+        },
+        {
+          "text": "R = [n % 3] + R",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Добавление остатка от деления числа `n` на 3 в начало списка `R`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "6. "
+        },
+        {
+          "text": "n //= 3",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Целочисленное деление числа `n` на 3 для перехода к следующей цифре троичной записи."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "7. if R.count(0) == 2"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Проверка условия: если в списке `R` ровно два раза встречается цифра 0."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "8. "
+        },
+        {
+          "text": "print(x)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Вывод значения `x`, которое соответствует условиям задачи."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "9. "
+        },
+        {
+          "text": "break",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Прерывание цикла, если было найдено первое подходящее значение `x`."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/UiQhJBH3rL7nhLKwuli7klFvDWUxq2rlgxBPkOxB5eK0CCJtWf1iFqUeLE-j_MGcUdy2FmNBnMVmDkd-jbXKW-jbZXR4BNV5X3CqkUYSOzkI9I0TvPiqrC7l-y4GzssnZIoWg648F_h1PSXfW79CJNq5vqwWUIKus3h8UVY3peYZVUIYaojDLhlkKpng_3YHLnLfQn2sz3arqmO6Pz0Xzg69-7NQsrIK7bqiPIsE2g_nPbI7K9vttzQmVnx42WIEkHWIXhNuyMwCsh9pWl8rSsCihn1e_0qNF2feai4cTsTTe1N-CarGh7a-NQWMpjRCNEwMlGZmm3E6UpSS6h3qLQ.jpg",
+      "file": "693-1.jpg"
+    }
+  ],
+  "task": 14,
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи",
+  "title": "Задание 14 ЕГЭ: разбор задачи",
+  "slug": "zadanie-14-ege-razbor-zadachi",
+  "hidden": true
+}

@@ -1,0 +1,38 @@
+{
+  "id": 863,
+  "rubric": "useful",
+  "description": "Такое условие часто встречается в 8 и 9 номерах, так что берите его на вооружение!",
+  "date": "2024-10-02",
+  "source": "https://t.me/informatika_kege_itpy/863",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/863-1.jpg",
+      "width": 800,
+      "height": 527,
+      "alt": "Простейший способ проверить строку на условие: \"Все элементы строки должны быть различны\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Такое условие часто встречается в 8 и 9 номерах, так что берите его на вооружение!"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = input('Введите строке: ')  \nif len(s) == len(set(s)):\n    print('Копий нет.')\nelse:\n    print('Копии есть.')"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/sY6iz3pi5fOA5g6KKF53g0U5iwlyXyP9kA3DGIwGSGG5n7TXmt1jGnpQt5_wp5XzLE1xUhijCvaLqHXu5cXbRdYTEHCuMV0Dw5f0ykRHERZQY7BV-93WNpMqP7PqMo__xG-OPCoviDLCzHVAzZNUHHIKkrJwnpej5WOUpTKJniGqgMhS9h_lVNOOtr2179qYWUC3mDrKgMXl3wchhMWFWqx0t7Wx7TDM3haF_eJNt_6Q6O_WzLDmOdtXMDdGLXBvHCGsZrSqXudFZGH8UKalAqU5fHFYAzHMBz7aMqVORImVONbJ7zSFXBZI0w7-OwhqaSYOLNVplEacPNmcYPElsQ.jpg",
+      "file": "863-1.jpg"
+    }
+  ],
+  "baseTitle": "Простейший способ проверить строку на условие: \"Все элементы строки должны быть различны\"",
+  "title": "Простейший способ проверить строку на условие: \"Все элементы строки должны быть различны\"",
+  "slug": "prosteyshiy-sposob-proverit-stroku-na-uslovie-vse-elementy",
+  "hidden": false
+}

@@ -1,0 +1,131 @@
+{
+  "id": 378,
+  "rubric": "python",
+  "description": "Функция all() возвращает True, если все элементы в итерируемом объекте истинные (тождественно истинны), или если объект пустой. В противном случае она возвращает False.",
+  "date": "2024-02-18",
+  "source": "https://t.me/informatika_kege_itpy/378",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/378",
+      "thumb": {
+        "src": "/blog-media/378-1.jpg",
+        "width": 848,
+        "height": 352
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "all()",
+          "code": true
+        },
+        {
+          "text": " возвращает "
+        },
+        {
+          "text": "True",
+          "code": true
+        },
+        {
+          "text": ", если все элементы в итерируемом объекте истинные (тождественно истинны), или если объект пустой. В противном случае она возвращает "
+        },
+        {
+          "text": "False",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример использования"
+    },
+    {
+      "type": "code",
+      "text": "numbers = [5, 8, 10, 3, 0]\nresult = all(num > 0 for num in numbers)\nprint(result)  # Вывод: False (потому что не все числа положительные)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "any()",
+          "code": true
+        },
+        {
+          "text": " возвращает "
+        },
+        {
+          "text": "True",
+          "code": true
+        },
+        {
+          "text": ", если хотя бы один элемент в итерируемом объекте истинный. Если объект пустой, она возвращает "
+        },
+        {
+          "text": "False",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример использования"
+    },
+    {
+      "type": "code",
+      "text": "numbers = [5, 8, 10, 3, -1]\nresult = any(num < 0 for num in numbers)\nprint(result)  # Вывод: True (потому что есть хотя бы одно отрицательное число)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Такие функции часто встречаются в 8, 9 и 17 номерах, и, конечно же, для 15 номера это must-have ☝️"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Более подробную информацию про эти две функции вы можете найти в "
+        },
+        {
+          "text": "нашей статье на Notion",
+          "href": "https://informatikakegeitpy.notion.site/all-any-tpy-a9bd3947d3134848b3caaa8f74531577?pvs=4"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "✏️",
+          "href": "https://informatikakegeitpy.notion.site/all-any-tpy-a9bd3947d3134848b3caaa8f74531577?pvs=4"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/qIYTVpV8zE0xvL5lMJ9rzk4iiOHvgxwV_T5oHlmfgBdksvndiAH6-LkR_TFKkb11G2qyA1oM3R787c2JIaMheMfDZM3oYxqsZfV6UF_mvnpM6go64k_xlogPXw96t6ElTYcXijLe8V69QQE-BR0BSjzPUo-rYqtx4eDkNOL-1RS6Tcij3u-Urg6w8WNWiZsppPZCX9bGWxB_FLz3LiMhVgDyDUm6_tB3aVgwECPo_LChluzV63xeEugr5mFbM10vNLBZZQAkzO4DJQUUX4Z6GZFQb7_Kk26MWfOxR9kR_S600wkbTxu53iL_4Qr2ALhQTQnJbo-GwiHIIzwFKyqDog",
+      "file": "378-1.jpg"
+    }
+  ],
+  "baseTitle": "Функции all() и any(), где они могут пригодиться на ЕГЭ",
+  "title": "Функции all() и any(), где они могут пригодиться на ЕГЭ",
+  "slug": "funktsii-all-i-any-gde-oni-mogut-prigoditsya-na-ege",
+  "hidden": false
+}

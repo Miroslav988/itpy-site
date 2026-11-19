@@ -1,0 +1,204 @@
+{
+  "id": 736,
+  "rubric": "breakdown",
+  "description": "Определите количество восьмеричных пятизначных чисел, которые не начинаются с нечётных цифр, не оканчиваются цифрами 2 или 6, а также содержат не более двух цифр 7.",
+  "date": "2024-06-12",
+  "source": "https://t.me/informatika_kege_itpy/736",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/736",
+      "thumb": {
+        "src": "/blog-media/736-1.jpg",
+        "width": 848,
+        "height": 480
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество восьмеричных пятизначных чисел, которые не начинаются с нечётных цифр, не оканчиваются цифрами 2 или 6, а также содержат не более двух цифр 7."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "На ",
+          "bold": true
+        },
+        {
+          "text": "kompege.ru",
+          "href": "http://kompege.ru/",
+          "bold": true
+        },
+        {
+          "text": " появился вариант с заданиями к ЕГЭ 2024, ",
+          "bold": true
+        },
+        {
+          "text": "ссылка тут.",
+          "href": "https://kompege.ru/variant?kim=25056868",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В комментариях оставлю решение через цикл "
+        },
+        {
+          "text": "for.",
+          "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\ncnt = 0\nfor per in product('01234567', repeat=5):\n    num = ''.join(per)\n    if num[0] != '0' and num[0] not in '1357':\n        if num[-1] not in '26' and num.count('7') <= 2:\n            cnt += 1\nprint(cnt)\n\n# Ответ: 9135"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций и классов из модуля itertools."
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация переменной cnt с начальным значением 0 для подсчета подходящих чисел."
+          }
+        ],
+        [
+          {
+            "text": "for per in product('01234567', repeat=5):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который перебирает все возможные 5-значные комбинации из цифр '01234567' (с повторениями) с помощью функции product."
+          }
+        ],
+        [
+          {
+            "text": "num = ''.join(per)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразование кортежа per в строку num, объединив все цифры."
+          }
+        ],
+        [
+          {
+            "text": "if num[0] != '0' and num[0] not in '1357':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: первая цифра числа не равна '0' и не принадлежит множеству '1357'."
+          }
+        ],
+        [
+          {
+            "text": "if num[-1] not in '26' and num.count('7') <= 2:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Дополнительная проверка: последняя цифра числа не принадлежит множеству '26' и количество цифр '7' в числе не превышает 2."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличение счетчика cnt на 1 при выполнении всех условий."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод общего количества подходящих чисел, которые соответствуют заданным условиям."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/kflhNnBqqrt_G_pjcRJtdtYGoG1i_g-bafSyLvR0M7EPqLSHMy2KkOHvp_BQNpO9J8ppnaJj6d4IsKTe2NQDdQEpRAUGf2_N59SggK_z11rSfFSzd9mHrfH9d8E62HdZKvguUCS5xOYF3UWkFvI5IDQRyTDnllm8XCDTLyKH6PUEuxGuYxV3MbkRpgGHBzH2vW6y4VLoQIKuykNGI0jD77rFaO1nsuC9qq6LZK3S5SNMzw06KbPnrQJunP575KGrFaVknhfNRKvNe2eckhMVj7ySmCKjJw8PFzNZ-oEdlJpH8PxTZrCbf8JAxhSD3yNZx1Vpi-fZmDY94yle6i45cQ",
+      "file": "736-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "17521",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Основная волна 07.06.24",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 17521",
+  "title": "Задание 8 ЕГЭ: разбор задачи 17521",
+  "slug": "zadanie-8-ege-razbor-zadachi-17521",
+  "hidden": false
+}

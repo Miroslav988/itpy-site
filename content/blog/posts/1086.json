@@ -1,0 +1,91 @@
+{
+  "id": 1086,
+  "rubric": "breakdown",
+  "description": "Кульминация решения (опять же на примере кластеров из файла B) - поиск центров кластеров и вычисление среднего арифметическое абсцисс центров кластеров файла B и среднего…",
+  "date": "2025-06-09",
+  "source": "https://t.me/informatika_kege_itpy/1086",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Кульминация решения (опять же на примере кластеров из файла B) - поиск центров кластеров и вычисление среднего арифметическое абсцисс центров кластеров файла B и среднего арифметическое ординат центров кластеров файла B."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код программы"
+    },
+    {
+      "type": "code",
+      "text": "centersB = [center(cl) for cl in clustersB]\npxB = sum(x for x, y in centersB) / 3 * 10000\npyB = sum(y for x, y in centersB) / 3 * 10000\nprint(int(pxB), int(pyB))"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "centersB = [center(cl) for cl in clustersB]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Находим центры каждого кластера из списка clustersB"
+          }
+        ],
+        [
+          {
+            "text": "pxB = sum(x for x, y in centersB) / 3 * 10000",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляем среднюю x-координату центров кластеров, умножаем на 10000 и делим на 3 (масштабирование)"
+          }
+        ],
+        [
+          {
+            "text": "pyB = sum(y for x, y in centersB) / 3 * 10000",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисляем среднюю y-координату центров кластеров, умножаем на 10000 и делим на 3 (масштабирование)"
+          }
+        ],
+        [
+          {
+            "text": "print(int(pxB), int(pyB))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим результат в виде целых чисел"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [],
+  "task": 27,
+  "baseTitle": "Задание 27 ЕГЭ: разбор задачи",
+  "title": "Задание 27 ЕГЭ: разбор задачи (9 июня 2025)",
+  "slug": "zadanie-27-ege-razbor-zadachi-9-iyunya-2025-1086",
+  "hidden": false
+}

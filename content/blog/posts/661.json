@@ -1,0 +1,248 @@
+{
+  "id": 661,
+  "rubric": "breakdown",
+  "description": "а) если число N делится на 3, то первая и последняя цифры меняются местами, а затем в конец дописывается единица; б) если число N на 3 не делится, то остаток от деления на 3…",
+  "date": "2024-05-30",
+  "source": "https://t.me/informatika_kege_itpy/661",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/661",
+      "thumb": {
+        "src": "/blog-media/661-1.jpg",
+        "width": 848,
+        "height": 816
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "а) если число N делится на 3, то первая и последняя цифры меняются местами, а затем в конец дописывается единица;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "б) если число N на 3 не делится, то остаток от деления на 3 дописывается в конец числа."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\ndef convert(num, base):\n    res = ''\n    while num > 0:\n        res = alphabet[num % base] + res\n        num //= base\n    return res\n\n\nR = []\nfor n in range(1, 1000, 2):\n    s = convert(n, 4)\n    if n % 3 == 0:\n        s = s[-1] + s[1:-1] + s[0] + '1'\n    else:\n        s += str(n % 3)\n    r = int(s, 4)\n    if r <= 340:\n        R.append(r)\nprint(max(R))\n\n# Ответ 334"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def convert(num, base):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Функцию convert() комментировать не буду, опишу её постом ниже."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация пустого списка R, который будет использоваться для хранения результатов."
+          }
+        ],
+        [
+          {
+            "text": "for n in range(1, 1000, 2):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который проходит по нечетным числам от 1 до 999 включительно."
+          }
+        ],
+        [
+          {
+            "text": "s = convert(n, 4)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразование числа n в строку с использованием четверичной системы счисления."
+          }
+        ],
+        [
+          {
+            "text": "if n % 3 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, является ли число n кратным 3."
+          }
+        ],
+        [
+          {
+            "text": "s = s[-1] + s[1:-1] + s[0] + '1'",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если число n кратно 3, изменяем строку s, меняя местами первый и последний символ, добавляем '1' в конец."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В противном случае (число n не кратно 3) выполняем следующий блок кода."
+          }
+        ],
+        [
+          {
+            "text": "s += str(n % 3)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если число n не кратно 3, добавляем остаток от деления числа n на 3 в виде строки в конец строки s."
+          }
+        ],
+        [
+          {
+            "text": "r = int(s, 4)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразование строки s обратно в число в четверичной системе счисления."
+          }
+        ],
+        [
+          {
+            "text": "if r <= 340:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, меньше ли полученное число r или равно 340."
+          }
+        ],
+        [
+          {
+            "text": "R.append(r)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавление числа r в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод максимального числа из списка R"
+          },
+          {
+            "text": ".",
+            "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поддержать автора: boosty",
+          "href": "https://boosty.to/informatika_kege_itpy/donate",
+          "bold": true
+        },
+        {
+          "text": " 💵"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Q7u2nsalS94Ll57bRuBGVlMkYTMjpgeS-rAkvXc2EcuL9XGUXshxENP_DVPVtmUviX_wYV7IX6UXqJS_PbZpC55pwpnPu1-yrQuiYZBNYFtJJ8DUIt0tZL5Etnr--ks52MgARDtY2FrvbUJCV7Jk9gnIAUwygz2TBvlX5-93qrggwBJ0vAXYi9P5DZF0tGGM3dwrubqt1gz_QHwm7jxB547_4Z8W1Kv9adWRTiQ4So_0sg69hDBwVDGOi4cbeaJVyG4WtOlUJIbKt0KdRTtdh9SumpNcOBdWhj5CcLf0HIgdijQRwARfNV6Wy6uBrbqdtbh9ski6HS7cxiTdAshkPQ",
+      "file": "661-1.jpg"
+    }
+  ],
+  "task": 5,
+  "problem": "13874",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Л. Шастин",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 5 ЕГЭ: разбор задачи 13874",
+  "title": "Задание 5 ЕГЭ: разбор задачи 13874",
+  "slug": "zadanie-5-ege-razbor-zadachi-13874",
+  "hidden": false
+}

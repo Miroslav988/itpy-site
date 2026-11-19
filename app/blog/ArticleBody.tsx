@@ -27,7 +27,7 @@ export default function ArticleBody({ blocks }: { blocks: Block[] }) {
             return block.level === 2 ? <h2 key={index}>{block.text}</h2> : <h3 key={index}>{block.text}</h3>;
           case "list": {
             const items = block.items.map((item, itemIndex) => <li key={itemIndex}><Inlines content={item} /></li>);
-            return block.ordered ? <ol key={index}>{items}</ol> : <ul key={index}>{items}</ul>;
+            return block.ordered ? <ol key={index} start={block.start}>{items}</ol> : <ul key={index}>{items}</ul>;
           }
           case "quote":
             return <blockquote key={index}><Inlines content={block.content} /></blockquote>;
@@ -39,6 +39,13 @@ export default function ArticleBody({ blocks }: { blocks: Block[] }) {
                 <img src={block.src} alt={block.alt} width={block.width} height={block.height} loading="lazy" decoding="async" />
                 {block.caption && <figcaption>{block.caption}</figcaption>}
               </figure>
+            );
+          case "video":
+            return (
+              <a className="article-video" key={index} href={block.href} target="_blank" rel="noopener noreferrer">
+                <img src={block.thumb.src} alt="" width={block.thumb.width} height={block.thumb.height} loading="lazy" decoding="async" />
+                <span className="article-video-play">Смотреть видео ↗</span>
+              </a>
             );
           case "divider":
             return <hr key={index} />;

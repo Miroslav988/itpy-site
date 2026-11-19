@@ -1,0 +1,242 @@
+{
+  "id": 991,
+  "rubric": "breakdown",
+  "description": "Определите в прилагаемом файле максимальное количество идущих подряд символов, среди которых комбинация символов RO встречается ровно 21 раз, а комбинации символов ORO и ROR ни…",
+  "date": "2025-02-23",
+  "source": "https://t.me/informatika_kege_itpy/991",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/991",
+      "thumb": {
+        "src": "/blog-media/991-1.jpg",
+        "width": 848,
+        "height": 464
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите в прилагаемом файле максимальное количество идущих подряд символов, среди которых комбинация символов RO встречается ровно 21 раз, а комбинации символов ORO и ROR ни разу не встречаются."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Если ORO и ROR найдутся в строке, то не нужно отсеивать все строку - необходимо разбить ее и исследовать подстроки по отдельности!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "s = open('0. files/24.txt').readline()\ns = s.split('RO')\nmaxi = 0\nfor i in range(len(s)-21):\n    r = 'O' + 'RO'.join(s[i:i+22]) + 'R'\n    if 'ROR' in r or 'ORO' in r:\n        r = r.replace('ROR', 'RO OR')\n        r = r.replace('ORO', 'OR RO')\n        maxi = max(maxi, max([len(x) for x in r.split()]))\nprint(maxi)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 814",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline()"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Открываем файл '24.txt' и читаем первую строку."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = s.split('RO')"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "Разделяем строку на подстроки по разделителю 'RO' и сохраняем результат в список."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "maxi = 0"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "Инициализируем переменную maxi для хранения максимальной длины отдельных частей строки."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for i in range(len(s)-21):"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "Запускаем цикл по индексам списка s от 0 до длины списка минус 21."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "r = 'O' + 'RO'.join(si:i+22) + 'R'"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 5,
+      "items": [
+        [
+          {
+            "text": "Формируем новую строку r, соединяя 22 элемента списка s с добавлением 'O' в начале и 'R' в конце."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "if 'ROR' in r or 'ORO' in r:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 6,
+      "items": [
+        [
+          {
+            "text": "Проверяем, содержит ли строка r подстроки 'ROR' или 'ORO'."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "r = r.replace('ROR', 'RO OR')"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 7,
+      "items": [
+        [
+          {
+            "text": "Заменяем все вхождения 'ROR' на 'RO OR' в строке r."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "r = r.replace('ORO', 'OR RO')"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 8,
+      "items": [
+        [
+          {
+            "text": "Заменяем все вхождения 'ORO' на 'OR RO' в строке r."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "maxi = max(maxi, max(len(x) for x in r.split()))"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Обновляем значение maxi, определяя максимальную длину части среди всех частей, на которые была разделена строка r."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "print(maxi)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 10,
+      "items": [
+        [
+          {
+            "text": "Выводим максимальную длину среди найденных частей строки."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Mfx8W7mfkoitVgijGA0A6AKgJ6itH9JefWfq5GVtlxch9CqpA4RdyNZ3mPQWWXM4WdcYkLNH6xi7tgZxF--Bn-6BCOdiFtrWqd8YkekNPM8l9vlK2DHlpgusF_yFn9hu33-i0UyGD-c7-RbDnbgZuDUU3ttf1euCyTQQ_3TDg8F26-wewcuvDOFUGEii0lfJRoD63K5QoHIGuecFG04Q5bxIdBvODEmo4_Xndwx2aspd1LVUHRLJHnb2FLGgOQCZVm_Rf_LoHEMbfuhSzHbEXS2DwbiPbyR3yl3ZNEoheqQLx77MOVKjn_skHmF75lkXtUUNitVLH4uD1fdTM6Ltzw",
+      "file": "991-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "12476",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "PRO100 ЕГЭ",
+    "level": "Сложный"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 12476",
+  "title": "Задание 24 ЕГЭ: разбор задачи 12476",
+  "slug": "zadanie-24-ege-razbor-zadachi-12476",
+  "hidden": false
+}

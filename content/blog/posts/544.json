@@ -1,0 +1,241 @@
+{
+  "id": 544,
+  "rubric": "breakdown",
+  "description": "У исполнителя есть три команды, которые обозначены буквами: A. Вычесть 1 B. Разделить на 2 С. Разделить на 3 Команда B может быть исполнена только для чётного числа, команда C –…",
+  "date": "2024-05-05",
+  "source": "https://t.me/informatika_kege_itpy/544",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/544",
+      "thumb": {
+        "src": "/blog-media/544-1.jpg",
+        "width": 848,
+        "height": 704
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "У исполнителя есть три команды, которые обозначены буквами:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "A. Вычесть 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "B. Разделить на 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "С. Разделить на 3"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Команда B может быть исполнена только для чётного числа, команда C –"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "только для числа, кратного 3."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько существует программ, которые преобразуют исходное число 19"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "в число 1 и при этом траектория вычислений не содержит чисел 12 и 15?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b):\n    A, B, C = 0, 0, 0\n    if a <= b or a == 12 or a == 15:\n        return a == b\n    A = F(a - 1, b)\n    if a % 2 == 0:\n        B = F(a // 2, b)\n    if a % 3 == 0:\n        C = F(a // 3, b)\n    return A + B + C\n\nprint(F(19, 1))\n\n# Ответ: 43"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a, b):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определение функции с именем F, которая принимает два аргумента a и b."
+          }
+        ],
+        [
+          {
+            "text": "A, B, C = 0, 0, 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация переменных A, B, C с начальным значением 0."
+          }
+        ],
+        [
+          {
+            "text": "if a <= b or a == 12 or a == 15:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если a меньше или равно b, или a равно 12, или a равно 15, то выполнить следующий блок кода."
+          }
+        ],
+        [
+          {
+            "text": "return a == b",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат результата сравнения a и b (логическое значение True или False)."
+          }
+        ],
+        [
+          {
+            "text": "A = F(a - 1, b)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции F с аргументами a - 1 и b и присвоение результата переменной A."
+          }
+        ],
+        [
+          {
+            "text": "if a % 2 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если a делится на 2 без остатка."
+          }
+        ],
+        [
+          {
+            "text": "B = F(a // 2, b)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции F с аргументами a // 2 и b и присвоение результата переменной B."
+          }
+        ],
+        [
+          {
+            "text": "if a % 3 == 0:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если a делится на 3 без остатка."
+          }
+        ],
+        [
+          {
+            "text": "C = F(a // 3, b)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции F с аргументами a // 3 и b и присвоение результата переменной C."
+          }
+        ],
+        [
+          {
+            "text": "return A + B + C",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат суммы значений переменных A, B, C."
+          }
+        ],
+        [
+          {
+            "text": "print(F(19, 1))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции F с аргументами 19 и 1 и вывод результата выполнения функции."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/m2IeaJM8tKZHs-rfAm8-GkhW59wilFC_wLD2dGrSsJr_yTHfiHOXYhzHYXA2vc0xRfJ9L04DkRMEF8967yCq-3QR5SEtKEYiVYeGJLf3__X-otD5J0QJdeNtN6fwdFmBVe8Be20kQtGTIupxw8tjvnRyb9QinNmF4qw-swXndhHDDi1Yatm15I1GePcZgHhMaFd9TDfQByo2j7V0AQnrfTwfs6k085n4G0uXOnE1WiCVJTmcxKuDLSxJfjkDrbWVLP-HcfGDHUMXN1hN0WRI0gle-rP0jS6WqKf86zwgJ9v-uVJkM7AQVBsupDovCTU0u75R6nKn9qCeRJshSEst6g",
+      "file": "544-1.jpg"
+    }
+  ],
+  "task": 23,
+  "collection": "СтатГрад",
+  "meta": {
+    "source": "Статград",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи — Статград",
+  "title": "Задание 23 ЕГЭ: разбор задачи — Статград",
+  "slug": "zadanie-23-ege-razbor-zadachi-statgrad-544",
+  "hidden": true
+}

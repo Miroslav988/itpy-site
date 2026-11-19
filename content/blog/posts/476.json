@@ -1,0 +1,109 @@
+{
+  "id": 476,
+  "rubric": "python",
+  "description": "Когда речь идет о сортировке данных в Python, важно понимать разницу между применением функции sorted(X, reverse=True) и конструкции reversed(sorted(X)). Давайте рассмотрим эти…",
+  "date": "2024-04-24",
+  "source": "https://t.me/informatika_kege_itpy/476",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/476",
+      "thumb": {
+        "src": "/blog-media/476-1.jpg",
+        "width": 848,
+        "height": 736
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Когда речь идет о сортировке данных в Python, важно понимать разницу между применением функции "
+        },
+        {
+          "text": "sorted(X, reverse=True)",
+          "code": true
+        },
+        {
+          "text": " и конструкции "
+        },
+        {
+          "text": "reversed(sorted(X))",
+          "code": true
+        },
+        {
+          "text": ". Давайте рассмотрим эти два подхода более подробно."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "sorted(X, reverse=True)",
+          "code": true
+        },
+        {
+          "text": ":"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Функция sorted с параметром reverse=True применяет сортировку элементов последовательности в порядке убывания. Это означает, что наименьшие значения будут находиться в конце списка, а наибольшие - в начале."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример"
+    },
+    {
+      "type": "code",
+      "text": "X = [3, 1, 4, 1, 5, 9, 2, 6, 5]\nsorted_X = sorted(X, reverse=True)\nprint(sorted_X)  \n# Вывод: [9, 6, 5, 5, 4, 3, 2, 1, 1]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "reversed(sorted(X)):",
+          "code": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Использование reversed(sorted(X)) подразумевает сначала сортировку списка, а затем его обращение. Важно помнить, что reversed возвращает итератор, поэтому обычно его результат преобразуется в список или кортеж для удобства."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Пример"
+    },
+    {
+      "type": "code",
+      "text": "X = [3, -1, 4, -1, 5, -9, 2, -6, 5]\nreversed_sorted = list(reversed(sorted(X)))\nprint(reversed_sorted)\n# Вывод: [5, 5, 4, 3, 2, -1, -1, -6, -9]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для применения устойчивой сортировки, важно разумно выбирать между sorted(X, reverse=True) и reversed(sorted(X)). Понимание принципов устойчивой сортировки поможет вам эффективно работать с вашими структурами данных. Надеюсь, эта информация будет полезной для вас! 🚀"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/bpPGEsOLmkGvqOfG2Jz7wBxvKHzWxTZ9Y_qFxYp8dSek2A38dqCVH-y_W2xe5pIuyvs2f6LNIUwAcqn6pgnSXB4hEs_05h3w7F9fuTi48yvcd_IoN2hBqwLs5Wcl9-Z6E2F4Myk-uryvgIdTngils8jDAed1ANcCrxXlpb7ws5qtqVGV1ybetKtC7nNLhPd0zUvV_TT1v6-hogoQtdAfDiU-FABoDSJtLKTZzY5HWOzoGczchi4hPXamtrpz2u8Kb5n7GJapIE7KG3GasJSMgzsF182Qd2-S9ImphB-ArQisHp_8zMQhR4G1PE_Vx8CQzMp1a97JrvpLVjO6HaGeXw",
+      "file": "476-1.jpg"
+    }
+  ],
+  "baseTitle": "sorted(X, reverse=True) и reversed(sorted(X)) в Python разница и особенности",
+  "title": "sorted(X, reverse=True) и reversed(sorted(X)) в Python разница и особенности",
+  "slug": "sorted-x-reverse-true-i-reversed-sorted-x-v-python-raznitsa",
+  "hidden": false
+}

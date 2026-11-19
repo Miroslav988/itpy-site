@@ -1,0 +1,94 @@
+{
+  "id": 141,
+  "rubric": "useful",
+  "description": "Каждая ваша реакция помогает нам создавать качественный контент, поэтому мы очень ценим нашу аудиторию! Спасибо, что поддерживаете нас!",
+  "date": "2023-06-07",
+  "source": "https://t.me/informatika_kege_itpy/141",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/141",
+      "thumb": {
+        "src": "/blog-media/141-1.jpg",
+        "width": 400,
+        "height": 400
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Каждая ваша реакция помогает нам",
+          "bold": true
+        },
+        {
+          "text": " создавать качественный контент, поэтому мы очень ценим нашу аудиторию!"
+        },
+        {
+          "text": " Спасибо, что поддерживаете нас!",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Какое значение может принимать данный код? Ставь верный emoji"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "True",
+          "code": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "NameError",
+          "code": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "False",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Правильный ответ ждет Вас здесь:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Если вы попытаетесь запустить этот код в любой Python IDE, то вы получите ошибку \"NameError: name 'N' is not defined\"."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Это происходит потому, что переменная N является локальной для функции F, в то время как переменная M находится вне тела функции и является глобальной переменной, находящейся выше ее."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/WRBRvvysFSLGkQIvD7IOtl7yESb4cePFY9cMOb55P-RcEPDdmfnzZNJJ9ACdSuE0br4qZryy1r91kbhnbY0_439v8fRMSmH0E9JFdL1GB4GLQZwrR0bi8s9c3tqzjrwk0KY9D5BLmZJ-GuD1qodZ_S4P2NHsERVEgpHz3mURtRj36wcO6e1GadEHxzBLkFL-Je4MiACfPoxFQzpEzg_axRsmqfk-yORVTIuEMULAJaPB9aG_2uFrhbG83lP5YIKx-jlox1aFZJRbsdxmHEZXr92Gu9kN7Ymk6lmGlW2g1eBO8qhCBSmLTWdxlIU0WhlzdcUDXyOoLIST58mt791HwA",
+      "file": "141-1.jpg"
+    }
+  ],
+  "baseTitle": "Почему мы используем реакции, а не опросы",
+  "title": "Почему мы используем реакции, а не опросы",
+  "slug": "pochemu-my-ispolzuem-reaktsii-a-ne-oprosy",
+  "hidden": false
+}

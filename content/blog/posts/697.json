@@ -1,0 +1,75 @@
+{
+  "id": 697,
+  "rubric": "breakdown",
+  "description": "Пусть S - последовательность из N целых чисел, пронумерованных подряд, начиная с 1. Обозначим S_i,S_j, S_k как три элемента последовательности S, где і < j < k. Определите в…",
+  "date": "2024-06-07",
+  "source": "https://t.me/informatika_kege_itpy/697",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/697-1.jpg",
+      "width": 782,
+      "height": 800,
+      "alt": "Задание 27 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пусть S - последовательность из N целых чисел, пронумерованных подряд, начиная с 1. Обозначим S_i,S_j, S_k как три элемента последовательности S, где і < j < k. Определите в последовательности S три таких члена S_i, S_j, S_k, что S_i > S_j, S_k > S_j и значение выражения (S_i -S_i) + (S_k-S_j) максимально."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Гарантируется, что в последовательности есть три числа S_i, S_j, S_k, удовлетворяющие условию задачи."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Входные данные"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Дано два входных файла [файл А и файл В), каждый из которых в первой строке содержит число N [5 < N < 10 000 000] - количество целых чисел. Каждая из следующих N строк содержит одно целое число, не превышающее по модулю 1000."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В ответ укажите два числа: сначала значение искомой величины для файла А, затем - для файла В."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "f = open('27.txt')\nn = int(f.readline())\nM = [int(i) for i in f]\nres = 0\nfor i in range(n):\n    for j in range(i+1, n):\n        for k in range(j+1, n):\n            s1 = M[i]\n            s2 = M[j]\n            s3 = M[k]\n            if s1 > s2 < s3:\n                res = max(res, (s1 - s2) + (s3 - s2))\nprint(res)\nres = 0\nm1 = m2 = m3 = r1 = 0\nfor i in range(n - 2):\n    m1 = max(m1, M[i])\n    if m1 - M[i+1] > r1:\n        r1 = m1 - M[i + 1]\n        m2 = M[i + 1]\n    m3 = M[i + 2]\n    res = max(res, m3 - m2 + r1)\nprint(res)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/FS-r_eNXDrOeMPpPPnvCRD87KuXYD7yX0emWdS2MeJDGwKeXnJDypzd9gF8VI40nAImzGH71tYu2OyZbheRGqjMhcHD7k8nliCoaH4Ctq7f5wZnt3k83I8rb_m_kva7jBXrbrfrV7g4vQfXDftnIAN8SDHhcOIIMC-QJve2r8Ngz1Ho9X6ZR19C-CW_DX2orHwbDa-iu9L63gbqkGfVV09Jugf26tQI8-tpA3NyCSDMyhIen9Zrv-asYR083WHd4VMdpmjiScsAUc0v5WSbeTDQGqBe_ajN6D-_VnABLEp2Q1iEFGZlBjTt0colMActqPwt71YKXz1VJVtGSYyvfjQ.jpg",
+      "file": "697-1.jpg"
+    }
+  ],
+  "task": 27,
+  "baseTitle": "Задание 27 ЕГЭ: разбор задачи",
+  "title": "Задание 27 ЕГЭ: разбор задачи (7 июня 2024)",
+  "slug": "zadanie-27-ege-razbor-zadachi-7-iyunya-2024",
+  "hidden": false
+}

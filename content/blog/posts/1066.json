@@ -1,0 +1,238 @@
+{
+  "id": 1066,
+  "rubric": "breakdown",
+  "description": "Найдите количество четырехзначных чисел в девятеричной системе счисления, в которых есть ровна одна цифра 8, а сумма цифр слева от нее равна сумме цифр справа от нее. Примечание:…",
+  "date": "2025-05-16",
+  "source": "https://t.me/informatika_kege_itpy/1066",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1066-1.jpg",
+      "width": 800,
+      "height": 531,
+      "alt": "Задание 8 ЕГЭ: разбор задачи 15413"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Найдите количество четырехзначных чисел в девятеричной системе счисления, в которых есть ровна одна цифра 8, а сумма цифр слева от нее равна сумме цифр справа от нее."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Примечание: если слева или справа от 8 цифр нет, то сумма считается равной нулю"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\ncnt = 0\nfor p in product('012345678', repeat=4):\n    num = ''.join(p)\n    if num[0] != '0':\n        if num.count('8') == 1:\n            i = num.index('8')\n            summa_left = sum(map(int, num[:i]))\n            summa_right = sum(map(int, num[i+1:]))\n            if summa_left == summa_right:\n                cnt += 1\nprint(cnt)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 64",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля itertools, который предоставляет удобные инструменты для работы с итераторами"
+          }
+        ],
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация счётчика cnt, который будет хранить количество подходящих чисел"
+          }
+        ],
+        [
+          {
+            "text": "for p in product('012345678', repeat=4):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл по всем возможным комбинациям длиной 4 из цифр '012345678' (включая повторы)"
+          }
+        ],
+        [
+          {
+            "text": "num = ''.join(p)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Преобразование текущей комбинации p в строку num"
+          }
+        ],
+        [
+          {
+            "text": "if num[0] != '0':",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что число не начинается с нуля (чтобы избежать ведущих нулей)"
+          }
+        ],
+        [
+          {
+            "text": "if num.count('8') == 1:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что в числе ровно одна цифра '8'"
+          }
+        ],
+        [
+          {
+            "text": "i = num.index('8')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Нахождение индекса цифры '8' в строке num"
+          }
+        ],
+        [
+          {
+            "text": "summa_left = sum(map(int, num[:i]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисление суммы цифр слева от '8' (преобразование среза строки в числа и их суммирование)"
+          }
+        ],
+        [
+          {
+            "text": "summa_right = sum(map(int, num[i+1:]))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисление суммы цифр справа от '8'"
+          }
+        ],
+        [
+          {
+            "text": "if summa_left == summa_right:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка равенства сумм слева и справа от '8'"
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличение счётчика, если условие выполнено"
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод итогового количества подходящих чисел"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/YNS1sAdbjb9Fv4f0geVdtQfMPr09Ngbf8cpGuS5otbi2bQ-3azH9pJ5Viy33DAhDVvyCYbXNKfp0C8M9gQi-b9mjAg8yN1RCd1_yNy0k1y4BANfqLqVrGgIKFqfHcqOb5P_-BsDWnm2cKbySZohBanvrDhKYMcTyl4MbqR6T-lWYcGXHBX0dY1qU718NVsnUTu8GgvYYTpdqWAduexRhBTMcx4CZv2euWyX4IuAovuWy9y7y99i7PGNwEN2Q7YGFhP5NowS36VLMIkAzs-SIvu7w2YNi2QTB7n_YjW27ppeQd2C4gwgwH-jwjqoRlA35S8NGV5hpzWa6EmrqKjOHkQ.jpg",
+      "file": "1066-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "15413",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "А.Вдовин",
+    "level": "Средней"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 15413",
+  "title": "Задание 8 ЕГЭ: разбор задачи 15413",
+  "slug": "zadanie-8-ege-razbor-zadachi-15413",
+  "hidden": false
+}

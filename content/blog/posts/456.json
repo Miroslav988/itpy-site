@@ -1,0 +1,104 @@
+{
+  "id": 456,
+  "rubric": "python",
+  "description": "f-строки в Python - это удобный и мощный инструмент для форматирования вывода данных.",
+  "date": "2024-04-20",
+  "source": "https://t.me/informatika_kege_itpy/456",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/456",
+      "thumb": {
+        "src": "/blog-media/456-1.jpg",
+        "width": 816,
+        "height": 848
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "f-строки в Python - это удобный и мощный инструмент для форматирования вывода данных."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Дадим небольшой обзор возможностей f-строк, которые помогут вам в различных сценариях использования:"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Преобразование чисел в другие системы счисления"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Обычно для этого использовали функции bin(), oct() и hex(). С f-строками это можно сделать гораздо проще:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "num = 10\nprint(f'{num:b}')  # Вывод: '1010'\nprint(f'{num:o}')  # Вывод: '12'\nprint(f'{num:X}')  # Вывод: 'A'"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Указание ведущих нулей"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Можно указать количество символов, до которого нужно дописать ведущие нули:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "num1 = 10\nnum2 = -10\nx = 5\nprint(f'{num1:08b}')  # Вывод: '00001010'\nprint(f'{num2:08}')   # Вывод: '-0000010'\nprint(f'{10:0{x}}')   # Вывод: '00010'"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Понравился пост? Поддержи реакцией"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "Обычный скучный лайк"
+          }
+        ],
+        [
+          {
+            "text": "Весит как 10 обычных лайков"
+          }
+        ],
+        [
+          {
+            "text": "Кандидат на самый лучший пост недели"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/LdnK4OWCV0FsKdvb8S1yK_DQkfA42yC0fGZjXpml4_oALLiW7421VW9I7CrmPFBHCY6uGTuIsLkHQKJs06_Uq10tm2XdgkFFOQYaVNCBhRs5897qqc1m1ix3UMtPPH3RGDmS0_DhLUKW671qWtIuRM-dPpOCjoT2O42Q75P9PsH8ajB6dUhKcNqYwej9ka8vHF3Z8HN7HzhIfj0uAaQLkdmjPjIm9ZdhHeDkRC-Tb5-ekP3mOARezqDl1Y9Qmoas5lJy5G37DFI9AetkbwF0lKFT4ysop7-la-r8f58cCHPFHDziAXaCgJYmWMsmUG38ZPKBC3CQ4xuaL_iZN7pHQQ",
+      "file": "456-1.jpg"
+    }
+  ],
+  "baseTitle": "Использование f-строк в Python",
+  "title": "Использование f-строк в Python",
+  "slug": "ispolzovanie-f-strok-v-python",
+  "hidden": false
+}

@@ -1,0 +1,77 @@
+{
+  "id": 1228,
+  "rubric": "python",
+  "description": "Они очень сильно экономят место и время",
+  "date": "2025-12-29",
+  "source": "https://t.me/informatika_kege_itpy/1228",
+  "blocks": [
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Они очень сильно экономят место и время"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Проверка числа на простоту",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "def is_prime(n):\n    return n > 1 and all(n % i for i in range(2, int(n**0.5)+1))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Нахождение центроида (задача 27)",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "def center(cl):\n    return min((sum(dist(p, g) for g in cl), p) for p in cl)[1]"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "dist()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " определяется в зависимости от условия задачи"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Получение всех делителей числа",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "def divisors(n):\n    return {x for d in range(2, int(n**0.5)+1) if n%d==0 for x in (d, n//d)}"
+    }
+  ],
+  "media": [],
+  "baseTitle": "Полезные функции в одну строчку для ЕГЭ по информатике",
+  "title": "Полезные функции в одну строчку для ЕГЭ по информатике",
+  "slug": "poleznye-funktsii-v-odnu-strochku-dlya-ege-po-informatike",
+  "hidden": false
+}

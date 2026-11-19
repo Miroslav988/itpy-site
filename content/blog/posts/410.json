@@ -1,0 +1,136 @@
+{
+  "id": 410,
+  "rubric": "python",
+  "description": "Функция down() опускает перо черепахи, позволяя ей рисовать на экране.",
+  "date": "2024-04-01",
+  "source": "https://t.me/informatika_kege_itpy/410",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "down()",
+          "code": true
+        },
+        {
+          "text": " опускает перо черепахи, позволяя ей рисовать на экране."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.down()\nt.forward(100)\nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "up()",
+          "code": true
+        },
+        {
+          "text": " поднимает перо черепахи, останавливая рисование."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.down()\nt.forward(100)\nt.up()\nt.forward(50)\nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "dot(size, color)",
+          "code": true
+        },
+        {
+          "text": " рисует точку заданного размера (size) и цвета (color) в текущей позиции черепахи."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.dot(10, \"red\")\nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "screensize(width, height)",
+          "code": true
+        },
+        {
+          "text": " устанавливает размеры экрана в пикселях. Это определяет размер доступной области для рисования."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.screensize(800, 600)\nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "tracer(n, delay)",
+          "code": true
+        },
+        {
+          "text": " управляет скоростью отрисовки черепахи. n задает количество шагов отрисовки, а delay - задержку между шагами."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.tracer(3, 100)  \nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "done()",
+          "code": true
+        },
+        {
+          "text": " ожидает закрытия окна черепахи перед окончанием программы."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "import turtle as t\nt.done()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Эти функции помогают управлять рисованием и настройками экрана при работе с библиотекой Turtle в Python."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Рисование и управление экраном в Turtle: down(), up(), dot(), screensize(),…",
+  "title": "Рисование и управление экраном в Turtle: down(), up(), dot(), screensize(),…",
+  "slug": "risovanie-i-upravlenie-ekranom-v-turtle-down-up-dot",
+  "hidden": false
+}

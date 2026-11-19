@@ -1,0 +1,372 @@
+{
+  "id": 42,
+  "rubric": "python",
+  "description": "Типы данных позволяют хранить в переменной разные данные, под каждый тип выделается свое кол-во памяти. Так как Python является языком с динамической типизацией, то определение…",
+  "date": "2022-07-07",
+  "source": "https://t.me/informatika_kege_itpy/42",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/42-1.jpg",
+      "width": 800,
+      "height": 284,
+      "alt": "Типы данных в Python"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Читать подробнее",
+          "href": "https://tproger.ru/translations/python-data-types/",
+          "italic": true
+        },
+        {
+          "text": "..",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Вступление"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Типы данных позволяют хранить в переменной разные данные, под каждый тип выделается свое кол-во памяти. Так как "
+        },
+        {
+          "text": "Python",
+          "href": "https://ru.wikipedia.org/wiki/Python"
+        },
+        {
+          "text": " является языком с "
+        },
+        {
+          "text": "динамической типизацией",
+          "href": "https://ru.wikipedia.org/wiki/%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D0%B8%D0%BF%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F"
+        },
+        {
+          "text": ", то определение подходящего типа данных к переменной происходит автоматически в момент присвоения ей значения."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Нам крайне важно различать действия над разными типами и разницу между ними."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теория"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "A"
+        },
+        {
+          "text": " = 4",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "# int - integer",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Целочисленный тип данных (хранит целые числа)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "B"
+        },
+        {
+          "text": " = 4.0 ",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "# float",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Вещественные числа или числа с плавающей точкой (дроби)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "C"
+        },
+        {
+          "text": " = ‘4’",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "# str - string",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Строчный тип данных, хранит в себе сиволы, слова, знаки… Цифры в том числе могут являться символами!"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "(Строкой называют все символы в кавычках;"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Пробелы, знаки препинания и тд 👉 тоже символы строки)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "D"
+        },
+        {
+          "text": "1 = True ",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": " #",
+          "italic": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bool - boolean",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "D"
+        },
+        {
+          "text": "2 = False",
+          "code": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Булевый тип данных или математическая логика. Переменные принимают только два значения: "
+        },
+        {
+          "text": "Истина (True) ",
+          "italic": true
+        },
+        {
+          "text": "или "
+        },
+        {
+          "text": "Ложь (False)",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "На практике"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "pritn(",
+          "code": true
+        },
+        {
+          "text": "A"
+        },
+        {
+          "text": " * 3)",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "# 12",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "pritn(",
+          "code": true
+        },
+        {
+          "text": "B"
+        },
+        {
+          "text": " * 3) ",
+          "code": true
+        },
+        {
+          "text": "# 12.0",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Так как "
+        },
+        {
+          "text": "B",
+          "bold": true
+        },
+        {
+          "text": " является переменной типа float, то и результат действия тоже float"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "pritn(C"
+        },
+        {
+          "text": " * 3) ",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": " # 444",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Строка "
+        },
+        {
+          "text": "C",
+          "bold": true
+        },
+        {
+          "text": " продублировалась 3 раза"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "pritn(",
+          "code": true
+        },
+        {
+          "text": "A "
+        },
+        {
+          "text": "== 5)",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": " # False",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "print(",
+          "code": true
+        },
+        {
+          "text": "A "
+        },
+        {
+          "text": "!= 5",
+          "code": true
+        },
+        {
+          "text": ") "
+        },
+        {
+          "text": " # True",
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Если выражение в скобках истинно, то выведется значение "
+        },
+        {
+          "text": "True",
+          "italic": true
+        },
+        {
+          "text": ", а иначе будет "
+        },
+        {
+          "text": "False",
+          "italic": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/HsxZbrKIufbp64Bao0DBBFclCRPiFs_HA8qM5vdAiicAfKCZgxHTx6ZlG_xd2qEY-4XObZZSy0dE1s2pNL5otN-9VYP0MyLBSLWddjzi02ERM6LqPfk1HBLDEBlmYPnzoi9nYrYJEKGSsXArTNJNxXYlDGaDVm_R4G01gvwfL8QkqpAx4MZuaLvBjPRJRTr9XVInDllk0cMKtvJQ7fj1v5D8cQESdday-mqbdOXjjtLeYQW2FeXGfElqhXSth__4_1dS7ZtZwH_la0vmdl9s_5VZg5sXzeqvvrDc9FHeV1WlocA1yHAICKTFnHzgAqAOeXPU0VEcXH5QQsmwNpcykA.jpg",
+      "file": "42-1.jpg"
+    }
+  ],
+  "baseTitle": "Типы данных в Python",
+  "title": "Типы данных в Python",
+  "slug": "tipy-dannyh-v-python",
+  "hidden": false
+}

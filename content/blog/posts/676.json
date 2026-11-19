@@ -1,0 +1,238 @@
+{
+  "id": 676,
+  "rubric": "python",
+  "description": "Метод .replace(old, new, count) используется для замены подстроки old на new в строке. Можно указать count, чтобы ограничить количество замен.",
+  "date": "2024-06-04",
+  "source": "https://t.me/informatika_kege_itpy/676",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".REPLACE()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": ".replace(old, new, count)",
+          "code": true
+        },
+        {
+          "text": " используется для замены подстроки "
+        },
+        {
+          "text": "old",
+          "code": true
+        },
+        {
+          "text": " на "
+        },
+        {
+          "text": "new",
+          "code": true
+        },
+        {
+          "text": " в строке. Можно указать "
+        },
+        {
+          "text": "count",
+          "code": true
+        },
+        {
+          "text": ", чтобы ограничить количество замен."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = \"Hello, World!\"\nnew_s = s.replace(\"Hello\", \"Hi\")\nprint(new_s)  # Вывод: \"Hi, World!\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".INDEX()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": ".index(substring)",
+          "code": true
+        },
+        {
+          "text": " возвращает индекс первого вхождения подстроки "
+        },
+        {
+          "text": "substring",
+          "code": true
+        },
+        {
+          "text": " в строке. Если подстрока не найдена, возникает ошибка."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = \"Hello, World!\"\nindex = s.index(\"World\")\nprint(index)  # Вывод: 7"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".COUNT()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": ".count(substring)",
+          "code": true
+        },
+        {
+          "text": " возвращает количество вхождений подстроки "
+        },
+        {
+          "text": "substring",
+          "code": true
+        },
+        {
+          "text": " в строке."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = \"How much wood would a woodchuck chuck if a woodchuck could chuck wood?\"\ncount = s.count(\"wood\")\nprint(count)  # Вывод: 4"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".SPLIT()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": ".split(separator)",
+          "code": true
+        },
+        {
+          "text": " разбивает строку на подстроки по указанному разделителю "
+        },
+        {
+          "text": "separator",
+          "code": true
+        },
+        {
+          "text": " и возвращает список подстрок."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = \"Split this s into words\"\nwords = s.split(\" \")\nprint(words)  # Вывод: [\"Split\", \"this\", \"s\", \"into\", \"words\"]"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "\"\".JOIN()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": "\"\".join(iterable)",
+          "code": true
+        },
+        {
+          "text": " объединяет строки из итерируемого объекта в одну строку, разделяя их пустой строкой."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "words = [\"Join\", \"these\", \"words\"]\ns = \"\".join(words)\nprint(s)  # Вывод: \"Jointhesewords\""
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": ".ISDIGIT()",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Метод "
+        },
+        {
+          "text": ".isdigit()",
+          "code": true
+        },
+        {
+          "text": " проверяет, состоит ли строка только из цифровых символов. Возвращает "
+        },
+        {
+          "text": "True",
+          "code": true
+        },
+        {
+          "text": " или "
+        },
+        {
+          "text": "False",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "number = \"12345\"\nis_digit = number.isdigit()\nprint(is_digit)  # Вывод: True"
+    }
+  ],
+  "media": [],
+  "baseTitle": "Все методы строк в Python, которые могут понадобиться на ЕГЭ",
+  "title": "Все методы строк в Python, которые могут понадобиться на ЕГЭ",
+  "slug": "vse-metody-strok-v-python-kotorye-mogut-ponadobitsya-na-ege",
+  "hidden": false
+}

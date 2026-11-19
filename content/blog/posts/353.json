@@ -1,0 +1,49 @@
+{
+  "id": 353,
+  "rubric": "breakdown",
+  "description": "Задание 5 ЕГЭ: разбор задачи 4869",
+  "date": "2024-02-10",
+  "source": "https://t.me/informatika_kege_itpy/353",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/353",
+      "thumb": {
+        "src": "/blog-media/353-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/4869-5-49d16a1337f04f0daca1d93892574280?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "for n in range(2, 10000):\n    s = bin(n)[2:]\n\n    chet1 = [x for x in s[1::2] if x == '1']\n    nechet0 = [x for x in s[0::2] if x == '0']\n\n    r = abs(len(chet1) - len(nechet0))\n    if r == 5:\n        print(n)\n        break"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/E_BXWKuOosyjDAZ0_lgEVcDfkP4ZX8QlTd7EGWOEFe-sa9Xek1KUocR_AoCruDCL8-_FDpcpNVvkFYLaxyYJHSrkOTXPiKn_q_DnViLzmqaOZpA8r54MipVgMxFj3Qrga-CCsz4J1HWy6SNjFf-zVHXukKLDiIoWVe7hXXkczxGPSRzsLkIupLgUfYyMCkG4SErQDjyUU6WSbdAYYM0iySCUzqKonctSvLRiSowPNDZYqmijVEcMay72DA77SqVdUUEuZpUPz3P08x-MdbnMCCGGdazIyR3F678BvZ9qWXM5OPGWvYuDSQK9mZ7agPP4SWlCFC6IVVyK-o6WbvjBhw",
+      "file": "353-1.jpg"
+    }
+  ],
+  "task": 5,
+  "problem": "4869",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 5 ЕГЭ: разбор задачи 4869",
+  "title": "Задание 5 ЕГЭ: разбор задачи 4869",
+  "slug": "zadanie-5-ege-razbor-zadachi-4869",
+  "hidden": false
+}

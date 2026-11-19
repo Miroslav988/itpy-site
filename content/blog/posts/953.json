@@ -1,0 +1,225 @@
+{
+  "id": 953,
+  "rubric": "breakdown",
+  "description": "Найдите последние семь цифр суммы F(2020) + F(2200).",
+  "date": "2024-12-14",
+  "source": "https://t.me/informatika_kege_itpy/953",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/953",
+      "thumb": {
+        "src": "/blog-media/953-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Найдите последние семь цифр суммы F(2020) + F(2200)."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from functools import *\n@lru_cache(None)\ndef F(n):\n    if n < 2025:\n        return n**2\n    if 2025 <= n < 2050:\n        return 2 * F(n-1) - F(n-2) + n\n    if 2050 <= n <= 2100:\n        return F(n-1) + 2 * F(n-2) + 3 * F(n-3)\n    if n > 2100:\n        return 2 * F(n-1) + F(n-2) + n\n\nprint(str(F(2020) + F(2200))[-7:])\n\nОтвет: 5098903"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from functools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля functools."
+          }
+        ],
+        [
+          {
+            "text": "@lru_cache(None)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Декоратор, который кэширует результаты выполнения функции F, чтобы избежать повторных вычислений."
+          }
+        ],
+        [
+          {
+            "text": "def F(n):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определение функции F с одним параметром n."
+          }
+        ],
+        [
+          {
+            "text": "if n < 2025:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если n меньше 2025."
+          }
+        ],
+        [
+          {
+            "text": "return n**2",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат квадрата числа n, если условие из пункта 4 истинно."
+          }
+        ],
+        [
+          {
+            "text": "if 2025 <= n < 2050:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если n больше либо равно 2025 и меньше 2050."
+          }
+        ],
+        [
+          {
+            "text": "return 2 * F(n-1) - F(n-2) + n",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат значения, вычисленного по формуле, если условие из пункта 6 истинно."
+          }
+        ],
+        [
+          {
+            "text": "if 2050 <= n <= 2100:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если n от 2050 до 2100 включительно."
+          }
+        ],
+        [
+          {
+            "text": "return F(n-1) + 2 * F(n-2) + 3 * F(n-3)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат значения, вычисленного по формуле, если условие из пункта 8 истинно."
+          }
+        ],
+        [
+          {
+            "text": "if n > 2100:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если n больше 2100."
+          }
+        ],
+        [
+          {
+            "text": "return 2 * F(n-1) + F(n-2) + n",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат значения, вычисленного по формуле, если условие из пункта 10 истинно."
+          }
+        ],
+        [
+          {
+            "text": "print(str(F(2020) + F(2200))[-7:])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции F с аргументами 2020 и 2200, вычисление их суммы, преобразование в строку, взятие последних семи символов и вывод результата."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поддержать автора: boosty",
+          "href": "https://boosty.to/informatika_kege_itpy/donate",
+          "bold": true
+        },
+        {
+          "text": " 💵"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/IdSa4UvmpvYh6lXP9s7EhllD8b-fiA8GKmtGxvkPKnvuy669FDpTpXoQuwKlbLLnnzDDMaqI_LMtnDx_ENgJjm7TxKjGBrst51GBNJttP3H4lmsxzwnKO91FXNIOLXS1DyDu70_vhQUhFtuZZg2T4zCitzSRZvcprZvKbizixMD7nuP-Fhc0HE3r2xc72feR2KAJMVSOIjB9RzNGru1MrJ5oHIIX2k6RqPtM7QeOeoltLZGjpym8BCeiYHigCPWVPUKCaJqXMTmZmO4oASXLTWFfl6PFUuKbu5lRIKO-VbGnqTpyOd4VcSWqoN_xzeaeobYxtACie2BlrLVeNr4wyw",
+      "file": "953-1.jpg"
+    }
+  ],
+  "task": 16,
+  "problem": "7655",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М. Шагитов",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 16 ЕГЭ: разбор задачи 7655",
+  "title": "Задание 16 ЕГЭ: разбор задачи 7655",
+  "slug": "zadanie-16-ege-razbor-zadachi-7655",
+  "hidden": false
+}

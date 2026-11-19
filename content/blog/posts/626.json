@@ -1,0 +1,188 @@
+{
+  "id": 626,
+  "rubric": "breakdown",
+  "description": "Алгоритм вычисления значения функции F(n), где n - натуральное число, задан следующими соотношениями: F(n) = n, при n ≥ 3000 F(n) = n + x + F(n+2), при n < 3000 При каком целом…",
+  "date": "2024-05-19",
+  "source": "https://t.me/informatika_kege_itpy/626",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/626",
+      "thumb": {
+        "src": "/blog-media/626-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Алгоритм вычисления значения функции F(n), где n - натуральное число, задан следующими соотношениями:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(n) = n, при n ≥ 3000"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(n) = n + x + F(n+2), при n < 3000"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "При каком целом значении х, значение выражения:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "F(2984)−F(2988)=5916"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(n):\n    if n >= 3000:\n        return n\n    if n < 3000:\n        return n + x + F(n+2)\n\n\nfor x in range(-1000, 1000):\n    if F(2984) - F(2988) == 5916:\n        print(x)\n\n# Ответ: -27"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(n):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объявление функции F с аргументом n."
+          }
+        ],
+        [
+          {
+            "text": "if n >= 3000:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если n больше или равно 3000."
+          }
+        ],
+        [
+          {
+            "text": "return n",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращение значения n, если условие из пункта 2 выполняется."
+          }
+        ],
+        [
+          {
+            "text": "if n < 3000:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если n меньше 3000."
+          }
+        ],
+        [
+          {
+            "text": "return n + x + F(n+2)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возвращение значения n + x + F(n+2), если условие из пункта 4 выполняется. Рекурсивный вызов функции F."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(-1000, 1000):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который перебирает значения от -1000 до 999 включительно и присваивает каждое значение переменной x."
+          }
+        ],
+        [
+          {
+            "text": "if F(2984) - F(2988) == 5916:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если разность F(2984) и F(2988) равна 5916."
+          }
+        ],
+        [
+          {
+            "text": "print(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод значения x, если условие из пункта 7 выполняется."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/vhyJc8CI8-8DfyChqSHFDkSdirN1L9B73FHQoMhA80q7KuApmGMOcNTur-ufrmUPOk1UY1DZQ32KGATTyZBlbHzOgMffRkU5ScBjQFCJHskoau19e1PrauxcceySGi3R3atxmm5xI1fGRtacZjjYEDp_b9XoZ1lxccwointagWHoDGfUx6aZ_SI-v2VxjmJR35w8t1k1CtayRyZi7R6dsbdXwMAZ4NlojYAOtGv8CVVvaXBTn-clTkh6CWmCx0P7w2K2IfOMAovexIcPGfyTICViQ3sDSq3ZtsdjdqlxAKW0Tyb8SYVu9-AWpZscidSnVwk1lMGELVm-ojTWJ0fYfg",
+      "file": "626-1.jpg"
+    }
+  ],
+  "task": 16,
+  "problem": "12779",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "М. Паршиков",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 16 ЕГЭ: разбор задачи 12779",
+  "title": "Задание 16 ЕГЭ: разбор задачи 12779",
+  "slug": "zadanie-16-ege-razbor-zadachi-12779-626",
+  "hidden": true
+}

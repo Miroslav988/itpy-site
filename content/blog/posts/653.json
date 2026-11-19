@@ -1,0 +1,225 @@
+{
+  "id": 653,
+  "rubric": "breakdown",
+  "description": "1. раздели на 2 2. вычти 1 Составьте алгоритм получения из чиcла 65 числа 4, содержащий не более 5 команд. В ответе запишите только номера команд.",
+  "date": "2024-05-26",
+  "source": "https://t.me/informatika_kege_itpy/653",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/653",
+      "thumb": {
+        "src": "/blog-media/653-1.jpg",
+        "width": 848,
+        "height": 560
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Задач из ОГЭ, 5 номер, но считаю её весьма полезной, так как это усложненная вариация 23 номера ЕГЭ."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "1. раздели на 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2.  вычти 1"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Составьте алгоритм получения из чиcла 65 числа 4, содержащий не более 5 команд. В ответе запишите только номера команд."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Аудио с пояснением к коду решения оставлю в комментариях."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b, t):\n    if a < b or len(t) > 5:\n        return 0\n    elif a == b and len(t) <= 5:\n        print(t)\n        return 1\n    else:\n        return F(a / 2, b, t+'1') + F(a-1, b, t+'2')\n\nF(65, 4, '')  \n\n# Ответ: 21111"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "def F(a, b, t):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Определение функции F с тремя параметрами a, b, и t."
+          }
+        ],
+        [
+          {
+            "text": "if a < b or len(t) > 5:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если a меньше b или длина строки t превышает 5 символов."
+          }
+        ],
+        [
+          {
+            "text": "return 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат значения 0, если условие из пункта 2 истинно."
+          }
+        ],
+        [
+          {
+            "text": "elif a == b and len(t) <= 5:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Другое условие: если a равно b и длина строки t не превышает 5 символов."
+          }
+        ],
+        [
+          {
+            "text": "print(t)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод текущего состояния строки t."
+          }
+        ],
+        [
+          {
+            "text": "return 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Возврат значения 1, если условие из пункта 4 истинно."
+          }
+        ],
+        [
+          {
+            "text": "else:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В случае, если ни одно из вышеперечисленных условий не выполнено."
+          }
+        ],
+        [
+          {
+            "text": "return F(a / 2, b, t+'1') + F(a-1, b, t+'2')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Рекурсивный вызов функции F с различными значениями аргументов: для первого вызова a уменьшается вдвое и к строке t добавляется символ '1', для второго вызова a уменьшается на 1, к строке t добавляется символ '2'."
+          }
+        ],
+        [
+          {
+            "text": "F(65, 4, '')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вызов функции F с начальными значениями a=65, b=4, и пустой строкой t"
+          },
+          {
+            "text": ".",
+            "href": "https://informatikakegeitpy.notion.site/9542-12-31e0d3866b7d4c20bdab91fe6059ae63?pvs=4"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Поддержать автора: boosty",
+          "href": "https://boosty.to/informatika_kege_itpy/donate",
+          "bold": true
+        },
+        {
+          "text": " 💵"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/uV6oj1AFLg856WDuLQ3nd-ATHruLLl0ulNQQ-R-BsJkeNbPc5pFdibTEFhEsj751nvRqZny3ttvCIxcqTtnFpAOp2w7GEfnx2Z57t8f9Z90Ot8yHc2qXttIEre2hnGA2U2RJDJcbo612k33Ph2KaGRL78DMJ9vSuSqXU9Mh7SQkPhf-zJcnjbHgqW2Qu59uEVegPw5FWMjOrAKWGDd5NDsOFpgrFV8MteRgFrOusqipk-yqaLf7QJScY3icJEyEqhxwbAwh6BERJeicLXLHK0UuePNFe_zsuaGFfSmo8qkSidgdxPNsce4DGGQbMBMy6dQ1Pa3TjJWeP2Won-ocATQ",
+      "file": "653-1.jpg"
+    }
+  ],
+  "task": 23,
+  "problem": "18289",
+  "collection": "Решу ЕГЭ",
+  "meta": {
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи 18289",
+  "title": "Задание 23 ЕГЭ: разбор задачи 18289",
+  "slug": "zadanie-23-ege-razbor-zadachi-18289",
+  "hidden": false
+}

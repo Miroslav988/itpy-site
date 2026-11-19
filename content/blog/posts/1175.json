@@ -1,0 +1,213 @@
+{
+  "id": 1175,
+  "rubric": "breakdown",
+  "description": "Все четырёхбуквенные слова, в составе которых могут быть только русские буквы А, Р, Г, У, М, Е, Н, Т, записаны в алфавитном порядке и пронумерованы начиная с 1. Вот начало списка:…",
+  "date": "2025-09-30",
+  "source": "https://t.me/informatika_kege_itpy/1175",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1175-1.jpg",
+      "width": 800,
+      "height": 419,
+      "alt": "Задание 8 ЕГЭ: разбор задачи 17799"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Все четырёхбуквенные слова, в составе которых могут быть только русские буквы А, Р, Г, У, М, Е, Н, Т, записаны в алфавитном порядке и пронумерованы начиная с 1."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Вот начало списка:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. АААА"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. АААГ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. АААЕ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "4. АААМ"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "5. АААН"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Под каким номером в списке идёт последнее слово, в котором все буквы различны и все символы располагаются в алфавитном порядке?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\ns = sorted('АРГУМЕНТ')\nfor n, p in enumerate(product(s, repeat=4), 1):\n    word = ''.join(p)\n    if len(word) == len(set(word)):\n        if list(word) == sorted(word):\n            print(n)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 2424",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from itertools import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех функций из модуля itertools (в данном случае используется product)"
+          }
+        ],
+        [
+          {
+            "text": "s = sorted('АРГУМЕНТ')",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание отсортированного списка букв из слова \"АРГУМЕНТ\": ['А', 'Г', 'Е', 'М', 'Н', 'Р', 'Т', 'У']"
+          }
+        ],
+        [
+          {
+            "text": "for n, p in enumerate(product(s, repeat=4), 1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл по всем возможным комбинациям букв длиной 4 (с повторами)"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- product(s, repeat=4) генерирует декартово произведение списка s на себя 4 раза"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- enumerate добавляет нумерацию, начиная с 1"
+          }
+        ],
+        [
+          {
+            "text": "word = ''.join(p)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Объединение кортежа p в строку (слово из 4 букв)"
+          }
+        ],
+        [
+          {
+            "text": "if len(word) == len(set(word)):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что все буквы в слове уникальны (длина слова равна длине множества его букв)"
+          }
+        ],
+        [
+          {
+            "text": "if list(word) == sorted(word):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, что буквы в слове идут в алфавитном порядке (слово равно своему отсортированному варианту)"
+          }
+        ],
+        [
+          {
+            "text": "print(n)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если оба условия выполнены, выводится номер текущей комбинации"
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/n2QsB5MSzo-8LQRvjiIuCef8umDdA_wkOwiFs-QWiRaonRs2AGhz3lTqRd0r0B8NGyxvsARV9b-aU-KSRmJZIgrP3LZqhjhSJm9NxdKk4k1wiQULKlZMgckHLBLf9p1fphX8vrmg2nFbBQ5kbTmpemRy3VqnGx-kLeBeHgSd0fjSn6ucj-8f5YjSWoe5fEIyhn71sTGI4IG9WyYnJXvwSD-l_kcm1ynsOtznd-o6FDUVVnG-GhPQojWMu0F5xJwJD_tK-L6BBxJgIN2VFx_31irAXbb73ueKbw8r8my8ggGvIc-XcRSMyMQn0ZlXZa2vXX1YSJFUiS9ocWxXlHjGZw.jpg",
+      "file": "1175-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "17799",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "В. Зарянкин",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 17799",
+  "title": "Задание 8 ЕГЭ: разбор задачи 17799",
+  "slug": "zadanie-8-ege-razbor-zadachi-17799",
+  "hidden": false
+}

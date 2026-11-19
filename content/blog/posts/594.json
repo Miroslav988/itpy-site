@@ -1,0 +1,26 @@
+{
+  "id": 594,
+  "rubric": "video",
+  "description": "",
+  "date": "2024-05-12",
+  "source": "https://t.me/informatika_kege_itpy/594",
+  "blocks": [],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/qDB13YoijET6vMLTfGfS-GrooJarmIdUjG-P0wpcelg-O50gFEHzHRvYSem8GkdRPKgoPoktVs5CZZQfNI6ZjovvJa8cF0zYjnDZw_TvUG_bOHSLQUQYc0f6ShvCp7WurlY6UGb9F7Gxjrp4AojdK7dKNepqW6NYbOYNgf_MHLQY7MqwQwMoKym5sXnebfp7r-QEdWmECANl8op_VsxtV42b4PDI72eADjAwSCII2tJHG0vM40GT6Hev3ryCtnp7TB-8iUK2gMENN_YgN_CzmXOosiquLuwiuFT29RRfQFmLbup5763vPOt44xDoq3fUZiEtnLEe9a9fmD00Lb-SJg.jpg",
+      "file": "594-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://youtube.com/shorts/CYOosSzvDBs?si=xOHNafAcNlgbtHfI",
+    "thumb": {
+      "src": "/blog-media/594-1.jpg",
+      "width": 640,
+      "height": 360
+    }
+  },
+  "baseTitle": "Простое решение 23 номера",
+  "title": "Простое решение 23 номера",
+  "slug": "prostoe-reshenie-23-nomera",
+  "hidden": false
+}

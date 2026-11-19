@@ -1,0 +1,49 @@
+{
+  "id": 332,
+  "rubric": "breakdown",
+  "description": "Задание 17 ЕГЭ: разбор задачи 61363",
+  "date": "2024-01-23",
+  "source": "https://t.me/informatika_kege_itpy/332",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/332",
+      "thumb": {
+        "src": "/blog-media/332-1.jpg",
+        "width": 848,
+        "height": 592
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/61363-17-1072dc57860c44c9bba12d7317bdd8ad?pvs=4"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Интересная и объемная задача 17 номера с сайта Решу ЕГЭ"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(x) for x in open('17.txt')]\nA = [x for x in M if str(x)[-2:] == '19']\n\ncount = 0\nmaxi = 0\nfor i in range(0, len(M)-2):\n    x, y, z = M[i], M[i+1], M[i+2]\n    if sum([len(str(abs(j))) == 4 for j in [x, y, z]]) == 2:\n        if sum([abs(j) % 3 == 0 for j in [x, y, z]]) >= 1:\n            if sum([x, y, z]) > max(A):\n                count += 1\n                maxi = max(maxi, x + y + z)\nprint(count, maxi)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/BPjjNmQSaHOFkPyargflOQ85wEdoZZrZYlVNauOuYne168KaZTZ0KeJC1rVk_DZOcvGkZpQD8NGBcI2--xh03pdpSo3klWb5G96n6Aaydp3XLppGtl5YguFXGteASe3zzCuuxQx0JBhoNXxHgZAvXn4KqXSVjjre4867tG90UKnMgaTJFlUcPa0kzbFTjgC1hrtdYePfxldvO9P4BawU9p0pYJ_6hbesudetDx1riMvHOQibXIpMCNuQzN_V6JwtL1LmaVpwMnQUK94vACkiP4dbhNeDb5CS23p1scuoDhn58c9spOhIanPUedDffSc5xaDwcEqs1Q1deJR3est8zg",
+      "file": "332-1.jpg"
+    }
+  ],
+  "task": 17,
+  "problem": "61363",
+  "collection": "Решу ЕГЭ",
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи 61363",
+  "title": "Задание 17 ЕГЭ: разбор задачи 61363",
+  "slug": "zadanie-17-ege-razbor-zadachi-61363",
+  "hidden": false
+}

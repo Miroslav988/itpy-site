@@ -1,0 +1,213 @@
+{
+  "id": 1123,
+  "rubric": "breakdown",
+  "description": "В файле содержится последовательность целых чисел. Её элементы могут принимать целые значения от -100 000 до 100 000 включительно. Определите количество троек последовательности,…",
+  "date": "2025-06-24",
+  "source": "https://t.me/informatika_kege_itpy/1123",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1123-1.jpg",
+      "width": 800,
+      "height": 327,
+      "alt": "Задание 17 ЕГЭ: разбор задачи 18176"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "В файле содержится последовательность целых чисел."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Её элементы могут принимать целые значения от -100 000 до 100 000 включительно. Определите количество троек последовательности, сумма цифр элементов которых равна минимальному положительному элементу последовательности, оканчивающемуся на 4. В ответе запишите количество найденных троек, затем максимальную из сумм элементов таких троек. В данной задаче под тройкой подразумевается три идущих подряд элемента последовательности."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "R = []\nM = [int(x) for x in open('0. files/17.txt')]\nW = [x for x in M if abs(x) % 10 == 4 and x > 0]\nfor i in range(len(M) - 2):\n    a, b, c = M[i], M[i + 1], M[i + 2]\n    summa = sum([int(x) for x in str(a) + str(b) + str(c) if x.isdigit()])\n    if summa == min(W):\n        R.append(a + b + c)\nprint(len(R), max(R))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 11 180738",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создается пустой список R, в который будут записываться подходящие суммы троек чисел."
+          }
+        ],
+        [
+          {
+            "text": "M = [int(x) for x in open('0. files/17.txt')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открывается файл 17.txt, читаются все числа и сохраняются в список M (каждое число преобразуется в int)."
+          }
+        ],
+        [
+          {
+            "text": "W = [x for x in M if abs(x) % 10 == 4 and x > 0]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В список W попадают только положительные числа из M, у которых последняя цифра равна 4 (например, 14, 24, -34 не подойдет, т.к. по условию x > 0)."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(M) - 2):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл перебирает индексы списка M до предпоследнего элемента, чтобы можно было взять тройку чисел (a, b, c) = (M[i], M[i+1], M[i+2])."
+          }
+        ],
+        [
+          {
+            "text": "a, b, c = M[i], M[i + 1], M[i + 2]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Текущая тройка чисел из M записывается в переменные a, b и c."
+          }
+        ],
+        [
+          {
+            "text": "summa = sum([int(x) for x in str(a) + str(b) + str(c) if x.isdigit()])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "str(a) + str(b) + str(c) — числа a, b, c преобразуются в строки и объединяются в одну строку (например, 123, -45, 678 → \"123-45678\")."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- [int(x) for x in ... if x.isdigit()] — из этой строки берутся только цифры (минус игнорируется), и они преобразуются обратно в числа."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- sum(...) — вычисляется сумма всех цифр в тройке чисел."
+          }
+        ],
+        [
+          {
+            "text": "if summa == min(W):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяется, равна ли сумма цифр минимальному числу из W (т.е. минимальному положительному числу, оканчивающемуся на 4)."
+          }
+        ],
+        [
+          {
+            "text": "R.append(a + b + c)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если условие выполнено, то сумма самой тройки чисел (a + b + c) добавляется в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(len(R), max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "В конце выводится:"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- количество найденных троек (len(R)),"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "- максимальная сумма из этих троек (max(R))."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/fHf5Zb6fIWfkoM87aBSxTwvybyvYfi6BmJwPnTky0UvRqdz3RhXNNzvwTOEUIR4kQgL6YERPilUxCUQe6Zhfa1My944dYUYhr0xvtXtR4r81DRau8ZqWePUXpmtFAvcWs8jQj9qglXHVg-uYu4lrVN_BwhekfzvmSc3Bh2PCciKI-Rb6DKa9utV4yQU4XadOMnEVw211mN69D5eZSehG6sewwm9ziMXmSysqkQ25drU7KQlOr2NUDGx_xU8Gt3R8dxeF9opn6DUUuKweLOdDVMf3GQ6pu08iaFNt9qLdyYrgF34GlwqWLMY6br9iTYgde8c2aCbvPvA2VJXVeMsWPQ.jpg",
+      "file": "1123-1.jpg"
+    }
+  ],
+  "task": 17,
+  "problem": "18176",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Д.Бахтиев",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи 18176",
+  "title": "Задание 17 ЕГЭ: разбор задачи 18176",
+  "slug": "zadanie-17-ege-razbor-zadachi-18176",
+  "hidden": false
+}

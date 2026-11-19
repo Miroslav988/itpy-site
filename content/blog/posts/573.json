@@ -1,0 +1,60 @@
+{
+  "id": 573,
+  "rubric": "python",
+  "description": "Множества являются важным понятием в программировании. Они представляют собой уникальный набор элементов, которые не повторяются.",
+  "date": "2024-05-09",
+  "source": "https://t.me/informatika_kege_itpy/573",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/573",
+      "thumb": {
+        "src": "/blog-media/573-1.jpg",
+        "width": 848,
+        "height": 656
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Множества являются важным понятием в программировании. Они представляют собой уникальный набор элементов, которые не повторяются."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Для создания множеств в Python используется функция set(). При этом все повторяющиеся элементы автоматически удаляются, оставляя только уникальные."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Также существует функция frozenset(), которая создает неизменяемое множество. Это значит, что после создания такого множества нельзя изменить его содержимое."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Множества поддерживают различные операции, позволяющие выполнять действия над множествами, такие как объединение, пересечение, разность и т. д."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/P9s6M9rlOj4g71nXHQZCr2uYOjuusolyCEQKOTT-VZZojodh3QBJq41yn-xCrsVhD33CIjcRaIaZXVHsgAzr8m5hutdlhqo7QBoQGyhOQCxlmyKByoYgBHWFrzUuE02hXYtTXmeHsFsoVY6h8uUId2vJ4coZtDI1pfFJHjVAET6VAwBumYo_Q1uiuMZqcKiGX6FM7Tia-7B0RP3_XSF4dg6c-vm7XtCT-s-_9MOfdN5YKjkeprgM3qisonkXnqH5NYeYtWG1VMbFr4et47oM6i_P17AO6m3tzS7UUv3EdYims8w184chxCRoDebKqUHLMugreOxmEUGBjr0qsUTtFQ",
+      "file": "573-1.jpg"
+    }
+  ],
+  "baseTitle": "Множества set() в Python",
+  "title": "Множества set() в Python",
+  "slug": "mnozhestva-set-v-python-573",
+  "hidden": false
+}

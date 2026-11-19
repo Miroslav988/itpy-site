@@ -1,0 +1,120 @@
+{
+  "id": 474,
+  "rubric": "python",
+  "description": "Важно помнить, что методы модуля itertools в Python возвращают кортежи, которые представляют собой последовательности отдельных элементов. Это может привести к некоторым…",
+  "date": "2024-04-23",
+  "source": "https://t.me/informatika_kege_itpy/474",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/474",
+      "thumb": {
+        "src": "/blog-media/474-1.jpg",
+        "width": 848,
+        "height": 688
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Важно помнить, что методы модуля "
+        },
+        {
+          "text": "itertools",
+          "code": true
+        },
+        {
+          "text": " в Python возвращают кортежи, которые представляют собой последовательности отдельных элементов. Это может привести к некоторым недочетам, если не учитывать особенности работы с кортежами."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Особенности поиска в кортеже поэлементно"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "При поиске элементов в кортеже происходит проверка каждого элемента поочередно. Python не проверяет наличие целых групп элементов, а ищет именно указанный кортеж как отдельный элемент."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Например, при поиске кортежа "
+        },
+        {
+          "text": "('A', 'B')",
+          "code": true
+        },
+        {
+          "text": " Python не будет искать группу элементов "
+        },
+        {
+          "text": "'A'",
+          "code": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "'B'",
+          "code": true
+        },
+        {
+          "text": ", а будет искать именно этот кортеж как целостный элемент кортежа."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Поиск подстроки в строке"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В отличие от работы с кортежами, при поиске подстроки в строке Python будет искать конкретную последовательность символов внутри строки. Если вы используете оператор "
+        },
+        {
+          "text": "in",
+          "code": true
+        },
+        {
+          "text": ", чтобы проверить вхождение последовательности слева от него в строку справа, то будет возвращено значение истины ("
+        },
+        {
+          "text": "True",
+          "code": true
+        },
+        {
+          "text": "), если подстрока присутствует."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Эти нюансы важно учитывать, чтобы избежать ошибок при обработке кортежей и строк в Python."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/p6kRrZhIAmU1_0b9ET4L-C4iLkK6Qu4aluaHzjbtGZe4eejvAufWrEe0imoLfC_MnKUo86p6oXR64d9UdMGiXyvSCuGjEeawbCyCSdGLTEPxwdelskXra4E4k5sND_pDuDNRG03RkCE2hluSsG8dTJoGCbKK9vsKcGJ44TB97hC2gm3SO_tfbWBLnFlXJqFan4Z6l8HhcJ7w21rCd6zKDPrqG17Dopnf_7lwzXC5S0s9pkJDcz3cqYbDsb9EMpPiQNGpiB5RUq74ZBKKLictLOibeCe-JmH7hv49ZGH8Ab9e3lGak-719gpR7Yj5RrVDXUbFmlwCPm2H4nAuM7YHEQ",
+      "file": "474-1.jpg"
+    }
+  ],
+  "baseTitle": "Полезная информация о работе с кортежами в Python и частые ошибки при их использовании",
+  "title": "Полезная информация о работе с кортежами в Python и частые ошибки при их использовании",
+  "slug": "poleznaya-informatsiya-o-rabote-s-kortezhami-v-python-i",
+  "hidden": false
+}

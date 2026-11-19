@@ -1,0 +1,26 @@
+{
+  "id": 625,
+  "rubric": "video",
+  "description": "",
+  "date": "2024-05-18",
+  "source": "https://t.me/informatika_kege_itpy/625",
+  "blocks": [],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/VyhrMk5QXNcp6eKe5xRdYykOyQLhfQVUM7CN7Kai0r-_8pcfUnWCHVOv0UDvPXyur87flDdn8LY9JiwDhKSy-eaim4JmYv9yagwc_yZVJ84cNYfSx3ZoCXb2SFCtN9oNiqD6wgsiciTDqbzUGJtGMS2l859zVIunppkNUWEZuCNfzcTG694ojAudRXevPLZHl_RyuTwrJpVfDNOdNOJqg3iELrm8f7YF30B2xXHvFi8QTOn5SWyWa3UjLM4Z_MbHMecvq7reJKmoaig3rGC9dZjYzs_3ziopJZOURRxN0sXPgcqPM7q_SDYZbqus_YWjbbwE1uY9EsFL7q-q8MI34Q.jpg",
+      "file": "625-1.jpg"
+    }
+  ],
+  "video": {
+    "href": "https://youtube.com/shorts/jXh5V4e9D9U?si=SpdNl9cMLE0L7o6x",
+    "thumb": {
+      "src": "/blog-media/625-1.jpg",
+      "width": 640,
+      "height": 360
+    }
+  },
+  "baseTitle": "Задание, которое завалили 80% сдающих ЕГЭ по информатике в 2023 году",
+  "title": "Задание, которое завалили 80% сдающих ЕГЭ по информатике в 2023 году",
+  "slug": "zadanie-kotoroe-zavalili-80-sdayuschih-ege-po-informatike-v",
+  "hidden": false
+}

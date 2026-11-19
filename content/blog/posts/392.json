@@ -1,0 +1,55 @@
+{
+  "id": 392,
+  "rubric": "breakdown",
+  "description": "Задание 8 ЕГЭ: разбор задачи 8417",
+  "date": "2024-03-03",
+  "source": "https://t.me/informatika_kege_itpy/392",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/392",
+      "thumb": {
+        "src": "/blog-media/392-1.jpg",
+        "width": 848,
+        "height": 432
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Полный разбор задачи в Notion",
+          "href": "https://informatikakegeitpy.notion.site/8417-8-73836660116d44cd97fe7b2c0d8c9369?pvs=4",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Закрепим изученную теорию, разберем пример 8 номера"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "import itertools\ncount = 0\nfor s in itertools.permutations('ЯРОСЛАВ', 5):\n    slovo = ''.join(s)\n    glas = [i for i in slovo if i in 'ЯОА']\n    sogl = [i for i in slovo if i in 'РСЛВ']\n    if len(sogl) > len(glas):  \n        if all(x not in slovo for x in 'ЯА АЯ АО ОА ЯО ОЯ'.split()):  \n            count += 1\nprint(count)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/lnJi7_adRY-mzc43nXI9XxXPsxVe1n-xs4lw9eWgt6s4NgIgW6n2kRd-jtb_Uod5gblVnjip8qa03VZVDDBsUXTW09657FZ8CTczGxNbBcAmP8PbDH9F_JV4WIIOe79GxigYGemvYUQGHOvcvyqx20i_PnNvP26oANWxbUPVqw6EU5ZMv2LanOwJUWByGBUKgFYim44zOd5m6KIczxC90h08OQMGWdwZtmWrnNKTOIVXVgw62IQaJ4J7xOJV1OldaYs4VW9cLZ5CbHX_pogTtv9CUqLEGTuelMoTvy-Lb-duqleWauYmxekPFVSM1V_zqIrvW9v4bTjBVDcq27DVvw",
+      "file": "392-1.jpg"
+    }
+  ],
+  "task": 8,
+  "problem": "8417",
+  "collection": "КЕГЭ",
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи 8417",
+  "title": "Задание 8 ЕГЭ: разбор задачи 8417",
+  "slug": "zadanie-8-ege-razbor-zadachi-8417",
+  "hidden": false
+}

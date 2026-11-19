@@ -1,0 +1,184 @@
+{
+  "id": 614,
+  "rubric": "breakdown",
+  "description": "Определите количество пар элементов последовательности, в которых только один из двух элементов оканчивается на 21 и является пятизначным числом, а сумма квадратов элементов пары…",
+  "date": "2024-05-17",
+  "source": "https://t.me/informatika_kege_itpy/614",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/614",
+      "thumb": {
+        "src": "/blog-media/614-1.jpg",
+        "width": 848,
+        "height": 432
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество пар элементов последовательности, в которых только один из двух элементов оканчивается на 21 и является пятизначным числом, а сумма квадратов элементов пары не меньше квадрата максимального элемента последовательности, оканчивающегося на 21 и являющегося пятизначным числом."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "M = [int(x) for x in open('17.txt')]\nD = [int(x) for x in M if str(x)[-2:] == '21' and len(str(abs(x)))==5 ]\nR = []\nfor i in range(len(M)-1):\n    x, y = M[i], M[i+1]\n    if (x in D and y not in D) or (y in D and x not in D):\n        if (x**2)+(y**2) >= max(D)**2:\n            R.append(x + y)\nprint(len(R), max(R))\n\n# Ответ: 6283 9627"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "M = [int(x) for x in open('17.txt')]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создание списка M, содержащего целочисленные значения, полученные из файла '17.txt'."
+          }
+        ],
+        [
+          {
+            "text": "D = [int(x) for x in M if str(x)[-2:] == '21' and len(str(abs(x)))==5]",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Фильтрация списка M, чтобы получить только элементы, оканчивающиеся на '21' и имеющие длину равную 5 символам."
+          }
+        ],
+        [
+          {
+            "text": "R = []",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализация пустого списка R для хранения результатов."
+          }
+        ],
+        [
+          {
+            "text": "for i in range(len(M)-1):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который проходит по индексам элементов списка M за исключением последнего."
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "5. "
+          },
+          {
+            "text": "x, y = M[i], M[i+1]"
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Присваивание переменным x и y значений пар элементов списка M."
+          }
+        ],
+        [
+          {
+            "text": "if (x in D and y not in D) or (y in D and x not in D):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если один элемент из пары содержится в списке D, а другой нет, или наоборот."
+          }
+        ],
+        [
+          {
+            "text": "if (x**2)+(y**2) >= max(D)**2:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка условия: если квадрат суммы элементов пары больше или равен квадрату максимального значения из списка D."
+          }
+        ],
+        [
+          {
+            "text": "R.append(x + y)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Добавление суммы элементов пары x и y в список R."
+          }
+        ],
+        [
+          {
+            "text": "print(len(R), max(R))",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод количества элементов в списке R и максимального значения из списка R."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/YBHCzDokK-_bZrhjO5bo6ZDimBoiK_1GuRoRO8ZKKSSFcCVr6uzloHw1d8tENQW64Sox6NYZ85pxUt4GHgfZIRZkEYWsA4MetwowSCJOf_c-kcszpa8AMtKw4JHYOMUmrlyrTENsalk2Y1DzbtXyZzdm7WASAlQWB_gEB0tW39Nfr2ChHw9Q1lHoAaJ995e_GMFn2tLFWmnhV3ziN7iS-evTiOQ1COC-NLjybBKKQtc6UZMXqOyOHAx6W-WsFzvp7HYkCKssYx5fF5ApE2NulH1YLktnWVLlo-dHUyJRKeE43gKK7kQbOiGN0C-26-P6EqFNSIHnDS3m86kjUhdIcA",
+      "file": "614-1.jpg"
+    }
+  ],
+  "task": 17,
+  "problem": "16383",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "ЕГКР 27.04",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 17 ЕГЭ: разбор задачи 16383",
+  "title": "Задание 17 ЕГЭ: разбор задачи 16383",
+  "slug": "zadanie-17-ege-razbor-zadachi-16383",
+  "hidden": false
+}

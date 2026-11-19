@@ -1,0 +1,153 @@
+{
+  "id": 675,
+  "rubric": "breakdown",
+  "description": "Найдите все натуральные числа, не превышающие 10**9, которые соответствуют маске 20*23 и при этом без остатка делятся на 2023, а сумма цифр каждого такого числа кратна 7 и меньше…",
+  "date": "2024-06-04",
+  "source": "https://t.me/informatika_kege_itpy/675",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/675",
+      "thumb": {
+        "src": "/blog-media/675-1.jpg",
+        "width": 848,
+        "height": 496
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Найдите все натуральные числа, не превышающие 10**9, которые соответствуют маске 20*23 и при этом без остатка делятся на 2023, а сумма цифр каждого такого числа кратна 7 и меньше 20."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Сумму цифр строки можно найти используя: summa = sum(map(int, s))"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from fnmatch import *\nfor x in range(2023, 10**9, 2023):\n    if fnmatch(str(x), '20*23'):\n        summa = sum([int(i) for i in str(x)])\n        if summa % 7 == 0 and summa < 20:\n            print(x)\n\n# Ответ:\n# 2023\n# 204323\n# 2025023\n# 20232023\n# 202302023"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from fnmatch import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импорт всех элементов модуля fnmatch. Этот модуль используется для сравнения строк с шаблонами, используя стандартные символы для подстановок."
+          }
+        ],
+        [
+          {
+            "text": "for x in range(2023, 10**9, 2023):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Цикл for, который перебирает числа, начиная от 2023 и до 1000000000 с шагом 2023."
+          }
+        ],
+        [
+          {
+            "text": "if fnmatch(str(x), '20*23'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, соответствует ли строковое представление числа x шаблону '20*23'. Это используется для проверки определенного условия на соответствие числа некоторому шаблону."
+          }
+        ],
+        [
+          {
+            "text": "summa = sum([int(i) for i in str(x)])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вычисление суммы всех цифр в числе x. Для этого строковое представление числа разбивается на отдельные цифры, каждая из которых преобразуется в целое число, после чего вычисляется сумма."
+          }
+        ],
+        [
+          {
+            "text": "if summa % 7 == 0 and summa < 20:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверка, делится ли сумма цифр числа x на 7 без остатка и при этом не превышает ли сумма 20."
+          }
+        ],
+        [
+          {
+            "text": "print(x)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Вывод числа x, которое удовлетворяет условиям, описанным выше. Если число соответствует условиям, оно будет выведено."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Fcmd8ZkCRId00ApeoR8-HSRowqAXoaS9OQ7kLfp4AqopwZfc-rG7vXBHfVHBD-mnOBILSzBKHSry7Q2rdbiTuJ61KJ7Np748jXjIOXOcWm86tEdtmSaBMmuz0YLxiH4IiY6XfyY0ez8Udu4L1DqE27ERbOtqi3Z-p7-p1e4skInWDFk2XXBdc5Jqr4WT01pPR3ErX47-2dAdvf7LEkez1XzGX7dyIb8mTvT5-ngdnxbTmK16Lt3drMj494AjpYm0uWMu4J_ZOTxRygOaw2bO16WLuwoWNG54VgSgO3dUj4eYO383yeeKBVRB-M9g04Z4f-aQ5IojjLwN1E1EKB-T_Q",
+      "file": "675-1.jpg"
+    }
+  ],
+  "task": 25,
+  "problem": "9076",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "А.Богданов",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 25 ЕГЭ: разбор задачи 9076",
+  "title": "Задание 25 ЕГЭ: разбор задачи 9076",
+  "slug": "zadanie-25-ege-razbor-zadachi-9076",
+  "hidden": false
+}

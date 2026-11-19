@@ -1,0 +1,36 @@
+{
+  "id": 759,
+  "rubric": "breakdown",
+  "description": "Задание 5 ЕГЭ: разбор задачи",
+  "date": "2024-07-04",
+  "source": "https://t.me/informatika_kege_itpy/759",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/759-1.jpg",
+      "width": 800,
+      "height": 601,
+      "alt": "Задание 5 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "R = []\nfor n in range(1, 1000):\n    s = f'{n:b}'   # s = bin(n)[2:]\n    if n % 2 == 0:\n        s = s + '10'\n    else:\n        s = '1' + s + '01'\n    r = int(s, 2)\n    if n < 11:\n        R.append(r)\nprint(min(R))"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/Vx9j6Nm1Yihq69mMJTUOorsvdjPE9R8ZnjITxrqOL9ChfmH22RaGfOdgOmdtSr9gF-KakCnJbz7ReRIGjBIhXluEtJrrHiAXaWD3mP3qHD_eP4wUKsTzS_3kNux2rZo9k8c73pdQr_U6U02y7kcTUz9YexG9bx3sa4f9TZJVaiIiURXThLX15BSpb7ZI0Wt98r01QsqRZ6RxWpOY3pCG2xIhtzN2leVK8tUwGiCuFA4pG3O2whB-7LDV8Pgr5uCijGEMOkcsqrDOvxysUzroRQ9z2Nl5Vz6lLJCp7I9Tvh5605OpJfghFRqsFh5KCEtJhH7vkXkQ1X17T1vUouy-0Q.jpg",
+      "file": "759-1.jpg"
+    }
+  ],
+  "task": 5,
+  "baseTitle": "Задание 5 ЕГЭ: разбор задачи",
+  "title": "Задание 5 ЕГЭ: разбор задачи (4 июля 2024)",
+  "slug": "zadanie-5-ege-razbor-zadachi-4-iyulya-2024",
+  "hidden": false
+}

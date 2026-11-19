@@ -1,0 +1,271 @@
+{
+  "id": 1259,
+  "rubric": "python",
+  "description": "itertools -- для комбинаторики (№1, 8, 9, 12, 24)",
+  "date": "2026-02-28",
+  "source": "https://t.me/informatika_kege_itpy/1259",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "turtle",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-- для графики",
+          "bold": true
+        },
+        {
+          "text": " ("
+        },
+        {
+          "text": "№6",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ")"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from turtle import *\ntracer(0)\nfd(100)\nrt(90)\ngoto(50, 30)\ndot(5, 'red')\ndone()"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "itertools",
+          "code": true
+        },
+        {
+          "text": " --"
+        },
+        {
+          "text": " для комбинаторики",
+          "bold": true
+        },
+        {
+          "text": " ("
+        },
+        {
+          "text": "№1, 8, 9, 12, 24",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ")"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Для этого модуля лучше импортировать только нужные функции, чтобы код оставался понятным.",
+          "italic": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from itertools import product, permutations\n\nfor combo in product([1, 2, 3], repeat=2):\n    print(combo)\n\nfor perm in permutations('abc'):\n    print(''.join(perm))"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "ipaddress",
+          "code": true
+        },
+        {
+          "text": " -- для сетей",
+          "bold": true
+        },
+        {
+          "text": " ("
+        },
+        {
+          "text": "№13",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ")"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from ipaddress import ip_network\n\nnet = ip_network('192.168.1.64/26', strict=False)\nprint(net, net.netmask, net.num_addresses)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "sys",
+          "code": true
+        },
+        {
+          "text": " + "
+        },
+        {
+          "text": "functools",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-- для рекурсии",
+          "bold": true
+        },
+        {
+          "text": " ("
+        },
+        {
+          "text": "№16",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ")"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from sys import setrecursionlimit\nsetrecursionlimit(10000)\n\nfrom functools import lru_cache\n\n@lru_cache(None)\ndef F(n):\n    if n <= 3:\n        return n\n    return F(n - 1) + F(n - 3)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "fnmatch",
+          "code": true
+        },
+        {
+          "text": " -- для поиска по маске ("
+        },
+        {
+          "text": "№25",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ")"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from fnmatch import fnmatch\n\nif fnmatch('12345', '12?45'):\n    print('Подходит')"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "string",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-- готовые алфавиты",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from string import ascii_uppercase, digits, punctuation\n\nprint(ascii_uppercase)  # ABCDEFGHIJKLMNOPQRSTUVWXYZ\nprint(digits)           # 0123456789\nprint(punctuation)      # !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "math",
+          "code": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "-- математические функции",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "from math import *\n\nprint(sqrt(225))    # 15.0\nprint(ceil(7 / 2))  # 4\nprint(factorial(5)) # 120\nprint(gcd(36, 60))  # 12"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Важно",
+          "bold": true
+        },
+        {
+          "text": ": при использовании "
+        },
+        {
+          "text": "from < . . . > import *",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - может произойти конфликт имен, если вы используете у себя такие же названия переменных."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "На экзамене "
+        },
+        {
+          "text": "from turtle import *",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "from math import * ",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "помогают писать код быстрее."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В остальных случаях лучше использовать точечный импорт: "
+        },
+        {
+          "text": "from module import func",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Очень полезные библиотеки Python для ЕГЭ по информатике",
+  "title": "Очень полезные библиотеки Python для ЕГЭ по информатике",
+  "slug": "ochen-poleznye-biblioteki-python-dlya-ege-po-informatike",
+  "hidden": false
+}

@@ -1,0 +1,54 @@
+{
+  "id": 216,
+  "rubric": "python",
+  "description": "Библиотека turtle в Python - это простой инструмент для создания графических приложений, основанных на графике черепашки. Она позволяет легко рисовать различные фигуры и анимации,…",
+  "date": "2023-08-09",
+  "source": "https://t.me/informatika_kege_itpy/216",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/216",
+      "thumb": {
+        "src": "/blog-media/216-1.jpg",
+        "width": 848,
+        "height": 352
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Библиотека",
+          "href": "https://informatikakegeitpy.notion.site/Python-tpy-45b29bdaf0ff41ffae5c39d4f692e497?pvs=4"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "turtle",
+          "code": true
+        },
+        {
+          "text": " в "
+        },
+        {
+          "text": "Python",
+          "code": true
+        },
+        {
+          "text": " - это простой инструмент для создания графических приложений, основанных на графике черепашки. Она позволяет легко рисовать различные фигуры и анимации, а с прошлого года пригодится нам на экзамене!"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/twK5daXx9wqZy_3lBj8FX8GRxM-2dAA4M3GlMtkMhy22sn0_Az_3zPuVUr4eX0m1o5i_sb-OyIlOo_WHUuBLWWBx5MNiLmZ10byJVqdlsiJGo--lr3EWqIHpK0XR9k7IeoGbVO-LJdF6bs6r_yGoAvuASLmiCe2lOtx2rtvZQ8ionLdR8yqIr2UpDehU8sK8liaUTO54_usqhujzttX4I3bLhoQedpfN3MBceOTjqaYuOcD1ueGpmyEiaD6JJnyoPwHRReX9olNprMXL2-HiFyPq26NuF9_t_omYKGh3uNdNy9ZDugHPvpz_jMYdLdYVGtpGicw1TNTRkWWTqBqe2Q",
+      "file": "216-1.jpg"
+    }
+  ],
+  "baseTitle": "Библиотека Turtle, чем может быть полезна на ЕГЭ",
+  "title": "Библиотека Turtle, чем может быть полезна на ЕГЭ",
+  "slug": "biblioteka-turtle-chem-mozhet-byt-polezna-na-ege-216",
+  "hidden": true
+}

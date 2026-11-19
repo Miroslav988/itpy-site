@@ -1,0 +1,541 @@
+{
+  "id": 1191,
+  "rubric": "python",
+  "description": "Умение работать со строками пригодится вам при решении задач под номерами - 12, 24",
+  "date": "2025-10-15",
+  "source": "https://t.me/informatika_kege_itpy/1191",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Умение работать со строками пригодится вам при решении задач под номерами - "
+        },
+        {
+          "text": "12, 24",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "# (... может каких то еще, вроде ток эти две ) "
+        },
+        {
+          "text": "🆘",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Топ-20 методов, которые помогут быть очень полезны"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "1. "
+        },
+        {
+          "text": "upper()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - переводит строку в верхний регистр."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"hello\".upper() → \"HELLO\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. "
+        },
+        {
+          "text": "lower()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - переводит строку в нижний регистр."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"HELLO\".lower() → \"hello\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "3. "
+        },
+        {
+          "text": "capitalize() ",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "- делает первую букву заглавной."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"hello\".capitalize() → \"Hello\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "4. "
+        },
+        {
+          "text": "title()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - каждое слово с заглавной буквы."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"hello world\".title() → \"Hello World\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "5. "
+        },
+        {
+          "text": "strip()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - удаляет пробелы с обоих концов."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"hello\".strip() → \"hello\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "6. "
+        },
+        {
+          "text": "lstrip() / rstrip()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - удаляет пробелы слева/справа."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "7. "
+        },
+        {
+          "text": "replace(",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "old",
+          "italic": true
+        },
+        {
+          "text": ", ",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "new",
+          "italic": true
+        },
+        {
+          "text": ")",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " - заменяет подстроку."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"abc\".replace(\"a\", \"x\") → \"xbc\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "8. "
+        },
+        {
+          "text": "split(",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "sep",
+          "italic": true
+        },
+        {
+          "text": ")",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " - разбивает строку по разделителю."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"a,b,c\".split(\",\") → [\"a\", \"b\", \"c\"]",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "0. "
+        },
+        {
+          "text": "join(",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "list",
+          "italic": true
+        },
+        {
+          "text": ")",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " - собирает строку из списка."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\",\".join([\"a\", \"b\", \"c\"]) → \"a,b,c\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "10. "
+        },
+        {
+          "text": "startswith(",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "str",
+          "italic": true
+        },
+        {
+          "text": ") / endswith(",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "str",
+          "italic": true
+        },
+        {
+          "text": ") ",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "- проверяет начало/конец строки."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"hello\".startswith(\"he\") → True",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "11. "
+        },
+        {
+          "text": "find(",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "sub",
+          "italic": true
+        },
+        {
+          "text": ")",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " - ищет подстроку и возвращает индекс."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"hello\".find(\"ll\") → 2",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "12. "
+        },
+        {
+          "text": "count(",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": "sub",
+          "italic": true
+        },
+        {
+          "text": ")",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " - считает количество вхождений."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"hello\".count(\"l\") → 2",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "13. "
+        },
+        {
+          "text": "isdigit()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - проверяет, состоит ли строка из цифр."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"123\".isdigit() → True",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "14. "
+        },
+        {
+          "text": "isalpha()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - проверяет, только ли буквы."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"abc\".isalpha() → True",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "15. "
+        },
+        {
+          "text": "isalnum()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - буквы или цифры без пробелов."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"a1\".isalnum() → True",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "16. "
+        },
+        {
+          "text": "islower() / isupper()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - проверяет регистр."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "17. "
+        },
+        {
+          "text": "zfill(width) ",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "- дополняет нулями слева."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"7\".zfill(3) → \"007\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "18. "
+        },
+        {
+          "text": "format()",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " - подставляет значения в строку."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"{}\".format(5) → \"5\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "10. "
+        },
+        {
+          "text": "f-строки",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " (Python 3.6+) - удобный формат."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "f\"{5}\" → \"5\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "20. "
+        },
+        {
+          "text": "in",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " – проверка наличия подстроки."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\"a\" in \"abc\" → True",
+          "bold": true,
+          "italic": true
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Методы строк в Python!",
+  "title": "Методы строк в Python!",
+  "slug": "metody-strok-v-python",
+  "hidden": false
+}

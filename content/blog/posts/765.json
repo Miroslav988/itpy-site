@@ -1,0 +1,36 @@
+{
+  "id": 765,
+  "rubric": "breakdown",
+  "description": "Задание 15 ЕГЭ: разбор задачи",
+  "date": "2024-07-04",
+  "source": "https://t.me/informatika_kege_itpy/765",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/765-1.jpg",
+      "width": 800,
+      "height": 445,
+      "alt": "Задание 15 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(x, y):\n    return (x + y <= 26) or (y <= x - 4) or (y >= A)\n\nfor A in range(1000):\n    if all(F(x, y) for x in range(100) for y in range(100)):\n        print(A)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/pdhdZGhrV1YqTppDhwsYNjPMfyDROL-LcDmlZBOXh45qCTbyROjAuXOwv5l5Ll2ZVbTW2SoQ5dqPadtY7HF8PCVfQLEFX0T6dTpJapIhBMv7i2ZAopNDwN73fPOx5U0wkWoh4BGKAOjtFekgTO8B4js25hKhvolLV-R897W8rAd9f3iy8OOIfCDNUlEJmerTnX_9thoyWDZulr_UL5UqysFxJ_LtGfPRjp_oBiTVPQwRFM_ewc6SGhd6RuUVIYRPFa9xz-4ZwwAwPwqaVPh2txyKwHMLLaUq65NtP6m-hjwkPp9jPro-xxwseveHekizwXtQ8ug-_R7G0G9YVd6ZXA.jpg",
+      "file": "765-1.jpg"
+    }
+  ],
+  "task": 15,
+  "baseTitle": "Задание 15 ЕГЭ: разбор задачи",
+  "title": "Задание 15 ЕГЭ: разбор задачи (4 июля 2024)",
+  "slug": "zadanie-15-ege-razbor-zadachi-4-iyulya-2024",
+  "hidden": false
+}

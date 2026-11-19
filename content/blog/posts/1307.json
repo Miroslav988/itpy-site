@@ -1,0 +1,174 @@
+{
+  "id": 1307,
+  "rubric": "python",
+  "description": "Одна из самых базовых тем в информатике -- перевод единиц информации. Именно здесь часто теряются баллы просто из-за невнимательности, хотя сама тема очень простая.",
+  "date": "2026-04-20",
+  "source": "https://t.me/informatika_kege_itpy/1307",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/1307-1.jpg",
+      "width": 533,
+      "height": 711,
+      "alt": "Переводы единиц измерения информации"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Одна из самых базовых тем в информатике -- перевод единиц информации."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Именно здесь часто теряются баллы просто из-за невнимательности, хотя сама тема очень простая."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Что важно запомнить"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "1 байт = 8 бит"
+          }
+        ],
+        [
+          {
+            "text": "1 Кбайт = 1024 байта"
+          }
+        ],
+        [
+          {
+            "text": "1 Мбайт = 1024 Кбайта"
+          }
+        ],
+        [
+          {
+            "text": "1 Гбайт = 1024 Мбайта"
+          }
+        ],
+        [
+          {
+            "text": "1 Тбайт = 1024 Гбайта"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Так же удобно запомнить это через степени двойки"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "1 байт = 2³ бит"
+          }
+        ],
+        [
+          {
+            "text": "1 Кбайт = 2¹⁰ байт = 2¹³ бит"
+          }
+        ],
+        [
+          {
+            "text": "1 Мбайт = 2²⁰ байт = 2²³ бит"
+          }
+        ],
+        [
+          {
+            "text": "1 Гбайт = 2³⁰ байт = 2³³ бит"
+          }
+        ],
+        [
+          {
+            "text": "1 Тбайт = 2⁴⁰ байт = 2⁴³ бит"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Несколько полезных примеров"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        [
+          {
+            "text": "1 Кбайт = 1024 байта = 8192 бит"
+          }
+        ],
+        [
+          {
+            "text": "1 Мбайт = 1 048 576 байт = 8 388 608 бит"
+          }
+        ],
+        [
+          {
+            "text": "1 Гбайт = 1 073 741 824 байта = 8 589 934 592 бит"
+          }
+        ],
+        [
+          {
+            "text": "1 Тбайт = 1 099 511 627 776 байт = 8 796 093 022 208 бит"
+          }
+        ]
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Запоминалка:",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "между соседними единицами информации, больших битов, всегда переход через 1024,"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "а из байтов в биты -- умножаем на 8."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Все официальные варианты ЕГЭ 2026 в одном месте",
+          "href": "https://stepik.org/course/282248/promo",
+          "bold": true
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/EDRgVs5X8JzLRhKtI70FyJ1ibkuBHM_0N5AkvY2FT0ZCKcJvNwoCgP7GyaBVKlXft2xDEQiNR0yfSHZVnIB14bI3BufHTUaR77xqJM8OzKo6S6680q6aaZt_zbl7XX1R-9pt5kcVTwxTdgYZjsNYr9Iiu_unukSdKdPNeEH-zcjwe4suZ2zCpSQ2ztePxgfQ1zNFh7RHkZ3SzGP4PLviIgH4e3xFLpDWCDvs8MACtj935y95j6z_F7bErkUPrUX2AxsMjLgqmL2XDTSv232qJNd63EQBacDH2xP0lbgU2pz3aGyGwRMyeTeVyG-KyaAL9lk_bIs88hSDe-JX14qQ1A.jpg",
+      "file": "1307-1.jpg"
+    }
+  ],
+  "baseTitle": "Переводы единиц измерения информации",
+  "title": "Переводы единиц измерения информации",
+  "slug": "perevody-edinits-izmereniya-informatsii",
+  "hidden": false
+}

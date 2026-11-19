@@ -1,0 +1,40 @@
+{
+  "id": 233,
+  "rubric": "python",
+  "description": "Основные вещи, которые необходимы для начала освоения языка программирования Python. Не побоюсь слова \"база\" для сдачи ЕГЭ, а точнее базовый минимум.",
+  "date": "2023-08-30",
+  "source": "https://t.me/informatika_kege_itpy/233",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/233",
+      "thumb": {
+        "src": "/blog-media/233-1.jpg",
+        "width": 848,
+        "height": 352
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Основные",
+          "href": "https://informatikakegeitpy.notion.site/tpy-fe62e5fad47048c386b20753f3f8fe79?pvs=4"
+        },
+        {
+          "text": " вещи, которые необходимы для начала освоения языка программирования Python. Не побоюсь слова \"база\" для сдачи ЕГЭ, а точнее базовый минимум."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/OpwKrl-8iDRQILvgXKUKUpUnxBjGr6qk2z0zXClDK3UN79frUxF8Aae8oypSwoY4aaB19xuTDxQ52jujDhYxaBRWtVlO-KrOhdKLy413GGxcN5MZUf36_qBM3FvaxJn1sLefjv66PIXAc_ewbubDmb2tIuROQHiACpVIE903FCdDBUal1oYXzFo38r1f60SVKkjTTSXDJB-v-XbmzYZ-oqxJ9MPzx8geKhhJuc_o71x1kQV5gH7BINjPx1IFlnuZyKt3U0lkJxZM4CajuwG6R5gkwmsx-PLcrplxNcSKCAKIBBG9TALcCQ_u5_ierj_wMwUT8FX_SvIYETFl99rs5g",
+      "file": "233-1.jpg"
+    }
+  ],
+  "baseTitle": "Типы данных и базовая арифметика",
+  "title": "Типы данных и базовая арифметика",
+  "slug": "tipy-dannyh-i-bazovaya-arifmetika",
+  "hidden": false
+}

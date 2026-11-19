@@ -1,0 +1,70 @@
+{
+  "id": 59,
+  "rubric": "breakdown",
+  "description": "Рассмотрим две задачи 14 типа из новой демки для экзамена 2022 года.",
+  "date": "2022-11-23",
+  "source": "https://t.me/informatika_kege_itpy/59",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "код примеров: "
+        },
+        {
+          "text": "48386",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=48386",
+          "bold": true
+        },
+        {
+          "text": " и ",
+          "bold": true
+        },
+        {
+          "text": "48394",
+          "href": "https://inf-ege.sdamgia.ru/problem?id=48394",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Рассмотрим две задачи 14 типа из новой демки для экзамена 2022 года."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Обратите внимание, что основное отличие от старой задачи – смена алгоритма. Теперь нас просят перевести из n-ной в 10-ную систему счисления и посчитать арифметическое выражение."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Как и большинство задач ЕГЭ по информатике, ее легко решить перебором. Обратите внимание, что перебераем мы по числам из наименьшей системы счисления!"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ссылка на код github",
+          "href": "https://github.com/ilandroxxy/ilandroxy_bot/blob/main/ilandroxy_Bot/examples/Number_14new_2022.py"
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "task": 14,
+  "baseTitle": "Задание 14 ЕГЭ: разбор задачи",
+  "title": "Задание 14 ЕГЭ: разбор задачи (23 ноября 2022)",
+  "slug": "zadanie-14-ege-razbor-zadachi-23-noyabrya-2022",
+  "hidden": false
+}

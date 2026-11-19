@@ -1,0 +1,36 @@
+{
+  "id": 756,
+  "rubric": "breakdown",
+  "description": "Задание 8 ЕГЭ: разбор задачи",
+  "date": "2024-07-04",
+  "source": "https://t.me/informatika_kege_itpy/756",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/756-1.jpg",
+      "width": 800,
+      "height": 509,
+      "alt": "Задание 8 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from itertools import *\nalphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')\ncnt = 0\nfor per in product(alphabet[:17], repeat=5):\n    w = ''.join(per)\n    if w[0] != '0':\n        if w.count('3') == 1:\n            if len([x for x in w if x > 'C']) <= 3:\n                cnt += 1\nprint(cnt)"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/vnnBvuKDoBqnPPH-CXOZ7GZHzEWLNRM3_GGLjyVgga6P_BDpuoHpFOtvWhp3wdJXlAxfbzAaBS_OEwwIxRUzEa2u2f6Xu6r3FyvJkfypNlbYzp2cY5zoJ209KtrX3WLtRLVdEEqLiyS_lGTzpTty_hPb53QeKWhBSz48j77D1XhdfjoDSkfx1oU5Y85WXi-yWHxIlFuqdP3LxBlpzPwU0hMqnRjzuGQd6ThiqU8fvr1EqHYNb0X6nGmLdjnxi0SNdez9vqUTNef_fUH94z2FXHc_erxagBjY5SKa3HR9NyC_puMZeTP7119VvODSy7rvbpopKl-8H73VtbIWP3MOxQ.jpg",
+      "file": "756-1.jpg"
+    }
+  ],
+  "task": 8,
+  "baseTitle": "Задание 8 ЕГЭ: разбор задачи",
+  "title": "Задание 8 ЕГЭ: разбор задачи (4 июля 2024)",
+  "slug": "zadanie-8-ege-razbor-zadachi-4-iyulya-2024",
+  "hidden": false
+}

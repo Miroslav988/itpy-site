@@ -1,0 +1,198 @@
+{
+  "id": 908,
+  "rubric": "breakdown",
+  "description": "Определите количество строк таблицы, для которых одновременно выполняются следующие условия: 1. Удвоенный квадрат минимального из чисел, содержащихся в строке, больше, чем…",
+  "date": "2024-11-10",
+  "source": "https://t.me/informatika_kege_itpy/908",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/908-1.jpg",
+      "width": 800,
+      "height": 505,
+      "alt": "Задание 9 ЕГЭ: разбор задачи — Калинин А."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Определите количество строк таблицы, для которых одновременно выполняются следующие условия:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "1. Удвоенный квадрат минимального из чисел, содержащихся в строке, больше, чем произведение двух других чисел, ни одно из которых не равно максимальному числу"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "2. В строке содержится хотя бы два одинаковых числа"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Особенное внимание уделите условию: \"ни одно из которых не равно максимальному числу\""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "cnt = 0\nfor s in open('files/9.csv'):\n    M = sorted([int(x) for x in s.split(',')])\n\n    if len(set(M)) < 4:\n        if (2 * M[0] ** 2) > (M[1] * M[2]):\n            if M[1] != max(M) and M[2] != max(M):\n                print(M)\n                cnt += 1\nprint(cnt)\n\n# Ответ: 43"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "cnt = 0",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Инициализируем счётчик cnt, который будет хранить количество подходящих списков чисел."
+          }
+        ],
+        [
+          {
+            "text": "for s in open('files/9.csv'):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Открываем файл '9.csv' для чтения и начинаем цикл по каждой строке файла."
+          }
+        ],
+        [
+          {
+            "text": "M = sorted([int(x) for x in s.split(',')])",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Разделяем строку s по запятым, преобразуем каждую часть в целое число и сортируем полученный список в M."
+          }
+        ],
+        [
+          {
+            "text": "if len(set(M)) < 4:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, содержит ли множество уникальных элементов списка M меньше 4 значений."
+          }
+        ],
+        [
+          {
+            "text": "if (2 * M[0] ** 2) > (M[1] * M[2]):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, выполняется ли неравенство: двойной квадрат первого элемента больше произведения второго и третьего элементов."
+          }
+        ],
+        [
+          {
+            "text": "if M[1] != max(M) and M[2] != max(M):",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Проверяем, не является ли максимальный элемент списка среди второго или третьего элементов."
+          }
+        ],
+        [
+          {
+            "text": "print(M)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Если все условия выполнены, выводим список M."
+          }
+        ],
+        [
+          {
+            "text": "cnt += 1",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Увеличиваем счётчик cnt на 1, так как мы нашли подходящий список."
+          }
+        ],
+        [
+          {
+            "text": "print(cnt)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "По завершении цикла выводим общее количество подходящих списков, хранящихся в cnt."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/YmCCGlVM1-bVNBAqHdjGR35ZwfwXZ01wu21HVbroiT55UqnQp2QqdWBUn9nm_X_ekn2rOliVHxC6cCNxpbjnVPv0xUqvc_Pvk7SGcFCZgvKBo-05CvmLLlgHx0nNpyUf_0w-GrJ26lU7fnjyZ51KFGzuLBFKemeSsUpoabgzyTluy1AXCdB8h2Y9hP7jWEzXe8Vx58bhMx58oyQuFXkPuHorRPmF97VUTQ2wxKKZuLdZuoOeqNKuTfEILyf161A6T-P_ErbPy7Mm9QCsmoBWVKfCmOT4a-XsQFBfaw7QDM6LYu8eNb1C8mcJhAv7JKWvYHE3sIGSOO-bFip8ABJWUQ.jpg",
+      "file": "908-1.jpg"
+    }
+  ],
+  "task": 9,
+  "collection": "Яндекс",
+  "meta": {
+    "source": "Калинин А.",
+    "level": "Средний"
+  },
+  "baseTitle": "Задание 9 ЕГЭ: разбор задачи — Калинин А.",
+  "title": "Задание 9 ЕГЭ: разбор задачи — Калинин А.",
+  "slug": "zadanie-9-ege-razbor-zadachi-kalinin-a",
+  "hidden": false
+}

@@ -1,0 +1,187 @@
+{
+  "id": 836,
+  "rubric": "breakdown",
+  "description": "Какая строка получится в результате применения приведённой ниже программы к строке, состоящей из 81 идущей подряд цифре 1? В ответе запишите полученную строку. ПОКА нашлось…",
+  "date": "2024-09-14",
+  "source": "https://t.me/informatika_kege_itpy/836",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/836",
+      "thumb": {
+        "src": "/blog-media/836-1.jpg",
+        "width": 848,
+        "height": 448
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Какая строка получится в результате применения приведённой ниже программы к строке,"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "состоящей из 81 идущей подряд цифре 1? В ответе запишите полученную строку."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ПОКА нашлось (11111) ИЛИ нашлось (888)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ЕСЛИ нашлось (11111)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ТО заменить (11111, 88)"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "ИНАЧЕ заменить (888, 8)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Предлагаю",
+          "bold": true
+        },
+        {
+          "text": " вам альтернативное решение базового 12 номера с использованием библиотеки re. Базовое решение оставлю в комментариях к этому посту!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from re import *\ns = '1' * 81\nwhile '11111' in s or '888' in s:\n    s = sub('11111', '8', s, 1)\n    s = sub('888', '8', s, 1)\nprint(s)\n\n# Ответ: 881"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "from re import *",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Импортируем все функции и классы из модуля re, который предоставляет функциональность для работы с регулярными выражениями."
+          }
+        ],
+        [
+          {
+            "text": "s = '1' * 81",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Создаем строку s, состоящую из 81 символа '1'."
+          }
+        ],
+        [
+          {
+            "text": "while '11111' in s or '888' in s:",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Начинаем цикл, который продолжается до тех пор, пока строка s содержит подстроку '11111' или '888'."
+          }
+        ],
+        [
+          {
+            "text": "s = sub('11111', '8', s, 1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяем первое вхождение подстроки '11111' на '8' в строке s."
+          }
+        ],
+        [
+          {
+            "text": "s = sub('888', '8', s, 1)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Заменяем первое вхождение подстроки '888' на '8' в строке s."
+          }
+        ],
+        [
+          {
+            "text": "print(s)",
+            "code": true
+          },
+          {
+            "text": "\n"
+          },
+          {
+            "text": "Выводим результирующую строку s после завершения цикла."
+          }
+        ]
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/I8uwJ8QftbyxGxXRz6w9ddG4nxiaxN_ua6dOnAThipcBg4tOpRPtT92FQJqn-LACLOw7C4tnQPr3oC3AWMBjrPbcdXYvtJUDf-gJ0Ib0Dg4EuVbeOOkn2d0cy6cnLUTdsHX6LEMknrkyus2fXWLBzid2q5-2F_edzvw4zHU2vWgvEwS2wkSMg9CaarLW3lFxDkaNhhT_r4KbVLeQ_UkErpQo2K6iwOcfDqETxIj8vjKd08DFiHoe4hX9EKq618o0Z1EkThtwWI6lIbS7VbK-dTL-67W2L1fmbXU3UTUFjPU-y5z2ADiyqT1a9eZ6TLo_MIh9SkJa3rIjAz_x_ggLyQ",
+      "file": "836-1.jpg"
+    }
+  ],
+  "task": 12,
+  "problem": "17866",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Демоверсия 2025",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 12 ЕГЭ: разбор задачи 17866",
+  "title": "Задание 12 ЕГЭ: разбор задачи 17866",
+  "slug": "zadanie-12-ege-razbor-zadachi-17866",
+  "hidden": false
+}

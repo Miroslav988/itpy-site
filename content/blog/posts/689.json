@@ -1,0 +1,164 @@
+{
+  "id": 689,
+  "rubric": "breakdown",
+  "description": "Исполнитель преобразует число на экране. У исполнителя есть две команды, которые обозначены латинскими буквами: А. Вычти 2 В. Найди целую часть от деления на 2 Сколько существует…",
+  "date": "2024-06-07",
+  "source": "https://t.me/informatika_kege_itpy/689",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "/blog-media/689-1.jpg",
+      "width": 800,
+      "height": 415,
+      "alt": "Задание 23 ЕГЭ: разбор задачи"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Исполнитель преобразует число на экране."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "У исполнителя есть две команды, которые обозначены латинскими буквами:"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "А. Вычти 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "В. Найди целую часть от деления на 2"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Сколько существует программ, для которых при исходном число 30 результатом является число 1, и при этом траектория вычислений содержит число 14?"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "def F(a, b):\n    if a <= b:\n        return a == b\n    return F(a-2, b) + F(a//2, b)\n\nprint(F(30, 14) * F(14, 1))\n\n# Ответ: 36"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "1. def F(a, b)"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Объявление функции `F` с аргументами `a` и `b`."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2. if a <= b"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Проверка условия: если `a` меньше или равно `b`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "3. "
+        },
+        {
+          "text": "return a == b",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Возвращение результата сравнения `a` и `b`, если они равны."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "4. "
+        },
+        {
+          "text": "return F(a-2, b) + F(a//2, b)",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Возвращение суммы рекурсивных вызовов функции `F` с аргументами `a-2, b` и `a//2, b`."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "5. "
+        },
+        {
+          "text": "print(F(30, 14) * F(14, 1))",
+          "code": true
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Вывод на экран произведения результатов вызовов функции `F` с аргументами `(30, 14)` и `(14, 1)`."
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/anrC5HVvCVXhyYBX3TPMFKc8aZ_mFUrlBOCMOF8fqH7KeLS0xSyKmBzak5tO5jW5pZ2b6RJIRRr6L3nlrI3qa8sBkuvo1zLI0XC4AvEDhg08VvoXC7m1tM97JQvg1I2u1mhsb5jLqannzMorg30S4TXQSIIjVm5_3RUuutCEz0nxrDPmrlNk5DWxUaBRIn0XIcOWLMoqgJw_0Vruby_H0ksheK1SPzOPzAI-yaCjUnDZF3V3GkPnoz5WXtRSxE9pH7yb1Ht1WYWorxahWBqlqtIZ84z9jCphEodxGN3IJ2yVs0TiIqq9OLMgurBBFZ8HFUwmG_P-MAtl2WYb_2LGow.jpg",
+      "file": "689-1.jpg"
+    }
+  ],
+  "task": 23,
+  "baseTitle": "Задание 23 ЕГЭ: разбор задачи",
+  "title": "Задание 23 ЕГЭ: разбор задачи",
+  "slug": "zadanie-23-ege-razbor-zadachi-689",
+  "hidden": true
+}

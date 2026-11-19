@@ -1,0 +1,341 @@
+{
+  "id": 993,
+  "rubric": "breakdown",
+  "description": "Назовём маской образец строки, который строится на основании служебных знаков # и &, причём знак # обозначает непустую последовательность из идущих подряд букв, а знак & задает…",
+  "date": "2025-02-24",
+  "source": "https://t.me/informatika_kege_itpy/993",
+  "blocks": [
+    {
+      "type": "video",
+      "href": "https://t.me/informatika_kege_itpy/993",
+      "thumb": {
+        "src": "/blog-media/993-1.jpg",
+        "width": 848,
+        "height": 768
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Условие задачи"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Назовём маской образец строки, который строится на основании служебных знаков # и &, причём знак # обозначает непустую последовательность из идущих подряд букв, а знак & задает непустую последовательность из идущих подряд цифр."
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "Определите в прилагаемом файле максимальную длину подстроки, которая соответствует маске #&#."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Теоретическая справка"
+    },
+    {
+      "type": "quote",
+      "content": [
+        {
+          "text": "Очень понравилась эта задача, идея решения заключается в приведении всех букв к одному символу и всех цифр к другому символу. Затем разбиваем полученную последовательность на пары, разделенные пробелами, и убираем лишние цифры справа, после чего находим самую длинную строку."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Код решения"
+    },
+    {
+      "type": "code",
+      "text": "from string import *\nmaxi = 0\ns = open('0. files/24.txt').readline()\nfor x in digits:\n    s = s.replace(x, '&')\nfor x in ascii_uppercase:\n    s = s.replace(x, '#')\ns = s.replace('&#', '& #')\ns = s.split()\nfor i in range(len(s)-1):\n    r = ''.join(s[i:i+2])\n\n    while r[-1] == '&':\n        r = r[:-1]\n    maxi = max(maxi, len(r))\nprint(maxi)"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Ответ: 49",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Комментарии к коду"
+    },
+    {
+      "type": "code",
+      "text": "from string import *"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Импортируем все символы и функции из модуля string, включая digits (цифры) и ascii_uppercase (заглавные буквы алфавита)."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "maxi = 0"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 2,
+      "items": [
+        [
+          {
+            "text": "Инициализируем переменную maxi, которая будет хранить максимальную длину найденной последовательности."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = open('24.txt').readline()"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 3,
+      "items": [
+        [
+          {
+            "text": "Открываем файл '24.txt' и читаем первую строку."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for x in digits:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 4,
+      "items": [
+        [
+          {
+            "text": "Проходим по всем символам цифр от 0 до 9."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = s.replace(x, '&')"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 5,
+      "items": [
+        [
+          {
+            "text": "Заменяем каждую цифру в строке символом '&'."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for x in ascii_uppercase:"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 6,
+      "items": [
+        [
+          {
+            "text": "Проходим по всем заглавным буквам английского алфавита."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = s.replace(x, '#')"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 7,
+      "items": [
+        [
+          {
+            "text": "Заменяем каждую заглавную букву в строке символом '#'."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = s.replace('&#', '& #')"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 8,
+      "items": [
+        [
+          {
+            "text": "Заменяем последовательность '&#' на '& #' с пробелом между ними."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "s = s.split()"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        [
+          {
+            "text": "Разбиваем строку s на список строк, используя пробелы в качестве разделителей."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "for i in range(len(s)-1):"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 10,
+      "items": [
+        [
+          {
+            "text": "Перебираем индексы в списке s от 0 до длины списка минус 1."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "r = ''.join(s[i:i+2])"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 11,
+      "items": [
+        [
+          {
+            "text": "Формируем строку r путем объединения двух соседних элементов списка s."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "while r[-1] == '&':"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 12,
+      "items": [
+        [
+          {
+            "text": "Запускаем цикл, который продолжается, пока последний символ строки r равен '&'."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "r = r[:-1]"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 13,
+      "items": [
+        [
+          {
+            "text": "Убираем последний символ из строки r."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "maxi = max(maxi, len(r))"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 14,
+      "items": [
+        [
+          {
+            "text": "Обновляем значение maxi, если длина текущей строки r больше, чем текущее значение maxi."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "text": "print(maxi)"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 15,
+      "items": [
+        [
+          {
+            "text": "Выводим максимальную длину найденной последовательности."
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Наша Stepik подборкой задач",
+          "href": "https://stepik.org/course/122969/promo",
+          "bold": true
+        },
+        {
+          "text": "😼"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "url": "https://cdn4.telesco.pe/file/i9XpP2zlRnffnG4J55i_4MKzB_tebd81ni8z8fvb8dcICZJItw-LEeVkK-D52RsVcpq502szcQPaoo19Uc2oUVqHrZ2adbCi_pJHPCgQWRmBtZEPTQArjYwT7psPq6MWWQ_UHSjDVeTbIaCPcSphaT2pn1uzpFS1uLbWuul2g7QoH7Mi1U4yIElzBOdR4hkiDDGn4_BpfqryJM_CB1XwOgGre7lkEsYjDJWHzUswX5PRPLOPBYF2fpFjhWKVuO3dE0tNX0STSog5pPVlQKEK_m_hviyia364pMhKqYxgzh-fiFjL1W6NQNw3DN4-OpBYW8hm9Uf5MYHLWBw7bgXrCQ",
+      "file": "993-1.jpg"
+    }
+  ],
+  "task": 24,
+  "problem": "14513",
+  "collection": "КЕГЭ",
+  "meta": {
+    "source": "Л. Шастин",
+    "level": "Базовый"
+  },
+  "baseTitle": "Задание 24 ЕГЭ: разбор задачи 14513",
+  "title": "Задание 24 ЕГЭ: разбор задачи 14513",
+  "slug": "zadanie-24-ege-razbor-zadachi-14513",
+  "hidden": false
+}

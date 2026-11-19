@@ -1,0 +1,254 @@
+{
+  "id": 1046,
+  "rubric": "python",
+  "description": "В задачах ЕГЭ (например, в номере 25) часто нужно проверять условия для всех или хотя бы одного элемента из набора. Python предлагает элегантные решения — встроенные функции all()…",
+  "date": "2025-04-19",
+  "source": "https://t.me/informatika_kege_itpy/1046",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В задачах ЕГЭ (например, в номере 25) часто нужно проверять условия для всех или хотя бы одного элемента из набора. Python предлагает элегантные решения — встроенные функции "
+        },
+        {
+          "text": "all()",
+          "code": true
+        },
+        {
+          "text": " и "
+        },
+        {
+          "text": "any()",
+          "code": true
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример с ",
+          "bold": true
+        },
+        {
+          "text": "all()",
+          "code": true
+        },
+        {
+          "text": " — Проверка простого числа",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "def is_prime(x):\n    if x <= 1:\n        return False\n    return all(x % i != 0 for i in range(2, x))\n\nprint(is_prime(7))  # Вывод: True"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Объяснение"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Генераторное выражение "
+        },
+        {
+          "text": "(x % i != 0 for i in range(2, x))",
+          "code": true
+        },
+        {
+          "text": " создает последовательность логических значений: "
+        },
+        {
+          "text": "True",
+          "code": true
+        },
+        {
+          "text": ", если "
+        },
+        {
+          "text": "x",
+          "code": true
+        },
+        {
+          "text": " не делится на "
+        },
+        {
+          "text": "i",
+          "code": true
+        },
+        {
+          "text": ", и "
+        },
+        {
+          "text": "False",
+          "code": true
+        },
+        {
+          "text": ", если делится."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Функция "
+        },
+        {
+          "text": "all()",
+          "code": true
+        },
+        {
+          "text": " возвращает "
+        },
+        {
+          "text": "True",
+          "code": true
+        },
+        {
+          "text": ", только если все значения в последовательности — истинны."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В результате, "
+        },
+        {
+          "text": "is_prime(7)",
+          "code": true
+        },
+        {
+          "text": " вернет "
+        },
+        {
+          "text": "True",
+          "code": true
+        },
+        {
+          "text": ", так как 7 не делится ни на одно число от 2 до 6 — то есть, это простое число."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Пример с ",
+          "bold": true
+        },
+        {
+          "text": "any()",
+          "code": true
+        },
+        {
+          "text": " — Поиск хотя бы одного делителя",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "text": "def has_divisor(x):\n    return any(x % i == 0 for i in range(2, x))\n\nprint(has_divisor(9))  # Вывод: True"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Объяснение"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Генератор проверяет, делится ли x хотя бы на одно число в диапазоне."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "any()",
+          "code": true
+        },
+        {
+          "text": " вернет "
+        },
+        {
+          "text": "True",
+          "code": true
+        },
+        {
+          "text": ", если хотя бы одно значение в последовательности — истина."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "В примере "
+        },
+        {
+          "text": "has_divisor(9)",
+          "code": true
+        },
+        {
+          "text": " возвращает True, потому что 9 делится на 3."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Кратко"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "all()",
+          "code": true
+        },
+        {
+          "text": " — возвращает True, если все элементы истинны."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "any()",
+          "code": true
+        },
+        {
+          "text": " — возвращает True, если хотя бы один элемент истинен."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "text": "Обе функции работают с итерируемыми объектами (списки, генераторы и т. д.) и часто используются в проверках условий."
+        }
+      ]
+    }
+  ],
+  "media": [],
+  "baseTitle": "Функции all() и any() в Python: просто о полезном",
+  "title": "Функции all() и any() в Python: просто о полезном",
+  "slug": "funktsii-all-i-any-v-python-prosto-o-poleznom",
+  "hidden": false
+}
