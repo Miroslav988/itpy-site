@@ -14,14 +14,14 @@
     "blog:sync": "node scripts/telegram/sync.mjs"
   },
   "dependencies": {
-    "next": "16.4.4",
+    "next": "16.4.6",
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "undici": "7.30.1"
   },
   "devDependencies": {
     "@eslint/js": "9.39.4",
-    "@next/eslint-plugin-next": "16.4.4",
+    "@next/eslint-plugin-next": "16.4.6",
     "@tailwindcss/postcss": "4.2.1",
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",

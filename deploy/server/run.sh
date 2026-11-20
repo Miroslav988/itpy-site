@@ -1,6 +1,6 @@
 #!/bin/bash
-# Started by launchd (/Library/LaunchDaemons/online.itpy.site.plist): loads the settings and runs
-# the built site from ~/itpy/app. Restarted by launchd if it stops.
+# Started by systemd (/etc/systemd/system/itpy-site.service): loads the settings and runs the
+# built site from ~/itpy/app. systemd restarts it if it stops.
 set -euo pipefail
 ITPY_HOME="${ITPY_HOME:-$HOME/itpy}"
 set -a

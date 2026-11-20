@@ -3,6 +3,9 @@ import { getPosts, hasPage, rubricsWithPosts } from "./blog/posts";
 import { legalDocuments } from "./legal/documents";
 import { siteOrigin } from "./site";
 
+// Prerendered like the home page; new posts from the channel appear within an hour.
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const origin = await siteOrigin();
   const posts = getPosts();

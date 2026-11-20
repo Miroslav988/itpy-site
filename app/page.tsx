@@ -12,6 +12,10 @@ import { JsonLd, faqSchema, pageMetadata, personSchema, servicesSchema, websiteS
 import { siteOrigin } from "./site";
 
 
+// The page is prerendered, and the blog block on it comes from posts the running site adds by
+// itself (scripts/telegram/sync.mjs): rebuild it in the background at most once an hour.
+export const revalidate = 3600;
+
 export const metadata = pageMetadata({
   path: "/",
   title: "Подготовка к ЕГЭ по информатике — Илья Андрианов · ITPY",

@@ -1,7 +1,7 @@
 #!/bin/bash
-# Updates the site on the Mac: pulls the code, builds it and restarts the service. If the new
+# Updates the site on the server: pulls the code, builds it and restarts the service. If the new
 # build does not start, the previous one comes back.
-#   ~/itpy/site/deploy/mac/update.sh
+#   ~/itpy/site/deploy/server/update.sh
 . "$(dirname "$0")/lib.sh"
 
 say "Код из git"

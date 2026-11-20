@@ -1,8 +1,9 @@
 # ITPY
 
 Сайт Ильи Андрианова: подготовка к ЕГЭ по информатике (`/`), каталог курсов на Stepik (`/courses`) и блог (`/blog`).
-Стек — Next.js 16 (App Router), Node.js `>=22.13.0`. В продакшене сайт работает на Mac Ильи без Docker:
-служба macOS + nginx, инструкция и скрипты — [deploy/mac/README.md](deploy/mac/README.md). Docker-образ тоже есть.
+Стек — Next.js 16 (App Router), Node.js `>=22.13.0`. В продакшене сайт работает на сервере cloud.ru
+(Ubuntu) без Docker: служба systemd + nginx, инструкция и скрипты — [deploy/server/README.md](deploy/server/README.md).
+Telegram для блога — через туннель к Mac Ильи ([deploy/tunnel/README.md](deploy/tunnel/README.md)). Docker-образ тоже есть.
 
 ## Команды
 
