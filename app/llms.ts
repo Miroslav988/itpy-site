@@ -1,6 +1,6 @@
 import { getPosts, hasPage, rubrics, type Rubric } from "./blog/posts";
 import { aboutFacts, environment, faqs, features, formats, links, pairsNote, steps } from "./content";
-import { courses, stepikUrl } from "./courses/catalog";
+import { publishedCourses, stepikUrl } from "./courses/catalog";
 
 // Plain-text descriptions of the site for AI assistants (the llms.txt convention).
 // Built from the same data as the pages, so they cannot drift apart. Facts only: no
@@ -75,7 +75,7 @@ ${list(format.rows.map((row) => `${row.label}: ${row.value}`))}
 `);
 
   const environmentLines = environment.map((item) => `- ${item.name} (${item.role.toLowerCase()}): ${item.text.map((line) => (/[.!?]$/.test(line) ? line : `${line}.`)).join(" ")}`);
-  const courseLines = courses.map((course) => `- [${course.title}](${stepikUrl(course)}) — ${course.price ?? "цена на странице курса"}. ${course.description} ${course.audience}`);
+  const courseLines = publishedCourses.map((course) => `- [${course.title}](${stepikUrl(course)}) — ${course.price ?? "цена на странице курса"}. ${course.description} ${course.audience}`);
   const taskArticles = taskNumbers().map((task) => `### Задание ${task}\n\n${inTask(task).map((post) => `- [${post.title}](${origin}/blog/${post.slug})`).join("\n")}\n`);
   const notes = (rubric: Rubric) => inRubric(rubric).map((post) => `- [${post.title}](${origin}/blog/${post.slug})`).join("\n");
 

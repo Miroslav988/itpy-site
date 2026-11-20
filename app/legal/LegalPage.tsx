@@ -52,7 +52,7 @@ export default function LegalPage({ document }: { document: LegalDocument }) {
             <p className="part-label">Документы</p>
             <h1 id="legal-title">{document.title}</h1>
             {document.lead && <p className="legal-lead">{document.lead}</p>}
-            {document.dated.date && <p className="legal-date">{document.dated.label} {document.dated.date}</p>}
+            {document.dated.date && <p className="legal-date">{`${document.dated.label} ${document.dated.date}`.trim()}</p>}
             <div className="legal-body">{render(document.text)}</div>
             <nav className="legal-others" aria-label="Другие документы">
               <p className="part-label">Другие документы</p>

@@ -68,9 +68,12 @@ test("server-renders the course catalog with Stepik links", async () => {
   const html = await response.text();
   assert.match(html, /<title>Курсы по Python и ЕГЭ на Stepik — ITPY<\/title>/);
   assert.match(html, /Каталог на Stepik/);
-  assert.match(html, /оплата на Stepik/, "paid cards say where the payment happens");
-  // Drafts (no Stepik page yet) stay off the page.
-  assert.doesNotMatch(html, /Курс по заданию 27/);
+  assert.match(html, /скоро на Stepik/, "paid cards say where they will be sold");
+  // Courses not on Stepik yet are shown with «Позже» instead of a link.
+  const soon = html.match(/<article[^>]*aria-labelledby="task-27-title"[\s\S]*?<\/article>/)?.[0] ?? "";
+  assert.match(soon, /Курс по заданию 27/);
+  assert.match(soon, /aria-disabled="true">Позже</);
+  assert.doesNotMatch(soon, /href="https:\/\/stepik/);
   for (const courseId of [203477, 122969, 282248]) {
     assert.match(html, new RegExp(`https://stepik\\.org/course/${courseId}/info`));
   }
@@ -181,8 +184,8 @@ test("answers unknown addresses with a real 404 page that is not indexed", async
 
 test("publishes the legal documents and links them from every page", async () => {
   const pages = {
-    "/offer": [/Публичная оферта/, /2 000 рублей за одно Занятие/, /ОГРНИП 324547600178946/, /Мессенджер: \+7 913 468-35-34/],
-    "/privacy": [/Политика обработки персональных данных/, /3\.4\. Файлы cookie и аналитика сайта/, /href="mailto:ilyand98@mail\.ru"/],
+    "/offer": [/Публичная оферта/, /Редакция от 20 ноября 2026 г\./, /2 000 рублей за одно Занятие/, /ОГРНИП 324547600178946/, /Мессенджер: \+7 913 468-35-34/],
+    "/privacy": [/Политика обработки персональных данных/, /Дата публикации: 20 ноября 2026 г\./, /3\.4\. Файлы cookie и аналитика сайта/, /href="mailto:ilyand98@mail\.ru"/],
     "/consent": [/Согласие на обработку персональных данных/, /<li>фамилия, имя, отчество;<\/li>/],
     "/booking-consent": [/при записи на пробное занятие/, /ООО «ДИПВОЙС»/],
   };

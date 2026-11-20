@@ -7,7 +7,7 @@ export type LegalDocument = {
   short: string;
   lead?: string;
   description: string;
-  // «Редакция от …» / «Дата публикации: …»; null until Ilia sets the date.
+  // «Редакция от …» / «Дата публикации: …»; null hides the line.
   dated: { label: string; date: string | null };
   text: string[];
 };
@@ -18,7 +18,7 @@ export const offer: LegalDocument = {
   short: "Публичная оферта",
   lead: "на оказание репетиторских услуг",
   description: "Публичная оферта ИП Андрианова Ильи Алексеевича на оказание репетиторских услуг по информатике: форматы, стоимость, переносы, возврат.",
-  dated: { label: "Редакция от", date: null },
+  dated: { label: "Редакция от", date: "20 ноября 2026 г." },
   text: offerText,
 };
 
@@ -27,7 +27,7 @@ export const privacy: LegalDocument = {
   title: "Политика обработки персональных данных",
   short: "Политика обработки персональных данных",
   description: "Как ITPY обрабатывает и защищает персональные данные посетителей сайта, учеников и их законных представителей.",
-  dated: { label: "Дата публикации:", date: null },
+  dated: { label: "Дата публикации:", date: "20 ноября 2026 г." },
   text: privacyText,
 };
 

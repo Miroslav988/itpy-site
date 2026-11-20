@@ -1,11 +1,13 @@
-// Keeps the blog in step with the channel: reads new posts from the public web preview,
-// shapes the ones with a rubric hashtag into articles (shape.mjs) and stores them in
-// content/blog: posts/<post id>.json, media/<post id>-<n>.jpg and state.json.
+// Keeps the blog in step with the channel: reads posts from the public web preview, shapes the
+// ones in the post format into articles (shape.mjs) and stores them in content/blog:
+// posts/<post id>.json, media/<post id>-<n>.jpg and state.json.
 //
-//   npm run blog:sync              new and recently edited posts
-//   npm run blog:sync -- --all     the whole channel again
+//   npm run blog:sync                      new posts and edits of the last 20
+//   npm run blog:sync -- --all             the whole channel: every edit, and articles whose posts
+//                                          were deleted from the channel go too
+//   npm run blog:sync -- --all --force     the same, even when many articles go at once
 //
-// The running site calls syncChannel() on a timer as well (instrumentation.ts).
+// The running site reads the whole channel once a day by itself (instrumentation.ts).
 
 import { existsSync } from "node:fs";
 import { mkdir, readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
@@ -111,7 +113,19 @@ async function readStore(dir) {
   return articles;
 }
 
-export async function syncChannel({ dir = blogDir(), all = false, log = console.log } = {}) {
+// Articles whose posts are gone from the channel. Only a read that reached the oldest article
+// counts (the newest page comes first, so everything newer was read too). A read that would take
+// away many articles at once is suspect, since Telegram sometimes serves short pages: it removes
+// nothing then and reports how many are held back, unless `force` says the deletions are real.
+export function deletedPosts(articleIds, seenIds, { force = false } = {}) {
+  const ids = [...articleIds];
+  if (!ids.length || !seenIds.size || Math.min(...seenIds) > Math.min(...ids)) return { remove: [], held: 0 };
+  const missing = ids.filter((id) => !seenIds.has(id));
+  const limit = Math.max(10, Math.ceil(ids.length * 0.1));
+  return missing.length > limit && !force ? { remove: [], held: missing.length } : { remove: missing, held: 0 };
+}
+
+export async function syncChannel({ dir = blogDir(), all = false, force = false, log = console.log } = {}) {
   const postsDir = join(dir, "posts");
   const mediaDir = join(dir, "media");
   await mkdir(postsDir, { recursive: true });
@@ -119,8 +133,8 @@ export async function syncChannel({ dir = blogDir(), all = false, log = console.
   const statePath = join(dir, "state.json");
   const state = existsSync(statePath) ? JSON.parse(await readFile(statePath, "utf8")) : { lastId: 0 };
 
-  // Newest pages first, until the posts seen last time; the newest page is always re-read, so
-  // recent edits arrive too. An empty store reads the whole channel.
+  // Newest pages first, until the posts seen last time (or to the very first post with `all`);
+  // the newest page is always re-read, so recent edits arrive too.
   const seen = new Map();
   let before;
   for (let page = 0; page < 1000; page++) {
@@ -135,7 +149,10 @@ export async function syncChannel({ dir = blogDir(), all = false, log = console.
   }
 
   const articles = await readStore(dir);
-  const snapshot = new Map([...articles].map(([id, article]) => [id, JSON.stringify(article)]));
+  // Telegram signs picture addresses anew on every read, and every daily run reads the whole
+  // channel with fresh ones: a file is rewritten only when something besides them changed.
+  const comparable = (article) => JSON.stringify({ ...article, media: article.media?.map(({ file }) => file) });
+  const snapshot = new Map([...articles].map(([id, article]) => [id, comparable(article)]));
   let removed = 0;
   for (const post of seen.values()) {
     const shaped = shapePost(post, channel);
@@ -150,10 +167,22 @@ export async function syncChannel({ dir = blogDir(), all = false, log = console.
       continue;
     }
     const { title, ...rest } = shaped;
-    // Telegram signs picture addresses anew on every read. A picture already on disk keeps the
-    // address it was fetched from, so an unchanged post is not rewritten on every run.
-    const media = rest.media.map((item) => previous?.media?.find((old) => old.file === item.file && existsSync(join(mediaDir, old.file))) ?? item);
-    articles.set(post.id, { ...rest, media, baseTitle: title, title, slug: previous?.slug });
+    articles.set(post.id, { ...rest, baseTitle: title, title, slug: previous?.slug });
+  }
+
+  // A post deleted from the channel takes its article and pictures with it.
+  let held = 0;
+  if (all) {
+    const gone = deletedPosts(articles.keys(), new Set(seen.keys()), { force });
+    held = gone.held;
+    if (held) log(`blog sync: ${held} articles are missing from the channel, not removing that many at once (npm run blog:sync -- --all --force removes them)`);
+    for (const id of gone.remove) {
+      const previous = articles.get(id);
+      articles.delete(id);
+      await rm(join(postsDir, `${id}.json`), { force: true });
+      for (const { file } of previous.media ?? []) await rm(join(mediaDir, file), { force: true });
+      removed++;
+    }
   }
 
   finalize(articles);
@@ -175,8 +204,7 @@ export async function syncChannel({ dir = blogDir(), all = false, log = console.
   let added = 0;
   let updated = 0;
   for (const [id, article] of articles) {
-    const json = JSON.stringify(article);
-    if (snapshot.get(id) === json) continue;
+    if (snapshot.get(id) === comparable(article)) continue;
     if (snapshot.has(id)) updated++;
     else added++;
     await writeAtomic(join(postsDir, `${id}.json`), `${JSON.stringify(article, null, 2)}\n`);
@@ -185,11 +213,13 @@ export async function syncChannel({ dir = blogDir(), all = false, log = console.
   const lastId = Math.max(state.lastId, ...seen.keys());
   await writeAtomic(statePath, `${JSON.stringify({ lastId, syncedAt: new Date().toISOString() }, null, 2)}\n`);
   const visible = [...articles.values()].filter((article) => !article.hidden).length;
-  return { read: seen.size, added, updated, removed, visible };
+  return { read: seen.size, added, updated, removed, held, visible };
 }
 
 // Runs inside the site: a minute after start, then once a day at BLOG_SYNC_TIME (the server's
-// local time, 04:00 by default). A failed run, e.g. with the VPN client down, is retried an hour later.
+// local time, 04:00 by default). Each run reads the whole channel (about 50 pages), so edits of old
+// posts arrive and deleted posts leave. A failed run, e.g. with the VPN client down, is retried an
+// hour later.
 let timer;
 export function startBlogSync({ log = console.log } = {}) {
   if (timer) return;
@@ -208,7 +238,7 @@ export function startBlogSync({ log = console.log } = {}) {
   const run = async () => {
     let failed = false;
     try {
-      const result = await syncChannel({ log });
+      const result = await syncChannel({ all: true, log });
       if (result.added || result.updated || result.removed) log(`blog sync: ${JSON.stringify(result)}`);
     } catch (error) {
       failed = true;
@@ -222,6 +252,6 @@ export function startBlogSync({ log = console.log } = {}) {
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
-  const result = await syncChannel({ all: process.argv.includes("--all") });
+  const result = await syncChannel({ all: process.argv.includes("--all"), force: process.argv.includes("--force") });
   console.log(`${result.read} posts read: ${result.added} added, ${result.updated} updated, ${result.removed} removed; ${result.visible} articles on the site.`);
 }

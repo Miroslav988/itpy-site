@@ -1189,6 +1189,9 @@ dialog { margin: auto; }
 .course-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; }
 .course-price span { color: var(--muted); font-size: 15px; font-weight: 600; letter-spacing: 0; }
 .course-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+/* A course that is not on Stepik yet: looks like the button it will become, but does nothing. */
+.course-soon { border-style: dashed; border-color: var(--dash); background: transparent; color: var(--muted); cursor: default; }
+.course-soon:hover { transform: none; box-shadow: none; }
 
 .catalog-help { padding-block: clamp(56px, 8vw, 96px); }
 .catalog-help-box {

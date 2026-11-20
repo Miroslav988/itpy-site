@@ -60,7 +60,7 @@ function loadMetrika(id: number) {
   script.src = "https://mc.yandex.ru/metrika/tag.js";
   document.head.appendChild(script);
   // defer: page views are sent by hand, so client-side navigation counts too.
-  ym(id, "init", { defer: true, clickmap: true, trackLinks: true, accurateTrackBounce: true });
+  ym(id, "init", { defer: true, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true });
 }
 
 // Metrika's own cookies, removed when analytics is turned off again.

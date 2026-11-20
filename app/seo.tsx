@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Post } from "./blog/posts";
 import { faqs, formats, links, teacher } from "./content";
-import { courses, stepikUrl } from "./courses/catalog";
+import { publishedCourses, stepikUrl } from "./courses/catalog";
 
 type PageMeta = {
   path: string;
@@ -113,7 +113,7 @@ export function coursesSchema(origin: string) {
     "@type": "ItemList",
     "@id": `${origin}/courses#list`,
     name: "Курсы ITPY на Stepik",
-    itemListElement: courses.map((course, index) => ({
+    itemListElement: publishedCourses.map((course, index) => ({
       "@type": "ListItem",
       position: index + 1,
       item: {

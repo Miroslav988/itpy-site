@@ -1,9 +1,8 @@
 // Stepik catalog. To add a course, append an entry; the page groups cards by category, in the
 // order of `categories`. A new category is one more entry there (and in CategoryId).
-// Spec 5: titles, covers, prices and links are confirmed by Ilia before publishing, and no course
-// is shown as for sale before it exists. A course without `stepikId` is a draft: it stays off the
-// page (and its empty category with it) until the link is added. NEXT_PUBLIC_CATALOG_DRAFTS=1 at
-// build time shows the drafts too, to review the layout.
+// Spec 5: titles, covers, prices and links are confirmed by Ilia before publishing. A course
+// without `stepikId` is not on Stepik yet: its card shows «Позже» instead of a link, and it is not
+// listed as a course anywhere else (structured data, llms.txt) until the link is added.
 
 export type CategoryId = "free" | "mini" | "part2" | "tasks" | "big";
 
@@ -73,17 +72,16 @@ export const allCourses: Course[] = [
     stepikId: 122969,
     cover: sharedCover,
   },
-  // Paid on Stepik (300 ₽), so it sits with the paid mini-courses rather than under «Бесплатно».
   {
     id: "ege-variants",
-    category: "mini",
+    category: "free",
     subject: "Сборник вариантов",
     title: "Сборники вариантов",
     description: "Официальные варианты ЕГЭ по информатике для самостоятельной проверки и тренировки в формате экзамена.",
     audience: "Для тех, кто хочет проверить готовность и привыкнуть к формату экзамена.",
     outcomes: ["Решать полные варианты ЕГЭ", "Оценивать свой текущий уровень"],
     format: ["Полные варианты", "Задания в формате экзамена", "Самопроверка"],
-    price: "300 ₽",
+    price: "Бесплатно",
     stepikId: 282248,
     cover: sharedCover,
   },
@@ -233,14 +231,13 @@ export const allCourses: Course[] = [
   },
 ];
 
-const showDrafts = process.env.NEXT_PUBLIC_CATALOG_DRAFTS === "1";
-
-// What the site shows: published courses (and drafts when previewing) and their categories.
-export const courses = allCourses.filter((course) => course.stepikId !== null || showDrafts);
+// The catalog page shows every course; the ones not on Stepik yet say «Позже».
+export const courses = allCourses;
 export const shownCategories = categories.filter((category) => courses.some((course) => course.category === category.id));
+// Courses that can be opened or bought on Stepik right now.
+export const publishedCourses = allCourses.filter((course): course is Course & { stepikId: number } => course.stepikId !== null);
 
 export const isFree = (course: Course) => course.price === "Бесплатно";
+export const isSoon = (course: Course) => course.stepikId === null;
 
-// Drafts link to the author's Stepik profile until they have a page.
-export const stepikUrl = (course: Course) =>
-  course.stepikId === null ? "https://stepik.org/users/57654306" : `https://stepik.org/course/${course.stepikId}/info`;
+export const stepikUrl = (course: Course & { stepikId: number }) => `https://stepik.org/course/${course.stepikId}/info`;

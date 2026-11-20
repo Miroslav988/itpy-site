@@ -5,7 +5,7 @@ import { BookingButton } from "../booking/Booking";
 import { Icon, PenUnderline } from "../ui";
 import { Drawing, Strokes, type Picture } from "../illustrations";
 import CourseReviews from "./CourseReviews";
-import { courses, filters, isFree, shownCategories, stepikUrl, type CategoryId } from "./catalog";
+import { courses, filters, isFree, isSoon, shownCategories, stepikUrl, type CategoryId } from "./catalog";
 import { JsonLd, breadcrumbSchema, coursesSchema, pageMetadata } from "../seo";
 import { siteOrigin } from "../site";
 
@@ -118,12 +118,17 @@ export default async function CoursesPage({ searchParams }: Props) {
                       <div className="course-card-foot">
                         <p className="course-price">
                           {course.price ?? "Цена — на странице курса"}
-                          {!isFree(course) && <span>оплата на Stepik</span>}
+                          {!isFree(course) && <span>{isSoon(course) ? "скоро на Stepik" : "оплата на Stepik"}</span>}
                         </p>
                         <div className="course-actions">
-                          <a className="btn btn-ink" href={stepikUrl(course)} target="_blank" rel="noopener noreferrer">
-                            {isFree(course) ? "Открыть на Stepik" : "Подробнее"} <span aria-hidden="true">↗</span>
-                          </a>
+                          {course.stepikId === null ? (
+                            // Not on Stepik yet: the card is there, the link comes later.
+                            <span className="btn course-soon" aria-disabled="true">Позже</span>
+                          ) : (
+                            <a className="btn btn-ink" href={stepikUrl({ ...course, stepikId: course.stepikId })} target="_blank" rel="noopener noreferrer">
+                              {isFree(course) ? "Открыть на Stepik" : "Подробнее"} <span aria-hidden="true">↗</span>
+                            </a>
+                          )}
                           {course.showReviews && course.stepikId && <CourseReviews courseId={course.stepikId} title={course.title} />}
                         </div>
                       </div>
